@@ -1,7 +1,11 @@
 #![allow(dead_code)]
 #![allow(unused_variables)]
 
+use log::*;
 use std::str::FromStr;
+use tracing_subscriber::prelude::__tracing_subscriber_SubscriberExt;
+use tracing_subscriber::EnvFilter;
+use tracing_subscriber::{fmt, util::SubscriberInitExt};
 
 use clap::Parser;
 use config::{Config, Extension};
@@ -25,6 +29,10 @@ struct Args {
 #[tokio::main]
 async fn main() {
     let args = Args::parse();
+    tracing_subscriber::registry()
+        .with(fmt::layer())
+        .with(EnvFilter::from_env("NIX4VSCODE"))
+        .init();
 
     let config: Config =
         toml::from_str(fs::read_to_string(args.file).await.unwrap().as_str()).unwrap();
@@ -58,10 +66,10 @@ async fn main() {
             .bits(),
     };
     let query = serde_json::to_string(&query).unwrap();
-    println!("{query}");
+    debug!("{query}");
 
     let client = reqwest::Client::builder().gzip(true).build().unwrap();
-    println!("request");
+    debug!("request");
     let res = client
         .post("https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery")
         .header(
@@ -95,10 +103,10 @@ async fn main() {
                 .text()
                 .await
                 .unwrap();
-            println!("get {}", file.source);
+            trace!("get {}", file.source);
             let package: PackageJson = serde_json::from_str(&package).unwrap();
             let required_ver = semver::VersionReq::from_str(&package.engines.vscode).unwrap();
-            println!("get version:{}", package.engines.vscode);
+            info!("get version:{}", package.engines.vscode);
             if required_ver.matches(&vscode_ver) {
                 res.push(NixContext {
                     extension_name: item.extension_name.clone(),
@@ -122,7 +130,7 @@ async fn main() {
         let sha256 = String::from_utf8(sha256).unwrap();
         item.sha256 = sha256;
     }
-    println!("{res:?}");
+    info!("{res:?}");
 
     let mut generator = minijinja::Environment::new();
     generator
@@ -137,5 +145,5 @@ async fn main() {
         .unwrap()
         .render(minijinja::Value::default())
         .unwrap();
-    println!("{res:?}");
+    println!("{res}");
 }
