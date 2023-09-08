@@ -3,9 +3,11 @@
 
 use std::str::FromStr;
 
+use clap::Parser;
 use config::{Config, Extension};
 use data::{NixContext, PackageJson};
 use request::{FilterType, ICriterium, IQueryState, Query, RequestFlags};
+use tokio::fs;
 
 use crate::data::AssetType;
 
@@ -14,9 +16,18 @@ pub mod data;
 pub mod jinja;
 pub mod request;
 
+#[derive(Debug, Parser)]
+struct Args {
+    #[arg(short, long)]
+    file: String,
+}
+
 #[tokio::main]
 async fn main() {
-    let config: Config = toml::from_str(include_str!("../config.toml")).unwrap();
+    let args = Args::parse();
+
+    let config: Config =
+        toml::from_str(fs::read_to_string(args.file).await.unwrap().as_str()).unwrap();
     let mut query_state = IQueryState {
         criteria: vec![
             ICriterium {
@@ -46,31 +57,29 @@ async fn main() {
             | RequestFlags::include_files)
             .bits(),
     };
-    // let query = serde_json::to_string(&query).unwrap();
-    // println!("{query}");
-    //
-    // let client = reqwest::Client::builder().gzip(true).build().unwrap();
-    // println!("request");
-    // let res = client
-    //     .post("https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery")
-    //     .header(
-    //         "Accept",
-    //         "application/json; charset=utf-8; api-version=7.2-preview.1",
-    //     )
-    //     .header("CONTENT-TYPE", "application/json")
-    //     .body(query)
-    //     .send()
-    //     .await
-    //     .unwrap();
-    //
-    // let res = res.text().await.unwrap();
-    // tokio::fs::write("3.json", res).await.unwrap();
+    let query = serde_json::to_string(&query).unwrap();
+    println!("{query}");
+
+    let client = reqwest::Client::builder().gzip(true).build().unwrap();
+    println!("request");
+    let res = client
+        .post("https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery")
+        .header(
+            "Accept",
+            "application/json; charset=utf-8; api-version=7.2-preview.1",
+        )
+        .header("CONTENT-TYPE", "application/json")
+        .body(query)
+        .send()
+        .await
+        .unwrap();
+
+    let query = res.text().await.unwrap();
 
     let vscode_ver = semver::Version::from_str(&config.vscode_version).unwrap();
     let mut res: Vec<NixContext> = Default::default();
 
-    let obj: data::IRawGalleryQueryResult =
-        serde_json::from_str(include_str!("../3.json")).unwrap();
+    let obj: data::IRawGalleryQueryResult = serde_json::from_str(query.as_str()).unwrap();
     for item in obj.results[0].extensions.iter().filter(|item| {
         config.extensions.contains(&Extension {
             publisher_name: item.publisher.publisher_name.clone(),
