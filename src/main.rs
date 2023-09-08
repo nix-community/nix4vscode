@@ -32,10 +32,7 @@ struct Args {
 #[tokio::main]
 async fn main() {
     let args = Args::parse();
-    tracing_subscriber::registry()
-        .with(fmt::layer())
-        .with(EnvFilter::from_env("NIX4VSCODE"))
-        .init();
+    init_logger();
 
     let config: Config =
         toml::from_str(fs::read_to_string(args.file).await.unwrap().as_str()).unwrap();
@@ -153,4 +150,19 @@ async fn main() {
         .render(minijinja::Value::default())
         .unwrap();
     println!("{res}");
+}
+
+fn init_logger() {
+    let log_level = std::env::var("RUST_LOG")
+        .unwrap_or("INFO".into())
+        .to_lowercase();
+
+    let env_filter = EnvFilter::builder()
+        .parse(format!("RUST_LOG=OFF,nix4vscode={}", log_level))
+        .unwrap();
+
+    tracing_subscriber::registry()
+        .with(fmt::layer())
+        .with(env_filter)
+        .init();
 }
