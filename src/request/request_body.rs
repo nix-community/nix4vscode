@@ -2,7 +2,7 @@ use serde::{Deserialize, Serialize};
 
 use super::*;
 
-#[derive(Debug, Default, Serialize, Deserialize)]
+#[derive(Debug, Default, Serialize, Deserialize, Clone)]
 #[serde(default)]
 #[serde(rename_all = "camelCase")]
 pub struct ICriterium {
@@ -10,7 +10,7 @@ pub struct ICriterium {
     pub value: String,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 #[serde(default)]
 #[serde(rename_all = "camelCase")]
 pub struct IQueryState {
@@ -43,7 +43,7 @@ impl Default for IQueryState {
     }
 }
 
-#[derive(Debug, Default, Serialize, Deserialize)]
+#[derive(Debug, Default, Serialize, Deserialize, Clone)]
 #[serde(default)]
 #[serde(rename_all = "camelCase")]
 pub struct Query {

@@ -1,5 +1,6 @@
 #![allow(dead_code)]
 #![allow(unused_variables)]
+#![feature(iter_intersperse)]
 
 use log::*;
 use std::str::FromStr;
@@ -38,35 +39,31 @@ async fn main() {
 
     let config: Config =
         toml::from_str(fs::read_to_string(args.file).await.unwrap().as_str()).unwrap();
-    let mut query_state = IQueryState {
-        criteria: vec![
-            ICriterium {
-                filter_type: FilterType::TARGET,
-                value: "Microsoft.VisualStudio.Code".into(),
-            },
-            ICriterium {
-                filter_type: FilterType::EXCLUDE_WITH_FLAGS,
-                value: "4096".into(),
-            },
-        ],
-        ..Default::default()
-    };
-
-    config.extensions.iter().for_each(|item| {
-        query_state.criteria.push(ICriterium {
-            filter_type: FilterType::EXTENSION_NAME,
-            value: format!("{}.{}", item.publisher_name, item.extension_name),
-        });
-    });
 
     let query = Query {
-        filters: vec![query_state],
+        filters: vec![IQueryState {
+            criteria: config
+                .extensions
+                .iter()
+                .map(|item| ICriterium {
+                    filter_type: FilterType::EXTENSION_NAME,
+                    value: format!("{}.{}", item.publisher_name, item.extension_name),
+                })
+                .intersperse(ICriterium {
+                    filter_type: FilterType::TARGET,
+                    value: "Microsoft.VisualStudio.Code".into(),
+                })
+                .intersperse(ICriterium {
+                    filter_type: FilterType::EXCLUDE_WITH_FLAGS,
+                    value: "4096".into(),
+                })
+                .collect(),
+            ..Default::default()
+        }],
         asset_types: Default::default(),
-        flags: (RequestFlags::IncludeVersions
-            | RequestFlags::include_asset_uri
-            | RequestFlags::include_files)
-            .bits(),
+        flags: RequestFlags::default().bits(),
     };
+
     let query = serde_json::to_string(&query).unwrap();
     debug!("{query}");
 
@@ -76,9 +73,9 @@ async fn main() {
         .post("https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery")
         .header(
             "Accept",
-            "application/json; charset=utf-8; api-version=7.2-preview.1",
+            "Application/json; charset=utf-8; api-version=7.2-preview.1",
         )
-        .header("CONTENT-TYPE", "application/json")
+        .header("Content-Type", "application/json")
         .body(query)
         .send()
         .await
