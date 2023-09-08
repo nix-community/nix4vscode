@@ -4,9 +4,7 @@
 
 use log::*;
 use std::str::FromStr;
-use tracing_subscriber::{
-    fmt, prelude::__tracing_subscriber_SubscriberExt, util::SubscriberInitExt, EnvFilter,
-};
+use tracing_subscriber::{fmt, prelude::*, util::SubscriberInitExt, EnvFilter};
 
 use futures::future::join_all;
 
@@ -14,7 +12,6 @@ use clap::Parser;
 use config::{Config, Extension};
 use data::{NixContext, PackageJson};
 use request::Query;
-use tokio::fs;
 
 use crate::{data::AssetType, jinja::Generator};
 
@@ -30,35 +27,17 @@ struct Args {
 }
 
 #[tokio::main]
-async fn main() {
+async fn main() -> anyhow::Result<()> {
     let args = Args::parse();
+
     init_logger();
 
-    let config: Config =
-        toml::from_str(fs::read_to_string(args.file).await.unwrap().as_str()).unwrap();
-
-    let query = serde_json::to_string(&Query::new(&config)).unwrap();
-    debug!("{query}");
-
-    let client = reqwest::Client::builder().gzip(true).build().unwrap();
+    let config = Config::new(&args.file).await?;
+    let client = reqwest::Client::builder().gzip(true).build()?;
     debug!("request");
-    let res = client
-        .post("https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery")
-        .header(
-            "Accept",
-            "Application/json; charset=utf-8; api-version=7.2-preview.1",
-        )
-        .header("Content-Type", "application/json")
-        .body(query)
-        .send()
-        .await
-        .unwrap();
-
-    let query = res.text().await.unwrap();
-
+    let obj = Query::new(&config).get_response(&client).await?;
     let vscode_ver = semver::Version::from_str(&config.vscode_version).unwrap();
 
-    let obj: data::IRawGalleryQueryResult = serde_json::from_str(query.as_str()).unwrap();
     let futures: Vec<_> = obj
         .results
         .into_iter()
@@ -71,18 +50,20 @@ async fn main() {
         })
         .map(|item| {
             let vscode_ver = vscode_ver.clone();
+            let client = client.clone();
             async move {
                 for version in &item.versions {
                     // Get From [version]
                     let file = version.get_file(AssetType::Manifest).unwrap();
-                    let package = reqwest::get(file.source.clone())
+                    let req = client.get(file.source.clone()).build().unwrap();
+                    let package = client
+                        .execute(req)
                         .await
                         .unwrap()
-                        .text()
+                        .json::<PackageJson>()
                         .await
                         .unwrap();
                     trace!("get {}", file.source);
-                    let package: PackageJson = serde_json::from_str(&package).unwrap();
                     let required_ver =
                         semver::VersionReq::from_str(&package.engines.vscode).unwrap();
                     info!("get version:{}", package.engines.vscode);
@@ -113,16 +94,10 @@ async fn main() {
     info!("{res:?}");
 
     let mut generator = Generator::default();
-    generator
-        .engine
-        .add_global("NixContexts", minijinja::Value::from_serializable(&res));
-    let res = generator
-        .engine
-        .get_template("nix_expression")
-        .unwrap()
-        .render(minijinja::Value::default())
-        .unwrap();
-    println!("{res}");
+    generator.set_context(res);
+    println!("{}", generator.render()?);
+
+    Ok(())
 }
 
 fn init_logger() {

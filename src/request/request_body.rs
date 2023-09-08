@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 
-use crate::config::Config;
+use crate::{config::Config, data};
 
 use super::*;
 
@@ -79,5 +79,23 @@ impl Query {
             asset_types: Default::default(),
             flags: RequestFlags::default().bits(),
         }
+    }
+
+    pub async fn get_response(
+        &self,
+        client: &reqwest::Client,
+    ) -> anyhow::Result<data::IRawGalleryQueryResult> {
+        Ok(client
+            .post("https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery")
+            .header(
+                "Accept",
+                "Application/json; charset=utf-8; api-version=7.2-preview.1",
+            )
+            .header("Content-Type", "application/json")
+            .body(serde_json::to_string(&self)?)
+            .send()
+            .await?
+            .json::<data::IRawGalleryQueryResult>()
+            .await?)
     }
 }
