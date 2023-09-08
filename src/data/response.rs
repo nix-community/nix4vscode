@@ -1,7 +1,7 @@
 mod file;
 use serde::{Deserialize, Serialize};
 
-use self::file::IRawGalleryExtensionVersion;
+pub use file::*;
 
 #[derive(Debug, Default, Serialize, Deserialize)]
 #[serde(default)]
