@@ -4,9 +4,9 @@
 
 use log::*;
 use std::str::FromStr;
-use tracing_subscriber::prelude::__tracing_subscriber_SubscriberExt;
-use tracing_subscriber::EnvFilter;
-use tracing_subscriber::{fmt, util::SubscriberInitExt};
+use tracing_subscriber::{
+    fmt, prelude::__tracing_subscriber_SubscriberExt, util::SubscriberInitExt, EnvFilter,
+};
 
 use futures::future::join_all;
 

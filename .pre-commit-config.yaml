@@ -1,0 +1,34 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
+    hooks:
+      - id: check-merge-conflict
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+      - id: trailing-whitespace
+
+  - repo: local
+    hooks:
+      - id: rustfmt
+        name: rustfmt
+        language: system
+        types_or: [rust]
+        entry: rustfmt
+
+  - repo: local
+    hooks:
+      - id: toml
+        name: toml
+        language: system
+        types_or: [rust]
+        entry: taplo format
+
+  - repo: local
+    hooks:
+      - id: clang-format
+        name: clang-format
+        language: system
+        types_or: [c, c++, cuda]
+        entry: clang-format -i --style=file
