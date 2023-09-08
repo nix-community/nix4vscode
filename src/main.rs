@@ -7,6 +7,8 @@ use tracing_subscriber::prelude::__tracing_subscriber_SubscriberExt;
 use tracing_subscriber::EnvFilter;
 use tracing_subscriber::{fmt, util::SubscriberInitExt};
 
+use futures::future::join_all;
+
 use clap::Parser;
 use config::{Config, Extension};
 use data::{NixContext, PackageJson};
@@ -120,16 +122,20 @@ async fn main() {
         }
     }
 
-    for item in &mut res {
-        let sha256 = tokio::process::Command::new("nix-prefetch-url")
-            .arg(item.asset_url.clone())
-            .output()
-            .await
-            .unwrap()
-            .stdout;
-        let sha256 = String::from_utf8(sha256).unwrap();
-        item.sha256 = sha256;
-    }
+    let futures: Vec<_> = res
+        .into_iter()
+        .map(|mut item| async {
+            let sha256 = tokio::process::Command::new("nix-prefetch-url")
+                .arg(item.asset_url.clone())
+                .output()
+                .await
+                .unwrap()
+                .stdout;
+            item.sha256 = String::from_utf8(sha256).unwrap();
+            item
+        })
+        .collect();
+    let res = join_all(futures).await;
     info!("{res:?}");
 
     let mut generator = minijinja::Environment::new();
