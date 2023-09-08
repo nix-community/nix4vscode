@@ -4,8 +4,9 @@ mod response;
 
 pub use packages::*;
 pub use response::*;
+use serde::{Deserialize, Serialize};
 
-#[derive(Debug)]
+#[derive(Debug, Serialize, Deserialize)]
 pub struct NixContext {
     pub extension_name: String,
     pub publisher_name: String,
