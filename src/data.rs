@@ -4,3 +4,12 @@ mod response;
 
 pub use packages::*;
 pub use response::*;
+
+#[derive(Debug)]
+pub struct NixContext {
+    pub extension_name: String,
+    pub publisher_name: String,
+    pub extension_version: String,
+    pub asset_url: String,
+    pub sha256: String,
+}
