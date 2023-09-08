@@ -1,5 +1,7 @@
 use serde::{Deserialize, Serialize};
 
+use crate::config::Config;
+
 use super::*;
 
 #[derive(Debug, Default, Serialize, Deserialize, Clone)]
@@ -50,4 +52,32 @@ pub struct Query {
     pub filters: Vec<IQueryState>,
     pub asset_types: Vec<String>,
     pub flags: u32,
+}
+
+impl Query {
+    pub fn new(config: &Config) -> Self {
+        Query {
+            filters: vec![IQueryState {
+                criteria: config
+                    .extensions
+                    .iter()
+                    .map(|item| ICriterium {
+                        filter_type: FilterType::EXTENSION_NAME,
+                        value: format!("{}.{}", item.publisher_name, item.extension_name),
+                    })
+                    .intersperse(ICriterium {
+                        filter_type: FilterType::TARGET,
+                        value: "Microsoft.VisualStudio.Code".into(),
+                    })
+                    .intersperse(ICriterium {
+                        filter_type: FilterType::EXCLUDE_WITH_FLAGS,
+                        value: "4096".into(),
+                    })
+                    .collect(),
+                ..Default::default()
+            }],
+            asset_types: Default::default(),
+            flags: RequestFlags::default().bits(),
+        }
+    }
 }

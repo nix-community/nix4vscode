@@ -13,10 +13,10 @@ use futures::future::join_all;
 use clap::Parser;
 use config::{Config, Extension};
 use data::{NixContext, PackageJson};
-use request::{FilterType, ICriterium, IQueryState, Query, RequestFlags};
+use request::Query;
 use tokio::fs;
 
-use crate::data::AssetType;
+use crate::{data::AssetType, jinja::Generator};
 
 pub mod config;
 pub mod data;
@@ -37,31 +37,7 @@ async fn main() {
     let config: Config =
         toml::from_str(fs::read_to_string(args.file).await.unwrap().as_str()).unwrap();
 
-    let query = Query {
-        filters: vec![IQueryState {
-            criteria: config
-                .extensions
-                .iter()
-                .map(|item| ICriterium {
-                    filter_type: FilterType::EXTENSION_NAME,
-                    value: format!("{}.{}", item.publisher_name, item.extension_name),
-                })
-                .intersperse(ICriterium {
-                    filter_type: FilterType::TARGET,
-                    value: "Microsoft.VisualStudio.Code".into(),
-                })
-                .intersperse(ICriterium {
-                    filter_type: FilterType::EXCLUDE_WITH_FLAGS,
-                    value: "4096".into(),
-                })
-                .collect(),
-            ..Default::default()
-        }],
-        asset_types: Default::default(),
-        flags: RequestFlags::default().bits(),
-    };
-
-    let query = serde_json::to_string(&query).unwrap();
+    let query = serde_json::to_string(&Query::new(&config)).unwrap();
     debug!("{query}");
 
     let client = reqwest::Client::builder().gzip(true).build().unwrap();
@@ -136,15 +112,12 @@ async fn main() {
     let res: Vec<_> = join_all(futures).await.into_iter().flatten().collect();
     info!("{res:?}");
 
-    let mut generator = minijinja::Environment::new();
+    let mut generator = Generator::default();
     generator
-        .add_template(
-            "nix_expression",
-            include_str!("./jinja/nix_expression.nix.j2"),
-        )
-        .unwrap();
-    generator.add_global("NixContexts", minijinja::Value::from_serializable(&res));
+        .engine
+        .add_global("NixContexts", minijinja::Value::from_serializable(&res));
     let res = generator
+        .engine
         .get_template("nix_expression")
         .unwrap()
         .render(minijinja::Value::default())
