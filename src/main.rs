@@ -84,55 +84,59 @@ async fn main() {
     let query = res.text().await.unwrap();
 
     let vscode_ver = semver::Version::from_str(&config.vscode_version).unwrap();
-    let mut res: Vec<NixContext> = Default::default();
 
     let obj: data::IRawGalleryQueryResult = serde_json::from_str(query.as_str()).unwrap();
-    for item in obj.results[0].extensions.iter().filter(|item| {
-        config.extensions.contains(&Extension {
-            publisher_name: item.publisher.publisher_name.clone(),
-            extension_name: item.extension_name.clone(),
-        })
-    }) {
-        for version in &item.versions {
-            // Get From [version]
-            let file = version.get_file(AssetType::Manifest).unwrap();
-            let package = reqwest::get(file.source.clone())
-                .await
-                .unwrap()
-                .text()
-                .await
-                .unwrap();
-            trace!("get {}", file.source);
-            let package: PackageJson = serde_json::from_str(&package).unwrap();
-            let required_ver = semver::VersionReq::from_str(&package.engines.vscode).unwrap();
-            info!("get version:{}", package.engines.vscode);
-            if required_ver.matches(&vscode_ver) {
-                res.push(NixContext {
-                    extension_name: item.extension_name.clone(),
-                    publisher_name: item.publisher.publisher_name.clone(),
-                    extension_version: version.version.clone(),
-                    asset_url: version.get_file(AssetType::Vsix).unwrap().source.clone(),
-                    sha256: Default::default(),
-                });
-                break;
-            }
-        }
-    }
-
-    let futures: Vec<_> = res
+    let futures: Vec<_> = obj
+        .results
         .into_iter()
-        .map(|mut item| async {
-            let sha256 = tokio::process::Command::new("nix-prefetch-url")
-                .arg(item.asset_url.clone())
-                .output()
-                .await
-                .unwrap()
-                .stdout;
-            item.sha256 = String::from_utf8(sha256).unwrap();
-            item
+        .flat_map(|item| item.extensions.into_iter())
+        .filter(|item| {
+            config.extensions.contains(&Extension {
+                publisher_name: item.publisher.publisher_name.clone(),
+                extension_name: item.extension_name.clone(),
+            })
+        })
+        .map(|item| {
+            let vscode_ver = vscode_ver.clone();
+            async move {
+                for version in &item.versions {
+                    // Get From [version]
+                    let file = version.get_file(AssetType::Manifest).unwrap();
+                    let package = reqwest::get(file.source.clone())
+                        .await
+                        .unwrap()
+                        .text()
+                        .await
+                        .unwrap();
+                    trace!("get {}", file.source);
+                    let package: PackageJson = serde_json::from_str(&package).unwrap();
+                    let required_ver =
+                        semver::VersionReq::from_str(&package.engines.vscode).unwrap();
+                    info!("get version:{}", package.engines.vscode);
+                    if required_ver.matches(&vscode_ver) {
+                        let asset_url = version.get_file(AssetType::Vsix).unwrap().source.clone();
+                        let sha256 = tokio::process::Command::new("nix-prefetch-url")
+                            .arg(asset_url.clone())
+                            .output()
+                            .await
+                            .unwrap()
+                            .stdout;
+                        let sha256 = String::from_utf8(sha256).unwrap();
+                        return Some(NixContext {
+                            extension_name: item.extension_name.clone(),
+                            publisher_name: item.publisher.publisher_name.clone(),
+                            extension_version: version.version.clone(),
+                            asset_url,
+                            sha256,
+                        });
+                    }
+                }
+                None
+            }
         })
         .collect();
-    let res = join_all(futures).await;
+
+    let res: Vec<_> = join_all(futures).await.into_iter().flatten().collect();
     info!("{res:?}");
 
     let mut generator = minijinja::Environment::new();
