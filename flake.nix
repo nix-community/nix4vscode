@@ -31,18 +31,22 @@
       {
         devShell = pkgs.mkShell {
           buildInputs = [
-            pkgs.iconv
             pkgs.taplo
             (
               pkgs.rust-bin.nightly."2023-07-28".default.override rust_toolchain
             )
           ] ++ lib.lists.optionals isDarwin [
+            pkgs.iconv
             pkgs.darwin.apple_sdk.frameworks.Security
           ];
           shellHook = ''
-            export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${pkgs.iconv.out}/lib
             export DYLD_FALLBACK_LIBRARY_PATH=$(rustc --print sysroot)/lib
-          '';
+          '' + (if
+            isDarwin == true then ''
+            export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${pkgs.iconv.out}/lib
+          '' else '' '');
         };
       });
 }
+
+
