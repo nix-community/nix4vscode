@@ -1,12 +1,12 @@
-{% filter nixfmt %}
+{%- filter nixfmt %}
 { pkgs, lib }:
 
 let
   vscode-utils = lib.vscode-utils;
 in
 [
-{% for item in reassets %}
-{% with uniqueId = [ item.publisher_name, item.extension_name ] | join %}
+{%- for item in reassets %}
+{%- with uniqueId = [ item.publisher_name, item.extension_name ] | join %}
 vscode-utils.buildVscodeExtension {
   name = "{{ uniqueId }}";
   vscodeExtPublisher = "{{ item.publisher_name }}";
@@ -19,17 +19,17 @@ vscode-utils.buildVscodeExtension {
   vscodeExtUniqueId = "{{ uniqueId }}";
   version = "{{ item.version }}";
 }
-{% endwith %}
-{% endfor %}
+{%- endwith %}
+{%- endfor %}
 ] ++
 vscode-utils.extensionsFromVscodeMarketplace [
-{% for item in nixs %}
+{%- for item in nixs %}
     {
       name = "{{ item.extension_name }}";
       publisher = "{{ item.publisher_name }}";
       version = "{{ item.extension_version }}";
       sha256 = "{{ item.sha256 }}";
     }
-{% endfor %}
+{%- endfor %}
 ]
-{% endfilter %}
+{%- endfilter %}
