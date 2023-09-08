@@ -34,17 +34,10 @@ impl<'a> Generator<'a> {
         Self { engine }
     }
 
-    pub fn set_context(&mut self, ctxs: Vec<NixContext>) {
-        self.engine.add_global(
-            "NixContexts",
-            minijinja::Value::from_serializable(&Context { nixs: ctxs }),
-        );
-    }
-
-    pub fn render(&mut self) -> anyhow::Result<String> {
+    pub fn render(&mut self, nixs: Vec<NixContext>) -> anyhow::Result<String> {
         Ok(self
             .engine
             .get_template("nix_expression")?
-            .render(minijinja::Value::default())?)
+            .render(minijinja::Value::from_serializable(&Context { nixs }))?)
     }
 }

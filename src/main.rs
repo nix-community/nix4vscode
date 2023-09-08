@@ -1,6 +1,5 @@
 #![allow(dead_code)]
 #![allow(unused_variables)]
-#![feature(iter_intersperse)]
 
 use log::*;
 use std::str::FromStr;
@@ -94,8 +93,7 @@ async fn main() -> anyhow::Result<()> {
     info!("{res:?}");
 
     let mut generator = Generator::default();
-    generator.set_context(res);
-    println!("{}", generator.render()?);
+    println!("{}", generator.render(res)?);
 
     Ok(())
 }

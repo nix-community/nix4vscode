@@ -1,8 +1,8 @@
 use serde::{Deserialize, Serialize};
 
-use crate::{config::Config, data};
-
 use super::*;
+use crate::{config::Config, data};
+use log::*;
 
 #[derive(Debug, Default, Serialize, Deserialize, Clone)]
 #[serde(default)]
@@ -56,6 +56,16 @@ pub struct Query {
 
 impl Query {
     pub fn new(config: &Config) -> Self {
+        let fixed = vec![
+            ICriterium {
+                filter_type: FilterType::TARGET,
+                value: "Microsoft.VisualStudio.Code".into(),
+            },
+            ICriterium {
+                filter_type: FilterType::EXCLUDE_WITH_FLAGS,
+                value: "4096".into(),
+            },
+        ];
         Query {
             filters: vec![IQueryState {
                 criteria: config
@@ -65,14 +75,7 @@ impl Query {
                         filter_type: FilterType::EXTENSION_NAME,
                         value: format!("{}.{}", item.publisher_name, item.extension_name),
                     })
-                    .intersperse(ICriterium {
-                        filter_type: FilterType::TARGET,
-                        value: "Microsoft.VisualStudio.Code".into(),
-                    })
-                    .intersperse(ICriterium {
-                        filter_type: FilterType::EXCLUDE_WITH_FLAGS,
-                        value: "4096".into(),
-                    })
+                    .chain(fixed.into_iter())
                     .collect(),
                 ..Default::default()
             }],
@@ -85,6 +88,8 @@ impl Query {
         &self,
         client: &reqwest::Client,
     ) -> anyhow::Result<data::IRawGalleryQueryResult> {
+        let body = serde_json::to_string(&self)?;
+        debug!("{body}");
         Ok(client
             .post("https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery")
             .header(
@@ -92,7 +97,7 @@ impl Query {
                 "Application/json; charset=utf-8; api-version=7.2-preview.1",
             )
             .header("Content-Type", "application/json")
-            .body(serde_json::to_string(&self)?)
+            .body(body)
             .send()
             .await?
             .json::<data::IRawGalleryQueryResult>()
