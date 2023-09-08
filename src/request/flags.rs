@@ -86,13 +86,8 @@ bitflags! {
 
 impl Default for RequestFlags {
     fn default() -> Self {
-        Self::IncludeVersions
-            | Self::include_files
-            | Self::include_category_and_tags
-            | Self::include_shared_accounts
-            | Self::include_version_properties
-            | Self::include_installation_targets
-            | Self::include_asset_uri
-            | Self::include_statistics
+        RequestFlags::IncludeVersions
+            | RequestFlags::include_asset_uri
+            | RequestFlags::include_files
     }
 }
