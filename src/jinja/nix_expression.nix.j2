@@ -1,0 +1,9 @@
+{% for item in NixContexts %}
+    {
+      name = "{{ item.extension_name }}";
+      publisher = "{{ item.publisher_name }}";
+      version = "{{ item.extension_version }}";
+      sha256 = "{{ item.sha256 }}";
+    }
+
+{% endfor %}

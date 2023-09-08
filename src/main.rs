@@ -11,6 +11,7 @@ use crate::data::AssetType;
 
 pub mod config;
 pub mod data;
+pub mod jinja;
 pub mod request;
 
 #[tokio::main]
@@ -112,5 +113,20 @@ async fn main() {
         let sha256 = String::from_utf8(sha256).unwrap();
         item.sha256 = sha256;
     }
+    println!("{res:?}");
+
+    let mut generator = minijinja::Environment::new();
+    generator
+        .add_template(
+            "nix_expression",
+            include_str!("./jinja/nix_expression.nix.j2"),
+        )
+        .unwrap();
+    generator.add_global("NixContexts", minijinja::Value::from_serializable(&res));
+    let res = generator
+        .get_template("nix_expression")
+        .unwrap()
+        .render(minijinja::Value::default())
+        .unwrap();
     println!("{res:?}");
 }
