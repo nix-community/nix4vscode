@@ -21,3 +21,4 @@ reqwest = { version = "0.11.20", default_features = false, features = [
 ] }
 minijinja = "1.0.7"
 clap = { version = "4.4.2", features = ["derive"] }
+futures = "0.3.28"
