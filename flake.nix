@@ -20,6 +20,12 @@
             (import rust-overlay)
           ];
         };
+        lib = pkgs.lib;
+        inherit (pkgs.stdenv) isDarwin isLinux;
+
+        rust_toolchain = {
+          extensions = [ "rust-src" "rust-analysis" "rust-std" "rust-docs" "clippy" "rust-analyzer" "llvm-tools-preview" ];
+        };
 
       in
       {
@@ -28,11 +34,14 @@
             pkgs.iconv
             pkgs.taplo
             (
-              pkgs.rust-bin.nightly."2023-07-28".default
+              pkgs.rust-bin.nightly."2023-07-28".default.override rust_toolchain
             )
+          ] ++ lib.lists.optionals isDarwin [
+            pkgs.darwin.apple_sdk.frameworks.Security
           ];
           shellHook = ''
             export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${pkgs.iconv.out}/lib
+            export DYLD_FALLBACK_LIBRARY_PATH=$(rustc --print sysroot)/lib
           '';
         };
       });
