@@ -1,3 +1,6 @@
+mod filters;
+
+use filters::*;
 use minijinja::Environment;
 use serde::{Deserialize, Serialize};
 
@@ -30,6 +33,8 @@ impl<'a> Generator<'a> {
                 include_str!("./jinja/nix_expression.nix.j2"),
             )
             .unwrap();
+
+        engine.add_filter("nixfmt", nixfmt);
 
         Self { engine }
     }
