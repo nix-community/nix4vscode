@@ -2,7 +2,7 @@
 { pkgs, lib }:
 
 let
-  vscode-utils = lib.vscode-utils;
+  vscode-utils = pkgs.vscode-utils;
 in
 [
 {%- for item in reassets %}

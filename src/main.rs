@@ -97,7 +97,7 @@ async fn main() -> anyhow::Result<()> {
                             .await
                             .unwrap()
                             .stdout;
-                        let sha256 = String::from_utf8(sha256).unwrap();
+                        let sha256 = String::from_utf8(sha256).unwrap().trim().to_owned();
                         return Some(NixContext {
                             extension_name: item.extension_name.clone(),
                             publisher_name: item.publisher.publisher_name.clone(),
