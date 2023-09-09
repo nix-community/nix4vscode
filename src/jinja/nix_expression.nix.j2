@@ -7,7 +7,7 @@ in
 [
 {%- for item in reassets %}
 {%- with uniqueId = [ item.publisher_name, '.', item.extension_name ] | join %}
-vscode-utils.buildVscodeExtension {
+(vscode-utils.buildVscodeExtension {
   name = "{{ uniqueId }}";
   vscodeExtPublisher = "{{ item.publisher_name }}";
   vscodeExtName = "{{ item.extension_name }}";
@@ -18,7 +18,7 @@ vscode-utils.buildVscodeExtension {
   }).outPath;
   vscodeExtUniqueId = "{{ uniqueId }}";
   version = "{{ item.version }}";
-}
+})
 {%- endwith %}
 {%- endfor %}
 ] ++
