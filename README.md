@@ -24,40 +24,54 @@ then run `cargo run -- -f config.toml` , the a nix expression will be print to s
 { pkgs, lib }:
 
 let
-  vscode-utils = lib.vscode-utils;
+  vscode-utils = pkgs.vscode-utils;
 in
 [
-  vscode-utils.buildVscodeExtension
-  {
+  (vscode-utils.buildVscodeExtension {
     name = "vadimcn.vscode-lldb";
     vscodeExtPublisher = "vadimcn";
     vscodeExtName = "vscode-lldb";
     src = (pkgs.fetchurl {
       url = "https://github.com/vadimcn/codelldb/releases/download/v1.9.2/codelldb-x86_64-linux.vsix";
-      sha256 = "0x9xz31xml2hnssc5zpm2c6wck9qpcdgxlp7zrqjdc854lmx52w9
-";
+      sha256 = "0x9xz31xml2hnssc5zpm2c6wck9qpcdgxlp7zrqjdc854lmx52w9";
       name = "vadimcn.vscode-lldb.zip";
     }).outPath;
     vscodeExtUniqueId = "vadimcn.vscode-lldb";
     version = "";
-  }
+  })
 ] ++
 vscode-utils.extensionsFromVscodeMarketplace [
   {
     name = "gitlens";
     publisher = "eamodio";
-    version = "2023.9.805";
-    sha256 = "0b8ib7xjw4iws9byqrpf57ad7lwcszid83f7f1g63bm3lgwx0cbz
-";
+    version = "2023.9.905";
+    sha256 = "1mzyc3sinkg4zmbyh2a85iqdqa7wsnh99hqvk6f8m2jcfhpfrwyb";
   }
   {
     name = "vim";
     publisher = "vscodevim";
     version = "1.25.2";
-    sha256 = "0j0li3ddrknh34k2w2f13j4x8s0lb9gsmq7pxaldhwqimarqlbc7
-";
+    sha256 = "0j0li3ddrknh34k2w2f13j4x8s0lb9gsmq7pxaldhwqimarqlbc7";
   }
 ]
+```
+
+Let's guess you store those contents in a file named `pkgs.nix`, then you can use it by:
+
+```nix
+{ pkgs, lib }:
+let
+  inherit (pkgs.stdenv) isDarwin isLinux;
+in
+with pkgs;
+{
+  enableExtensionUpdateCheck = false;
+  enableUpdateCheck = false;
+  extensions = with vscode-marketplace;[
+  ]
+  ] ++ (import ./pkgs.nix) { pkgs = pkgs; lib = lib; }
+  ;
+}
 ```
 
 ## Redirect asset_url
