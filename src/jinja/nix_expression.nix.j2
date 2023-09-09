@@ -6,13 +6,13 @@ let
 in
 [
 {%- for item in reassets %}
-{%- with uniqueId = [ item.publisher_name, item.extension_name ] | join %}
+{%- with uniqueId = [ item.publisher_name, '.', item.extension_name ] | join %}
 vscode-utils.buildVscodeExtension {
   name = "{{ uniqueId }}";
   vscodeExtPublisher = "{{ item.publisher_name }}";
   vscodeExtName = "{{ item.extension_name }}";
   src = (pkgs.fetchurl {
-    url = "{{ item.assets }}";
+    url = "{{ item.asset_url }}";
     sha256 = "{{ item.sha256 }}";
     name = "{{ uniqueId }}.zip";
   }).outPath;

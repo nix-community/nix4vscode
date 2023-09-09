@@ -4,6 +4,13 @@ vscode_version = "1.81.1"
 publisher_name = "eamodio"
 extension_name = "gitlens"
 
-# [[extensions]]
-# publisher_name = "vscodevim"
-# extension_name = "vim"
+[[extensions]]
+publisher_name = "vscodevim"
+extension_name = "vim"
+
+[[extensions]]
+publisher_name = "vadimcn"
+extension_name = "vscode-lldb"
+asset_url = '''
+https://github.com/vadimcn/codelldb/releases/download/v{{ extension.version }}/codelldb-{{ system.arch }}-{{ system.ostype }}.vsix
+'''

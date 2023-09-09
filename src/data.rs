@@ -11,6 +11,6 @@ pub struct NixContext {
     pub extension_name: String,
     pub publisher_name: String,
     pub extension_version: String,
-    pub asset_url: String,
+    pub asset_url: Option<String>,
     pub sha256: String,
 }

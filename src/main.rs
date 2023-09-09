@@ -2,17 +2,20 @@
 #![allow(unused_variables)]
 
 use log::*;
-use std::str::FromStr;
+use std::{str::FromStr, sync::Arc};
 use tracing_subscriber::{fmt, prelude::*, util::SubscriberInitExt, EnvFilter};
 
 use futures::future::join_all;
 
 use clap::Parser;
-use config::{Config, Extension};
+use config::Config;
 use data::{NixContext, PackageJson};
 use request::Query;
 
-use crate::{data::AssetType, jinja::Generator};
+use crate::{
+    data::AssetType,
+    jinja::{ExtensionContext, Generator, GeneratorContext},
+};
 
 pub mod config;
 pub mod data;
@@ -31,25 +34,23 @@ async fn main() -> anyhow::Result<()> {
 
     init_logger();
 
-    let config = Config::new(&args.file).await?;
+    let config = Arc::new(Config::new(&args.file).await?);
     let client = reqwest::Client::builder().gzip(true).build()?;
-    debug!("request");
+    debug!("request: {config:?}");
     let obj = Query::new(&config).get_response(&client).await?;
     let vscode_ver = semver::Version::from_str(&config.vscode_version).unwrap();
+    let mut generator = Generator::default();
 
     let futures: Vec<_> = obj
         .results
         .into_iter()
         .flat_map(|item| item.extensions.into_iter())
-        .filter(|item| {
-            config.extensions.contains(&Extension {
-                publisher_name: item.publisher.publisher_name.clone(),
-                extension_name: item.extension_name.clone(),
-            })
-        })
+        .filter(|item| config.contains(&item.publisher.publisher_name, &item.extension_name))
         .map(|item| {
             let vscode_ver = vscode_ver.clone();
             let client = client.clone();
+            let config = Arc::clone(&config);
+            let generator = generator.clone();
             async move {
                 for version in &item.versions {
                     // Get From [version]
@@ -62,12 +63,34 @@ async fn main() -> anyhow::Result<()> {
                         .json::<PackageJson>()
                         .await
                         .unwrap();
-                    trace!("get {}", file.source);
+                    trace!("get {} - {}", item.extension_name, file.source);
                     let required_ver =
                         semver::VersionReq::from_str(&package.engines.vscode).unwrap();
-                    info!("get version:{}", package.engines.vscode);
+                    info!(
+                        "get {}.{} rquired vscode version:{}",
+                        item.publisher.publisher_name, item.extension_name, package.engines.vscode
+                    );
                     if required_ver.matches(&vscode_ver) {
-                        let asset_url = version.get_file(AssetType::Vsix).unwrap().source.clone();
+                        let (has_asset_url, asset_url) = match config
+                            .get_asset_url(&item.publisher.publisher_name, &item.extension_name)
+                        {
+                            Some(url) => {
+                                let url = generator.render_asset_url(
+                                    &url,
+                                    &ExtensionContext::new(version.version.clone()),
+                                );
+                                (true, url)
+                            }
+                            None => (
+                                false,
+                                version.get_file(AssetType::Vsix).unwrap().source.clone(),
+                            ),
+                        };
+                        debug!(
+                            "{}-{}-{:?}",
+                            item.publisher.publisher_name, item.extension_name, asset_url
+                        );
+
                         let sha256 = tokio::process::Command::new("nix-prefetch-url")
                             .arg(asset_url.clone())
                             .output()
@@ -79,7 +102,7 @@ async fn main() -> anyhow::Result<()> {
                             extension_name: item.extension_name.clone(),
                             publisher_name: item.publisher.publisher_name.clone(),
                             extension_version: version.version.clone(),
-                            asset_url,
+                            asset_url: if has_asset_url { Some(asset_url) } else { None },
                             sha256,
                         });
                     }
@@ -89,11 +112,20 @@ async fn main() -> anyhow::Result<()> {
         })
         .collect();
 
-    let res: Vec<_> = join_all(futures).await.into_iter().flatten().collect();
-    info!("{res:?}");
+    let res: (Vec<_>, Vec<_>) = join_all(futures)
+        .await
+        .into_iter()
+        .flatten()
+        .partition(|item| item.asset_url.is_some());
+    debug!("{res:?}");
 
-    let mut generator = Generator::default();
-    println!("{}", generator.render(res)?);
+    println!(
+        "{}",
+        generator.render(&GeneratorContext {
+            nixs: res.1,
+            reassets: res.0
+        })?
+    );
 
     Ok(())
 }
