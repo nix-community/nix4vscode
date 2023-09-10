@@ -1,5 +1,6 @@
 #![allow(dead_code)]
 #![allow(unused_variables)]
+#![feature(lazy_cell)]
 
 pub mod config;
 pub mod data_struct;

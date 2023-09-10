@@ -19,3 +19,5 @@ clap               = { version = "4.4.2", features = ["derive"] }
 futures            = "0.3.28"
 anyhow             = "1.0.75"
 nixpkgs-fmt        = "1.3.0"
+redb               = "1.1.0"
+standard_paths     = "2.1.0"
