@@ -1,7 +1,7 @@
 use redb::{ReadableTable, TableDefinition};
 use standard_paths::{LocationType, StandardPaths};
 
-static CACHER: std::sync::LazyLock<redb::Database> = std::sync::LazyLock::new(|| {
+pub static CACHER: std::sync::LazyLock<redb::Database> = std::sync::LazyLock::new(|| {
     let path = StandardPaths::new("nix4vscode", "cathaysia");
     let path = path
         .writable_location(LocationType::GenericCacheLocation)
@@ -16,6 +16,7 @@ static CACHER: std::sync::LazyLock<redb::Database> = std::sync::LazyLock::new(||
 });
 
 static TABLE_SHA256: TableDefinition<&str, &str> = TableDefinition::new("SHA256");
+pub static TABLE_HTTP_CLIENT: TableDefinition<&str, &str> = TableDefinition::new("HTTP_CLIENT");
 
 pub async fn get_sha256(url: &str) -> anyhow::Result<String> {
     let value = (|| -> anyhow::Result<String> {
@@ -43,8 +44,11 @@ pub async fn get_sha256(url: &str) -> anyhow::Result<String> {
     let sha256 = String::from_utf8(sha256).unwrap().trim().to_owned();
     let _ = (|| -> anyhow::Result<()> {
         let wt = CACHER.begin_write()?;
-        let mut table = wt.open_table(TABLE_SHA256)?;
-        table.insert(url, sha256.as_str())?;
+        {
+            let mut table = wt.open_table(TABLE_SHA256)?;
+            table.insert(url, sha256.as_str())?;
+        }
+        wt.commit()?;
 
         Ok(())
     })();
