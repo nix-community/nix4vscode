@@ -1,6 +1,12 @@
 #![allow(dead_code)]
 #![allow(unused_variables)]
 
+pub mod config;
+pub mod data;
+pub mod jinja;
+pub mod request;
+pub mod utils;
+
 use log::*;
 use std::{str::FromStr, sync::Arc};
 use tracing_subscriber::{fmt, prelude::*, util::SubscriberInitExt, EnvFilter};
@@ -16,11 +22,6 @@ use crate::{
     data::AssetType,
     jinja::{ExtensionContext, Generator, GeneratorContext},
 };
-
-pub mod config;
-pub mod data;
-pub mod jinja;
-pub mod request;
 
 #[derive(Debug, Parser)]
 struct Args {
@@ -55,59 +56,49 @@ async fn main() -> anyhow::Result<()> {
             let generator = generator.clone();
             async move {
                 for version in &item.versions {
-                    // Get From [version]
-                    let file = version.get_file(AssetType::Manifest).unwrap();
-                    let req = client.get(file.source.clone()).build().unwrap();
-                    let package = client
-                        .execute(req)
-                        .await
-                        .unwrap()
-                        .json::<PackageJson>()
+                    let source = &version.get_file(AssetType::Manifest).unwrap().source;
+                    let package: PackageJson = utils::request_get_remote_object(&client, source)
                         .await
                         .unwrap();
-                    trace!("get {} - {}", item.extension_name, file.source);
-                    let required_ver =
-                        semver::VersionReq::from_str(&package.engines.vscode).unwrap();
+                    trace!("get {} - {}", item.extension_name, source);
                     info!(
                         "get {}.{} rquired vscode version:{}",
                         item.publisher.publisher_name, item.extension_name, package.engines.vscode
                     );
-                    if required_ver.matches(&vscode_ver) {
-                        let (has_asset_url, asset_url) = match config
-                            .get_asset_url(&item.publisher.publisher_name, &item.extension_name)
-                        {
-                            Some(url) => {
-                                let url = generator.render_asset_url(
-                                    &url,
-                                    &ExtensionContext::new(version.version.clone()),
-                                );
-                                (true, url)
-                            }
-                            None => (
-                                false,
-                                version.get_file(AssetType::Vsix).unwrap().source.clone(),
-                            ),
-                        };
-                        debug!(
-                            "{}-{}-{:?}",
-                            item.publisher.publisher_name, item.extension_name, asset_url
-                        );
-
-                        let sha256 = tokio::process::Command::new("nix-prefetch-url")
-                            .arg(asset_url.clone())
-                            .output()
-                            .await
-                            .unwrap()
-                            .stdout;
-                        let sha256 = String::from_utf8(sha256).unwrap().trim().to_owned();
-                        return Some(NixContext {
-                            extension_name: item.extension_name.clone(),
-                            publisher_name: item.publisher.publisher_name.clone(),
-                            extension_version: version.version.clone(),
-                            asset_url: if has_asset_url { Some(asset_url) } else { None },
-                            sha256,
-                        });
+                    if !package.is_compate_with(&vscode_ver) {
+                        continue;
                     }
+                    let (has_asset_url, asset_url) = match config
+                        .get_asset_url(&item.publisher.publisher_name, &item.extension_name)
+                    {
+                        Some(url) => {
+                            let url = generator.render_asset_url(
+                                &url,
+                                &ExtensionContext::new(version.version.clone()),
+                            );
+                            (true, url)
+                        }
+                        None => (
+                            false,
+                            version.get_file(AssetType::Vsix).unwrap().source.clone(),
+                        ),
+                    };
+                    debug!(
+                        "{}-{}-{:?}",
+                        item.publisher.publisher_name, item.extension_name, asset_url
+                    );
+
+                    return Some(NixContext {
+                        extension_name: item.extension_name.clone(),
+                        publisher_name: item.publisher.publisher_name.clone(),
+                        extension_version: version.version.clone(),
+                        asset_url: if has_asset_url {
+                            Some(asset_url.clone())
+                        } else {
+                            None
+                        },
+                        sha256: utils::get_sha256(&asset_url).await.unwrap(),
+                    });
                 }
                 None
             }
