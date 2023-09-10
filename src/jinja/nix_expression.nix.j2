@@ -1,36 +1,39 @@
 {%- filter nixfmt %}
-{{ autogen_warning }}
+{% if autogen_warning %}
+    {{ autogen_warning }}
+{% endif %}
 { pkgs, lib }:
 
 let
   vscode-utils = pkgs.vscode-utils;
 in
-[
-{%- for item in reassets %}
-{%- with uniqueId = [ item.publisher_name, '.', item.extension_name ] | join %}
-(vscode-utils.buildVscodeExtension {
-  name = "{{ uniqueId }}";
-  vscodeExtPublisher = "{{ item.publisher_name }}";
-  vscodeExtName = "{{ item.extension_name }}";
-  src = (pkgs.fetchurl {
-    url = "{{ item.asset_url }}";
-    sha256 = "{{ item.sha256 }}";
-    name = "{{ uniqueId }}.zip";
-  }).outPath;
-  vscodeExtUniqueId = "{{ uniqueId }}";
-  version = "{{ item.version }}";
-})
-{%- endwith %}
-{%- endfor %}
-] ++
-vscode-utils.extensionsFromVscodeMarketplace [
-{%- for item in nixs %}
-    {
-      name = "{{ item.extension_name }}";
-      publisher = "{{ item.publisher_name }}";
-      version = "{{ item.extension_version }}";
-      sha256 = "{{ item.sha256 }}";
-    }
-{%- endfor %}
-]
+{
+    {%- for item in reassets %}
+    {%- with uniqueId = [ item.publisher_name, '.', item.extension_name ] | join %}
+        {{ uniqueId }} = (vscode-utils.buildVscodeExtension {
+          name = "{{ uniqueId }}";
+          vscodeExtPublisher = "{{ item.publisher_name }}";
+          vscodeExtName = "{{ item.extension_name }}";
+          src = (pkgs.fetchurl {
+            url = "{{ item.asset_url }}";
+            sha256 = "{{ item.sha256 }}";
+            name = "{{ uniqueId }}.zip";
+          }).outPath;
+          vscodeExtUniqueId = "{{ uniqueId }}";
+          version = "{{ item.version }}";
+        });
+    {%- endwith %}
+    {%- endfor %}
+
+    {%- for item in nixs %}
+    {%- with uniqueId = [ item.publisher_name, '.', item.extension_name ] | join %}
+        {{ uniqueId }} = vscode-utils.extensionFromVscodeMarketplace {
+          name = "{{ item.extension_name }}";
+          publisher = "{{ item.publisher_name }}";
+          version = "{{ item.extension_version }}";
+          sha256 = "{{ item.sha256 }}";
+        };
+    {%- endwith %}
+    {%- endfor %}
+}
 {%- endfilter %}

@@ -24,6 +24,7 @@ use crate::{
 };
 
 #[derive(Debug, Parser)]
+#[command(author, version)]
 struct Args {
     #[arg(short, long)]
     file: String,

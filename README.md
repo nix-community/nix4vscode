@@ -12,10 +12,6 @@ extension_name = "gitlens"
 [[extensions]]
 publisher_name = "vscodevim"
 extension_name = "vim"
-
-[[extensions]]
-publisher_name = "vadimcn"
-extension_name = "vscode-lldb"
 ```
 
 then run `cargo run -- -f config.toml` , the a nix expression will be print to stdout just like this:
@@ -26,34 +22,20 @@ then run `cargo run -- -f config.toml` , the a nix expression will be print to s
 let
   vscode-utils = pkgs.vscode-utils;
 in
-[
-  (vscode-utils.buildVscodeExtension {
-    name = "vadimcn.vscode-lldb";
-    vscodeExtPublisher = "vadimcn";
-    vscodeExtName = "vscode-lldb";
-    src = (pkgs.fetchurl {
-      url = "https://github.com/vadimcn/codelldb/releases/download/v1.9.2/codelldb-x86_64-linux.vsix";
-      sha256 = "0x9xz31xml2hnssc5zpm2c6wck9qpcdgxlp7zrqjdc854lmx52w9";
-      name = "vadimcn.vscode-lldb.zip";
-    }).outPath;
-    vscodeExtUniqueId = "vadimcn.vscode-lldb";
-    version = "";
-  })
-] ++
-vscode-utils.extensionsFromVscodeMarketplace [
-  {
+{
+  eamodio.gitlens = vscode-utils.extensionFromVscodeMarketplace {
     name = "gitlens";
     publisher = "eamodio";
     version = "2023.9.905";
     sha256 = "1mzyc3sinkg4zmbyh2a85iqdqa7wsnh99hqvk6f8m2jcfhpfrwyb";
-  }
-  {
+  };
+  vscodevim.vim = vscode-utils.extensionFromVscodeMarketplace {
     name = "vim";
     publisher = "vscodevim";
-    version = "1.25.2";
-    sha256 = "0j0li3ddrknh34k2w2f13j4x8s0lb9gsmq7pxaldhwqimarqlbc7";
-  }
-]
+    version = "1.26.0";
+    sha256 = "0hxb58ygjbqk6qmkp1r421zzib2r1vmz7agbi7bcmjxjpr3grw2w";
+  };
+}
 ```
 
 Let's guess you store those contents in a file named `pkgs.nix`, then you can use it by:
@@ -61,15 +43,15 @@ Let's guess you store those contents in a file named `pkgs.nix`, then you can us
 ```nix
 { pkgs, lib }:
 let
-  inherit (pkgs.stdenv) isDarwin isLinux;
+  plugins = (import ./vscode_plugins.nix) { pkgs = pkgs; lib = lib; };
 in
 with pkgs;
 {
   enableExtensionUpdateCheck = false;
   enableUpdateCheck = false;
   extensions = with vscode-marketplace;[
+    plugins.vscodevim.vim
   ]
-  ] ++ (import ./pkgs.nix) { pkgs = pkgs; lib = lib; }
   ;
 }
 ```
