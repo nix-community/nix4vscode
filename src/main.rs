@@ -26,6 +26,8 @@ pub mod request;
 struct Args {
     #[arg(short, long)]
     file: String,
+    #[arg(short, long)]
+    output: Option<String>,
 }
 
 #[tokio::main]
@@ -119,13 +121,15 @@ async fn main() -> anyhow::Result<()> {
         .partition(|item| item.asset_url.is_some());
     debug!("{res:?}");
 
-    println!(
-        "{}",
-        generator.render(&GeneratorContext {
-            nixs: res.1,
-            reassets: res.0
-        })?
-    );
+    let res = generator.render(&GeneratorContext {
+        nixs: res.1,
+        reassets: res.0,
+    })?;
+
+    match args.output {
+        Some(filepath) => tokio::fs::write(filepath, res).await.unwrap(),
+        None => println!("{res}",),
+    }
 
     Ok(())
 }
