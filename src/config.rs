@@ -3,6 +3,13 @@ use tokio::fs;
 
 use crate::jinja::Generator;
 
+#[derive(Debug, Serialize, Deserialize, PartialEq, Eq)]
+pub struct Extension {
+    pub publisher_name: String,
+    pub extension_name: String,
+    pub asset_url: Option<String>,
+}
+
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Config {
     pub vscode_version: String,
@@ -40,11 +47,4 @@ impl Config {
                 && item.publisher_name.as_str() == publisher_name
         })
     }
-}
-
-#[derive(Debug, Serialize, Deserialize, PartialEq, Eq)]
-pub struct Extension {
-    pub publisher_name: String,
-    pub extension_name: String,
-    pub asset_url: Option<String>,
 }

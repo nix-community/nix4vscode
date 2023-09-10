@@ -1,7 +1,7 @@
-mod file;
+mod version;
 use serde::{Deserialize, Serialize};
 
-pub use file::*;
+pub use version::*;
 
 #[derive(Debug, Default, Serialize, Deserialize)]
 #[serde(default)]

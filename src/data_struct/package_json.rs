@@ -1,6 +1,3 @@
-mod default;
-mod ignore;
-
 use std::str::FromStr;
 
 use serde::{Deserialize, Serialize};
@@ -12,7 +9,7 @@ pub struct PackageJson {
 }
 
 impl PackageJson {
-    pub fn is_compate_with(&self, target_version: &semver::Version) -> bool {
+    pub fn is_compatible_with(&self, target_version: &semver::Version) -> bool {
         let required_ver = semver::VersionReq::from_str(&self.engines.vscode).unwrap();
         required_ver.matches(target_version)
     }

@@ -1,40 +1,13 @@
+mod context;
 mod filters;
 mod system;
 
+pub use context::*;
 use filters::*;
 use system::*;
 
 use minijinja::Environment;
-use serde::{Deserialize, Serialize};
 
-use crate::data::NixContext;
-
-#[derive(Debug, Default, Deserialize, Serialize)]
-pub struct GeneratorContext {
-    pub nixs: Vec<NixContext>,
-    pub autogen_warning: Option<String>,
-    pub reassets: Vec<NixContext>,
-}
-
-#[derive(Debug, Default, Deserialize, Serialize)]
-pub struct ExtensionContext {
-    extension: ExtensionContextInner,
-}
-
-impl ExtensionContext {
-    pub fn new(version: String) -> Self {
-        Self {
-            extension: ExtensionContextInner { version },
-        }
-    }
-}
-
-#[derive(Debug, Default, Deserialize, Serialize)]
-struct ExtensionContextInner {
-    version: String,
-}
-
-// empty
 #[derive(Debug, Clone)]
 pub struct Generator<'a> {
     pub engine: Environment<'a>,
@@ -49,9 +22,9 @@ impl<'a> Default for Generator<'a> {
 impl Generator<'_> {
     pub const NIX_EXPRESSION: (&str, &str) = (
         "nix_expression",
-        include_str!("./jinja/nix_expression.nix.j2"),
+        include_str!("./jinja/template/nix_expression.nix.j2"),
     );
-    pub const CODELLDB: (&str, &str) = ("codelldb", include_str!("./jinja/codelldb.j2"));
+    pub const CODELLDB: (&str, &str) = ("codelldb", include_str!("./jinja/template/codelldb.j2"));
 }
 
 impl<'a> Generator<'a> {
@@ -72,7 +45,7 @@ impl<'a> Generator<'a> {
         Self { engine }
     }
 
-    pub fn render_asset_url(&self, context: &str, ctx: &ExtensionContext) -> String {
+    pub fn render_asset_url(&self, context: &str, ctx: &AssetUrlContext) -> String {
         let tpl = self.engine.template_from_str(context).unwrap();
         tpl.render(minijinja::Value::from_serializable(ctx))
             .unwrap()

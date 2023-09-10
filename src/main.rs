@@ -2,7 +2,7 @@
 #![allow(unused_variables)]
 
 pub mod config;
-pub mod data;
+pub mod data_struct;
 pub mod jinja;
 pub mod request;
 pub mod utils;
@@ -15,12 +15,12 @@ use futures::future::join_all;
 
 use clap::Parser;
 use config::Config;
-use data::{NixContext, PackageJson};
-use request::Query;
+use data_struct::PackageJson;
 
 use crate::{
-    data::AssetType,
-    jinja::{ExtensionContext, Generator, GeneratorContext},
+    data_struct::AssetType,
+    jinja::{AssetUrlContext, Generator, GeneratorContext, NixContext},
+    request::HttpClient,
 };
 
 #[derive(Debug, Parser)]
@@ -39,9 +39,12 @@ async fn main() -> anyhow::Result<()> {
     init_logger();
 
     let config = Arc::new(Config::new(&args.file).await?);
-    let client = reqwest::Client::builder().gzip(true).build()?;
+    let client = HttpClient::new().unwrap();
     debug!("request: {config:?}");
-    let obj = Query::new(&config).get_response(&client).await?;
+    let obj = client
+        .get_extension_response(&config.extensions)
+        .await
+        .unwrap();
     let vscode_ver = semver::Version::from_str(&config.vscode_version).unwrap();
     let mut generator = Generator::default();
 
@@ -58,15 +61,14 @@ async fn main() -> anyhow::Result<()> {
             async move {
                 for version in &item.versions {
                     let source = &version.get_file(AssetType::Manifest).unwrap().source;
-                    let package: PackageJson = utils::request_get_remote_object(&client, source)
-                        .await
-                        .unwrap();
+                    let package: PackageJson =
+                        client.request_get_remote_object(source).await.unwrap();
                     trace!("get {} - {}", item.extension_name, source);
                     info!(
                         "get {}.{} rquired vscode version:{}",
                         item.publisher.publisher_name, item.extension_name, package.engines.vscode
                     );
-                    if !package.is_compate_with(&vscode_ver) {
+                    if !package.is_compatible_with(&vscode_ver) {
                         continue;
                     }
                     let (has_asset_url, asset_url) = match config
@@ -75,7 +77,7 @@ async fn main() -> anyhow::Result<()> {
                         Some(url) => {
                             let url = generator.render_asset_url(
                                 &url,
-                                &ExtensionContext::new(version.version.clone()),
+                                &AssetUrlContext::new(version.version.clone()),
                             );
                             (true, url)
                         }

@@ -1,10 +1,15 @@
-// https://github.com/microsoft/vscode/blob/d187d50a482ff80dcf74c35affb09dda1a7cd2fe/src/vs/platform/extensionManagement/common/extensionGalleryService.ts
-mod packages;
-mod response;
-
-pub use packages::*;
-pub use response::*;
 use serde::{Deserialize, Serialize};
+
+mod asset_url;
+
+pub use asset_url::*;
+
+#[derive(Debug, Default, Deserialize, Serialize)]
+pub struct GeneratorContext {
+    pub autogen_warning: Option<String>,
+    pub nixs: Vec<NixContext>,
+    pub reassets: Vec<NixContext>,
+}
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct NixContext {
