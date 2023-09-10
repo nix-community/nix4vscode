@@ -123,6 +123,7 @@ async fn main() -> anyhow::Result<()> {
 
     let res = generator.render(&GeneratorContext {
         nixs: res.1,
+        autogen_warning: config.autogen_warning.clone(),
         reassets: res.0,
     })?;
 

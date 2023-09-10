@@ -6,6 +6,7 @@ use crate::jinja::Generator;
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Config {
     pub vscode_version: String,
+    pub autogen_warning: Option<String>,
     pub extensions: Vec<Extension>,
 }
 

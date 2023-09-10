@@ -12,6 +12,7 @@ use crate::data::NixContext;
 #[derive(Debug, Default, Deserialize, Serialize)]
 pub struct GeneratorContext {
     pub nixs: Vec<NixContext>,
+    pub autogen_warning: Option<String>,
     pub reassets: Vec<NixContext>,
 }
 
