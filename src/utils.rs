@@ -1,12 +1,15 @@
+use std::path::PathBuf;
+
 use redb::{ReadableTable, TableDefinition};
-use standard_paths::{LocationType, StandardPaths};
 
 pub static CACHER: std::sync::LazyLock<redb::Database> = std::sync::LazyLock::new(|| {
-    let path = StandardPaths::new("nix4vscode", "cathaysia");
-    let path = path
-        .writable_location(LocationType::GenericCacheLocation)
-        .unwrap();
-    let path = path.join("nix4vscode");
+    let path = format!(
+        "{}/{}/{}",
+        std::env::var("HOME").unwrap(),
+        ".cache",
+        "nix4vscode"
+    );
+    let path = PathBuf::from(path);
     if !path.exists() {
         std::fs::create_dir_all(path.clone()).unwrap();
     }
