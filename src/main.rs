@@ -47,7 +47,7 @@ async fn main() -> anyhow::Result<()> {
         .await
         .unwrap();
     let vscode_ver = semver::Version::from_str(&config.vscode_version).unwrap();
-    let mut generator = Generator::default();
+    let mut generator = Generator::new(None);
 
     let futures: Vec<_> = obj
         .results

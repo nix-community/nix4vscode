@@ -6,17 +6,11 @@ pub use context::*;
 use filters::*;
 use system::*;
 
-use minijinja::Environment;
+use minijinja::{Environment, Value};
 
 #[derive(Debug, Clone)]
 pub struct Generator<'a> {
     pub engine: Environment<'a>,
-}
-
-impl<'a> Default for Generator<'a> {
-    fn default() -> Self {
-        Self::new()
-    }
 }
 
 impl Generator<'_> {
@@ -28,7 +22,7 @@ impl Generator<'_> {
 }
 
 impl<'a> Generator<'a> {
-    pub fn new() -> Self {
+    pub fn new(sys_ctx: Option<&SystemContext>) -> Self {
         let mut engine = Environment::new();
 
         engine
@@ -37,10 +31,17 @@ impl<'a> Generator<'a> {
 
         engine.add_filter("nixfmt", nixfmt);
 
-        engine.add_global(
-            "system",
-            minijinja::Value::from_serializable(&SystemContext::default()),
-        );
+        match sys_ctx {
+            Some(ctx) => {
+                engine.add_global("system", Value::from_serializable(ctx));
+            }
+            None => {
+                engine.add_global(
+                    "system",
+                    Value::from_serializable(&SystemContext::default()),
+                );
+            }
+        }
 
         Self { engine }
     }
