@@ -47,7 +47,7 @@ async fn main() -> anyhow::Result<()> {
         .await
         .unwrap();
     let vscode_ver = semver::Version::from_str(&config.vscode_version).unwrap();
-    let mut generator = Generator::new(None);
+    let mut generator = Generator::new();
 
     let futures: Vec<_> = obj
         .results
@@ -78,7 +78,15 @@ async fn main() -> anyhow::Result<()> {
                         Some(url) => {
                             let url = generator.render_asset_url(
                                 &url,
-                                &AssetUrlContext::new(version.version.clone()),
+                                &AssetUrlContext::new(
+                                    config
+                                        .get_system_ctx(
+                                            &item.publisher.publisher_name,
+                                            &item.extension_name,
+                                        )
+                                        .unwrap_or_default(),
+                                    version.version.clone(),
+                                ),
                             );
                             (true, url)
                         }

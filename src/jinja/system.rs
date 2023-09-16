@@ -1,16 +1,16 @@
 use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Serialize, Deserialize)]
-pub struct SystemContext<'a> {
-    arch: &'a str,
-    ostype: &'a str,
+#[derive(Debug, Serialize, Deserialize, PartialEq, Eq, Clone)]
+pub struct SystemContext {
+    arch: String,
+    ostype: String,
 }
 
-impl<'a> Default for SystemContext<'a> {
+impl Default for SystemContext {
     fn default() -> Self {
         Self {
-            arch: std::env::consts::ARCH,
-            ostype: std::env::consts::OS,
+            arch: std::env::consts::ARCH.into(),
+            ostype: std::env::consts::OS.into(),
         }
     }
 }

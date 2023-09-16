@@ -4,9 +4,9 @@ mod system;
 
 pub use context::*;
 use filters::*;
-use system::*;
+pub use system::*;
 
-use minijinja::{Environment, Value};
+use minijinja::Environment;
 
 #[derive(Debug, Clone)]
 pub struct Generator<'a> {
@@ -22,7 +22,7 @@ impl Generator<'_> {
 }
 
 impl<'a> Generator<'a> {
-    pub fn new(sys_ctx: Option<&SystemContext>) -> Self {
+    pub fn new() -> Self {
         let mut engine = Environment::new();
 
         engine
@@ -31,23 +31,11 @@ impl<'a> Generator<'a> {
 
         engine.add_filter("nixfmt", nixfmt);
 
-        match sys_ctx {
-            Some(ctx) => {
-                engine.add_global("system", Value::from_serializable(ctx));
-            }
-            None => {
-                engine.add_global(
-                    "system",
-                    Value::from_serializable(&SystemContext::default()),
-                );
-            }
-        }
-
         Self { engine }
     }
 
-    pub fn render_asset_url(&self, context: &str, ctx: &AssetUrlContext) -> String {
-        let tpl = self.engine.template_from_str(context).unwrap();
+    pub fn render_asset_url(&self, tmpl: &str, ctx: &AssetUrlContext) -> String {
+        let tpl = self.engine.template_from_str(tmpl).unwrap();
         tpl.render(minijinja::Value::from_serializable(ctx))
             .unwrap()
     }
@@ -57,5 +45,11 @@ impl<'a> Generator<'a> {
             .engine
             .get_template(Self::NIX_EXPRESSION.0)?
             .render(minijinja::Value::from_serializable(ctx))?)
+    }
+}
+
+impl<'a> Default for Generator<'a> {
+    fn default() -> Self {
+        Self::new()
     }
 }
