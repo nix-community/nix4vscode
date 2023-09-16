@@ -4,6 +4,7 @@
 
 pub mod config;
 pub mod data_struct;
+pub mod error;
 pub mod jinja;
 pub mod request;
 pub mod utils;
@@ -100,6 +101,14 @@ async fn main() -> anyhow::Result<()> {
                         item.publisher.publisher_name, item.extension_name, asset_url
                     );
 
+                    let sha256 = match utils::get_sha256(&asset_url).await {
+                        Ok(sha256) => sha256,
+                        Err(err) => {
+                            error!("{err}");
+                            return None;
+                        }
+                    };
+
                     return Some(NixContext {
                         extension_name: item.extension_name.clone(),
                         publisher_name: item.publisher.publisher_name.clone(),
@@ -109,7 +118,7 @@ async fn main() -> anyhow::Result<()> {
                         } else {
                             None
                         },
-                        sha256: utils::get_sha256(&asset_url).await.unwrap(),
+                        sha256,
                     });
                 }
                 None

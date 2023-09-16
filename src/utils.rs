@@ -1,6 +1,9 @@
+use log::*;
 use std::path::PathBuf;
 
 use redb::{ReadableTable, TableDefinition};
+
+use crate::error::Error;
 
 pub static CACHER: std::sync::LazyLock<redb::Database> = std::sync::LazyLock::new(|| {
     let path = format!(
@@ -27,9 +30,13 @@ pub async fn get_sha256(url: &str) -> anyhow::Result<String> {
         let table = r_txn.open_table(TABLE_SHA256)?;
         let value = table
             .get(url)?
-            .ok_or_else(|| redb::Error::InvalidSavepoint)?
+            .ok_or_else(|| Error::CacheMissing(url.into()))?
             .value()
             .to_string();
+        if value.is_empty() {
+            return Err(Error::CacheMissing(url.into()).into());
+        }
+        trace!("Cache hint: {} -> {}", url, value);
 
         Ok(value)
     })();
@@ -45,6 +52,9 @@ pub async fn get_sha256(url: &str) -> anyhow::Result<String> {
         .stdout;
 
     let sha256 = String::from_utf8(sha256).unwrap().trim().to_owned();
+    if sha256.is_empty() {
+        return Err(Error::Sha256Error(url.into()).into());
+    }
     let _ = (|| -> anyhow::Result<()> {
         let wt = CACHER.begin_write()?;
         {
