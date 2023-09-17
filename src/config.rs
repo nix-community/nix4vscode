@@ -40,34 +40,33 @@ impl Config {
         Ok(obj)
     }
 
+    #[inline]
+    fn get_idx(&self, publisher_name: &str, extension_name: &str) -> Option<usize> {
+        self.extensions.iter().position(|item| {
+            item.extension_name.as_str() == extension_name
+                && item.publisher_name.as_str() == publisher_name
+        })
+    }
+
     pub fn get_system_ctx(
         &self,
         publisher_name: &str,
         extension_name: &str,
     ) -> Option<SystemContext> {
-        match self.extensions.iter().position(|item| {
-            item.extension_name.as_str() == extension_name
-                && item.publisher_name.as_str() == publisher_name
-        }) {
+        match self.get_idx(publisher_name, extension_name) {
             Some(idx) => self.extensions[idx].system.clone(),
             None => None,
         }
     }
 
     pub fn get_asset_url(&self, publisher_name: &str, extension_name: &str) -> Option<String> {
-        match self.extensions.iter().position(|item| {
-            item.extension_name.as_str() == extension_name
-                && item.publisher_name.as_str() == publisher_name
-        }) {
+        match self.get_idx(publisher_name, extension_name) {
             Some(idx) => self.extensions[idx].asset_url.clone(),
             None => None,
         }
     }
 
     pub fn contains(&self, publisher_name: &str, extension_name: &str) -> bool {
-        self.extensions.iter().any(|item| {
-            item.extension_name.as_str() == extension_name
-                && item.publisher_name.as_str() == publisher_name
-        })
+        self.get_idx(publisher_name, extension_name).is_some()
     }
 }
