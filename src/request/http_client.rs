@@ -1,9 +1,7 @@
-use redb::ReadableTable;
-
 use crate::{
     config::Extension,
     data_struct,
-    utils::{CACHER, TABLE_HTTP_CLIENT},
+    utils::{CacheType, GLOBAL_CACHER},
 };
 
 use super::Query;
@@ -44,19 +42,7 @@ impl HttpClient {
         &self,
         url: &str,
     ) -> anyhow::Result<T> {
-        let value = (|| -> anyhow::Result<String> {
-            let r_txn = CACHER.begin_read()?;
-            let table = r_txn.open_table(TABLE_HTTP_CLIENT)?;
-            let value = table
-                .get(url)?
-                .ok_or_else(|| redb::Error::InvalidSavepoint)?
-                .value()
-                .to_string();
-
-            Ok(value)
-        })();
-
-        if let Ok(value) = value {
+        if let Ok(value) = GLOBAL_CACHER.get(CacheType::HttpClient, url) {
             return Ok(serde_json::from_str(&value).unwrap());
         }
 
@@ -70,17 +56,7 @@ impl HttpClient {
             .await
             .unwrap();
 
-        let _ = (|| -> anyhow::Result<()> {
-            let wt = CACHER.begin_write()?;
-            {
-                let mut table = wt.open_table(TABLE_HTTP_CLIENT)?;
-                table.insert(url, rep.as_str())?;
-            }
-            wt.commit()?;
-
-            Ok(())
-        })();
-
+        let _ = GLOBAL_CACHER.insert(CacheType::HttpClient, url, &rep);
         Ok(serde_json::from_str(&rep).unwrap())
     }
 }
