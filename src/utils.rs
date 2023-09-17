@@ -10,7 +10,7 @@ pub async fn get_sha256(url: &str) -> anyhow::Result<String> {
     }
 
     let sha256 = tokio::process::Command::new("nix-prefetch-url")
-        .arg(url.clone())
+        .arg(url)
         .output()
         .await?
         .stdout;

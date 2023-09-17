@@ -14,11 +14,11 @@ pub struct Generator<'a> {
 }
 
 impl Generator<'_> {
-    pub const NIX_EXPRESSION: (&str, &str) = (
+    pub const NIX_EXPRESSION: (&'static str, &'static str) = (
         "nix_expression",
         include_str!("./jinja/template/nix_expression.nix.j2"),
     );
-    pub const CODELLDB: (&str, &str) = ("codelldb", include_str!("./jinja/template/codelldb.j2"));
+    pub const CODELLDB: (&'static str, &'static str) = ("codelldb", include_str!("./jinja/template/codelldb.j2"));
 }
 
 impl<'a> Generator<'a> {
