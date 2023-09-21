@@ -7,8 +7,7 @@ pub use asset_url::*;
 #[derive(Debug, Default, Deserialize, Serialize)]
 pub struct GeneratorContext {
     pub autogen_warning: Option<String>,
-    pub nixs: Vec<NixContext>,
-    pub reassets: Vec<NixContext>,
+    pub extensions: Vec<NixContext>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]

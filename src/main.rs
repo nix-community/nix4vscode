@@ -126,17 +126,12 @@ async fn main() -> anyhow::Result<()> {
         })
         .collect();
 
-    let res: (Vec<_>, Vec<_>) = join_all(futures)
-        .await
-        .into_iter()
-        .flatten()
-        .partition(|item| item.asset_url.is_some());
+    let res: Vec<_> = join_all(futures).await.into_iter().flatten().collect();
     debug!("{res:?}");
 
     let res = generator.render(&GeneratorContext {
-        nixs: res.1,
+        extensions: res,
         autogen_warning: config.autogen_warning.clone(),
-        reassets: res.0,
     })?;
 
     match args.output {
