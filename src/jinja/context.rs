@@ -1,12 +1,16 @@
+use std::sync::Arc;
+
 use serde::{Deserialize, Serialize};
 
 mod asset_url;
 
 pub use asset_url::*;
 
+use crate::config::Config;
+
 #[derive(Debug, Default, Deserialize, Serialize)]
 pub struct GeneratorContext {
-    pub autogen_warning: Option<String>,
+    pub config: Arc<Config>,
     pub extensions: Vec<NixContext>,
 }
 

@@ -131,7 +131,7 @@ async fn main() -> anyhow::Result<()> {
 
     let res = generator.render(&GeneratorContext {
         extensions: res,
-        autogen_warning: config.autogen_warning.clone(),
+        config: config.clone(),
     })?;
 
     match args.output {

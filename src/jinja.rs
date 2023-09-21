@@ -18,7 +18,8 @@ impl Generator<'_> {
         "nix_expression",
         include_str!("./jinja/template/nix_expression.nix.j2"),
     );
-    pub const CODELLDB: (&'static str, &'static str) = ("codelldb", include_str!("./jinja/template/codelldb.j2"));
+    pub const CODELLDB: (&'static str, &'static str) =
+        ("codelldb", include_str!("./jinja/template/codelldb.j2"));
 }
 
 impl<'a> Generator<'a> {

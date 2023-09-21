@@ -1,6 +1,6 @@
 {%- filter nixfmt %}
-{% if autogen_warning %}
-    {{ autogen_warning }}
+{% if config.autogen_warning != None %}
+    {{ config.autogen_warning }}
 {% endif %}
 { pkgs, lib }:
 

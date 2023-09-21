@@ -11,7 +11,7 @@ pub struct Extension {
     pub system: Option<SystemContext>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Default, Serialize, Deserialize)]
 pub struct Config {
     pub vscode_version: String,
     pub autogen_warning: Option<String>,
