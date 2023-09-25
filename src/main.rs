@@ -112,6 +112,12 @@ async fn main() -> anyhow::Result<()> {
                             None
                         },
                         sha256,
+                        target_platform: client
+                            .get_extension_target_platform(
+                                item.publisher.publisher_name,
+                                item.extension_name,
+                            )
+                            .await,
                     });
                 }
                 None
@@ -120,7 +126,7 @@ async fn main() -> anyhow::Result<()> {
         .collect();
 
     let res: Vec<_> = join_all(futures).await.into_iter().flatten().collect();
-    debug!("{res:?}");
+    debug!("{res:#?}");
 
     let res = generator.render(&GeneratorContext {
         extensions: res,

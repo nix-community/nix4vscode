@@ -6,7 +6,7 @@ mod asset_url;
 
 pub use asset_url::*;
 
-use crate::config::Config;
+use crate::{config::Config, data_struct::TargetPlatform};
 
 #[derive(Debug, Default, Deserialize, Serialize)]
 pub struct GeneratorContext {
@@ -21,4 +21,5 @@ pub struct NixContext {
     pub extension_version: String,
     pub asset_url: Option<String>,
     pub sha256: String,
+    pub target_platform: Vec<TargetPlatform>,
 }

@@ -85,6 +85,9 @@ bitflags! {
 
 impl Default for RequestFlags {
     fn default() -> Self {
-        RequestFlags::IncludeVersions | RequestFlags::IncludeAssetUri | RequestFlags::IncludeFiles
+        RequestFlags::IncludeVersions
+            | RequestFlags::IncludeAssetUri
+            | RequestFlags::IncludeFiles
+            | RequestFlags::IncludeVersionProperties
     }
 }

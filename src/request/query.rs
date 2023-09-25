@@ -30,7 +30,7 @@ impl Query {
                 criteria: extensions
                     .iter()
                     .map(|item| ICriterium {
-                        filter_type: FilterType::SEARCH_TEXT,
+                        filter_type: FilterType::EXTENSION_NAME,
                         value: format!("{}.{}", item.publisher_name, item.extension_name),
                     })
                     .chain(fixed)
@@ -39,6 +39,30 @@ impl Query {
             }],
             asset_types: Default::default(),
             flags: RequestFlags::default().bits(),
+        }
+    }
+
+    pub fn create_search(publisher_name: String, extension_name: String) -> Self {
+        Query {
+            filters: vec![IQueryState {
+                criteria: vec![
+                    ICriterium {
+                        filter_type: FilterType::SEARCH_TEXT,
+                        value: format!("{}.{}", publisher_name, extension_name),
+                    },
+                    ICriterium {
+                        filter_type: FilterType::TARGET,
+                        value: "Microsoft.VisualStudio.Code".into(),
+                    },
+                    ICriterium {
+                        filter_type: FilterType::EXCLUDE_WITH_FLAGS,
+                        value: "4096".into(),
+                    },
+                ],
+                ..Default::default()
+            }],
+            asset_types: Default::default(),
+            flags: RequestFlags::IncludeLatestVersionOnly.bits(),
         }
     }
 }

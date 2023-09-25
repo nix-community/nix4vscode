@@ -3,7 +3,7 @@ use serde::{Deserialize, Serialize};
 
 pub use version::*;
 
-use super::ResultMetaData;
+use super::{ResultMetaData, TargetPlatform};
 
 #[derive(Debug, Default, Serialize, Deserialize)]
 #[serde(default)]
@@ -56,4 +56,27 @@ pub struct IRawGalleryExtension {
 pub struct IRawGalleryExtensionsResult {
     pub extensions: Vec<IRawGalleryExtension>,
     pub result_metadata: Vec<ResultMetaData>,
+}
+
+impl IRawGalleryExtensionsResult {
+    pub fn get_target_platform(&self) -> Vec<TargetPlatform> {
+        match self
+            .result_metadata
+            .iter()
+            .position(|item| &item.metadata_type == "TargetPlatforms")
+        {
+            Some(idx) => {
+                let a = &self.result_metadata[idx];
+                self.result_metadata[idx]
+                    .metadata_items
+                    .iter()
+                    .map(|item| {
+                        let a: TargetPlatform = item.name.as_str().into();
+                        a
+                    })
+                    .collect()
+            }
+            None => vec![],
+        }
+    }
 }
