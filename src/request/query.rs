@@ -30,7 +30,7 @@ impl Query {
                 criteria: extensions
                     .iter()
                     .map(|item| ICriterium {
-                        filter_type: FilterType::EXTENSION_NAME,
+                        filter_type: FilterType::SEARCH_TEXT,
                         value: format!("{}.{}", item.publisher_name, item.extension_name),
                     })
                     .chain(fixed)

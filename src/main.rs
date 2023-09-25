@@ -47,6 +47,7 @@ async fn main() -> anyhow::Result<()> {
         .get_extension_response(&config.extensions)
         .await
         .unwrap();
+    trace!("{obj:#?}");
     let vscode_ver = semver::Version::from_str(&config.vscode_version).unwrap();
     let mut generator = Generator::new();
 

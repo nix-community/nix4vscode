@@ -3,6 +3,8 @@ use serde::{Deserialize, Serialize};
 
 pub use version::*;
 
+use super::ResultMetaData;
+
 #[derive(Debug, Default, Serialize, Deserialize)]
 #[serde(default)]
 #[serde(rename_all = "camelCase")]
@@ -53,4 +55,5 @@ pub struct IRawGalleryExtension {
 #[serde(rename_all = "camelCase")]
 pub struct IRawGalleryExtensionsResult {
     pub extensions: Vec<IRawGalleryExtension>,
+    pub result_metadata: Vec<ResultMetaData>,
 }
