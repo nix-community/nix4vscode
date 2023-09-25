@@ -1,5 +1,7 @@
 use serde::{Deserialize, Serialize};
 
+use crate::request::PropertyType;
+
 #[derive(Debug, Default, Serialize, Deserialize)]
 #[serde(default)]
 #[serde(rename_all = "camelCase")]
@@ -11,6 +13,19 @@ pub struct IRawGalleryExtensionVersion {
     pub files: Vec<IRawGalleryExtensionFile>,
     pub properties: Vec<IRawGalleryExtensionProperty>,
     pub target_platform: String,
+}
+
+impl IRawGalleryExtensionVersion {
+    pub fn get_engine(&self) -> semver::VersionReq {
+        match self
+            .properties
+            .iter()
+            .position(|item| item.key == PropertyType::Engine.to_string())
+        {
+            Some(idx) => semver::VersionReq::parse(&self.properties[idx].value).unwrap(),
+            None => unreachable!(),
+        }
+    }
 }
 
 #[derive(Debug, Default, Serialize, Deserialize)]

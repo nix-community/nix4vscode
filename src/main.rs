@@ -17,7 +17,6 @@ use futures::future::join_all;
 
 use clap::Parser;
 use config::Config;
-use data_struct::PackageJson;
 
 use crate::{
     data_struct::AssetType,
@@ -64,14 +63,7 @@ async fn main() -> anyhow::Result<()> {
             async move {
                 for version in &item.versions {
                     let source = &version.get_file(AssetType::Manifest).unwrap().source;
-                    let package: PackageJson =
-                        client.request_get_remote_object(source).await.unwrap();
-                    trace!("get {} - {}", item.extension_name, source);
-                    info!(
-                        "get {}.{} rquired vscode version:{}",
-                        item.publisher.publisher_name, item.extension_name, package.engines.vscode
-                    );
-                    if !package.is_compatible_with(&vscode_ver) {
+                    if !version.get_engine().matches(&vscode_ver) {
                         continue;
                     }
                     let (has_asset_url, asset_url) = match config

@@ -1,8 +1,4 @@
-use crate::{
-    config::Extension,
-    data_struct,
-    utils::{CacheType, GLOBAL_CACHER},
-};
+use crate::{config::Extension, data_struct};
 
 use super::Query;
 
@@ -36,27 +32,5 @@ impl HttpClient {
             .await?
             .json::<data_struct::IRawGalleryQueryResult>()
             .await?)
-    }
-
-    pub async fn request_get_remote_object<T: for<'de> serde::Deserialize<'de>>(
-        &self,
-        url: &str,
-    ) -> anyhow::Result<T> {
-        if let Ok(value) = GLOBAL_CACHER.get(CacheType::HttpClient, url) {
-            return Ok(serde_json::from_str(&value).unwrap());
-        }
-
-        let req = self.client.get(url).build().unwrap();
-        let rep = self
-            .client
-            .execute(req)
-            .await
-            .unwrap()
-            .text()
-            .await
-            .unwrap();
-
-        let _ = GLOBAL_CACHER.insert(CacheType::HttpClient, url, &rep);
-        Ok(serde_json::from_str(&rep).unwrap())
     }
 }
