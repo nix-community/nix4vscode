@@ -31,6 +31,8 @@ struct Args {
     file: String,
     #[arg(short, long)]
     output: Option<String>,
+    #[arg(long, hide = true)]
+    export: bool,
 }
 
 #[tokio::main]
@@ -127,6 +129,14 @@ async fn main() -> anyhow::Result<()> {
 
     let res: Vec<_> = join_all(futures).await.into_iter().flatten().collect();
     debug!("{res:#?}");
+    if args.export {
+        let res = serde_json::to_string(&res).unwrap();
+        match args.output {
+            Some(filepath) => tokio::fs::write(filepath, res).await.unwrap(),
+            None => println!("{res}",),
+        }
+        return Ok(());
+    }
 
     let res = generator.render(&GeneratorContext {
         extensions: res,
