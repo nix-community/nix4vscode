@@ -9,7 +9,9 @@ pub mod jinja;
 pub mod request;
 pub mod utils;
 
+use data_struct::IRawGalleryExtension;
 use log::*;
+use semver::Version;
 use std::{str::FromStr, sync::Arc};
 use tracing_subscriber::{fmt, prelude::*, util::SubscriberInitExt, EnvFilter};
 
@@ -33,6 +35,69 @@ struct Args {
     output: Option<String>,
     #[arg(long, hide = true)]
     export: bool,
+}
+
+async fn get_matched_versoin(
+    item: IRawGalleryExtension,
+    vscode_ver: Version,
+    client: HttpClient,
+    config: Arc<Config>,
+    generator: Generator<'_>,
+) -> Option<NixContext> {
+    for version in &item.versions {
+        let source = &version.get_file(AssetType::Manifest).unwrap().source;
+        if !version.get_engine().matches(&vscode_ver) {
+            continue;
+        }
+        let (has_asset_url, asset_url) = match config
+            .get_asset_url(&item.publisher.publisher_name, &item.extension_name)
+        {
+            Some(url) => {
+                let url = generator.render_asset_url(
+                    &url,
+                    &AssetUrlContext::new(
+                        config
+                            .get_system_ctx(&item.publisher.publisher_name, &item.extension_name)
+                            .unwrap_or_default(),
+                        version.version.clone(),
+                    ),
+                );
+                (true, url)
+            }
+            None => (
+                false,
+                version.get_file(AssetType::Vsix).unwrap().source.clone(),
+            ),
+        };
+        debug!(
+            "{}-{}-{:?}",
+            item.publisher.publisher_name, item.extension_name, asset_url
+        );
+
+        let sha256 = match utils::get_sha256(&asset_url).await {
+            Ok(sha256) => sha256,
+            Err(err) => {
+                error!("{err}");
+                return None;
+            }
+        };
+
+        return Some(NixContext {
+            extension_name: item.extension_name.clone(),
+            publisher_name: item.publisher.publisher_name.clone(),
+            extension_version: version.version.clone(),
+            asset_url: if has_asset_url {
+                Some(asset_url.clone())
+            } else {
+                None
+            },
+            sha256,
+            target_platform: client
+                .get_extension_target_platform(item.publisher.publisher_name, item.extension_name)
+                .await,
+        });
+    }
+    None
 }
 
 #[tokio::main]
@@ -62,68 +127,7 @@ async fn main() -> anyhow::Result<()> {
             let client = client.clone();
             let config = Arc::clone(&config);
             let generator = generator.clone();
-            async move {
-                for version in &item.versions {
-                    let source = &version.get_file(AssetType::Manifest).unwrap().source;
-                    if !version.get_engine().matches(&vscode_ver) {
-                        continue;
-                    }
-                    let (has_asset_url, asset_url) = match config
-                        .get_asset_url(&item.publisher.publisher_name, &item.extension_name)
-                    {
-                        Some(url) => {
-                            let url = generator.render_asset_url(
-                                &url,
-                                &AssetUrlContext::new(
-                                    config
-                                        .get_system_ctx(
-                                            &item.publisher.publisher_name,
-                                            &item.extension_name,
-                                        )
-                                        .unwrap_or_default(),
-                                    version.version.clone(),
-                                ),
-                            );
-                            (true, url)
-                        }
-                        None => (
-                            false,
-                            version.get_file(AssetType::Vsix).unwrap().source.clone(),
-                        ),
-                    };
-                    debug!(
-                        "{}-{}-{:?}",
-                        item.publisher.publisher_name, item.extension_name, asset_url
-                    );
-
-                    let sha256 = match utils::get_sha256(&asset_url).await {
-                        Ok(sha256) => sha256,
-                        Err(err) => {
-                            error!("{err}");
-                            return None;
-                        }
-                    };
-
-                    return Some(NixContext {
-                        extension_name: item.extension_name.clone(),
-                        publisher_name: item.publisher.publisher_name.clone(),
-                        extension_version: version.version.clone(),
-                        asset_url: if has_asset_url {
-                            Some(asset_url.clone())
-                        } else {
-                            None
-                        },
-                        sha256,
-                        target_platform: client
-                            .get_extension_target_platform(
-                                item.publisher.publisher_name,
-                                item.extension_name,
-                            )
-                            .await,
-                    });
-                }
-                None
-            }
+            get_matched_versoin(item, vscode_ver, client, config, generator)
         })
         .collect();
 
