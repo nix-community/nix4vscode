@@ -120,7 +120,10 @@ async fn main() -> anyhow::Result<()> {
         .results
         .into_iter()
         .flat_map(|item| item.extensions.into_iter())
-        .filter(|item| config.contains(&item.publisher.publisher_name, &item.extension_name))
+        .filter(|item| match config.extensions.is_empty() {
+            true => true,
+            false => config.contains(&item.publisher.publisher_name, &item.extension_name),
+        })
         .map(|item| {
             let vscode_ver = vscode_ver.clone();
             let client = client.clone();
