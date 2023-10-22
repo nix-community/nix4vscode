@@ -1,0 +1,251 @@
+= vscode api
+
+This question provides a description of the vscode api.
+
+== API format
+
+|===
+| key | desc
+
+| address
+| https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery
+
+| method
+| POST
+
+| HEAD
+a|
+!===
+! Key ! Value
+! ACCEPT
+! application/json; charset=utf-8; api-version=7.2-preview.1
+! CONTENT-TYPE
+! application/json
+!===
+
+| Body
+| json content
+
+|===
+
+== Body
+
+A Body just like this:
+
+[, json]
+----
+{
+    "filters": [
+        {
+            "pageNumber": 1,
+            "pageSize": 100,
+            "sortBy": 0,
+            "sortOrder": 0,
+            "flags": "",
+            "criteria": [
+                {
+                    "filterType": 8,
+                    "value": "Microsoft.VisualStudio.Code"
+                },
+                {
+                    "filterType": 12,
+                    "value": "4096"
+                },
+                {
+                    "filterType": 7,
+                    "value": "vscodevim.vim"
+                }
+            ]
+        }
+    ],
+    "flags": 950
+}
+----
+
+The most important fields are criteria and flags.
+
+=== Get whole of vscode extensions.
+
+If the criteria field is empty, the api server will return whole infos about vscode extensions to you.
+
+The default pageSize is 10, which means that only 10 extension information will be sent per api request. You may want to adjust pageSize to request more extended information each time.
+
+NOTICE: Although you can try to set pageSize to the maximum value, in fact the api server will not return all the content.
+
+[, console]
+----
+{
+    "results": [
+        {
+            "extensions": [],
+            "pagingToken": null,
+            "resultMetadata": [
+                {
+                    "metadataType": "ResultCount",
+                    "metadataItems": [
+                        {
+                            "name": "TotalCount",
+                            "count": 52082
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+----
+
+=== Get info about a extension
+
+The way to get multiple extensions is to simply add the cri field:
+
+[, json]
+----
+{
+    "filters": [
+        {
+            "pageNumber": 1,
+            "sortBy": 0,
+            "sortOrder": 0,
+            "flags": "",
+            "criteria": [
+                {
+                    "filterType": 8,
+                    "value": "Microsoft.VisualStudio.Code"
+                },
+                {
+                    "filterType": 12,
+                    "value": "4096"
+                },
+                {
+                    "filterType": 7,
+                    "value": "vscodevim.vim"
+                }
+            ]
+        }
+    ],
+    "flags": 950
+}
+----
+
+filterType is set to EXTENSION_NAME.
+
+=== Search a extension
+
+The results obtained in the previous section do not contain extended platform information, which needs to be executed in search mode.
+
+Search mode can only respond to one extended message at a time.
+
+A request body is as follows:
+
+[, json]
+----
+{
+    "filters": [
+        {
+            "pageNumber": 1,
+            "sortBy": 0,
+            "sortOrder": 0,
+            "flags": "",
+            "criteria": [
+                {
+                    "filterType": 8,
+                    "value": "Microsoft.VisualStudio.Code"
+                },
+                {
+                    "filterType": 12,
+                    "value": "4096"
+                },
+                {
+                    "filterType": 10, <.>
+                    "value": "vscodevim.vim"
+                }
+            ]
+        }
+    ],
+    "flags": 950
+}
+----
+. switch search mode.
+
+NOTICE: Use publisher_name.extension_name to fully qualify an extension and get a unique value even in search mode.
+
+==== Response
+
+[, json]
+----
+{
+    "results": [
+        {
+            "extensions": [
+                {
+                    "publisher": {
+                        "publisherId": "5d63889b-1b67-4b1f-8350-4f1dce041a26",
+                        "publisherName": "vscodevim",
+                        "displayName": "vscodevim",
+                        "flags": "verified",
+                        "domain": null,
+                        "isDomainVerified": false
+                    },
+                    "extensionId": "d96e79c6-8b25-4be3-8545-0e0ecefcae03",
+                    "extensionName": "vim",
+                    "displayName": "Vim",
+                    "flags": "validated, public",
+                    "versions": [
+                    ],
+                    "categories": [
+                        "Keymaps"
+                    ],
+                    "tags": [
+                        "__ext_vimrc",
+                        "__web_extension",
+                        "keybindings",
+                        "vi",
+                        "vim",
+                        "vimrc",
+                        "vscodevim"
+                    ],
+                    "statistics": [
+                                           ],
+                    "deploymentType": 0
+                }
+            ],
+            "pagingToken": null,
+            "resultMetadata": [
+                {
+                    "metadataType": "ResultCount",
+                    "metadataItems": [
+                        {
+                            "name": "TotalCount",
+                            "count": 1
+                        }
+                    ]
+                },
+                {
+                    "metadataType": "Categories",
+                    "metadataItems": [
+                        {
+                            "name": "Keymaps",
+                            "count": 1
+                        }
+                    ]
+                },
+                {
+                    "metadataType": "TargetPlatforms",<.>
+                    "metadataItems": [
+                        {
+                            "name": "universal",
+                            "count": 1
+                        },
+                        {
+                            "name": "web",
+                            "count": 1
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+----
+. Get platform infos.
