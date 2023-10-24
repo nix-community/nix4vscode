@@ -23,28 +23,21 @@ impl HttpClient {
         &self,
         extensions: &[Extension],
     ) -> anyhow::Result<data_struct::IRawGalleryQueryResult> {
-        match extensions.is_empty() {
-            false => {
-                let query = Query::new(extensions);
-                let body = serde_json::to_string(&query)?;
-                Ok(self
-                    .client
-                    .post(
-                        "https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery",
-                    )
-                    .header(
-                        "Accept",
-                        "Application/json; charset=utf-8; api-version=7.2-preview.1",
-                    )
-                    .header("Content-Type", "application/json")
-                    .body(body)
-                    .send()
-                    .await?
-                    .json::<data_struct::IRawGalleryQueryResult>()
-                    .await?)
-            }
-            true => todo!(),
-        }
+        let query = Query::new(extensions);
+        let body = serde_json::to_string(&query)?;
+        Ok(self
+            .client
+            .post("https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery")
+            .header(
+                "Accept",
+                "Application/json; charset=utf-8; api-version=7.2-preview.1",
+            )
+            .header("Content-Type", "application/json")
+            .body(body)
+            .send()
+            .await?
+            .json::<data_struct::IRawGalleryQueryResult>()
+            .await?)
     }
 
     async fn inner_get_extension_target_platform(

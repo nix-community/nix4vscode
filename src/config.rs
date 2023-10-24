@@ -12,6 +12,7 @@ pub struct Extension {
 }
 
 #[derive(Debug, Default, Serialize, Deserialize)]
+#[serde(default)]
 pub struct Config {
     pub vscode_version: String,
     pub autogen_warning: Option<String>,
