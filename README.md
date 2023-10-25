@@ -14,7 +14,7 @@ publisher_name = "vscodevim"
 extension_name = "vim"
 ```
 
-then run `cargo run -- -f config.toml` , the a nix expression will be print to stdout just like this:
+then run `cargo run -- config.toml` , the a nix expression will be print to stdout just like this:
 
 ```nix
 { pkgs, lib }:
