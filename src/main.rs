@@ -1,9 +1,11 @@
 #![allow(dead_code)]
 #![allow(unused_variables)]
 #![feature(lazy_cell)]
+#![feature(async_closure)]
 
 pub mod config;
 pub mod data_struct;
+pub mod dump;
 pub mod error;
 pub mod jinja;
 pub mod request;
@@ -34,6 +36,8 @@ struct Args {
     output: Option<String>,
     #[arg(long, hide = true)]
     export: bool,
+    #[arg(long, hide = true)]
+    dump: bool,
 }
 
 async fn get_matched_versoin(
@@ -108,13 +112,24 @@ async fn main() -> anyhow::Result<()> {
     let config = Arc::new(Config::new(&args.file).await?);
     let client = HttpClient::new().unwrap();
     debug!("request: {config:?}");
+    let vscode_ver = semver::Version::from_str(&config.vscode_version).unwrap();
+    let mut generator = Generator::new();
+
+    if args.dump {
+        let res = dump::dump(&client, &vscode_ver, &config, &generator).await;
+        let res = serde_json::to_string(&res).unwrap();
+        match args.output {
+            Some(filepath) => tokio::fs::write(filepath, res).await.unwrap(),
+            None => println!("{res}",),
+        }
+        return Ok(());
+    }
+
     let obj = client
         .get_extension_response(&config.extensions)
         .await
         .unwrap();
     trace!("{obj:#?}");
-    let vscode_ver = semver::Version::from_str(&config.vscode_version).unwrap();
-    let mut generator = Generator::new();
 
     let futures: Vec<_> = obj
         .results

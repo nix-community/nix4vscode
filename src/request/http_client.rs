@@ -10,7 +10,7 @@ use super::Query;
 
 #[derive(Debug, Clone)]
 pub struct HttpClient {
-    client: reqwest::Client,
+    pub client: reqwest::Client,
 }
 
 impl HttpClient {
