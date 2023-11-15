@@ -14,7 +14,7 @@ pub struct Query {
 }
 
 impl Query {
-    pub fn new(extensions: &[Extension]) -> Self {
+    pub fn new(extensions: &[Extension], page_number: u64) -> Self {
         let fixed = vec![
             ICriterium {
                 filter_type: FilterType::TARGET,
@@ -27,6 +27,7 @@ impl Query {
         ];
         Query {
             filters: vec![IQueryState {
+                page_number,
                 criteria: extensions
                     .iter()
                     .map(|item| ICriterium {
