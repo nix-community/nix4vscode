@@ -1,0 +1,44 @@
+name: 'build'
+
+on:
+  pull_request:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          submodules: true
+          fetch-depth: '0'
+      - uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: make fonts-noto-cjk fonts-noto-cjk-extra
+          version: 1.0
+      - name: Cache cargo
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cargo/git/db/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+          key: cargo_cache-${{ runner.os }}
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: nightly
+      - name: Build Packages
+        run: |
+          mkdir -p public/
+          RUST_LOG=DEBUG cargo +nightly run -- config.toml --dump -o public/dump.json
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: vscode
+          publish_dir: public/

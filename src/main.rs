@@ -117,6 +117,7 @@ async fn main() -> anyhow::Result<()> {
 
     if args.dump {
         let res = dump::dump(&client, &vscode_ver, &config, &generator).await;
+        debug!("find dump of vscode marketplace: \n{res:#?}");
         let res = serde_json::to_string(&res).unwrap();
         match args.output {
             Some(filepath) => tokio::fs::write(filepath, res).await.unwrap(),
