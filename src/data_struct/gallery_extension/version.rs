@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 
-use crate::request::PropertyType;
+use crate::{error::Error, request::PropertyType};
 
 #[derive(Debug, Default, Serialize, Deserialize)]
 #[serde(default)]
@@ -16,14 +16,14 @@ pub struct IRawGalleryExtensionVersion {
 }
 
 impl IRawGalleryExtensionVersion {
-    pub fn get_engine(&self) -> semver::VersionReq {
+    pub fn get_engine(&self) -> anyhow::Result<semver::VersionReq> {
         match self
             .properties
             .iter()
             .position(|item| item.key == PropertyType::Engine.to_string())
         {
-            Some(idx) => semver::VersionReq::parse(&self.properties[idx].value).unwrap(),
-            None => unreachable!(),
+            Some(idx) => Ok(semver::VersionReq::parse(&self.properties[idx].value).unwrap()),
+            None => Err(Error::AttributeMissing("engine".into()).into()),
         }
     }
 }

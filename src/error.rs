@@ -8,4 +8,6 @@ pub enum Error {
     Sha256Error(String),
     #[error("CacheMissing {0}")]
     CacheMissing(String),
+    #[error("Attribute {0} missing")]
+    AttributeMissing(String),
 }

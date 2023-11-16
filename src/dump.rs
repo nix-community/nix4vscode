@@ -69,15 +69,21 @@ pub async fn dump<'a>(
                         .into_iter()
                         .flat_map(|item| item.extensions.into_iter())
                         .map(|item| async move {
-                            for version in item.versions {
-                                if version.get_engine().matches(vscode_ver) {
-                                    continue;
+                            for version in &item.versions {
+                                match version.get_engine() {
+                                    Ok(ver) => {
+                                        if ver.matches(vscode_ver) {
+                                            continue;
+                                        }
+                                    }
+                                    Err(_) => {
+                                        error!("Cannot get engine version for {:#?}", item);
+                                        continue;
+                                    }
                                 }
-                                trace!(
+                                debug!(
                                     "find version {:?} for {}.{}",
-                                    version,
-                                    item.publisher.publisher_name,
-                                    item.extension_name
+                                    version, item.publisher.publisher_name, item.extension_name
                                 );
 
                                 let (has_asset_url, asset_url) = match config.get_asset_url(

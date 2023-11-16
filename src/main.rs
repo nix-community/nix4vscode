@@ -49,8 +49,16 @@ async fn get_matched_versoin(
 ) -> Option<NixContext> {
     for version in &item.versions {
         let source = &version.get_file(AssetType::Manifest).unwrap().source;
-        if !version.get_engine().matches(&vscode_ver) {
-            continue;
+        match version.get_engine() {
+            Ok(ver) => {
+                if ver.matches(&vscode_ver) {
+                    continue;
+                }
+            }
+            Err(_) => {
+                error!("Cannot get engine version for {:#?}", item);
+                continue;
+            }
         }
         let (has_asset_url, asset_url) = match config
             .get_asset_url(&item.publisher.publisher_name, &item.extension_name)
