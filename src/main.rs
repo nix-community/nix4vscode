@@ -183,7 +183,7 @@ fn init_logger() {
         .unwrap();
 
     tracing_subscriber::registry()
-        .with(fmt::layer())
+        .with(fmt::layer().with_file(true).with_line_number(true))
         .with(env_filter)
         .init();
 }
