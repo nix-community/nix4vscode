@@ -1,6 +1,10 @@
+mod extension_version;
 mod version;
+use std::fmt::Display;
+
 use serde::{Deserialize, Serialize};
 
+pub use extension_version::*;
 pub use version::*;
 
 use super::{ResultMetaData, TargetPlatform};
@@ -48,6 +52,16 @@ pub struct IRawGalleryExtension {
     pub last_updated: String,
     pub categories: Option<Vec<String>>,
     pub flags: String,
+}
+
+impl Display for IRawGalleryExtension {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(
+            f,
+            "{}.{}",
+            self.publisher.publisher_name, self.extension_name
+        )
+    }
 }
 
 #[derive(Debug, Default, Serialize, Deserialize)]

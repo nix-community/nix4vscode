@@ -77,7 +77,9 @@ pub async fn dump<'a>(
                                         }
                                     }
                                     Err(_) => {
-                                        error!("Cannot get engine version for {:#?}", item);
+                                        error!(
+                                            "Cannot get engine version for {item}: {version:#?}"
+                                        );
                                         continue;
                                     }
                                 }
