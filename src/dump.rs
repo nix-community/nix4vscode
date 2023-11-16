@@ -84,7 +84,7 @@ pub async fn dump<'a>(
                                     }
                                 }
                                 debug!(
-                                    "find version {:?} for {}.{}",
+                                    "find version {} for {}.{}",
                                     version, item.publisher.publisher_name, item.extension_name
                                 );
 
@@ -113,7 +113,7 @@ pub async fn dump<'a>(
                                     ),
                                 };
                                 debug!(
-                                    "{}-{}-{:?}",
+                                    "<{}>-<{}>-<{}>",
                                     item.publisher.publisher_name, item.extension_name, asset_url
                                 );
 

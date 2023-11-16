@@ -17,6 +17,12 @@ pub struct IRawGalleryExtensionVersion {
     pub target_platform: String,
 }
 
+impl Display for IRawGalleryExtensionVersion {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "{}", self.version)
+    }
+}
+
 impl IRawGalleryExtensionVersion {
     pub fn get_engine(&self) -> anyhow::Result<semver::VersionReq> {
         match self

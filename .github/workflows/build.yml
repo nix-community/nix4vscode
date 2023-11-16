@@ -29,13 +29,16 @@ jobs:
             ~/.cargo/registry/index/
             ~/.cargo/registry/cache/
           key: cargo_cache-${{ runner.os }}
-      - uses: actions-rs/toolchain@v1
+      - name: Install Nix
+        uses: cachix/install-nix-action@v18
         with:
-          toolchain: nightly
+          extra_nix_config: |
+            access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
       - name: Build Packages
         run: |
           mkdir -p public/
-          RUST_LOG=DEBUG cargo +nightly run -- config.toml --dump -o public/dump.json
+          export RUST_LOG=DEBUG
+          nix develop --impure --command bash -c "cargo run -- config.toml --dump -o public/dump.json"
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
