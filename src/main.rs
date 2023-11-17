@@ -55,7 +55,11 @@ async fn get_matched_versoin(
                 }
             }
             Err(_) => {
-                error!("Cannot get engine version for {:#?}", item);
+                warn!(
+                    "Cannot get engine version for {}.{} {}",
+                    item.publisher.publisher_name, item.extension_name, version
+                );
+                trace!("{version:#?}");
                 continue;
             }
         }
