@@ -1,0 +1,2920 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Open VSX Registry API",
+    "description": "This API provides metadata of VS Code extensions in the Open VSX Registry as well as means to publish extensions.",
+    "termsOfService": "https://www.eclipse.org/legal/termsofuse.php",
+    "license": {
+      "name": "Eclipse Public License 2.0",
+      "url": "https://www.eclipse.org/legal/epl-2.0/"
+    },
+    "version": "0.1"
+  },
+  "servers": [
+    {
+      "url": "https://open-vsx.org",
+      "description": "Generated server url"
+    }
+  ],
+  "paths": {
+    "/api/user/publish": {
+      "post": {
+        "tags": ["registry-api"],
+        "summary": "Publish an extension by uploading a vsix file",
+        "operationId": "publish",
+        "requestBody": {
+          "description": "Uploaded vsix file to publish",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "403": {
+            "description": "User is not logged in",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Extension"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "A client has sent too many requests in a given amount of time",
+            "headers": {
+              "X-Rate-Limit-Retry-After-Seconds": {
+                "description": "Number of seconds to wait after receiving a 429 response",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "X-Rate-Limit-Remaining": {
+                "description": "Remaining number of requests left",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The extension could not be published",
+            "content": {
+              "application/json": {
+                "example": {
+                  "error": "Unknown publisher: foobar"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Successfully published the extension",
+            "headers": {
+              "Location": {
+                "description": "The URL of the extension metadata",
+                "style": "simple",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Extension"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/-/query": {
+      "get": {
+        "tags": ["registry-api"],
+        "summary": "Provides metadata of extensions matching the given parameters",
+        "operationId": "getQuery",
+        "parameters": [
+          {
+            "name": "namespaceName",
+            "in": "query",
+            "description": "Name of a namespace",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "foo"
+          },
+          {
+            "name": "extensionName",
+            "in": "query",
+            "description": "Name of an extension",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "bar"
+          },
+          {
+            "name": "extensionVersion",
+            "in": "query",
+            "description": "Version of an extension",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": 1
+          },
+          {
+            "name": "extensionId",
+            "in": "query",
+            "description": "Identifier in the form {namespace}.{extension}",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "foo.bar"
+          },
+          {
+            "name": "extensionUuid",
+            "in": "query",
+            "description": "Universally unique identifier of an extension",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": 5678
+          },
+          {
+            "name": "namespaceUuid",
+            "in": "query",
+            "description": "Universally unique identifier of a namespace",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": 1234
+          },
+          {
+            "name": "includeAllVersions",
+            "in": "query",
+            "description": "Whether to include all versions of an extension, ignored if extensionVersion is specified",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "targetPlatform",
+            "in": "query",
+            "description": "Target platform",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "win32-x64",
+                "win32-ia32",
+                "win32-arm64",
+                "linux-x64",
+                "linux-arm64",
+                "linux-armhf",
+                "alpine-x64",
+                "alpine-arm64",
+                "darwin-x64",
+                "darwin-arm64",
+                "web",
+                "universal"
+              ]
+            },
+            "example": "linux-x64"
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "Maximal number of entries to return",
+            "required": false,
+            "schema": {
+              "minimum": 0,
+              "type": "integer",
+              "default": 100
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "Number of entries to skip (usually a multiple of the page size)",
+            "required": false,
+            "schema": {
+              "minimum": 0,
+              "type": "integer",
+              "default": 0
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the (possibly empty) query results",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains an invalid parameter value",
+            "content": {
+              "application/json": {
+                "example": {
+                  "error": "The 'extensionId' parameter must have the format 'namespace.extension'."
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "A client has sent too many requests in a given amount of time",
+            "headers": {
+              "X-Rate-Limit-Retry-After-Seconds": {
+                "description": "Number of seconds to wait after receiving a 429 response",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "X-Rate-Limit-Remaining": {
+                "description": "Remaining number of requests left",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": ["registry-api"],
+        "summary": "Provides metadata of extensions matching the given parameters. Deprecated: use GET /api/-/query instead.",
+        "operationId": "postQuery",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QueryParam"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "429": {
+            "description": "A client has sent too many requests in a given amount of time",
+            "headers": {
+              "X-Rate-Limit-Retry-After-Seconds": {
+                "description": "Number of seconds to wait after receiving a 429 response",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "X-Rate-Limit-Remaining": {
+                "description": "Remaining number of requests left",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "301": {
+            "description": "Returns redirect to GET /api/-/query.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryResult"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/api/-/publish": {
+      "post": {
+        "tags": ["registry-api"],
+        "summary": "Publish an extension by uploading a vsix file",
+        "operationId": "publish_1",
+        "parameters": [
+          {
+            "name": "token",
+            "in": "query",
+            "description": "A personal access token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Uploaded vsix file to publish",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "429": {
+            "description": "A client has sent too many requests in a given amount of time",
+            "headers": {
+              "X-Rate-Limit-Retry-After-Seconds": {
+                "description": "Number of seconds to wait after receiving a 429 response",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "X-Rate-Limit-Remaining": {
+                "description": "Remaining number of requests left",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The extension could not be published",
+            "content": {
+              "application/json": {
+                "example": {
+                  "error": "Invalid access token."
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Successfully published the extension",
+            "headers": {
+              "Location": {
+                "description": "The URL of the extension metadata",
+                "style": "simple",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Extension"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/-/namespace/create": {
+      "post": {
+        "tags": ["registry-api"],
+        "summary": "Create a namespace",
+        "operationId": "createNamespace_1",
+        "parameters": [
+          {
+            "name": "token",
+            "in": "query",
+            "description": "A personal access token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Namespace"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "400": {
+            "description": "The namespace could not be created",
+            "content": {
+              "application/json": {
+                "example": {
+                  "error": "Invalid access token."
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "A client has sent too many requests in a given amount of time",
+            "headers": {
+              "X-Rate-Limit-Retry-After-Seconds": {
+                "description": "Number of seconds to wait after receiving a 429 response",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "X-Rate-Limit-Remaining": {
+                "description": "Remaining number of requests left",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Successfully created the namespace",
+            "headers": {
+              "Location": {
+                "description": "The URL of the namespace metadata",
+                "style": "simple",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "example": {
+                  "success": "Created namespace foobar"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/{namespace}": {
+      "get": {
+        "tags": ["registry-api"],
+        "summary": "Provides metadata of a namespace",
+        "operationId": "getNamespace",
+        "parameters": [
+          {
+            "name": "namespace",
+            "in": "path",
+            "description": "Namespace name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "redhat"
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "The specified namespace could not be found"
+          },
+          "429": {
+            "description": "A client has sent too many requests in a given amount of time",
+            "headers": {
+              "X-Rate-Limit-Retry-After-Seconds": {
+                "description": "Number of seconds to wait after receiving a 429 response",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "X-Rate-Limit-Remaining": {
+                "description": "Remaining number of requests left",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "The namespace metadata are returned in JSON format",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Namespace"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/{namespace}/{extension}": {
+      "get": {
+        "tags": ["registry-api"],
+        "summary": "Provides metadata of the latest version of an extension",
+        "operationId": "getExtension",
+        "parameters": [
+          {
+            "name": "namespace",
+            "in": "path",
+            "description": "Extension namespace",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "redhat"
+          },
+          {
+            "name": "extension",
+            "in": "path",
+            "description": "Extension name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "java"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The extension metadata are returned in JSON format",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Extension"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "A client has sent too many requests in a given amount of time",
+            "headers": {
+              "X-Rate-Limit-Retry-After-Seconds": {
+                "description": "Number of seconds to wait after receiving a 429 response",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "X-Rate-Limit-Remaining": {
+                "description": "Remaining number of requests left",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The specified extension could not be found"
+          }
+        }
+      }
+    },
+    "/api/{namespace}/{extension}/{version}": {
+      "get": {
+        "tags": ["registry-api"],
+        "summary": "Provides metadata of a specific version of an extension",
+        "operationId": "getExtension_1",
+        "parameters": [
+          {
+            "name": "namespace",
+            "in": "path",
+            "description": "Extension namespace",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "redhat"
+          },
+          {
+            "name": "extension",
+            "in": "path",
+            "description": "Extension name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "java"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "Extension version",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "0.65.0"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The extension metadata are returned in JSON format",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Extension"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "A client has sent too many requests in a given amount of time",
+            "headers": {
+              "X-Rate-Limit-Retry-After-Seconds": {
+                "description": "Number of seconds to wait after receiving a 429 response",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "X-Rate-Limit-Remaining": {
+                "description": "Remaining number of requests left",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The specified extension could not be found"
+          }
+        }
+      }
+    },
+    "/api/{namespace}/{extension}/{version}/file/**": {
+      "get": {
+        "tags": ["registry-api"],
+        "summary": "Access a file packaged by an extension",
+        "operationId": "getFile",
+        "parameters": [
+          {
+            "name": "namespace",
+            "in": "path",
+            "description": "Extension namespace",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "redhat"
+          },
+          {
+            "name": "extension",
+            "in": "path",
+            "description": "Extension name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "java"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "Extension version",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "0.65.0"
+          }
+        ],
+        "responses": {
+          "429": {
+            "description": "A client has sent too many requests in a given amount of time",
+            "headers": {
+              "X-Rate-Limit-Retry-After-Seconds": {
+                "description": "Number of seconds to wait after receiving a 429 response",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "X-Rate-Limit-Remaining": {
+                "description": "Remaining number of requests left",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "The file content is returned",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "byte"
+                  }
+                }
+              }
+            }
+          },
+          "302": {
+            "description": "The file is found at the specified location",
+            "headers": {
+              "Location": {
+                "description": "The actual URL where the file can be accessed",
+                "style": "simple",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The specified file could not be found"
+          }
+        }
+      }
+    },
+    "/api/{namespace}/{extension}/{targetPlatform}": {
+      "get": {
+        "tags": ["registry-api"],
+        "summary": "Provides metadata of the latest version of an extension",
+        "operationId": "getExtension_2",
+        "parameters": [
+          {
+            "name": "namespace",
+            "in": "path",
+            "description": "Extension namespace",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "redhat"
+          },
+          {
+            "name": "extension",
+            "in": "path",
+            "description": "Extension name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "java"
+          },
+          {
+            "name": "targetPlatform",
+            "in": "path",
+            "description": "Target platform",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "win32-x64",
+                "win32-ia32",
+                "win32-arm64",
+                "linux-x64",
+                "linux-arm64",
+                "linux-armhf",
+                "alpine-x64",
+                "alpine-arm64",
+                "darwin-x64",
+                "darwin-arm64",
+                "web",
+                "universal"
+              ]
+            },
+            "example": "linux-arm64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The extension metadata are returned in JSON format",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Extension"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "A client has sent too many requests in a given amount of time",
+            "headers": {
+              "X-Rate-Limit-Retry-After-Seconds": {
+                "description": "Number of seconds to wait after receiving a 429 response",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "X-Rate-Limit-Remaining": {
+                "description": "Remaining number of requests left",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The specified extension could not be found"
+          }
+        }
+      }
+    },
+    "/api/{namespace}/{extension}/{targetPlatform}/{version}": {
+      "get": {
+        "tags": ["registry-api"],
+        "summary": "Provides metadata of a specific version of an extension",
+        "operationId": "getExtension_3",
+        "parameters": [
+          {
+            "name": "namespace",
+            "in": "path",
+            "description": "Extension namespace",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "redhat"
+          },
+          {
+            "name": "extension",
+            "in": "path",
+            "description": "Extension name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "java"
+          },
+          {
+            "name": "targetPlatform",
+            "in": "path",
+            "description": "Target platform",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "win32-x64",
+                "win32-ia32",
+                "win32-arm64",
+                "linux-x64",
+                "linux-arm64",
+                "linux-armhf",
+                "alpine-x64",
+                "alpine-arm64",
+                "darwin-x64",
+                "darwin-arm64",
+                "web",
+                "universal"
+              ]
+            },
+            "example": "linux-arm64"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "Extension version",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "0.65.0"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The extension metadata are returned in JSON format",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Extension"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "A client has sent too many requests in a given amount of time",
+            "headers": {
+              "X-Rate-Limit-Retry-After-Seconds": {
+                "description": "Number of seconds to wait after receiving a 429 response",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "X-Rate-Limit-Remaining": {
+                "description": "Remaining number of requests left",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The specified extension could not be found"
+          }
+        }
+      }
+    },
+    "/api/{namespace}/{extension}/{targetPlatform}/{version}/file/**": {
+      "get": {
+        "tags": ["registry-api"],
+        "summary": "Access a file packaged by an extension",
+        "operationId": "getFile_1",
+        "parameters": [
+          {
+            "name": "namespace",
+            "in": "path",
+            "description": "Extension namespace",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "redhat"
+          },
+          {
+            "name": "extension",
+            "in": "path",
+            "description": "Extension name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "java"
+          },
+          {
+            "name": "targetPlatform",
+            "in": "path",
+            "description": "Target platform",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "win32-x64",
+                "win32-ia32",
+                "win32-arm64",
+                "linux-x64",
+                "linux-arm64",
+                "linux-armhf",
+                "alpine-x64",
+                "alpine-arm64",
+                "darwin-x64",
+                "darwin-arm64",
+                "web",
+                "universal"
+              ]
+            },
+            "example": "linux-arm64"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "Extension version",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "0.65.0"
+          }
+        ],
+        "responses": {
+          "429": {
+            "description": "A client has sent too many requests in a given amount of time",
+            "headers": {
+              "X-Rate-Limit-Retry-After-Seconds": {
+                "description": "Number of seconds to wait after receiving a 429 response",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "X-Rate-Limit-Remaining": {
+                "description": "Remaining number of requests left",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "The file content is returned",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "byte"
+                  }
+                }
+              }
+            }
+          },
+          "302": {
+            "description": "The file is found at the specified location",
+            "headers": {
+              "Location": {
+                "description": "The actual URL where the file can be accessed",
+                "style": "simple",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The specified file could not be found"
+          }
+        }
+      }
+    },
+    "/api/{namespace}/{extension}/{targetPlatform}/versions": {
+      "get": {
+        "tags": ["registry-api"],
+        "summary": "Provides a map of versions matching an extension",
+        "operationId": "getVersions",
+        "parameters": [
+          {
+            "name": "namespace",
+            "in": "path",
+            "description": "Extension namespace",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "redhat"
+          },
+          {
+            "name": "extension",
+            "in": "path",
+            "description": "Extension name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "java"
+          },
+          {
+            "name": "targetPlatform",
+            "in": "path",
+            "description": "Target platform",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "win32-x64",
+                "win32-ia32",
+                "win32-arm64",
+                "linux-x64",
+                "linux-arm64",
+                "linux-armhf",
+                "alpine-x64",
+                "alpine-arm64",
+                "darwin-x64",
+                "darwin-arm64",
+                "web",
+                "universal"
+              ]
+            },
+            "example": "linux-arm64"
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "Maximal number of entries to return",
+            "required": false,
+            "schema": {
+              "minimum": 0,
+              "type": "integer",
+              "default": 18
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "Number of entries to skip (usually a multiple of the page size)",
+            "required": false,
+            "schema": {
+              "minimum": 0,
+              "type": "integer",
+              "default": 0
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The extension versions are returned in JSON format",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Versions"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "A client has sent too many requests in a given amount of time",
+            "headers": {
+              "X-Rate-Limit-Retry-After-Seconds": {
+                "description": "Number of seconds to wait after receiving a 429 response",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "X-Rate-Limit-Remaining": {
+                "description": "Remaining number of requests left",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The specified extension could not be found"
+          }
+        }
+      }
+    },
+    "/api/{namespace}/{extension}/{targetPlatform}/version-references": {
+      "get": {
+        "tags": ["registry-api"],
+        "summary": "Provides a list of version references matching an extension",
+        "operationId": "getVersionReferences",
+        "parameters": [
+          {
+            "name": "namespace",
+            "in": "path",
+            "description": "Extension namespace",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "redhat"
+          },
+          {
+            "name": "extension",
+            "in": "path",
+            "description": "Extension name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "java"
+          },
+          {
+            "name": "targetPlatform",
+            "in": "path",
+            "description": "Target platform",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "win32-x64",
+                "win32-ia32",
+                "win32-arm64",
+                "linux-x64",
+                "linux-arm64",
+                "linux-armhf",
+                "alpine-x64",
+                "alpine-arm64",
+                "darwin-x64",
+                "darwin-arm64",
+                "web",
+                "universal"
+              ]
+            },
+            "example": "linux-arm64"
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "Maximal number of entries to return",
+            "required": false,
+            "schema": {
+              "minimum": 0,
+              "type": "integer",
+              "default": 18
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "Number of entries to skip (usually a multiple of the page size)",
+            "required": false,
+            "schema": {
+              "minimum": 0,
+              "type": "integer",
+              "default": 0
+            }
+          }
+        ],
+        "responses": {
+          "429": {
+            "description": "A client has sent too many requests in a given amount of time",
+            "headers": {
+              "X-Rate-Limit-Retry-After-Seconds": {
+                "description": "Number of seconds to wait after receiving a 429 response",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "X-Rate-Limit-Remaining": {
+                "description": "Remaining number of requests left",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "The extension version references are returned in JSON format",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VersionReferences"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The specified extension could not be found"
+          }
+        }
+      }
+    },
+    "/api/{namespace}/{extension}/versions": {
+      "get": {
+        "tags": ["registry-api"],
+        "summary": "Provides a map of versions matching an extension",
+        "operationId": "getVersions_1",
+        "parameters": [
+          {
+            "name": "namespace",
+            "in": "path",
+            "description": "Extension namespace",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "redhat"
+          },
+          {
+            "name": "extension",
+            "in": "path",
+            "description": "Extension name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "java"
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "Maximal number of entries to return",
+            "required": false,
+            "schema": {
+              "minimum": 0,
+              "type": "integer",
+              "default": 18
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "Number of entries to skip (usually a multiple of the page size)",
+            "required": false,
+            "schema": {
+              "minimum": 0,
+              "type": "integer",
+              "default": 0
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The extension versions are returned in JSON format",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Versions"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "A client has sent too many requests in a given amount of time",
+            "headers": {
+              "X-Rate-Limit-Retry-After-Seconds": {
+                "description": "Number of seconds to wait after receiving a 429 response",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "X-Rate-Limit-Remaining": {
+                "description": "Remaining number of requests left",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The specified extension could not be found"
+          }
+        }
+      }
+    },
+    "/api/{namespace}/{extension}/version-references": {
+      "get": {
+        "tags": ["registry-api"],
+        "summary": "Provides a list of version references matching an extension",
+        "operationId": "getVersionReferences_1",
+        "parameters": [
+          {
+            "name": "namespace",
+            "in": "path",
+            "description": "Extension namespace",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "redhat"
+          },
+          {
+            "name": "extension",
+            "in": "path",
+            "description": "Extension name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "java"
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "Maximal number of entries to return",
+            "required": false,
+            "schema": {
+              "minimum": 0,
+              "type": "integer",
+              "default": 18
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "Number of entries to skip (usually a multiple of the page size)",
+            "required": false,
+            "schema": {
+              "minimum": 0,
+              "type": "integer",
+              "default": 0
+            }
+          }
+        ],
+        "responses": {
+          "429": {
+            "description": "A client has sent too many requests in a given amount of time",
+            "headers": {
+              "X-Rate-Limit-Retry-After-Seconds": {
+                "description": "Number of seconds to wait after receiving a 429 response",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "X-Rate-Limit-Remaining": {
+                "description": "Remaining number of requests left",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "The extension version references are returned in JSON format",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VersionReferences"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The specified extension could not be found"
+          }
+        }
+      }
+    },
+    "/api/{namespace}/{extension}/reviews": {
+      "get": {
+        "tags": ["registry-api"],
+        "summary": "Returns the list of reviews of an extension",
+        "operationId": "getReviews",
+        "parameters": [
+          {
+            "name": "namespace",
+            "in": "path",
+            "description": "Extension namespace",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "redhat"
+          },
+          {
+            "name": "extension",
+            "in": "path",
+            "description": "Extension name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "java"
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "The specified extension could not be found"
+          },
+          "200": {
+            "description": "The reviews are returned in JSON format",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReviewList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/{namespace}/verify-pat": {
+      "get": {
+        "tags": ["registry-api"],
+        "summary": "Check if a personal access token is valid and is allowed to publish in a namespace",
+        "operationId": "verifyToken",
+        "parameters": [
+          {
+            "name": "namespace",
+            "in": "path",
+            "description": "Namespace",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "redhat"
+          },
+          {
+            "name": "token",
+            "in": "query",
+            "description": "A personal access token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "The specified namespace could not be found"
+          },
+          "429": {
+            "description": "A client has sent too many requests in a given amount of time",
+            "headers": {
+              "X-Rate-Limit-Retry-After-Seconds": {
+                "description": "Number of seconds to wait after receiving a 429 response",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "X-Rate-Limit-Remaining": {
+                "description": "Remaining number of requests left",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The token has no publishing permission in the namespace or is not valid"
+          },
+          "200": {
+            "description": "The provided PAT is valid and is allowed to publish extensions in the namespace",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Result"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Namespace"
+                    },
+                    {
+                      "$ref": "#/components/schemas/NamespaceMembershipList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/QueryResult"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ReviewList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SearchResult"
+                    },
+                    {
+                      "$ref": "#/components/schemas/User"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/{namespace}/logo/{fileName}": {
+      "get": {
+        "tags": ["registry-api"],
+        "summary": "Provides logo of a namespace",
+        "operationId": "getNamespaceLogo",
+        "parameters": [
+          {
+            "name": "namespace",
+            "in": "path",
+            "description": "Namespace name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "redhat"
+          },
+          {
+            "name": "fileName",
+            "in": "path",
+            "description": "Logo file name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "logo-redhat.png"
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "The specified namespace could not be found",
+            "content": {
+              "image/jpeg": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "byte"
+                  }
+                }
+              },
+              "image/png": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "byte"
+                  }
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "The namespace details are returned in JSON format",
+            "content": {
+              "image/jpeg": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "byte"
+                  }
+                }
+              },
+              "image/png": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "byte"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/{namespace}/details": {
+      "get": {
+        "tags": ["registry-api"],
+        "operationId": "getNamespaceDetails",
+        "parameters": [
+          {
+            "name": "namespace",
+            "in": "path",
+            "description": "Namespace name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "redhat"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NamespaceDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/-/query": {
+      "get": {
+        "tags": ["registry-api"],
+        "summary": "Provides metadata of extensions matching the given parameters",
+        "operationId": "getQueryV2",
+        "parameters": [
+          {
+            "name": "namespaceName",
+            "in": "query",
+            "description": "Name of a namespace",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "foo"
+          },
+          {
+            "name": "extensionName",
+            "in": "query",
+            "description": "Name of an extension",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "bar"
+          },
+          {
+            "name": "extensionVersion",
+            "in": "query",
+            "description": "Version of an extension",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": 1
+          },
+          {
+            "name": "extensionId",
+            "in": "query",
+            "description": "Identifier in the form {namespace}.{extension}",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "foo.bar"
+          },
+          {
+            "name": "extensionUuid",
+            "in": "query",
+            "description": "Universally unique identifier of an extension",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": 5678
+          },
+          {
+            "name": "namespaceUuid",
+            "in": "query",
+            "description": "Universally unique identifier of a namespace",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": 1234
+          },
+          {
+            "name": "includeAllVersions",
+            "in": "query",
+            "description": "Whether to include all versions of an extension",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "links",
+              "enum": ["true", "false", "links"]
+            }
+          },
+          {
+            "name": "targetPlatform",
+            "in": "query",
+            "description": "Target platform",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "win32-x64",
+                "win32-ia32",
+                "win32-arm64",
+                "linux-x64",
+                "linux-arm64",
+                "linux-armhf",
+                "alpine-x64",
+                "alpine-arm64",
+                "darwin-x64",
+                "darwin-arm64",
+                "web",
+                "universal"
+              ]
+            },
+            "example": "linux-x64"
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "Maximal number of entries to return",
+            "required": false,
+            "schema": {
+              "minimum": 0,
+              "type": "integer",
+              "default": 100
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "Number of entries to skip (usually a multiple of the page size)",
+            "required": false,
+            "schema": {
+              "minimum": 0,
+              "type": "integer",
+              "default": 0
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the (possibly empty) query results",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains an invalid parameter value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/-/search": {
+      "get": {
+        "tags": ["registry-api"],
+        "summary": "Search extensions via text entered by a user",
+        "operationId": "search",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "description": "Query text for searching",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "javascript"
+          },
+          {
+            "name": "category",
+            "in": "query",
+            "description": "Extension category as shown in the UI",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "Programming Languages"
+          },
+          {
+            "name": "targetPlatform",
+            "in": "query",
+            "description": "Target platform",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "win32-x64",
+                "win32-ia32",
+                "win32-arm64",
+                "linux-x64",
+                "linux-arm64",
+                "linux-armhf",
+                "alpine-x64",
+                "alpine-arm64",
+                "darwin-x64",
+                "darwin-arm64",
+                "web",
+                "universal"
+              ]
+            },
+            "example": "linux-arm64"
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "Maximal number of entries to return",
+            "required": false,
+            "schema": {
+              "minimum": 0,
+              "type": "integer",
+              "default": 18
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "Number of entries to skip (usually a multiple of the page size)",
+            "required": false,
+            "schema": {
+              "minimum": 0,
+              "type": "integer",
+              "default": 0
+            }
+          },
+          {
+            "name": "sortOrder",
+            "in": "query",
+            "description": "Descending or ascending sort order",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": ["asc", "desc"]
+            }
+          },
+          {
+            "name": "sortBy",
+            "in": "query",
+            "description": "Sort key (relevance is a weighted mix of various properties)",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "relevance",
+                "timestamp",
+                "averageRating",
+                "downloadCount"
+              ]
+            }
+          },
+          {
+            "name": "includeAllVersions",
+            "in": "query",
+            "description": "Whether to include information on all available versions for each returned entry",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "429": {
+            "description": "A client has sent too many requests in a given amount of time",
+            "headers": {
+              "X-Rate-Limit-Retry-After-Seconds": {
+                "description": "Number of seconds to wait after receiving a 429 response",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "X-Rate-Limit-Remaining": {
+                "description": "Remaining number of requests left",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "The search results are returned in JSON format",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SearchResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains an invalid parameter value",
+            "content": {
+              "application/json": {
+                "example": {
+                  "error": "The parameter 'size' must not be negative."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/-/public-key/{publicId}": {
+      "get": {
+        "tags": ["registry-api"],
+        "summary": "Access a public key file",
+        "operationId": "getPublicKey",
+        "parameters": [
+          {
+            "name": "publicId",
+            "in": "path",
+            "description": "Public ID of a public key file",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "92dea4de-80b5-4577-b27d-44cdcda82c63"
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "The specified public key file could not be found"
+          },
+          "429": {
+            "description": "A client has sent too many requests in a given amount of time",
+            "headers": {
+              "X-Rate-Limit-Retry-After-Seconds": {
+                "description": "Number of seconds to wait after receiving a 429 response",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "X-Rate-Limit-Remaining": {
+                "description": "Remaining number of requests left",
+                "style": "simple",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "The file content is returned",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Badge": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "Image URL of the badge"
+          },
+          "href": {
+            "type": "string",
+            "description": "The link users will follow when clicking the badge"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "description": "A badge to be shown in the sidebar of the extension page in the registry"
+      },
+      "Extension": {
+        "required": [
+          "name",
+          "namespace",
+          "namespaceAccess",
+          "namespaceUrl",
+          "publishedBy",
+          "reviewsUrl",
+          "timestamp",
+          "unrelatedPublisher",
+          "verified",
+          "version"
+        ],
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "string",
+            "description": "Indicates success of the operation (omitted if a more specific result type is returned)"
+          },
+          "warning": {
+            "type": "string",
+            "description": "Indicates a warning; when this is present, other properties can still be used"
+          },
+          "error": {
+            "type": "string",
+            "description": "Indicates an error; when this is present, all other properties should be ignored"
+          },
+          "namespaceUrl": {
+            "type": "string",
+            "description": "URL to get metadata of the extension's namespace"
+          },
+          "reviewsUrl": {
+            "type": "string",
+            "description": "URL to get the list of reviews of this extension"
+          },
+          "files": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "description": "Map of file types (download, manifest, icon, readme, license, changelog) to their respective URLs"
+            },
+            "description": "Map of file types (download, manifest, icon, readme, license, changelog) to their respective URLs"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the extension"
+          },
+          "namespace": {
+            "type": "string",
+            "description": "Namespace of the extension"
+          },
+          "targetPlatform": {
+            "type": "string",
+            "description": "Name of the target platform"
+          },
+          "version": {
+            "type": "string",
+            "description": "Selected version, or the latest version if none was specified"
+          },
+          "preRelease": {
+            "type": "boolean",
+            "description": "Indicates whether this is a pre-release version"
+          },
+          "publishedBy": {
+            "$ref": "#/components/schemas/User"
+          },
+          "verified": {
+            "type": "boolean",
+            "description": "The value 'true' means the publishing user is a privileged user or the publishing user is a member of the extension's namespace and the namespace has at least one owner."
+          },
+          "unrelatedPublisher": {
+            "type": "boolean",
+            "description": "Deprecated: use 'verified' instead (this property is just the negation of 'verified')",
+            "deprecated": true
+          },
+          "namespaceAccess": {
+            "type": "string",
+            "description": "Access level of the extension's namespace. Deprecated: namespaces are now always restricted",
+            "deprecated": true,
+            "enum": ["public", "restricted"]
+          },
+          "allVersions": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "description": "Map of available versions to their metadata URLs. Deprecated: only returns the last 100 versions. Use allVersionsUrl instead."
+            },
+            "description": "Map of available versions to their metadata URLs. Deprecated: only returns the last 100 versions. Use allVersionsUrl instead.",
+            "deprecated": true
+          },
+          "allVersionsUrl": {
+            "type": "string",
+            "description": "URL to get a map of available versions to their metadata URLs."
+          },
+          "averageRating": {
+            "maximum": 5,
+            "minimum": 0,
+            "type": "number",
+            "description": "Average rating",
+            "format": "double"
+          },
+          "downloadCount": {
+            "minimum": 0,
+            "type": "integer",
+            "description": "Number of downloads of the extension package",
+            "format": "int32"
+          },
+          "reviewCount": {
+            "minimum": 0,
+            "type": "integer",
+            "description": "Number of reviews",
+            "format": "int64"
+          },
+          "versionAlias": {
+            "type": "array",
+            "description": "Available version aliases ('latest' or 'pre-release')",
+            "items": {
+              "type": "string",
+              "description": "Available version aliases ('latest' or 'pre-release')"
+            }
+          },
+          "timestamp": {
+            "type": "string",
+            "description": "Date and time when this version was published (ISO-8601)"
+          },
+          "preview": {
+            "type": "boolean",
+            "description": "Indicates whether this is a preview extension"
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Name to be displayed in user interfaces"
+          },
+          "namespaceDisplayName": {
+            "type": "string",
+            "description": "Namespace name to be displayed in user interfaces"
+          },
+          "description": {
+            "type": "string"
+          },
+          "engines": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "description": "Map of engine names to the respective version constraints"
+            },
+            "description": "Map of engine names to the respective version constraints"
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "extensionKind": {
+            "type": "array",
+            "description": "A list that indicates where the extension should run in remote configurations. Values are \"ui\" (run locally), \"workspace\" (run on remote machine) and \"web\"",
+            "items": {
+              "type": "string",
+              "description": "A list that indicates where the extension should run in remote configurations. Values are \"ui\" (run locally), \"workspace\" (run on remote machine) and \"web\""
+            }
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "license": {
+            "type": "string",
+            "description": "License identifier"
+          },
+          "homepage": {
+            "type": "string",
+            "description": "URL of the extension's homepage"
+          },
+          "repository": {
+            "type": "string",
+            "description": "URL of the extension's source repository"
+          },
+          "sponsorLink": {
+            "type": "string",
+            "description": "URL to sponsor the extension"
+          },
+          "bugs": {
+            "type": "string",
+            "description": "URL of the extension's bug tracker"
+          },
+          "markdown": {
+            "type": "string",
+            "description": "Markdown rendering engine to use in user interfaces",
+            "enum": ["standard", "github"]
+          },
+          "galleryColor": {
+            "type": "string",
+            "description": "CSS color to use as background in user interfaces"
+          },
+          "galleryTheme": {
+            "type": "string",
+            "description": "Theme type for user interfaces",
+            "enum": ["light", "dark"]
+          },
+          "localizedLanguages": {
+            "type": "array",
+            "description": "Languages the extension has been translated in",
+            "items": {
+              "type": "string",
+              "description": "Languages the extension has been translated in"
+            }
+          },
+          "qna": {
+            "type": "string",
+            "description": "URL of the extension's Q&A page"
+          },
+          "badges": {
+            "type": "array",
+            "description": "List of badges to display in user interfaces",
+            "items": {
+              "$ref": "#/components/schemas/Badge"
+            }
+          },
+          "dependencies": {
+            "type": "array",
+            "description": "List of dependencies to other extensions",
+            "items": {
+              "$ref": "#/components/schemas/ExtensionReference"
+            }
+          },
+          "bundledExtensions": {
+            "type": "array",
+            "description": "List of extensions bundled with this extension",
+            "items": {
+              "$ref": "#/components/schemas/ExtensionReference"
+            }
+          },
+          "downloads": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "description": "Map of download links by target platform"
+            },
+            "description": "Map of download links by target platform"
+          },
+          "allTargetPlatformVersions": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "description": "Map of target platforms by extension version",
+              "items": {
+                "type": "string",
+                "description": "Map of target platforms by extension version"
+              }
+            },
+            "description": "Map of target platforms by extension version"
+          },
+          "url": {
+            "type": "string",
+            "description": "version metadata URL"
+          }
+        },
+        "description": "Metadata of an extension"
+      },
+      "ExtensionReference": {
+        "required": ["extension", "namespace", "url"],
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "URL to get metadata of the referenced extension"
+          },
+          "namespace": {
+            "type": "string",
+            "description": "Namespace of the referenced extension"
+          },
+          "extension": {
+            "type": "string",
+            "description": "Name of the referenced extension"
+          }
+        },
+        "description": "A reference to another extension in the registry"
+      },
+      "Namespace": {
+        "required": ["name", "verified"],
+        "type": "object",
+        "description": "Describes the namespace to create",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Result"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Name of the namespace"
+              },
+              "extensions": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string",
+                  "description": "Map of extension names to their metadata URLs (not required for creating)"
+                },
+                "description": "Map of extension names to their metadata URLs (not required for creating)"
+              },
+              "verified": {
+                "type": "boolean",
+                "description": "Indicates whether the namespace has an owner (not required for creating)"
+              },
+              "access": {
+                "type": "string",
+                "description": "Access level of the namespace. Deprecated: namespaces are now always restricted",
+                "deprecated": true,
+                "enum": ["public", "restricted"]
+              }
+            }
+          }
+        ]
+      },
+      "NamespaceDetails": {
+        "required": ["name", "verified"],
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "string",
+            "description": "Indicates success of the operation (omitted if a more specific result type is returned)"
+          },
+          "warning": {
+            "type": "string",
+            "description": "Indicates a warning; when this is present, other properties can still be used"
+          },
+          "error": {
+            "type": "string",
+            "description": "Indicates an error; when this is present, all other properties should be ignored"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the namespace"
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Display name of the namespace"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the namespace"
+          },
+          "logo": {
+            "type": "string",
+            "description": "Logo URL of the namespace"
+          },
+          "website": {
+            "type": "string",
+            "description": "Website URL of the namespace"
+          },
+          "supportLink": {
+            "type": "string",
+            "description": "Support URL of the namespace"
+          },
+          "socialLinks": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "description": "Map of social network names to their profile URLs"
+            },
+            "description": "Map of social network names to their profile URLs"
+          },
+          "extensions": {
+            "type": "array",
+            "description": "Map of extension names to their metadata URLs",
+            "items": {
+              "$ref": "#/components/schemas/SearchEntry"
+            }
+          },
+          "verified": {
+            "type": "boolean",
+            "description": "Indicates whether the namespace has an owner"
+          }
+        },
+        "description": "Details of a namespace"
+      },
+      "NamespaceMembershipJson": {
+        "type": "object",
+        "properties": {
+          "namespace": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          }
+        },
+        "description": "List of memberships"
+      },
+      "NamespaceMembershipList": {
+        "required": ["namespaceMemberships"],
+        "type": "object",
+        "description": "Metadata of a namespace member list",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Result"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "namespaceMemberships": {
+                "type": "array",
+                "description": "List of memberships",
+                "items": {
+                  "$ref": "#/components/schemas/NamespaceMembershipJson"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "QueryParam": {
+        "type": "object",
+        "properties": {
+          "namespaceName": {
+            "type": "string",
+            "description": "Name of a namespace"
+          },
+          "extensionName": {
+            "type": "string",
+            "description": "Name of an extension"
+          },
+          "extensionVersion": {
+            "type": "string",
+            "description": "Version of an extension"
+          },
+          "extensionId": {
+            "type": "string",
+            "description": "Identifier in the form {namespace}.{extension}"
+          },
+          "extensionUuid": {
+            "type": "string",
+            "description": "Universally unique identifier of an extension"
+          },
+          "namespaceUuid": {
+            "type": "string",
+            "description": "Universally unique identifier of a namespace"
+          },
+          "includeAllVersions": {
+            "type": "boolean",
+            "description": "Whether to include all versions of an extension, ignored if extensionVersion is specified"
+          },
+          "targetPlatform": {
+            "type": "string",
+            "description": "Name of the target platform",
+            "enum": [
+              "win32-x64",
+              "win32-ia32",
+              "win32-arm64",
+              "linux-x64",
+              "linux-arm64",
+              "linux-armhf",
+              "alpine-x64",
+              "alpine-arm64",
+              "darwin-x64",
+              "darwin-arm64",
+              "web",
+              "universal"
+            ]
+          },
+          "size": {
+            "minimum": 0,
+            "type": "integer",
+            "description": "Maximal number of entries to return",
+            "format": "int32",
+            "default": 100
+          },
+          "offset": {
+            "minimum": 0,
+            "type": "integer",
+            "description": "Number of entries to skip (usually a multiple of the page size)",
+            "format": "int32",
+            "default": 0
+          }
+        },
+        "description": "Parameters of the metadata query"
+      },
+      "QueryResult": {
+        "required": ["offset", "totalSize"],
+        "type": "object",
+        "description": "Metadata query result",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Result"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "offset": {
+                "minimum": 0,
+                "type": "integer",
+                "description": "Number of skipped entries according to the query",
+                "format": "int32"
+              },
+              "totalSize": {
+                "minimum": 0,
+                "type": "integer",
+                "description": "Total number of entries that match the query",
+                "format": "int32"
+              },
+              "extensions": {
+                "type": "array",
+                "description": "Extensions that match the given query (may be empty)",
+                "items": {
+                  "$ref": "#/components/schemas/Extension"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "Result": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "string",
+            "description": "Indicates success of the operation (omitted if a more specific result type is returned)"
+          },
+          "warning": {
+            "type": "string",
+            "description": "Indicates a warning; when this is present, other properties can still be used"
+          },
+          "error": {
+            "type": "string",
+            "description": "Indicates an error; when this is present, all other properties should be ignored"
+          }
+        },
+        "description": "Generic result indicator"
+      },
+      "Review": {
+        "required": ["rating", "timestamp", "user"],
+        "type": "object",
+        "properties": {
+          "user": {
+            "$ref": "#/components/schemas/User"
+          },
+          "timestamp": {
+            "type": "string",
+            "description": "Date and time when this review was posted (ISO-8601)"
+          },
+          "comment": {
+            "type": "string"
+          },
+          "rating": {
+            "maximum": 5,
+            "minimum": 0,
+            "type": "integer",
+            "description": "Number of stars",
+            "format": "int32"
+          }
+        },
+        "description": "A review of an extension"
+      },
+      "ReviewList": {
+        "required": ["reviews"],
+        "type": "object",
+        "description": "List of reviews of an extension",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Result"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "reviews": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Review"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "SearchEntry": {
+        "required": [
+          "files",
+          "name",
+          "namespace",
+          "timestamp",
+          "url",
+          "version"
+        ],
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "URL to get the full metadata of the extension"
+          },
+          "files": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "description": "Map of file types (download, manifest, icon, readme, license, changelog) to their respective URLs"
+            },
+            "description": "Map of file types (download, manifest, icon, readme, license, changelog) to their respective URLs"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the extension"
+          },
+          "namespace": {
+            "type": "string",
+            "description": "Namespace of the extension"
+          },
+          "version": {
+            "type": "string",
+            "description": "The latest published version"
+          },
+          "timestamp": {
+            "type": "string",
+            "description": "Date and time when this version was published (ISO-8601)"
+          },
+          "allVersions": {
+            "type": "array",
+            "description": "Essential metadata of all available versions. Deprecated: only returns the last 100 versions. Use allVersionsUrl instead.",
+            "deprecated": true,
+            "items": {
+              "$ref": "#/components/schemas/VersionReference"
+            }
+          },
+          "allVersionsUrl": {
+            "type": "string",
+            "description": "URL to get essential metadata of all available versions."
+          },
+          "averageRating": {
+            "maximum": 5,
+            "minimum": 0,
+            "type": "number",
+            "description": "Average rating",
+            "format": "double"
+          },
+          "reviewCount": {
+            "minimum": 0,
+            "type": "integer",
+            "description": "Number of reviews",
+            "format": "int64"
+          },
+          "downloadCount": {
+            "minimum": 0,
+            "type": "integer",
+            "description": "Number of downloads of the extension package",
+            "format": "int32"
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Name to be displayed in user interfaces"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "description": "Summary of metadata of an extension"
+      },
+      "SearchResult": {
+        "required": ["extensions", "offset", "totalSize"],
+        "type": "object",
+        "description": "List of extensions matching a search query",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Result"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "offset": {
+                "minimum": 0,
+                "type": "integer",
+                "description": "Number of skipped entries according to the search query",
+                "format": "int32"
+              },
+              "totalSize": {
+                "minimum": 0,
+                "type": "integer",
+                "description": "Total number of entries that match the search query",
+                "format": "int32"
+              },
+              "extensions": {
+                "type": "array",
+                "description": "List of matching entries, limited to the size specified in the search query",
+                "items": {
+                  "$ref": "#/components/schemas/SearchEntry"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "User": {
+        "required": ["loginName"],
+        "type": "object",
+        "description": "User data",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Result"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "loginName": {
+                "type": "string",
+                "description": "Login name"
+              },
+              "fullName": {
+                "type": "string",
+                "description": "Full name"
+              },
+              "avatarUrl": {
+                "type": "string",
+                "description": "URL to the user's avatar image"
+              },
+              "homepage": {
+                "type": "string",
+                "description": "URL to the user's profile page"
+              },
+              "provider": {
+                "type": "string",
+                "description": "Authentication provider (e.g. github)"
+              }
+            }
+          }
+        ]
+      },
+      "VersionReference": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "URL to get the full metadata of this version"
+          },
+          "files": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "description": "Map of file types (download, manifest, icon, readme, license, changelog) to their respective URLs"
+            },
+            "description": "Map of file types (download, manifest, icon, readme, license, changelog) to their respective URLs"
+          },
+          "version": {
+            "type": "string"
+          },
+          "targetPlatform": {
+            "type": "string",
+            "description": "Name of the target platform"
+          },
+          "engines": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "description": "Map of engine names to the respective version constraints"
+            },
+            "description": "Map of engine names to the respective version constraints"
+          }
+        },
+        "description": "Essential metadata of an extension version"
+      },
+      "VersionReferences": {
+        "required": ["offset", "totalSize", "versions"],
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "string",
+            "description": "Indicates success of the operation (omitted if a more specific result type is returned)"
+          },
+          "warning": {
+            "type": "string",
+            "description": "Indicates a warning; when this is present, other properties can still be used"
+          },
+          "error": {
+            "type": "string",
+            "description": "Indicates an error; when this is present, all other properties should be ignored"
+          },
+          "offset": {
+            "minimum": 0,
+            "type": "integer",
+            "description": "Number of skipped entries according to the version references request",
+            "format": "int32"
+          },
+          "totalSize": {
+            "minimum": 0,
+            "type": "integer",
+            "description": "Total number of version references the extension has",
+            "format": "int32"
+          },
+          "versions": {
+            "type": "array",
+            "description": "Essential metadata of all available versions, limited to the size specified in the version references request",
+            "items": {
+              "$ref": "#/components/schemas/VersionReference"
+            }
+          }
+        },
+        "description": "List of version references matching an extension"
+      },
+      "Versions": {
+        "required": ["offset", "totalSize", "versions"],
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "string",
+            "description": "Indicates success of the operation (omitted if a more specific result type is returned)"
+          },
+          "warning": {
+            "type": "string",
+            "description": "Indicates a warning; when this is present, other properties can still be used"
+          },
+          "error": {
+            "type": "string",
+            "description": "Indicates an error; when this is present, all other properties should be ignored"
+          },
+          "offset": {
+            "minimum": 0,
+            "type": "integer",
+            "description": "Number of skipped entries according to the versions request",
+            "format": "int32"
+          },
+          "totalSize": {
+            "minimum": 0,
+            "type": "integer",
+            "description": "Total number of versions the extension has",
+            "format": "int32"
+          },
+          "versions": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "description": "Map of versions, limited to the size specified in the versions request"
+            },
+            "description": "Map of versions, limited to the size specified in the versions request"
+          }
+        },
+        "description": "Map of versions matching an extension"
+      }
+    }
+  }
+}
