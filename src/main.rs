@@ -48,7 +48,6 @@ async fn get_matched_versoin(
     generator: Generator<'_>,
 ) -> Option<NixContext> {
     for version in &item.versions {
-        let source = &version.get_file(AssetType::Manifest).unwrap().source;
         match version.get_engine() {
             Ok(ver) => {
                 if ver.matches(&vscode_ver) {
