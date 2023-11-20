@@ -141,7 +141,6 @@ async fn main() -> anyhow::Result<()> {
         .get_extension_response(&config.extensions)
         .await
         .unwrap();
-    trace!("{obj:#?}");
 
     let futures: Vec<_> = obj
         .results

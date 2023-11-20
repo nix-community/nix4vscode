@@ -3,8 +3,10 @@ mod cacher;
 pub use cacher::*;
 
 use crate::error::Error;
+use log::*;
 
 pub async fn get_sha256(url: &str) -> anyhow::Result<String> {
+    trace!("get sha256 of {url}");
     if let Ok(val) = GLOBAL_CACHER.get(CacheType::Cache256, url) {
         return Ok(val);
     }
