@@ -1,5 +1,3 @@
-use log::error;
-
 use crate::{
     config::Extension,
     data_struct::{self, IRawGalleryExtensionsResult, IRawGalleryQueryResult, TargetPlatform},
@@ -8,6 +6,7 @@ use crate::{
 };
 
 use super::Query;
+use log::*;
 
 #[derive(Debug, Clone)]
 pub struct HttpClient {
@@ -24,14 +23,13 @@ impl HttpClient {
         &self,
         extensions: &[Extension],
     ) -> anyhow::Result<data_struct::IRawGalleryQueryResult> {
-        let responses: Vec<IRawGalleryQueryResult> = Vec::new();
         let mut results = IRawGalleryQueryResult::default();
         let extension_count: u64 = extensions.len() as u64;
         let mut page_number: u64 = 1;
         loop {
             let query = Query::new(extensions, page_number);
             let body = serde_json::to_string(&query)?;
-            let response = self
+            let mut response = self
                 .client
                 .post("https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery")
                 .header(
@@ -41,18 +39,20 @@ impl HttpClient {
                 .header("Content-Type", "application/json")
                 .body(body.clone())
                 .send()
+                .await?
+                .json::<IRawGalleryQueryResult>()
                 .await?;
-            results.results.append(
-                &mut response
-                    .json::<data_struct::IRawGalleryQueryResult>()
-                    .await?
-                    .results,
-            );
+
+            if response.results.is_empty() {
+                break;
+            }
+
+            results.results.append(&mut response.results);
             if page_number * IQueryState::DEFAULT_PAGE_SIZE >= extension_count {
                 break;
-            } else {
-                page_number += 1;
             }
+
+            page_number += 1;
         }
         Ok(results)
     }
@@ -85,6 +85,7 @@ impl HttpClient {
         publisher_name: String,
         extension_name: String,
     ) -> Vec<TargetPlatform> {
+        trace!("get target_platform of {publisher_name}.{extension_name}");
         match self
             .inner_get_extension_target_platform(publisher_name, extension_name)
             .await
