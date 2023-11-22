@@ -50,7 +50,7 @@ async fn get_matched_versoin(
     for version in &item.versions {
         match version.get_engine() {
             Ok(ver) => {
-                if ver.matches(&vscode_ver) {
+                if !ver.matches(&vscode_ver) {
                     continue;
                 }
             }
