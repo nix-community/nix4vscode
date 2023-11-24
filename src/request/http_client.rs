@@ -29,6 +29,7 @@ impl HttpClient {
         loop {
             let query = Query::new(extensions, page_number);
             let body = serde_json::to_string(&query)?;
+            trace!("send request: {body}");
             let mut response = self
                 .client
                 .post("https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery")
