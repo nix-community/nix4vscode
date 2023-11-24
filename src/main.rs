@@ -97,8 +97,8 @@ async fn get_matched_versoin(
         };
 
         return Some(NixContext {
-            extension_name: item.extension_name.clone(),
-            publisher_name: item.publisher.publisher_name.clone(),
+            extension_name: item.extension_name.to_lowercase(),
+            publisher_name: item.publisher.publisher_name.to_lowercase(),
             extension_version: version.version.clone(),
             asset_url: if has_asset_url {
                 Some(asset_url.clone())
