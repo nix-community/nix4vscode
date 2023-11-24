@@ -31,6 +31,7 @@ impl<'a> Generator<'a> {
             .unwrap();
 
         engine.add_filter("nixfmt", nixfmt);
+        engine.add_filter("to_string", to_string);
 
         Self { engine }
     }

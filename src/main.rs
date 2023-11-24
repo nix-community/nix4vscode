@@ -146,11 +146,20 @@ async fn main() -> anyhow::Result<()> {
         .results
         .into_iter()
         .flat_map(|item| item.extensions.into_iter())
-        .filter(|item| match config.extensions.is_empty() {
-            true => true,
-            false => config.contains(&item.publisher.publisher_name, &item.extension_name),
+        .filter(|item| {
+            match config.contains(&item.publisher.publisher_name, &item.extension_name) {
+                true => true,
+                false => {
+                    debug!(
+                        "extensions be filtered {}.{}",
+                        item.publisher.publisher_name, item.extension_name
+                    );
+                    false
+                }
+            }
         })
         .map(|item| {
+            trace!("aa");
             let vscode_ver = vscode_ver.clone();
             let client = client.clone();
             let config = Arc::clone(&config);

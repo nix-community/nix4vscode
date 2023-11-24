@@ -44,8 +44,8 @@ impl Config {
     #[inline]
     fn get_idx(&self, publisher_name: &str, extension_name: &str) -> Option<usize> {
         self.extensions.iter().position(|item| {
-            item.extension_name.as_str() == extension_name
-                && item.publisher_name.as_str() == publisher_name
+            item.extension_name.to_lowercase() == extension_name.to_lowercase()
+                && item.publisher_name.to_lowercase() == publisher_name.to_lowercase()
         })
     }
 
