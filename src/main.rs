@@ -8,6 +8,7 @@ pub mod data_struct;
 pub mod dump;
 pub mod error;
 pub mod jinja;
+pub mod openvsx_ext;
 pub mod request;
 pub mod utils;
 
