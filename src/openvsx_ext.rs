@@ -37,6 +37,14 @@ pub async fn get_matched_version_of(
                     if ver.version.is_none() {
                         continue;
                     }
+                    match ver.target_platform {
+                        Some(ref pl) => {
+                            if pl == "Unknown" {
+                                continue;
+                            }
+                        }
+                        None => continue,
+                    };
                     if ver
                         .engines
                         .iter()
