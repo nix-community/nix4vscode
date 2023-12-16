@@ -21,7 +21,7 @@ in
             name = "{{ item.publisher_name }}.{{ item.extension_name }}.zip";
           }).outPath;
           vscodeExtUniqueId = "{{ item.publisher_name }}.{{ item.extension_name }}";
-          version = "{{ item.version }}";
+          version = "{{ item.extension_version }}";
         });
     {%- endwith %}
     {% endif %}
