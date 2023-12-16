@@ -15,10 +15,10 @@ pub mod utils;
 use data_struct::IRawGalleryExtension;
 use log::*;
 use semver::Version;
-use std::{str::FromStr, sync::Arc};
+use std::{process::exit, str::FromStr, sync::Arc};
 use tracing_subscriber::{fmt, prelude::*, util::SubscriberInitExt, EnvFilter};
 
-use futures::future::join_all;
+use futures::{future::join_all, FutureExt, Stream, StreamExt};
 
 use clap::Parser;
 use config::Config;
@@ -39,6 +39,8 @@ struct Args {
     export: bool,
     #[arg(long, hide = true)]
     dump: bool,
+    #[arg(long)]
+    openvsx: bool,
 }
 
 async fn get_matched_versoin(
@@ -127,49 +129,92 @@ async fn main() -> anyhow::Result<()> {
     let vscode_ver = semver::Version::from_str(&config.vscode_version).unwrap();
     let mut generator = Generator::new();
 
-    if args.dump {
-        let res = dump::dump(&client, &vscode_ver, &config, &generator).await;
-        debug!("find dump of vscode marketplace: \n{res:#?}");
-        let res = serde_json::to_string(&res).unwrap();
-        match args.output {
-            Some(filepath) => tokio::fs::write(filepath, res).await.unwrap(),
-            None => println!("{res}",),
-        }
-        return Ok(());
-    }
-
-    let obj = client
-        .get_extension_response(&config.extensions)
-        .await
-        .unwrap();
-
-    let futures: Vec<_> = obj
-        .results
-        .into_iter()
-        .flat_map(|item| item.extensions.into_iter())
-        .filter(|item| {
-            match config.contains(&item.publisher.publisher_name, &item.extension_name) {
-                true => true,
-                false => {
-                    debug!(
-                        "extensions be filtered {}.{}",
-                        item.publisher.publisher_name, item.extension_name
-                    );
-                    false
+    let res: Vec<_> = if args.openvsx {
+        let res: Vec<_> = config
+            .extensions
+            .iter()
+            .map(|item| {
+                let vscode_ver = semver::Version::from_str(&config.vscode_version).unwrap();
+                async move {
+                    openvsx_ext::get_matched_version_of(
+                        &Default::default(),
+                        &item.publisher_name,
+                        &item.extension_name,
+                        &vscode_ver,
+                    )
+                    .await
+                    .into_iter()
+                    .map(|ver| {
+                        (
+                            item.publisher_name.clone(),
+                            item.extension_name.clone(),
+                            ver,
+                        )
+                    })
                 }
-            }
-        })
-        .map(|item| {
-            trace!("aa");
-            let vscode_ver = vscode_ver.clone();
-            let client = client.clone();
-            let config = Arc::clone(&config);
-            let generator = generator.clone();
-            get_matched_versoin(item, vscode_ver, client, config, generator)
-        })
-        .collect();
+            })
+            .collect();
 
-    let res: Vec<_> = join_all(futures).await.into_iter().flatten().collect();
+        join_all(res)
+            .await
+            .into_iter()
+            .flatten()
+            .filter_map(|item| {
+                Some(NixContext {
+                    extension_name: item.1,
+                    publisher_name: item.0,
+                    extension_version: item.2.version.unwrap(),
+                    asset_url: item.2.files.clone().unwrap().get("download").cloned(),
+                    sha256: item.2.files.unwrap().get("sha256").unwrap().to_string(),
+                    target_platform: vec![item.2.target_platform.unwrap().as_str().into()],
+                })
+            })
+            .collect()
+    } else {
+        if args.dump {
+            let res = dump::dump(&client, &vscode_ver, &config, &generator).await;
+            debug!("find dump of vscode marketplace: \n{res:#?}");
+            let res = serde_json::to_string(&res).unwrap();
+            match args.output {
+                Some(filepath) => tokio::fs::write(filepath, res).await.unwrap(),
+                None => println!("{res}",),
+            }
+            return Ok(());
+        }
+
+        let obj = client
+            .get_extension_response(&config.extensions)
+            .await
+            .unwrap();
+
+        let futures: Vec<_> = obj
+            .results
+            .into_iter()
+            .flat_map(|item| item.extensions.into_iter())
+            .filter(|item| {
+                match config.contains(&item.publisher.publisher_name, &item.extension_name) {
+                    true => true,
+                    false => {
+                        debug!(
+                            "extensions be filtered {}.{}",
+                            item.publisher.publisher_name, item.extension_name
+                        );
+                        false
+                    }
+                }
+            })
+            .map(|item| {
+                trace!("aa");
+                let vscode_ver = vscode_ver.clone();
+                let client = client.clone();
+                let config = Arc::clone(&config);
+                let generator = generator.clone();
+                get_matched_versoin(item, vscode_ver, client, config, generator)
+            })
+            .collect();
+
+        join_all(futures).await.into_iter().flatten().collect()
+    };
     debug!("{res:#?}");
     if args.export {
         let res = serde_json::to_string(&res).unwrap();
