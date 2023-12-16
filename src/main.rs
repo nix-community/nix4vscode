@@ -14,11 +14,12 @@ pub mod utils;
 
 use data_struct::IRawGalleryExtension;
 use log::*;
+use openvsx::apis::configuration::Configuration;
 use semver::Version;
-use std::{process::exit, str::FromStr, sync::Arc};
+use std::{str::FromStr, sync::Arc};
 use tracing_subscriber::{fmt, prelude::*, util::SubscriberInitExt, EnvFilter};
 
-use futures::{future::join_all, FutureExt, Stream, StreamExt};
+use futures::future::join_all;
 
 use clap::Parser;
 use config::Config;
@@ -130,44 +131,65 @@ async fn main() -> anyhow::Result<()> {
     let mut generator = Generator::new();
 
     let res: Vec<_> = if args.openvsx {
+        let vsx_config = Configuration::default();
+
         let res: Vec<_> = config
             .extensions
             .iter()
             .map(|item| {
-                let vscode_ver = semver::Version::from_str(&config.vscode_version).unwrap();
+                let vscode_ver = vscode_ver.clone();
+                let vsx_config = vsx_config.clone();
+                let client = vsx_config.client.clone();
                 async move {
                     openvsx_ext::get_matched_version_of(
-                        &Default::default(),
+                        &vsx_config,
                         &item.publisher_name,
                         &item.extension_name,
                         &vscode_ver,
                     )
                     .await
                     .into_iter()
-                    .map(|ver| {
-                        (
-                            item.publisher_name.clone(),
-                            item.extension_name.clone(),
-                            ver,
-                        )
+                    .map(move |ver| {
+                        let publisher_name = item.publisher_name.clone();
+                        let extension_name = item.extension_name.clone();
+                        let client = client.clone();
+                        async move {
+                            (
+                                publisher_name,
+                                extension_name,
+                                client
+                                    .get(
+                                        ver.clone()
+                                            .files
+                                            .unwrap()
+                                            .get("sha256")
+                                            .unwrap()
+                                            .to_string(),
+                                    )
+                                    .send()
+                                    .await
+                                    .unwrap()
+                                    .text()
+                                    .await
+                                    .unwrap(),
+                                ver,
+                            )
+                        }
                     })
                 }
             })
             .collect();
 
-        join_all(res)
+        join_all(join_all(res).await.into_iter().flatten())
             .await
             .into_iter()
-            .flatten()
-            .filter_map(|item| {
-                Some(NixContext {
-                    extension_name: item.1,
-                    publisher_name: item.0,
-                    extension_version: item.2.version.unwrap(),
-                    asset_url: item.2.files.clone().unwrap().get("download").cloned(),
-                    sha256: item.2.files.unwrap().get("sha256").unwrap().to_string(),
-                    target_platform: vec![item.2.target_platform.unwrap().as_str().into()],
-                })
+            .map(|item| NixContext {
+                extension_name: item.1,
+                publisher_name: item.0,
+                extension_version: item.3.version.unwrap(),
+                asset_url: item.3.files.clone().unwrap().get("download").cloned(),
+                sha256: item.2,
+                target_platform: vec![item.3.target_platform.unwrap().as_str().into()],
             })
             .collect()
     } else {
