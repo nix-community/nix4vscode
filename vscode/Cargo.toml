@@ -1,0 +1,12 @@
+[package]
+name = "vscode"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+reqwest = { version = "0.11.22", default-features = false, features = ["rustls-tls", "json", "gzip"] }
+serde = { version = "1.0.193", features = ["derive"] }
+serde_json = "1.0.108"
+vscode_derive = { path = "./vscode_derive" }

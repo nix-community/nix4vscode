@@ -35,6 +35,8 @@
             (
               pkgs.rust-bin.nightly."2023-07-28".default.override rust_toolchain
             )
+            pkgs.openapi-generator-cli
+            pkgs.cargo-expand
           ] ++ lib.lists.optionals isDarwin [
             pkgs.iconv
             pkgs.darwin.apple_sdk.frameworks.Security
