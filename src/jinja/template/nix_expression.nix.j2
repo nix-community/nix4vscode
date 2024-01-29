@@ -1,7 +1,7 @@
 {%- filter nixfmt %}
-{% if config.autogen_warning != None %}
-    {{ config.autogen_warning }}
-{% endif %}
+{%- if config.autogen_warning != None %}
+    {{- config.autogen_warning }}
+{%- endif %}
 { pkgs, lib }:
 
 let
@@ -9,7 +9,7 @@ let
 in
 {
     {%- for item in extensions %}
-    {% if item.asset_url != None %}
+    {%- if item.asset_url != None %}
     {%- with uniqueId = [ item.publisher_name | to_string, '.', item.extension_name | to_string ] | join %}
         {{ uniqueId }} = (vscode-utils.buildVscodeExtension {
           name = "{{ item.publisher_name }}.{{ item.extension_name }}";
@@ -24,11 +24,11 @@ in
           version = "{{ item.extension_version }}";
         });
     {%- endwith %}
-    {% endif %}
+    {%- endif %}
     {%- endfor %}
 
     {%- for item in extensions %}
-    {% if item.asset_url == None %}
+    {%- if item.asset_url == None %}
     {%- with uniqueId = [ item.publisher_name | to_string, '.', item.extension_name | to_string ] | join %}
         {{ uniqueId }} = vscode-utils.extensionFromVscodeMarketplace {
           name = "{{ item.extension_name }}";
