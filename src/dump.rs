@@ -36,7 +36,7 @@ pub async fn dump<'a>(
         flags: RequestFlags::default().bits(),
     };
 
-    let make_request = async move |client: &reqwest::Client,
+    let make_request = async move |client: reqwest::Client,
                                    query: Query|
                 -> anyhow::Result<data_struct::IRawGalleryQueryResult> {
         let body = serde_json::to_string(&query)?;
@@ -58,7 +58,7 @@ pub async fn dump<'a>(
     let mut futures = Vec::default();
     loop {
         let query = make_query(start as u64);
-        match make_request(&client.client, query).await {
+        match make_request(client.client.clone(), query).await {
             Ok(res) => {
                 if res.results.is_empty() {
                     break;
