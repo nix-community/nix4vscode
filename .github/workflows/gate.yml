@@ -13,10 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
-          submodules: true
-          fetch-depth: "0"
       - uses: awalsh128/cache-apt-pkgs-action@latest
         with:
           packages: make fonts-noto-cjk fonts-noto-cjk-extra
@@ -40,11 +36,4 @@ jobs:
           export RUST_LOG=DEBUG
           nix develop --impure --command bash -c "cargo run -- config.toml -o example/vscode_plugins.nix"
           cat example/vscode_plugins.nix
-          # nix develop --impure --command bash -c "cd example && nix flake update"
           nix develop --impure --command bash -c "cd example && nix develop --build"
-      # - uses: EndBug/add-and-commit@v9 # You can change this to use a specific version.
-      #   with:
-      #     author_name: DragonBillow
-      #     author_email: DragonBillow@outlook.com
-      #     commit: --signoff
-      #     message: "feat(vscode): Update nix lock."
