@@ -1,23 +1,21 @@
 use vscode_derive::api;
 
 #[api]
-pub struct FilterType(u8);
+pub enum FilterType {
+    Tag = 1,
+    ExtensionId = 4,
+    Category = 5,
+    ExtensionName = 7,
+    Target = 8,
+    Featured = 9,
+    SearchText = 10,
+    ExcludeWithFlags = 12,
+}
 
 impl Default for FilterType {
     fn default() -> Self {
-        Self::TAG
+        Self::Tag
     }
-}
-
-impl FilterType {
-    pub const TAG: Self = Self(1);
-    pub const EXTENSION_ID: Self = Self(4);
-    pub const CATEGORY: Self = Self(5);
-    pub const EXTENSION_NAME: Self = Self(7);
-    pub const TARGET: Self = Self(8);
-    pub const FEATURED: Self = Self(9);
-    pub const SEARCH_TEXT: Self = Self(10);
-    pub const EXCLUDE_WITH_FLAGS: Self = Self(12);
 }
 
 pub enum PropertyType {
@@ -28,16 +26,6 @@ pub enum PropertyType {
     LocalizedLanguages,
     WebExtension,
     SponsorLink,
-}
-
-impl PropertyType {
-    pub const CONST_DEPENDENCY: &str = "Microsoft.VisualStudio.Code.ExtensionDependencies";
-    pub const CONST_EXTENSIONPACK: &str = "Microsoft.VisualStudio.Code.ExtensionPack";
-    pub const CONST_ENGINE: &str = "Microsoft.VisualStudio.Code.Engine";
-    pub const CONST_PRERELEASE: &str = "Microsoft.VisualStudio.Code.PreRelease";
-    pub const CONST_LOCALIZEDLANGUAGES: &str = "Microsoft.VisualStudio.Code.LocalizedLanguages";
-    pub const CONST_WEBEXTENSION: &str = "Microsoft.VisualStudio.Code.WebExtension";
-    pub const CONST_SPONSORLINK: &str = "Microsoft.VisualStudio.Code.SponsorLink";
 }
 
 impl ToString for PropertyType {
@@ -54,37 +42,23 @@ impl ToString for PropertyType {
     }
 }
 
-#[api]
-pub struct SortOrder(u8);
-
-impl Default for SortOrder {
-    fn default() -> Self {
-        Self::DEFAULT
-    }
+#[api(Default)]
+pub enum SortOrder {
+    #[default]
+    Default = 0,
+    Ascending = 1,
+    Descending = 2,
 }
 
-impl SortOrder {
-    pub const DEFAULT: Self = Self(0);
-    pub const ASCENDING: Self = Self(1);
-    pub const DESCENDING: Self = Self(2);
-}
-
-#[api]
-pub struct SortBy(u8);
-
-impl Default for SortBy {
-    fn default() -> Self {
-        Self::TITLE
-    }
-}
-
-impl SortBy {
-    pub const NONE_OR_RELEVANCE: Self = Self(0);
-    pub const LAST_UPDATED_DATE: Self = Self(1);
-    pub const TITLE: Self = Self(2);
-    pub const PUBLISHER_NAME: Self = Self(3);
-    pub const INSTALL_COUNT: Self = Self(4);
-    pub const PUBLISHED_DATE: Self = Self(10);
-    pub const AVERAGE_RATING: Self = Self(6);
-    pub const WEIGHTED_RATING: Self = Self(12);
+#[api(Default)]
+pub enum SortBy {
+    #[default]
+    NoneOrRelevance = 0,
+    LastUpdatedDate = 1,
+    Title = 2,
+    PublisherName = 3,
+    InstallCount = 4,
+    PublishedDate = 10,
+    AverageRating = 6,
+    WeightedRating = 12,
 }

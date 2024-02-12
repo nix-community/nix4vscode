@@ -1,14 +1,13 @@
-use serde::{Deserialize, Serialize};
 use vscode_derive::api;
 
 // https://github.com/microsoft/vscode/blob/d187d50a482ff80dcf74c35affb09dda1a7cd2fe/src/vs/platform/extensions/common/extensions.ts
-#[derive(Debug, Serialize, Deserialize)]
-#[serde(rename_all = "kebab-case")]
+#[api(Default)]
 pub enum TargetPlatform {
     Win32X64,
     Win32Ia32,
     Win32Arm64,
 
+    #[default]
     LinuxX64,
     LinuxArm64,
     LinuxArmhf,

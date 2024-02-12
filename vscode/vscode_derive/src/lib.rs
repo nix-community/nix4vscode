@@ -23,27 +23,54 @@ impl Parse for ApiAttr {
     }
 }
 
+impl ApiAttr {
+    fn attach_struct(&self, input: &mut syn::ItemStruct) {
+        input.attrs.push(parse_quote! {
+            #[derive(serde::Serialize, serde::Deserialize, Debug, Clone)]
+        });
+        if self.default {
+            input.attrs.push(parse_quote! {
+                #[derive(Default)]
+            });
+        }
+        input.attrs.push(parse_quote! {
+            #[serde(default)]
+        });
+        input.attrs.push(parse_quote! {
+            #[serde(rename_all = "camelCase")]
+        });
+    }
+
+    fn attach_enum(&self, input: &mut syn::ItemEnum) {
+        input.attrs.push(parse_quote! {
+            #[derive(serde::Serialize, serde::Deserialize, Debug, Clone)]
+        });
+        if self.default {
+            input.attrs.push(parse_quote! {
+                #[derive(Default, Copy)]
+            });
+        }
+        input.attrs.push(parse_quote! {
+            #[serde(rename_all = "camelCase")]
+        });
+    }
+}
+
 #[proc_macro_attribute]
 pub fn api(attr: TokenStream, input: TokenStream) -> TokenStream {
     let attr = Parser::parse2(ApiAttr::parse, attr.into()).unwrap_or_default();
-    let mut input = parse_macro_input!(input as syn::ItemStruct);
-    input.attrs.push(parse_quote! {
-        #[derive(serde::Serialize, serde::Deserialize, Debug, Clone)]
-    });
-    if attr.default {
-        input.attrs.push(parse_quote! {
-            #[derive(Default)]
-        });
+    if let Ok(mut input) = syn::parse::<syn::ItemStruct>(input.clone()) {
+        attr.attach_struct(&mut input);
+        quote! {
+            #input
+        }
+        .into()
+    } else {
+        let mut input = parse_macro_input!(input as syn::ItemEnum);
+        attr.attach_enum(&mut input);
+        quote! {
+            #input
+        }
+        .into()
     }
-    input.attrs.push(parse_quote! {
-        #[serde(default)]
-    });
-    input.attrs.push(parse_quote! {
-        #[serde(rename_all = "camelCase")]
-    });
-
-    quote! {
-        #input
-    }
-    .into()
 }

@@ -83,11 +83,14 @@ bitflags! {
     }
 }
 
+impl ToString for RequestFlags {
+    fn to_string(&self) -> String {
+        format!("{}", self.bits())
+    }
+}
+
 impl Default for RequestFlags {
     fn default() -> Self {
-        RequestFlags::IncludeVersions
-            | RequestFlags::IncludeAssetUri
-            | RequestFlags::IncludeFiles
-            | RequestFlags::IncludeVersionProperties
+        Self::None
     }
 }

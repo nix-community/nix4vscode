@@ -10,7 +10,7 @@ pub struct ICriterium {
 impl ICriterium {
     pub fn const_vscode() -> Self {
         Self {
-            filter_type: FilterType::TARGET,
+            filter_type: FilterType::Target,
             value: "Microsoft.VisualStudio.Code".to_string(),
         }
     }

@@ -56,3 +56,57 @@ pub struct IRawGalleryExtensionsResult {
     pub extensions: Vec<IRawGalleryExtension>,
     pub result_metadata: Vec<ResultMetaData>,
 }
+
+#[api(Default)]
+pub struct IGalleryExtension {
+    name: String,
+    // identifier: IGalleryExtensionIdentifier,
+    version: String,
+    display_name: String,
+    publisher_id: String,
+    publisher: String,
+    publisher_display_name: String,
+    // publisherDomain?: { link: String; verified: boolean },
+    publisher_sponsor_link: Option<String>,
+    description: String,
+    install_count: usize,
+    rating: usize,
+    rating_count: usize,
+    categories: Vec<String>,
+    tags: Vec<String>,
+    release_date: usize,
+    last_updated: usize,
+    preview: bool,
+    has_pre_release_version: bool,
+    has_release_version: bool,
+    is_signed: bool,
+    all_target_platforms: Vec<TargetPlatform>,
+    assets: IGalleryExtensionAssets,
+    properties: IGalleryExtensionProperties,
+    // telemetryData?: any,
+    // queryContext?: IStringDictionary<any>,
+    support_link: Option<String>,
+}
+
+#[api(Default)]
+pub struct IGalleryExtensionAssets {
+    manifest: Option<IGalleryExtensionAsset>,
+    readme: Option<IGalleryExtensionAsset>,
+    changelog: Option<IGalleryExtensionAsset>,
+    license: Option<IGalleryExtensionAsset>,
+    repository: Option<IGalleryExtensionAsset>,
+    download: IGalleryExtensionAsset,
+    icon: Option<IGalleryExtensionAsset>,
+    signature: Option<IGalleryExtensionAsset>,
+    // coreTranslations: [string, IGalleryExtensionAsset][],
+}
+
+#[api(Default)]
+pub struct IGalleryExtensionProperties {
+    dependencies: Vec<String>,
+    extension_pack: Vec<String>,
+    engine: Option<String>,
+    localized_languages: Option<String>,
+    target_platform: TargetPlatform,
+    is_pre_release_version: bool,
+}

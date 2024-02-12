@@ -64,7 +64,7 @@ impl IRawGalleryExtensionVersion {
         match self
             .properties
             .iter()
-            .find(|item| item.key == PropertyType::CONST_ENGINE)
+            .find(|item| item.key == PropertyType::Engine.to_string())
         {
             Some(item) => &item.value,
             None => "",
@@ -74,7 +74,7 @@ impl IRawGalleryExtensionVersion {
     pub fn is_pre_release_version(&self) -> bool {
         self.properties
             .iter()
-            .any(|item| item.key == PropertyType::CONST_PRERELEASE && item.value == "true")
+            .any(|item| item.key == PropertyType::PreRelease.to_string() && item.value == "true")
     }
 
     pub fn get_target_platform(&self) -> TargetPlatform {
