@@ -1,3 +1,6 @@
+use vscode_derive::api;
+
+#[api(Default)]
 pub struct IExtensionInfo {
     id: String,
     uuid: Option<String>,

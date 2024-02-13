@@ -3,7 +3,7 @@ use serde::{Deserialize, Serialize};
 
 bitflags! {
     #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
-    pub struct RequestFlags: u32 {
+    pub struct Flags: u32 {
         ///
         /// None is used to retrieve only the basic extension details.
         ///
@@ -83,13 +83,13 @@ bitflags! {
     }
 }
 
-impl ToString for RequestFlags {
+impl ToString for Flags {
     fn to_string(&self) -> String {
         format!("{}", self.bits())
     }
 }
 
-impl Default for RequestFlags {
+impl Default for Flags {
     fn default() -> Self {
         Self::None
     }

@@ -39,6 +39,10 @@ impl ApiAttr {
         input.attrs.push(parse_quote! {
             #[serde(rename_all = "camelCase")]
         });
+
+        input.fields.iter_mut().for_each(|item| {
+            item.vis = syn::parse_str("pub").unwrap();
+        })
     }
 
     fn attach_enum(&self, input: &mut syn::ItemEnum) {

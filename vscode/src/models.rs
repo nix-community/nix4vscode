@@ -6,7 +6,6 @@ mod flags;
 mod gallery_extension;
 mod icriterium;
 mod query;
-mod query_state;
 mod version;
 
 pub use enums::*;
@@ -17,5 +16,4 @@ pub use flags::*;
 pub use gallery_extension::*;
 pub use icriterium::*;
 pub use query::*;
-pub use query_state::*;
 pub use version::*;

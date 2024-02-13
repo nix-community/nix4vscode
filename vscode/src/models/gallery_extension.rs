@@ -6,39 +6,39 @@ use super::IRawGalleryExtensionVersion;
 
 #[api(Default)]
 pub struct IRawGalleryQueryResult {
-    pub results: Vec<IRawGalleryExtensionsResult>,
+    results: Vec<IRawGalleryExtensionsResult>,
 }
 
 #[api(Default)]
 pub struct IRawGalleryExtensionStatistics {
-    pub statistic_name: String,
-    pub value: f64,
+    statistic_name: String,
+    value: f64,
 }
 
 #[api(Default)]
 pub struct IRawGalleryExtensionPublisher {
-    pub display_name: String,
-    pub publisher_id: String,
-    pub publisher_name: String,
-    pub domain: Option<String>,
-    pub is_domain_verified: bool,
+    display_name: String,
+    publisher_id: String,
+    publisher_name: String,
+    domain: Option<String>,
+    is_domain_verified: bool,
 }
 
 #[api(Default)]
 pub struct IRawGalleryExtension {
-    pub extension_id: String,
-    pub extension_name: String,
-    pub display_name: String,
-    pub short_description: Option<String>,
-    pub publisher: IRawGalleryExtensionPublisher,
-    pub versions: Vec<IRawGalleryExtensionVersion>,
-    pub statistics: Vec<IRawGalleryExtensionStatistics>,
-    pub tags: Option<String>,
-    pub release_date: String,
-    pub published_date: String,
-    pub last_updated: String,
-    pub categories: Option<Vec<String>>,
-    pub flags: String,
+    extension_id: String,
+    extension_name: String,
+    display_name: String,
+    short_description: Option<String>,
+    publisher: IRawGalleryExtensionPublisher,
+    versions: Vec<IRawGalleryExtensionVersion>,
+    statistics: Vec<IRawGalleryExtensionStatistics>,
+    tags: Option<String>,
+    release_date: String,
+    published_date: String,
+    last_updated: String,
+    categories: Option<Vec<String>>,
+    flags: String,
 }
 
 impl Display for IRawGalleryExtension {
@@ -53,8 +53,8 @@ impl Display for IRawGalleryExtension {
 
 #[api(Default)]
 pub struct IRawGalleryExtensionsResult {
-    pub extensions: Vec<IRawGalleryExtension>,
-    pub result_metadata: Vec<ResultMetaData>,
+    extensions: Vec<IRawGalleryExtension>,
+    result_metadata: Vec<ResultMetaData>,
 }
 
 #[api(Default)]

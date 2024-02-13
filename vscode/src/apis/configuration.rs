@@ -2,7 +2,6 @@
 pub struct Configuration {
     pub base_path: String,
     pub user_agent: Option<String>,
-    pub accept: Option<String>,
     pub client: reqwest::Client,
 }
 
@@ -27,7 +26,6 @@ impl Default for Configuration {
                 .to_string(),
             user_agent: Some("curl".to_string()),
             client: reqwest::Client::new(),
-            accept: Some("Application/json; charset=utf-8; api-version=7.2-preview.1".to_string()),
         }
     }
 }
