@@ -1,31 +1,51 @@
 use reqwest::{header::HeaderMap, Method};
 
 use crate::models::{
-    FilterType, Flags, IExtensionCriteria, IExtensionInfo, IGalleryExtension,
-    IRawGalleryExtensionsResult, IRawGalleryQueryResult, Query, QueryBuilder, TargetPlatform,
+    FilterType, Flags, IExtensionCriteria, IExtensionInfo, IExtensionQueryOptions,
+    IGalleryExtension, IRawGalleryQueryResult, IncludePreRelease, Query, QueryBuilder,
 };
 
 use super::Configuration;
 
 impl Configuration {
-    pub async fn get_extensions(extension_infos: Vec<IExtensionInfo>) -> Vec<IGalleryExtension> {
-        // let mut ids = vec![];
-        // let mut names = vec![];
-        todo!()
-    }
+    pub async fn get_extensions(
+        &mut self,
+        infos: &[IExtensionInfo],
+        option: IExtensionQueryOptions,
+    ) -> Vec<IGalleryExtension> {
+        let mut ids = vec![];
+        let mut names = vec![];
 
-    pub async fn get_compatible_extension(
-        extension: IGalleryExtension,
-        include_pre_release: bool,
-        target_platform: TargetPlatform,
-    ) -> Option<IGalleryExtension> {
-        todo!()
+        infos.iter().for_each(|item| {
+            if let Some(uuid) = &item.uuid {
+                ids.push(uuid.clone());
+            } else {
+                names.push(item.id.clone());
+            }
+        });
+        let query = QueryBuilder::new(Default::default())
+            .with_page(1, Some(infos.len()))
+            .with_filter(FilterType::ExtensionId, ids)
+            .with_filter(FilterType::ExtensionName, names)
+            .build();
+
+        let criteria = IExtensionCriteria {
+            target_platform: option.target_platform.unwrap(),
+            compatible: option.compatible.unwrap(),
+            include_pre_release: IncludePreRelease::Boolean(true),
+            versions: Default::default(),
+        };
+
+        self.query_gallery_extensions(query, criteria)
+            .await
+            .unwrap()
     }
 
     async fn query_gallery_extensions(
+        &mut self,
         mut query: Query,
         criteria: IExtensionCriteria,
-    ) -> (Vec<IGalleryExtension>, usize) {
+    ) -> anyhow::Result<Vec<IGalleryExtension>> {
         let flags = query.flags;
         if (flags.contains(Flags::IncludeLatestVersionOnly))
             && flags.contains(Flags::IncludeVersions)
@@ -50,10 +70,23 @@ impl Configuration {
             & Flags::IncludeStatistics
             & Flags::IncludeVersionProperties;
 
+        let has_all_versions = query.flags.contains(Flags::IncludeLatestVersionOnly);
+        let res = self.query_raw_gallery_extensions(query).await?;
+        if has_all_versions {
+            return Ok(res
+                .results
+                .into_iter()
+                .map(|item| IGalleryExtension::create(item, criteria.clone()))
+                .collect());
+        }
+
         todo!()
     }
 
-    async fn query_raw_gallery_extensions(&mut self, query: Query) -> IRawGalleryExtensionsResult {
+    async fn query_raw_gallery_extensions(
+        &mut self,
+        query: Query,
+    ) -> anyhow::Result<IRawGalleryQueryResult> {
         let query = QueryBuilder::new(query)
             .with_flags(vec![Flags::ExcludeNonValidated])
             .with_filter(
@@ -81,7 +114,7 @@ impl Configuration {
 
         let req = self
             .client
-            .request(Method::POST, format!("{}", self.base_path))
+            .request(Method::POST, self.base_path.to_string())
             .headers(map)
             .json(&query)
             .build()
@@ -95,6 +128,7 @@ impl Configuration {
             .json()
             .await
             .unwrap();
-        todo!()
+
+        Ok(rep)
     }
 }

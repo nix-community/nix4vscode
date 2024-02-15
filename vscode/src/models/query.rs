@@ -55,6 +55,10 @@ impl QueryBuilder {
     }
 
     pub fn with_filter(mut self, filter_type: FilterType, values: Vec<String>) -> Self {
+        if values.is_empty() {
+            return self;
+        }
+
         self.state
             .criteria
             .extend(values.into_iter().map(|item| ICriterium {

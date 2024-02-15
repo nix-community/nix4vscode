@@ -2,6 +2,7 @@ use vscode_derive::api;
 
 // https://github.com/microsoft/vscode/blob/d187d50a482ff80dcf74c35affb09dda1a7cd2fe/src/vs/platform/extensions/common/extensions.ts
 #[api(Default)]
+#[derive(PartialEq, Eq)]
 pub enum TargetPlatform {
     Win32X64,
     Win32Ia32,
@@ -23,6 +24,53 @@ pub enum TargetPlatform {
     Universal,
     Unknown,
     Undefined,
+}
+
+impl TargetPlatform {
+    pub fn is_target_platform_compatible(
+        extension_target_platform: TargetPlatform,
+        all_target_platforms: &[TargetPlatform],
+        product_target_platform: TargetPlatform,
+    ) -> bool {
+        // Not compatible when extension is not a web extension in web target platform
+        if Self::is_not_web_extension_in_web_target_platform(
+            all_target_platforms,
+            product_target_platform,
+        ) {
+            return false;
+        }
+
+        // Compatible when extension target platform is not defined
+        if extension_target_platform == TargetPlatform::Undefined {
+            return true;
+        }
+
+        // Compatible when extension target platform is universal
+        if extension_target_platform == TargetPlatform::Universal {
+            return true;
+        }
+
+        // Not compatible when extension target platform is unknown
+        if extension_target_platform == TargetPlatform::Unknown {
+            return false;
+        }
+
+        // Compatible when extension and product target platforms matches
+        if extension_target_platform == product_target_platform {
+            return true;
+        }
+
+        false
+    }
+
+    pub fn is_not_web_extension_in_web_target_platform(
+        all_target_platforms: &[TargetPlatform],
+        product_target_platform: TargetPlatform,
+    ) -> bool {
+        // Not a web extension in web target platform
+        product_target_platform == TargetPlatform::Web
+            && !all_target_platforms.contains(&TargetPlatform::Web)
+    }
 }
 
 impl From<&str> for TargetPlatform {

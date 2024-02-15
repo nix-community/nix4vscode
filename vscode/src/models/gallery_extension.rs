@@ -6,7 +6,7 @@ use super::IRawGalleryExtensionVersion;
 
 #[api(Default)]
 pub struct IRawGalleryQueryResult {
-    results: Vec<IRawGalleryExtensionsResult>,
+    results: Vec<IRawGalleryExtension>,
 }
 
 #[api(Default)]
@@ -86,6 +86,15 @@ pub struct IGalleryExtension {
     // telemetryData?: any,
     // queryContext?: IStringDictionary<any>,
     support_link: Option<String>,
+}
+
+impl IGalleryExtension {
+    pub fn create(
+        raw_gallery_extension: IRawGalleryExtension,
+        criteria: IExtensionCriteria,
+    ) -> Self {
+        todo!()
+    }
 }
 
 #[api(Default)]
