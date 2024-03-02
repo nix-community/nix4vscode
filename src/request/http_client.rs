@@ -6,7 +6,7 @@ use crate::{
 };
 
 use super::Query;
-use log::*;
+use tracing::*;
 
 #[derive(Debug, Clone)]
 pub struct HttpClient {

@@ -3,7 +3,7 @@ mod cacher;
 pub use cacher::*;
 
 use crate::error::Error;
-use log::*;
+use tracing::*;
 
 pub async fn get_sha256(url: &str) -> anyhow::Result<String> {
     trace!("get sha256 of {url}");
