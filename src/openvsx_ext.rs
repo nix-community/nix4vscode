@@ -2,7 +2,7 @@
 
 use std::str::FromStr;
 
-use log::*;
+use tracing::*;
 
 use openvsx::{
     apis::{configuration::Configuration, registry_api_api},

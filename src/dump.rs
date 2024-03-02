@@ -1,6 +1,6 @@
 use futures::future::join_all;
-use log::*;
 use semver::Version;
+use tracing::*;
 
 use crate::{
     config::Config,

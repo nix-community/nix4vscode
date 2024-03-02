@@ -13,10 +13,10 @@ pub mod request;
 pub mod utils;
 
 use data_struct::IRawGalleryExtension;
-use log::*;
 use openvsx::apis::configuration::Configuration;
 use semver::Version;
 use std::{str::FromStr, sync::Arc};
+use tracing::*;
 use tracing_subscriber::{fmt, prelude::*, util::SubscriberInitExt, EnvFilter};
 
 use futures::future::join_all;

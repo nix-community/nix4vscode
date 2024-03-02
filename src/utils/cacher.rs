@@ -1,6 +1,6 @@
-use log::*;
 use redb::{ReadableTable, TableDefinition};
 use std::{path::PathBuf, sync::LazyLock};
+use tracing::*;
 
 use crate::error::Error;
 
