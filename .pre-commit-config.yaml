@@ -26,7 +26,7 @@ repos:
       - id: toml
         name: toml
         language: system
-        types_or: [rust]
+        types_or: [toml]
         entry: taplo format
 
   - repo: local
