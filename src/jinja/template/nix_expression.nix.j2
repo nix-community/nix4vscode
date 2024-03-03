@@ -5,6 +5,7 @@
 { pkgs, lib }:
 
 let
+  inherit (pkgs.stdenv) isDarwin isLinux isi686 isx86_64 isAarch32 isAarch64;
   vscode-utils = pkgs.vscode-utils;
 in
 {
@@ -30,12 +31,82 @@ in
     {%- for item in extensions %}
     {%- if item.asset_url == None %}
     {%- with uniqueId = [ item.publisher_name | to_string, '.', item.extension_name | to_string ] | join %}
+        {%- if is_universal(item.target_platform) %}
         {{ uniqueId }} = vscode-utils.extensionFromVscodeMarketplace {
           name = "{{ item.extension_name }}";
           publisher = "{{ item.publisher_name }}";
           version = "{{ item.extension_version }}";
           sha256 = "{{ item.sha256 }}";
         };
+        {%- endif %}
+    {%- endwith %}
+    {%- endif %}
+    {%- endfor %}
+}//
+lib.attrsets.optionalAttrs(isLinux && (isi686 || isx86_64) ){
+    {%- for item in extensions %}
+    {%- if item.asset_url == None %}
+    {%- with uniqueId = [ item.publisher_name | to_string, '.', item.extension_name | to_string ] | join %}
+        {%- if is_linux_x86(item.target_platform) %}
+        {{ uniqueId }} = vscode-utils.extensionFromVscodeMarketplace {
+          name = "{{ item.extension_name }}";
+          publisher = "{{ item.publisher_name }}";
+          version = "{{ item.extension_version }}";
+          sha256 = "{{ item.sha256 }}";
+          arch = "linux-x64";
+        };
+        {%- endif %}
+    {%- endwith %}
+    {%- endif %}
+    {%- endfor %}
+}//
+lib.attrsets.optionalAttrs(isLinux && (isAarch32 || isAarch64) ){
+    {%- for item in extensions %}
+    {%- if item.asset_url == None %}
+    {%- with uniqueId = [ item.publisher_name | to_string, '.', item.extension_name | to_string ] | join %}
+        {%- if is_linux_arm(item.target_platform) %}
+        {{ uniqueId }} = vscode-utils.extensionFromVscodeMarketplace {
+          name = "{{ item.extension_name }}";
+          publisher = "{{ item.publisher_name }}";
+          version = "{{ item.extension_version }}";
+          sha256 = "{{ item.sha256 }}";
+          arch = "linux-arm64";
+        };
+        {%- endif %}
+    {%- endwith %}
+    {%- endif %}
+    {%- endfor %}
+}//
+lib.attrsets.optionalAttrs(isDarwin && (isi686 || isx86_64) ){
+    {%- for item in extensions %}
+    {%- if item.asset_url == None %}
+    {%- with uniqueId = [ item.publisher_name | to_string, '.', item.extension_name | to_string ] | join %}
+        {%- if is_darwin_x86(item.target_platform) %}
+        {{ uniqueId }} = vscode-utils.extensionFromVscodeMarketplace {
+          name = "{{ item.extension_name }}";
+          publisher = "{{ item.publisher_name }}";
+          version = "{{ item.extension_version }}";
+          sha256 = "{{ item.sha256 }}";
+          arch = "darwin-x64";
+        };
+        {%- endif %}
+    {%- endwith %}
+    {%- endif %}
+    {%- endfor %}
+}//
+lib.attrsets.optionalAttrs(isDarwin && (isAarch32 || isAarch64) ){
+    {%- for item in extensions %}
+    {%- if item.asset_url == None %}
+    {%- with uniqueId = [ item.publisher_name | to_string, '.', item.extension_name | to_string ] | join %}
+        {%- if is_darwin_arm(item.target_platform) %}
+        {{ uniqueId }} = vscode-utils.extensionFromVscodeMarketplace {
+          name = "{{ item.extension_name }}";
+          publisher = "{{ item.publisher_name }}";
+          version = "{{ item.extension_version }}";
+          sha256 = "{{ item.sha256 }}";
+          arch = "darwin-arm64";
+        };
+        {%- endif %}
     {%- endwith %}
     {%- endif %}
     {%- endfor %}

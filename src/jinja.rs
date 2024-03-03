@@ -22,6 +22,18 @@ impl Generator<'_> {
         ("codelldb", include_str!("./jinja/template/codelldb.j2"));
 }
 
+macro_rules! add_filter {
+    ($jinja:ident, $ty:expr) => {
+        $jinja.add_filter(stringify!($ty), $ty);
+    };
+}
+
+macro_rules! add_function {
+    ($jinja:ident, $ty:expr) => {
+        $jinja.add_function(stringify!($ty), $ty);
+    };
+}
+
 impl<'a> Generator<'a> {
     pub fn new() -> Self {
         let mut engine = Environment::new();
@@ -30,8 +42,13 @@ impl<'a> Generator<'a> {
             .add_template(Self::NIX_EXPRESSION.0, Self::NIX_EXPRESSION.1)
             .unwrap();
 
-        engine.add_filter("nixfmt", nixfmt);
-        engine.add_filter("to_string", to_string);
+        add_filter!(engine, nixfmt);
+        add_filter!(engine, to_string);
+        add_function!(engine, is_universal);
+        add_function!(engine, is_linux_x86);
+        add_function!(engine, is_linux_arm);
+        add_function!(engine, is_darwin_x86);
+        add_function!(engine, is_darwin_arm);
 
         Self { engine }
     }

@@ -69,6 +69,7 @@ pub async fn dump<'a>(
                         .into_iter()
                         .flat_map(|item| item.extensions.into_iter())
                         .map(|item| async move {
+                            let mut res = vec![];
                             for version in &item.versions {
                                 match version.get_engine() {
                                     Ok(ver) => {
@@ -121,30 +122,35 @@ pub async fn dump<'a>(
                                     Ok(sha256) => sha256,
                                     Err(err) => {
                                         error!("{err}");
-                                        return None;
+                                        return vec![];
                                     }
                                 };
 
-                                return Some(NixContext {
-                                    extension_name: item.extension_name.clone(),
-                                    publisher_name: item.publisher.publisher_name.clone(),
-                                    extension_version: version.version.clone(),
-                                    asset_url: if has_asset_url {
-                                        Some(asset_url.clone())
-                                    } else {
-                                        None
-                                    },
-                                    sha256,
-                                    target_platform: client
-                                        .get_extension_target_platform(
-                                            item.publisher.publisher_name,
-                                            item.extension_name,
-                                        )
-                                        .await,
-                                });
+                                let v: Vec<_> = client
+                                    .get_extension_target_platform(
+                                        item.publisher.publisher_name.clone(),
+                                        item.extension_name.clone(),
+                                    )
+                                    .await
+                                    .into_iter()
+                                    .map(|target_platform| NixContext {
+                                        extension_name: item.extension_name.clone(),
+                                        publisher_name: item.publisher.publisher_name.clone(),
+                                        extension_version: version.version.clone(),
+                                        asset_url: if has_asset_url {
+                                            Some(asset_url.clone())
+                                        } else {
+                                            None
+                                        },
+                                        sha256: sha256.clone(),
+                                        target_platform,
+                                    })
+                                    .collect();
+
+                                res.extend(v);
                             }
 
-                            None
+                            res
                         }),
                 );
             }

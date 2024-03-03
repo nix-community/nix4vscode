@@ -14,7 +14,7 @@ pub struct IRawGalleryExtensionVersion {
     pub fallback_asset_uri: String,
     pub files: Vec<IRawGalleryExtensionFile>,
     pub properties: Vec<IRawGalleryExtensionProperty>,
-    pub target_platform: String,
+    pub target_platform: Option<String>,
 }
 
 impl Display for IRawGalleryExtensionVersion {
