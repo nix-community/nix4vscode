@@ -91,7 +91,27 @@ impl HttpClient {
             .inner_get_extension_target_platform(publisher_name, extension_name)
             .await
         {
-            Ok(res) => res.get_target_platform(),
+            Ok(res) => {
+                let i: Vec<_> = res
+                    .get_target_platform()
+                    .into_iter()
+                    .filter(|item| !matches!(item, TargetPlatform::Unknown))
+                    .collect();
+
+                let j: Vec<_> = i
+                    .iter()
+                    .filter(|item| {
+                        !matches!(*item, TargetPlatform::Web | TargetPlatform::Universal)
+                    })
+                    .copied()
+                    .collect();
+
+                if !j.is_empty() {
+                    j
+                } else {
+                    i
+                }
+            }
             Err(err) => {
                 error!("Error happend when get target_platform: {err}");
                 vec![]

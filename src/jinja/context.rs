@@ -21,5 +21,5 @@ pub struct NixContext {
     pub extension_version: String,
     pub asset_url: Option<String>,
     pub sha256: String,
-    pub target_platform: Vec<TargetPlatform>,
+    pub target_platform: TargetPlatform,
 }

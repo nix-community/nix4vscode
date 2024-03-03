@@ -13,7 +13,7 @@ pub mod request;
 pub mod utils;
 
 use data_struct::IRawGalleryExtension;
-use openvsx::apis::configuration::Configuration;
+
 use semver::Version;
 use std::{str::FromStr, sync::Arc};
 use tracing::*;
@@ -25,7 +25,7 @@ use clap::Parser;
 use config::Config;
 
 use crate::{
-    data_struct::AssetType,
+    data_struct::{AssetType, TargetPlatform},
     jinja::{AssetUrlContext, Generator, GeneratorContext, NixContext},
     request::HttpClient,
 };
@@ -50,23 +50,41 @@ async fn get_matched_versoin(
     client: HttpClient,
     config: Arc<Config>,
     generator: Generator<'_>,
-) -> Option<NixContext> {
-    for version in &item.versions {
-        match version.get_engine() {
+) -> Vec<NixContext> {
+    let mx = item
+        .versions
+        .iter()
+        .filter(|v| match v.get_engine() {
             Ok(ver) => {
                 if !ver.matches(&vscode_ver) {
-                    continue;
+                    trace!("{ver} doesn't match {vscode_ver}");
+                    return false;
                 }
+                true
             }
             Err(_) => {
                 warn!(
                     "Cannot get engine version for {}.{} {}",
-                    item.publisher.publisher_name, item.extension_name, version
+                    item.publisher.publisher_name, item.extension_name, v
                 );
-                trace!("{version:#?}");
+                trace!("{v:#?}");
+                false
+            }
+        })
+        .max_by(|a, b| a.version.cmp(&b.version))
+        .map(|item| item.version.clone());
+
+    trace!(?mx);
+
+    let mut res = vec![];
+    for version in &item.versions {
+        if let Some(mx) = mx.as_ref() {
+            if mx != &version.version {
                 continue;
             }
         }
+        trace!("{:?}", version.version);
+
         let (has_asset_url, asset_url) = match config
             .get_asset_url(&item.publisher.publisher_name, &item.extension_name)
         {
@@ -95,27 +113,54 @@ async fn get_matched_versoin(
         let sha256 = match utils::get_sha256(&asset_url).await {
             Ok(sha256) => sha256,
             Err(err) => {
-                error!("{err}");
-                return None;
+                error!("get sha256 failed: {err}");
+                continue;
             }
         };
 
-        return Some(NixContext {
-            extension_name: item.extension_name.to_lowercase(),
-            publisher_name: item.publisher.publisher_name.to_lowercase(),
-            extension_version: version.version.clone(),
-            asset_url: if has_asset_url {
-                Some(asset_url.clone())
-            } else {
-                None
-            },
-            sha256,
-            target_platform: client
-                .get_extension_target_platform(item.publisher.publisher_name, item.extension_name)
-                .await,
-        });
+        let target_platform = match version.target_platform {
+            Some(ref t) => vec![t.as_str().into()],
+            None => {
+                client
+                    .get_extension_target_platform(
+                        item.publisher.publisher_name.clone(),
+                        item.extension_name.clone(),
+                    )
+                    .await
+            }
+        };
+        trace!(?target_platform);
+
+        let a = target_platform
+            .into_iter()
+            .filter(|item| {
+                matches!(
+                    *item,
+                    TargetPlatform::LinuxX64
+                        | TargetPlatform::LinuxArm64
+                        | TargetPlatform::Universal
+                        | TargetPlatform::Web
+                        | TargetPlatform::DarwinX64
+                        | TargetPlatform::DarwinArm64
+                )
+            })
+            .map(|target_platform| NixContext {
+                extension_name: item.extension_name.to_lowercase(),
+                publisher_name: item.publisher.publisher_name.to_lowercase(),
+                extension_version: version.version.clone(),
+                asset_url: if has_asset_url {
+                    Some(asset_url.clone())
+                } else {
+                    None
+                },
+                sha256: sha256.clone(),
+                target_platform,
+            });
+
+        res.extend(a);
     }
-    None
+
+    res
 }
 
 #[tokio::main]
@@ -130,69 +175,7 @@ async fn main() -> anyhow::Result<()> {
     let vscode_ver = semver::Version::from_str(&config.vscode_version).unwrap();
     let mut generator = Generator::new();
 
-    let res: Vec<_> = if args.openvsx {
-        let vsx_config = Configuration::default();
-
-        let res: Vec<_> = config
-            .extensions
-            .iter()
-            .map(|item| {
-                let vscode_ver = vscode_ver.clone();
-                let vsx_config = vsx_config.clone();
-                let client = vsx_config.client.clone();
-                async move {
-                    openvsx_ext::get_matched_version_of(
-                        &vsx_config,
-                        &item.publisher_name,
-                        &item.extension_name,
-                        &vscode_ver,
-                    )
-                    .await
-                    .into_iter()
-                    .map(move |ver| {
-                        let publisher_name = item.publisher_name.clone();
-                        let extension_name = item.extension_name.clone();
-                        let client = client.clone();
-                        async move {
-                            (
-                                publisher_name,
-                                extension_name,
-                                client
-                                    .get(
-                                        ver.clone()
-                                            .files
-                                            .unwrap()
-                                            .get("sha256")
-                                            .unwrap()
-                                            .to_string(),
-                                    )
-                                    .send()
-                                    .await
-                                    .unwrap()
-                                    .text()
-                                    .await
-                                    .unwrap(),
-                                ver,
-                            )
-                        }
-                    })
-                }
-            })
-            .collect();
-
-        join_all(join_all(res).await.into_iter().flatten())
-            .await
-            .into_iter()
-            .map(|item| NixContext {
-                extension_name: item.1,
-                publisher_name: item.0,
-                extension_version: item.3.version.unwrap(),
-                asset_url: item.3.files.clone().unwrap().get("download").cloned(),
-                sha256: item.2,
-                target_platform: vec![item.3.target_platform.unwrap().as_str().into()],
-            })
-            .collect()
-    } else {
+    let res: Vec<_> = {
         if args.dump {
             let res = dump::dump(&client, &vscode_ver, &config, &generator).await;
             debug!("find dump of vscode marketplace: \n{res:#?}");
@@ -237,6 +220,7 @@ async fn main() -> anyhow::Result<()> {
 
         join_all(futures).await.into_iter().flatten().collect()
     };
+
     debug!("{res:#?}");
     if args.export {
         let res = serde_json::to_string(&res).unwrap();
