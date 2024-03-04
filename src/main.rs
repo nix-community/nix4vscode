@@ -99,7 +99,7 @@ async fn get_matched_versoin(
                 true
             }
             Err(_) => {
-                warn!(
+                debug!(
                     "Cannot get engine version for {}.{} {}",
                     item.publisher.publisher_name, item.extension_name, v
                 );
