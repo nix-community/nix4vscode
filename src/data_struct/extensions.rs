@@ -17,10 +17,11 @@ pub enum TargetPlatform {
 
     DarwinX64,
     DarwinArm64,
-
-    Web,
-
+    // darwin universal
     Universal,
+
+    // https://code.visualstudio.com/api/extension-guides/web-extensions
+    Web,
     Unknown,
     Undefined,
 }
