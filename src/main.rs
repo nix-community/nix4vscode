@@ -12,8 +12,10 @@ pub mod openvsx_ext;
 pub mod request;
 pub mod utils;
 
+use anyhow::anyhow;
 use data_struct::IRawGalleryExtension;
 
+use lazy_regex::regex;
 use semver::Version;
 use std::{str::FromStr, sync::Arc};
 use tracing::*;
@@ -42,6 +44,40 @@ struct Args {
     dump: bool,
     #[arg(long)]
     openvsx: bool,
+}
+
+#[derive(Debug)]
+struct RequiredVersion {
+    ver: Version,
+    is_upper: bool,
+    is_preview: bool,
+}
+
+impl RequiredVersion {
+    fn new(version: &str) -> anyhow::Result<Self> {
+        let v = regex!(r#"(\^)?(\d+.\d+.\d+)(-.*)?"#);
+        let v = v
+            .captures(version)
+            .ok_or(anyhow!(format!("bad version: {version}")))?;
+
+        Ok(Self {
+            ver: semver::Version::from_str(
+                v.get(2)
+                    .ok_or(anyhow!(format!("bad version: {version}")))?
+                    .as_str(),
+            )?,
+            is_upper: v.get(1).is_some(),
+            is_preview: v.get(3).is_some(),
+        })
+    }
+
+    fn is_matched(&self, v: &semver::Version) -> bool {
+        if self.is_upper {
+            return v >= &self.ver;
+        }
+
+        v == &self.ver
+    }
 }
 
 async fn get_matched_versoin(
@@ -257,4 +293,31 @@ fn init_logger() {
         .with(fmt::layer().with_file(true).with_line_number(true))
         .with(env_filter)
         .init();
+}
+
+#[cfg(test)]
+mod test {
+    use super::*;
+
+    #[test]
+    fn test_visual_studio_code_compatibility() {
+        let v = semver::Version::new(1, 8, 1);
+
+        let vs = [
+            ("1.8.1", true),
+            ("^0.1.1", true),
+            ("^1.2.1", true),
+            ("1.81.1-inside", false),
+            ("1.0.1-inside", false),
+            ("^1.81.1-inside", false),
+            ("^1.0.1-inside", true),
+            ("1.12.1", false),
+            ("^1.12.1", false),
+        ];
+
+        for (i, k) in vs {
+            let a = RequiredVersion::new(i).unwrap();
+            assert!(a.is_matched(&v) == k);
+        }
+    }
 }
