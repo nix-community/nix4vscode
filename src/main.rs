@@ -5,7 +5,6 @@
 
 pub mod config;
 pub mod data_struct;
-pub mod dump;
 pub mod error;
 pub mod jinja;
 pub mod openvsx_ext;
@@ -216,17 +215,6 @@ async fn main() -> anyhow::Result<()> {
     let mut generator = Generator::new();
 
     let res: Vec<_> = {
-        if args.dump {
-            let res = dump::dump(&client, &vscode_ver, &config, &generator).await;
-            debug!("find dump of vscode marketplace: \n{res:#?}");
-            let res = serde_json::to_string(&res).unwrap();
-            match args.output {
-                Some(filepath) => tokio::fs::write(filepath, res).await.unwrap(),
-                None => println!("{res}",),
-            }
-            return Ok(());
-        }
-
         let obj = client
             .get_extension_response(&config.extensions)
             .await
