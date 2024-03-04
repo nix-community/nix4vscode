@@ -282,7 +282,7 @@ async fn main() -> anyhow::Result<()> {
 
 fn init_logger() {
     let log_level = std::env::var("RUST_LOG")
-        .unwrap_or("INFO".into())
+        .unwrap_or("WARN".into())
         .to_lowercase();
 
     let env_filter = EnvFilter::builder()
@@ -290,7 +290,12 @@ fn init_logger() {
         .unwrap();
 
     tracing_subscriber::registry()
-        .with(fmt::layer().with_file(true).with_line_number(true))
+        .with(
+            fmt::layer()
+                .with_file(true)
+                .with_line_number(true)
+                .with_writer(std::io::stderr),
+        )
         .with(env_filter)
         .init();
 }
