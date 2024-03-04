@@ -92,7 +92,11 @@ async fn get_matched_versoin(
         .iter()
         .filter(|v| match v.get_engine() {
             Ok(ver) => {
-                if !ver.matches(&vscode_ver) {
+                let Ok(vv) = RequiredVersion::new(&ver) else {
+                    debug!("parse {ver} to RequiredVersion failed.");
+                    return false;
+                };
+                if !vv.is_matched(&vscode_ver) {
                     trace!("{ver} doesn't match {vscode_ver}");
                     return false;
                 }
