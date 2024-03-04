@@ -7,8 +7,12 @@
 let
   inherit (pkgs.stdenv) isDarwin isLinux isi686 isx86_64 isAarch32 isAarch64;
   vscode-utils = pkgs.vscode-utils;
+  merge = lib.attrsets.recursiveUpdate;
 in
-{
+merge
+(merge
+(merge
+(merge{
     {%- for item in extensions %}
     {%- if item.asset_url != None %}
     {%- with uniqueId = [ item.publisher_name | to_string, '.', item.extension_name | to_string ] | join %}
@@ -42,8 +46,8 @@ in
     {%- endwith %}
     {%- endif %}
     {%- endfor %}
-}//
-lib.attrsets.optionalAttrs(isLinux && (isi686 || isx86_64) ){
+}
+(lib.attrsets.optionalAttrs(isLinux && (isi686 || isx86_64) ){
     {%- for item in extensions %}
     {%- if item.asset_url == None %}
     {%- with uniqueId = [ item.publisher_name | to_string, '.', item.extension_name | to_string ] | join %}
@@ -59,8 +63,8 @@ lib.attrsets.optionalAttrs(isLinux && (isi686 || isx86_64) ){
     {%- endwith %}
     {%- endif %}
     {%- endfor %}
-}//
-lib.attrsets.optionalAttrs(isLinux && (isAarch32 || isAarch64) ){
+}))
+(lib.attrsets.optionalAttrs(isLinux && (isAarch32 || isAarch64) ){
     {%- for item in extensions %}
     {%- if item.asset_url == None %}
     {%- with uniqueId = [ item.publisher_name | to_string, '.', item.extension_name | to_string ] | join %}
@@ -76,8 +80,8 @@ lib.attrsets.optionalAttrs(isLinux && (isAarch32 || isAarch64) ){
     {%- endwith %}
     {%- endif %}
     {%- endfor %}
-}//
-lib.attrsets.optionalAttrs(isDarwin && (isi686 || isx86_64) ){
+}))
+(lib.attrsets.optionalAttrs(isDarwin && (isi686 || isx86_64) ){
     {%- for item in extensions %}
     {%- if item.asset_url == None %}
     {%- with uniqueId = [ item.publisher_name | to_string, '.', item.extension_name | to_string ] | join %}
@@ -93,8 +97,8 @@ lib.attrsets.optionalAttrs(isDarwin && (isi686 || isx86_64) ){
     {%- endwith %}
     {%- endif %}
     {%- endfor %}
-}//
-lib.attrsets.optionalAttrs(isDarwin && (isAarch32 || isAarch64) ){
+}))
+(lib.attrsets.optionalAttrs(isDarwin && (isAarch32 || isAarch64) ){
     {%- for item in extensions %}
     {%- if item.asset_url == None %}
     {%- with uniqueId = [ item.publisher_name | to_string, '.', item.extension_name | to_string ] | join %}
@@ -110,5 +114,5 @@ lib.attrsets.optionalAttrs(isDarwin && (isAarch32 || isAarch64) ){
     {%- endwith %}
     {%- endif %}
     {%- endfor %}
-}
+})
 {%- endfilter %}
