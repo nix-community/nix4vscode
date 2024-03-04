@@ -24,13 +24,13 @@ impl Display for IRawGalleryExtensionVersion {
 }
 
 impl IRawGalleryExtensionVersion {
-    pub fn get_engine(&self) -> anyhow::Result<semver::VersionReq> {
+    pub fn get_engine(&self) -> anyhow::Result<String> {
         match self
             .properties
             .iter()
             .position(|item| item.key == PropertyType::Engine.to_string())
         {
-            Some(idx) => Ok(semver::VersionReq::parse(&self.properties[idx].value).unwrap()),
+            Some(idx) => Ok(self.properties[idx].value.clone()),
             None => Err(Error::AttributeMissing("engine".into()).into()),
         }
     }
