@@ -34,6 +34,7 @@ jobs:
         run: |
           mkdir -p public/
           export RUST_LOG=DEBUG
+          nix develop --impure --command bash -c "cargo test"
           nix develop --impure --command bash -c "cargo run -- config.toml -o example/vscode_plugins.nix"
           cat example/vscode_plugins.nix
           nix develop --impure --command bash -c "cd example && nix develop --build"
