@@ -50,10 +50,19 @@ struct RequiredVersion {
     ver: Version,
     is_upper: bool,
     is_preview: bool,
+    is_any: bool,
 }
 
 impl RequiredVersion {
     fn new(version: &str) -> anyhow::Result<Self> {
+        if version.trim() == "*" {
+            return Ok(Self {
+                ver: Version::new(0, 0, 0),
+                is_upper: false,
+                is_preview: false,
+                is_any: true,
+            });
+        }
         let v = regex!(r#"(\^)?(\d+.\d+.\d+)(-.*)?"#);
         let v = v
             .captures(version)
@@ -67,10 +76,14 @@ impl RequiredVersion {
             )?,
             is_upper: v.get(1).is_some(),
             is_preview: v.get(3).is_some(),
+            is_any: false,
         })
     }
 
     fn is_matched(&self, v: &semver::Version) -> bool {
+        if self.is_any {
+            return true;
+        }
         if self.is_upper {
             return v >= &self.ver;
         }
@@ -107,12 +120,13 @@ async fn get_matched_versoin(
                     item.publisher.publisher_name, item.extension_name, v
                 );
                 trace!("{v:#?}");
-                false
+                true
             }
         })
-        .max_by(|a, b| a.version.cmp(&b.version))
-        .map(|item| item.version.clone());
+        .filter_map(|item| Version::from_str(&item.version).ok())
+        .max_by(|a, b| a.cmp(b));
 
+    let mx = mx.map(|item| item.to_string());
     trace!(?mx);
 
     let mut res = vec![];
@@ -312,6 +326,7 @@ mod test {
             ("^1.0.1-inside", true),
             ("1.12.1", false),
             ("^1.12.1", false),
+            ("*", true),
         ];
 
         for (i, k) in vs {
