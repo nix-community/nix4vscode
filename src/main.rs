@@ -208,7 +208,9 @@ async fn main() -> anyhow::Result<()> {
 
     init_logger();
 
-    let config = Arc::new(Config::new(&args.file).await?);
+    let config = Arc::new(Config::new(
+        tokio::fs::read_to_string(&args.file).await?.as_str(),
+    )?);
     let client = HttpClient::new().unwrap();
     debug!("request: {config:?}");
     let vscode_ver = semver::Version::from_str(&config.vscode_version).unwrap();
