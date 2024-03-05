@@ -5,16 +5,15 @@
 
 pub mod config;
 pub mod data_struct;
+mod engine_version;
 pub mod error;
 pub mod jinja;
 pub mod openvsx_ext;
 pub mod request;
 pub mod utils;
 
-use anyhow::anyhow;
 use data_struct::IRawGalleryExtension;
 
-use lazy_regex::regex;
 use semver::Version;
 use std::{str::FromStr, sync::Arc};
 use tracing::*;
@@ -27,6 +26,7 @@ use config::Config;
 
 use crate::{
     data_struct::{AssetType, TargetPlatform},
+    engine_version::RequiredVersion,
     jinja::{AssetUrlContext, Generator, GeneratorContext, NixContext},
     request::HttpClient,
 };
@@ -45,56 +45,9 @@ struct Args {
     openvsx: bool,
 }
 
-#[derive(Debug)]
-struct RequiredVersion {
-    ver: Version,
-    is_upper: bool,
-    is_preview: bool,
-    is_any: bool,
-}
-
-impl RequiredVersion {
-    fn new(version: &str) -> anyhow::Result<Self> {
-        if version.trim() == "*" {
-            return Ok(Self {
-                ver: Version::new(0, 0, 0),
-                is_upper: false,
-                is_preview: false,
-                is_any: true,
-            });
-        }
-        let v = regex!(r#"(\^)?(\d+.\d+.\d+)(-.*)?"#);
-        let v = v
-            .captures(version)
-            .ok_or(anyhow!(format!("bad version: {version}")))?;
-
-        Ok(Self {
-            ver: semver::Version::from_str(
-                v.get(2)
-                    .ok_or(anyhow!(format!("bad version: {version}")))?
-                    .as_str(),
-            )?,
-            is_upper: v.get(1).is_some(),
-            is_preview: v.get(3).is_some(),
-            is_any: false,
-        })
-    }
-
-    fn is_matched(&self, v: &semver::Version) -> bool {
-        if self.is_any {
-            return true;
-        }
-        if self.is_upper {
-            return v >= &self.ver;
-        }
-
-        v == &self.ver
-    }
-}
-
 async fn get_matched_versoin(
     item: IRawGalleryExtension,
-    vscode_ver: Version,
+    vscode_ver: RequiredVersion,
     client: HttpClient,
     config: Arc<Config>,
     generator: Generator<'_>,
@@ -108,8 +61,9 @@ async fn get_matched_versoin(
                     debug!("parse {ver} to RequiredVersion failed.");
                     return false;
                 };
+
                 if !vv.is_matched(&vscode_ver) {
-                    trace!("{ver} doesn't match {vscode_ver}");
+                    trace!("{ver} doesn't match {vscode_ver:?}");
                     return false;
                 }
                 true
@@ -227,7 +181,7 @@ async fn main() -> anyhow::Result<()> {
     )?);
     let client = HttpClient::new().unwrap();
     debug!("request: {config:?}");
-    let vscode_ver = semver::Version::from_str(&config.vscode_version).unwrap();
+    let vscode_ver = RequiredVersion::new(&config.vscode_version).unwrap();
     let mut generator = Generator::new();
 
     let res: Vec<_> = {
@@ -306,32 +260,4 @@ fn init_logger() {
         )
         .with(env_filter)
         .init();
-}
-
-#[cfg(test)]
-mod test {
-    use super::*;
-
-    #[test]
-    fn test_visual_studio_code_compatibility() {
-        let v = semver::Version::new(1, 8, 1);
-
-        let vs = [
-            ("1.8.1", true),
-            ("^0.1.1", true),
-            ("^1.2.1", true),
-            ("1.81.1-inside", false),
-            ("1.0.1-inside", false),
-            ("^1.81.1-inside", false),
-            ("^1.0.1-inside", true),
-            ("1.12.1", false),
-            ("^1.12.1", false),
-            ("*", true),
-        ];
-
-        for (i, k) in vs {
-            let a = RequiredVersion::new(i).unwrap();
-            assert!(a.is_matched(&v) == k);
-        }
-    }
 }
