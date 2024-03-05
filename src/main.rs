@@ -91,7 +91,20 @@ async fn get_matched_versoin(
             }
         }
         trace!("{:?}", version.version);
-
+        if let Some(ref v) = version.target_platform {
+            let t: TargetPlatform = v.as_str().into();
+            if !matches!(
+                t,
+                TargetPlatform::LinuxX64
+                    | TargetPlatform::LinuxArm64
+                    | TargetPlatform::Universal
+                    | TargetPlatform::Web
+                    | TargetPlatform::DarwinX64
+                    | TargetPlatform::DarwinArm64
+            ) {
+                continue;
+            }
+        }
         let (has_asset_url, asset_url) = match config
             .get_asset_url(&item.publisher.publisher_name, &item.extension_name)
         {
@@ -166,6 +179,8 @@ async fn get_matched_versoin(
 
         res.extend(a);
     }
+
+    trace!(?res);
 
     res
 }
