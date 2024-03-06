@@ -11,6 +11,7 @@ pub mod jinja;
 pub mod openvsx_ext;
 pub mod request;
 pub mod utils;
+mod version;
 
 use data_struct::IRawGalleryExtension;
 
@@ -26,9 +27,9 @@ use config::Config;
 
 use crate::{
     data_struct::{AssetType, TargetPlatform},
-    engine_version::RequiredVersion,
     jinja::{AssetUrlContext, Generator, GeneratorContext, NixContext},
     request::HttpClient,
+    version::is_version_valid,
 };
 
 #[derive(Debug, Parser)]
@@ -47,7 +48,7 @@ struct Args {
 
 async fn get_matched_versoin(
     item: IRawGalleryExtension,
-    vscode_ver: RequiredVersion,
+    vscode_ver: String,
     client: HttpClient,
     config: Arc<Config>,
     generator: Generator<'_>,
@@ -57,14 +58,8 @@ async fn get_matched_versoin(
         .iter()
         .filter(|v| match v.get_engine() {
             Ok(ver) => {
-                let Ok(vv) = RequiredVersion::new(&ver) else {
-                    debug!("parse {ver} to RequiredVersion failed.");
-                    return false;
-                };
-
-                if !vv.is_matched(&vscode_ver) {
+                if !is_version_valid(&vscode_ver, &ver) {
                     trace!("{ver} doesn't match {vscode_ver:?}");
-                    return false;
                 }
                 true
             }
@@ -196,7 +191,7 @@ async fn main() -> anyhow::Result<()> {
     )?);
     let client = HttpClient::new().unwrap();
     debug!("request: {config:?}");
-    let vscode_ver = RequiredVersion::new(&config.vscode_version).unwrap();
+    let vscode_ver = config.vscode_version.to_string();
     let mut generator = Generator::new();
 
     let res: Vec<_> = {
