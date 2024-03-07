@@ -5,7 +5,6 @@
 
 pub mod config;
 pub mod data_struct;
-mod engine_version;
 pub mod error;
 pub mod jinja;
 pub mod openvsx_ext;
