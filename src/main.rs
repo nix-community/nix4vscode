@@ -1,6 +1,3 @@
-#![allow(dead_code)]
-#![allow(unused_variables)]
-
 pub mod code;
 pub mod config;
 pub mod error;

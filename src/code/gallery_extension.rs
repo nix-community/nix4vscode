@@ -70,7 +70,7 @@ impl IRawGalleryExtensionsResult {
             .position(|item| &item.metadata_type == "TargetPlatforms")
         {
             Some(idx) => {
-                let a = &self.result_metadata[idx];
+                let _ = &self.result_metadata[idx];
                 self.result_metadata[idx]
                     .metadata_items
                     .iter()
