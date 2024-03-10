@@ -1,7 +1,5 @@
 #![allow(dead_code)]
 #![allow(unused_variables)]
-#![feature(lazy_cell)]
-#![feature(async_closure)]
 
 pub mod code;
 pub mod config;

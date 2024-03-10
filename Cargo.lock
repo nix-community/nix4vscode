@@ -906,6 +906,7 @@ dependencies = [
  "derive",
  "futures",
  "lazy-regex",
+ "lazy_static",
  "minijinja",
  "nixpkgs-fmt",
  "openvsx",
