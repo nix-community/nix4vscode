@@ -3,8 +3,8 @@
 #![feature(lazy_cell)]
 #![feature(async_closure)]
 
+pub mod code;
 pub mod config;
-pub mod data_struct;
 pub mod error;
 pub mod jinja;
 pub mod openvsx_ext;
@@ -12,7 +12,7 @@ pub mod request;
 pub mod utils;
 mod version;
 
-use data_struct::IRawGalleryExtension;
+use code::IRawGalleryExtension;
 
 use semver::Version;
 use std::{str::FromStr, sync::Arc};
@@ -25,7 +25,7 @@ use clap::Parser;
 use config::Config;
 
 use crate::{
-    data_struct::{AssetType, TargetPlatform},
+    code::{AssetType, TargetPlatform},
     jinja::{AssetUrlContext, Generator, GeneratorContext, NixContext},
     request::HttpClient,
     version::is_version_valid,

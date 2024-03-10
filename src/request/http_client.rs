@@ -1,6 +1,6 @@
 use crate::{
+    code::{self, IRawGalleryExtensionsResult, IRawGalleryQueryResult, TargetPlatform},
     config::Extension,
-    data_struct::{self, IRawGalleryExtensionsResult, IRawGalleryQueryResult, TargetPlatform},
     error::Error,
     request::IQueryState,
 };
@@ -22,7 +22,7 @@ impl HttpClient {
     pub async fn get_extension_response(
         &self,
         extensions: &[Extension],
-    ) -> anyhow::Result<data_struct::IRawGalleryQueryResult> {
+    ) -> anyhow::Result<code::IRawGalleryQueryResult> {
         let mut results = IRawGalleryQueryResult::default();
         let extension_count: u64 = extensions.len() as u64;
         let mut page_number: u64 = 1;
@@ -76,7 +76,7 @@ impl HttpClient {
             .body(body)
             .send()
             .await?
-            .json::<data_struct::IRawGalleryQueryResult>()
+            .json::<code::IRawGalleryQueryResult>()
             .await?;
         txt.results.into_iter().next().ok_or(Error::Unknown.into())
     }
