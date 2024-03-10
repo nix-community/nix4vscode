@@ -6,7 +6,7 @@ mod asset_url;
 
 pub use asset_url::*;
 
-use crate::{config::Config, data_struct::TargetPlatform};
+use crate::{code::TargetPlatform, config::Config};
 
 #[derive(Debug, Default, Deserialize, Serialize)]
 pub struct GeneratorContext {
