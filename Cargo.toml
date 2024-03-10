@@ -23,3 +23,4 @@ thiserror = "1.0.48"
 openvsx = { path = "./openvsx" }
 lazy-regex = "3.1.0"
 chrono = "0.4.34"
+derive = { path = "./derive" }

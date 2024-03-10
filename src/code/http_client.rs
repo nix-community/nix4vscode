@@ -1,8 +1,9 @@
 use crate::{
-    code::{self, IRawGalleryExtensionsResult, IRawGalleryQueryResult, TargetPlatform},
+    code::{
+        self, IQueryState, IRawGalleryExtensionsResult, IRawGalleryQueryResult, TargetPlatform,
+    },
     config::Extension,
     error::Error,
-    request::IQueryState,
 };
 
 use super::Query;

@@ -8,11 +8,10 @@ pub mod config;
 pub mod error;
 pub mod jinja;
 pub mod openvsx_ext;
-pub mod request;
 pub mod utils;
 mod version;
 
-use code::IRawGalleryExtension;
+use code::{HttpClient, IRawGalleryExtension};
 
 use semver::Version;
 use std::{str::FromStr, sync::Arc};
@@ -27,7 +26,6 @@ use config::Config;
 use crate::{
     code::{AssetType, TargetPlatform},
     jinja::{AssetUrlContext, Generator, GeneratorContext, NixContext},
-    request::HttpClient,
     version::is_version_valid,
 };
 
