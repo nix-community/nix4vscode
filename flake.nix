@@ -21,10 +21,10 @@
           ];
         };
         lib = pkgs.lib;
-        inherit (pkgs.stdenv) isDarwin isLinux;
+        inherit (pkgs.stdenv) isDarwin;
 
-        rust_toolchain = {
-          extensions = [ "rust-src" "rust-analysis" "rust-std" "rust-docs" "clippy" "rust-analyzer" "llvm-tools-preview" ];
+        rust_stable = pkgs.rust-bin.stable."1.76.0".default.override {
+          extensions = [ "rust-src" "rust-analysis" "rust-std" "rust-docs" "clippy" ];
         };
 
       in
@@ -32,9 +32,7 @@
         devShell = pkgs.mkShell {
           buildInputs = [
             pkgs.taplo
-            (
-              pkgs.rust-bin.nightly."2023-07-28".default.override rust_toolchain
-            )
+            rust_stable
           ] ++ lib.lists.optionals isDarwin [
             pkgs.iconv
             pkgs.darwin.apple_sdk.frameworks.Security
