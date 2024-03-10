@@ -59,7 +59,9 @@ async fn get_matched_versoin(
             Ok(ver) => {
                 if !is_version_valid(&vscode_ver, &ver) {
                     trace!("{ver} doesn't match {vscode_ver:?}");
+                    return false;
                 }
+                trace!("{} - {}", v.version, ver);
                 true
             }
             Err(_) => {
