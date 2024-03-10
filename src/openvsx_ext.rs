@@ -60,7 +60,7 @@ pub async fn get_matched_version_of(
                     return fn_res;
                 }
             }
-            Err(err) => {
+            Err(_) => {
                 warn!("Error happend when get matched version of {namespace}.{extension} for {engine_ver}");
                 return vec![];
             }

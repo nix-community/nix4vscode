@@ -1,5 +1,5 @@
 use anyhow::anyhow;
-use chrono::{NaiveDate, NaiveDateTime, TimeZone, Utc};
+use chrono::{NaiveDate, NaiveDateTime};
 use lazy_regex::regex;
 use tracing::debug;
 
@@ -93,7 +93,6 @@ impl From<IParsedVersion> for INormalizedVersion {
                         NaiveDate::from_ymd_opt(year.parse()?, month.parse()?, day.parse()?)
                             .ok_or(anyhow!(format!("bad version: {year}.{month}.{day}")))?
                             .into();
-                    let dt = Utc.from_utc_datetime(&a);
                     Ok(a.timestamp_millis())
                 })();
 
@@ -171,7 +170,7 @@ fn is_valid_version(
     let mut desired_major_base = desired_version.major_base;
     let mut desired_minor_base = desired_version.minor_base;
     let mut desired_patch_base = desired_version.patch_base;
-    let desired_not_before = desired_version.not_before;
+    let _desired_not_before = desired_version.not_before;
 
     let mut major_must_equal = desired_version.major_must_equal;
     let mut minor_must_equal = desired_version.minor_must_equal;

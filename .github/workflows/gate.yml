@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: awalsh128/cache-apt-pkgs-action@latest
         with:
-          packages: make fonts-noto-cjk fonts-noto-cjk-extra
+          packages: make fonts-noto-cjk fonts-noto-cjk-extra yarnpkg
           version: 1.0
       - name: Cache cargo
         uses: actions/cache@v3
@@ -32,8 +32,10 @@ jobs:
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
       - name: Build Packages
         run: |
-          mkdir -p public/
           export RUST_LOG=DEBUG
+          pip install pre-commit
+          yarnpkg global add @taplo/cli
+          nix develop --impure --command bash -c "cargo clippy -- -Dwarnings"
           nix develop --impure --command bash -c "cargo test"
           nix develop --impure --command bash -c "cargo run -- config.toml -o example/vscode_plugins.nix"
           cat example/vscode_plugins.nix

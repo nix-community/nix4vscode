@@ -66,7 +66,7 @@ impl Cacher {
         Ok(value)
     }
 
-    pub fn insert(&self, cache_type: CacheType, key: &str, value: &str) -> anyhow::Result<()> {
+    pub fn insert(&self, _cache_type: CacheType, key: &str, value: &str) -> anyhow::Result<()> {
         if value.is_empty() {
             // Clean cache
             return Ok(());
