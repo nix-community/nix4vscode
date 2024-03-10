@@ -1,6 +1,6 @@
-use serde::{Deserialize, Serialize};
+use derive::api;
 
-#[derive(Debug, Serialize, Deserialize, Clone, Copy)]
+#[api(nodefault)]
 pub struct FilterType(u8);
 
 impl Default for FilterType {
@@ -44,7 +44,7 @@ impl ToString for PropertyType {
     }
 }
 
-#[derive(Debug, Serialize, Deserialize, Clone, Copy)]
+#[api]
 pub struct SortOrder(u8);
 
 impl SortOrder {
@@ -53,7 +53,7 @@ impl SortOrder {
     pub const DESCENDING: Self = Self(2);
 }
 
-#[derive(Debug, Serialize, Deserialize, Clone, Copy)]
+#[api]
 pub struct SortBy(u8);
 
 impl SortBy {

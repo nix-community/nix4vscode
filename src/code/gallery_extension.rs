@@ -2,31 +2,25 @@ mod extension_version;
 mod version;
 use std::fmt::Display;
 
-use serde::{Deserialize, Serialize};
+use derive::api;
 
 pub use extension_version::*;
 pub use version::*;
 
 use super::{ResultMetaData, TargetPlatform};
 
-#[derive(Debug, Default, Serialize, Deserialize)]
-#[serde(default)]
-#[serde(rename_all = "camelCase")]
+#[api]
 pub struct IRawGalleryQueryResult {
     pub results: Vec<IRawGalleryExtensionsResult>,
 }
 
-#[derive(Debug, Default, Serialize, Deserialize)]
-#[serde(default)]
-#[serde(rename_all = "camelCase")]
+#[api]
 pub struct IRawGalleryExtensionStatistics {
     pub statistic_name: String,
     pub value: f64,
 }
 
-#[derive(Debug, Default, Serialize, Deserialize)]
-#[serde(default)]
-#[serde(rename_all = "camelCase")]
+#[api]
 pub struct IRawGalleryExtensionPublisher {
     pub display_name: String,
     pub publisher_id: String,
@@ -35,9 +29,7 @@ pub struct IRawGalleryExtensionPublisher {
     pub is_domain_verified: bool,
 }
 
-#[derive(Debug, Default, Serialize, Deserialize)]
-#[serde(default)]
-#[serde(rename_all = "camelCase")]
+#[api]
 pub struct IRawGalleryExtension {
     pub extension_id: String,
     pub extension_name: String,
@@ -64,9 +56,7 @@ impl Display for IRawGalleryExtension {
     }
 }
 
-#[derive(Debug, Default, Serialize, Deserialize)]
-#[serde(default)]
-#[serde(rename_all = "camelCase")]
+#[api]
 pub struct IRawGalleryExtensionsResult {
     pub extensions: Vec<IRawGalleryExtension>,
     pub result_metadata: Vec<ResultMetaData>,

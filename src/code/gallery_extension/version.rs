@@ -1,16 +1,12 @@
-use serde::{Deserialize, Serialize};
+use derive::api;
 
-#[derive(Debug, Default, Serialize, Deserialize)]
-#[serde(default)]
-#[serde(rename_all = "camelCase")]
+#[api]
 pub struct IRawGalleryExtensionProperty {
     pub key: String,
     pub value: String,
 }
 
-#[derive(Debug, Default, Serialize, Deserialize)]
-#[serde(default)]
-#[serde(rename_all = "camelCase")]
+#[api]
 pub struct IRawGalleryExtensionFile {
     pub asset_type: String,
     pub source: String,

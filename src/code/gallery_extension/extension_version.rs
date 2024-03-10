@@ -1,12 +1,10 @@
-use serde::{Deserialize, Serialize};
+use derive::api;
 
-use crate::{error::Error, request::PropertyType};
+use crate::{code::PropertyType, error::Error};
 
 use super::*;
 
-#[derive(Debug, Default, Serialize, Deserialize)]
-#[serde(default)]
-#[serde(rename_all = "camelCase")]
+#[api]
 pub struct IRawGalleryExtensionVersion {
     pub version: String,
     pub last_updated: String,

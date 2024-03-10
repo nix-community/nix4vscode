@@ -1,12 +1,10 @@
-use serde::{Deserialize, Serialize};
+use derive::api;
 
 use crate::config::Extension;
 
 use super::*;
 
-#[derive(Debug, Default, Serialize, Deserialize, Clone)]
-#[serde(default)]
-#[serde(rename_all = "camelCase")]
+#[api]
 pub struct Query {
     pub filters: Vec<IQueryState>,
     pub asset_types: Vec<String>,
