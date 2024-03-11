@@ -98,6 +98,7 @@ async fn get_matched_versoin(
             .get_asset_url(&item.publisher.publisher_name, &item.extension_name)
         {
             Some(url) => {
+                debug!(url);
                 let url = generator.render_asset_url(
                     &url,
                     &AssetUrlContext::new(

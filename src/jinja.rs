@@ -8,16 +8,16 @@ pub use system::*;
 
 use minijinja::Environment;
 
+#[derive(rust_embed::RustEmbed)]
+#[folder = "src/jinja/template/"]
+struct Asset;
+
 #[derive(Debug, Clone)]
 pub struct Generator<'a> {
     pub engine: Environment<'a>,
 }
 
 impl Generator<'_> {
-    pub const NIX_EXPRESSION: (&'static str, &'static str) = (
-        "nix_expression",
-        include_str!("./jinja/template/nix_expression.nix.j2"),
-    );
     pub const CODELLDB: (&'static str, &'static str) =
         ("codelldb", include_str!("./jinja/template/codelldb.j2"));
 }
@@ -38,9 +38,15 @@ impl<'a> Generator<'a> {
     pub fn new() -> Self {
         let mut engine = Environment::new();
 
-        engine
-            .add_template(Self::NIX_EXPRESSION.0, Self::NIX_EXPRESSION.1)
-            .unwrap();
+        engine.set_loader(
+            move |name| match Asset::get(format!("{name}.j2").as_str()) {
+                Some(file) => match String::from_utf8(file.data.to_vec()) {
+                    Ok(val) => Ok(Some(val)),
+                    Err(_) => unreachable!(),
+                },
+                None => Ok(None),
+            },
+        );
 
         add_filter!(engine, nixfmt);
         add_filter!(engine, to_string);
@@ -62,7 +68,7 @@ impl<'a> Generator<'a> {
     pub fn render(&mut self, ctx: &GeneratorContext) -> anyhow::Result<String> {
         Ok(self
             .engine
-            .get_template(Self::NIX_EXPRESSION.0)?
+            .get_template("nix_expression.nix")?
             .render(minijinja::Value::from_serializable(ctx))?)
     }
 }
