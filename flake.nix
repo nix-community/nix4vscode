@@ -36,6 +36,7 @@
           ] ++ lib.lists.optionals isDarwin [
             pkgs.iconv
             pkgs.darwin.apple_sdk.frameworks.Security
+            pkgs.darwin.apple_sdk.frameworks.SystemConfiguration
           ];
           shellHook = ''
             export DYLD_FALLBACK_LIBRARY_PATH=$(rustc --print sysroot)/lib
