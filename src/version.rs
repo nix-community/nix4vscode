@@ -93,7 +93,7 @@ impl From<IParsedVersion> for INormalizedVersion {
                         NaiveDate::from_ymd_opt(year.parse()?, month.parse()?, day.parse()?)
                             .ok_or(anyhow!(format!("bad version: {year}.{month}.{day}")))?
                             .into();
-                    Ok(a.timestamp_millis())
+                    Ok(a.and_utc().timestamp_millis())
                 })();
 
                 match a {
