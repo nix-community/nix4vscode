@@ -4,7 +4,7 @@ use serde::{Deserialize, Serialize};
 
 use crate::jinja::{Generator, SystemContext};
 
-#[derive(Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Debug, Serialize, Deserialize, PartialEq, Eq, Clone)]
 pub struct Extension {
     pub publisher_name: String,
     pub extension_name: String,
@@ -12,7 +12,7 @@ pub struct Extension {
     pub system: Option<SystemContext>,
 }
 
-#[derive(Debug, Default, Serialize, Deserialize)]
+#[derive(Debug, Default, Serialize, Deserialize, Clone)]
 #[serde(default)]
 pub struct Config {
     pub vscode_version: String,
