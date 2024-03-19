@@ -9,7 +9,11 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    labels:
+      - "no-changelog"
   - package-ecosystem: "cargo"
     directory: "/derive"
     schedule:
       interval: "weekly"
+    labels:
+      - "no-changelog"
