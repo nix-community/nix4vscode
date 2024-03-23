@@ -27,6 +27,8 @@ pub use version::*;
 
 use crate::config::Config;
 use crate::jinja::AssetUrlContext;
+use crate::jinja::CodeExt;
+use crate::jinja::CodeExtension;
 use crate::jinja::Generator;
 use crate::jinja::NixContext;
 use crate::utils;
@@ -34,14 +36,116 @@ use crate::utils;
 pub struct CodeNix {
     config: Config,
     client: HttpClient,
+    code_version: String,
 }
 
 impl CodeNix {
     pub fn new(config: Config) -> Self {
+        let _ = Version::from_str(&config.vscode_version).unwrap();
         Self {
+            code_version: config.vscode_version.clone(),
             config,
             client: HttpClient::new().unwrap(),
         }
+    }
+
+    pub async fn query_one(
+        &mut self,
+        publisher: &str,
+        name: &str,
+    ) -> anyhow::Result<CodeExtension> {
+        let res = self.client.query_one(publisher, name).await?;
+
+        let mx_ver = res
+            .versions
+            .iter()
+            .filter(|item: &&IRawGalleryExtensionVersion| item.get_engine().is_ok())
+            .filter(|item| is_version_valid(&self.code_version, &item.get_engine().unwrap()))
+            .max_by(|a, b| {
+                Version::from_str(&a.version)
+                    .unwrap()
+                    .cmp(&Version::from_str(&b.version).unwrap())
+            })
+            .map(|item| item.version.clone())
+            .unwrap();
+
+        let universal = res
+            .versions
+            .iter()
+            .filter(|item| item.version == mx_ver)
+            .find(|item| item.target_platform.is_none());
+
+        if let Some(v) = universal {
+            return Ok(CodeExtension {
+                publisher: publisher.to_string(),
+                name: name.to_string(),
+                universal: Some(CodeExt {
+                    version: v.version.clone(),
+                    sha256: None,
+                }),
+                ..Default::default()
+            });
+        }
+
+        let x86_linux = res
+            .versions
+            .iter()
+            .filter(|item| item.version == mx_ver)
+            .find(|item| match item.target_platform {
+                Some(ref v) => v.to_lowercase() == "linux-x64",
+                None => false,
+            })
+            .map(|item| CodeExt {
+                version: item.version.to_string(),
+                sha256: None,
+            });
+        let aarch64_linux = res
+            .versions
+            .iter()
+            .filter(|item| item.version == mx_ver)
+            .find(|item| match item.target_platform {
+                Some(ref v) => v.to_lowercase() == "linux-arm64",
+                None => false,
+            })
+            .map(|item| CodeExt {
+                version: item.version.to_string(),
+                sha256: None,
+            });
+
+        let x86_darwin = res
+            .versions
+            .iter()
+            .filter(|item| item.version == mx_ver)
+            .find(|item| match item.target_platform {
+                Some(ref v) => v.to_lowercase() == "darwin-x64",
+                None => false,
+            })
+            .map(|item| CodeExt {
+                version: item.version.to_string(),
+                sha256: None,
+            });
+        let aarch64_darwin = res
+            .versions
+            .iter()
+            .filter(|item| item.version == mx_ver)
+            .find(|item| match item.target_platform {
+                Some(ref v) => v.to_lowercase() == "darwin-arm64",
+                None => false,
+            })
+            .map(|item| CodeExt {
+                version: item.version.to_string(),
+                sha256: None,
+            });
+
+        Ok(CodeExtension {
+            publisher: publisher.to_string(),
+            name: name.to_string(),
+            universal: None,
+            x86_linux,
+            aarch64_linux,
+            x86_darwin,
+            aarch64_darwin,
+        })
     }
 
     pub async fn get_extensions(&mut self, generator: Generator<'static>) -> Vec<NixContext> {
@@ -218,5 +322,52 @@ impl CodeNix {
         trace!(?res);
 
         res
+    }
+}
+#[cfg(test)]
+mod test {
+    use super::*;
+
+    #[tokio::test]
+    async fn test_query_one() {
+        let mut client = CodeNix::new(Config {
+            vscode_version: "1.75.0".into(),
+            autogen_warning: Default::default(),
+            extensions: vec![],
+            system: None,
+        });
+
+        for i in [
+            ("editorconfig", "editorconfig"),
+            ("ms-ceintl", "vscode-language-pack-zh-hans"),
+            ("pkief", "material-icon-theme"),
+            ("pkief", "material-product-icons"),
+            ("zhuangtongfa", "material-theme"),
+            ("redhat", "vscode-xml"),
+            ("redhat", "vscode-yaml"),
+        ] {
+            let res = client.query_one(i.0, i.1).await.unwrap();
+
+            assert!(res.universal.is_some());
+        }
+    }
+
+    #[tokio::test]
+    async fn test_query_one_with() {
+        let mut client = CodeNix::new(Config {
+            vscode_version: "1.88.0".into(),
+            autogen_warning: Default::default(),
+            extensions: vec![],
+            system: None,
+        });
+
+        for i in [("hashicorp", "terraform"), ("ms-toolsai", "jupyter")] {
+            let res = client.query_one(i.0, i.1).await.unwrap();
+
+            assert!(res.x86_linux.is_some());
+            assert!(res.aarch64_linux.is_some());
+            assert!(res.x86_darwin.is_some());
+            assert!(res.aarch64_darwin.is_some());
+        }
     }
 }

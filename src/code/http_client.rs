@@ -21,15 +21,15 @@ impl HttpClient {
         Ok(Self { client })
     }
 
-    pub async fn get_extension_info(
+    pub async fn query_one(
         &self,
-        name: &str,
         publisher: &str,
+        name: &str,
     ) -> anyhow::Result<code::IRawGalleryExtension> {
         let mut res = IRawGalleryQueryResult::default();
         let mut page_number: u64 = 1;
         loop {
-            let query = Query::create_one(name, publisher, page_number);
+            let query = Query::create_one(publisher, name, page_number);
             let body = serde_json::to_string(&query)?;
             trace!("send request: {body}");
             let mut response = self
@@ -53,6 +53,13 @@ impl HttpClient {
             res.results.append(&mut response.results);
             page_number += 1;
         }
+
+        res.results.iter_mut().for_each(|item| {
+            item.extensions.iter_mut().for_each(|item| {
+                item.extension_name = item.extension_name.to_lowercase();
+                item.publisher.publisher_name = item.publisher.publisher_name.to_lowercase();
+            })
+        });
 
         let mut res: Vec<_> = res
             .results
@@ -183,11 +190,13 @@ mod test {
     #[tokio::test]
     async fn test_require_one_extension() {
         let client = HttpClient::new().unwrap();
-        let v = client
-            .get_extension_info("jupyter", "ms-toolsai")
-            .await
-            .unwrap();
 
-        assert_eq!(v.extension_name, "jupyter");
+        for i in [
+            ("ms-toolsai", "jupyter"),
+            ("ms-ceintl", "vscode-language-pack-zh-hans"),
+        ] {
+            let v = client.query_one(i.0, i.1).await.unwrap();
+            assert_eq!(v.extension_name, i.1.to_lowercase());
+        }
     }
 }
