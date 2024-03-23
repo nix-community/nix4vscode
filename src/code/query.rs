@@ -12,7 +12,7 @@ pub struct Query {
 }
 
 impl Query {
-    pub fn create_one(name: &str, publisher: &str, page_number: u64) -> Self {
+    pub fn create_one(publisher: &str, name: &str, page_number: u64) -> Self {
         Query {
             filters: vec![IQueryState {
                 page_number,
