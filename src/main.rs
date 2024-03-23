@@ -2,7 +2,6 @@ pub mod code;
 pub mod config;
 pub mod error;
 pub mod jinja;
-pub mod openvsx_ext;
 pub mod utils;
 
 use tracing::*;
