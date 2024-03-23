@@ -12,6 +12,30 @@ pub struct Query {
 }
 
 impl Query {
+    pub fn create_one(name: &str, publisher: &str, page_number: u64) -> Self {
+        Query {
+            filters: vec![IQueryState {
+                page_number,
+                criteria: vec![
+                    ICriterium {
+                        filter_type: FilterType::EXTENSION_NAME,
+                        value: format!("{}.{}", publisher, name),
+                    },
+                    ICriterium {
+                        filter_type: FilterType::TARGET,
+                        value: "Microsoft.VisualStudio.Code".into(),
+                    },
+                    ICriterium {
+                        filter_type: FilterType::EXCLUDE_WITH_FLAGS,
+                        value: "4096".into(),
+                    },
+                ],
+                ..Default::default()
+            }],
+            asset_types: Default::default(),
+            flags: RequestFlags::default().bits(),
+        }
+    }
     pub fn new(extensions: &[Extension], page_number: u64) -> Self {
         let fixed = vec![
             ICriterium {

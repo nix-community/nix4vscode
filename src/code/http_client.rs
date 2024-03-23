@@ -7,6 +7,7 @@ use crate::{
 };
 
 use super::Query;
+use anyhow::anyhow;
 use tracing::*;
 
 #[derive(Debug, Clone)]
@@ -18,6 +19,60 @@ impl HttpClient {
     pub fn new() -> anyhow::Result<Self> {
         let client = reqwest::Client::builder().gzip(true).build()?;
         Ok(Self { client })
+    }
+
+    pub async fn get_extension_info(
+        &self,
+        name: &str,
+        publisher: &str,
+    ) -> anyhow::Result<code::IRawGalleryExtension> {
+        let mut res = IRawGalleryQueryResult::default();
+        let mut page_number: u64 = 1;
+        loop {
+            let query = Query::create_one(name, publisher, page_number);
+            let body = serde_json::to_string(&query)?;
+            trace!("send request: {body}");
+            let mut response = self
+                .client
+                .post("https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery")
+                .header(
+                    "Accept",
+                    "Application/json; charset=utf-8; api-version=7.2-preview.1",
+                )
+                .header("Content-Type", "application/json")
+                .body(body)
+                .send()
+                .await?
+                .json::<IRawGalleryQueryResult>()
+                .await?;
+
+            if response.results[0].extensions.is_empty() {
+                break;
+            }
+
+            res.results.append(&mut response.results);
+            page_number += 1;
+        }
+
+        let mut res: Vec<_> = res
+            .results
+            .into_iter()
+            .flat_map(|item| item.extensions)
+            .filter(|item| {
+                item.extension_name == name && item.publisher.publisher_name == publisher
+            })
+            .collect();
+
+        if res.is_empty() {
+            return Err(anyhow!(format!("cannot get {publisher}.{name}")));
+        }
+
+        let mut v = res.pop().unwrap();
+
+        res.into_iter()
+            .for_each(|item| v.versions.extend(item.versions));
+
+        Ok(v)
     }
 
     pub async fn get_extension_response(
@@ -118,5 +173,21 @@ impl HttpClient {
                 vec![]
             }
         }
+    }
+}
+
+#[cfg(test)]
+mod test {
+    use super::*;
+
+    #[tokio::test]
+    async fn test_require_one_extension() {
+        let client = HttpClient::new().unwrap();
+        let v = client
+            .get_extension_info("jupyter", "ms-toolsai")
+            .await
+            .unwrap();
+
+        assert_eq!(v.extension_name, "jupyter");
     }
 }
