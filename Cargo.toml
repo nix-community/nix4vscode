@@ -13,7 +13,7 @@ tracing-subscriber = { version = "0.3.18", features = ["env-filter", "std"] }
 semver = "1.0.22"
 bitflags = { version = "2.5.0", features = ["serde", "std"] }
 reqwest = { version = "0.12.2", default_features = false, features = ["rustls-tls", "gzip", "json"] }
-minijinja = { version = "1.0.13", features = ["loader"] }
+minijinja = { version = "1.0.15", features = ["loader"] }
 clap = { version = "4.5.4", features = ["derive"] }
 futures = "0.3.30"
 anyhow = "1.0.81"
