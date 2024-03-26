@@ -32,11 +32,27 @@ use crate::jinja::CodeExtension;
 use crate::jinja::Generator;
 use crate::jinja::NixContext;
 use crate::utils;
+use crate::utils::get_sha256;
 
 pub struct CodeNix {
     config: Config,
     client: HttpClient,
     code_version: String,
+}
+
+macro_rules! get_ext {
+    ($ver:expr, $plt:literal, $mx_ver:expr) => {
+        $ver.iter()
+            .filter(|item| item.version == $mx_ver)
+            .find(|item| match item.target_platform {
+                Some(ref v) => v.to_lowercase() == $plt,
+                None => false,
+            })
+            .map(|item| CodeExt {
+                version: item.version.to_string(),
+                sha256: None,
+            })
+    };
 }
 
 impl CodeNix {
@@ -87,55 +103,30 @@ impl CodeNix {
             });
         }
 
-        let x86_linux = res
-            .versions
-            .iter()
-            .filter(|item| item.version == mx_ver)
-            .find(|item| match item.target_platform {
-                Some(ref v) => v.to_lowercase() == "linux-x64",
-                None => false,
-            })
-            .map(|item| CodeExt {
-                version: item.version.to_string(),
-                sha256: None,
-            });
-        let aarch64_linux = res
-            .versions
-            .iter()
-            .filter(|item| item.version == mx_ver)
-            .find(|item| match item.target_platform {
-                Some(ref v) => v.to_lowercase() == "linux-arm64",
-                None => false,
-            })
-            .map(|item| CodeExt {
-                version: item.version.to_string(),
-                sha256: None,
-            });
+        let mut x86_linux = get_ext!(res.versions, "linux-x64", mx_ver);
+        let mut aarch64_linux = get_ext!(res.versions, "linux-arm64", mx_ver);
+        let mut x86_darwin = get_ext!(res.versions, "darwin-x64", mx_ver);
+        let mut aarch64_darwin = get_ext!(res.versions, "darwin-arm64", mx_ver);
 
-        let x86_darwin = res
-            .versions
-            .iter()
-            .filter(|item| item.version == mx_ver)
-            .find(|item| match item.target_platform {
-                Some(ref v) => v.to_lowercase() == "darwin-x64",
-                None => false,
-            })
-            .map(|item| CodeExt {
-                version: item.version.to_string(),
-                sha256: None,
-            });
-        let aarch64_darwin = res
-            .versions
-            .iter()
-            .filter(|item| item.version == mx_ver)
-            .find(|item| match item.target_platform {
-                Some(ref v) => v.to_lowercase() == "darwin-arm64",
-                None => false,
-            })
-            .map(|item| CodeExt {
-                version: item.version.to_string(),
-                sha256: None,
-            });
+        let f = [
+            (&mut x86_linux, "linux-x64"),
+            (&mut aarch64_linux, "linux-arm64"),
+            (&mut x86_darwin, "darwin-x64"),
+            (&mut aarch64_darwin, "darwin-arm64"),
+        ]
+        .into_iter()
+        .filter_map(|item| match item.0 {
+            Some(v) => Some((v, item.1)),
+            None => None,
+        })
+        .map(|item| async {
+            let addr = Self::get_ext_address(publisher, name, &item.0.version, item.1);
+            if let Ok(v) = get_sha256(&addr).await {
+                let _ = item.0.sha256.insert(v);
+            }
+        });
+
+        join_all(f).await;
 
         Ok(CodeExtension {
             publisher: publisher.to_string(),
@@ -146,6 +137,22 @@ impl CodeNix {
             x86_darwin,
             aarch64_darwin,
         })
+    }
+
+    fn get_ext_address(publisher: &str, name: &str, version: &str, arch: &str) -> String {
+        assert!(matches!(
+            arch,
+            "linux-x64" | "darwin-x64" | "linux-arm64" | "darwin-arm64" | ""
+        ));
+
+        let archurl = {
+            match arch.is_empty() {
+                true => "".into(),
+                false => format!("?targetPlatform=${arch}"),
+            }
+        };
+
+        format!("https://{publisher}.gallery.vsassets.io/_apis/public/gallery/publisher/{publisher}/extension/{name}/{version}/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage{archurl}")
     }
 
     pub async fn get_extensions(&mut self, generator: Generator<'static>) -> Vec<NixContext> {
