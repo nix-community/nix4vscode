@@ -61,15 +61,14 @@ impl<'a> Generator<'a> {
 
     pub fn render_asset_url(&self, tmpl: &str, ctx: &AssetUrlContext) -> String {
         let tpl = self.engine.template_from_str(tmpl).unwrap();
-        tpl.render(minijinja::Value::from_serializable(ctx))
-            .unwrap()
+        tpl.render(minijinja::Value::from_serialize(ctx)).unwrap()
     }
 
     pub fn render(&mut self, ctx: &GeneratorContext) -> anyhow::Result<String> {
         Ok(self
             .engine
             .get_template("nix_expression.nix")?
-            .render(minijinja::Value::from_serializable(ctx))?)
+            .render(minijinja::Value::from_serialize(ctx))?)
     }
 }
 
