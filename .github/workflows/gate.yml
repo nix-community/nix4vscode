@@ -40,4 +40,4 @@ jobs:
           cargo test
           cargo run -- config.toml -o example/vscode_plugins.nix
           cat example/vscode_plugins.nix
-          nix develop --impure --command bash -c "cd example && nix develop --build"
+          cd example && nix develop --build
