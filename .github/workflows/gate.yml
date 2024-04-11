@@ -30,13 +30,14 @@ jobs:
         with:
           extra_nix_config: |
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+      - uses: CfirTsabari/actions-rs-toolchain@v1
       - name: Build Packages
         run: |
           export RUST_LOG=DEBUG
           pip install pre-commit
           yarnpkg global add @taplo/cli
-          nix develop --impure --command bash -c "cargo clippy -- -Dwarnings"
-          nix develop --impure --command bash -c "cargo test"
-          nix develop --impure --command bash -c "cargo run -- config.toml -o example/vscode_plugins.nix"
+          cargo clippy -- -Dwarnings
+          cargo test
+          cargo run -- config.toml -o example/vscode_plugins.nix
           cat example/vscode_plugins.nix
           nix develop --impure --command bash -c "cd example && nix develop --build"
