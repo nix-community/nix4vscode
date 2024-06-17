@@ -17,7 +17,7 @@ reqwest = { version = "0.12.4", default_features = false, features = [
     "gzip",
     "json",
 ] }
-minijinja = { version = "2.0.1", features = ["loader"] }
+minijinja = { version = "2.0.2", features = ["loader"] }
 clap = { version = "4.5.7", features = ["derive"] }
 futures = "0.3.30"
 anyhow = "1.0.86"
