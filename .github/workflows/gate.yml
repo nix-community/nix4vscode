@@ -18,7 +18,7 @@ jobs:
           packages: make fonts-noto-cjk fonts-noto-cjk-extra yarnpkg
           version: 1.0
       - name: Cache cargo
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             ~/.cargo/git/db/
