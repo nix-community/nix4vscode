@@ -34,7 +34,7 @@ impl Config {
 
         obj.extensions.iter_mut().for_each(|item| {
             if item.system.is_none() {
-                item.system = obj.system.clone();
+                item.system.clone_from(&obj.system);
             }
         });
 

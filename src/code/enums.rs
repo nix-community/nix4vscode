@@ -1,3 +1,5 @@
+use std::fmt::Display;
+
 use derive::api;
 
 #[api(nodefault)]
@@ -30,17 +32,18 @@ pub enum PropertyType {
     SponsorLink,
 }
 
-impl ToString for PropertyType {
-    fn to_string(&self) -> String {
-        match self {
-            Self::Dependency => "Microsoft.VisualStudio.Code.ExtensionDependencies".into(),
-            Self::ExtensionPack => "Microsoft.VisualStudio.Code.ExtensionPack".into(),
-            Self::Engine => "Microsoft.VisualStudio.Code.Engine".into(),
-            Self::PreRelease => "Microsoft.VisualStudio.Code.PreRelease".into(),
-            Self::LocalizedLanguages => "Microsoft.VisualStudio.Code.LocalizedLanguages".into(),
-            Self::WebExtension => "Microsoft.VisualStudio.Code.WebExtension".into(),
-            Self::SponsorLink => "Microsoft.VisualStudio.Code.SponsorLink".into(),
-        }
+impl Display for PropertyType {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let v = match self {
+            Self::Dependency => "Microsoft.VisualStudio.Code.ExtensionDependencies",
+            Self::ExtensionPack => "Microsoft.VisualStudio.Code.ExtensionPack",
+            Self::Engine => "Microsoft.VisualStudio.Code.Engine",
+            Self::PreRelease => "Microsoft.VisualStudio.Code.PreRelease",
+            Self::LocalizedLanguages => "Microsoft.VisualStudio.Code.LocalizedLanguages",
+            Self::WebExtension => "Microsoft.VisualStudio.Code.WebExtension",
+            Self::SponsorLink => "Microsoft.VisualStudio.Code.SponsorLink",
+        };
+        write!(f, "{}", v)
     }
 }
 
