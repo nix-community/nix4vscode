@@ -33,6 +33,8 @@ jobs:
       - uses: CfirTsabari/actions-rs-toolchain@v1
       - name: Build Packages
         run: |
+          rustup component add rustfmt
+          rustup component add clippy
           export RUST_LOG=DEBUG
           pip install pre-commit
           yarnpkg global add @taplo/cli
