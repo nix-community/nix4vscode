@@ -1,3 +1,5 @@
+use std::fmt::Display;
+
 use derive::api;
 
 #[api]
@@ -23,18 +25,19 @@ pub enum AssetType {
     Signature,
 }
 
-impl ToString for AssetType {
-    #[rustfmt::skip]
-    fn to_string(&self) -> String {
-        match self {
-            Self::Icon=> "Microsoft.VisualStudio.Services.Icons.Default".into(),
-            Self::Details=> "Microsoft.VisualStudio.Services.Content.Details".into(),
-            Self::Changelog=> "Microsoft.VisualStudio.Services.Content.Changelog".into(),
-            Self::Manifest=> "Microsoft.VisualStudio.Code.Manifest".into(),
-            Self::Vsix=> "Microsoft.VisualStudio.Services.VSIXPackage".into(),
-            Self::License=> "Microsoft.VisualStudio.Services.Content.License".into(),
-            Self::Repository=> "Microsoft.VisualStudio.Services.Links.Source".into(),
-            Self::Signature=> "Microsoft.VisualStudio.Services.VsixSignature".into()
-        }
+impl Display for AssetType {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let v = match self {
+            Self::Icon => "Microsoft.VisualStudio.Services.Icons.Default",
+            Self::Details => "Microsoft.VisualStudio.Services.Content.Details",
+            Self::Changelog => "Microsoft.VisualStudio.Services.Content.Changelog",
+            Self::Manifest => "Microsoft.VisualStudio.Code.Manifest",
+            Self::Vsix => "Microsoft.VisualStudio.Services.VSIXPackage",
+            Self::License => "Microsoft.VisualStudio.Services.Content.License",
+            Self::Repository => "Microsoft.VisualStudio.Services.Links.Source",
+            Self::Signature => "Microsoft.VisualStudio.Services.VsixSignature",
+        };
+
+        write!(f, "{v}")
     }
 }

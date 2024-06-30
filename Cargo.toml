@@ -12,10 +12,10 @@ tracing = "0.1.40"
 tracing-subscriber = { version = "0.3.18", features = ["env-filter", "std"] }
 semver = "1.0.23"
 bitflags = { version = "2.5.0", features = ["serde", "std"] }
-reqwest = { version = "0.12.5", default_features = false, features = [
-    "rustls-tls",
-    "gzip",
-    "json",
+reqwest = { version = "0.12.5", default-features = false, features = [
+  "rustls-tls",
+  "gzip",
+  "json",
 ] }
 minijinja = { version = "2.0.2", features = ["loader"] }
 clap = { version = "4.5.7", features = ["derive"] }
