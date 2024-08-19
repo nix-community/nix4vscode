@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-serde = { version = "1.0.207", features = ["derive", "alloc", "rc"] }
+serde = { version = "1.0.208", features = ["derive", "alloc", "rc"] }
 serde_json = "1.0.125"
 toml = "0.8.19"
 tokio = { version = "1.39.3", features = ["full"] }
