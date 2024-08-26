@@ -23,7 +23,7 @@ reqwest = { version = "0.12", default-features = false, features = [
   "gzip",
   "json",
 ] }
-minijinja = { version = "2.1", features = ["loader"] }
+minijinja = { version = "2.2", features = ["loader"] }
 clap = { version = "4.5", features = ["derive"] }
 futures = "0.3"
 anyhow = "1.0"
