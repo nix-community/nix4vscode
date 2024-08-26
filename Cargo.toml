@@ -1,7 +1,13 @@
 [package]
 name = "nix4vscode"
+description = "nix4vscode"
+readme = "README.md"
 version = "0.1.0"
 edition = "2021"
+license = "Apache-2.0"
+keywords = ["nix"]
+repository = "https://github.com/nix-community/nix4vscode"
+authors = ["Loongtao Zhang <loongtao.zhang@outlook.com>"]
 
 [dependencies]
 serde = { version = "1.0", features = ["derive", "alloc", "rc"] }
@@ -29,3 +35,24 @@ chrono = "0.4"
 derive = { path = "./derive" }
 lazy_static = "1.5"
 rust-embed = "8.5"
+
+[package.metadata.deb]
+assets = [
+  [
+    "target/release/nix4vscode",
+    "usr/bin/",
+    "755",
+  ],
+  [
+    "README.md",
+    "usr/share/doc/nix4vscode/",
+    "644",
+  ],
+  [
+    "LICENSE",
+    "usr/share/doc/nix4vscode/",
+    "644",
+  ],
+]
+priority = "optional"
+section = "utils"
