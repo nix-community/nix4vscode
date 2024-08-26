@@ -98,8 +98,7 @@ jobs:
       - name: Package (*nix)
         if: runner.os != 'Windows'
         run: |
-          tar -cv CHANGELOG.md LICENSE README.md man/ \
-            -C contrib/ completions/ -C ../ \
+          tar -cv LICENSE README.md \
             -C target/${{ matrix.target }}/release/ nix4vscode |
             gzip --best > \
             nix4vscode-${{ steps.get_version.outputs.value }}-${{ matrix.target }}.tar.gz
@@ -107,7 +106,7 @@ jobs:
         if: runner.os == 'Windows'
         run: |
           7z a nix4vscode-${{ steps.get_version.outputs.value }}-${{ matrix.target }}.zip `
-            CHANGELOG.md LICENSE README.md ./man/ ./contrib/completions/ `
+            LICENSE README.md `
             ./target/${{ matrix.target }}/release/nix4vscode.exe
 
       - name: Upload artifact
