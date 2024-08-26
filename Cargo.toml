@@ -56,3 +56,6 @@ assets = [
 ]
 priority = "optional"
 section = "utils"
+
+[profile.release]
+strip = true
