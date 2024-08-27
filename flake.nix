@@ -18,11 +18,12 @@
       pkgsFor = eachSystem (system:
         import nixpkgs {
           inherit system;
-          overlays = [ rust-overlay.overlays.default ];
+          overlays = [ rust-overlay.overlays.default self.overlays.default ];
         });
 
       cargoManifest = lib.importTOML ./Cargo.toml;
       packageName = cargoManifest.package.name;
+
       rustToolchain = lib.importTOML ./rust-toolchain.toml;
       rustVersion = rustToolchain.toolchain.channel;
     in {
@@ -31,6 +32,18 @@
           buildInputs = [ pkgs.rust-bin.stable.${rustVersion}.default ];
         };
       }) pkgsFor;
+
+      overlays = {
+        default = lib.composeManyExtensions [ self.overlays.${packageName} ];
+        ${packageName} = final: _: {
+          ${packageName} = final.rustPlatform.buildRustPackage {
+            pname = packageName;
+            version = cargoManifest.package.version;
+            cargoLock.lockFile = ./Cargo.lock;
+            src = lib.cleanSource ./.;
+          };
+        };
+      };
 
       packages = lib.mapAttrs (system: pkgs: {
         default = self.packages.${system}.${packageName};
