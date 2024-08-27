@@ -1,5 +1,10 @@
+# Cargo
 /target
-.vscode
+/derive/target
+/derive/Cargo.lock
+
+# VS Code
+.vscode/
+
+# Dev-Extras
 .direnv/
-derive/target
-derive/Cargo.lock
