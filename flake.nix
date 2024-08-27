@@ -7,25 +7,23 @@
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, ... }@inputs: with inputs;
+  outputs = { self, ... }@inputs:
+    with inputs;
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs {
           inherit system;
-          overlays = [
-            rust-overlay.overlays.default
-          ];
+          overlays = [ rust-overlay.overlays.default ];
         };
         cargo = (builtins.fromTOML (builtins.readFile ./Cargo.toml));
-        toolchain = (builtins.fromTOML (builtins.readFile ./rust-toolchain.toml));
+        toolchain =
+          (builtins.fromTOML (builtins.readFile ./rust-toolchain.toml));
         RUST_VERSION = toolchain.toolchain.channel;
-      in
-      {
-        devShells.default = with pkgs; mkShell {
-          buildInputs = [
-            rust-bin.stable.${RUST_VERSION}.default
-          ];
-        };
+      in {
+        devShells.default = with pkgs;
+          mkShell {
+            buildInputs = [ rust-bin.stable.${RUST_VERSION}.default ];
+          };
         packages = {
           ${cargo.package.name} = pkgs.rustPlatform.buildRustPackage {
             pname = cargo.package.name;
@@ -34,6 +32,7 @@
             src = pkgs.lib.cleanSource ./.;
           };
         };
-      }
-    );
+
+        formatter = pkgs.nixfmt-classic;
+      });
 }
