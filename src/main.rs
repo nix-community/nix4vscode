@@ -67,7 +67,7 @@ async fn main() -> anyhow::Result<()> {
 
 fn init_logger() {
     let log_level = std::env::var("RUST_LOG")
-        .unwrap_or("WARN".into())
+        .unwrap_or("INFO".into())
         .to_lowercase();
 
     let env_filter = EnvFilter::builder()

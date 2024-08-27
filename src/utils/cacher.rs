@@ -1,4 +1,5 @@
 use lazy_static::lazy_static;
+use log::info;
 use redb::TableDefinition;
 use std::path::PathBuf;
 use tracing::*;
@@ -45,7 +46,14 @@ pub struct Cacher(redb::Database);
 
 impl Cacher {
     fn new(path: impl AsRef<std::path::Path>) -> Self {
-        Self(redb::Database::builder().create(path).unwrap())
+        match redb::Database::builder().create(&path) {
+            Ok(db) => Self(db),
+            Err(_) => {
+                info!("open db failed. remove the older cache file.");
+                let _ = std::fs::remove_file(&path);
+                Self(redb::Database::builder().create(path).unwrap())
+            }
+        }
     }
 }
 

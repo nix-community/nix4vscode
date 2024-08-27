@@ -388,3 +388,7 @@ extension_name = "vscode-jsonnet"
 [[extensions]]
 publisher_name = "vadimcn"
 extension_name = "vscode-lldb"
+
+[[extensions]]
+extension_name = "debugpy"
+publisher_name = "ms-python"
