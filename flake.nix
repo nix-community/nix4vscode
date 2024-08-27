@@ -47,13 +47,7 @@
 
       packages = lib.mapAttrs (system: pkgs: {
         default = self.packages.${system}.${packageName};
-
-        ${packageName} = pkgs.rustPlatform.buildRustPackage {
-          pname = packageName;
-          version = cargoManifest.package.version;
-          cargoLock.lockFile = ./Cargo.lock;
-          src = lib.cleanSource ./.;
-        };
+        ${packageName} = pkgs.${packageName};
       }) pkgsFor;
 
       formatter =
