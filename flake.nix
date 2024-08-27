@@ -21,8 +21,7 @@
           overlays = [ rust-overlay.overlays.default self.overlays.default ];
         });
 
-      cargoManifest = lib.importTOML ./Cargo.toml;
-      packageName = cargoManifest.package.name;
+      packageName = (lib.importTOML ./Cargo.toml).package.name;
 
       rustToolchain = lib.importTOML ./rust-toolchain.toml;
       rustVersion = rustToolchain.toolchain.channel;
@@ -44,11 +43,9 @@
               rustc = rust-stable;
             };
           in {
-            ${packageName} = rustPlatform.buildRustPackage {
-              pname = packageName;
-              version = cargoManifest.package.version;
-              cargoLock.lockFile = ./Cargo.lock;
-              src = lib.cleanSource ./.;
+            ${packageName} = final.callPackage ./nix/package.nix {
+              sourceRoot = self;
+              inherit rustPlatform;
             };
           };
       };
