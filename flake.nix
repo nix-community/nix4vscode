@@ -10,8 +10,7 @@
     rust-overlay.url = "github:oxalica/rust-overlay";
   };
 
-  outputs = { self, ... }@inputs:
-    with inputs;
+  outputs = { self, nixpkgs, systems, rust-overlay }:
     let
       inherit (nixpkgs) lib;
 
