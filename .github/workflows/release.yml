@@ -123,7 +123,7 @@ jobs:
           github.ref == 'refs/heads/master'
         uses: softprops/action-gh-release@v2
         with:
-          draft: true
+          prerelease: true
           files: |
             *.deb
             *.tar.gz
