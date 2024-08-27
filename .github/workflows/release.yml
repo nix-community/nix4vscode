@@ -3,6 +3,8 @@ name: release
 
 on:
   push:
+    branches:
+      - master
   workflow_dispatch:
 env:
   CARGO_INCREMENTAL: 0
