@@ -8,7 +8,7 @@ in rustPlatform.buildRustPackage {
   strictDeps = true;
   meta = {
     inherit (manifest.package) description homepage;
-    locense = lib.licenses.asl20;
+    license = lib.licenses.asl20;
     platforms = lib.platforms.unix;
     mainProgram = manifest.package.name;
   };
