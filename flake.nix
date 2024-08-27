@@ -1,5 +1,5 @@
 {
-  description = "Build by nix";
+  description = "A tool to prefetch VS Code extensions for Nix expressions";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
