@@ -35,14 +35,22 @@
 
       overlays = {
         default = lib.composeManyExtensions [ self.overlays.${packageName} ];
-        ${packageName} = final: _: {
-          ${packageName} = final.rustPlatform.buildRustPackage {
-            pname = packageName;
-            version = cargoManifest.package.version;
-            cargoLock.lockFile = ./Cargo.lock;
-            src = lib.cleanSource ./.;
+        ${packageName} = final: _:
+          let
+            rust-bin = rust-overlay.lib.mkRustBin { } final;
+            rust-stable = rust-bin.stable.${rustVersion}.minimal;
+            rustPlatform = final.makeRustPlatform {
+              cargo = rust-stable;
+              rustc = rust-stable;
+            };
+          in {
+            ${packageName} = rustPlatform.buildRustPackage {
+              pname = packageName;
+              version = cargoManifest.package.version;
+              cargoLock.lockFile = ./Cargo.lock;
+              src = lib.cleanSource ./.;
+            };
           };
-        };
       };
 
       packages = lib.mapAttrs (system: pkgs: {
