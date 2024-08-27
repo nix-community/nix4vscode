@@ -134,6 +134,11 @@ impl CodeNix {
                 ) {
                     continue;
                 }
+            } else if res.iter().any(|ctx: &NixContext| {
+                item.publisher.publisher_name == ctx.publisher_name
+                    && ctx.extension_name == item.extension_name
+            }) {
+                continue;
             }
             let (has_asset_url, asset_url) = match self
                 .config
@@ -161,8 +166,11 @@ impl CodeNix {
                 ),
             };
             debug!(
-                "{}-{}-{:?}",
-                item.publisher.publisher_name, item.extension_name, asset_url
+                "{}-{}-{:?}-{:?}",
+                item.publisher.publisher_name,
+                item.extension_name,
+                asset_url,
+                version.target_platform
             );
 
             let sha256 = match utils::get_sha256(&asset_url).await {
