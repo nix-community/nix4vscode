@@ -4,35 +4,43 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     rust-overlay.url = "github:oxalica/rust-overlay";
-    flake-utils.url = "github:numtide/flake-utils";
   };
 
   outputs = { self, ... }@inputs:
     with inputs;
-    flake-utils.lib.eachDefaultSystem (system:
-      let
-        pkgs = import nixpkgs {
+    let
+      inherit (nixpkgs) lib;
+
+      systems = [ "x86_64-linux" ];
+      eachSystem = lib.genAttrs systems;
+
+      pkgsFor = eachSystem (system:
+        import nixpkgs {
           inherit system;
           overlays = [ rust-overlay.overlays.default ];
-        };
-        cargo = (builtins.fromTOML (builtins.readFile ./Cargo.toml));
-        toolchain =
-          (builtins.fromTOML (builtins.readFile ./rust-toolchain.toml));
-        RUST_VERSION = toolchain.toolchain.channel;
-      in {
-        devShells.default = with pkgs;
-          mkShell {
-            buildInputs = [ rust-bin.stable.${RUST_VERSION}.default ];
-          };
-        packages = {
-          ${cargo.package.name} = pkgs.rustPlatform.buildRustPackage {
-            pname = cargo.package.name;
-            version = cargo.package.version;
-            cargoLock.lockFile = ./Cargo.lock;
-            src = pkgs.lib.cleanSource ./.;
-          };
-        };
+        });
 
-        formatter = pkgs.nixfmt-classic;
-      });
+      cargoManifest = (builtins.fromTOML (builtins.readFile ./Cargo.toml));
+      rustToolchain =
+        (builtins.fromTOML (builtins.readFile ./rust-toolchain.toml));
+      rustVersion = rustToolchain.toolchain.channel;
+    in {
+      devShells = lib.mapAttrs (system: pkgs: {
+        default = pkgs.mkShell {
+          buildInputs = [ pkgs.rust-bin.stable.${rustVersion}.default ];
+        };
+      }) pkgsFor;
+
+      packages = lib.mapAttrs (system: pkgs: {
+        ${cargoManifest.package.name} = pkgs.rustPlatform.buildRustPackage {
+          pname = cargoManifest.package.name;
+          version = cargoManifest.package.version;
+          cargoLock.lockFile = ./Cargo.lock;
+          src = lib.cleanSource ./.;
+        };
+      }) pkgsFor;
+
+      formatter =
+        eachSystem (system: nixpkgs.legacyPackages.${system}.nixfmt-classic);
+    };
 }
