@@ -5,4 +5,5 @@ in rustPlatform.buildRustPackage {
   version = manifest.package.version;
   cargoLock.lockFile = "${sourceRoot}/Cargo.lock";
   src = lib.cleanSource sourceRoot;
+  strictDeps = true;
 }
