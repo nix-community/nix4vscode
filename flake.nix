@@ -23,6 +23,7 @@
         });
 
       cargoManifest = lib.importTOML ./Cargo.toml;
+      packageName = cargoManifest.package.name;
       rustToolchain = lib.importTOML ./rust-toolchain.toml;
       rustVersion = rustToolchain.toolchain.channel;
     in {
@@ -33,8 +34,10 @@
       }) pkgsFor;
 
       packages = lib.mapAttrs (system: pkgs: {
-        ${cargoManifest.package.name} = pkgs.rustPlatform.buildRustPackage {
-          pname = cargoManifest.package.name;
+        default = self.packages.${system}.${packageName};
+
+        ${packageName} = pkgs.rustPlatform.buildRustPackage {
+          pname = packageName;
           version = cargoManifest.package.version;
           cargoLock.lockFile = ./Cargo.lock;
           src = lib.cleanSource ./.;
