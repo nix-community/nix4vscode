@@ -3,6 +3,10 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    systems = {
+      url = "github:nix-systems/default";
+      flake = false;
+    };
     rust-overlay.url = "github:oxalica/rust-overlay";
   };
 
@@ -11,9 +15,7 @@
     let
       inherit (nixpkgs) lib;
 
-      systems = [ "x86_64-linux" ];
-      eachSystem = lib.genAttrs systems;
-
+      eachSystem = lib.genAttrs (import systems);
       pkgsFor = eachSystem (system:
         import nixpkgs {
           inherit system;
