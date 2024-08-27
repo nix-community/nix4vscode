@@ -22,9 +22,8 @@
           overlays = [ rust-overlay.overlays.default ];
         });
 
-      cargoManifest = (builtins.fromTOML (builtins.readFile ./Cargo.toml));
-      rustToolchain =
-        (builtins.fromTOML (builtins.readFile ./rust-toolchain.toml));
+      cargoManifest = lib.importTOML ./Cargo.toml;
+      rustToolchain = lib.importTOML ./rust-toolchain.toml;
       rustVersion = rustToolchain.toolchain.channel;
     in {
       devShells = lib.mapAttrs (system: pkgs: {
