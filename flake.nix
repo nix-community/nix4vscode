@@ -28,6 +28,7 @@
     in {
       devShells = lib.mapAttrs (system: pkgs: {
         default = pkgs.mkShell {
+          strictDeps = true;
           buildInputs = [ pkgs.rust-bin.stable.${rustVersion}.default ];
         };
       }) pkgsFor;
