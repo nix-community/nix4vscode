@@ -1,4 +1,4 @@
-{ sourceRoot ? ../., lib, rustPlatform, ... }:
+{ sourceRoot ? ../., lib, rustPlatform }:
 let manifest = lib.importTOML "${sourceRoot}/Cargo.toml";
 in rustPlatform.buildRustPackage {
   pname = manifest.package.name;
