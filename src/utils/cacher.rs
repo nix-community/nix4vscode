@@ -1,5 +1,4 @@
 use lazy_static::lazy_static;
-use log::info;
 use redb::TableDefinition;
 use std::path::PathBuf;
 use tracing::*;
