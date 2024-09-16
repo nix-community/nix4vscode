@@ -26,7 +26,7 @@ jobs:
             ~/.cargo/registry/cache/
           key: cargo_cache-${{ runner.os }}
       - name: Install Nix
-        uses: cachix/install-nix-action@V27
+        uses: cachix/install-nix-action@V28
         with:
           extra_nix_config: |
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
