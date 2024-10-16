@@ -1,6 +1,6 @@
 # Nix4Vscode
 
-A tool generate nix expression from config.toml. Let's guess we have a config.toml like this:
+A tool generate nix expression from `config.toml`. Assuming we have a `config.toml` file like this:
 
 ```toml
 vscode_version = "1.81.1"
@@ -14,7 +14,7 @@ publisher_name = "vscodevim"
 extension_name = "vim"
 ```
 
-then run `cargo run -- config.toml` , the a nix expression will be print to stdout just like this:
+then can then run `cargo run -- config.toml`, and a nix expression will be print to `stdout` just like this:
 
 ```nix
 { pkgs, lib }:
@@ -38,7 +38,7 @@ in
 }
 ```
 
-Let's guess you store those contents in a file named `pkgs.nix`, then you can use it by:
+Let's assume you store those contents in a file named `pkgs.nix`, then you can use it by:
 
 ```nix
 { pkgs, lib }:
@@ -55,6 +55,43 @@ with pkgs;
   ;
 }
 ```
+
+## Installation
+
+The simplest way to run nix4vscode is inside a devshell. Clone the nix4vscode repository, change into the resulting directory and run:
+
+```shell
+$ git clone https://github.com/nix-community/nix4vscode.git
+$ cd nix4vscode
+$ nix develop
+$ cargo run -- config.toml
+```
+
+Replace `config.toml` with the name and path to your VSCode plugin configuration file.
+
+## Creating the config.toml file
+
+If you don't already have one, you can create the `config.toml` file by running the following script:
+
+```shell
+#!/bin/bash
+
+# Output the VSCode version
+echo 'vscode_version = "'$(code --version | head -n1)'"'
+echo
+
+# Loop through each installed extension
+code --list-extensions | while read extension; do
+  publisher_name=$(echo "$extension" | cut -d '.' -f 1)
+  extension_name=$(echo "$extension" | cut -d '.' -f 2-)
+  echo '[[extensions]]'
+  echo 'publisher_name = "'$publisher_name'"'
+  echo 'extension_name = "'$extension_name'"'
+  echo
+done
+```
+
+Just create the script, make it executable and then pipe the output to your `config.toml` file.
 
 ## Redirect asset_url
 
