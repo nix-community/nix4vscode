@@ -14,7 +14,7 @@ publisher_name = "vscodevim"
 extension_name = "vim"
 ```
 
-then can then run `cargo run -- config.toml`, and a nix expression will be print to `stdout` just like this:
+We can then run `cargo run -- config.toml`, and a nix expression will be print to `stdout` just like this:
 
 ```nix
 { pkgs, lib }:
@@ -38,7 +38,7 @@ in
 }
 ```
 
-Let's assume you store those contents in a file named `pkgs.nix`, then you can use it by:
+Let's assume you store these contents in a file named `pkgs.nix`, you can use it by:
 
 ```nix
 { pkgs, lib }:
