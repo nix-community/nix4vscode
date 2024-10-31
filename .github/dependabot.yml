@@ -8,20 +8,20 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
     commit-message:
       prefix: "ci"
 
   - package-ecosystem: "cargo"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
     labels:
       - "no-changelog"
 
   - package-ecosystem: "cargo"
     directory: "/derive"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
     labels:
       - "no-changelog"
