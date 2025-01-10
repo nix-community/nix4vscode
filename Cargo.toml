@@ -34,7 +34,6 @@ thiserror = "2.0"
 lazy-regex = "3.4"
 chrono = "0.4"
 derive = { path = "./derive" }
-lazy_static = "1.5"
 rust-embed = "8.5"
 
 [package.metadata.deb]

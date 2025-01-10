@@ -1,27 +1,24 @@
-use lazy_static::lazy_static;
 use redb::TableDefinition;
-use std::path::PathBuf;
+use std::{path::PathBuf, sync::LazyLock};
 use tracing::*;
 
 use crate::error::Error;
 
-lazy_static! {
-    pub static ref GLOBAL_CACHER: Cacher = {
-        let path = format!(
-            "{}/{}/{}",
-            std::env::var("HOME").unwrap(),
-            ".cache",
-            "nix4vscode"
-        );
-        let path = PathBuf::from(path);
-        if !path.exists() {
-            std::fs::create_dir_all(path.clone()).unwrap();
-        }
-        let path = path.join("cache.redb");
+pub static GLOBAL_CACHER: LazyLock<Cacher> = LazyLock::new(|| {
+    let path = format!(
+        "{}/{}/{}",
+        std::env::var("HOME").unwrap(),
+        ".cache",
+        "nix4vscode"
+    );
+    let path = PathBuf::from(path);
+    if !path.exists() {
+        std::fs::create_dir_all(path.clone()).unwrap();
+    }
+    let path = path.join("cache.redb");
 
-        Cacher::new(path)
-    };
-}
+    Cacher::new(path)
+});
 
 static TABLE_SHA256: TableDefinition<&str, &str> = TableDefinition::new("SHA256");
 static TABLE_HTTP_CLIENT: TableDefinition<&str, &str> = TableDefinition::new("HTTP_CLIENT");
