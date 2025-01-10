@@ -4,8 +4,8 @@ pub mod error;
 pub mod jinja;
 pub mod utils;
 
+use tokio::fs;
 use tracing::*;
-use tracing_subscriber::{fmt, prelude::*, util::SubscriberInitExt, EnvFilter};
 
 use clap::Parser;
 use config::Config;
@@ -23,37 +23,33 @@ struct Args {
     output: Option<String>,
     #[arg(long, hide = true)]
     export: bool,
-    #[arg(long, hide = true)]
-    dump: bool,
-    #[arg(long)]
-    openvsx: bool,
 }
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
+    init_logger();
     let args = Args::parse();
 
-    init_logger();
+    let config = Config::from_file(&args.file).await?;
+    debug!(?config);
 
-    let config = Config::new(tokio::fs::read_to_string(&args.file).await?.as_str())?;
-    debug!("request: {config:?}");
     let mut generator = Generator::new();
     let mut code = CodeNix::new(config.clone());
 
-    let res = code.get_extensions(generator.clone()).await;
+    let ctx = code.get_extensions(generator.clone()).await;
+    debug!("{ctx:#?}");
 
-    debug!("{res:#?}");
     if args.export {
-        let res = serde_json::to_string(&res).unwrap();
+        let res = serde_json::to_string(&ctx)?;
         match args.output {
-            Some(filepath) => tokio::fs::write(filepath, res).await.unwrap(),
+            Some(filepath) => fs::write(filepath, res).await?,
             None => println!("{res}",),
         }
         return Ok(());
     }
 
     let res = generator.render(&GeneratorContext {
-        extensions: res,
+        extensions: ctx,
         config: config.clone().into(),
     })?;
 
@@ -66,6 +62,8 @@ async fn main() -> anyhow::Result<()> {
 }
 
 fn init_logger() {
+    use tracing_subscriber::{fmt, prelude::*, util::SubscriberInitExt, EnvFilter};
+
     let log_level = std::env::var("RUST_LOG")
         .unwrap_or("INFO".into())
         .to_lowercase();

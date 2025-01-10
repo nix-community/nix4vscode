@@ -1,6 +1,7 @@
 use anyhow::anyhow;
 use lazy_regex::regex;
 use serde::{Deserialize, Serialize};
+use tokio::fs;
 
 use crate::jinja::{Generator, SystemContext};
 
@@ -22,6 +23,11 @@ pub struct Config {
 }
 
 impl Config {
+    pub async fn from_file(path: &str) -> anyhow::Result<Self> {
+        let content = fs::read_to_string(path).await?;
+        Self::new(&content)
+    }
+
     pub fn new(content: &str) -> anyhow::Result<Self> {
         let mut obj: Config = toml::from_str(content)?;
         let reg = regex!(r#"(\d+.\d+.\d+)(.*)?"#)

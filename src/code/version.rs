@@ -14,7 +14,7 @@ macro_rules! texpr {
 }
 
 #[derive(Debug, Clone, Default)]
-struct IParsedVersion {
+pub struct IParsedVersion {
     has_caret: bool,
     has_greater_equals: bool,
     major_base: u64,
@@ -27,7 +27,7 @@ struct IParsedVersion {
 }
 
 impl IParsedVersion {
-    fn new(version: &str) -> anyhow::Result<Self> {
+    pub fn new(version: &str) -> anyhow::Result<Self> {
         let version = version.trim();
         if version == "*" {
             return Ok(Default::default());
