@@ -35,6 +35,7 @@ lazy-regex = "3.4"
 chrono = "0.4"
 derive = { path = "./derive" }
 rust-embed = "8.5"
+rusqlite = { version = "0.32.1", features = ["bundled"] }
 
 [package.metadata.deb]
 assets = [

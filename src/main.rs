@@ -1,5 +1,6 @@
 pub mod code;
 pub mod config;
+mod db;
 pub mod error;
 pub mod jinja;
 pub mod utils;
