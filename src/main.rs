@@ -5,6 +5,10 @@ pub mod error;
 pub mod jinja;
 pub mod utils;
 
+use std::collections::HashMap;
+
+use itertools::Itertools;
+use jinja::NixContext;
 use tokio::fs;
 use tracing::*;
 
@@ -38,10 +42,21 @@ async fn main() -> anyhow::Result<()> {
     let mut code = CodeNix::new(config.clone());
 
     let ctx = code.get_extensions(generator.clone()).await;
+    let mut ctx2 = HashMap::<String, NixContext>::new();
+    for item in ctx {
+        ctx2.insert(
+            format!(
+                "{}-{}-{:?}",
+                item.publisher_name, item.extension_name, item.target_platform
+            ),
+            item,
+        );
+    }
+    let ctx = ctx2.into_values().collect_vec();
     debug!("{ctx:#?}");
 
     if args.export {
-        let res = serde_json::to_string(&ctx)?;
+        let res = serde_json::to_string_pretty(&ctx)?;
         match args.output {
             Some(filepath) => fs::write(filepath, res).await?,
             None => println!("{res}",),

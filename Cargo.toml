@@ -36,6 +36,7 @@ chrono = "0.4"
 derive = { path = "./derive" }
 rust-embed = "8.5"
 rusqlite = { version = "0.32.1", features = ["bundled"] }
+itertools = "0.14.0"
 
 [package.metadata.deb]
 assets = [
