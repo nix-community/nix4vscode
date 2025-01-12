@@ -1,32 +1,19 @@
-// https://github.com/microsoft/vscode/blob/d187d50a482ff80dcf74c35affb09dda1a7cd2fe/src/vs/platform/extensionManagement/common/extensionGalleryService.ts
-mod enums;
-mod extensions;
-mod flags;
-mod gallery_extension;
-mod http_client;
-mod query;
-mod request_body;
-mod version;
-
 use std::pin::pin;
 use std::str::FromStr;
 
-pub use extensions::*;
+use code_api::code::is_version_valid;
+use code_api::code::AssetType;
+use code_api::code::HttpClient;
+use code_api::code::IRawGalleryExtension;
+use code_api::code::TargetPlatform;
 use futures::future::join_all;
 use futures::stream;
 use futures::StreamExt;
-pub use gallery_extension::*;
 
-pub use enums::*;
-pub use flags::*;
-pub use http_client::*;
-pub use query::*;
-pub use request_body::*;
 use semver::Version;
 use tracing::debug;
 use tracing::error;
 use tracing::trace;
-pub use version::*;
 
 use crate::config::Config;
 use crate::jinja::AssetUrlContext;

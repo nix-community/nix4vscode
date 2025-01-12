@@ -1,6 +1,5 @@
+use code_api::config::SystemContext;
 use serde::{Deserialize, Serialize};
-
-use crate::jinja::SystemContext;
 
 #[derive(Debug, Default, Deserialize, Serialize)]
 pub struct AssetUrlContext {

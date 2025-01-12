@@ -1,10 +1,10 @@
 use crate::{
     code::{self, IRawGalleryExtensionsResult, IRawGalleryQueryResult, TargetPlatform},
     config::Extension,
-    error::Error,
 };
 
 use super::Query;
+use anyhow::anyhow;
 use async_stream::try_stream;
 use futures::stream::Stream;
 use tracing::*;
@@ -78,7 +78,7 @@ impl HttpClient {
             .await?
             .json::<code::IRawGalleryQueryResult>()
             .await?;
-        txt.results.into_iter().next().ok_or(Error::Unknown.into())
+        txt.results.into_iter().next().ok_or(anyhow!("Unknown"))
     }
 
     pub async fn get_extension_target_platform(

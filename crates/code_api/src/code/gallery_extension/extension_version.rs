@@ -1,6 +1,7 @@
+use anyhow::anyhow;
 use derive::api;
 
-use crate::{code::PropertyType, error::Error};
+use crate::code::PropertyType;
 
 use super::*;
 
@@ -29,7 +30,7 @@ impl IRawGalleryExtensionVersion {
             .position(|item| item.key == PropertyType::Engine.to_string())
         {
             Some(idx) => Ok(self.properties[idx].value.clone()),
-            None => Err(Error::AttributeMissing("engine".into()).into()),
+            None => Err(anyhow!("Missing attribute: engine")),
         }
     }
 

@@ -1,0 +1,22 @@
+[package]
+name = "code-api"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+futures = { workspace = true }
+tracing = { workspace = true }
+anyhow = { workspace = true }
+serde = { workspace = true }
+bitflags = { version = "2.7", features = ["serde", "std"] }
+async-stream = "0.3"
+serde_json = { workspace = true }
+chrono = { workspace = true }
+lazy-regex = { workspace = true }
+reqwest = { version = "0.12", default-features = false, features = [
+  "rustls-tls",
+  "gzip",
+  "json",
+] }
+
+derive = { path = "../derive" }
