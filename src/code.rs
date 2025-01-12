@@ -8,10 +8,13 @@ mod query;
 mod request_body;
 mod version;
 
+use std::pin::pin;
 use std::str::FromStr;
 
 pub use extensions::*;
 use futures::future::join_all;
+use futures::stream;
+use futures::StreamExt;
 pub use gallery_extension::*;
 
 pub use enums::*;
@@ -45,31 +48,32 @@ impl CodeNix {
     }
 
     pub async fn get_extensions(&mut self, generator: Generator<'static>) -> Vec<NixContext> {
-        let obj = self
-            .client
-            .get_extension_response(&self.config.handled_extensions)
-            .await
-            .unwrap();
+        let mut obj = vec![];
+        {
+            let mut iter = self
+                .client
+                .get_extension_response(self.config.handled_extensions.clone())
+                .filter_map(|item| async move {
+                    match item {
+                        Ok(v) => Some(v),
+                        Err(_) => None,
+                    }
+                })
+                .flat_map(|item| stream::iter(item.extensions));
+
+            let mut iter = pin!(iter);
+            while let Some(val) = iter.next().await {
+                if self
+                    .config
+                    .contains(&val.publisher.publisher_name, &val.extension_name)
+                {
+                    obj.push(val);
+                }
+            }
+        }
 
         let futures: Vec<_> = obj
-            .results
             .into_iter()
-            .flat_map(|item| item.extensions.into_iter())
-            .filter(|item| {
-                match self
-                    .config
-                    .contains(&item.publisher.publisher_name, &item.extension_name)
-                {
-                    true => true,
-                    false => {
-                        debug!(
-                            "extensions be filtered {}.{}",
-                            item.publisher.publisher_name, item.extension_name
-                        );
-                        false
-                    }
-                }
-            })
             .map(|item| {
                 trace!("aa");
                 let generator = generator.clone();

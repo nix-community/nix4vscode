@@ -1,12 +1,12 @@
 use crate::{
-    code::{
-        self, IQueryState, IRawGalleryExtensionsResult, IRawGalleryQueryResult, TargetPlatform,
-    },
+    code::{self, IRawGalleryExtensionsResult, IRawGalleryQueryResult, TargetPlatform},
     config::Extension,
     error::Error,
 };
 
 use super::Query;
+use async_stream::try_stream;
+use futures::stream::Stream;
 use tracing::*;
 
 #[derive(Debug, Clone)]
@@ -20,43 +20,42 @@ impl HttpClient {
         Ok(Self { client })
     }
 
-    pub async fn get_extension_response(
+    pub fn get_extension_response(
         &self,
-        extensions: &[Extension],
-    ) -> anyhow::Result<code::IRawGalleryQueryResult> {
-        let mut results = IRawGalleryQueryResult::default();
-        let extension_count: u64 = extensions.len() as u64;
+        extensions: Vec<Extension>,
+    ) -> impl Stream<Item = anyhow::Result<code::IRawGalleryExtensionsResult>> + '_ {
         let mut page_number: u64 = 1;
-        loop {
-            let query = Query::new(extensions, page_number);
-            let body = serde_json::to_string(&query)?;
-            trace!("send request: {body}");
-            let mut response = self
-                .client
-                .post("https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery")
-                .header(
-                    "Accept",
-                    "Application/json; charset=utf-8; api-version=7.2-preview.1",
-                )
-                .header("Content-Type", "application/json")
-                .body(body.clone())
-                .send()
-                .await?
-                .json::<IRawGalleryQueryResult>()
-                .await?;
 
-            if response.results.is_empty() {
-                break;
+        try_stream! {
+            loop {
+                let query = Query::new(&extensions, page_number);
+                let body = serde_json::to_string(&query)?;
+                trace!("send request: {body}");
+                let response = self
+                    .client
+                    .post("https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery")
+                    .header(
+                        "Accept",
+                        "Application/json; charset=utf-8; api-version=7.2-preview.1",
+                    )
+                    .header("Content-Type", "application/json")
+                    .body(body.clone())
+                    .send()
+                    .await?
+                    .json::<IRawGalleryQueryResult>()
+                    .await?;
+
+                if response.results.is_empty() {
+                    break;
+                }
+
+                for item in response.results {
+                    yield item
+                }
+
+                page_number += 1;
             }
-
-            results.results.append(&mut response.results);
-            if page_number * IQueryState::DEFAULT_PAGE_SIZE >= extension_count {
-                break;
-            }
-
-            page_number += 1;
         }
-        Ok(results)
     }
 
     async fn inner_get_extension_target_platform(
