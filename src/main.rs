@@ -7,6 +7,7 @@ pub mod utils;
 
 use std::collections::HashMap;
 
+use code::CodeNix;
 use itertools::Itertools;
 use jinja::NixContext;
 use tokio::fs;
@@ -15,10 +16,7 @@ use tracing::*;
 use clap::Parser;
 use config::Config;
 
-use crate::{
-    code::CodeNix,
-    jinja::{Generator, GeneratorContext},
-};
+use crate::jinja::{Generator, GeneratorContext};
 
 #[derive(Debug, Parser)]
 #[command(author, version)]

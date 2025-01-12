@@ -1,18 +1,11 @@
 use anyhow::anyhow;
+use code_api::config::{Extension, SystemContext};
 use lazy_regex::regex;
 use serde::{Deserialize, Serialize};
 use tokio::fs;
 use tracing::error;
 
-use crate::jinja::{Generator, SystemContext};
-
-#[derive(Debug, Serialize, Deserialize, PartialEq, Eq, Clone)]
-pub struct Extension {
-    pub publisher_name: String,
-    pub extension_name: String,
-    pub asset_url: Option<String>,
-    pub system: Option<SystemContext>,
-}
+use crate::jinja::Generator;
 
 #[derive(Debug, Serialize, Deserialize, PartialEq, Eq, Clone)]
 #[serde(untagged)]

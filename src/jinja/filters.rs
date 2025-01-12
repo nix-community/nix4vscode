@@ -1,7 +1,6 @@
+use code_api::code::TargetPlatform;
 use minijinja::Value;
 use nixpkgs_fmt::reformat_string;
-
-use crate::code::TargetPlatform;
 
 pub fn nixfmt(value: &str) -> String {
     reformat_string(value)

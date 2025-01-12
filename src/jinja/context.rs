@@ -1,12 +1,13 @@
 use std::sync::Arc;
 
+use code_api::code::TargetPlatform;
 use serde::{Deserialize, Serialize};
 
 mod asset_url;
 
 pub use asset_url::*;
 
-use crate::{code::TargetPlatform, config::Config};
+use crate::config::Config;
 
 #[derive(Debug, Default, Deserialize, Serialize)]
 pub struct GeneratorContext {
