@@ -28,7 +28,8 @@ pub struct Config {
     pub autogen_warning: Option<String>,
     pub extensions: Vec<ExtensionType>,
     pub system: Option<SystemContext>,
-    pub handled_extensions: Vec<Extension>,
+    #[serde(skip)]
+    pub(crate) handled_extensions: Vec<Extension>,
 }
 
 impl Config {
