@@ -2,7 +2,7 @@ use derive::api;
 use serde::{Deserialize, Serialize};
 
 // https://github.com/microsoft/vscode/blob/d187d50a482ff80dcf74c35affb09dda1a7cd2fe/src/vs/platform/extensions/common/extensions.ts
-#[derive(Debug, Serialize, Deserialize, Clone, Copy)]
+#[derive(Debug, Serialize, Deserialize, Clone, Copy, Hash, Eq, PartialEq)]
 #[serde(rename_all = "kebab-case")]
 pub enum TargetPlatform {
     Win32X64,
