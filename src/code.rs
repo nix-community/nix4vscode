@@ -47,7 +47,7 @@ impl CodeNix {
     pub async fn get_extensions(&mut self, generator: Generator<'static>) -> Vec<NixContext> {
         let obj = self
             .client
-            .get_extension_response(&self.config.extensions)
+            .get_extension_response(&self.config.handled_extensions)
             .await
             .unwrap();
 
