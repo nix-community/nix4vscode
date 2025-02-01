@@ -31,7 +31,7 @@ tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 futures = { workspace = true }
 
 semver = { workspace = true }
-minijinja = { version = "2.6", features = ["loader"] }
+minijinja = { version = "2.7", features = ["loader"] }
 clap = { version = "4.5", features = ["derive"] }
 anyhow = { workspace = true }
 nixpkgs-fmt = "1.3"
