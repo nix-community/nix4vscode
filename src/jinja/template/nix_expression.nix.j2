@@ -27,6 +27,19 @@ merge
           }).outPath;
           vscodeExtUniqueId = "{{ item.publisher_name }}.{{ item.extension_name }}";
           version = "{{ item.extension_version }}";
+          {% if extension_name == "cpptools" %}
+              postPatch =
+                ''
+                  # Prevent download/install of extensions
+                  touch "./install.lock"
+
+                  # Patching binaries
+                  chmod +x bin/cpptools bin/cpptools-srv bin/cpptools-wordexp debugAdapters/bin/OpenDebugAD7 debugAdapters/lldb-mi/bin/lldb-mi LLVM/bin/clang-format LLVM/bin/clang-tidy
+                '' +lib.optionalString isLinux ''
+                  chmod +x bin/libc.so
+                ''
+              ;
+          {% endif %}
         });
     {%- endwith %}
     {%- endif %}
@@ -41,6 +54,19 @@ merge
           publisher = "{{ item.publisher_name }}";
           version = "{{ item.extension_version }}";
           sha256 = "{{ item.sha256 }}";
+          {% if extension_name == "cpptools" %}
+              postPatch =
+                ''
+                  # Prevent download/install of extensions
+                  touch "./install.lock"
+
+                  # Patching binaries
+                  chmod +x bin/cpptools bin/cpptools-srv bin/cpptools-wordexp debugAdapters/bin/OpenDebugAD7 debugAdapters/lldb-mi/bin/lldb-mi LLVM/bin/clang-format LLVM/bin/clang-tidy
+                '' +lib.optionalString isLinux ''
+                  chmod +x bin/libc.so
+                ''
+              ;
+          {% endif %}
         };
         {%- endif %}
     {%- endwith %}
@@ -58,6 +84,19 @@ merge
           version = "{{ item.extension_version }}";
           sha256 = "{{ item.sha256 }}";
           arch = "linux-x64";
+          {% if extension_name == "cpptools" %}
+              postPatch =
+                ''
+                  # Prevent download/install of extensions
+                  touch "./install.lock"
+
+                  # Patching binaries
+                  chmod +x bin/cpptools bin/cpptools-srv bin/cpptools-wordexp debugAdapters/bin/OpenDebugAD7 debugAdapters/lldb-mi/bin/lldb-mi LLVM/bin/clang-format LLVM/bin/clang-tidy
+                '' +lib.optionalString isLinux ''
+                  chmod +x bin/libc.so
+                ''
+              ;
+          {% endif %}
         };
         {%- endif %}
     {%- endwith %}
@@ -75,6 +114,19 @@ merge
           version = "{{ item.extension_version }}";
           sha256 = "{{ item.sha256 }}";
           arch = "linux-arm64";
+          {% if extension_name == "cpptools" %}
+              postPatch =
+                ''
+                  # Prevent download/install of extensions
+                  touch "./install.lock"
+
+                  # Patching binaries
+                  chmod +x bin/cpptools bin/cpptools-srv bin/cpptools-wordexp debugAdapters/bin/OpenDebugAD7 debugAdapters/lldb-mi/bin/lldb-mi LLVM/bin/clang-format LLVM/bin/clang-tidy
+                '' +lib.optionalString isLinux ''
+                  chmod +x bin/libc.so
+                ''
+              ;
+          {% endif %}
         };
         {%- endif %}
     {%- endwith %}
@@ -92,6 +144,19 @@ merge
           version = "{{ item.extension_version }}";
           sha256 = "{{ item.sha256 }}";
           arch = "darwin-x64";
+          {% if extension_name == "cpptools" %}
+              postPatch =
+                ''
+                  # Prevent download/install of extensions
+                  touch "./install.lock"
+
+                  # Patching binaries
+                  chmod +x bin/cpptools bin/cpptools-srv bin/cpptools-wordexp debugAdapters/bin/OpenDebugAD7 debugAdapters/lldb-mi/bin/lldb-mi LLVM/bin/clang-format LLVM/bin/clang-tidy
+                '' +lib.optionalString isLinux ''
+                  chmod +x bin/libc.so
+                ''
+              ;
+          {% endif %}
         };
         {%- endif %}
     {%- endwith %}
@@ -109,6 +174,19 @@ merge
           version = "{{ item.extension_version }}";
           sha256 = "{{ item.sha256 }}";
           arch = "darwin-arm64";
+          {% if extension_name == "cpptools" %}
+              postPatch =
+                ''
+                  # Prevent download/install of extensions
+                  touch "./install.lock"
+
+                  # Patching binaries
+                  chmod +x bin/cpptools bin/cpptools-srv bin/cpptools-wordexp debugAdapters/bin/OpenDebugAD7 debugAdapters/lldb-mi/bin/lldb-mi LLVM/bin/clang-format LLVM/bin/clang-tidy
+                '' +lib.optionalString isLinux ''
+                  chmod +x bin/libc.so
+                ''
+              ;
+          {% endif %}
         };
         {%- endif %}
     {%- endwith %}
