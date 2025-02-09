@@ -33,9 +33,9 @@ jobs:
           - os: ubuntu-latest
             target: i686-unknown-linux-musl
             deb: true
-          - os: macos-11
+          - os: macos-latest
             target: x86_64-apple-darwin
-          - os: macos-11
+          - os: macos-latest
             target: aarch64-apple-darwin
           - os: windows-latest
             target: x86_64-pc-windows-msvc
