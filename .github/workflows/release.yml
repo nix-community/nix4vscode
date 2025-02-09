@@ -111,14 +111,10 @@ jobs:
             *.zip
 
       - name: Create release
-        if: |
-          github.ref == 'refs/heads/master'
         uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
         with:
-          prerelease: true
           files: |
             *.deb
             *.tar.gz
             *.zip
-          name: nix4vscode prerelease build
-          tag_name: nightly
