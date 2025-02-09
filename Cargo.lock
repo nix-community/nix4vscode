@@ -1200,7 +1200,7 @@ dependencies = [
 
 [[package]]
 name = "nix4vscode"
-version = "0.1.0"
+version = "0.0.2"
 dependencies = [
  "anyhow",
  "clap 4.5.27",
