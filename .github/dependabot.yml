@@ -16,12 +16,8 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
-    labels:
-      - "no-changelog"
 
   - package-ecosystem: "cargo"
     directory: "/derive"
     schedule:
       interval: "monthly"
-    labels:
-      - "no-changelog"
