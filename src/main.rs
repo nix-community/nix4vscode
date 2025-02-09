@@ -43,10 +43,7 @@ async fn main() -> anyhow::Result<()> {
     let mut ctx2 = HashMap::<String, NixContext>::new();
     for item in ctx {
         ctx2.insert(
-            format!(
-                "{}-{}-{:?}",
-                item.publisher_name, item.extension_name, item.target_platform
-            ),
+            format!("{}-{}-{:?}", item.publisher, item.name, item.platform),
             item,
         );
     }

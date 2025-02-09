@@ -17,10 +17,10 @@ pub struct GeneratorContext {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct NixContext {
-    pub extension_name: String,
-    pub publisher_name: String,
-    pub extension_version: String,
+    pub name: String,
+    pub publisher: String,
+    pub version: String,
     pub asset_url: Option<String>,
     pub sha256: String,
-    pub target_platform: TargetPlatform,
+    pub platform: TargetPlatform,
 }
