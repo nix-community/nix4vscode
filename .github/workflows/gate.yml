@@ -2,7 +2,6 @@ name: "gate"
 
 on:
   pull_request:
-  push:
   workflow_dispatch:
 
 permissions:
@@ -13,33 +12,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: awalsh128/cache-apt-pkgs-action@latest
-        with:
-          packages: make fonts-noto-cjk fonts-noto-cjk-extra yarnpkg
-          version: 1.0
-      - name: Cache cargo
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/.cargo/git/db/
-            ~/.cargo/registry/index/
-            ~/.cargo/registry/cache/
-          key: cargo_cache-${{ runner.os }}
       - name: Install Nix
         uses: cachix/install-nix-action@v30
         with:
           extra_nix_config: |
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
-      - uses: CfirTsabari/actions-rs-toolchain@v1
-      - name: Build Packages
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Install taplo
         run: |
-          rustup component add rustfmt
-          rustup component add clippy
-          export RUST_LOG=DEBUG
+          curl -fsSL https://github.com/tamasfe/taplo/releases/latest/download/taplo-full-linux-x86_64.gz \ | gzip -d - | install -m 755 /dev/stdin /usr/local/bin/taplo
+
+      - name: Check style
+        env:
+           RUST_LOG: DEBUG
+        run: |
           pip install pre-commit
-          yarnpkg global add @taplo/cli
           cargo clippy -- -Dwarnings
           cargo test
+
+      - name: Check nix
+        run: |
           cargo run -- config.toml -o example/vscode_plugins.nix
           cat example/vscode_plugins.nix
           cd example && nix develop --build
