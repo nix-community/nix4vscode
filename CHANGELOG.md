@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.3](https://github.com/nix-community/nix4vscode/compare/nix4vscode-v0.0.2...nix4vscode-v0.0.3) (2025-02-23)
+
+
+### Bug Fixes
+
+* **cpptools:** fix cpptools ([966e53c](https://github.com/nix-community/nix4vscode/commit/966e53cfd905b3bfd77cd61ee26b84860747c87b))
+
 ## [0.0.2](https://github.com/nix-community/nix4vscode/compare/nix4vscode-v0.0.1...nix4vscode-v0.0.2) (2025-02-09)
 
 
