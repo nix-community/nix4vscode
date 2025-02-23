@@ -27,7 +27,7 @@ merge
           }).outPath;
           vscodeExtUniqueId = "{{ item.publisher }}.{{ item.name }}";
           version = "{{ item.version }}";
-          {% if name == "cpptools" %}
+          {% if item.name == "cpptools" %}
               postPatch =
                 ''
                   # Prevent download/install of extensions
@@ -54,7 +54,7 @@ merge
           publisher = "{{ item.publisher }}";
           version = "{{ item.version }}";
           sha256 = "{{ item.sha256 }}";
-          {% if name == "cpptools" %}
+          {% if item.name == "cpptools" %}
               postPatch =
                 ''
                   # Prevent download/install of extensions
@@ -84,7 +84,7 @@ merge
           version = "{{ item.version }}";
           sha256 = "{{ item.sha256 }}";
           arch = "linux-x64";
-          {% if name == "cpptools" %}
+          {% if item.name == "cpptools" %}
               postPatch =
                 ''
                   # Prevent download/install of extensions
@@ -114,7 +114,7 @@ merge
           version = "{{ item.version }}";
           sha256 = "{{ item.sha256 }}";
           arch = "linux-arm64";
-          {% if name == "cpptools" %}
+          {% if item.name == "cpptools" %}
               postPatch =
                 ''
                   # Prevent download/install of extensions
@@ -144,7 +144,7 @@ merge
           version = "{{ item.version }}";
           sha256 = "{{ item.sha256 }}";
           arch = "darwin-x64";
-          {% if name == "cpptools" %}
+          {% if item.name == "cpptools" %}
               postPatch =
                 ''
                   # Prevent download/install of extensions
@@ -174,7 +174,7 @@ merge
           version = "{{ item.version }}";
           sha256 = "{{ item.sha256 }}";
           arch = "darwin-arm64";
-          {% if name == "cpptools" %}
+          {% if item.name == "cpptools" %}
               postPatch =
                 ''
                   # Prevent download/install of extensions
