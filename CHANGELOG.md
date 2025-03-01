@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.4](https://github.com/nix-community/nix4vscode/compare/nix4vscode-v0.0.3...nix4vscode-v0.0.4) (2025-03-01)
+
+
+### Bug Fixes
+
+* fix [#223](https://github.com/nix-community/nix4vscode/issues/223) ([68bd357](https://github.com/nix-community/nix4vscode/commit/68bd357aa6cde94aeb6290b1ace05e026dd6d883))
+
 ## [0.0.3](https://github.com/nix-community/nix4vscode/compare/nix4vscode-v0.0.2...nix4vscode-v0.0.3) (2025-02-23)
 
 
