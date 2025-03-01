@@ -40,7 +40,7 @@ thiserror = "2.0"
 lazy-regex = { workspace = true }
 derive = { path = "./crates/derive" }
 code-api = { path = "./crates/code_api" }
-rust-embed = "8.5"
+rust-embed = "8.6"
 rusqlite = { version = "0.32", features = ["bundled"] }
 itertools = "0.14.0"
 
