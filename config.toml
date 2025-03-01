@@ -1,6 +1,7 @@
 vscode_version = "1.84.2"
 
 extensions = [
+  "ms-vscode.cpptools",
   "ms-python.debugpy",
   "42crunch.vscode-openapi",
   "aaron-bond.better-comments",

@@ -19,11 +19,13 @@
           pkgs = pkgs;
           lib = pkgs.lib;
         };
-      in {
+      in
+      {
         devShell = pkgs.mkShell {
           buildInputs = [
             plugins.eamodio.gitlens
             (builtins.getAttr "42crunch" plugins).vscode-openapi
+            plugins.ms-vscode.cpptools
           ];
         };
       });
