@@ -34,9 +34,10 @@ merge
                   touch "./install.lock"
 
                   # Patching binaries
-                  chmod +x bin/cpptools bin/cpptools-srv bin/cpptools-wordexp debugAdapters/bin/OpenDebugAD7 debugAdapters/lldb-mi/bin/lldb-mi LLVM/bin/clang-format LLVM/bin/clang-tidy
+                  chmod +x bin/cpptools bin/cpptools-srv bin/cpptools-wordexp debugAdapters/bin/OpenDebugAD7 LLVM/bin/clang-format LLVM/bin/clang-tidy
                 '' +lib.optionalString isLinux ''
                   chmod +x bin/libc.so
+                '' +lib.optionalString isDarwin ''
                 ''
               ;
           {% endif %}
@@ -61,9 +62,10 @@ merge
                   touch "./install.lock"
 
                   # Patching binaries
-                  chmod +x bin/cpptools bin/cpptools-srv bin/cpptools-wordexp debugAdapters/bin/OpenDebugAD7 debugAdapters/lldb-mi/bin/lldb-mi LLVM/bin/clang-format LLVM/bin/clang-tidy
+                  chmod +x bin/cpptools bin/cpptools-srv bin/cpptools-wordexp debugAdapters/bin/OpenDebugAD7 LLVM/bin/clang-format LLVM/bin/clang-tidy
                 '' +lib.optionalString isLinux ''
                   chmod +x bin/libc.so
+                '' +lib.optionalString isDarwin ''
                 ''
               ;
           {% endif %}
@@ -91,9 +93,10 @@ merge
                   touch "./install.lock"
 
                   # Patching binaries
-                  chmod +x bin/cpptools bin/cpptools-srv bin/cpptools-wordexp debugAdapters/bin/OpenDebugAD7 debugAdapters/lldb-mi/bin/lldb-mi LLVM/bin/clang-format LLVM/bin/clang-tidy
+                  chmod +x bin/cpptools bin/cpptools-srv bin/cpptools-wordexp debugAdapters/bin/OpenDebugAD7 LLVM/bin/clang-format LLVM/bin/clang-tidy
                 '' +lib.optionalString isLinux ''
                   chmod +x bin/libc.so
+                '' +lib.optionalString isDarwin ''
                 ''
               ;
           {% endif %}
@@ -121,9 +124,10 @@ merge
                   touch "./install.lock"
 
                   # Patching binaries
-                  chmod +x bin/cpptools bin/cpptools-srv bin/cpptools-wordexp debugAdapters/bin/OpenDebugAD7 debugAdapters/lldb-mi/bin/lldb-mi LLVM/bin/clang-format LLVM/bin/clang-tidy
+                  chmod +x bin/cpptools bin/cpptools-srv bin/cpptools-wordexp debugAdapters/bin/OpenDebugAD7 LLVM/bin/clang-format LLVM/bin/clang-tidy
                 '' +lib.optionalString isLinux ''
                   chmod +x bin/libc.so
+                '' +lib.optionalString isDarwin ''
                 ''
               ;
           {% endif %}
@@ -151,9 +155,10 @@ merge
                   touch "./install.lock"
 
                   # Patching binaries
-                  chmod +x bin/cpptools bin/cpptools-srv bin/cpptools-wordexp debugAdapters/bin/OpenDebugAD7 debugAdapters/lldb-mi/bin/lldb-mi LLVM/bin/clang-format LLVM/bin/clang-tidy
+                  chmod +x bin/cpptools bin/cpptools-srv bin/cpptools-wordexp debugAdapters/bin/OpenDebugAD7 LLVM/bin/clang-format LLVM/bin/clang-tidy
                 '' +lib.optionalString isLinux ''
                   chmod +x bin/libc.so
+                '' +lib.optionalString isDarwin ''
                 ''
               ;
           {% endif %}
@@ -181,9 +186,10 @@ merge
                   touch "./install.lock"
 
                   # Patching binaries
-                  chmod +x bin/cpptools bin/cpptools-srv bin/cpptools-wordexp debugAdapters/bin/OpenDebugAD7 debugAdapters/lldb-mi/bin/lldb-mi LLVM/bin/clang-format LLVM/bin/clang-tidy
+                  chmod +x bin/cpptools bin/cpptools-srv bin/cpptools-wordexp debugAdapters/bin/OpenDebugAD7 LLVM/bin/clang-format LLVM/bin/clang-tidy
                 '' +lib.optionalString isLinux ''
                   chmod +x bin/libc.so
+                '' +lib.optionalString isDarwin ''
                 ''
               ;
           {% endif %}
