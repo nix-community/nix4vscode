@@ -80,6 +80,7 @@ impl CodeNix {
         let mx = item
             .versions
             .iter()
+            .filter(|v| !v.is_pre_release_version())
             .filter(|v| match v.get_engine() {
                 Ok(ver) => {
                     if !is_version_valid(vscode_ver, &ver) {

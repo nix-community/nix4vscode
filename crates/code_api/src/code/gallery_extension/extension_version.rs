@@ -1,5 +1,6 @@
 use anyhow::anyhow;
 use derive::api;
+use itertools::Itertools;
 
 use crate::code::PropertyType;
 
@@ -32,6 +33,16 @@ impl IRawGalleryExtensionVersion {
             Some(idx) => Ok(self.properties[idx].value.clone()),
             None => Err(anyhow!("Missing attribute: engine")),
         }
+    }
+
+    pub fn is_pre_release_version(&self) -> bool {
+        let values = self
+            .properties
+            .iter()
+            .filter(|item| item.key == PropertyType::PRE_RELEASE)
+            .collect_vec();
+
+        !values.is_empty() && values[0].value == "true"
     }
 
     pub fn get_file(&self, file_kind: AssetType) -> Option<&IRawGalleryExtensionFile> {

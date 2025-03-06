@@ -27,23 +27,48 @@ pub enum PropertyType {
     ExtensionPack,
     Engine,
     PreRelease,
+    EnabledApiProposals,
     LocalizedLanguages,
     WebExtension,
     SponsorLink,
+    SupportLink,
+    ExecutesCode,
+}
+
+impl PropertyType {
+    pub const DEPENDENCY: &str = "Microsoft.VisualStudio.Code.ExtensionDependencies";
+    pub const EXTENSION_PACK: &str = "Microsoft.VisualStudio.Code.ExtensionPack";
+    pub const ENGINE: &str = "Microsoft.VisualStudio.Code.Engine";
+    pub const PRE_RELEASE: &str = "Microsoft.VisualStudio.Code.PreRelease";
+    pub const ENABLED_API_PROPOSALS: &str = "Microsoft.VisualStudio.Code.EnabledApiProposals";
+    pub const LOCALIZED_LANGUAGES: &str = "Microsoft.VisualStudio.Code.LocalizedLanguages";
+    pub const WEB_EXTENSION: &str = "Microsoft.VisualStudio.Code.WebExtension";
+    pub const SPONSOR_LINK: &str = "Microsoft.VisualStudio.Code.SponsorLink";
+    pub const SUPPORT_LINK: &str = "Microsoft.VisualStudio.Services.Links.Support";
+    pub const EXECUTES_CODE: &str = "Microsoft.VisualStudio.Code.ExecutesCode";
 }
 
 impl Display for PropertyType {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        let v = match self {
-            Self::Dependency => "Microsoft.VisualStudio.Code.ExtensionDependencies",
-            Self::ExtensionPack => "Microsoft.VisualStudio.Code.ExtensionPack",
-            Self::Engine => "Microsoft.VisualStudio.Code.Engine",
-            Self::PreRelease => "Microsoft.VisualStudio.Code.PreRelease",
-            Self::LocalizedLanguages => "Microsoft.VisualStudio.Code.LocalizedLanguages",
-            Self::WebExtension => "Microsoft.VisualStudio.Code.WebExtension",
-            Self::SponsorLink => "Microsoft.VisualStudio.Code.SponsorLink",
-        };
+        let v: &str = self.into();
         write!(f, "{}", v)
+    }
+}
+
+impl From<&PropertyType> for &str {
+    fn from(value: &PropertyType) -> Self {
+        match value {
+            PropertyType::Dependency => "Microsoft.VisualStudio.Code.ExtensionDependencies",
+            PropertyType::ExtensionPack => "Microsoft.VisualStudio.Code.ExtensionPack",
+            PropertyType::Engine => "Microsoft.VisualStudio.Code.Engine",
+            PropertyType::PreRelease => "Microsoft.VisualStudio.Code.PreRelease",
+            PropertyType::EnabledApiProposals => "Microsoft.VisualStudio.Code.EnabledApiProposals",
+            PropertyType::LocalizedLanguages => "Microsoft.VisualStudio.Code.LocalizedLanguages",
+            PropertyType::WebExtension => "Microsoft.VisualStudio.Code.WebExtension",
+            PropertyType::SponsorLink => "Microsoft.VisualStudio.Code.SponsorLink",
+            PropertyType::SupportLink => "Microsoft.VisualStudio.Services.Links.Support",
+            PropertyType::ExecutesCode => "Microsoft.VisualStudio.Code.ExecutesCode",
+        }
     }
 }
 
