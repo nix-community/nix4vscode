@@ -362,6 +362,7 @@ dependencies = [
  "chrono",
  "derive",
  "futures",
+ "itertools",
  "lazy-regex",
  "reqwest",
  "serde",
