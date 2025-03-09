@@ -1,0 +1,17 @@
+name: "exporter"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - name: run exporter
+        env:
+          DATABASE_URL: ${{ DATABASE_URL }}
+          RUST_LOG: INFO
+        run: |
+          cargo r -p exporter --release
