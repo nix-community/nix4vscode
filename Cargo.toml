@@ -1,3 +1,6 @@
+[workspace]
+members = ["crates/code_api", "crates/exporter"]
+
 [package]
 name = "nix4vscode"
 description = "A tool to prefetch VS Code extensions for Nix expressions"
