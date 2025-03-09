@@ -11,7 +11,7 @@ jobs:
       - uses: dtolnay/rust-toolchain@stable
       - name: run exporter
         env:
-          DATABASE_URL: ${{ DATABASE_URL }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
           RUST_LOG: INFO
         run: |
           cargo r -p exporter --release
