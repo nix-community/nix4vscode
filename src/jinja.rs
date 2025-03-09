@@ -32,7 +32,7 @@ macro_rules! add_function {
     };
 }
 
-impl<'a> Generator<'a> {
+impl Generator<'_> {
     pub fn new() -> Self {
         let mut engine = Environment::new();
 
@@ -70,7 +70,7 @@ impl<'a> Generator<'a> {
     }
 }
 
-impl<'a> Default for Generator<'a> {
+impl Default for Generator<'_> {
     fn default() -> Self {
         Self::new()
     }
