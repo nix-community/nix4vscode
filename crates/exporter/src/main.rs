@@ -1,6 +1,6 @@
 use std::{env, pin::pin, str::FromStr};
 
-use code_api::code::HttpClient;
+use code_api::code::{HttpClient, SortBy};
 use diesel::prelude::*;
 use futures::StreamExt;
 use models::Marketplace;
@@ -23,7 +23,15 @@ async fn main() {
         .unwrap_or_else(|_| panic!("Error connecting to {}", database_url));
 
     let client = HttpClient::new().unwrap();
-    let mut iter = pin!(client.get_extension_response(vec![]));
+    let mut iter = pin!(client.get_extension_response(
+        vec![],
+        code_api::code::IQueryState {
+            page_size: u16::MAX as u64,
+            sort_by: SortBy::PUBLISHED_DATE,
+            sort_order: code_api::code::SortOrder::DESCENDING,
+            ..Default::default()
+        }
+    ));
     while let Some(item) = iter.next().await {
         let Ok(item) = item else {
             continue;

@@ -4,6 +4,7 @@ use std::str::FromStr;
 use code_api::code::is_version_valid;
 use code_api::code::AssetType;
 use code_api::code::HttpClient;
+use code_api::code::IQueryState;
 use code_api::code::IRawGalleryExtension;
 use code_api::code::TargetPlatform;
 use futures::future::join_all;
@@ -39,7 +40,13 @@ impl CodeNix {
         {
             let mut iter = self
                 .client
-                .get_extension_response(self.config.handled_extensions.clone())
+                .get_extension_response(
+                    self.config.handled_extensions.clone(),
+                    IQueryState {
+                        page_size: 1000,
+                        ..Default::default()
+                    },
+                )
                 .filter_map(|item| async move {
                     match item {
                         Ok(v) => Some(v),

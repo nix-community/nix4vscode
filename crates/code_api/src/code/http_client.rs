@@ -3,7 +3,7 @@ use crate::{
     config::Extension,
 };
 
-use super::Query;
+use super::{IQueryState, Query};
 use anyhow::anyhow;
 use async_stream::try_stream;
 use futures::stream::Stream;
@@ -23,12 +23,13 @@ impl HttpClient {
     pub fn get_extension_response(
         &self,
         extensions: Vec<Extension>,
+        args: IQueryState,
     ) -> impl Stream<Item = anyhow::Result<code::IRawGalleryExtensionsResult>> + '_ {
         let mut page_number: u64 = 1;
 
         try_stream! {
             loop {
-                let query = Query::new(&extensions, page_number);
+                let query = Query::new(&extensions, page_number, args.clone());
                 let body = serde_json::to_string(&query)?;
                 trace!("send request: {body}");
                 let response = self

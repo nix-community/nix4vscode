@@ -12,7 +12,7 @@ pub struct Query {
 }
 
 impl Query {
-    pub fn new(extensions: &[Extension], page_number: u64) -> Self {
+    pub fn new(extensions: &[Extension], page_number: u64, args: IQueryState) -> Self {
         let fixed = vec![
             ICriterium {
                 filter_type: FilterType::TARGET,
@@ -34,7 +34,7 @@ impl Query {
                     })
                     .chain(fixed)
                     .collect(),
-                ..Default::default()
+                ..args
             }],
             asset_types: Default::default(),
             flags: RequestFlags::default().bits(),
