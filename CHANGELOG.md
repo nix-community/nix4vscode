@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.7](https://github.com/nix-community/nix4vscode/compare/nix4vscode-v0.0.6...nix4vscode-v0.0.7) (2025-03-09)
+
+
+### Features
+
+* add exporter ([7893339](https://github.com/nix-community/nix4vscode/commit/789333984f509504ed9b78d948676c0b57ef0b8b))
+
 ## [0.0.6](https://github.com/nix-community/nix4vscode/compare/nix4vscode-v0.0.5...nix4vscode-v0.0.6) (2025-03-09)
 
 
