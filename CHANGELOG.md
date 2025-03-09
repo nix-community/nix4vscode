@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.6](https://github.com/nix-community/nix4vscode/compare/nix4vscode-v0.0.5...nix4vscode-v0.0.6) (2025-03-09)
+
+
+### Features
+
+* bump rust version to 1.85.0 ([942f6c1](https://github.com/nix-community/nix4vscode/commit/942f6c1e1cd1b794f762abb8e796346f31b6b693))
+
 ## [0.0.5](https://github.com/nix-community/nix4vscode/compare/nix4vscode-v0.0.4...nix4vscode-v0.0.5) (2025-03-06)
 
 
