@@ -1,7 +1,7 @@
 // @generated automatically by Diesel CLI.
 
 diesel::table! {
-    marketplace (assert_url) {
+    marketplace (name, publisher, version, engine, platform, assert_url) {
         name -> Text,
         publisher -> Text,
         version -> Text,

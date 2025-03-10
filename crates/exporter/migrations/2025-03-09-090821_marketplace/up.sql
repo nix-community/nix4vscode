@@ -7,5 +7,5 @@ CREATE TABLE marketplace (
     platform TEXT NOT NULL,
     assert_url TEXT NOT NULL,
     hash TEXT NULL,
-    PRIMARY KEY (assert_url)
+    PRIMARY KEY (name, publisher, version, engine, platform, assert_url)
 )
