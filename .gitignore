@@ -13,3 +13,5 @@ result-man
 # Dev-Extras
 .direnv/
 crates/exporter/.env.json
+crates/exporter/.env
+crates/exporter/diesel.toml
