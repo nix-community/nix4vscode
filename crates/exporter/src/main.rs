@@ -1,3 +1,4 @@
+mod fetch_hash;
 mod fetch_info;
 mod models;
 mod schema;
@@ -36,6 +37,12 @@ async fn main() {
 
     if args.fetch {
         if let Err(err) = fetch_marketplace(&mut conn).await {
+            error!(?err)
+        }
+    }
+
+    if args.hash {
+        if let Err(err) = fetch_hash::fetch_hash(&mut conn).await {
             error!(?err)
         }
     }
