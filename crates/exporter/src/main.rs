@@ -22,6 +22,10 @@ struct Args {
     /// Update hash of extension.
     #[clap(long, default_value_t = false)]
     hash: bool,
+
+    /// Batch size for coroutine pool
+    #[clap(long, default_value_t = 4)]
+    batch_size: usize,
 }
 
 // #[dotenvy::load]
@@ -42,7 +46,7 @@ async fn main() {
     }
 
     if args.hash {
-        if let Err(err) = fetch_hash::fetch_hash(&mut conn).await {
+        if let Err(err) = fetch_hash::fetch_hash(&mut conn, args.batch_size).await {
             error!(?err)
         }
     }
