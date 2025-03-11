@@ -62,6 +62,7 @@ pub async fn fetch_hash(conn: &mut PgConnection, batch_size: usize) -> anyhow::R
                     record.hash = Some(file_hash);
                     tx.send(record).unwrap();
                 }
+                nix_gc().await;
             });
         }
         drop(w);
@@ -87,4 +88,12 @@ pub async fn compute_hash(url: &str) -> anyhow::Result<String> {
         .stdout;
 
     Ok(String::from_utf8(sha256)?.trim().to_owned())
+}
+
+pub async fn nix_gc() {
+    let _ = tokio::process::Command::new("nix")
+        .arg("store")
+        .arg("gc")
+        .output()
+        .await;
 }
