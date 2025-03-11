@@ -9,11 +9,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@stable
+      - name: Install exporter from master
+        uses: baptiste0928/cargo-install@v3
+        with:
+          crate: exporter
+          git: https://github.com/nix-community/nix4vscode
+          branch: master
       - name: run exporter
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           RUST_LOG: INFO
         run: |
-          cargo r -p exporter --release
+          exporter
