@@ -26,4 +26,4 @@ jobs:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           RUST_LOG: DEBUG
         run: |
-          exporter --hash --batch_size=8
+          exporter --hash --batch-size=8
