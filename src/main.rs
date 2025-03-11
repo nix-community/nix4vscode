@@ -4,7 +4,7 @@ pub mod error;
 pub mod jinja;
 pub mod utils;
 
-use std::collections::HashMap;
+use std::collections::BTreeMap;
 
 use code::CodeNix;
 use itertools::Itertools;
@@ -39,7 +39,7 @@ async fn main() -> anyhow::Result<()> {
     let mut code = CodeNix::new(config.clone());
 
     let ctx = code.get_extensions(generator.clone()).await;
-    let mut ctx2 = HashMap::<String, NixContext>::new();
+    let mut ctx2: BTreeMap<String, NixContext> = BTreeMap::<String, NixContext>::new();
     for item in ctx {
         ctx2.insert(
             format!("{}-{}-{:?}", item.publisher, item.name, item.platform),
