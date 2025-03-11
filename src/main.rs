@@ -39,7 +39,7 @@ async fn main() -> anyhow::Result<()> {
     let mut code = CodeNix::new(config.clone());
 
     let ctx = code.get_extensions(generator.clone()).await;
-    let mut ctx2: BTreeMap<String, NixContext> = BTreeMap::<String, NixContext>::new();
+    let mut ctx2 = BTreeMap::<String, NixContext>::new();
     for item in ctx {
         ctx2.insert(
             format!("{}-{}-{:?}", item.publisher, item.name, item.platform),
