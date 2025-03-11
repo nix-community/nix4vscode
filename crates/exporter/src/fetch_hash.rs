@@ -2,6 +2,7 @@ use crate::models::*;
 use crate::schema::marketplace::dsl::*;
 use diesel::prelude::*;
 use diesel::PgConnection;
+use tracing::debug;
 
 pub async fn fetch_hash(conn: &mut PgConnection) -> anyhow::Result<()> {
     let record = marketplace
@@ -11,6 +12,7 @@ pub async fn fetch_hash(conn: &mut PgConnection) -> anyhow::Result<()> {
 
     for record in record {
         if let Ok(file_hash) = compute_hash(&record.assert_url).await {
+            debug!("compute hash: {file_hash} of {record:?}");
             let _ = diesel::update(marketplace)
                 .filter(name.eq(&record.name))
                 .filter(publisher.eq(&record.publisher))

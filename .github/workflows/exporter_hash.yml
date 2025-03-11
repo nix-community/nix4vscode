@@ -17,6 +17,6 @@ jobs:
       - name: run exporter
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          RUST_LOG: INFO
+          RUST_LOG: DEBUG
         run: |
           cargo r -p exporter --release -- --hash
