@@ -1,0 +1,22 @@
+name: "exporter fetch hash"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Nix
+        uses: cachix/install-nix-action@v30
+        with:
+          extra_nix_config: |
+            access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+      - uses: dtolnay/rust-toolchain@stable
+      - name: run exporter
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          RUST_LOG: INFO
+        run: |
+          cargo r -p exporter --release -- --hash

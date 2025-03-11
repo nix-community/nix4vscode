@@ -16,7 +16,7 @@ use utils::init_logger;
 #[derive(Debug, Parser)]
 struct Args {
     /// Fetch extension info from vscode marketplace.
-    #[clap(short, long, default_value_t = true)]
+    #[clap(short, long, default_value_t = false)]
     fetch: bool,
 
     /// Update hash of extension.
