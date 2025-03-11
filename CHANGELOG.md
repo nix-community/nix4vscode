@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.0.8](https://github.com/nix-community/nix4vscode/compare/nix4vscode-v0.0.7...nix4vscode-v0.0.8) (2025-03-11)
+
+
+### Features
+
+* allow set iquerystate ([20c0e09](https://github.com/nix-community/nix4vscode/commit/20c0e09e78695d3ed3fe7b9226d9bc8a0be99df0))
+* **exporter:** allow fetch hash ([62c9d6e](https://github.com/nix-community/nix4vscode/commit/62c9d6e0c1b61a2d705c40239aae05ba5fdedff7))
+* **exporter:** batch update ([693697e](https://github.com/nix-community/nix4vscode/commit/693697e053430d9715c0bca24589e872540445ce))
+* **exporter:** do nix-gc after fetch url ([56a3eac](https://github.com/nix-community/nix4vscode/commit/56a3eac5adc85a856e032fb8cac62dbfe3d80e8d))
+* **exporter:** print log ([91adab5](https://github.com/nix-community/nix4vscode/commit/91adab58f3949e13b273ef56298ffb2b4383a828))
+* **exporter:** update primary key ([c2c722a](https://github.com/nix-community/nix4vscode/commit/c2c722ab9a2e5e165053a43a48b388e6fe08c425))
+* ignore some file ([bf47314](https://github.com/nix-community/nix4vscode/commit/bf47314964eba017855ea12a83b7318bf2cf78ed))
+
 ## [0.0.7](https://github.com/nix-community/nix4vscode/compare/nix4vscode-v0.0.6...nix4vscode-v0.0.7) (2025-03-09)
 
 
