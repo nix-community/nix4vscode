@@ -21,4 +21,4 @@ jobs:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           RUST_LOG: INFO
         run: |
-          exporter
+          exporter --fetch
