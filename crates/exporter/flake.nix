@@ -62,9 +62,7 @@
         {
           default = pkgs.mkShell {
             buildInputs = with pkgs; [
-              # Add tools needed for the development environment
-              nixpkgs-fmt
-              nix
+              nixfmt-rfc-style
               versionTests.runTests
             ];
 
@@ -82,7 +80,7 @@
               echo "Available platforms: web, alpine-arm64, linux-armhf, alpine-x64, darwin-arm64, linux-x64, linux-arm64, darwin-x64"
 
               vscodeExtensionsForEngine() {
-                # nix eval --raw -f ''${./nix/example.nix} --apply "extensions: builtins.toJSON (extensions.\"$1\" or extensions)" | jq
+                nix eval --raw -f ${./nix/example.nix} --apply "extensions: builtins.toJSON (extensions.\"$1\" or extensions)" | jq
               }
 
               vscodeExtensionsForEnginePlatform() {

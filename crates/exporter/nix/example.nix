@@ -4,7 +4,7 @@
 
 let
   # Import flake
-  flake = builtins.getFlake (toString ./.);
+  flake = builtins.getFlake (toString ../.);
 
   # Format output results
   formatExtension = ext: {

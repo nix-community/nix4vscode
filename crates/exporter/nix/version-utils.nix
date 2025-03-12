@@ -12,7 +12,7 @@ let
 
       # Regular expression to match version patterns
       # Captures: prefix (^, >=), major, minor, patch, and pre-release
-      matches = builtins.match "^(\\^|>=)?(([0-9]+)|x)\\.((([0-9]+)|x))\\.((([0-9]+)|x))(\\-.*)?$" version';
+      matches = builtins.match "^(\^|>=)?((\d+)|x)\.((\d+)|x)\.((\d+)|x)(\-.*)?$" version';
 
       # Extract components if matches found
       prefix = if matches != null then builtins.elemAt matches 0 else null;
