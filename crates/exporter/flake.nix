@@ -7,7 +7,6 @@
       url = "github:nix-systems/default";
       flake = false;
     };
-    rust-overlay.url = "github:oxalica/rust-overlay";
   };
 
   outputs =
@@ -15,13 +14,16 @@
       self,
       nixpkgs,
       systems,
-      rust-overlay,
     }:
     let
       supportedSystems = import systems;
       forEachSystem = nixpkgs.lib.genAttrs supportedSystems;
 
-      engineOverlay = import ./vscode-engine-overlay.nix;
+      engineOverlay =
+        lib:
+        import ./nix/vscode-engine-overlay.nix {
+          lib = lib;
+        };
     in
     {
       overlays.default = engineOverlay nixpkgs.lib;
@@ -55,7 +57,7 @@
           };
 
           # Import the version utils test
-          versionTests = import ./version-utils-test.nix { inherit pkgs; };
+          versionTests = import ./nix/version-utils-test.nix { inherit pkgs; };
         in
         {
           default = pkgs.mkShell {
@@ -80,7 +82,7 @@
               echo "Available platforms: web, alpine-arm64, linux-armhf, alpine-x64, darwin-arm64, linux-x64, linux-arm64, darwin-x64"
 
               vscodeExtensionsForEngine() {
-                nix eval --raw -f ${./example.nix} --apply "extensions: builtins.toJSON (extensions.\"$1\" or extensions)" | jq
+                # nix eval --raw -f ''${./nix/example.nix} --apply "extensions: builtins.toJSON (extensions.\"$1\" or extensions)" | jq
               }
 
               vscodeExtensionsForEnginePlatform() {
@@ -95,7 +97,7 @@
                     flake = builtins.getFlake (toString ./.);
                     extensions = flake.lib.vscodeExtensionsForEnginePlatform \"$1\" \"$2\";
                     formatExt = ext: {
-                      name = \"\${ext.publisher}.\${ext.name}\";
+                      name = \"''${ext.publisher}.''${ext.name}\";
                       version = ext.version;
                       engine = ext.engine;
                       platform = ext.platform;
