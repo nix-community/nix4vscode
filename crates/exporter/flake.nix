@@ -107,6 +107,7 @@
 
               export -f vscodeExtensionsForEngine
               export -f vscodeExtensionsForEnginePlatform
+              ${pkgs.zsh.out}/bin/zsh
             '';
           };
         }
