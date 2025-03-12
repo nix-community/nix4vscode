@@ -83,7 +83,7 @@ impl From<IParsedVersion> for INormalizedVersion {
 
         let mut not_before = 0;
         if let Some(pre_release) = version.pre_release {
-            if let Some(m) = regex!(r#"/^-(\d{4})(\d{2})(\d{2})$/"#).captures(&pre_release) {
+            if let Some(m) = regex!(r#"^-(\d{4})(\d{2})(\d{2})$"#).captures(&pre_release) {
                 let year = &m[1];
                 let month = &m[2];
                 let day = &m[3];
