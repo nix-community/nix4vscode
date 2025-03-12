@@ -247,7 +247,7 @@ let
     in
     {
       inherit success;
-      output = "${status}: ${testCase.description} - Code version: ${testCase.codeVersion}, Requested version: ${testCase.requestedVersion}, Expected: ${toString testCase.expected}, Got: ${toString result}";
+      output = "${status}: ${testCase.description} - Code version: ${testCase.codeVersion}, Requested version: ${testCase.requestedVersion}, Expected: ${lib.boolToString testCase.expected}, Got: ${lib.boolToString result}";
     };
 
   testResults = map runTest testCases;
