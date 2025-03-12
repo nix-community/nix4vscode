@@ -1,6 +1,17 @@
 use diesel::prelude::*;
 
-#[derive(Queryable, Selectable, Insertable, Debug)]
+#[derive(
+    Queryable,
+    Selectable,
+    Insertable,
+    Debug,
+    serde::Serialize,
+    serde::Deserialize,
+    PartialEq,
+    PartialOrd,
+    Ord,
+    Eq,
+)]
 #[diesel(table_name = crate::schema::marketplace)]
 #[diesel(check_for_backend(diesel::pg::Pg))]
 pub struct Marketplace {

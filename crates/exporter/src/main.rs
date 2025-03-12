@@ -1,3 +1,4 @@
+mod export;
 mod fetch_hash;
 mod fetch_info;
 mod models;
@@ -9,6 +10,7 @@ use std::env;
 use clap::Parser;
 use diesel::prelude::*;
 
+use export::export_toml;
 use fetch_info::fetch_marketplace;
 use tracing::error;
 use utils::init_logger;
@@ -26,6 +28,10 @@ struct Args {
     /// Batch size for coroutine pool
     #[clap(long, default_value_t = 4)]
     batch_size: usize,
+
+    /// Export toml path
+    #[clap(short, long)]
+    output: Option<String>,
 }
 
 // #[dotenvy::load]
@@ -48,6 +54,12 @@ async fn main() {
     if args.hash {
         if let Err(err) = fetch_hash::fetch_hash(&mut conn, args.batch_size).await {
             error!(?err)
+        }
+    }
+
+    if let Some(target) = args.output {
+        if let Err(err) = export_toml(&mut conn, &target).await {
+            error!(?err);
         }
     }
 }

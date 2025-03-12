@@ -14,6 +14,6 @@ tracing-subscriber = { version = "0.3.19", features = ["env-filter"] }
 code-api = { path = "../code_api" }
 futures.workspace = true
 serde.workspace = true
-serde_json.workspace = true
 scopeguard = "1.2.0"
 waitgroup = "0.1.2"
+toml = "0.8.20"
