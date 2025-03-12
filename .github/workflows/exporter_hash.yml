@@ -26,4 +26,10 @@ jobs:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           RUST_LOG: DEBUG
         run: |
-          exporter --hash --batch-size=8
+          exporter --hash --batch-size=8 -o extensions.toml
+            - name: Upload wheel artifacts
+      - uses: actions/upload-artifact@v4
+        with:
+          path: extensions.toml
+          name: extensions.toml
+
