@@ -27,7 +27,6 @@ jobs:
           RUST_LOG: DEBUG
         run: |
           exporter --hash --batch-size=8 -o extensions.toml
-            - name: Upload wheel artifacts
       - uses: actions/upload-artifact@v4
         with:
           path: extensions.toml
