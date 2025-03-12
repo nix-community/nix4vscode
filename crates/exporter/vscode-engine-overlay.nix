@@ -1,5 +1,9 @@
 { lib }:
 
+let
+  # Import the version utilities
+  versionUtils = import ./version-utils.nix { inherit lib; };
+in
 final: prev: {
   vscodeExtensionsForEngine =
     engineVersion:
@@ -46,43 +50,13 @@ final: prev: {
           )
         );
 
-      # Check if the version matches
-      # We simplify the handling here, only checking prefix matching, e.g., "^1.85.0" matches "1.85.x"
+      # Check if the version matches using the isVersionValid function
       matchesEngine =
         ext:
         let
           extEngine = ext.engine or "";
-          # Remove prefix symbols (such as ^, ~, etc.)
-          cleanExtEngine =
-            builtins.replaceStrings
-              [
-                "^"
-                "~"
-                "="
-                ">="
-                "<="
-                ">"
-                "<"
-              ]
-              [
-                ""
-                ""
-                ""
-                ""
-                ""
-                ""
-                ""
-              ]
-              extEngine;
-          # Get the major version number parts for comparison
-          extMajorMinor = lib.strings.concatStringsSep "." (
-            lib.lists.take 2 (lib.strings.splitString "." cleanExtEngine)
-          );
-          versionMajorMinor = lib.strings.concatStringsSep "." (
-            lib.lists.take 2 (lib.strings.splitString "." engineVersion)
-          );
         in
-        extMajorMinor == versionMajorMinor;
+        versionUtils.isVersionValid engineVersion extEngine;
 
       # Filter extensions matching the specified engine version and current platform
       filteredByEngine = builtins.filter matchesEngine extensions;
@@ -106,42 +80,13 @@ final: prev: {
         in
         extPlatform == "web" || extPlatform == platform;
 
-      # Check if the version matches
+      # Check if the version matches using the isVersionValid function
       matchesEngine =
         ext:
         let
           extEngine = ext.engine or "";
-          # Remove prefix symbols (such as ^, ~, etc.)
-          cleanExtEngine =
-            builtins.replaceStrings
-              [
-                "^"
-                "~"
-                "="
-                ">="
-                "<="
-                ">"
-                "<"
-              ]
-              [
-                ""
-                ""
-                ""
-                ""
-                ""
-                ""
-                ""
-              ]
-              extEngine;
-          # Get the major version number parts for comparison
-          extMajorMinor = lib.strings.concatStringsSep "." (
-            lib.lists.take 2 (lib.strings.splitString "." cleanExtEngine)
-          );
-          versionMajorMinor = lib.strings.concatStringsSep "." (
-            lib.lists.take 2 (lib.strings.splitString "." engineVersion)
-          );
         in
-        extMajorMinor == versionMajorMinor;
+        versionUtils.isVersionValid engineVersion extEngine;
 
       # Filter extensions matching the specified engine version and platform
       filteredByEngine = builtins.filter matchesEngine extensions;

@@ -53,6 +53,9 @@
             inherit system;
             overlays = [ (engineOverlay nixpkgs.lib) ];
           };
+
+          # Import the version utils test
+          versionTests = import ./version-utils-test.nix { inherit pkgs; };
         in
         {
           default = pkgs.mkShell {
@@ -60,6 +63,7 @@
               # Add tools needed for the development environment
               nixpkgs-fmt
               nix
+              versionTests.runTests
             ];
 
             # Provide vscodeExtensionsForEngine function in the shell
@@ -68,6 +72,7 @@
               echo "Usage:"
               echo "  vscodeExtensionsForEngine <engine-version>"
               echo "  vscodeExtensionsForEnginePlatform <engine-version> <platform>"
+              echo "  run-version-utils-tests (run version utility tests)"
               echo "Examples:"
               echo "  vscodeExtensionsForEngine 1.85.0"
               echo "  vscodeExtensionsForEnginePlatform 1.85.0 linux-x64"
