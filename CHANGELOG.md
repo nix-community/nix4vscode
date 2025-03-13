@@ -1,5 +1,29 @@
 # Changelog
 
+## [0.0.9](https://github.com/nix-community/nix4vscode/compare/nix4vscode-v0.0.8...nix4vscode-v0.0.9) (2025-03-13)
+
+
+### Features
+
+* add overlay ([789f0b0](https://github.com/nix-community/nix4vscode/commit/789f0b029ad1963d9fb29178d3bfcf67704c69f9))
+* **code:** add more test ([acc8455](https://github.com/nix-community/nix4vscode/commit/acc8455cf5ec40c59977cd4d69617b5db8d2dd9a))
+* **code:** reimpl version ([1398e0a](https://github.com/nix-community/nix4vscode/commit/1398e0a352b5f44dcb6d50e3decdbd42061fe257))
+* **code:** remove unused char ([ac43e92](https://github.com/nix-community/nix4vscode/commit/ac43e9256f252c7b0c284edb4c573e169cca2073))
+* **exporter:** allow export extension ([ee6ac79](https://github.com/nix-community/nix4vscode/commit/ee6ac79bc3b11b19f896106f7950542f01a49e85))
+* **exporter:** remove useless code ([2be8d0e](https://github.com/nix-community/nix4vscode/commit/2be8d0e650f47df46a1af284692a7c26f331ae26))
+* **fetcher:** ignore pre-release version ([625ec1d](https://github.com/nix-community/nix4vscode/commit/625ec1d2626ceef6b32dbaf2ee5ab76907141186))
+* **nix:** add isValidVersion ([a6bc686](https://github.com/nix-community/nix4vscode/commit/a6bc686e5b3bd92e54a4ff768e06c33d0b156b4b))
+* set default shell to zsh ([6ffc0fd](https://github.com/nix-community/nix4vscode/commit/6ffc0fd099aa47f8e85e619a9f4d7ea2103bce83))
+
+
+### Bug Fixes
+
+* **exporter:** remove zsh ([89dd9cf](https://github.com/nix-community/nix4vscode/commit/89dd9cfc2e6fba9596b7c54d722049bba0cc8dc3))
+* fix nix error ([7244380](https://github.com/nix-community/nix4vscode/commit/72443803aeaddacb7d9c2c59677036a832a2d977))
+* fix nix error ([7bad8f2](https://github.com/nix-community/nix4vscode/commit/7bad8f2f44250418e955ec7173853af7929b2b8d))
+* **nix:** do gc after fetch url ([d6950ae](https://github.com/nix-community/nix4vscode/commit/d6950ae1cb770c554ad40a7e92aafa2d8f09591f))
+* **nix:** fix nix errors ([3626924](https://github.com/nix-community/nix4vscode/commit/3626924fbb4a0db1e79039cd287890233b973d0a))
+
 ## [0.0.8](https://github.com/nix-community/nix4vscode/compare/nix4vscode-v0.0.7...nix4vscode-v0.0.8) (2025-03-11)
 
 
