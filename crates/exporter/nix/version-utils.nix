@@ -8,40 +8,9 @@ let
     version_s:
     let
       version = lib.strings.trim version_s;
-
-      # Handle wildcard version
-      isWildcard = version == "*";
-
-      # Regular expression to match version patterns
-      # Captures: prefix (^, >=), major, minor, patch, and pre-release
       matches = builtins.match VERSION_REGEX version;
-
-      # Extract components if matches found
-      prefix = if matches != null then builtins.elemAt matches 0 else null;
-      majorStr = if matches != null then builtins.elemAt matches 1 else null;
-      minorStr = if matches != null then builtins.elemAt matches 3 else null;
-      patchStr = if matches != null then builtins.elemAt matches 7 else null;
-      preRelease = if matches != null then builtins.elemAt matches 10 else null;
-
-      # Convert to appropriate types with defaults
-      hasCaret = prefix == "^";
-      hasGreaterEquals = prefix == ">=";
-
-      # Helper function for conditional expressions (similar to texpr macro)
-      texpr =
-        condition: ifTrue: ifFalse:
-        if condition then ifTrue else ifFalse;
-
-      majorBase = texpr (majorStr == "x") 0 (lib.strings.toInt majorStr);
-      majorMustEqual = texpr (majorStr == "x") false true;
-
-      minorBase = texpr (minorStr == "x") 0 (lib.strings.toInt minorStr);
-      minorMustEqual = texpr (minorStr == "x") false true;
-
-      patchBase = texpr (patchStr == "x") 0 (lib.strings.toInt patchStr);
-      patchMustEqual = texpr (patchStr == "x") false true;
     in
-    if isWildcard then
+    if version == "*" then
       {
         hasCaret = false;
         hasGreaterEquals = false;
@@ -56,6 +25,33 @@ let
     else if matches == null then
       null
     else
+      let
+
+        # Extract components if matches found
+        prefix = if matches != null then builtins.elemAt matches 0 else null;
+        majorStr = if matches != null then builtins.elemAt matches 1 else null;
+        minorStr = if matches != null then builtins.elemAt matches 3 else null;
+        patchStr = if matches != null then builtins.elemAt matches 7 else null;
+        preRelease = if matches != null then builtins.elemAt matches 10 else null;
+
+        # Convert to appropriate types with defaults
+        hasCaret = prefix == "^";
+        hasGreaterEquals = prefix == ">=";
+
+        # Helper function for conditional expressions (similar to texpr macro)
+        texpr =
+          condition: ifTrue: ifFalse:
+          if condition then ifTrue else ifFalse;
+
+        majorBase = texpr (majorStr == "x") 0 (lib.strings.toInt majorStr);
+        majorMustEqual = texpr (majorStr == "x") false true;
+
+        minorBase = texpr (minorStr == "x") 0 (lib.strings.toInt minorStr);
+        minorMustEqual = texpr (minorStr == "x") false true;
+
+        patchBase = texpr (patchStr == "x") 0 (lib.strings.toInt patchStr);
+        patchMustEqual = texpr (patchStr == "x") false true;
+      in
       {
         inherit
           hasCaret
