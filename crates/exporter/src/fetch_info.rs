@@ -35,21 +35,6 @@ pub async fn fetch_marketplace(conn: &mut PgConnection) -> anyhow::Result<()> {
                     continue;
                 };
                 if version.is_pre_release_version() {
-                    // Delete existing data for pre-release versions
-                    if let Err(err) = diesel::delete(marketplace::table)
-                        .filter(
-                            marketplace::name
-                                .eq(&item.extension_name)
-                                .and(marketplace::publisher.eq(&item.publisher.publisher_name))
-                                .and(marketplace::version.eq(&version.version))
-                                .and(marketplace::engine.eq(engne))
-                                .and(marketplace::platform.eq(platform))
-                                .and(marketplace::assert_url.eq(&visix.source)),
-                        )
-                        .execute(conn)
-                    {
-                        error!("Failed to delete pre-release version: {:?}", err);
-                    }
                     continue;
                 }
                 let x = Marketplace {
