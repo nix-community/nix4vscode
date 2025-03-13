@@ -344,7 +344,7 @@ checksum = "f46ad14479a25103f283c0f10005961cf086d8dc42205bb44c46ac563475dca6"
 
 [[package]]
 name = "code-api"
-version = "0.0.8"
+version = "0.0.9"
 dependencies = [
  "anyhow",
  "async-stream",
@@ -586,7 +586,7 @@ checksum = "877a4ace8713b0bcf2a4e7eec82529c029f1d0619886d18145fea96c3ffe5c0f"
 
 [[package]]
 name = "exporter"
-version = "0.0.8"
+version = "0.0.9"
 dependencies = [
  "anyhow",
  "clap 4.5.31",
@@ -1245,7 +1245,7 @@ dependencies = [
 
 [[package]]
 name = "nix4vscode"
-version = "0.0.8"
+version = "0.0.9"
 dependencies = [
  "anyhow",
  "clap 4.5.31",
