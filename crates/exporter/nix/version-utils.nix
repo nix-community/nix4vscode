@@ -1,18 +1,20 @@
 { lib }:
 
 let
+  VERSION_REGEX = "^(\^|>=)?((\d+)|x)\.((\d+)|x)\.((\d+)|x)(\-.*)?$";
+  NOT_BEFORE_REGEXP = "^-(\d{4})(\d{2})(\d{2})$";
   # Helper function to parse a version string into components
   parseVersion =
-    version:
+    version_s:
     let
-      version' = lib.strings.trim version;
+      version = lib.strings.trim version_s;
 
       # Handle wildcard version
-      isWildcard = version' == "*";
+      isWildcard = version == "*";
 
       # Regular expression to match version patterns
       # Captures: prefix (^, >=), major, minor, patch, and pre-release
-      matches = builtins.match "^(\^|>=)?((\d+)|x)\.((\d+)|x)\.((\d+)|x)(\-.*)?$" version';
+      matches = builtins.match VERSION_REGEX version;
 
       # Extract components if matches found
       prefix = if matches != null then builtins.elemAt matches 0 else null;
