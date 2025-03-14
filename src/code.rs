@@ -90,7 +90,7 @@ impl CodeNix {
             .filter(|v| !v.is_pre_release_version())
             .filter(|v| match v.get_engine() {
                 Ok(ver) => {
-                    if is_version_valid(vscode_ver, None, &ver).unwrap_or_default() {
+                    if !is_version_valid(vscode_ver, &ver) {
                         trace!("{ver} doesn't match {vscode_ver:?}");
                         return false;
                     }
