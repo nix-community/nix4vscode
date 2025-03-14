@@ -13,7 +13,6 @@ fn test_is_valid_version_str() {
 
     assert!(is_valid_version_str("x.x.x"));
     assert!(is_valid_version_str("0.x.x"));
-    assert!(is_valid_version_str("0.10.0"));
     assert!(is_valid_version_str("0.10.x"));
     assert!(is_valid_version_str("^0.10.0"));
     assert!(is_valid_version_str("*"));

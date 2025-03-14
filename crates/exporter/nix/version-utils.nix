@@ -1,232 +1,87 @@
-{ lib }:
+{
+  pkgs ?
+    import
+      (builtins.fetchTarball "https://github.com/NixOS/nixpkgs/archive/refs/heads/nixos-unstable.tar.gz")
+      { },
+  lib ? pkgs.lib,
+}:
 
 let
-  VERSION_REGEX = "^(\^|>=)?((\d+)|x)\.((\d+)|x)\.((\d+)|x)(\-.*)?$";
-  NOT_BEFORE_REGEXP = "^-(\d{4})(\d{2})(\d{2})$";
-  # Helper function to parse a version string into components
+  VERSION_REGEX = "^(\\^|>=)?(([0-9]+)|x)\.(([0-9]+)|x)\.(([0-9]+)|x)(\-.*)?$";
+  NOT_BEFORE_REGEXP = "^-([0-9]{4})([0-9]{2})([0-9]{2})$";
+  isValidVersionStr =
+    version_s:
+    let
+      version = lib.strings.trim version_s;
+    in
+    version == "*" || builtins.match VERSION_REGEX version != null;
+
   parseVersion =
     version_s:
     let
       version = lib.strings.trim version_s;
       matches = builtins.match VERSION_REGEX version;
     in
-    if version == "*" then
-      {
-        hasCaret = false;
-        hasGreaterEquals = false;
-        majorBase = 0;
-        majorMustEqual = false;
-        minorBase = 0;
-        minorMustEqual = false;
-        patchBase = 0;
-        patchMustEqual = false;
-        preRelease = null;
-      }
-    else if matches == null then
+    if isValidVersionStr version == false then
       null
+    else if version == "*" then
+      {
+        has_caret = false;
+        has_greater_equals = false;
+        major_base = 0;
+        major_must_equal = false;
+        minor_base = 0;
+        minor_must_equal = false;
+        patch_base = 0;
+        patch_must_equal = false;
+        pre_release = null;
+      }
     else
       let
+        elemAt =
+          list: idx: default:
+          if builtins.length list <= idx then
+            default
+          else
+            let
+              x = builtins.elemAt list idx;
+            in
+            if x == null then default else x;
 
-        # Extract components if matches found
-        prefix = if matches != null then builtins.elemAt matches 0 else null;
-        majorStr = if matches != null then builtins.elemAt matches 1 else null;
-        minorStr = if matches != null then builtins.elemAt matches 3 else null;
-        patchStr = if matches != null then builtins.elemAt matches 7 else null;
-        preRelease = if matches != null then builtins.elemAt matches 10 else null;
+        prefix = elemAt matches 0 null;
+        has_caret = prefix == "^";
+        has_greater_equals = prefix == ">=";
 
-        # Convert to appropriate types with defaults
-        hasCaret = prefix == "^";
-        hasGreaterEquals = prefix == ">=";
+        major_str = elemAt matches 2 "x";
+        major_base = if major_str == "x" then 0 else lib.strings.toInt major_str;
+        major_must_equal = major_str != "x";
 
-        # Helper function for conditional expressions (similar to texpr macro)
-        texpr =
-          condition: ifTrue: ifFalse:
-          if condition then ifTrue else ifFalse;
+        minor_str = elemAt matches 4 "x";
+        minor_base = if minor_str == "x" then 0 else lib.strings.toInt minor_str;
+        minor_must_equal = minor_str != "x";
 
-        majorBase = texpr (majorStr == "x") 0 (lib.strings.toInt majorStr);
-        majorMustEqual = texpr (majorStr == "x") false true;
+        patch_str = elemAt matches 6 "x";
+        patch_base = if patch_str == "x" then 0 else lib.strings.toInt patch_str;
+        patch_must_equal = patch_str != "x";
 
-        minorBase = texpr (minorStr == "x") 0 (lib.strings.toInt minorStr);
-        minorMustEqual = texpr (minorStr == "x") false true;
-
-        patchBase = texpr (patchStr == "x") 0 (lib.strings.toInt patchStr);
-        patchMustEqual = texpr (patchStr == "x") false true;
+        pre_release_str = elemAt matches 7 null;
+        pre_release = pre_release_str;
       in
       {
         inherit
-          hasCaret
-          hasGreaterEquals
-          majorBase
-          majorMustEqual
-          minorBase
-          minorMustEqual
-          patchBase
-          patchMustEqual
-          preRelease
+          has_caret
+          has_greater_equals
+          major_base
+          major_must_equal
+          minor_base
+          minor_must_equal
+          patch_base
+          patch_must_equal
+          pre_release
           ;
       };
 
-  # Normalize a parsed version
-  normalizeVersion =
-    parsedVersion:
-    let
-      majorBase = parsedVersion.majorBase;
-      majorMustEqual = parsedVersion.majorMustEqual;
-      minorBase = parsedVersion.minorBase;
-      patchBase = parsedVersion.patchBase;
-
-      # Apply caret rules
-      minorMustEqual' =
-        if parsedVersion.hasCaret then
-          if majorBase == 0 then parsedVersion.minorMustEqual else false
-        else
-          parsedVersion.minorMustEqual;
-
-      patchMustEqual' =
-        if parsedVersion.hasCaret then
-          if majorBase == 0 then false else false
-        else
-          parsedVersion.patchMustEqual;
-
-      # We're not implementing the date-based pre-release handling for simplicity
-      notBefore = 0;
-    in
-    {
-      majorBase = majorBase;
-      majorMustEqual = majorMustEqual;
-      minorBase = minorBase;
-      minorMustEqual = minorMustEqual';
-      patchBase = patchBase;
-      patchMustEqual = patchMustEqual';
-      isMinimum = parsedVersion.hasGreaterEquals;
-      notBefore = notBefore;
-    };
-
-  # Check if a version is valid against a desired version
-  isValidVersion =
-    version: desiredVersion:
-    let
-      majorBase = version.majorBase;
-      minorBase = version.minorBase;
-      patchBase = version.patchBase;
-
-      desiredMajorBase = desiredVersion.majorBase;
-      desiredMinorBase = desiredVersion.minorBase;
-      desiredPatchBase = desiredVersion.patchBase;
-
-      majorMustEqual = desiredVersion.majorMustEqual;
-      minorMustEqual = desiredVersion.minorMustEqual;
-      patchMustEqual = desiredVersion.patchMustEqual;
-
-      # Handle minimum version case (>=)
-      isMinimumVersion = desiredVersion.isMinimum;
-
-      # Special case for 1.0.0 compatibility with 0.x.x
-      specialCase =
-        majorBase == 1 && desiredMajorBase == 0 && (!majorMustEqual || !minorMustEqual || !patchMustEqual);
-
-      # Adjusted desired version for special case
-      adjustedDesired =
-        if specialCase then
-          {
-            majorBase = 1;
-            majorMustEqual = true;
-            minorBase = 0;
-            minorMustEqual = false;
-            patchBase = 0;
-            patchMustEqual = false;
-            isMinimum = desiredVersion.isMinimum;
-            notBefore = desiredVersion.notBefore;
-          }
-        else
-          desiredVersion;
-
-      # Re-extract values after potential adjustment
-      desiredMajorBase' = adjustedDesired.majorBase;
-      desiredMinorBase' = adjustedDesired.minorBase;
-      desiredPatchBase' = adjustedDesired.patchBase;
-      majorMustEqual' = adjustedDesired.majorMustEqual;
-      minorMustEqual' = adjustedDesired.minorMustEqual;
-      patchMustEqual' = adjustedDesired.patchMustEqual;
-    in
-    # Handle minimum version case
-    if isMinimumVersion then
-      if majorBase > desiredMajorBase' then
-        true
-      else if majorBase < desiredMajorBase' then
-        false
-      else if minorBase > desiredMinorBase' then
-        true
-      else if minorBase < desiredMinorBase' then
-        false
-      else
-        patchBase >= desiredPatchBase'
-
-    # Regular version comparison
-    else if majorBase < desiredMajorBase' then
-      false
-    else if majorBase > desiredMajorBase' then
-      !majorMustEqual'
-    else if minorBase < desiredMinorBase' then
-      false
-    else if minorBase > desiredMinorBase' then
-      !minorMustEqual'
-    else if patchBase < desiredPatchBase' then
-      false
-    else if patchBase > desiredPatchBase' then
-      !patchMustEqual'
-    else
-      true;
-
 in
 {
-  # Main function to check if a version is valid against a requested version
-  isVersionValid =
-    codeVersion: requestedVersion:
-    let
-      # Handle wildcard version
-      isWildcard = lib.strings.trim requestedVersion == "*";
-
-      # Parse and normalize the requested version
-      parsedRequestedVersion = parseVersion requestedVersion;
-
-      # Return true for wildcard version
-      result =
-        if isWildcard then
-          true
-        # Return false if parsing failed
-        else if parsedRequestedVersion == null then
-          false
-        else
-          let
-            normalizedRequestedVersion = normalizeVersion parsedRequestedVersion;
-
-            # Special validation for 0.x.x versions
-            isValid0x =
-              if normalizedRequestedVersion.majorBase == 0 then
-                if !normalizedRequestedVersion.majorMustEqual || !normalizedRequestedVersion.minorMustEqual then
-                  false
-                else
-                  true
-              else if !normalizedRequestedVersion.majorMustEqual then
-                false
-              else
-                true;
-          in
-          if !isValid0x then
-            false
-          else
-            let
-              # Parse and normalize the code version
-              parsedCodeVersion = parseVersion codeVersion;
-            in
-            if parsedCodeVersion == null then
-              false
-            else
-              let
-                normalizedCodeVersion = normalizeVersion parsedCodeVersion;
-              in
-              isValidVersion normalizedCodeVersion normalizedRequestedVersion;
-    in
-    result;
+  inherit isValidVersionStr parseVersion;
 }
