@@ -1,14 +1,22 @@
 {
-  pkgs ?
-    import
-      (builtins.fetchTarball "https://github.com/NixOS/nixpkgs/archive/refs/heads/nixos-unstable.tar.gz")
-      { },
+  pkgs ? import <nixpkgs> { },
   lib ? pkgs.lib,
 }:
 
 let
   VERSION_REGEX = "^(\\^|>=)?(([0-9]+)|x)\.(([0-9]+)|x)\.(([0-9]+)|x)(\-.*)?$";
   NOT_BEFORE_REGEXP = "^-([0-9]{4})([0-9]{2})([0-9]{2})$";
+
+  elemAt =
+    list: idx: default:
+    if builtins.length list <= idx then
+      default
+    else
+      let
+        x = builtins.elemAt list idx;
+      in
+      if x == null then default else x;
+
   isValidVersionStr =
     version_s:
     let
@@ -38,15 +46,6 @@ let
       }
     else
       let
-        elemAt =
-          list: idx: default:
-          if builtins.length list <= idx then
-            default
-          else
-            let
-              x = builtins.elemAt list idx;
-            in
-            if x == null then default else x;
 
         prefix = elemAt matches 0 null;
         has_caret = prefix == "^";
@@ -81,7 +80,154 @@ let
           ;
       };
 
+  parseTime =
+    dateTime:
+    lib.strings.toInt (
+      lib.readFile "${pkgs.runCommand "timestamp" { }
+        "echo -n `${pkgs.coreutils}/bin/date -d ${dateTime} +%s` > $out"
+      }"
+    );
+
+  # `version`: IParsedVersion
+  normalizeVersion =
+    version:
+    let
+      major_base = version.major_base;
+      major_must_equal = version.major_must_equal;
+      minor_base = version.minor_base;
+      minor_must_equal = if version.has_caret && major_base != 0 then false else version.minor_must_equal;
+      patch_base = version.patch_base;
+      patch_must_equal = if version.has_caret then false else version.patch_must_equal;
+      is_minimum = version.has_greater_equals;
+
+      m_pre_release =
+        if version.pre_release != null then
+          (builtins.match NOT_BEFORE_REGEXP version.pre_release)
+        else
+          null;
+      year = if m_pre_release == null then "1970" else elemAt m_pre_release 1 "1970";
+      month = if m_pre_release == null then "01" else elemAt m_pre_release 2 "01";
+      day = if m_pre_release == null then "01" else elemAt m_pre_release 3 "01";
+      timestamp = parseTime "${year}-${month}-${day}T00:00:00Z";
+      not_before = timestamp;
+    in
+    {
+      inherit
+        major_base
+        major_must_equal
+        minor_base
+        minor_must_equal
+        patch_base
+        patch_must_equal
+        is_minimum
+        not_before
+        ;
+    }
+
+  ;
+
+  isValidVersion =
+    version: product_ts: desired_version:
+
+    let
+
+      major_base = version.major_base;
+      minor_base = version.minor_base;
+      patch_base = version.patch_base;
+
+      _desired_major_base = desired_version.major_base;
+      _desired_minor_base = desired_version.minor_base;
+      _desired_patch_base = desired_version.patch_base;
+      desired_not_before = desired_version.not_before;
+
+      _major_must_equal = desired_version.major_must_equal;
+      _minor_must_equal = desired_version.minor_must_equal;
+      _patch_must_equal = desired_version.patch_must_equal;
+    in
+    if desired_version.is_minimum then
+      if major_base > _desired_major_base then
+        true
+      else
+
+      if major_base < _desired_major_base then
+        false
+      else
+
+      if minor_base > _desired_minor_base then
+        true
+      else
+
+      if minor_base < _desired_minor_base then
+        false
+      else
+
+      if product_ts != null && product_ts < desired_not_before then
+        false
+      else
+        patch_base >= _desired_patch_base
+    else
+      let
+        # Anything < 1.0.0 is compatible with >= 1.0.0, except exact matches
+        compatible =
+          major_base == 1
+          && _desired_major_base == 0
+          && (!_major_must_equal || !_minor_must_equal || !_patch_must_equal);
+
+        desired_major_base = if compatible then 1 else _desired_major_base;
+        desired_minor_base = if compatible then 0 else _desired_minor_base;
+        desired_patch_base = if compatible then 0 else _desired_patch_base;
+        major_must_equal = if compatible then true else _major_must_equal;
+        minor_must_equal = if compatible then false else _minor_must_equal;
+        patch_must_equal = if compatible then false else _patch_must_equal;
+      in
+
+      if major_base < desired_major_base then
+        # smaller major version
+        false
+      else
+
+      if major_base > desired_major_base then
+        # higher major version
+        !major_must_equal
+      else
+
+      # at this point, majorBase are equal
+
+      if minor_base < desired_minor_base then
+        # smaller minor version
+        false
+      else
+
+      if minor_base > desired_minor_base then
+        # higher minor version
+        !minor_must_equal
+      else
+
+      # at this point, minorBase are equal
+
+      if patch_base < desired_patch_base then
+        # smaller patch version
+        false
+      else
+
+      if patch_base > desired_patch_base then
+        # higher patch version
+        !patch_must_equal
+      else
+
+      # at this point, patchBase are equal
+
+      if product_ts != null && product_ts < desired_not_before then
+        false
+      else
+        true;
 in
 {
-  inherit isValidVersionStr parseVersion;
+  inherit
+    isValidVersionStr
+    parseVersion
+    normalizeVersion
+    isValidVersion
+    parseTime
+    ;
 }
