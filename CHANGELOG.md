@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.0.10](https://github.com/nix-community/nix4vscode/compare/nix4vscode-v0.0.9...nix4vscode-v0.0.10) (2025-03-15)
+
+
+### Features
+
+* add isValidVersionAny ([a169f0c](https://github.com/nix-community/nix4vscode/commit/a169f0c1442c1be947d9ef09e06d252d75e87ae1))
+* **exporter:** fix errors ([25f1c46](https://github.com/nix-community/nix4vscode/commit/25f1c46345a1c2fe5a280c0ca1cb587cdfed64c1))
+* fix errors ([25f1c46](https://github.com/nix-community/nix4vscode/commit/25f1c46345a1c2fe5a280c0ca1cb587cdfed64c1))
+
+
+### Bug Fixes
+
+* **exporter:** fix regex ([25f1c46](https://github.com/nix-community/nix4vscode/commit/25f1c46345a1c2fe5a280c0ca1cb587cdfed64c1))
+* fix nix ([25f1c46](https://github.com/nix-community/nix4vscode/commit/25f1c46345a1c2fe5a280c0ca1cb587cdfed64c1))
+* **nix:** fix errors ([d392f4e](https://github.com/nix-community/nix4vscode/commit/d392f4e23bfbd6708394b8bd0bc5a3486fc1958f))
+
 ## [0.0.9](https://github.com/nix-community/nix4vscode/compare/nix4vscode-v0.0.8...nix4vscode-v0.0.9) (2025-03-13)
 
 
