@@ -221,6 +221,26 @@ let
         false
       else
         true;
+  isValidVersionAny =
+    {
+      version_s,
+      desired_version_s,
+      product_ts ? null,
+    }:
+    let
+      version_p = parseVersion version_s;
+      desired_version_p = parseVersion version_s;
+    in
+    # version = normalizeVersion parseVersion version_s;
+    # desired_version = normalizeVersion parseVersion desired_version_s;
+    if version_p == null || desired_version_p == null then
+      false
+    else
+      let
+        version = normalizeVersion version_p;
+        desired_version = normalizeVersion desired_version_p;
+      in
+      isValidVersion version product_ts desired_version;
 in
 {
   inherit
@@ -229,5 +249,6 @@ in
     normalizeVersion
     isValidVersion
     parseTime
+    isValidVersionAny
     ;
 }
