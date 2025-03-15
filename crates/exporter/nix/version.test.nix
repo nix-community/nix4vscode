@@ -4,7 +4,7 @@
 }:
 
 let
-  utils = import ./version-utils.nix { inherit lib; };
+  utils = import ./version.nix { inherit lib; };
 
   assertValidStr = version: expected: {
     name = "isValidVersionStr(${version})";

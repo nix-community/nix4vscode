@@ -1,8 +1,11 @@
-{ lib }:
+{
+  pkgs ? import <nixpkgs> { },
+  lib ? pkgs.lib,
+}:
 
 let
   # Import the version utilities
-  versionUtils = import ./version-utils.nix { inherit lib; };
+  utils = import ./version.nix { inherit pkgs lib; };
 in
 final: prev: {
   vscodeExtensionsForEngine =
@@ -56,7 +59,7 @@ final: prev: {
         let
           extEngine = ext.engine or "";
         in
-        versionUtils.isVersionValid engineVersion extEngine;
+        utils.isVersionValid engineVersion extEngine;
 
       # Filter extensions matching the specified engine version and current platform
       filteredByEngine = builtins.filter matchesEngine extensions;
@@ -86,7 +89,7 @@ final: prev: {
         let
           extEngine = ext.engine or "";
         in
-        versionUtils.isVersionValid engineVersion extEngine;
+        utils.isVersionValid engineVersion extEngine;
 
       # Filter extensions matching the specified engine version and platform
       filteredByEngine = builtins.filter matchesEngine extensions;
