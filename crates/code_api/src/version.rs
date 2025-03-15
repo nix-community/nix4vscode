@@ -116,11 +116,9 @@ pub fn normalize_version(version: IParsedVersion) -> INormalizedVersion {
     let mut patch_must_equal = version.patch_must_equal;
 
     if version.has_caret {
-        if major_base == 0 {
-            patch_must_equal = false;
-        } else {
+        patch_must_equal = false;
+        if major_base != 0 {
             minor_must_equal = false;
-            patch_must_equal = false;
         }
     }
 
