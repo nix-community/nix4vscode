@@ -23,11 +23,17 @@ pub async fn fetch_hash(conn: &mut PgConnection, batch_size: usize) -> anyhow::R
 
     let sem = Arc::new(tokio::sync::Semaphore::new(batch_size));
     let wg = WaitGroup::new();
-    let (tx, mut rx) = unbounded_channel::<(String, String)>();
+
+    struct UpdateInfo {
+        url: String,
+        file_hash: String,
+    }
+
+    let (tx, mut rx) = unbounded_channel::<UpdateInfo>();
 
     let db_task = async move {
         loop {
-            let Some((url, file_hash)) = rx.recv().await else {
+            let Some(UpdateInfo { url, file_hash }) = rx.recv().await else {
                 error!("channel closed!");
                 exit(-1);
             };
@@ -58,7 +64,7 @@ pub async fn fetch_hash(conn: &mut PgConnection, batch_size: usize) -> anyhow::R
 
                 if let Ok(file_hash) = compute_hash(&url).await {
                     debug!("compute hash: {file_hash} of {url:?}");
-                    tx.send((url, file_hash)).unwrap();
+                    tx.send(UpdateInfo { url, file_hash }).unwrap();
                 }
                 nix_gc().await;
             });
