@@ -1,43 +1,37 @@
+use std::collections::HashSet;
 use std::sync::Arc;
 
-use crate::models::*;
 use crate::schema::marketplace::dsl::*;
 use diesel::prelude::*;
 use diesel::PgConnection;
 use scopeguard::defer;
 use tokio::select;
 use tokio::sync::mpsc::unbounded_channel;
-use tracing::debug;
-use tracing::error;
+use tracing::info;
+use tracing::*;
 use waitgroup::WaitGroup;
 
 pub async fn fetch_hash(conn: &mut PgConnection, batch_size: usize) -> anyhow::Result<()> {
-    let record = marketplace
+    let urls: HashSet<String> = marketplace
         .filter(hash.is_null())
-        .select(Marketplace::as_select())
-        .load(conn)?;
+        .select(assert_url)
+        .load(conn)?
+        .into_iter()
+        .collect();
+    info!("count: {}", urls.len());
 
     let sem = Arc::new(tokio::sync::Semaphore::new(batch_size));
     let wg = WaitGroup::new();
-    let (tx, mut rx) = unbounded_channel::<Marketplace>();
+    let (tx, mut rx) = unbounded_channel::<(String, String)>();
 
     let db_task = async move {
         loop {
-            let Some(record) = rx.recv().await else {
+            let Some((url, file_hash)) = rx.recv().await else {
                 break;
             };
 
-            let Some(file_hash) = record.hash else {
-                error!("unreachable");
-                continue;
-            };
             let _ = diesel::update(marketplace)
-                .filter(name.eq(&record.name))
-                .filter(publisher.eq(&record.publisher))
-                .filter(version.eq(&record.version))
-                .filter(engine.eq(&record.engine))
-                .filter(platform.eq(&record.platform))
-                .filter(assert_url.eq(&record.assert_url))
+                .filter(assert_url.eq(&url))
                 .set(hash.eq(file_hash))
                 .execute(conn);
         }
@@ -46,7 +40,7 @@ pub async fn fetch_hash(conn: &mut PgConnection, batch_size: usize) -> anyhow::R
     let w = wg.worker();
 
     let task2 = async move {
-        for mut record in record {
+        for url in urls {
             let t = sem.clone().acquire_owned().await.unwrap();
             debug!("create task");
             let tx = tx.clone();
@@ -57,10 +51,9 @@ pub async fn fetch_hash(conn: &mut PgConnection, batch_size: usize) -> anyhow::R
                     drop(w);
                 }
 
-                if let Ok(file_hash) = compute_hash(&record.assert_url).await {
-                    debug!("compute hash: {file_hash} of {record:?}");
-                    record.hash = Some(file_hash);
-                    tx.send(record).unwrap();
+                if let Ok(file_hash) = compute_hash(&url).await {
+                    debug!("compute hash: {file_hash} of {url:?}");
+                    tx.send((url, file_hash)).unwrap();
                 }
                 nix_gc().await;
             });
