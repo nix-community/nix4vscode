@@ -1,4 +1,5 @@
 use std::collections::HashSet;
+use std::process::exit;
 use std::sync::Arc;
 
 use crate::schema::marketplace::dsl::*;
@@ -27,13 +28,17 @@ pub async fn fetch_hash(conn: &mut PgConnection, batch_size: usize) -> anyhow::R
     let db_task = async move {
         loop {
             let Some((url, file_hash)) = rx.recv().await else {
-                break;
+                error!("channel closed!");
+                exit(-1);
             };
 
-            let _ = diesel::update(marketplace)
+            if let Err(err) = diesel::update(marketplace)
                 .filter(assert_url.eq(&url))
                 .set(hash.eq(file_hash))
-                .execute(conn);
+                .execute(conn)
+            {
+                error!(?err);
+            }
         }
     };
 
@@ -42,7 +47,7 @@ pub async fn fetch_hash(conn: &mut PgConnection, batch_size: usize) -> anyhow::R
     let task2 = async move {
         for url in urls {
             let t = sem.clone().acquire_owned().await.unwrap();
-            debug!("create task");
+            trace!("create task");
             let tx = tx.clone();
             let w = w.clone();
             tokio::spawn(async move {
