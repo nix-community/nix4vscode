@@ -34,7 +34,7 @@ let
     in
     if toml == null then null else toml.extension;
 
-  extensionForEngine =
+  extensionForEngineList =
     extensions: engine:
     builtins.filter (
       ext:
@@ -44,7 +44,7 @@ let
       }
     ) extensions;
 
-  extensionForPlatform =
+  extensionForPlatformList =
     extensions: platform:
     builtins.filter (
       ext:
@@ -66,18 +66,26 @@ let
       builtins.elem ext.platform plat
     ) extensions;
 
+  extensionForEngineForPlatformList =
+    extensions: engine: platform:
+    extensionForPlatformList (extensionForEngineList extensions engine) platform;
+
   extensionForEngineForPlatform =
     extensions: engine: platform:
-    extensionForPlatform (extensionForEngine extensions engine) platform;
+    let
+      li= extensionForEngineForPlatformList extensions engine platform;
+    in
+    { };
 
 in
 {
   inherit
     fromFile
-    extensionForEngine
-    extensionForPlatform
+    extensionForEngineList
+    extensionForPlatformList
+    extensionForEngineForPlatformList
     extensionForEngineForPlatform
     ;
 
-  x = extensionForEngineForPlatform (fromFile ./extensions.toml) "1.76.0" "x86_64-linux";
+  x = extensionForEngineForPlatformList (fromFile ./extensions.toml) "1.76.0" "x86_64-linux";
 }

@@ -241,6 +241,23 @@ let
         desired_version = normalizeVersion desired_version_p;
       in
       isValidVersion version product_ts desired_version;
+  normalizeVersionLessThan =
+    l: r: l.major_base < r.major_base || l.minor_base < r.minor_base || l.patch_base < r.patch_base;
+
+  versionLessThan =
+    l_str: r_str:
+    let
+      lp = parseVersion l_str;
+      rp = parseVersion r_str;
+    in
+    if lp || rp then
+      false
+    else
+      let
+        l = normalizeVersion lp;
+        r = normalizeVersion rp;
+      in
+      normalizeVersionLessThan l r;
 in
 {
   inherit
@@ -250,5 +267,6 @@ in
     isValidVersion
     parseTime
     isValidVersionAny
+    versionLessThan
     ;
 }
