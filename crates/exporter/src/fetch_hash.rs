@@ -38,6 +38,7 @@ pub async fn fetch_hash(conn: &mut PgConnection, batch_size: usize) -> anyhow::R
                 exit(-1);
             };
 
+            let now = tokio::time::Instant::now();
             if let Err(err) = diesel::update(marketplace)
                 .filter(assert_url.eq(&url))
                 .set(hash.eq(file_hash))
@@ -45,6 +46,8 @@ pub async fn fetch_hash(conn: &mut PgConnection, batch_size: usize) -> anyhow::R
             {
                 error!(?err);
             }
+            let sec = now.elapsed().as_secs();
+            debug!("update cost {sec} seconds");
         }
     };
 
@@ -62,8 +65,10 @@ pub async fn fetch_hash(conn: &mut PgConnection, batch_size: usize) -> anyhow::R
                     drop(w);
                 }
 
+                let now = tokio::time::Instant::now();
                 if let Ok(file_hash) = compute_hash(&url).await {
-                    debug!("compute hash: {file_hash} of {url:?}");
+                    let escaped = now.elapsed().as_secs();
+                    debug!("compute hash: {file_hash} of {url:?}, costs {escaped} sec.");
                     tx.send(UpdateInfo { url, file_hash }).unwrap();
                 }
                 nix_gc().await;
