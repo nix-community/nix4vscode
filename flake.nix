@@ -71,6 +71,23 @@
 
       overlays = {
         default = lib.composeManyExtensions [ self.overlays.${packageName} ];
+        extensions = (
+          final: prev:
+          let
+            vscode = import ./nix/vscode.nix {
+              pkgs = import nixpkgs {
+                inherit (final) system;
+              };
+            };
+            extensions = vscode.infoFromFile ./data/extensions.toml;
+          in
+          {
+            vscode-marketplace = vscode.extensionsFromInfo {
+              inherit extensions;
+              inherit (final) system;
+            };
+          }
+        );
         ${packageName} =
           final: _:
           let

@@ -7,6 +7,9 @@
     flake-utils = {
       url = "github:numtide/flake-utils";
     };
+    nix4vscode = {
+      url = "..";
+    };
   };
 
   outputs =
@@ -18,18 +21,25 @@
         pkgs = import nixpkgs {
           inherit system;
           config.allowUnfree = true;
+          overlays = [
+            nix4vscode.overlays.extensions
+          ];
         };
         plugins = (import ./vscode_plugins.nix) {
           pkgs = pkgs;
           lib = pkgs.lib;
         };
+        vscode-marketplace = pkgs.vscode-marketplace;
       in
       {
+        inherit vscode-marketplace;
         devShell = pkgs.mkShell {
           buildInputs = [
             plugins.eamodio.gitlens
-            (builtins.getAttr "42crunch" plugins).vscode-openapi
-            plugins.ms-vscode.cpptools
+            # vscode-marketplace.x86_64-linux.ms-vscode.cpptools
+
+            # (builtins.getAttr "42crunch" plugins).vscode-openapi
+            # plugins.ms-vscode.cpptools
           ];
         };
       }
