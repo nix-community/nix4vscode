@@ -26,6 +26,23 @@
 
       extensions = vscode.infoFromFile ./data/extensions.toml;
       eachSystem = lib.genAttrs (import systems);
+      extOverlays = system: [
+        (final: prev: {
+          extensions = vscode.extensionsFromInfo {
+            inherit extensions;
+            platform = system;
+          };
+        })
+        (final: prev: {
+          extensionsFromInfo =
+            engine:
+            vscode.extensionsFromInfo {
+              inherit extensions engine;
+              platform = system;
+            };
+        })
+      ];
+
       pkgsFor = eachSystem (
         system:
         import nixpkgs {
@@ -33,21 +50,7 @@
           overlays = [
             rust-overlay.overlays.default
             self.overlays.default
-            (final: prev: {
-              extensions = vscode.extensionsFromInfo {
-                inherit extensions;
-                platform = system;
-              };
-            })
-            (final: prev: {
-              extensionsFromInfo =
-                engine:
-                vscode.extensionsFromInfo {
-                  inherit extensions engine;
-                  platform = system;
-                };
-            })
-          ];
+          ] ++ extOverlays system;
         }
       );
 
@@ -73,16 +76,6 @@
             strictDeps = true;
             packages = [
               (lib.hiPrio rust-stable)
-              # Use rustfmt, and other tools that require nightly features.
-              (pkgs.rust-bin.selectLatestNightlyWith (
-                toolchain:
-                toolchain.minimal.override {
-                  extensions = [
-                    "rustfmt"
-                    "rust-analyzer"
-                  ];
-                }
-              ))
             ];
           };
         }
