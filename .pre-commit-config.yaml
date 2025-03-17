@@ -29,3 +29,11 @@ repos:
         language: system
         types_or: [toml]
         entry: taplo format
+
+  - repo: local
+    hooks:
+      - id: nixfmt
+        name: nixfmt
+        language: system
+        types_or: [nix]
+        entry: nixfmt

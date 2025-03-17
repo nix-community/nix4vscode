@@ -4,12 +4,16 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/22.11";
-    flake-utils = { url = "github:numtide/flake-utils"; };
+    flake-utils = {
+      url = "github:numtide/flake-utils";
+    };
   };
 
-  outputs = { self, ... }@inputs:
+  outputs =
+    { self, ... }@inputs:
     with inputs;
-    flake-utils.lib.eachDefaultSystem (system:
+    flake-utils.lib.eachDefaultSystem (
+      system:
       let
         pkgs = import nixpkgs {
           inherit system;
@@ -28,5 +32,6 @@
             plugins.ms-vscode.cpptools
           ];
         };
-      });
+      }
+    );
 }

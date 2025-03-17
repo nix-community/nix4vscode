@@ -2,8 +2,10 @@
 
 { pkgs, lib }:
 
-let vscode-utils = pkgs.vscode-utils;
-in {
+let
+  vscode-utils = pkgs.vscode-utils;
+in
+{
 
   "ms-python"."python" = vscode-utils.extensionFromVscodeMarketplace {
     name = "python";
@@ -26,21 +28,19 @@ in {
     sha256 = "01s0vi2h917mqfpdrhqhp2ijwkibw95yk2js0l587wvajbbry2s9";
   };
 
-  "visualstudioexptteam"."vscodeintellicode" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "vscodeintellicode";
-      publisher = "visualstudioexptteam";
-      version = "1.2.30";
-      sha256 = "0lg298047vmy31fnkczgpw78k3yxzpiip0ln1wixy70hdpwsfqbz";
-    };
+  "visualstudioexptteam"."vscodeintellicode" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "vscodeintellicode";
+    publisher = "visualstudioexptteam";
+    version = "1.2.30";
+    sha256 = "0lg298047vmy31fnkczgpw78k3yxzpiip0ln1wixy70hdpwsfqbz";
+  };
 
-  "ms-azuretools"."vscode-docker" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "vscode-docker";
-      publisher = "ms-azuretools";
-      version = "1.28.0";
-      sha256 = "0nmc3pdgxpmr6k2ksdczkv9bbwszncfczik0xjympqnd2k0ra9h0";
-    };
+  "ms-azuretools"."vscode-docker" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "vscode-docker";
+    publisher = "ms-azuretools";
+    version = "1.28.0";
+    sha256 = "0nmc3pdgxpmr6k2ksdczkv9bbwszncfczik0xjympqnd2k0ra9h0";
+  };
 
   "eamodio"."gitlens" = vscode-utils.extensionFromVscodeMarketplace {
     name = "gitlens";
@@ -57,20 +57,20 @@ in {
   };
 
   "visualstudioexptteam"."intellicode-api-usage-examples" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "intellicode-api-usage-examples";
-      publisher = "visualstudioexptteam";
-      version = "0.2.8";
-      sha256 = "1l1wjzbl5jjniyiqzlj23i3sl2xy5jsx97wsj3sbb6py0pfi4w39";
-    };
+    vscode-utils.extensionFromVscodeMarketplace
+      {
+        name = "intellicode-api-usage-examples";
+        publisher = "visualstudioexptteam";
+        version = "0.2.8";
+        sha256 = "1l1wjzbl5jjniyiqzlj23i3sl2xy5jsx97wsj3sbb6py0pfi4w39";
+      };
 
-  "formulahendry"."auto-rename-tag" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "auto-rename-tag";
-      publisher = "formulahendry";
-      version = "0.1.10";
-      sha256 = "0nyilwfs2kbf8v3v9njx1s7ppdp1472yhimiaja0c3v7piwrcymr";
-    };
+  "formulahendry"."auto-rename-tag" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "auto-rename-tag";
+    publisher = "formulahendry";
+    version = "0.1.10";
+    sha256 = "0nyilwfs2kbf8v3v9njx1s7ppdp1472yhimiaja0c3v7piwrcymr";
+  };
 
   "ms-vsliveshare"."vsliveshare" = vscode-utils.extensionFromVscodeMarketplace {
     name = "vsliveshare";
@@ -86,21 +86,19 @@ in {
     sha256 = "0pww9qndd2vsizsibjsvscz9fbfx8srrj67x4vhmwr581q674944";
   };
 
-  "christian-kohler"."path-intellisense" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "path-intellisense";
-      publisher = "christian-kohler";
-      version = "2.8.5";
-      sha256 = "1ndffv1m4ayiija1l42m28si44vx9y6x47zpxzqv2j4jj7ga1n5z";
-    };
+  "christian-kohler"."path-intellisense" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "path-intellisense";
+    publisher = "christian-kohler";
+    version = "2.8.5";
+    sha256 = "1ndffv1m4ayiija1l42m28si44vx9y6x47zpxzqv2j4jj7ga1n5z";
+  };
 
-  "formulahendry"."auto-close-tag" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "auto-close-tag";
-      publisher = "formulahendry";
-      version = "0.5.14";
-      sha256 = "1k4ld30fyslj89bvjh2ihwgycb0i11mn266misccbjqkci5hg1jx";
-    };
+  "formulahendry"."auto-close-tag" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "auto-close-tag";
+    publisher = "formulahendry";
+    version = "0.5.14";
+    sha256 = "1k4ld30fyslj89bvjh2ihwgycb0i11mn266misccbjqkci5hg1jx";
+  };
 
   "golang"."go" = vscode-utils.extensionFromVscodeMarketplace {
     name = "go";
@@ -116,13 +114,12 @@ in {
     sha256 = "0x9q7sh5l1frpvfss32ypxk03d73v9npnqxif4fjwcfwvx5mhiww";
   };
 
-  "zhuangtongfa"."material-theme" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "material-theme";
-      publisher = "zhuangtongfa";
-      version = "3.16.2";
-      sha256 = "0ava94zn68lxy3ph78r5rma39qz03al5l5i6x070mpa1hzj3i319";
-    };
+  "zhuangtongfa"."material-theme" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "material-theme";
+    publisher = "zhuangtongfa";
+    version = "3.16.2";
+    sha256 = "0ava94zn68lxy3ph78r5rma39qz03al5l5i6x070mpa1hzj3i319";
+  };
 
   "wholroyd"."jinja" = vscode-utils.extensionFromVscodeMarketplace {
     name = "jinja";
@@ -145,13 +142,12 @@ in {
     sha256 = "0iwd6y2x2nx52hd3bsav3rrhr7dnl4n79ln09picmnh1mp4rrs3l";
   };
 
-  "davidanson"."vscode-markdownlint" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "vscode-markdownlint";
-      publisher = "davidanson";
-      version = "0.52.0";
-      sha256 = "0pi1vr86hmf26v6zcaaa2dhb38fcs557ihy39yrzq9rgs5qa9jk3";
-    };
+  "davidanson"."vscode-markdownlint" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "vscode-markdownlint";
+    publisher = "davidanson";
+    version = "0.52.0";
+    sha256 = "0pi1vr86hmf26v6zcaaa2dhb38fcs557ihy39yrzq9rgs5qa9jk3";
+  };
 
   "vue"."volar" = vscode-utils.extensionFromVscodeMarketplace {
     name = "volar";
@@ -174,13 +170,12 @@ in {
     sha256 = "0rs57csczwx6wrs99c442qpf6vllv2fby37f3a9rhwc8sg6849vn";
   };
 
-  "shd101wyy"."markdown-preview-enhanced" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "markdown-preview-enhanced";
-      publisher = "shd101wyy";
-      version = "0.8.10";
-      sha256 = "1qqar43h2vpynyz4gq21h5phklycw1sy2zajsn9a0hpxw7ddad06";
-    };
+  "shd101wyy"."markdown-preview-enhanced" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "markdown-preview-enhanced";
+    publisher = "shd101wyy";
+    version = "0.8.10";
+    sha256 = "1qqar43h2vpynyz4gq21h5phklycw1sy2zajsn9a0hpxw7ddad06";
+  };
 
   "bradlc"."vscode-tailwindcss" = vscode-utils.extensionFromVscodeMarketplace {
     name = "vscode-tailwindcss";
@@ -210,13 +205,12 @@ in {
     sha256 = "0yrc9qbdk7zznd823bqs1g6n2i5xrda0f9a7349kknj9wp1mqgqn";
   };
 
-  "ms-kubernetes-tools"."vscode-kubernetes-tools" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "vscode-kubernetes-tools";
-      publisher = "ms-kubernetes-tools";
-      version = "1.3.15";
-      sha256 = "1x6npc90p6b1wx5sd1hd0x0djahmffr6lw9cxh2zg10rbpq48w8i";
-    };
+  "ms-kubernetes-tools"."vscode-kubernetes-tools" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "vscode-kubernetes-tools";
+    publisher = "ms-kubernetes-tools";
+    version = "1.3.15";
+    sha256 = "1x6npc90p6b1wx5sd1hd0x0djahmffr6lw9cxh2zg10rbpq48w8i";
+  };
 
   "ms-vscode"."makefile-tools" = vscode-utils.extensionFromVscodeMarketplace {
     name = "makefile-tools";
@@ -239,13 +233,12 @@ in {
     sha256 = "0jj4mac4xqzdx0f6n9az1rh8wclbph95nnny7f4yak59yjigh3fv";
   };
 
-  "ms-vscode"."vscode-typescript-next" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "vscode-typescript-next";
-      publisher = "ms-vscode";
-      version = "5.4.20231123";
-      sha256 = "0gfhpza2vqfb3k21j4szj5719kn28wjjg57zkyhwhvj289jsh7w9";
-    };
+  "ms-vscode"."vscode-typescript-next" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "vscode-typescript-next";
+    publisher = "ms-vscode";
+    version = "5.4.20231123";
+    sha256 = "0gfhpza2vqfb3k21j4szj5719kn28wjjg57zkyhwhvj289jsh7w9";
+  };
 
   "rust-lang"."rust-analyzer" = vscode-utils.extensionFromVscodeMarketplace {
     name = "rust-analyzer";
@@ -261,13 +254,12 @@ in {
     sha256 = "0mzn1favvrzqcigr74gmy167qak5saskhwcvhf7f00z7x0378dim";
   };
 
-  "amazonwebservices"."aws-toolkit-vscode" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "aws-toolkit-vscode";
-      publisher = "amazonwebservices";
-      version = "1.99.0";
-      sha256 = "0v8yr257yq60ccar8r4sw7m4j2g11yc21fkmrcc6m6s16fg9dd1h";
-    };
+  "amazonwebservices"."aws-toolkit-vscode" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "aws-toolkit-vscode";
+    publisher = "amazonwebservices";
+    version = "1.99.0";
+    sha256 = "0v8yr257yq60ccar8r4sw7m4j2g11yc21fkmrcc6m6s16fg9dd1h";
+  };
 
   "ms-python"."black-formatter" = vscode-utils.extensionFromVscodeMarketplace {
     name = "black-formatter";
@@ -276,13 +268,12 @@ in {
     sha256 = "0kqwbv0v550icz6dvfxp19bk0yj017wyh4n6l7x27src9lkff833";
   };
 
-  "vue"."vscode-typescript-vue-plugin" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "vscode-typescript-vue-plugin";
-      publisher = "vue";
-      version = "1.8.22";
-      sha256 = "1094xzfzg8pjx4v1a2zbfgmcwcbyn02hkxc734nllp28w2fjrxlw";
-    };
+  "vue"."vscode-typescript-vue-plugin" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "vscode-typescript-vue-plugin";
+    publisher = "vue";
+    version = "1.8.22";
+    sha256 = "1094xzfzg8pjx4v1a2zbfgmcwcbyn02hkxc734nllp28w2fjrxlw";
+  };
 
   "adpyke"."codesnap" = vscode-utils.extensionFromVscodeMarketplace {
     name = "codesnap";
@@ -291,13 +282,12 @@ in {
     sha256 = "012sj4a65sr8014z4zpxqzb6bkj7pnhm4rls73xpwawk6hwal7km";
   };
 
-  "sibiraj-s"."vscode-scss-formatter" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "vscode-scss-formatter";
-      publisher = "sibiraj-s";
-      version = "3.0.0";
-      sha256 = "1y2przcslw4m83hq0gzndpi2ar43zpwdm3zls0fwagigpaqhr64s";
-    };
+  "sibiraj-s"."vscode-scss-formatter" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "vscode-scss-formatter";
+    publisher = "sibiraj-s";
+    version = "3.0.0";
+    sha256 = "1y2przcslw4m83hq0gzndpi2ar43zpwdm3zls0fwagigpaqhr64s";
+  };
 
   "foxundermoon"."shell-format" = vscode-utils.extensionFromVscodeMarketplace {
     name = "shell-format";
@@ -313,13 +303,12 @@ in {
     sha256 = "1d30jv28aqkf87al9b9xm15hj36c83f00mpn0vprvfph8gbdjqfd";
   };
 
-  "tombonnike"."vscode-status-bar-format-toggle" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "vscode-status-bar-format-toggle";
-      publisher = "tombonnike";
-      version = "3.2.0";
-      sha256 = "0091dks9f4lxc0qgqn6zid18w8amhjx2pwkqrjq9ibwlks3cxq1j";
-    };
+  "tombonnike"."vscode-status-bar-format-toggle" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "vscode-status-bar-format-toggle";
+    publisher = "tombonnike";
+    version = "3.2.0";
+    sha256 = "0091dks9f4lxc0qgqn6zid18w8amhjx2pwkqrjq9ibwlks3cxq1j";
+  };
 
   "tamasfe"."even-better-toml" = vscode-utils.extensionFromVscodeMarketplace {
     name = "even-better-toml";
@@ -398,13 +387,12 @@ in {
     sha256 = "1myzx6635bz1cci1qpmays541rpj50z73cz848yffkdjigyfgqcb";
   };
 
-  "ahmadalli"."vscode-nginx-conf" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "vscode-nginx-conf";
-      publisher = "ahmadalli";
-      version = "0.3.2";
-      sha256 = "042wvrd1jz3wfq1v4n4zr49fzigcwba95zqxi454w9njdgzqi5d4";
-    };
+  "ahmadalli"."vscode-nginx-conf" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "vscode-nginx-conf";
+    publisher = "ahmadalli";
+    version = "0.3.2";
+    sha256 = "042wvrd1jz3wfq1v4n4zr49fzigcwba95zqxi454w9njdgzqi5d4";
+  };
 
   "yatki"."vscode-surround" = vscode-utils.extensionFromVscodeMarketplace {
     name = "vscode-surround";
@@ -421,36 +409,34 @@ in {
   };
 
   "visualstudioexptteam"."vscodeintellicode-completions" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "vscodeintellicode-completions";
-      publisher = "visualstudioexptteam";
-      version = "1.0.22";
-      sha256 = "1j7509qfrgmmaz6n2nhgfvsxrghid6ki5cr9clva0jbbxlxz8rpb";
-    };
+    vscode-utils.extensionFromVscodeMarketplace
+      {
+        name = "vscodeintellicode-completions";
+        publisher = "visualstudioexptteam";
+        version = "1.0.22";
+        sha256 = "1j7509qfrgmmaz6n2nhgfvsxrghid6ki5cr9clva0jbbxlxz8rpb";
+      };
 
-  "misterj"."vue-volar-extention-pack" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "vue-volar-extention-pack";
-      publisher = "misterj";
-      version = "1.1.8";
-      sha256 = "1dbc1ad260a15wvkzh3p5y503ghimcvr82mxxlg501rl11lhkmw6";
-    };
+  "misterj"."vue-volar-extention-pack" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "vue-volar-extention-pack";
+    publisher = "misterj";
+    version = "1.1.8";
+    sha256 = "1dbc1ad260a15wvkzh3p5y503ghimcvr82mxxlg501rl11lhkmw6";
+  };
 
-  "britesnow"."vscode-toggle-quotes" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "vscode-toggle-quotes";
-      publisher = "britesnow";
-      version = "0.3.6";
-      sha256 = "1fys7a2g7g2qdwg7r8hv728pya8a3jiq8r6vkh0g0y5qdn9wqz8y";
-    };
+  "britesnow"."vscode-toggle-quotes" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "vscode-toggle-quotes";
+    publisher = "britesnow";
+    version = "0.3.6";
+    sha256 = "1fys7a2g7g2qdwg7r8hv728pya8a3jiq8r6vkh0g0y5qdn9wqz8y";
+  };
 
-  "wyattferguson"."jinja2-snippet-kit" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "jinja2-snippet-kit";
-      publisher = "wyattferguson";
-      version = "2.0.0";
-      sha256 = "1bqq6z0iw26ypcc6azf05cy6j72j0rxz9y264x8x0infb5flkqsz";
-    };
+  "wyattferguson"."jinja2-snippet-kit" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "jinja2-snippet-kit";
+    publisher = "wyattferguson";
+    version = "2.0.0";
+    sha256 = "1bqq6z0iw26ypcc6azf05cy6j72j0rxz9y264x8x0infb5flkqsz";
+  };
 
   "chouzz"."vscode-better-align" = vscode-utils.extensionFromVscodeMarketplace {
     name = "vscode-better-align";
@@ -459,13 +445,12 @@ in {
     sha256 = "0fb3d1j4qr90jigjxarpnnq1lx7ykzdgzlmg7zmcvia2180h6zf3";
   };
 
-  "tim-koehler"."helm-intellisense" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "helm-intellisense";
-      publisher = "tim-koehler";
-      version = "0.14.3";
-      sha256 = "13bs7406g4nq5wfxh90zyp4yq62wlzzwl7gzkill2a56gvrfgiad";
-    };
+  "tim-koehler"."helm-intellisense" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "helm-intellisense";
+    publisher = "tim-koehler";
+    version = "0.14.3";
+    sha256 = "13bs7406g4nq5wfxh90zyp4yq62wlzzwl7gzkill2a56gvrfgiad";
+  };
 
   "bibhasdn"."unique-lines" = vscode-utils.extensionFromVscodeMarketplace {
     name = "unique-lines";
@@ -502,13 +487,12 @@ in {
     sha256 = "1fkzs9y5xnv57g84sddirsws4fvm11nsflzv688agidi2qnmlzlj";
   };
 
-  "lunuan"."kubernetes-templates" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "kubernetes-templates";
-      publisher = "lunuan";
-      version = "1.3.1";
-      sha256 = "0bjyx9ri7fl68ryy0icn1lc3r8gxkpwaxhh900ij8xfvabqvcx6m";
-    };
+  "lunuan"."kubernetes-templates" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "kubernetes-templates";
+    publisher = "lunuan";
+    version = "1.3.1";
+    sha256 = "0bjyx9ri7fl68ryy0icn1lc3r8gxkpwaxhh900ij8xfvabqvcx6m";
+  };
 
   "hilleer"."yaml-plus-json" = vscode-utils.extensionFromVscodeMarketplace {
     name = "yaml-plus-json";
@@ -538,13 +522,12 @@ in {
     sha256 = "1q3mamlb8a9lzyc92091kzh2ssc6r8ffhpjsikq1aqn4lks981yf";
   };
 
-  "gurumukhi"."selected-lines-count" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "selected-lines-count";
-      publisher = "gurumukhi";
-      version = "1.4.0";
-      sha256 = "1pfnj0azhxr8gczxz4sfikq4005hra1gscs1sfl15fkqakpifw5j";
-    };
+  "gurumukhi"."selected-lines-count" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "selected-lines-count";
+    publisher = "gurumukhi";
+    version = "1.4.0";
+    sha256 = "1pfnj0azhxr8gczxz4sfikq4005hra1gscs1sfl15fkqakpifw5j";
+  };
 
   "jnoortheen"."nix-ide" = vscode-utils.extensionFromVscodeMarketplace {
     name = "nix-ide";
@@ -553,13 +536,12 @@ in {
     sha256 = "1264027sjh9a112si0y0p3pk3y36shj5b4qkpsj207z7lbxqq0wg";
   };
 
-  "jq-syntax-highlighting"."jq-syntax-highlighting" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "jq-syntax-highlighting";
-      publisher = "jq-syntax-highlighting";
-      version = "0.0.2";
-      sha256 = "0q91mr6a6935wnka5iga97lv78g19dlj2rz6qg3ki6w3kdlvw2h7";
-    };
+  "jq-syntax-highlighting"."jq-syntax-highlighting" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "jq-syntax-highlighting";
+    publisher = "jq-syntax-highlighting";
+    version = "0.0.2";
+    sha256 = "0q91mr6a6935wnka5iga97lv78g19dlj2rz6qg3ki6w3kdlvw2h7";
+  };
 
   "grafana"."vscode-jsonnet" = vscode-utils.extensionFromVscodeMarketplace {
     name = "vscode-jsonnet";
@@ -568,13 +550,12 @@ in {
     sha256 = "1wdwi8ik9n3sbw908jk1jl22a69gr2ics8rc5w40ga7rgy97k059";
   };
 
-  "reduckted"."vscode-gitweblinks" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "vscode-gitweblinks";
-      publisher = "reduckted";
-      version = "2.9.3";
-      sha256 = "0p4v6ynhjs68albv5bqnv2z4ykdkyapycqnv0149kbdric8bbb8d";
-    };
+  "reduckted"."vscode-gitweblinks" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "vscode-gitweblinks";
+    publisher = "reduckted";
+    version = "2.9.3";
+    sha256 = "0p4v6ynhjs68albv5bqnv2z4ykdkyapycqnv0149kbdric8bbb8d";
+  };
 
   "mgtrrz"."terraform-completer" = vscode-utils.extensionFromVscodeMarketplace {
     name = "terraform-completer";
@@ -604,13 +585,12 @@ in {
     sha256 = "0vvk05bw0w2krkdamrp7mw0q33giv2v0d1ikq533hk3g79qdv340";
   };
 
-  "davidnussio"."vscode-jq-playground" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "vscode-jq-playground";
-      publisher = "davidnussio";
-      version = "4.3.5";
-      sha256 = "15m4dblhj2v7fx5g8vd2r5qhdh7rkchgpi86szqq4yzcrc7ldflh";
-    };
+  "davidnussio"."vscode-jq-playground" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "vscode-jq-playground";
+    publisher = "davidnussio";
+    version = "4.3.5";
+    sha256 = "15m4dblhj2v7fx5g8vd2r5qhdh7rkchgpi86szqq4yzcrc7ldflh";
+  };
 
   "tommasov"."hosts" = vscode-utils.extensionFromVscodeMarketplace {
     name = "hosts";
@@ -626,13 +606,12 @@ in {
     sha256 = "0s7kglpkjwbjrxxyxwj5f28ir1i0dgd2wg76kxsh7y7b3wwg3zzs";
   };
 
-  "thenuprojectcontributors"."vscode-nushell-lang" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "vscode-nushell-lang";
-      publisher = "thenuprojectcontributors";
-      version = "1.7.1";
-      sha256 = "0iv1x0djyc5hsbd7f8afx4gy11dkflafjyr4lr83ghdbnvr1jn96";
-    };
+  "thenuprojectcontributors"."vscode-nushell-lang" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "vscode-nushell-lang";
+    publisher = "thenuprojectcontributors";
+    version = "1.7.1";
+    sha256 = "0iv1x0djyc5hsbd7f8afx4gy11dkflafjyr4lr83ghdbnvr1jn96";
+  };
 
   "haaleo"."timing" = vscode-utils.extensionFromVscodeMarketplace {
     name = "timing";
@@ -641,13 +620,12 @@ in {
     sha256 = "13m7dxlrr7lhsam0vb0423aj5p81bgdw4idq8bl2i7rw8akpn4jg";
   };
 
-  "mousavian"."ssh-config-syntax-highlighter" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "ssh-config-syntax-highlighter";
-      publisher = "mousavian";
-      version = "0.0.5";
-      sha256 = "0z63kn3z6f73kdhz1kz206f7fib95h5mwz4i6cril9kd3q59spd2";
-    };
+  "mousavian"."ssh-config-syntax-highlighter" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "ssh-config-syntax-highlighter";
+    publisher = "mousavian";
+    version = "0.0.5";
+    sha256 = "0z63kn3z6f73kdhz1kz206f7fib95h5mwz4i6cril9kd3q59spd2";
+  };
 
   "maxird"."jinja-fold" = vscode-utils.extensionFromVscodeMarketplace {
     name = "jinja-fold";
@@ -656,13 +634,12 @@ in {
     sha256 = "1db7hx7ixzi24nqaal0vga9gy3v6npn156rjbvhkp224a677kh7i";
   };
 
-  "jtcontreras90"."yaml-path-extractor" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "yaml-path-extractor";
-      publisher = "jtcontreras90";
-      version = "0.0.1";
-      sha256 = "1pglq52l2p2im7j0vsz3m7h34nj35bg45vjmfjyxjag7qxrcm786";
-    };
+  "jtcontreras90"."yaml-path-extractor" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "yaml-path-extractor";
+    publisher = "jtcontreras90";
+    version = "0.0.1";
+    sha256 = "1pglq52l2p2im7j0vsz3m7h34nj35bg45vjmfjyxjag7qxrcm786";
+  };
 
   "kokakiwi"."vscode-just" = vscode-utils.extensionFromVscodeMarketplace {
     name = "vscode-just";
@@ -678,19 +655,17 @@ in {
     sha256 = "1b5b5rs2nhdrd58hp045hamszm4ib5zlxr2757nln81s3qkz23lr";
   };
 
-  "yunduo"."color-highlight-css-color-4" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "color-highlight-css-color-4";
-      publisher = "yunduo";
-      version = "1.1.3";
-      sha256 = "06n8v073fv7bdfg75a87f479sql12dsa95fn2wzjxhimqgpp9z6v";
-    };
+  "yunduo"."color-highlight-css-color-4" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "color-highlight-css-color-4";
+    publisher = "yunduo";
+    version = "1.1.3";
+    sha256 = "06n8v073fv7bdfg75a87f479sql12dsa95fn2wzjxhimqgpp9z6v";
+  };
 
-  "lemurdaniel"."terraform-quick-docs" =
-    vscode-utils.extensionFromVscodeMarketplace {
-      name = "terraform-quick-docs";
-      publisher = "lemurdaniel";
-      version = "0.0.51";
-      sha256 = "095mjz3iadri1a5gmhvr4wfsnggddbplx5ryr5gvharbvzg22v5z";
-    };
+  "lemurdaniel"."terraform-quick-docs" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "terraform-quick-docs";
+    publisher = "lemurdaniel";
+    version = "0.0.51";
+    sha256 = "095mjz3iadri1a5gmhvr4wfsnggddbplx5ryr5gvharbvzg22v5z";
+  };
 }
