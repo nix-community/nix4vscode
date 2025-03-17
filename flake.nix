@@ -20,6 +20,11 @@
     let
       inherit (nixpkgs) lib;
 
+      vscode = import ./nix/vscode.nix {
+        pkgs = nixpkgs;
+      };
+
+      extensions = vscode.infoFromFile ./data/extensions.toml;
       eachSystem = lib.genAttrs (import systems);
       pkgsFor = eachSystem (
         system:
@@ -28,6 +33,20 @@
           overlays = [
             rust-overlay.overlays.default
             self.overlays.default
+            (final: prev: {
+              extensions = vscode.extensionsFromInfo {
+                inherit extensions;
+                platform = system;
+              };
+            })
+            (final: prev: {
+              extensionsFromInfo =
+                engine:
+                vscode.extensionsFromInfo {
+                  inherit extensions engine;
+                  platform = system;
+                };
+            })
           ];
         }
       );
