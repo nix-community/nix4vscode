@@ -45,7 +45,7 @@ pub async fn fetch_hash(conn: &mut PgConnection, batch_size: usize) -> anyhow::R
                     error!(?err);
                 }
                 let sec = now.elapsed().as_secs();
-                debug!("update cost {sec} seconds");
+                debug!("update db cost {sec} seconds");
             }
         })
         .buffer_unordered(batch_size)
