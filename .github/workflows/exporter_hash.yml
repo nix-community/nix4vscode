@@ -8,26 +8,56 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Install Nix
         uses: cachix/install-nix-action@v30
         with:
           extra_nix_config: |
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+
       - uses: dtolnay/rust-toolchain@stable
+
       - name: Install exporter from master
         uses: baptiste0928/cargo-install@v3
         with:
           crate: exporter
           git: https://github.com/nix-community/nix4vscode
           branch: master
-      - name: run exporter
+
+      - name: Run exporter
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           RUST_LOG: DEBUG
         run: |
-          exporter --hash --batch-size=8 -o extensions.toml
+          mkdir -p data
+          exporter --hash --batch-size=8 -o data/extensions.toml
+
       - uses: actions/upload-artifact@v4
         with:
-          path: extensions.toml
+          path: data/extensions.toml
           name: extensions.toml
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet data/extensions.toml; then
+            echo "No changes detected in extensions.toml"
+            echo "changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changes detected in extensions.toml"
+            echo "changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.changes.outputs.changes == 'true'
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add data/extensions.toml
+          git commit -m "chore: update extensions.toml"
+          git push
