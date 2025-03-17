@@ -98,7 +98,7 @@
           platform = system;
         };
 
-        extensionsFromInfo =
+        extensionsForVscode =
           engine:
           vscode.extensionsFromInfo {
             inherit extensions engine;
