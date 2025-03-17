@@ -126,6 +126,6 @@ in
     ;
 
   x = extensionsFromInfo {
-    extensions = (infoFromFile ./extensions.toml);
+    extensions = (infoFromFile ../extensions.toml);
   };
 }
