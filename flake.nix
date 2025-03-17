@@ -20,13 +20,7 @@
     let
       inherit (nixpkgs) lib;
 
-      vscode = import ./nix/vscode.nix {
-        pkgs = (import nixpkgs { });
-      };
-
-      extensions = vscode.infoFromFile ./data/extensions.toml;
       eachSystem = lib.genAttrs (import systems);
-
       pkgsFor = eachSystem (
         system:
         import nixpkgs {
@@ -60,6 +54,16 @@
             strictDeps = true;
             packages = [
               (lib.hiPrio rust-stable)
+              # Use rustfmt, and other tools that require nightly features.
+              (pkgs.rust-bin.selectLatestNightlyWith (
+                toolchain:
+                toolchain.minimal.override {
+                  extensions = [
+                    "rustfmt"
+                    "rust-analyzer"
+                  ];
+                }
+              ))
             ];
           };
         }
@@ -67,13 +71,6 @@
 
       overlays = {
         default = lib.composeManyExtensions [ self.overlays.${packageName} ];
-        extensions = final: prev: {
-          vscode-marketplace = vscode.extensionsFromInfo {
-            inherit extensions;
-            platform = final.system;
-          };
-        };
-
         ${packageName} =
           final: _:
           let
@@ -98,19 +95,5 @@
       }) pkgsFor;
 
       formatter = eachSystem (system: nixpkgs.legacyPackages.${system}.nixfmt-classic);
-
-      lib = eachSystem (system: {
-        extensions = vscode.extensionsFromInfo {
-          inherit extensions;
-          platform = system;
-        };
-
-        extensionsForVscode =
-          engine:
-          vscode.extensionsFromInfo {
-            inherit extensions engine;
-            platform = system;
-          };
-      });
     };
 }
