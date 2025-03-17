@@ -1,7 +1,7 @@
 [package]
 name = "exporter"
 version = "0.0.9"
-edition = "2021"
+edition = "2024"
 
 [dependencies]
 dotenvy = "0.15"
@@ -14,6 +14,4 @@ tracing-subscriber = { version = "0.3.19", features = ["env-filter"] }
 code-api = { path = "../code_api" }
 futures.workspace = true
 serde.workspace = true
-scopeguard = "1.2.0"
-waitgroup = "0.1.2"
 toml = "0.8.20"

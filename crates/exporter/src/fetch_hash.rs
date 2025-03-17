@@ -1,16 +1,14 @@
 use std::collections::HashSet;
-use std::process::exit;
 use std::sync::Arc;
 
 use crate::schema::marketplace::dsl::*;
 use diesel::prelude::*;
 use diesel::PgConnection;
-use scopeguard::defer;
-use tokio::select;
-use tokio::sync::mpsc::unbounded_channel;
+use futures::stream;
+use futures::StreamExt;
+use tokio::sync::Mutex;
 use tracing::info;
 use tracing::*;
-use waitgroup::WaitGroup;
 
 pub async fn fetch_hash(conn: &mut PgConnection, batch_size: usize) -> anyhow::Result<()> {
     let urls: HashSet<String> = marketplace
@@ -21,71 +19,39 @@ pub async fn fetch_hash(conn: &mut PgConnection, batch_size: usize) -> anyhow::R
         .collect();
     info!("count: {}", urls.len());
 
-    let sem = Arc::new(tokio::sync::Semaphore::new(batch_size));
-    let wg = WaitGroup::new();
+    let conn = Arc::new(Mutex::new(conn));
 
-    struct UpdateInfo {
-        url: String,
-        file_hash: String,
-    }
-
-    let (tx, mut rx) = unbounded_channel::<UpdateInfo>();
-
-    let db_task = async move {
-        loop {
-            let Some(UpdateInfo { url, file_hash }) = rx.recv().await else {
-                error!("channel closed!");
-                exit(-1);
-            };
-
-            let now = tokio::time::Instant::now();
-            if let Err(err) = diesel::update(marketplace)
-                .filter(assert_url.eq(&url))
-                .set(hash.eq(file_hash))
-                .execute(conn)
-            {
-                error!(?err);
-            }
-            let sec = now.elapsed().as_secs();
-            debug!("update cost {sec} seconds");
-        }
-    };
-
-    let w = wg.worker();
-
-    let task2 = async move {
-        for (idx, url) in urls.into_iter().enumerate() {
-            let t = sem.clone().acquire_owned().await.unwrap();
-            trace!("create task");
-            let tx = tx.clone();
-            let w = w.clone();
-            tokio::spawn(async move {
-                defer! {
-                    drop(t);
-                    drop(w);
-                }
-
+    let _: Vec<_> = stream::iter(urls)
+        .enumerate()
+        .map(|(idx, url)| {
+            let conn = conn.clone();
+            async move {
                 let now = tokio::time::Instant::now();
-                if let Ok(file_hash) = compute_hash(&url).await {
-                    let escaped = now.elapsed().as_secs();
-                    debug!("[{idx}] compute hash: {file_hash} of {url:?}, costs {escaped} sec.");
-                    tx.send(UpdateInfo { url, file_hash }).unwrap();
+                let _ = nix_gc().await;
+                let Ok(file_hash) = compute_hash(&url).await else {
+                    return;
+                };
+                let escaped = now.elapsed().as_secs();
+                debug!("[{idx}] compute hash: {file_hash} of {url:?}, costs {escaped} sec.");
+
+                let mut conn = conn.lock().await;
+                let conn: &mut PgConnection = &mut conn;
+                let now = tokio::time::Instant::now();
+                if let Err(err) = diesel::update(marketplace)
+                    .filter(assert_url.eq(&url))
+                    .set(hash.eq(file_hash))
+                    .execute(conn)
+                {
+                    error!(?err);
                 }
-                nix_gc().await;
-            });
-        }
-        drop(w);
+                let sec = now.elapsed().as_secs();
+                debug!("update cost {sec} seconds");
+            }
+        })
+        .buffer_unordered(batch_size)
+        .collect()
+        .await;
 
-        loop {
-            tokio::task::yield_now().await;
-        }
-    };
-
-    select! {
-        _ = db_task => {}
-        _ = task2 => {}
-        _ = wg.wait() => {}
-    }
     Ok(())
 }
 
@@ -99,10 +65,12 @@ pub async fn compute_hash(url: &str) -> anyhow::Result<String> {
     Ok(String::from_utf8(sha256)?.trim().to_owned())
 }
 
-pub async fn nix_gc() {
+pub async fn nix_gc() -> anyhow::Result<()> {
     let _ = tokio::process::Command::new("nix")
         .arg("store")
         .arg("gc")
-        .output()
+        .spawn()?
+        .wait()
         .await;
+    Ok(())
 }
