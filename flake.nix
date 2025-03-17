@@ -21,7 +21,7 @@
       inherit (nixpkgs) lib;
 
       vscode = import ./nix/vscode.nix {
-        pkgs = nixpkgs;
+        pkgs = (import nixpkgs { });
       };
 
       extensions = vscode.infoFromFile ./data/extensions.toml;
