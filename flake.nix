@@ -66,7 +66,8 @@
       ) pkgsFor;
 
       overlays = {
-        default = final: prev: {
+        default = lib.composeManyExtensions [ self.overlays.${packageName} ];
+        extensions = final: prev: {
           vscode-marketplace = vscode.extensionsFromInfo {
             inherit extensions;
             platform = final.system;
