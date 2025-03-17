@@ -44,21 +44,21 @@ let
       }
     ) extensions;
 
-  infoExtensionForPlatformList =
-    extensions: platform:
+  infoExtensionForSystemList =
+    extensions: system:
     builtins.filter (
       ext:
       let
         plat =
-          if platform == "x86_64-linux" || platform == "i686-linux" then
+          if system == "x86_64-linux" || system == "i686-linux" then
             [ "linux-x64" ]
-          else if platform == "aarch64-linux" then
+          else if system == "aarch64-linux" then
             [ "linux-arm64" ]
-          else if platform == "armv7l-linux" then
+          else if system == "armv7l-linux" then
             [ "linux-armhf" ]
-          else if platform == "x86_64-darwin" then
+          else if system == "x86_64-darwin" then
             [ "darwin-x64" ]
-          else if platform == "aarch64-darwin" then
+          else if system == "aarch64-darwin" then
             [ "darwin-arm64" ]
           else
             [ ];
@@ -66,14 +66,14 @@ let
       builtins.elem ext.platform plat
     ) extensions;
 
-  infoExtensionForEngineForPlatformList =
-    extensions: engine: platform:
-    infoExtensionForPlatformList (infoExtensionForEngineList extensions engine) platform;
+  infoExtensionForEngineForSystemList =
+    extensions: engine: system:
+    infoExtensionForSystemList (infoExtensionForEngineList extensions engine) system;
 
-  infoExtensionForEngineForPlatform =
-    extensions: engine: platform:
+  infoExtensionForEngineForSystem =
+    extensions: engine: system:
     let
-      exts = infoExtensionForEngineForPlatformList extensions engine platform;
+      exts = infoExtensionForEngineForSystemList extensions engine system;
       group = builtins.groupBy (el: "${el.publisher}.${el.name}") exts;
       maxV =
         li:
@@ -87,10 +87,10 @@ let
     {
       extensions,
       engine ? pkgs.vscode.version,
-      platform ? builtins.currentSystem,
+      system ? builtins.currentSystem,
     }:
     let
-      infos = infoExtensionForEngineForPlatform extensions engine platform;
+      infos = infoExtensionForEngineForSystem extensions engine system;
       vscode-utils = pkgs.vscode-utils;
       fetchExtension =
         info:
@@ -117,15 +117,12 @@ let
 in
 {
   inherit
-    infoExtensionForEngineForPlatform
-    infoExtensionForEngineForPlatformList
-    infoExtensionForPlatformList
+
     infoExtensionForEngineList
     infoFromFile
     extensionsFromInfo
+    infoExtensionForEngineForSystem
+    infoExtensionForEngineForSystemList
+    infoExtensionForSystemList
     ;
-
-  x = extensionsFromInfo {
-    extensions = (infoFromFile ../extensions.toml);
-  };
 }

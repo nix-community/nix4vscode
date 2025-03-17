@@ -71,9 +71,8 @@
             inherit extensions;
             platform = final.system;
           };
-        }
+        };
 
-        ;
         ${packageName} =
           final: _:
           let
