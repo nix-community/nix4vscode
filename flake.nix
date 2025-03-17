@@ -26,22 +26,6 @@
 
       extensions = vscode.infoFromFile ./data/extensions.toml;
       eachSystem = lib.genAttrs (import systems);
-      extOverlays = system: [
-        (final: prev: {
-          extensions = vscode.extensionsFromInfo {
-            inherit extensions;
-            platform = system;
-          };
-        })
-        (final: prev: {
-          extensionsFromInfo =
-            engine:
-            vscode.extensionsFromInfo {
-              inherit extensions engine;
-              platform = system;
-            };
-        })
-      ];
 
       pkgsFor = eachSystem (
         system:
@@ -50,7 +34,7 @@
           overlays = [
             rust-overlay.overlays.default
             self.overlays.default
-          ] ++ extOverlays system;
+          ];
         }
       );
 
@@ -107,5 +91,19 @@
       }) pkgsFor;
 
       formatter = eachSystem (system: nixpkgs.legacyPackages.${system}.nixfmt-classic);
+
+      lib = eachSystem (system: {
+        extensions = vscode.extensionsFromInfo {
+          inherit extensions;
+          platform = system;
+        };
+
+        extensionsFromInfo =
+          engine:
+          vscode.extensionsFromInfo {
+            inherit extensions engine;
+            platform = system;
+          };
+      });
     };
 }
