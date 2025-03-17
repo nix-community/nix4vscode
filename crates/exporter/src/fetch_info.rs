@@ -23,40 +23,42 @@ pub async fn fetch_marketplace(conn: &mut PgConnection) -> anyhow::Result<()> {
         let Ok(item) = item else {
             continue;
         };
-        for item in item.extensions {
-            for version in item.versions {
-                let Ok(engne) = version.get_engine() else {
-                    continue;
-                };
-                let Some(visix) = version.get_file(code_api::code::AssetType::Vsix) else {
-                    continue;
-                };
-                let Some(platform) = version.target_platform.clone() else {
-                    continue;
-                };
-                if version.is_pre_release_version() {
-                    continue;
-                }
-                let x = Marketplace {
-                    name: item.extension_name.clone(),
-                    publisher: item.publisher.publisher_name.clone(),
-                    version: version.version.clone(),
-                    engine: engne,
-                    platform,
-                    assert_url: visix.source.clone(),
-                    hash: None,
-                };
 
-                if let Err(err) = diesel::insert_into(marketplace::table)
-                    .values(&x)
-                    .returning(Marketplace::as_returning())
-                    .get_result(conn)
-                {
-                    error!(?err);
-                } else {
-                    trace!("insert value");
-                }
-            }
+        let values: Vec<_> = item
+            .extensions
+            .iter()
+            .flat_map(|item| {
+                item.versions.iter().filter_map(|version| {
+                    let Ok(engne) = version.get_engine() else {
+                        return None;
+                    };
+                    let visix = version.get_file(code_api::code::AssetType::Vsix)?;
+                    let platform = version.target_platform.clone()?;
+                    if version.is_pre_release_version() {
+                        return None;
+                    }
+                    Some(Marketplace {
+                        name: item.extension_name.clone(),
+                        publisher: item.publisher.publisher_name.clone(),
+                        version: version.version.clone(),
+                        engine: engne,
+                        platform,
+                        assert_url: visix.source.clone(),
+                        hash: None,
+                    })
+                })
+            })
+            .collect();
+
+        if let Err(err) = diesel::insert_into(marketplace::table)
+            .values(&values)
+            .on_conflict_do_nothing()
+            .returning(Marketplace::as_returning())
+            .get_result(conn)
+        {
+            error!(?err);
+        } else {
+            trace!("insert value");
         }
     }
 
