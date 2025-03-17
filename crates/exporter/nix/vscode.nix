@@ -27,14 +27,14 @@ let
   #  assert_url: string;
   #  hash: string;
   # }
-  fromFile =
+  infoFromFile =
     path:
     let
       toml = builtins.fromTOML (builtins.readFile path);
     in
     if toml == null then null else toml.extension;
 
-  extensionForEngineList =
+  infoExtensionForEngineList =
     extensions: engine:
     builtins.filter (
       ext:
@@ -44,7 +44,7 @@ let
       }
     ) extensions;
 
-  extensionForPlatformList =
+  infoExtensionForPlatformList =
     extensions: platform:
     builtins.filter (
       ext:
@@ -66,26 +66,66 @@ let
       builtins.elem ext.platform plat
     ) extensions;
 
-  extensionForEngineForPlatformList =
+  infoExtensionForEngineForPlatformList =
     extensions: engine: platform:
-    extensionForPlatformList (extensionForEngineList extensions engine) platform;
+    infoExtensionForPlatformList (infoExtensionForEngineList extensions engine) platform;
 
-  extensionForEngineForPlatform =
+  infoExtensionForEngineForPlatform =
     extensions: engine: platform:
     let
-      li= extensionForEngineForPlatformList extensions engine platform;
+      exts = infoExtensionForEngineForPlatformList extensions engine platform;
+      group = builtins.groupBy (el: "${el.publisher}.${el.name}") exts;
+      maxV =
+        li:
+        builtins.foldl' (l: r: if (utils.versionLessThan l.version r.version) then r else l) {
+          version = "0.0.0";
+        } li;
     in
-    { };
+    builtins.mapAttrs (name: value: maxV (value)) group;
 
+  extensionsFromInfo =
+    {
+      extensions,
+      engine ? pkgs.vscode.version,
+      platform ? builtins.currentSystem,
+    }:
+    let
+      infos = infoExtensionForEngineForPlatform extensions engine platform;
+      vscode-utils = pkgs.vscode-utils;
+      fetchExtension =
+        info:
+        pkgs.fetchurl {
+          url = info.assert_url;
+          name = "${info.publisher}-${info.name}.zip";
+          sha256 = info.hash;
+        };
+      exts = builtins.mapAttrs (
+        name: value:
+        vscode-utils.buildVscodeMarketplaceExtension {
+          vsix = fetchExtension value;
+          mktplcRef = {
+            name = value.name;
+            publisher = value.publisher;
+            version = value.version;
+            sha256 = value.hash;
+          };
+
+        }
+      ) infos;
+    in
+    exts;
 in
 {
   inherit
-    fromFile
-    extensionForEngineList
-    extensionForPlatformList
-    extensionForEngineForPlatformList
-    extensionForEngineForPlatform
+    infoExtensionForEngineForPlatform
+    infoExtensionForEngineForPlatformList
+    infoExtensionForPlatformList
+    infoExtensionForEngineList
+    infoFromFile
+    extensionsFromInfo
     ;
 
-  x = extensionForEngineForPlatformList (fromFile ./extensions.toml) "1.76.0" "x86_64-linux";
+  x = extensionsFromInfo {
+    extensions = (infoFromFile ./extensions.toml);
+  };
 }

@@ -250,7 +250,7 @@ let
       lp = parseVersion l_str;
       rp = parseVersion r_str;
     in
-    if lp || rp then
+    if lp == null || rp == null then
       false
     else
       let
