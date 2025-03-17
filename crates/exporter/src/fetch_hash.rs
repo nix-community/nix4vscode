@@ -54,7 +54,7 @@ pub async fn fetch_hash(conn: &mut PgConnection, batch_size: usize) -> anyhow::R
     let w = wg.worker();
 
     let task2 = async move {
-        for url in urls {
+        for (idx, url) in urls.into_iter().enumerate() {
             let t = sem.clone().acquire_owned().await.unwrap();
             trace!("create task");
             let tx = tx.clone();
@@ -68,7 +68,7 @@ pub async fn fetch_hash(conn: &mut PgConnection, batch_size: usize) -> anyhow::R
                 let now = tokio::time::Instant::now();
                 if let Ok(file_hash) = compute_hash(&url).await {
                     let escaped = now.elapsed().as_secs();
-                    debug!("compute hash: {file_hash} of {url:?}, costs {escaped} sec.");
+                    debug!("[{idx}] compute hash: {file_hash} of {url:?}, costs {escaped} sec.");
                     tx.send(UpdateInfo { url, file_hash }).unwrap();
                 }
                 nix_gc().await;
