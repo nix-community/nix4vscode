@@ -117,7 +117,6 @@ let
 in
 {
   inherit
-
     infoExtensionForEngineList
     infoFromFile
     extensionsFromInfo
@@ -125,4 +124,19 @@ in
     infoExtensionForEngineForSystemList
     infoExtensionForSystemList
     ;
+
+  debug =
+    let
+
+      forSystem =
+        system:
+        extensionsFromInfo {
+          inherit system;
+          extensions = infoFromFile ../data/extensions.toml;
+        };
+    in
+    {
+      inherit forSystem;
+      dev = forSystem "aarch64-darwin";
+    };
 }
