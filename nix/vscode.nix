@@ -83,6 +83,30 @@ let
     in
     builtins.mapAttrs (name: value: maxV (value)) group;
 
+  # Expand flatten key
+  # "x.a.b" = v; => x.a.b = v;
+  expandFlatKey =
+    key: value:
+    let
+      parts = lib.strings.splitString "." key;
+      build =
+        path: val:
+        if path == [ ] then
+          val
+        else
+          { ${builtins.elemAt path 0} = build (lib.lists.sublist 1 (builtins.length path) path) val; };
+    in
+    build parts value;
+
+  # Convert a {"a.x.b" = v;} to { a = { x = { b = v; };}; }
+  expandFlattenMap =
+    attrSet:
+    let
+      list = lib.attrsets.mapAttrsToList (k: v: expandFlatKey k v) attrSet;
+      attrs = builtins.foldl' (l: r: lib.attrsets.recursiveUpdate l r) { } list;
+    in
+    attrs;
+
   extensionsFromInfo =
     {
       extensions,
@@ -113,21 +137,16 @@ let
         }
       ) infos;
     in
-    exts;
+    expandFlattenMap exts;
 in
 {
   inherit
-    infoExtensionForEngineList
     infoFromFile
     extensionsFromInfo
-    infoExtensionForEngineForSystem
-    infoExtensionForEngineForSystemList
-    infoExtensionForSystemList
     ;
 
   debug =
     let
-
       forSystem =
         system:
         extensionsFromInfo {
@@ -138,5 +157,15 @@ in
     {
       inherit forSystem;
       dev = forSystem "aarch64-darwin";
+      lib = {
+        inherit
+          infoExtensionForEngineList
+          infoExtensionForEngineForSystem
+          infoExtensionForEngineForSystemList
+          infoExtensionForSystemList
+          expandFlattenMap
+          expandFlatKey
+          ;
+      };
     };
 }
