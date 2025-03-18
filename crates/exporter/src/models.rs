@@ -21,5 +21,6 @@ pub struct Marketplace {
     pub engine: String,
     pub platform: String,
     pub assert_url: String,
+    pub is_prerelease: Option<bool>,
     pub hash: Option<String>,
 }

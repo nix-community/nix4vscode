@@ -34,9 +34,6 @@ pub async fn fetch_marketplace(conn: &mut PgConnection) -> anyhow::Result<()> {
                     };
                     let visix = version.get_file(code_api::code::AssetType::Vsix)?;
                     let platform = version.target_platform.clone()?;
-                    if version.is_pre_release_version() {
-                        return None;
-                    }
                     Some(Marketplace {
                         name: item.extension_name.clone(),
                         publisher: item.publisher.publisher_name.clone(),
@@ -45,6 +42,7 @@ pub async fn fetch_marketplace(conn: &mut PgConnection) -> anyhow::Result<()> {
                         platform,
                         assert_url: visix.source.clone(),
                         hash: None,
+                        is_prerelease: Some(version.is_pre_release_version()),
                     })
                 })
             })
