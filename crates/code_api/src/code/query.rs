@@ -1,4 +1,5 @@
 use derive::api;
+use itertools::Itertools;
 
 use crate::config::Extension;
 
@@ -23,17 +24,22 @@ impl Query {
                 value: "4096".into(),
             },
         ];
+
+        let extensions = extensions
+            .iter()
+            .map(|item| ICriterium {
+                filter_type: FilterType::EXTENSION_NAME,
+                value: format!("{}.{}", item.publisher_name, item.extension_name),
+            })
+            .collect_vec();
+        let mut criteria = vec![];
+        criteria.extend(fixed);
+        criteria.extend(extensions);
+
         Query {
             filters: vec![IQueryState {
                 page_number,
-                criteria: extensions
-                    .iter()
-                    .map(|item| ICriterium {
-                        filter_type: FilterType::EXTENSION_NAME,
-                        value: format!("{}.{}", item.publisher_name, item.extension_name),
-                    })
-                    .chain(fixed)
-                    .collect(),
+                criteria,
                 ..args
             }],
             asset_types: Default::default(),

@@ -35,12 +35,13 @@ impl HttpClient {
                 let response = self
                     .client
                     .post("https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery")
+                    .header("CONTENT-TYPE", "application/json")
                     .header(
-                        "Accept",
-                        "Application/json; charset=utf-8; api-version=7.2-preview.1",
+                        "ACCEPT",
+                        "application/json; charset=utf-8; api-version=7.2-preview.1",
                     )
-                    .header("Content-Type", "application/json")
-                    .body(body.clone())
+                    .header("ACCEPT-ENCODING", "gzip")
+                    .body(body)
                     .send()
                     .await?
                     .json::<IRawGalleryQueryResult>()
