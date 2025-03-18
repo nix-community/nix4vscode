@@ -9,6 +9,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: checkout db.sqlite3
+        run: |
+          git fetch origin db
+          git restore --source origin/db db.sqlite3
+
+      - name: setup git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
       - uses: dtolnay/rust-toolchain@stable
       - name: Install exporter from master
         uses: baptiste0928/cargo-install@v3
@@ -22,3 +33,10 @@ jobs:
           RUST_LOG: INFO
         run: |
           exporter --fetch
+      - name: Store sqlite3
+        run: |
+          git checkout --orphan db
+          git reset
+          git add db.sqlite3
+          git commit -m "update db.sqlite3"
+          git push -f

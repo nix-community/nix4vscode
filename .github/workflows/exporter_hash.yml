@@ -13,6 +13,17 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: checkout db.sqlite3
+        run: |
+          git fetch origin db
+          git restore --source origin/db db.sqlite3
+          pwd
+          ls -alh
+
+      - name: setup git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
       - name: Install Nix
         uses: cachix/install-nix-action@v30
@@ -31,7 +42,7 @@ jobs:
 
       - name: Run exporter
         env:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DATABASE_URL: ${{ github.workspace }}/db.sqlite3
           RUST_LOG: DEBUG
         run: |
           mkdir -p data
@@ -41,6 +52,11 @@ jobs:
         with:
           path: data/extensions.toml
           name: extensions.toml
+
+      - uses: actions/upload-artifact@v4
+        with:
+          path: db.sqlite3
+          name: db.sqlite3
 
       - name: Check for changes
         id: changes
@@ -56,8 +72,14 @@ jobs:
       - name: Commit and push changes
         if: steps.changes.outputs.changes == 'true'
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add data/extensions.toml
           git commit -m "chore: update extensions.toml"
           git push
+
+      - name: Store sqlite3
+        run: |
+          git checkout --orphan db
+          git reset
+          git add db.sqlite3
+          git commit -m "update db.sqlite3"
+          git push -f
