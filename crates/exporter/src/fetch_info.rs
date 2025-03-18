@@ -28,25 +28,41 @@ pub async fn fetch_marketplace(conn: &mut PgConnection) -> anyhow::Result<()> {
             .extensions
             .iter()
             .flat_map(|item| {
-                item.versions.iter().filter_map(|version| {
-                    let Ok(engne) = version.get_engine() else {
+                item.versions.iter().filter_map(|v| {
+                    let Ok(engne) = v.get_engine() else {
                         return None;
                     };
-                    let visix = version.get_file(code_api::code::AssetType::Vsix)?;
-                    let platform = version.target_platform.clone()?;
+                    let visix = v.get_file(code_api::code::AssetType::Vsix)?;
+                    let platform = v.target_platform.clone()?;
                     Some(Marketplace {
                         name: item.extension_name.clone(),
                         publisher: item.publisher.publisher_name.clone(),
-                        version: version.version.clone(),
+                        version: v.version.clone(),
                         engine: engne,
                         platform,
                         assert_url: visix.source.clone(),
                         hash: None,
-                        is_prerelease: Some(version.is_pre_release_version()),
+                        is_prerelease: Some(v.is_pre_release_version()),
                     })
                 })
             })
             .collect();
+
+        for i in &values {
+            use crate::schema::marketplace::dsl::*;
+            if let Err(err) = diesel::update(marketplace)
+                .filter(publisher.eq(&i.publisher))
+                .filter(name.eq(&i.name))
+                .filter(version.eq(&i.version))
+                .filter(engine.eq(&i.engine))
+                .filter(platform.eq(&i.platform))
+                .filter(assert_url.eq(&i.assert_url))
+                .set(is_prerelease.eq(i.is_prerelease))
+                .execute(conn)
+            {
+                error!(?err);
+            }
+        }
 
         if let Err(err) = diesel::insert_into(marketplace::table)
             .values(&values)

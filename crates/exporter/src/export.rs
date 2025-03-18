@@ -9,6 +9,7 @@ pub async fn export_toml(conn: &mut PgConnection, target: &str) -> anyhow::Resul
     let mut record: Vec<Marketplace> = marketplace
         .filter(platform.not_like("win32%"))
         .filter(hash.is_not_null())
+        .filter(is_prerelease.eq(false))
         .select(Marketplace::as_select())
         .load(conn)?;
 
