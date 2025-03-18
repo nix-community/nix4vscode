@@ -1,11 +1,11 @@
 use crate::models::*;
 use crate::schema::marketplace::dsl::*;
 use diesel::prelude::*;
-use diesel::PgConnection;
+use diesel::SqliteConnection;
 use serde::Deserialize;
 use serde::Serialize;
 
-pub async fn export_toml(conn: &mut PgConnection, target: &str) -> anyhow::Result<()> {
+pub async fn export_toml(conn: &mut SqliteConnection, target: &str) -> anyhow::Result<()> {
     let mut record: Vec<Marketplace> = marketplace
         .filter(platform.not_like("win32%"))
         .filter(hash.is_not_null())

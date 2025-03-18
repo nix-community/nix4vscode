@@ -3,14 +3,14 @@ use std::sync::Arc;
 
 use crate::schema::marketplace::dsl::*;
 use diesel::prelude::*;
-use diesel::PgConnection;
+use diesel::SqliteConnection;
 use futures::stream;
 use futures::StreamExt;
 use tokio::sync::Mutex;
 use tracing::info;
 use tracing::*;
 
-pub async fn fetch_hash(conn: &mut PgConnection, batch_size: usize) -> anyhow::Result<()> {
+pub async fn fetch_hash(conn: &mut SqliteConnection, batch_size: usize) -> anyhow::Result<()> {
     let urls: HashSet<String> = marketplace
         .filter(hash.is_null())
         .select(assert_url)
@@ -35,7 +35,7 @@ pub async fn fetch_hash(conn: &mut PgConnection, batch_size: usize) -> anyhow::R
                 debug!("[{idx}] compute hash: {file_hash} of {url:?}, costs {escaped} sec.");
 
                 let mut conn = conn.lock().await;
-                let conn: &mut PgConnection = &mut conn;
+                let conn: &mut SqliteConnection = &mut conn;
                 let now = tokio::time::Instant::now();
                 if let Err(err) = diesel::update(marketplace)
                     .filter(assert_url.eq(&url))

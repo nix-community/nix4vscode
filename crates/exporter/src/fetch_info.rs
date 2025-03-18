@@ -6,9 +6,9 @@ use diesel::prelude::*;
 use futures::StreamExt;
 
 use crate::schema::marketplace;
-use tracing::{error, trace};
+use tracing::*;
 
-pub async fn fetch_marketplace(conn: &mut PgConnection) -> anyhow::Result<()> {
+pub async fn fetch_marketplace(conn: &mut SqliteConnection) -> anyhow::Result<()> {
     let client = HttpClient::new().unwrap();
     let mut iter = pin!(client.get_extension_response(
         vec![],
@@ -64,15 +64,14 @@ pub async fn fetch_marketplace(conn: &mut PgConnection) -> anyhow::Result<()> {
             }
         }
 
-        if let Err(err) = diesel::insert_into(marketplace::table)
-            .values(&values)
-            .on_conflict_do_nothing()
-            .returning(Marketplace::as_returning())
-            .get_result(conn)
-        {
-            error!(?err);
-        } else {
-            trace!("insert value");
+        for value in values {
+            if let Err(err) = diesel::insert_into(marketplace::table)
+                .values(&value)
+                .returning(Marketplace::as_returning())
+                .get_result(conn)
+            {
+                error!(?err);
+            }
         }
     }
 

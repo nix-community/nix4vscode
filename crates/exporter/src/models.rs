@@ -13,7 +13,7 @@ use diesel::prelude::*;
     Eq,
 )]
 #[diesel(table_name = crate::schema::marketplace)]
-#[diesel(check_for_backend(diesel::pg::Pg))]
+#[diesel(check_for_backend(diesel::sqlite::Sqlite))]
 pub struct Marketplace {
     pub name: String,
     pub publisher: String,
