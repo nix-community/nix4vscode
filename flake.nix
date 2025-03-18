@@ -86,6 +86,12 @@
               inherit extensions;
               inherit (final) system;
             };
+            forVscode =
+              engine:
+              vscode.extensionsFromInfo {
+                inherit extensions;
+                inherit engine;
+              };
           }
         );
         ${packageName} =
