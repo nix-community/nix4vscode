@@ -1,5 +1,6 @@
 use std::collections::HashSet;
 use std::sync::Arc;
+use std::time::Instant;
 
 use crate::schema::marketplace::dsl::*;
 use diesel::prelude::*;
@@ -21,11 +22,17 @@ pub async fn fetch_hash(conn: &mut SqliteConnection, batch_size: usize) -> anyho
 
     let conn = Arc::new(Mutex::new(conn));
 
+    let start_time = Instant::now();
+    // 5.5 hours
+    const MAX_RUN_TIME: u64 = 60 * 60 * 5 + 60 * 30;
     let _: Vec<_> = stream::iter(urls)
         .enumerate()
         .map(|(idx, url)| {
             let conn = conn.clone();
             async move {
+                if start_time.elapsed().as_secs() > MAX_RUN_TIME {
+                    return;
+                }
                 let now = tokio::time::Instant::now();
                 let _ = nix_gc().await;
                 let Ok(file_hash) = compute_hash(&url).await else {
