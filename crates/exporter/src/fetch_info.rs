@@ -52,14 +52,11 @@ pub async fn fetch_marketplace(conn: &mut SqliteConnection) -> anyhow::Result<()
             })
             .collect();
 
-        for value in values {
-            if let Err(err) = diesel::insert_into(marketplace::table)
-                .values(&value)
-                .on_conflict_do_nothing()
-                .execute(conn)
-            {
-                error!(?err);
-            }
+        if let Err(err) = diesel::insert_or_ignore_into(marketplace::table)
+            .values(&values)
+            .execute(conn)
+        {
+            error!(?err);
         }
 
         info!("[{extension_count}] - [{all_count}]");
