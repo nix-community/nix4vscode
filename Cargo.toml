@@ -1,5 +1,5 @@
 [workspace]
-members = ["crates/code_api", "crates/exporter"]
+members = ["crates/code_api", "crates/exporter", "crates/nix32"]
 
 [package]
 name = "nix4vscode"
