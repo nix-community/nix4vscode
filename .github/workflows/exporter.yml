@@ -79,6 +79,7 @@ jobs:
         run: |
           git add data/extensions.toml
           git commit -m "chore: update extensions.toml"
+          git pull origin master --rebase
           git push
 
       - name: Store sqlite3
