@@ -37,7 +37,7 @@ pub async fn fetch_marketplace(conn: &mut SqliteConnection) -> anyhow::Result<()
                         return None;
                     };
                     let visix = v.get_file(code_api::code::AssetType::Vsix)?;
-                    let platform = v.target_platform.clone()?;
+                    let platform = v.target_platform.clone().unwrap_or("universal".to_string());
                     Some(Marketplace {
                         name: item.extension_name.clone(),
                         publisher: item.publisher.publisher_name.clone(),
