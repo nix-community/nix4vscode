@@ -19,6 +19,8 @@ pub async fn fetch_marketplace(conn: &mut SqliteConnection) -> anyhow::Result<()
             ..Default::default()
         }
     ));
+    let mut extension_count = 0usize;
+    let mut all_count = 0usize;
     while let Some(item) = iter.next().await {
         let Ok(item) = item else {
             continue;
@@ -28,6 +30,8 @@ pub async fn fetch_marketplace(conn: &mut SqliteConnection) -> anyhow::Result<()
             .extensions
             .iter()
             .flat_map(|item| {
+                extension_count += 1;
+                all_count += item.versions.len();
                 item.versions.iter().filter_map(|v| {
                     let Ok(engne) = v.get_engine() else {
                         return None;
@@ -58,6 +62,8 @@ pub async fn fetch_marketplace(conn: &mut SqliteConnection) -> anyhow::Result<()
                 error!(?err);
             }
         }
+
+        info!("[{extension_count}] - [{all_count}]");
     }
 
     Ok(())

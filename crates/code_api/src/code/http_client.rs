@@ -29,6 +29,7 @@ impl HttpClient {
 
         try_stream! {
             loop {
+                info!(?page_number);
                 let query = Query::new(&extensions, page_number, args.clone());
                 let body = serde_json::to_string(&query)?;
                 trace!("send request: {body}");
