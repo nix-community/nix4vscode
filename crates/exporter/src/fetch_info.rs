@@ -42,27 +42,11 @@ pub async fn fetch_marketplace(conn: &mut SqliteConnection) -> anyhow::Result<()
                         platform,
                         assert_url: visix.source.clone(),
                         hash: None,
-                        is_prerelease: Some(v.is_pre_release_version()),
+                        is_prerelease: v.is_pre_release_version(),
                     })
                 })
             })
             .collect();
-
-        for i in &values {
-            use crate::schema::marketplace::dsl::*;
-            if let Err(err) = diesel::update(marketplace)
-                .filter(publisher.eq(&i.publisher))
-                .filter(name.eq(&i.name))
-                .filter(version.eq(&i.version))
-                .filter(engine.eq(&i.engine))
-                .filter(platform.eq(&i.platform))
-                .filter(assert_url.eq(&i.assert_url))
-                .set(is_prerelease.eq(i.is_prerelease))
-                .execute(conn)
-            {
-                error!(?err);
-            }
-        }
 
         for value in values {
             if let Err(err) = diesel::insert_into(marketplace::table)

@@ -9,6 +9,6 @@ diesel::table! {
         platform -> Text,
         assert_url -> Text,
         hash -> Nullable<Text>,
-        is_prerelease -> Nullable<Bool>,
+        is_prerelease -> Bool,
     }
 }
