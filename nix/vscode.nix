@@ -5,6 +5,20 @@
 
 let
   utils = import ./version.nix { inherit pkgs lib; };
+  applyDecorator =
+    mktAttr: system:
+    let
+      name = "${mktAttr.mktplcRef.publisher}.${mktAttr.mktplcRef.name}";
+    in
+    if builtins.pathExists ./decorators/${name}.nix then
+      let
+        decorator = import ./decorators/${name}.nix {
+          inherit pkgs lib system;
+        };
+      in
+      lib.attrsets.recursiveUpdate mktAttr decorator
+    else
+      mktAttr;
   # type Platfrom =
   # web
   # | linux-armhf
@@ -125,16 +139,17 @@ let
         };
       exts = builtins.mapAttrs (
         name: value:
-        vscode-utils.buildVscodeMarketplaceExtension {
-          vsix = fetchExtension value;
-          mktplcRef = {
-            name = value.name;
-            publisher = value.publisher;
-            version = value.version;
-            sha256 = value.hash;
-          };
-
-        }
+        vscode-utils.buildVscodeMarketplaceExtension (
+          applyDecorator {
+            vsix = fetchExtension value;
+            mktplcRef = {
+              name = value.name;
+              publisher = value.publisher;
+              version = value.version;
+              sha256 = value.hash;
+            };
+          } system
+        )
       ) infos;
     in
     expandFlattenMap exts;
