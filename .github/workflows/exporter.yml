@@ -51,6 +51,11 @@ jobs:
         run: |
           exporter --fetch
 
+      - uses: actions/upload-artifact@v4
+        with:
+          path: db.sqlite3
+          name: db.sqlite3
+
       - name: Fetch hashs
         env:
           DATABASE_URL: ${{ github.workspace }}/db.sqlite3
