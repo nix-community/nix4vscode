@@ -29,7 +29,7 @@ jobs:
           branch: master
       - name: run exporter
         env:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DATABASE_URL: ${{ github.workspace }}/db.sqlite3
           RUST_LOG: INFO
         run: |
           exporter --fetch
