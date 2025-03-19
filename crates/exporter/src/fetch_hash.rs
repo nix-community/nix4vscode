@@ -69,8 +69,7 @@ pub async fn nix_gc() -> anyhow::Result<()> {
     let _ = tokio::process::Command::new("nix")
         .arg("store")
         .arg("gc")
-        .spawn()?
-        .wait()
+        .output()
         .await;
     Ok(())
 }
