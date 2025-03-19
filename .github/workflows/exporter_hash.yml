@@ -82,4 +82,4 @@ jobs:
           git reset
           git add db.sqlite3
           git commit -m "update db.sqlite3"
-          git push -f
+          git push origin db -f
