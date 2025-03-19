@@ -36,10 +36,10 @@
         devShell = pkgs.mkShell {
           buildInputs = [
             plugins.eamodio.gitlens
-            vscode-marketplace.ms-vscode.cpptools
+            # vscode-marketplace.ms-vscode.cpptools
 
-            # (builtins.getAttr "42crunch" plugins).vscode-openapi
-            # plugins.ms-vscode.cpptools
+            (builtins.getAttr "42crunch" plugins).vscode-openapi
+            plugins.ms-vscode.cpptools
           ];
         };
       }
