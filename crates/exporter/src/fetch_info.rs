@@ -67,6 +67,7 @@ pub async fn fetch_marketplace(conn: &mut SqliteConnection) -> anyhow::Result<()
         for value in values {
             if let Err(err) = diesel::insert_into(marketplace::table)
                 .values(&value)
+                .on_conflict_do_nothing()
                 .returning(Marketplace::as_returning())
                 .get_result(conn)
             {
