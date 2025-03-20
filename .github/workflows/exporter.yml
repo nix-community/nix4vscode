@@ -73,8 +73,8 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          path: db.sqlite3
-          name: db.sqlite3
+          path: db.sqlite3.tar.xz
+          name: db.sqlite3.tar.xz
 
       - name: Check for changes
         id: changes
