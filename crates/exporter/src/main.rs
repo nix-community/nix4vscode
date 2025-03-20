@@ -5,13 +5,14 @@ mod models;
 mod schema;
 mod utils;
 
-use std::env;
+use std::{env, time::Duration};
 
 use clap::Parser;
 use diesel::prelude::*;
 
 use export::export_toml;
 use fetch_info::fetch_marketplace;
+use tokio::time::timeout;
 use tracing::error;
 use utils::init_logger;
 
@@ -52,7 +53,13 @@ async fn main() {
     }
 
     if args.hash {
-        if let Err(err) = fetch_hash::fetch_hash(&mut conn, args.batch_size).await {
+        const MAX_RUN_TIME: u64 = 60 * 60 * 5 + 60 * 30;
+        if let Err(err) = timeout(
+            Duration::from_secs(MAX_RUN_TIME),
+            fetch_hash::fetch_hash(&mut conn, args.batch_size),
+        )
+        .await
+        {
             error!(?err)
         }
     }
