@@ -1,14 +1,22 @@
 use crate::mini_toml;
 use crate::models::*;
 use crate::schema::marketplace::dsl::*;
-use diesel::SqliteConnection;
 use diesel::prelude::*;
+use diesel::SqliteConnection;
 use serde::Deserialize;
 use serde::Serialize;
 
 pub async fn export_toml(conn: &mut SqliteConnection, target: &str) -> anyhow::Result<()> {
     let mut record: Vec<Marketplace> = marketplace
-        .filter(platform.not_like("win32%"))
+        .filter(
+            platform
+                .eq("linux-x64")
+                .or(platform.eq("linux-arm64"))
+                .or(platform.eq("linux-armhf"))
+                .or(platform.eq("darwin-x64"))
+                .or(platform.eq("darwin-arm64"))
+                .or(platform.eq("universal")),
+        )
         .filter(hash.is_not_null())
         .filter(is_prerelease.eq(false))
         .select(Marketplace::as_select())
