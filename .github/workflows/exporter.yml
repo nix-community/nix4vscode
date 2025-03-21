@@ -57,7 +57,7 @@ jobs:
           RUST_LOG: DEBUG
         run: |
           mkdir -p data
-          exporter --hash --batch-size=8 -o data/extensions.toml
+          exporter --hash --batch-size=8 -o data/extensions.toml --max-run-time=19800 # 5.5h
           sqlite3 db.sqlite3 'VACUUM;'
           tar -cjf db.sqlite3.tar.xz db.sqlite3
 
