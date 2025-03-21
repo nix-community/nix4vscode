@@ -62,22 +62,25 @@ let
     extensions: system:
     builtins.filter (
       ext:
-      let
-        plat =
-          if system == "x86_64-linux" || system == "i686-linux" then
-            [ "linux-x64" ]
-          else if system == "aarch64-linux" then
-            [ "linux-arm64" ]
-          else if system == "armv7l-linux" then
-            [ "linux-armhf" ]
-          else if system == "x86_64-darwin" then
-            [ "darwin-x64" ]
-          else if system == "aarch64-darwin" then
-            [ "darwin-arm64" ]
-          else
-            [ ];
-      in
-      builtins.elem ext.platform plat
+      if ext.platform == null then
+        true
+      else
+        let
+          plat =
+            if system == "x86_64-linux" || system == "i686-linux" then
+              [ "linux-x64" ]
+            else if system == "aarch64-linux" then
+              [ "linux-arm64" ]
+            else if system == "armv7l-linux" then
+              [ "linux-armhf" ]
+            else if system == "x86_64-darwin" then
+              [ "darwin-x64" ]
+            else if system == "aarch64-darwin" then
+              [ "darwin-arm64" ]
+            else
+              [ ];
+        in
+        builtins.elem ext.platform plat
     ) extensions;
 
   infoExtensionForEngineForSystemList =
