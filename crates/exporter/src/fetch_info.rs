@@ -26,6 +26,10 @@ pub async fn fetch_marketplace(conn: &mut SqliteConnection) -> anyhow::Result<()
             continue;
         };
 
+        if item.extensions.is_empty() {
+            break;
+        }
+
         let values: Vec<_> = item
             .extensions
             .iter()
