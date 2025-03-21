@@ -1,6 +1,7 @@
 mod export;
 mod fetch_hash;
 mod fetch_info;
+pub(crate) mod mini_toml;
 mod models;
 mod schema;
 mod utils;

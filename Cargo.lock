@@ -598,6 +598,7 @@ dependencies = [
  "serde",
  "tokio",
  "toml",
+ "toml_edit",
  "tracing",
  "tracing-subscriber",
 ]

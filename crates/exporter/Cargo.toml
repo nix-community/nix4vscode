@@ -3,6 +3,10 @@ name = "exporter"
 version = "0.0.9"
 edition = "2024"
 
+[features]
+default = ["display"]
+display = []
+
 [dependencies]
 dotenvy = "0.15"
 anyhow.workspace = true
@@ -18,3 +22,4 @@ code-api = { path = "../code_api" }
 futures.workspace = true
 serde.workspace = true
 toml = "0.8.20"
+toml_edit = "0.22.24"
