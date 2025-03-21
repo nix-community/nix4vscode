@@ -13,11 +13,7 @@ async-stream = "0.3"
 serde_json = { workspace = true }
 chrono = { workspace = true }
 lazy-regex = { workspace = true }
-reqwest = { version = "0.12", default-features = false, features = [
-  "rustls-tls",
-  "gzip",
-  "json",
-] }
+reqwest = { version = "0.12", features = ["gzip", "json"] }
 
 derive = { path = "../derive" }
 itertools = "0.14.0"
