@@ -33,6 +33,9 @@ struct Args {
     /// Export toml path
     #[clap(short, long)]
     output: Option<String>,
+
+    #[clap(long, default_value_t = u64::MAX)]
+    max_run_time: u64,
 }
 
 // #[dotenvy::load]
@@ -53,9 +56,8 @@ async fn main() {
     }
 
     if args.hash {
-        const MAX_RUN_TIME: u64 = 60 * 60 * 5 + 60 * 30;
         if let Err(err) = timeout(
-            Duration::from_secs(MAX_RUN_TIME),
+            Duration::from_secs(args.max_run_time),
             fetch_hash::fetch_hash(&mut conn, args.batch_size),
         )
         .await
