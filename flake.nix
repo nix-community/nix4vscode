@@ -118,5 +118,37 @@
       }) pkgsFor;
 
       formatter = eachSystem (system: nixpkgs.legacyPackages.${system}.nixfmt-classic);
+      lib = lib.mapAttrs (system: pkgs: {
+        forVscode =
+          engine: exts:
+          let
+            filters = builtins.map (
+              v:
+              let
+                parts = lib.strings.splitString "." v;
+                name = builtins.elemAt parts 1;
+              in
+              ''.name == "${name}"''
+            ) exts;
+            filter = builtins.concatStringsSep "or" filters;
+            extensionPath = ./data/extensions.json;
+            extensions = builtins.fromJSON (
+              builtins.readFile (
+                pkgs.runCommand "xx" { } ''
+                  ${pkgs.jq}/bin/jq '.extension | map(select(${filter}))' ${extensionPath} > $out
+                ''
+              )
+            );
+            vscode = import ./nix/vscode.nix {
+              pkgs = import nixpkgs {
+                inherit system;
+              };
+            };
+            vscode-marketplace = vscode.extensionsFromInfo {
+              inherit extensions system;
+            };
+          in
+          builtins.attrValues vscode-marketplace;
+      }) pkgsFor;
     };
 }

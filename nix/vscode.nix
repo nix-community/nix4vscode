@@ -155,7 +155,7 @@ let
         )
       ) infos;
     in
-    expandFlattenMap exts;
+    exts;
 in
 {
   inherit
