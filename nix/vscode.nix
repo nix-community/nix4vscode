@@ -44,7 +44,7 @@ let
   infoFromFile =
     path:
     let
-      toml = builtins.fromTOML (builtins.readFile path);
+      toml = import path;
     in
     if toml == null then null else toml.extension;
 

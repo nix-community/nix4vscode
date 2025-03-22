@@ -1,3 +1,4 @@
+mod serde_nix;
 mod export;
 mod fetch_hash;
 mod fetch_info;
