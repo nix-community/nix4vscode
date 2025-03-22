@@ -24,7 +24,7 @@ pub async fn export_toml(conn: &mut SqliteConnection, target: &str) -> anyhow::R
 
     record.sort();
     record.iter_mut().for_each(|item| {
-        item.name = format!("{}.{}", item.publisher, item.name);
+        item.name = format!("{}.{}", item.publisher, item.name).to_lowercase();
     });
 
     #[derive(Serialize, Deserialize)]
