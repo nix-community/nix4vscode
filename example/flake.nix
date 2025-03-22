@@ -21,26 +21,20 @@
         pkgs = import nixpkgs {
           inherit system;
           config.allowUnfree = true;
-          overlays = [
-            nix4vscode.overlays.extensions
-          ];
         };
-        plugins = (import ./vscode_plugins.nix) {
-          pkgs = pkgs;
-          lib = pkgs.lib;
-        };
-        vscode-marketplace = pkgs.vscode-marketplace;
+        vscode-marketplace = nix4vscode.lib.${system}.forVscode "1.85.0" [
+          "ms-vscode.cpptools"
+        ];
       in
       {
         inherit vscode-marketplace;
         devShell = pkgs.mkShell {
           buildInputs = [
             # plugins.eamodio.gitlens
-            vscode-marketplace.ms-vscode.cpptools
 
             # (builtins.getAttr "42crunch" plugins).vscode-openapi
             # plugins.ms-vscode.cpptools
-          ];
+          ] ++ vscode-marketplace;
         };
       }
     );
