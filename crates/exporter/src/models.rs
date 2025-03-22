@@ -16,6 +16,7 @@ use diesel::prelude::*;
 #[diesel(check_for_backend(diesel::sqlite::Sqlite))]
 pub struct Marketplace {
     pub name: String,
+    #[serde(skip)]
     pub publisher: String,
     pub version: String,
     pub engine: String,

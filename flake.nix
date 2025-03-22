@@ -122,14 +122,7 @@
         forVscode =
           engine: exts:
           let
-            filters = builtins.map (
-              v:
-              let
-                parts = lib.strings.splitString "." v;
-                name = builtins.elemAt parts 1;
-              in
-              ''.name == "${name}"''
-            ) exts;
+            filters = builtins.map (v: ''.name == "${v}"'') exts;
             filter = builtins.concatStringsSep "or" filters;
             extensionPath = ./data/extensions.json;
             extensions = builtins.fromJSON (

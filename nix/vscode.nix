@@ -91,7 +91,7 @@ let
     extensions: engine: system:
     let
       exts = infoExtensionForEngineForSystemList extensions engine system;
-      group = builtins.groupBy (el: "${el.publisher}.${el.name}") exts;
+      group = builtins.groupBy (el: "${el.name}") exts;
       maxV =
         li:
         builtins.foldl' (l: r: if (utils.versionLessThan l.version r.version) then r else l) {
@@ -135,24 +135,32 @@ let
       vscode-utils = pkgs.vscode-utils;
       fetchExtension =
         info:
+        let
+          parts = lib.strings.splitString "." info.name;
+          publisher = builtins.elemAt parts 0;
+          name = builtins.elemAt parts 1;
+        in
         pkgs.fetchurl {
           url = info.assert_url;
-          name = "${info.publisher}-${info.name}.zip";
+          name = "${publisher}-${name}.zip";
           sha256 = info.hash;
         };
       exts = builtins.mapAttrs (
         name: value:
-        vscode-utils.buildVscodeMarketplaceExtension (
-          applyDecorator {
+        let
+          parts = lib.strings.splitString "." value.name;
+          publisher = builtins.elemAt parts 0;
+          name = builtins.elemAt parts 1;
+          attr = {
             vsix = fetchExtension value;
             mktplcRef = {
-              name = value.name;
-              publisher = value.publisher;
+              inherit name publisher;
               version = value.version;
               sha256 = value.hash;
             };
-          } system
-        )
+          };
+        in
+        vscode-utils.buildVscodeMarketplaceExtension (applyDecorator attr system)
       ) infos;
     in
     exts;

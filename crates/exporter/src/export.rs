@@ -22,6 +22,9 @@ pub async fn export_toml(conn: &mut SqliteConnection, target: &str) -> anyhow::R
         .load(conn)?;
 
     record.sort();
+    record.iter_mut().for_each(|item| {
+        item.name = format!("{}.{}", item.publisher, item.name);
+    });
 
     #[derive(Serialize, Deserialize)]
     struct Extension {
