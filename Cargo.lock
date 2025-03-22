@@ -619,6 +619,7 @@ dependencies = [
  "dotenvy",
  "futures",
  "serde",
+ "serde_json",
  "tokio",
  "toml",
  "toml_edit",

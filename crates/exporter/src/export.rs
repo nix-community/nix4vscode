@@ -1,4 +1,3 @@
-use crate::mini_toml;
 use crate::models::*;
 use crate::schema::marketplace::dsl::*;
 use diesel::prelude::*;
@@ -31,7 +30,7 @@ pub async fn export_toml(conn: &mut SqliteConnection, target: &str) -> anyhow::R
 
     let record = Extension { extension: record };
 
-    tokio::fs::write(target, mini_toml::to_string(&record)).await?;
+    tokio::fs::write(target, serde_json::to_string_pretty(&record)?).await?;
 
     Ok(())
 }

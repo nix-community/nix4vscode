@@ -1,5 +1,5 @@
 pub fn init_logger() {
-    use tracing_subscriber::{EnvFilter, fmt, prelude::*, util::SubscriberInitExt};
+    use tracing_subscriber::{fmt, prelude::*, util::SubscriberInitExt, EnvFilter};
 
     let log_level = std::env::var("RUST_LOG")
         .unwrap_or("INFO".into())

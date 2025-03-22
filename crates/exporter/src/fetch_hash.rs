@@ -2,10 +2,10 @@ use std::collections::HashSet;
 use std::sync::Arc;
 
 use crate::schema::marketplace::dsl::*;
-use diesel::SqliteConnection;
 use diesel::prelude::*;
-use futures::StreamExt;
+use diesel::SqliteConnection;
 use futures::stream;
+use futures::StreamExt;
 use tokio::sync::Mutex;
 use tracing::info;
 use tracing::*;

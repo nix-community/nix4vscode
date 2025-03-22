@@ -1,10 +1,10 @@
-mod serde_nix;
 mod export;
 mod fetch_hash;
 mod fetch_info;
-pub(crate) mod mini_toml;
+pub mod mini_toml;
 mod models;
 mod schema;
+pub mod serde_nix;
 mod utils;
 
 use std::{env, time::Duration};
