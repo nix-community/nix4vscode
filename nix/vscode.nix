@@ -62,7 +62,7 @@ let
     extensions: system:
     builtins.filter (
       ext:
-      if ext.platform == null then
+      if !builtins.hasAttr "platform" ext then
         true
       else
         let
