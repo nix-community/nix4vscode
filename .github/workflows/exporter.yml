@@ -57,14 +57,14 @@ jobs:
           RUST_LOG: DEBUG
         run: |
           mkdir -p data
-          exporter --hash --batch-size=8 -o data/extensions.toml --max-run-time=19800 # 5.5h
+          exporter --hash --batch-size=8 -o data/extensions.json --max-run-time=19800 # 5.5h
           sqlite3 db.sqlite3 'VACUUM;'
           tar -cjf db.sqlite3.tar.xz db.sqlite3
 
       - uses: actions/upload-artifact@v4
         with:
-          path: data/extensions.toml
-          name: extensions.toml
+          path: data/extensions.json
+          name: extensions.json
 
       - uses: actions/upload-artifact@v4
         with:
@@ -74,21 +74,21 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          if git diff --quiet data/extensions.toml; then
-            echo "No changes detected in extensions.toml"
+          if git diff --quiet data/extensions.json; then
+            echo "No changes detected in extensions.json"
             echo "changes=false" >> $GITHUB_OUTPUT
           else
-            echo "Changes detected in extensions.toml"
+            echo "Changes detected in extensions.json"
             echo "changes=true" >> $GITHUB_OUTPUT
           fi
 
-      # - name: Commit and push changes
-      #   if: steps.changes.outputs.changes == 'true'
-      #   run: |
-      #     git add data/extensions.toml
-      #     git commit -m "chore: update extensions.toml"
-      #     git pull origin master --rebase
-      #     git push
+      - name: Commit and push changes
+        if: steps.changes.outputs.changes == 'true'
+        run: |
+          git add data/extensions.json
+          git commit -m "chore: update extensions.json"
+          git pull origin master --rebase
+          git push
 
       - name: Store sqlite3
         run: |

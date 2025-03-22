@@ -4,7 +4,7 @@
     "enabled": true
   },
   "files": {
-    "ignore": ["scripts/*.ts"]
+    "ignore": ["scripts/*.ts", "data/*.json"]
   },
   "formatter": {
     "indentStyle": "space",
