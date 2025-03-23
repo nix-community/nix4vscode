@@ -99,13 +99,13 @@
         forVscode =
           engine: exts:
           let
-            filters = builtins.map (v: ''.name == "${v}"'') exts;
+            filters = builtins.map (v: ''.key == "${v}"'') exts;
             filter = builtins.concatStringsSep "or" filters;
             extensionPath = ./data/extensions.json;
             extensions = builtins.fromJSON (
               builtins.readFile (
-                pkgs.runCommand "xx" { } ''
-                  ${pkgs.jq}/bin/jq '.extension | map(select(${filter}))' ${extensionPath} > $out
+                pkgs.runCommand "nix4vscode-${engine}" { } ''
+                  ${pkgs.jq}/bin/jq 'with_entries(select(${filter}))' ${extensionPath} > $out
                 ''
               )
             );

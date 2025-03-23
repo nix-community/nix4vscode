@@ -62,7 +62,7 @@ let
     extensions: system:
     builtins.filter (
       ext:
-      if !builtins.hasAttr "platform" ext then
+      if !builtins.hasAttr "p" ext then
         true
       else
         let
@@ -80,7 +80,7 @@ let
             else
               [ ];
         in
-        builtins.elem ext.platform plat
+        builtins.elem ext.p plat
     ) extensions;
 
   infoExtensionForEngineForSystemList =
@@ -90,12 +90,11 @@ let
   infoExtensionForEngineForSystem =
     extensions: engine: system:
     let
-      exts = infoExtensionForEngineForSystemList extensions engine system;
-      group = builtins.groupBy (el: "${el.name}") exts;
+      group = extensions;
       maxV =
         li:
-        builtins.foldl' (l: r: if (utils.versionLessThan l.version r.version) then r else l) {
-          version = "0.0.0";
+        builtins.foldl' (l: r: if (utils.versionLessThan l.v r.v) then r else l) {
+          v = "0.0.0";
         } li;
     in
     builtins.mapAttrs (name: value: maxV (value)) group;
@@ -134,30 +133,34 @@ let
       infos = infoExtensionForEngineForSystem extensions engine system;
       vscode-utils = pkgs.vscode-utils;
       fetchExtension =
-        info:
+        xname: info:
         let
-          parts = lib.strings.splitString "." info.name;
+          parts = lib.strings.splitString "." xname;
           publisher = builtins.elemAt parts 0;
           name = builtins.elemAt parts 1;
-          url = "https://${publisher}.gallerycdn.vsassets.io/extensions/${publisher}/${name}/${info.version}/${info.url}/Microsoft.VisualStudio.Services.VSIXPackage";
+          url =
+            if builtins.match "[0-9]+" info.u == null then
+              info.u
+            else
+              "https://${publisher}.gallerycdn.vsassets.io/extensions/${publisher}/${name}/${info.v}/${info.u}/Microsoft.VisualStudio.Services.VSIXPackage";
         in
         pkgs.fetchurl {
           url = url;
           name = "${publisher}-${name}.zip";
-          sha256 = info.hash;
+          sha256 = info.h;
         };
       exts = builtins.mapAttrs (
-        name: value:
+        xname: value:
         let
-          parts = lib.strings.splitString "." value.name;
+          parts = lib.strings.splitString "." xname;
           publisher = builtins.elemAt parts 0;
           name = builtins.elemAt parts 1;
           attr = {
-            vsix = fetchExtension value;
+            vsix = fetchExtension xname value;
             mktplcRef = {
               inherit name publisher;
-              version = value.version;
-              sha256 = value.hash;
+              version = value.v;
+              sha256 = value.h;
             };
           };
         in
