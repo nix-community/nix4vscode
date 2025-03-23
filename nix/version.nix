@@ -242,7 +242,22 @@ let
       in
       isValidVersion version product_ts desired_version;
   normalizeVersionLessThan =
-    l: r: l.major_base < r.major_base || l.minor_base < r.minor_base || l.patch_base < r.patch_base;
+    l: r:
+
+    if l.major_base < r.major_base then
+      true
+    else if l.major_base > r.major_base then
+      false
+    else if l.minor_base < r.minor_base then
+      true
+    else if l.minor_base > r.minor_base then
+      false
+    else if l.patch_base < r.patch_base then
+      true
+    else if l.patch_base > r.patch_base then
+      false
+    else
+      false;
 
   versionLessThan =
     l_str: r_str:
