@@ -1,8 +1,13 @@
+mod data;
+use std::collections::BTreeMap;
+
 use crate::mini_json;
 use crate::models::*;
 use crate::schema::marketplace::dsl::*;
+use data::ExportedData;
 use diesel::prelude::*;
 use diesel::SqliteConnection;
+use itertools::Itertools;
 use lazy_regex::regex;
 use rayon::prelude::*;
 use serde::Deserialize;
@@ -31,14 +36,20 @@ pub async fn export_toml(conn: &mut SqliteConnection, target: &str) -> anyhow::R
         }
     });
 
+    let mut data = BTreeMap::<String, Vec<ExportedData>>::new();
+
+    for (key, chunk) in &record.into_iter().chunk_by(|item| item.name.to_string()) {
+        let mut chunk: Vec<ExportedData> = chunk.map(Into::into).collect();
+        chunk.sort();
+        data.insert(key, chunk);
+    }
+
     #[derive(Serialize, Deserialize)]
     struct Extension {
         extension: Vec<Marketplace>,
     }
 
-    let record = Extension { extension: record };
-
-    tokio::fs::write(target, mini_json::to_string(&record)).await?;
+    tokio::fs::write(target, mini_json::to_string(&data)).await?;
 
     Ok(())
 }

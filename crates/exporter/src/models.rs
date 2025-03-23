@@ -16,19 +16,11 @@ use diesel::prelude::*;
 #[diesel(check_for_backend(diesel::sqlite::Sqlite))]
 pub struct Marketplace {
     pub name: String,
-    #[serde(skip)]
     pub publisher: String,
     pub version: String,
     pub engine: String,
-    #[serde(skip_serializing_if = "is_universal")]
     pub platform: String,
-    #[serde(rename = "url")]
     pub assert_url: String,
-    #[serde(skip)]
     pub is_prerelease: bool,
     pub hash: Option<String>,
-}
-
-fn is_universal(name: &str) -> bool {
-    name == "universal"
 }
