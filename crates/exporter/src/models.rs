@@ -22,6 +22,7 @@ pub struct Marketplace {
     pub engine: String,
     #[serde(skip_serializing_if = "is_universal")]
     pub platform: String,
+    #[serde(rename = "url")]
     pub assert_url: String,
     #[serde(skip)]
     pub is_prerelease: bool,

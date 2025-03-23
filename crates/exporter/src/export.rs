@@ -4,6 +4,7 @@ use crate::schema::marketplace::dsl::*;
 use diesel::prelude::*;
 use diesel::SqliteConnection;
 use lazy_regex::regex;
+use rayon::prelude::*;
 use serde::Deserialize;
 use serde::Serialize;
 
@@ -23,17 +24,11 @@ pub async fn export_toml(conn: &mut SqliteConnection, target: &str) -> anyhow::R
         .select(Marketplace::as_select())
         .load(conn)?;
 
-    record.sort();
-    record.iter_mut().for_each(|item| {
+    record.par_iter_mut().for_each(|item| {
         item.name = format!("{}.{}", item.publisher, item.name).to_lowercase();
-        let re  = regex!(r#"https://.*.gallerycdn.vsassets.io/extensions/.*/.*/.*/(\d+)/Microsoft.VisualStudio.Services.VSIXPackage"#);
-        let Some(captures) = re.captures(&item.assert_url) else {
-            return;
-        };
-        if captures.len() != 2 {
-            return;
+        if let Some(url) = minilizer_url(&item.assert_url) {
+            item.assert_url = url;
         }
-        item.assert_url=captures[1].to_string();
     });
 
     #[derive(Serialize, Deserialize)]
@@ -46,4 +41,15 @@ pub async fn export_toml(conn: &mut SqliteConnection, target: &str) -> anyhow::R
     tokio::fs::write(target, mini_json::to_string(&record)).await?;
 
     Ok(())
+}
+
+fn minilizer_url(url: &str) -> Option<String> {
+    let re = regex!(
+        r#"https://.*.gallerycdn.vsassets.io/extensions/.*/.*/.*/(\d+)/Microsoft.VisualStudio.Services.VSIXPackage"#
+    );
+    let captures = re.captures(url)?;
+    if captures.len() != 2 {
+        return None;
+    }
+    Some(captures[1].to_string())
 }

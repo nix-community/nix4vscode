@@ -38,7 +38,7 @@ let
   #  version: string;
   #  engine: string;
   #  platform: Platfrom;
-  #  assert_url: string;
+  #  url: string;
   #  hash: string;
   # }
   infoFromFile =
@@ -139,7 +139,7 @@ let
           parts = lib.strings.splitString "." info.name;
           publisher = builtins.elemAt parts 0;
           name = builtins.elemAt parts 1;
-          url = "https://${publisher}.gallerycdn.vsassets.io/extensions/${publisher}/${name}/${info.version}/${info.assert_url}/Microsoft.VisualStudio.Services.VSIXPackage";
+          url = "https://${publisher}.gallerycdn.vsassets.io/extensions/${publisher}/${name}/${info.version}/${info.url}/Microsoft.VisualStudio.Services.VSIXPackage";
         in
         pkgs.fetchurl {
           url = url;
