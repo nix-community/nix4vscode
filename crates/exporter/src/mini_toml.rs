@@ -1,7 +1,7 @@
 #![allow(unused_variables)]
 use serde::{
-    ser::{SerializeSeq, SerializeStruct},
     Serializer,
+    ser::{SerializeMap, SerializeSeq, SerializeStruct},
 };
 
 pub fn to_string<T: serde::Serialize>(v: &T) -> String {
@@ -33,7 +33,7 @@ impl Serializer for MiniSerializer {
 
     type SerializeTupleVariant = serde::ser::Impossible<Self::Ok, Self::Error>;
 
-    type SerializeMap = serde::ser::Impossible<Self::Ok, Self::Error>;
+    type SerializeMap = Self;
 
     type SerializeStruct = Self;
 
@@ -185,7 +185,7 @@ impl Serializer for MiniSerializer {
     }
 
     fn serialize_map(self, len: Option<usize>) -> Result<Self::SerializeMap, Self::Error> {
-        todo!()
+        Ok(self)
     }
 
     fn serialize_struct(
@@ -270,5 +270,32 @@ impl SerializeSeq for MiniSerializer {
     fn end(self) -> Result<Self::Ok, Self::Error> {
         let dst = self.dst + "]\n";
         Ok(dst)
+    }
+}
+
+impl SerializeMap for MiniSerializer {
+    type Ok = String;
+
+    type Error = toml_edit::ser::Error;
+
+    fn serialize_key<T>(&mut self, key: &T) -> Result<(), Self::Error>
+    where
+        T: ?Sized + serde::Serialize,
+    {
+        self.dst += &key.serialize(Self::default())?;
+        Ok(())
+    }
+
+    fn serialize_value<T>(&mut self, value: &T) -> Result<(), Self::Error>
+    where
+        T: ?Sized + serde::Serialize,
+    {
+        self.dst += "=";
+        self.dst += &format!("\"{}\"", value.serialize(Self::default())?);
+        Ok(())
+    }
+
+    fn end(self) -> Result<Self::Ok, Self::Error> {
+        Ok(self.dst)
     }
 }
