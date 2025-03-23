@@ -1,7 +1,7 @@
 #![allow(unused_variables)]
 use serde::{
-    ser::{SerializeMap, SerializeSeq, SerializeStruct},
     Serializer,
+    ser::{SerializeMap, SerializeSeq, SerializeStruct},
 };
 
 pub fn to_string<T: serde::Serialize>(v: &T) -> String {
@@ -9,6 +9,7 @@ pub fn to_string<T: serde::Serialize>(v: &T) -> String {
         dst: Default::default(),
         is_value: false,
         len: 0,
+        with_sem: false,
     };
     v.serialize(s).unwrap()
 }
@@ -18,6 +19,7 @@ pub struct MiniSerializer {
     dst: String,
     is_value: bool,
     len: usize,
+    with_sem: bool,
 }
 
 impl Serializer for MiniSerializer {
@@ -153,12 +155,14 @@ impl Serializer for MiniSerializer {
             dst,
             is_value,
             len: _,
+            with_sem,
         } = self;
         let dst = dst + "[\n";
         Ok(Self {
             dst,
             is_value,
             len: len.unwrap_or_default(),
+            with_sem,
         })
     }
 
@@ -199,9 +203,15 @@ impl Serializer for MiniSerializer {
             mut dst,
             is_value,
             len: _,
+            with_sem,
         } = self;
         dst += "{";
-        Ok(Self { dst, is_value, len })
+        Ok(Self {
+            dst,
+            is_value,
+            len,
+            with_sem,
+        })
     }
 
     fn serialize_struct_variant(
@@ -265,9 +275,13 @@ impl SerializeSeq for MiniSerializer {
         Ok(())
     }
 
-    fn end(self) -> Result<Self::Ok, Self::Error> {
-        let dst = self.dst + "]\n";
-        Ok(dst)
+    fn end(mut self) -> Result<Self::Ok, Self::Error> {
+        self.dst += "]";
+        if self.with_sem {
+            self.dst += ",";
+        }
+        self.dst += "\n";
+        Ok(self.dst)
     }
 }
 
@@ -291,12 +305,12 @@ impl SerializeMap for MiniSerializer {
     where
         T: ?Sized + serde::Serialize,
     {
-        let value = value.serialize(Self::default())?;
-        self.dst += &value;
         self.len -= 1;
-        if self.len != 0 {
-            self.dst += ",";
-        }
+        let value = value.serialize(Self {
+            with_sem: self.len != 0,
+            ..Default::default()
+        })?;
+        self.dst += &value;
         Ok(())
     }
 
