@@ -5,12 +5,12 @@ use super::Marketplace;
 
 #[derive(Debug, Serialize, Deserialize, PartialEq, Eq, PartialOrd, Ord)]
 pub(crate) struct ExportedData {
-    pub version: String,
-    pub engine: String,
+    pub v: String,
+    pub e: String,
     #[serde(skip_serializing_if = "is_universal")]
-    pub platform: String,
-    pub url: String,
-    pub hash: Option<String>,
+    pub p: String,
+    pub u: String,
+    pub h: Option<String>,
 }
 
 impl From<Marketplace> for ExportedData {
@@ -26,11 +26,11 @@ impl From<Marketplace> for ExportedData {
             hash,
         } = value;
         Self {
-            version,
-            engine,
-            platform,
-            url: assert_url,
-            hash,
+            v: version,
+            e: engine,
+            p: platform,
+            u: assert_url,
+            h: hash,
         }
     }
 }
