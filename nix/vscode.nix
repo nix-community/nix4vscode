@@ -139,9 +139,10 @@ let
           parts = lib.strings.splitString "." info.name;
           publisher = builtins.elemAt parts 0;
           name = builtins.elemAt parts 1;
+          url = "https://${publisher}.gallerycdn.vsassets.io/extensions/${publisher}/${name}/${info.version}/${info.assert_url}/Microsoft.VisualStudio.Services.VSIXPackage";
         in
         pkgs.fetchurl {
-          url = info.assert_url;
+          url = url;
           name = "${publisher}-${name}.zip";
           sha256 = info.hash;
         };

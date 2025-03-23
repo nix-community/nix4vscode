@@ -618,6 +618,7 @@ dependencies = [
  "diesel",
  "dotenvy",
  "futures",
+ "lazy-regex",
  "serde",
  "serde_json",
  "tokio",
