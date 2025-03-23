@@ -1,6 +1,4 @@
 import { parseArgs } from 'jsr:@std/cli/parse-args';
-// deno-lint-ignore-file
-import { parse } from 'jsr:@std/toml';
 import { isVersionValid, normalizeVersion, parseVersion } from './version.ts';
 
 const args = parseArgs(Deno.args, {
@@ -35,52 +33,73 @@ if (args.platform === 'x86_64-linux' || args.platform === 'i686-linux') {
 const content = await Deno.readTextFile(args.file);
 
 interface Marketplace {
-  name: string;
-  version: string;
-  engine: string;
+  n: string;
+  v: string;
+  e: string;
   platform?: string;
-  // biome-ignore lint/style/useNamingConvention: <explanation>
-  assert_url: string;
-  hash: string;
+  u: string;
+  h: string;
 }
 
-const data = parse(content).extension as Marketplace[];
+interface MarketplaceJson {
+  [key: string]: Marketplace[];
+}
 
-const filteredData = data.filter(item => {
-  return (
-    args.name.includes(item.name) &&
-    (item.platform === undefined || platforms.includes(item.platform)) &&
-    isVersionValid(args.engine!, undefined, item.engine)
-  );
-});
+const data = JSON.parse(content) as MarketplaceJson;
 
-const v = Object.groupBy(filteredData, ({ name }) => {
-  return name;
-});
+const v = Object.fromEntries(
+  Object.entries(data).filter(([key]) => {
+    return args.name.includes(key);
+  }),
+);
+
+function versionBe(l: string, r: string) {
+  const lv = normalizeVersion(parseVersion(l));
+  const rv = normalizeVersion(parseVersion(r));
+
+  if (lv == null || rv == null) {
+    return false;
+  }
+
+  if (lv?.majorBase > rv?.majorBase) {
+    return true;
+  }
+  if (rv?.majorBase > lv?.majorBase) {
+    return false;
+  }
+
+  if (lv?.minorBase > rv?.minorBase) {
+    return true;
+  }
+  if (lv?.minorBase < rv?.minorBase) {
+    return false;
+  }
+  if (lv?.patchBase > rv?.patchBase) {
+    return true;
+  }
+
+  return false;
+}
 
 const x = Object.fromEntries(
   Object.entries(v).map(([key, value]) => {
     // biome-ignore lint/style/noNonNullAssertion: <explanation>
-    const maxValue = value!.reduce((l, r) => {
-      const lv = normalizeVersion(parseVersion(l.version));
-      const lr = normalizeVersion(parseVersion(r.version));
+    const maxValue = value!
+      .filter(item => {
+        return (
+          item.platform === undefined ||
+          platforms.includes(item.platform) ||
+          isVersionValid(args.engine!, undefined, item.v)
+        );
+      })
+      .reduce((l, r) => {
+        if (versionBe(l.v, r.v)) {
+          return l;
+        }
 
-      if (lv == null || lr == null) {
-        return l;
-      }
-
-      if (
-        lv?.majorBase > lr?.majorBase ||
-        lv?.minorBase > lr?.minorBase ||
-        lv?.patchBase > lr?.patchBase
-      ) {
-        return l;
-      }
-
-      return r;
-    });
+        return r;
+      });
     return [key, maxValue];
   }),
 );
-
 console.log(JSON.stringify(x));

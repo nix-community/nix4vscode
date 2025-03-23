@@ -4,7 +4,7 @@
     "enabled": true
   },
   "files": {
-    "ignore": ["scripts/*.ts", "data/*.json"]
+    "ignore": ["data/*.json"]
   },
   "formatter": {
     "indentStyle": "space",
@@ -24,6 +24,7 @@
     }
   },
   "linter": {
+    "ignore": ["scripts/*.ts", "data/*.json"],
     "rules": {
       "correctness": {
         "noUnusedImports": "warn",
