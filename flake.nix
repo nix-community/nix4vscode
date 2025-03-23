@@ -37,31 +37,39 @@
       rustToolchain = lib.importTOML ./rust-toolchain.toml;
       rustVersion = rustToolchain.toolchain.channel;
 
-      customeLib = lib.mapAttrs (system: pkgs: {
-        forVscode =
-          engine: exts:
-          let
-            filters = builtins.map (v: ''.key == "${v}"'') exts;
-            filter = builtins.concatStringsSep "or" filters;
-            extensionPath = ./data/extensions.json;
-            extensions = builtins.fromJSON (
-              builtins.readFile (
-                pkgs.runCommand "nix4vscode-${engine}" { } ''
-                  ${pkgs.jq}/bin/jq 'with_entries(select(${filter}))' ${extensionPath} > $out
-                ''
-              )
-            );
-            vscode = import ./nix/vscode.nix {
-              pkgs = import nixpkgs {
-                inherit system;
+      customeLib = lib.mapAttrs (
+        system: pkgs:
+        let
+          forVscodeVersion =
+            engine: exts:
+            let
+              filters = builtins.map (v: ''.key == "${v}"'') exts;
+              filter = builtins.concatStringsSep "or" filters;
+              extensionPath = ./data/extensions.json;
+              extensions = builtins.fromJSON (
+                builtins.readFile (
+                  pkgs.runCommand "nix4vscode-${engine}" { } ''
+                    ${pkgs.jq}/bin/jq 'with_entries(select(${filter}))' ${extensionPath} > $out
+                  ''
+                )
+              );
+              vscode = import ./nix/vscode.nix {
+                pkgs = import nixpkgs {
+                  inherit system;
+                };
               };
-            };
-            vscode-marketplace = vscode.extensionsFromInfo {
-              inherit extensions system;
-            };
-          in
-          builtins.attrValues vscode-marketplace;
-      }) pkgsFor;
+              vscode-marketplace = vscode.extensionsFromInfo {
+                inherit extensions system;
+              };
+            in
+            builtins.attrValues vscode-marketplace;
+
+        in
+        {
+          inherit forVscodeVersion;
+          forVscode = exts: forVscodeVersion pkgs.vscode.version exts;
+        }
+      ) pkgsFor;
     in
     {
       lib = customeLib;
@@ -101,6 +109,7 @@
         forVscode = (
           final: _: {
             forVscode = customeLib.${final.system}.forVscode;
+            forVscodeVersion = customeLib.${final.system}.forVscodeVersion;
           }
         );
         ${packageName} =
