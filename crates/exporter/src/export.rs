@@ -10,8 +10,6 @@ use diesel::SqliteConnection;
 use itertools::Itertools;
 use lazy_regex::regex;
 use rayon::prelude::*;
-use serde::Deserialize;
-use serde::Serialize;
 
 pub async fn export_toml(conn: &mut SqliteConnection, target: &str) -> anyhow::Result<()> {
     let mut record: Vec<Marketplace> = marketplace
@@ -41,12 +39,10 @@ pub async fn export_toml(conn: &mut SqliteConnection, target: &str) -> anyhow::R
     for (key, chunk) in &record.into_iter().chunk_by(|item| item.name.to_string()) {
         let mut chunk: Vec<ExportedData> = chunk.map(Into::into).collect();
         chunk.sort();
-        data.insert(key, chunk);
-    }
-
-    #[derive(Serialize, Deserialize)]
-    struct Extension {
-        extension: Vec<Marketplace>,
+        data.entry(key.clone()).or_default();
+        data.entry(key).and_modify(|v| {
+            v.extend(chunk);
+        });
     }
 
     tokio::fs::write(target, mini_json::to_string(&data)).await?;
