@@ -49,7 +49,7 @@
               extensions = builtins.fromJSON (
                 builtins.readFile (
                   pkgs.runCommand "nix4vscode-${engine}" { } ''
-                    ${pkgs.jq}/bin/jq 'with_entries(select(${filter}))' ${extensionPath} > $out
+                    ${pkgs.jaq}/bin/jaq 'with_entries(select(${filter}))' ${extensionPath} > $out
                   ''
                 )
               );
