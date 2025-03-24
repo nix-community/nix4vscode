@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.0.12](https://github.com/nix-community/nix4vscode/compare/nix4vscode-v0.0.11...nix4vscode-v0.0.12) (2025-03-24)
+
+
+### Features
+
+* **flake:** using faster jaq ([cbf2b47](https://github.com/nix-community/nix4vscode/commit/cbf2b474a8efb1c38c0416fbbbeacd3d595bf787))
+* **overlay:** validate extensions ([b7cdc65](https://github.com/nix-community/nix4vscode/commit/b7cdc65a60a8932c9e22bc74c569be12d80a64ee))
+
+
+### Bug Fixes
+
+* **example:** fix overlays ([c84dc96](https://github.com/nix-community/nix4vscode/commit/c84dc96332873239153f28ff25c9251e2cd03bf9))
+* **overlay:** fix cpptools ([5218238](https://github.com/nix-community/nix4vscode/commit/5218238b9978369335b829cced2bf13c9f7fe31d))
+
 ## [0.0.11](https://github.com/nix-community/nix4vscode/compare/nix4vscode-v0.0.10...nix4vscode-v0.0.11) (2025-03-24)
 
 
