@@ -61,8 +61,16 @@
               vscode-marketplace = vscode.extensionsFromInfo {
                 inherit extensions system;
               };
+              listDifference = a: b: builtins.filter (x: !(builtins.elem x b)) a;
+              diff = listDifference exts (builtins.attrNames vscode-marketplace);
+
+              validateAttribute =
+                if builtins.length diff == 0 then
+                  vscode-marketplace
+                else
+                  throw "The folloing extension filed get: ${builtins.concatStringsSep "," diff}";
             in
-            builtins.attrValues vscode-marketplace;
+            builtins.attrValues validateAttribute;
 
         in
         {
