@@ -22,18 +22,22 @@
           inherit system;
           config.allowUnfree = true;
         };
-        vscode-marketplace = nix4vscode.lib.${system}.forVscode "1.85.0" [
+        vscode-marketplace = nix4vscode.lib.${system}.forVscode [
           "ms-vscode.cpptools"
         ];
+        plugins = import ./vscode_plugins.nix {
+          inherit pkgs;
+          lib = pkgs.lib;
+        };
       in
       {
         inherit vscode-marketplace;
         devShell = pkgs.mkShell {
           buildInputs = [
-            # plugins.eamodio.gitlens
+            plugins.eamodio.gitlens
 
-            # (builtins.getAttr "42crunch" plugins).vscode-openapi
-            # plugins.ms-vscode.cpptools
+            (builtins.getAttr "42crunch" plugins).vscode-openapi
+            plugins.ms-vscode.cpptools
           ] ++ vscode-marketplace;
         };
       }
