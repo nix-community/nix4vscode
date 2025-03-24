@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.11](https://github.com/nix-community/nix4vscode/compare/nix4vscode-v0.0.10...nix4vscode-v0.0.11) (2025-03-24)
+
+
+### Bug Fixes
+
+* Revert "feat(code_api): don't use rusttls" ([31c5a28](https://github.com/nix-community/nix4vscode/commit/31c5a2896c88ce2641f2b6bad1d20025662457e7)), closes [#249](https://github.com/nix-community/nix4vscode/issues/249)
+
 ## [0.0.10](https://github.com/nix-community/nix4vscode/compare/nix4vscode-v0.0.9...nix4vscode-v0.0.10) (2025-03-23)
 
 
