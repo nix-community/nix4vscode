@@ -1,19 +1,38 @@
-import { parseArgs } from 'jsr:@std/cli/parse-args';
-import { isVersionValid, normalizeVersion, parseVersion } from './version.ts';
+import { parseArgs } from './parse_args.ts';
+import { getExtensionName, getExtensionVersion, versionBe } from './utils.ts';
+import { isVersionValid } from './version.ts';
 
-const args = parseArgs(Deno.args, {
-  string: ['engine', 'file', 'platform'],
+const _args = parseArgs(Deno.args, {
+  string: ['engine', 'file', 'platform', 'output', 'help'],
   collect: ['name'],
 });
 
 if (
-  args.file === undefined ||
-  args.engine === undefined ||
-  args.name.length === 0 ||
-  args.platform === undefined
+  !_args.file ||
+  !_args.engine ||
+  !_args.platform ||
+  _args.name.length === 0 ||
+  _args.help
 ) {
-  Deno.exit(-1);
+  console.log(`
+Usage deno run main.ts <args> "ms-vscode.cpptools" "ms-vscode.copilot-mermaid-diagram.0.0.3"
+
+Args:
+--file: target to extensions.json
+--engine: Vscode Engine
+--platform: 'x86_64-linux'| 'i686-linux'| 'aarch64-linux' | 'armv7l-linux' | 'x86_64-darwin' | 'aarch64-darwin'
+--output?: writer output to file.
+`);
+  Deno.exit(0);
 }
+
+const args = {
+  file: _args.file!,
+  engine: _args.engine!,
+  platform: _args.platform!,
+  output: _args.output || null,
+  name: _args.name as string[],
+};
 
 let platforms: string[] = [];
 if (args.platform === 'x86_64-linux' || args.platform === 'i686-linux') {
@@ -31,75 +50,46 @@ if (args.platform === 'x86_64-linux' || args.platform === 'i686-linux') {
 }
 
 const content = await Deno.readTextFile(args.file);
-
-interface Marketplace {
-  n: string;
-  v: string;
-  e: string;
-  platform?: string;
-  u: string;
-  h: string;
-}
-
-interface MarketplaceJson {
-  [key: string]: Marketplace[];
-}
-
 const data = JSON.parse(content) as MarketplaceJson;
 
-const v = Object.fromEntries(
-  Object.entries(data).filter(([key]) => {
-    return args.name.includes(key);
-  }),
-);
-
-function versionBe(l: string, r: string) {
-  const lv = normalizeVersion(parseVersion(l));
-  const rv = normalizeVersion(parseVersion(r));
-
-  if (lv == null || rv == null) {
-    return false;
-  }
-
-  if (lv?.majorBase > rv?.majorBase) {
-    return true;
-  }
-  if (rv?.majorBase > lv?.majorBase) {
-    return false;
-  }
-
-  if (lv?.minorBase > rv?.minorBase) {
-    return true;
-  }
-  if (lv?.minorBase < rv?.minorBase) {
-    return false;
-  }
-  if (lv?.patchBase > rv?.patchBase) {
-    return true;
-  }
-
-  return false;
-}
+const plainNames = args.name.map(getExtensionName);
+const nameVersion: NameVersion = {};
+args.name.forEach(name => {
+  nameVersion[getExtensionName(name)] = getExtensionVersion(name);
+});
 
 const x = Object.fromEntries(
-  Object.entries(v).map(([key, value]) => {
-    // biome-ignore lint/style/noNonNullAssertion: <explanation>
-    const maxValue = value!
-      .filter(item => {
-        return (
-          item.platform === undefined ||
-          platforms.includes(item.platform) ||
-          isVersionValid(args.engine!, undefined, item.v)
-        );
-      })
-      .reduce((l, r) => {
-        if (versionBe(l.v, r.v)) {
-          return l;
-        }
+  Object.entries(data)
+    .filter(([name]) => {
+      return plainNames.includes(name);
+    })
+    .map(([key, value]) => {
+      const maxValue = value
+        .filter(item => {
+          const version = nameVersion[key];
+          if (version !== '' && item.v !== version) {
+            return false;
+          }
+          return (
+            item.platform === undefined ||
+            (platforms.includes(item.platform) &&
+              isVersionValid(args.engine!, undefined, item.v))
+          );
+        })
+        .reduce((l, r) => {
+          if (versionBe(l.v, r.v)) {
+            return l;
+          }
 
-        return r;
-      });
-    return [key, maxValue];
-  }),
+          return r;
+        });
+      return [key, maxValue];
+    }),
 );
-console.log(JSON.stringify(x));
+
+const yata = JSON.stringify(x);
+if (args.output) {
+  await Deno.writeTextFile(args.output, yata);
+} else {
+  console.log(JSON.stringify(yata));
+}
