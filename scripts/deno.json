@@ -1,6 +1,7 @@
 {
   "tasks": {
-    "run": "deno run --allow-read main.ts"
+    "run": "deno run --allow-read main.ts",
+    "bundle": "main.ts --bundle --outfile=out.ts --format=esm"
   },
   "imports": {}
 }

@@ -43,13 +43,14 @@
           forVscodeVersion =
             engine: exts:
             let
-              filters = builtins.map (v: ''--name == "${v}"'') exts;
+              filters = builtins.map (v: ''--name="${v}"'') exts;
               filter = builtins.concatStringsSep " " filters;
               extensionPath = ./data/extensions.json;
+              mainTs = ./scripts/out.js;
               extensions = builtins.fromJSON (
                 builtins.readFile (
                   pkgs.runCommand "nix4vscode-${engine}" { } ''
-                    ${pkgs.deno} run ./scripts/main.ts --file ${extensionPath} --engine ${engine} --platform ${system} --output=$out ${filter}
+                    ${pkgs.deno}/bin/deno run -A ${mainTs} --file ${extensionPath} --engine ${engine} --platform ${system} --output=$out ${filter}
                   ''
                 )
               );
