@@ -63,7 +63,14 @@
                 inherit extensions system;
               };
               listDifference = a: b: builtins.filter (x: !(builtins.elem x b)) a;
-              diff = listDifference exts (builtins.attrNames vscode-marketplace);
+              names = builtins.map (
+                item:
+                let
+                  parts = lib.strings.splitString "." item;
+                in
+                if builtins.length parts < 3 then item else builtins.concatStringsSep "." (lib.lists.take 2 parts)
+              ) exts;
+              diff = listDifference names (builtins.attrNames vscode-marketplace);
 
               validateAttribute =
                 if builtins.length diff == 0 then

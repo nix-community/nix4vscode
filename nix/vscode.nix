@@ -130,7 +130,7 @@ let
       system ? builtins.currentSystem,
     }:
     let
-      infos = infoExtensionForEngineForSystem extensions engine system;
+      # infos = infoExtensionForEngineForSystem extensions engine system;
       vscode-utils = pkgs.vscode-utils;
       fetchExtension =
         xname: info:
@@ -165,7 +165,7 @@ let
           };
         in
         vscode-utils.buildVscodeMarketplaceExtension (applyDecorator attr system)
-      ) infos;
+      ) extensions;
     in
     exts;
 in
