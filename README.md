@@ -1,5 +1,8 @@
 # Nix4Vscode
 
+> [!NOTE]
+> We support overlays! Just [try it](https://github.com/nix-community/nix4vscode/issues/247)!
+
 A tool generate nix expression from `config.toml`. Assuming we have a `config.toml` file like this:
 
 ```toml
