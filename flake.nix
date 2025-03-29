@@ -40,17 +40,18 @@
       customeLib = lib.mapAttrs (
         system: pkgs:
         let
-          forVscodeVersion =
-            engine: exts:
+          forVscodeVersionRaw =
+            engine: exts: pre_release:
             let
               filters = builtins.map (v: ''--name="${v}"'') exts;
               filter = builtins.concatStringsSep " " filters;
+              prerelease = if prerelease then "--prerelease" else "";
               extensionPath = ./data/extensions.json;
               mainTs = ./scripts/out.js;
               extensions = builtins.fromJSON (
                 builtins.readFile (
                   pkgs.runCommand "nix4vscode-${engine}" { } ''
-                    ${pkgs.deno}/bin/deno run -A ${mainTs} --file ${extensionPath} --engine ${engine} --platform ${system} --output=$out ${filter}
+                    ${pkgs.deno}/bin/deno run -A ${mainTs} --file ${extensionPath} --engine ${engine} --platform ${system} ${prerelease} --output=$out ${filter}
                   ''
                 )
               );
@@ -82,8 +83,11 @@
 
         in
         {
-          inherit forVscodeVersion;
-          forVscode = exts: forVscodeVersion pkgs.vscode.version exts;
+          forVscode = exts: forVscodeVersionRaw pkgs.vscode.version exts false;
+          forVscodeVersion = version: exts: forVscodeVersionRaw version exts false;
+
+          forVscodePrerelease = exts: forVscodeVersionRaw pkgs.vscode.version exts true;
+          forVscodeVersionPrerelease = version: exts: forVscodeVersionRaw version exts true;
         }
       ) pkgsFor;
     in
@@ -126,6 +130,8 @@
           final: _: {
             forVscode = customeLib.${final.system}.forVscode;
             forVscodeVersion = customeLib.${final.system}.forVscodeVersion;
+            forVscodePrerelease = customeLib.${final.system}.forVscodePrerelease;
+            forVscodeVersionPrerelease = customeLib.${final.system}.forVscodeVersionPrerelease;
           }
         );
         ${packageName} =

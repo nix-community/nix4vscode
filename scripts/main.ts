@@ -4,6 +4,7 @@ import { isVersionValid } from './version.ts';
 
 const _args = parseArgs(Deno.args, {
   string: ['engine', 'file', 'platform', 'output', 'help'],
+  boolean: ['prerelease'],
   collect: ['name'],
 });
 
@@ -32,6 +33,7 @@ const args = {
   platform: _args.platform!,
   output: _args.output || null,
   name: _args.name as string[],
+  pre_release: _args.prerelease === true,
 };
 
 let platforms: string[] = [];
@@ -68,6 +70,9 @@ const x = Object.fromEntries(
         .filter(item => {
           const version = nameVersion[key];
           if (version !== '' && item.v !== version) {
+            return false;
+          }
+          if (args.pre_release === false && item.r === true) {
             return false;
           }
           return (

@@ -489,6 +489,7 @@ function getExtensionVersion(name) {
 // main.ts
 var _args = parseArgs(Deno.args, {
   string: ['engine', 'file', 'platform', 'output', 'help'],
+  boolean: ['prerelease'],
   collect: ['name'],
 });
 if (
@@ -515,6 +516,7 @@ var args = {
   platform: _args.platform,
   output: _args.output || null,
   name: _args.name,
+  pre_release: _args.prerelease === true,
 };
 var platforms = [];
 if (args.platform === 'x86_64-linux' || args.platform === 'i686-linux') {
@@ -547,6 +549,9 @@ var x = Object.fromEntries(
         .filter(item => {
           const version = nameVersion[key];
           if (version !== '' && item.v !== version) {
+            return false;
+          }
+          if (args.pre_release === false && item.r === true) {
             return false;
           }
           return (

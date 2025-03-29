@@ -42,7 +42,7 @@ impl Serializer for MiniSerializer {
     type SerializeStructVariant = serde::ser::Impossible<Self::Ok, Self::Error>;
 
     fn serialize_bool(self, v: bool) -> Result<Self::Ok, Self::Error> {
-        todo!()
+        Ok("true".into())
     }
 
     fn serialize_i8(self, v: i8) -> Result<Self::Ok, Self::Error> {

@@ -5,6 +5,8 @@ interface Marketplace {
   platform?: string;
   u: string;
   h: string;
+  /// is_prelease
+  r?: boolean;
 }
 
 interface MarketplaceJson {
