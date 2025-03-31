@@ -2,6 +2,7 @@ use std::pin::pin;
 use std::str::FromStr;
 
 use code_api::code::is_version_valid;
+use code_api::code::ApiEndpoint;
 use code_api::code::AssetType;
 use code_api::code::HttpClient;
 use code_api::code::IQueryState;
@@ -31,7 +32,7 @@ impl CodeNix {
     pub fn new(config: Config) -> Self {
         Self {
             config,
-            client: HttpClient::new().unwrap(),
+            client: HttpClient::new(ApiEndpoint::Vscode).unwrap(),
         }
     }
 

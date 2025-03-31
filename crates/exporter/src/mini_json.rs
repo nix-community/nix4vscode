@@ -1,7 +1,7 @@
 #![allow(unused_variables)]
 use serde::{
-    Serializer,
     ser::{SerializeMap, SerializeSeq, SerializeStruct},
+    Serializer,
 };
 
 pub fn to_string<T: serde::Serialize>(v: &T) -> String {

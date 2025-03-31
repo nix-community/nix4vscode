@@ -11,6 +11,7 @@ mod utils;
 use std::{env, time::Duration};
 
 use clap::Parser;
+use code_api::code::ApiEndpoint;
 use diesel::prelude::*;
 
 use export::export_toml;
@@ -39,6 +40,9 @@ struct Args {
 
     #[clap(long, default_value_t = u64::MAX)]
     max_run_time: u64,
+
+    #[clap(long, default_value_t = false)]
+    openvsx: bool,
 }
 
 // #[dotenvy::load]
@@ -48,12 +52,18 @@ async fn main() {
     init_logger();
     let args = Args::parse();
 
+    let endpoint = if args.openvsx {
+        ApiEndpoint::OpenVsx
+    } else {
+        ApiEndpoint::Vscode
+    };
+
     let database_url = env::var("DATABASE_URL").expect("DATABASE_URL must be set");
     let mut conn = SqliteConnection::establish(&database_url)
         .unwrap_or_else(|_| panic!("Error connecting to {}", database_url));
 
     if args.fetch {
-        if let Err(err) = fetch_marketplace(&mut conn).await {
+        if let Err(err) = fetch_marketplace(&mut conn, endpoint).await {
             error!(?err)
         }
     }

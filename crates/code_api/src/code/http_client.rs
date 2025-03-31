@@ -9,15 +9,28 @@ use async_stream::try_stream;
 use futures::stream::Stream;
 use tracing::*;
 
+#[derive(Debug, Clone, Copy)]
+pub enum ApiEndpoint {
+    Vscode,
+    OpenVsx,
+}
+
 #[derive(Debug, Clone)]
 pub struct HttpClient {
     pub client: reqwest::Client,
+    pub endpoint: &'static str,
 }
 
 impl HttpClient {
-    pub fn new() -> anyhow::Result<Self> {
+    pub fn new(endpoint: ApiEndpoint) -> anyhow::Result<Self> {
         let client = reqwest::Client::builder().gzip(true).build()?;
-        Ok(Self { client })
+        let endpoint = match endpoint {
+            ApiEndpoint::Vscode => {
+                "https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery"
+            }
+            ApiEndpoint::OpenVsx => "https://open-vsx.org/vscode/gallery/extensionquery",
+        };
+        Ok(Self { client, endpoint })
     }
 
     pub fn get_extension_response(
@@ -35,7 +48,7 @@ impl HttpClient {
                 trace!("send request: {body}");
                 let response = self
                     .client
-                    .post("https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery")
+                    .post(self.endpoint)
                     .header("CONTENT-TYPE", "application/json")
                     .header(
                         "ACCEPT",

@@ -1,15 +1,18 @@
 use std::pin::pin;
 
 use crate::models::Marketplace;
-use code_api::code::{HttpClient, SortBy};
+use code_api::code::{ApiEndpoint, HttpClient, SortBy};
 use diesel::prelude::*;
 use futures::StreamExt;
 
 use crate::schema::marketplace;
 use tracing::*;
 
-pub async fn fetch_marketplace(conn: &mut SqliteConnection) -> anyhow::Result<()> {
-    let client = HttpClient::new().unwrap();
+pub async fn fetch_marketplace(
+    conn: &mut SqliteConnection,
+    endpoint: ApiEndpoint,
+) -> anyhow::Result<()> {
+    let client = HttpClient::new(endpoint).unwrap();
     let mut iter = pin!(client.get_extension_response(
         vec![],
         code_api::code::IQueryState {
