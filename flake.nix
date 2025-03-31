@@ -45,7 +45,7 @@
             let
               filters = builtins.map (v: ''--name="${v}"'') exts;
               filter = builtins.concatStringsSep " " filters;
-              prerelease = if prerelease then "--prerelease" else "";
+              prerelease = if pre_release then "--prerelease" else "";
               extensionPath = ./data/extensions.json;
               mainTs = ./scripts/out.js;
               extensions = builtins.fromJSON (
