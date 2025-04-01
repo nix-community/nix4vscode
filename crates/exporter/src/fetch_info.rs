@@ -16,7 +16,7 @@ pub async fn fetch_marketplace(
     let mut iter = pin!(client.get_extension_response(
         vec![],
         code_api::code::IQueryState {
-            page_size: u16::MAX as u64,
+            page_size: u64::MAX,
             sort_by: SortBy::PUBLISHED_DATE,
             sort_order: code_api::code::SortOrder::DESCENDING,
             ..Default::default()

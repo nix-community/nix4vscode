@@ -11,6 +11,7 @@ pub struct ICriterium {
 #[api(nodefault)]
 pub struct IQueryState {
     pub page_number: u64,
+    #[serde(skip_serializing_if = "is_u64_max")]
     pub page_size: u64,
     pub sort_by: SortBy,
     pub sort_order: SortOrder,
@@ -18,6 +19,10 @@ pub struct IQueryState {
     pub criteria: Vec<ICriterium>,
     pub asset_types: Vec<String>,
     pub source: String,
+}
+
+fn is_u64_max(v: &u64) -> bool {
+    *v == u64::MAX
 }
 
 impl IQueryState {
