@@ -5,7 +5,6 @@ pub mod mini_json;
 pub mod mini_toml;
 mod models;
 mod schema;
-pub mod serde_nix;
 mod utils;
 
 use std::{env, time::Duration};
