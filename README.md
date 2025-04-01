@@ -44,7 +44,7 @@ Let's assume you store these contents in a file named `pkgs.nix`, you can use it
 ```nix
 { pkgs, lib }:
 let
-  plugins = (import ./vscode_plugins.nix) { pkgs = pkgs; lib = lib; };
+  plugins = (import ./vscode_plugins.nix) { inherit pkgs lib; };
 in
 with pkgs;
 {
