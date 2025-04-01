@@ -1,3 +1,4 @@
+import type { MarketplaceJson, NameVersion } from './main.d.ts';
 import { parseArgs } from './parse_args.ts';
 import {
   getAssertUrl,

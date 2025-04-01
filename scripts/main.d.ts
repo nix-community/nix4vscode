@@ -1,28 +1,8 @@
-interface Marketplace {
-  /**
-   * version
-   */
-  v: string;
-  /**
-   * engine
-   */
-  e: string;
-  /**
-   * platform
-   */
-  p?: string;
-  /**
-   * assert_url
-   */
-  u: string;
-  /**
-   * hash
-   */
-  h: string;
-  /**
-   * is_prelease
-   */
-  r?: boolean;
+import { ExportedData } from '../crates/exporter/bindings/ExportedData.ts';
+
+interface Marketplace extends ExportedData {
+  /// Url
+  u?: string;
 }
 
 interface MarketplaceJson {
