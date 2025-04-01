@@ -1,11 +1,27 @@
 interface Marketplace {
-  n: string;
+  /**
+   * version
+   */
   v: string;
+  /**
+   * engine
+   */
   e: string;
-  platform?: string;
+  /**
+   * platform
+   */
+  p?: string;
+  /**
+   * assert_url
+   */
   u: string;
+  /**
+   * hash
+   */
   h: string;
-  /// is_prelease
+  /**
+   * is_prelease
+   */
   r?: boolean;
 }
 

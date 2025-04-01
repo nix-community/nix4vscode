@@ -1,10 +1,15 @@
 import { parseArgs } from './parse_args.ts';
-import { getExtensionName, getExtensionVersion, versionBe } from './utils.ts';
+import {
+  getAssertUrl,
+  getExtensionName,
+  getExtensionVersion,
+  versionBe,
+} from './utils.ts';
 import { isVersionValid } from './version.ts';
 
 const _args = parseArgs(Deno.args, {
   string: ['engine', 'file', 'platform', 'output', 'help'],
-  boolean: ['prerelease'],
+  boolean: ['prerelease', 'openvsx'],
   collect: ['name'],
 });
 
@@ -34,6 +39,7 @@ const args = {
   output: _args.output || null,
   name: _args.name as string[],
   pre_release: _args.prerelease === true,
+  is_openvsx: _args.openvsx,
 };
 
 let platforms: string[] = [];
@@ -75,11 +81,16 @@ const x = Object.fromEntries(
           if (args.pre_release === false && item.r === true) {
             return false;
           }
-          return (
-            item.platform === undefined ||
-            (platforms.includes(item.platform) &&
-              isVersionValid(args.engine!, undefined, item.v))
-          );
+
+          if (item.p === undefined) {
+            return true;
+          }
+
+          if (!platforms.includes(item.p)) {
+            return false;
+          }
+
+          return isVersionValid(args.engine!, undefined, item.e);
         })
         .reduce((l, r) => {
           if (versionBe(l.v, r.v)) {
@@ -88,6 +99,14 @@ const x = Object.fromEntries(
 
           return r;
         });
+      const [publisher, name] = key.split('.');
+      maxValue.u = getAssertUrl(
+        args.is_openvsx,
+        publisher,
+        name,
+        maxValue.v,
+        maxValue.p,
+      );
       return [key, maxValue];
     }),
 );

@@ -485,11 +485,24 @@ function getExtensionVersion(name) {
   const pos = name.split('.');
   return pos.slice(2).join('.');
 }
+function getAssertUrl(isOpenVsx, publisher, name, version, platform) {
+  const platformSuffix =
+    platform === void 0 || platform.length === 0
+      ? ''
+      : `targetPlatform=${platform}`;
+  if (!isOpenVsx) {
+    return `https://${publisher}.gallery.vsassets.io/_apis/public/gallery/publisher/${publisher}/extension/${name}/${version}/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage?${platformSuffix}`;
+  }
+  const platformInfix =
+    platform === void 0 || platform.length === 0 ? '' : `/${platform}`;
+  const extName = `${publisher}.${name}`;
+  return `https://open-vsx.org/api/${publisher}/${name}${platformInfix}/${version}/file/${extName}-${version}${platformSuffix}.vsix`;
+}
 
 // main.ts
 var _args = parseArgs(Deno.args, {
   string: ['engine', 'file', 'platform', 'output', 'help'],
-  boolean: ['prerelease'],
+  boolean: ['prerelease', 'openvsx'],
   collect: ['name'],
 });
 if (
@@ -517,6 +530,7 @@ var args = {
   output: _args.output || null,
   name: _args.name,
   pre_release: _args.prerelease === true,
+  is_openvsx: _args.openvsx,
 };
 var platforms = [];
 if (args.platform === 'x86_64-linux' || args.platform === 'i686-linux') {
@@ -554,11 +568,13 @@ var x = Object.fromEntries(
           if (args.pre_release === false && item.r === true) {
             return false;
           }
-          return (
-            item.platform === void 0 ||
-            (platforms.includes(item.platform) &&
-              isVersionValid(args.engine, void 0, item.v))
-          );
+          if (item.p === void 0) {
+            return true;
+          }
+          if (!platforms.includes(item.p)) {
+            return false;
+          }
+          return isVersionValid(args.engine, void 0, item.e);
         })
         .reduce((l, r) => {
           if (versionBe(l.v, r.v)) {
@@ -566,6 +582,14 @@ var x = Object.fromEntries(
           }
           return r;
         });
+      const [publisher, name] = key.split('.');
+      maxValue.u = getAssertUrl(
+        args.is_openvsx,
+        publisher,
+        name,
+        maxValue.v,
+        maxValue.p,
+      );
       return [key, maxValue];
     }),
 );
