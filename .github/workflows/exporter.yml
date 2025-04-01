@@ -47,14 +47,14 @@ jobs:
       - name: Fetch marketplace info
         env:
           DATABASE_URL: ${{ github.workspace }}/db.sqlite3
-          RUST_LOG: INFO
+          RUST_LOG: OFF,exporter=DEBUG
         run: |
           exporter --fetch
 
       - name: Fetch hashs
         env:
           DATABASE_URL: ${{ github.workspace }}/db.sqlite3
-          RUST_LOG: DEBUG
+          RUST_LOG: OFF,exporter=DEBUG
         run: |
           mkdir -p data
           exporter --hash --batch-size=8 -o data/extensions.json --max-run-time=19800 # 5.5h

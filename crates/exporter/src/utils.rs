@@ -1,13 +1,5 @@
 pub fn init_logger() {
-    use tracing_subscriber::{fmt, prelude::*, util::SubscriberInitExt, EnvFilter};
-
-    let log_level = std::env::var("RUST_LOG")
-        .unwrap_or("INFO".into())
-        .to_lowercase();
-
-    let env_filter = EnvFilter::builder()
-        .parse(format!("RUST_LOG=OFF,exporter={}", log_level))
-        .unwrap();
+    use tracing_subscriber::{EnvFilter, fmt, prelude::*, util::SubscriberInitExt};
 
     tracing_subscriber::registry()
         .with(
@@ -16,6 +8,6 @@ pub fn init_logger() {
                 .with_line_number(true)
                 .with_writer(std::io::stderr),
         )
-        .with(env_filter)
+        .with(EnvFilter::from_default_env())
         .init();
 }
