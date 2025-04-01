@@ -8,11 +8,9 @@ use data::ExportedData;
 use diesel::prelude::*;
 use diesel::SqliteConnection;
 use itertools::Itertools;
-use lazy_regex::regex;
-use rayon::prelude::*;
 
 pub async fn export_toml(conn: &mut SqliteConnection, target: &str) -> anyhow::Result<()> {
-    let mut record: Vec<Marketplace> = marketplace
+    let record: Vec<Marketplace> = marketplace
         .filter(
             platform
                 .eq("linux-x64")
@@ -25,13 +23,6 @@ pub async fn export_toml(conn: &mut SqliteConnection, target: &str) -> anyhow::R
         .filter(hash.is_not_null())
         .select(Marketplace::as_select())
         .load(conn)?;
-
-    record.par_iter_mut().for_each(|item| {
-        item.name = format!("{}.{}", item.publisher, item.name).to_lowercase();
-        if let Some(url) = minilizer_url(&item.assert_url) {
-            item.assert_url = url;
-        }
-    });
 
     let mut data = BTreeMap::<String, Vec<ExportedData>>::new();
 
@@ -47,15 +38,4 @@ pub async fn export_toml(conn: &mut SqliteConnection, target: &str) -> anyhow::R
     tokio::fs::write(target, mini_json::to_string(&data)).await?;
 
     Ok(())
-}
-
-fn minilizer_url(url: &str) -> Option<String> {
-    let re = regex!(
-        r#"https://.*.gallerycdn.vsassets.io/extensions/.*/.*/.*/(\d+)/Microsoft.VisualStudio.Services.VSIXPackage"#
-    );
-    let captures = re.captures(url)?;
-    if captures.len() != 2 {
-        return None;
-    }
-    Some(captures[1].to_string())
 }
