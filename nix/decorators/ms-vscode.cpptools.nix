@@ -19,7 +19,7 @@
     # Clang-format from nix package.
     rm -rf ./LLVM
     mkdir "./LLVM/"
-    find "${clang-tools}" -mindepth 1 -maxdepth 1 | xargs ln -s -t "./LLVM"
+    ln -s ${clang-tools}/bin ./LLVM/bin
 
     # Patching binaries
     make_executable() {
@@ -30,6 +30,6 @@
       done
     }
 
-    make_executable bin/cpptools bin/cpptools-srv debugAdapters/bin/OpenDebugAD7 bin/libc.so bin/cpptools-wordexp
+    make_executable bin/cpptools bin/cpptools-srv debugAdapters/bin/OpenDebugAD7 bin/libc.so bin/cpptools-wordexp debugAdapters/lldb-mi/bin/lldb-mi debugAdapters/bin/createdump
   '';
 }
