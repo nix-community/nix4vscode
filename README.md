@@ -96,7 +96,7 @@ nix4vscode has **experimental** support for Nix overlays, here's how you can use
         };
 
         # Now you can access nix4vscode utilities from pkgs.nix4vscode
-        extensions = pkgs.nix4vscode.forVscode [ "biomejs.biome" "astro-build.astro-vscode" /* ... */ ];
+        extensions = pkgs.nix4vscode.forVscode [ "tamasfe.even-better-toml" "ms-vscode-remote.remote-containers" /* ... */ ];
     in
     {
         # ... your flake outputs
@@ -121,7 +121,10 @@ Now, if you use VSCode with Home Manager, and you added overlays, you can instal
         enable = true;
         enableUpdateCheck = false; # Disable VSCode self-update and let Home Manager to manage VSCode versions instead.
         enableExtensionUpdateCheck = false; # Disable extensions auto-update and let nix4vscode manage updates and extensions
-        extensions = pkgs.nix4vscode.forVscode [ "biomejs.biome" "astro-build.astro-vscode" /* ... */ ];
+        extensions = pkgs.nix4vscode.forVscode [
+            "tamasfe.even-better-toml"
+            "ms-vscode-remote.remote-containers.0.397.0" # You can also install specific version of extensions
+        ];
     };
 }
 ```
