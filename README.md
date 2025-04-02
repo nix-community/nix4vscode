@@ -29,6 +29,8 @@ nix4vscode has **experimental** support for Nix overlays, here's how you can use
         extensions = pkgs.nix4vscode.forVscode [
             "tamasfe.even-better-toml"
             "ms-vscode-remote.remote-containers"
+            # Using the specified version
+            "editorconfig.editorconfig.0.9.4"
             /* ... */
         ];
     in
