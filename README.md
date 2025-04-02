@@ -71,14 +71,18 @@ The Overlays has exported the following functions:
 
 | Usage                                                          | description   |
 | -------------------------------------------------------------- | ------------- |
-| forVscode ["zzzz.hocon-colorizer"]                             | TODO          |
-| forVscodeVersion version ["zzzz.hocon-colorizer"]              | TODO          |
-| forVscodePrerelease ["zzzz.hocon-colorizer"]                   | TODO          |
-| forVscodeVersionPrerelease version ["zzzz.hocon-colorizer"]    | TODO          |
-| forOpenVsx ["zzzz.hocon-colorizer"]                            | TODO          |
-| forOpenVsxVersion version ["zzzz.hocon-colorizer"]             | TODO          |
-| forOpenVsxPrerelease ["zzzz.hocon-colorizer"]                  | TODO          |
-| forOpenVsxVersionPrerelease version ["zzzz.hocon-colorizer"]   | TODO          |
+| `forVscode [ extension ]`                                        | TODO          |
+| `forVscodeVersion version [ extension ]`                         | TODO          |
+| `forVscodePrerelease [ extension ]`                              | TODO          |
+| `forVscodeVersionPrerelease version [ extension ]`               | TODO          |
+| `forOpenVsx [ extension ]`                                       | TODO          |
+| `forOpenVsxVersion version [ extension ]`                        | TODO          |
+| `forOpenVsxPrerelease [ extension ]`                             | TODO          |
+| `forOpenVsxVersionPrerelease version [ extension ]`              | TODO          |
+
+* `version`: string
+* `[ extension ]`:
+    * type extension = "ms-vscode.cpptools" | "ms-vscode.cpptools.1.8.2"
 
 ## Fetcher
 
