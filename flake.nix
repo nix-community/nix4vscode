@@ -41,12 +41,11 @@
         system: pkgs:
         let
           forVscodeVersionRaw =
-            engine: exts: pre_release:
+            extensionPath: engine: exts: pre_release:
             let
               filters = builtins.map (v: ''--name="${v}"'') exts;
               filter = builtins.concatStringsSep " " filters;
               prerelease = if pre_release then "--prerelease" else "";
-              extensionPath = ./data/extensions.json;
               mainTs = ./scripts/out.js;
               extensions = builtins.fromJSON (
                 builtins.readFile (
@@ -81,13 +80,20 @@
             in
             builtins.attrValues validateAttribute;
 
+          vscodePath = ./data/extensions.json;
+          openVsxPath = ./data/extensions_openvsx.json;
+
         in
         {
-          forVscode = exts: forVscodeVersionRaw pkgs.vscode.version exts false;
-          forVscodeVersion = version: exts: forVscodeVersionRaw version exts false;
+          forVscode = exts: forVscodeVersionRaw vscodePath pkgs.vscode.version exts false;
+          forVscodeVersion = version: exts: forVscodeVersionRaw vscodePath version exts false;
+          forVscodePrerelease = exts: forVscodeVersionRaw vscodePath pkgs.vscode.version exts true;
+          forVscodeVersionPrerelease = version: exts: forVscodeVersionRaw vscodePath version exts true;
 
-          forVscodePrerelease = exts: forVscodeVersionRaw pkgs.vscode.version exts true;
-          forVscodeVersionPrerelease = version: exts: forVscodeVersionRaw version exts true;
+          forOpenVsx = exts: forVscodeVersionRaw openVsxPath pkgs.vscode.version exts false;
+          forOpenVsxVersion = version: exts: forVscodeVersionRaw openVsxPath version exts false;
+          forOpenVsxPrerelease = exts: forVscodeVersionRaw openVsxPath pkgs.vscode.version exts true;
+          forOpenVsxVersionPrerelease = version: exts: forVscodeVersionRaw openVsxPath version exts true;
         }
       ) pkgsFor;
     in
@@ -128,12 +134,7 @@
         default = lib.composeManyExtensions [ self.overlays.${packageName} ];
         forVscode = (
           final: _: {
-            ${packageName} = {
-              forVscode = customeLib.${final.system}.forVscode;
-              forVscodeVersion = customeLib.${final.system}.forVscodeVersion;
-              forVscodePrerelease = customeLib.${final.system}.forVscodePrerelease;
-              forVscodeVersionPrerelease = customeLib.${final.system}.forVscodeVersionPrerelease;
-            };
+            ${packageName} = customeLib.${final.system};
           }
         );
         ${packageName} =
