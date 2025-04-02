@@ -127,12 +127,15 @@
       overlays = {
         default = lib.composeManyExtensions [ self.overlays.${packageName} ];
         forVscode = (
-          final: _: {
-            forVscode = customeLib.${final.system}.forVscode;
-            forVscodeVersion = customeLib.${final.system}.forVscodeVersion;
-            forVscodePrerelease = customeLib.${final.system}.forVscodePrerelease;
-            forVscodeVersionPrerelease = customeLib.${final.system}.forVscodeVersionPrerelease;
-          }
+          final: _:
+          let
+            lib = {
+              forVscode = customeLib.${final.system}.forVscode;
+              forVscodeVersion = customeLib.${final.system}.forVscodeVersion;
+              forVscodePrerelease = customeLib.${final.system}.forVscodePrerelease;
+              forVscodeVersionPrerelease = customeLib.${final.system}.forVscodeVersionPrerelease;
+            };
+          in lib // { ${packageName} = lib; }
         );
         ${packageName} =
           final: _:
