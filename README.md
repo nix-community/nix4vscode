@@ -20,11 +20,17 @@ nix4vscode has **experimental** support for Nix overlays, here's how you can use
         pkgs = import <nixpkgs> {
             config.allowUnfree = true;
             system = "aarch64-darwin"; # One of supported systems
-            overlays = [ nix4vscode.overlays.forVscode ];
+            overlays = [
+                nix4vscode.overlays.forVscode
+            ];
         };
 
         # Now you can access nix4vscode utilities from pkgs.nix4vscode
-        extensions = pkgs.nix4vscode.forVscode [ "tamasfe.even-better-toml" "ms-vscode-remote.remote-containers" /* ... */ ];
+        extensions = pkgs.nix4vscode.forVscode [
+            "tamasfe.even-better-toml"
+            "ms-vscode-remote.remote-containers"
+            /* ... */
+        ];
     in
     {
         # ... your flake outputs
