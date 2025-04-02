@@ -25,8 +25,12 @@ pub async fn fetch_marketplace(
     let mut extension_count = 0usize;
     let mut all_count = 0usize;
     while let Some(item) = iter.next().await {
-        let Ok(item) = item else {
-            continue;
+        let item = match item {
+            Ok(item) => item,
+            Err(err) => {
+                error!(?err);
+                continue;
+            }
         };
 
         if item.extensions.is_empty() {

@@ -26,7 +26,6 @@ pub struct IRawGalleryExtensionPublisher {
     pub publisher_id: String,
     pub publisher_name: String,
     pub domain: Option<String>,
-    pub is_domain_verified: bool,
 }
 
 #[api]
@@ -38,7 +37,6 @@ pub struct IRawGalleryExtension {
     pub publisher: IRawGalleryExtensionPublisher,
     pub versions: Vec<IRawGalleryExtensionVersion>,
     pub statistics: Vec<IRawGalleryExtensionStatistics>,
-    pub tags: Option<String>,
     pub release_date: String,
     pub published_date: String,
     pub last_updated: String,
