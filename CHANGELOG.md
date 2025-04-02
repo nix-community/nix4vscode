@@ -1,5 +1,38 @@
 # Changelog
 
+## [0.0.12](https://github.com/nix-community/nix4vscode/compare/nix4vscode-v0.0.11...nix4vscode-v0.0.12) (2025-04-02)
+
+
+### Features
+
+* auto export data ([042314a](https://github.com/nix-community/nix4vscode/commit/042314aaef377b6fcbaeeb00dcd9a858654bf94d))
+* **decorators:** fix cpptools ([3c2bbbb](https://github.com/nix-community/nix4vscode/commit/3c2bbbbf7c0d2f62cc1685b927ca91965377df45))
+* **devshell:** Add .envrc ([3ee1d97](https://github.com/nix-community/nix4vscode/commit/3ee1d9786573d4237cbc9db8f5416757685fcaed))
+* don't filter out other crates's log ([cf2db33](https://github.com/nix-community/nix4vscode/commit/cf2db335ac49da66dc8d2626fe54bb21d0133113))
+* **exporter:** export prerelease ([8a6963f](https://github.com/nix-community/nix4vscode/commit/8a6963fa8e7bfe4386247426bef16c4e5ca9bd58))
+* **exporter:** remove unused code ([3424856](https://github.com/nix-community/nix4vscode/commit/3424856cdf89e5bfcfc0b940e764e010717e13c7))
+* fix [#252](https://github.com/nix-community/nix4vscode/issues/252) ([93a48f6](https://github.com/nix-community/nix4vscode/commit/93a48f640809afca357d3f75b478e0539645d81f))
+* **flake:** support prerelease ([8a6963f](https://github.com/nix-community/nix4vscode/commit/8a6963fa8e7bfe4386247426bef16c4e5ca9bd58))
+* **flake:** using deno in flake.nix ([a361853](https://github.com/nix-community/nix4vscode/commit/a3618533373248ec28360c2dbd303be55618de2b))
+* **flake:** using faster jaq ([cbf2b47](https://github.com/nix-community/nix4vscode/commit/cbf2b474a8efb1c38c0416fbbbeacd3d595bf787))
+* **overlay:** validate extensions ([b7cdc65](https://github.com/nix-community/nix4vscode/commit/b7cdc65a60a8932c9e22bc74c569be12d80a64ee))
+* **scripts:** ignore case ([6ccc89e](https://github.com/nix-community/nix4vscode/commit/6ccc89e66812bd1034115745dae17bb426dfde8d))
+* **scripts:** support name with version ([f4976a7](https://github.com/nix-community/nix4vscode/commit/f4976a7ea02f1bc8b37ffb3483c7dfd1a4135f92))
+* **scripts:** support prerelease ([8a6963f](https://github.com/nix-community/nix4vscode/commit/8a6963fa8e7bfe4386247426bef16c4e5ca9bd58))
+* skip page size if it's u64::MAX ([1cd1b22](https://github.com/nix-community/nix4vscode/commit/1cd1b22bcf25f5aada92b36a348b90816e0294f9))
+* try add support for openvsx ([d44a9fe](https://github.com/nix-community/nix4vscode/commit/d44a9fe31f0bcaeda4d2b58b918fffd3e4c1f8c5))
+* update sql ([3fd8c80](https://github.com/nix-community/nix4vscode/commit/3fd8c804bf39b2e3cb573bc84f470de6970ace9c))
+* **url:** ignore assert_url ([e3c8464](https://github.com/nix-community/nix4vscode/commit/e3c8464271c6be495d2d8a12c54aa04c57a6a7cd))
+
+
+### Bug Fixes
+
+* **example:** fix overlays ([c84dc96](https://github.com/nix-community/nix4vscode/commit/c84dc96332873239153f28ff25c9251e2cd03bf9))
+* fix [#255](https://github.com/nix-community/nix4vscode/issues/255) ([d10c0c0](https://github.com/nix-community/nix4vscode/commit/d10c0c023da57b734a7cb2d059fd88781060daab))
+* fix extension ([3f80bd1](https://github.com/nix-community/nix4vscode/commit/3f80bd1766be072ab1a51fd8ab5e159ef5732d0d))
+* **overlay:** fix cpptools ([5218238](https://github.com/nix-community/nix4vscode/commit/5218238b9978369335b829cced2bf13c9f7fe31d))
+* **scripts:** fix scripts error ([88f5789](https://github.com/nix-community/nix4vscode/commit/88f57892bc00497f67045bd7a1b670e8aed0ec57))
+
 ## [0.0.11](https://github.com/nix-community/nix4vscode/compare/nix4vscode-v0.0.10...nix4vscode-v0.0.11) (2025-03-24)
 
 
