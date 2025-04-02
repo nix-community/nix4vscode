@@ -65,6 +65,21 @@ Now, if you use VSCode with Home Manager, and you added overlays, you can instal
 }
 ```
 
+### Supported function
+
+The Overlays has exported the following functions:
+
+| Usage                                                          | description   |
+| -------------------------------------------------------------- | ------------- |
+| forVscode ["zzzz.hocon-colorizer"]                             | TODO          |
+| forVscodeVersion version ["zzzz.hocon-colorizer"]              | TODO          |
+| forVscodePrerelease ["zzzz.hocon-colorizer"]                   | TODO          |
+| forVscodeVersionPrerelease version ["zzzz.hocon-colorizer"]    | TODO          |
+| forOpenVsx ["zzzz.hocon-colorizer"]                            | TODO          |
+| forOpenVsxVersion version ["zzzz.hocon-colorizer"]             | TODO          |
+| forOpenVsxPrerelease ["zzzz.hocon-colorizer"]                  | TODO          |
+| forOpenVsxVersionPrerelease version ["zzzz.hocon-colorizer"]   | TODO          |
+
 ## Fetcher
 
 A tool generate nix expression from `config.toml`. Assuming we have a `config.toml` file like this:
