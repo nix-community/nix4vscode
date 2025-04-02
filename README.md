@@ -1,78 +1,6 @@
 # Nix4Vscode
 
-> [!NOTE]
-> We support overlays! Just [try it](https://github.com/nix-community/nix4vscode/issues/247)!
-
-A tool generate nix expression from `config.toml`. Assuming we have a `config.toml` file like this:
-
-```toml
-vscode_version = "1.81.1"
-
-extensions = [
-    "eamodio.gitlens",
-    "vscodevim.vim",
-    { publisher_name = "ms-python", extension_name = "debugpy" },
-]
-```
-
-We can then run `cargo run -- config.toml`, and a nix expression will be print to `stdout` just like this:
-
-```nix
-{ pkgs, lib }:
-
-let
-  vscode-utils = pkgs.vscode-utils;
-in
-{
-  eamodio.gitlens = vscode-utils.extensionFromVscodeMarketplace {
-    name = "gitlens";
-    publisher = "eamodio";
-    version = "2023.9.905";
-    sha256 = "1mzyc3sinkg4zmbyh2a85iqdqa7wsnh99hqvk6f8m2jcfhpfrwyb";
-  };
-  vscodevim.vim = vscode-utils.extensionFromVscodeMarketplace {
-    name = "vim";
-    publisher = "vscodevim";
-    version = "1.26.0";
-    sha256 = "0hxb58ygjbqk6qmkp1r421zzib2r1vmz7agbi7bcmjxjpr3grw2w";
-  };
-}
-```
-
-Let's assume you store these contents in a file named `pkgs.nix`, you can use it by:
-
-```nix
-{ pkgs, lib }:
-let
-  plugins = (import ./vscode_plugins.nix) { inherit pkgs lib; };
-in
-with pkgs;
-{
-  enableExtensionUpdateCheck = false;
-  enableUpdateCheck = false;
-  extensions = with vscode-marketplace;[
-    plugins.vscodevim.vim
-  ]
-  ;
-}
-```
-
-## Installation
-
-The simplest way to run nix4vscode is inside a devshell. Clone the nix4vscode repository, change into the resulting directory and run:
-
-```shell
-$ git clone https://github.com/nix-community/nix4vscode.git
-$ cd nix4vscode
-$ nix develop
-$ cargo run -- config.toml
-```
-
-Replace `config.toml` with the name and path to your VSCode plugin configuration file.
-
-## Usage
-
-### Overlays
+## Overlays
 
 nix4vscode has **experimental** support for Nix overlays, here's how you can use it:
 
@@ -129,7 +57,77 @@ Now, if you use VSCode with Home Manager, and you added overlays, you can instal
 }
 ```
 
-## Creating the config.toml file
+## Fetcher
+
+A tool generate nix expression from `config.toml`. Assuming we have a `config.toml` file like this:
+
+```toml
+vscode_version = "1.81.1"
+
+extensions = [
+    "eamodio.gitlens",
+    "vscodevim.vim",
+    { publisher_name = "ms-python", extension_name = "debugpy" },
+]
+```
+
+We can then run `cargo run -- config.toml`, and a nix expression will be print to `stdout` just like this:
+
+```nix
+{ pkgs, lib }:
+
+let
+  vscode-utils = pkgs.vscode-utils;
+in
+{
+  eamodio.gitlens = vscode-utils.extensionFromVscodeMarketplace {
+    name = "gitlens";
+    publisher = "eamodio";
+    version = "2023.9.905";
+    sha256 = "1mzyc3sinkg4zmbyh2a85iqdqa7wsnh99hqvk6f8m2jcfhpfrwyb";
+  };
+  vscodevim.vim = vscode-utils.extensionFromVscodeMarketplace {
+    name = "vim";
+    publisher = "vscodevim";
+    version = "1.26.0";
+    sha256 = "0hxb58ygjbqk6qmkp1r421zzib2r1vmz7agbi7bcmjxjpr3grw2w";
+  };
+}
+```
+
+Let's assume you store these contents in a file named `pkgs.nix`, you can use it by:
+
+```nix
+{ pkgs, lib }:
+let
+  plugins = (import ./vscode_plugins.nix) { inherit pkgs lib; };
+in
+with pkgs;
+{
+  enableExtensionUpdateCheck = false;
+  enableUpdateCheck = false;
+  extensions = with vscode-marketplace;[
+    plugins.vscodevim.vim
+  ]
+  ;
+}
+```
+
+### Installation
+
+The simplest way to run nix4vscode is inside a devshell. Clone the nix4vscode repository, change into the resulting directory and run:
+
+```shell
+$ git clone https://github.com/nix-community/nix4vscode.git
+$ cd nix4vscode
+$ nix develop
+$ cargo run -- config.toml
+```
+
+Replace `config.toml` with the name and path to your VSCode plugin configuration file.
+
+
+### Creating the config.toml file
 
 If you don't already have one, you can create the `config.toml` file by running the following script:
 
