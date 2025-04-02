@@ -10,8 +10,21 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: ${{ github.workspace }}/db.sqlite3
+      RUST_LOG: OFF,exporter=DEBUG
     steps:
       - uses: actions/checkout@v4
+      - uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: sqlite3
+          version: 1.0
+
+      - name: checkout db.sqlite3.tar.xz
+        run: |
+          git fetch origin db
+          git restore --source origin/db db.sqlite3.tar.xz
+          tar -xf db.sqlite3.tar.xz
       - name: Install Nix
         uses: cachix/install-nix-action@v31
         with:
@@ -21,17 +34,23 @@ jobs:
       - name: Install taplo
         run: |
           curl -fsSL https://github.com/tamasfe/taplo/releases/latest/download/taplo-full-linux-x86_64.gz \ | gzip -d - | install -m 755 /dev/stdin /usr/local/bin/taplo
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
 
-      - name: Check style
+      - name: Check Rust
         env:
            RUST_LOG: DEBUG
         run: |
           pip install pre-commit
-          cargo clippy -- -Dwarnings
-          cargo test
+          cargo clippy --all -- -Dwarnings
+          cargo test --all
 
-      - name: Check nix
+      - name: regenerate data.json
         run: |
-          cargo run -- config.toml -o example/vscode_plugins.nix
-          cat example/vscode_plugins.nix
-          cd example && nix develop --build
+          cargo r -p exporter -- -o data/extensions.json
+
+      - name: Check Ts
+        working-directory: ./scripts
+        run: |
+          deno test
