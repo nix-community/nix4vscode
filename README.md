@@ -70,6 +70,62 @@ $ cargo run -- config.toml
 
 Replace `config.toml` with the name and path to your VSCode plugin configuration file.
 
+## Usage
+
+### Overlays
+
+nix4vscode has **experimental** support for Nix overlays, here's how you can use it:
+
+```nix
+{
+    inputs = {
+        nixpkgs.url = "github:NixOS:nixpkgs/release-24.11";
+
+        nix4vscode.url = {
+            url = "github:nix-community/nix4vscode";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
+    };
+
+    outputs = { nixpkgs, nix4vscode ... }:
+    let
+        pkgs = import <nixpkgs> {
+            config.allowUnfree = true;
+            system = "aarch64-darwin"; # One of supported systems
+            overlays = [ nix4vscode.overlays.forVscode ];
+        };
+
+        # Now you can access nix4vscode utilities from pkgs.nix4vscode
+        extensions = pkgs.nix4vscode.forVscode [ "biomejs.biome" "astro-build.astro-vscode" /* ... */ ];
+    in
+    {
+        # ... your flake outputs
+    };
+}
+```
+
+Alternatively, if you use nix-darwin or NixOS you can add overlays to `nixpkgs` attribute in your one of modules:
+
+```nix
+# `self` or `input` attrubute is the attribute you pass via `specialArgs` when you call `darwinSytem` or `nixosSytem`
+{ self, ... }: {
+    nixpkgs.overlays = [ self.inputs.nix4vscode.forVscode ];
+}
+```
+
+Now, if you use VSCode with Home Manager, and you added overlays, you can install your extensions like this:
+
+```nix
+{ pkgs, ... }: {
+    programs.vscode = {
+        enable = true;
+        enableUpdateCheck = false; # Disable VSCode self-update and let Home Manager to manage VSCode versions instead.
+        enableExtensionUpdateCheck = false; # Disable extensions auto-update and let nix-vscode-extensions and nix4vscode manage updates and extensions
+        extensions = pkgs.nix4vscode.forVscode [ "biomejs.biome" "astro-build.astro-vscode" /* ... */ ];
+    };
+}
+```
+
 ## Creating the config.toml file
 
 If you don't already have one, you can create the `config.toml` file by running the following script:
