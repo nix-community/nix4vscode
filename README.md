@@ -120,7 +120,7 @@ Now, if you use VSCode with Home Manager, and you added overlays, you can instal
     programs.vscode = {
         enable = true;
         enableUpdateCheck = false; # Disable VSCode self-update and let Home Manager to manage VSCode versions instead.
-        enableExtensionUpdateCheck = false; # Disable extensions auto-update and let nix-vscode-extensions and nix4vscode manage updates and extensions
+        enableExtensionUpdateCheck = false; # Disable extensions auto-update and let nix4vscode manage updates and extensions
         extensions = pkgs.nix4vscode.forVscode [ "biomejs.biome" "astro-build.astro-vscode" /* ... */ ];
     };
 }
