@@ -548,15 +548,17 @@ if (args.platform === 'x86_64-linux' || args.platform === 'i686-linux') {
 }
 var content = await Deno.readTextFile(args.file);
 var data = JSON.parse(content);
-var plainNames = args.name.map(getExtensionName);
+var plainNames = args.name
+  .map(getExtensionName)
+  .map(value => value.toLowerCase());
 var nameVersion = {};
 args.name.forEach(name => {
-  nameVersion[getExtensionName(name)] = getExtensionVersion(name);
+  nameVersion[getExtensionName(name).toLowerCase()] = getExtensionVersion(name);
 });
 var x = Object.fromEntries(
   Object.entries(data)
     .filter(([name]) => {
-      return plainNames.includes(name);
+      return plainNames.includes(name.toLowerCase());
     })
     .map(([key, value]) => {
       const maxValue = value

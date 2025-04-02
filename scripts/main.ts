@@ -61,16 +61,18 @@ if (args.platform === 'x86_64-linux' || args.platform === 'i686-linux') {
 const content = await Deno.readTextFile(args.file);
 const data = JSON.parse(content) as MarketplaceJson;
 
-const plainNames = args.name.map(getExtensionName);
+const plainNames = args.name
+  .map(getExtensionName)
+  .map(value => value.toLowerCase());
 const nameVersion: NameVersion = {};
 args.name.forEach(name => {
-  nameVersion[getExtensionName(name)] = getExtensionVersion(name);
+  nameVersion[getExtensionName(name).toLowerCase()] = getExtensionVersion(name);
 });
 
 const x = Object.fromEntries(
   Object.entries(data)
     .filter(([name]) => {
-      return plainNames.includes(name);
+      return plainNames.includes(name.toLowerCase());
     })
     .map(([key, value]) => {
       const maxValue = value
