@@ -1,0 +1,99 @@
+name: exporter_openvsx
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: 0 0 * * *
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: sqlite3
+          version: 1.0
+
+      - name: checkout db.sqlite3.tar.xz
+        run: |
+          git fetch origin db_openvsx
+          git restore --source origin/db_openvsx db.sqlite3.tar.xz
+          tar -xf db.sqlite3.tar.xz
+
+      - name: setup git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@v31
+        with:
+          extra_nix_config: |
+            access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - name: Install exporter from master
+        uses: baptiste0928/cargo-install@v3
+        with:
+          crate: exporter
+          git: https://github.com/nix-community/nix4vscode
+          branch: master
+
+      - name: Fetch marketplace info
+        env:
+          DATABASE_URL: ${{ github.workspace }}/db.sqlite3
+          RUST_LOG: OFF,exporter=DEBUG
+        run: |
+          exporter --fetch
+
+      - name: Fetch hashs
+        env:
+          DATABASE_URL: ${{ github.workspace }}/db.sqlite3
+          RUST_LOG: OFF,exporter=DEBUG
+        run: |
+          mkdir -p data
+          exporter --hash --batch-size=8 -o data/extensions_openvsx.json --max-run-time=19800 # 5.5h
+          sqlite3 db.sqlite3 'VACUUM;'
+          tar -cjf db.sqlite3.tar.xz db.sqlite3
+
+      - uses: actions/upload-artifact@v4
+        with:
+          path: data/extensions_openvsx.json
+          name: extensions_openvsx.json
+
+      - uses: actions/upload-artifact@v4
+        with:
+          path: db.sqlite3
+          name: db.sqlite3
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet data/extensions_openvsx.json; then
+            echo "No changes detected in extensions_openvsx.json"
+            echo "changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changes detected in extensions_openvsx.json"
+            echo "changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.changes.outputs.changes == 'true'
+        run: |
+          git add data/extensions_openvsx.json
+          git commit -m "chore: update extensions_openvsx.json"
+          git pull origin master --rebase
+          git push
+
+      - name: Store sqlite3
+        run: |
+          git checkout --orphan db_openvsx
+          git reset
+          git add db.sqlite3.tar.xz
+          git commit -m "update db.sqlite3"
+          git push origin db_openvsx -f
