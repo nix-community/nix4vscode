@@ -10,7 +10,7 @@ use diesel::SqliteConnection;
 use itertools::Itertools;
 
 pub async fn export_toml(conn: &mut SqliteConnection, target: &str) -> anyhow::Result<()> {
-    let record: Vec<Marketplace> = marketplace
+    let mut record: Vec<Marketplace> = marketplace
         .filter(
             platform
                 .eq("linux-x64")
@@ -23,6 +23,10 @@ pub async fn export_toml(conn: &mut SqliteConnection, target: &str) -> anyhow::R
         .filter(hash.is_not_null())
         .select(Marketplace::as_select())
         .load(conn)?;
+
+    record
+        .iter_mut()
+        .for_each(|item| item.name = format!("{}.{}", item.publisher, item.name).to_lowercase());
 
     let mut data = BTreeMap::<String, Vec<ExportedData>>::new();
 
