@@ -1,4 +1,5 @@
-import { normalizeVersion, parseVersion } from './version.ts';
+import type { MarketplaceJson, NameVersion } from './types.ts';
+import { isVersionValid, normalizeVersion, parseVersion } from './version.ts';
 
 export function versionBe(l: string, r: string) {
   const lv = normalizeVersion(parseVersion(l));
@@ -58,4 +59,85 @@ export function getAssertUrl(
   const extName = `${publisher}.${name}`;
 
   return `https://open-vsx.org/api/${publisher}/${name}${platformInfix}/${version}/file/${extName}-${version}${platformSuffix}.vsix`;
+}
+
+export function versionForCode(
+  data: MarketplaceJson,
+  name: string[],
+  pre_release: boolean,
+  platform: string,
+  is_openvsx: boolean,
+  engine: string,
+) {
+  const plainNames = name
+    .map(getExtensionName)
+    .map(value => value.toLowerCase());
+
+  let platforms: string[] = [];
+  if (platform === 'x86_64-linux' || platform === 'i686-linux') {
+    platforms = ['linux-x64'];
+  } else if (platform === 'aarch64-linux') {
+    platforms = ['linux-arm64'];
+  } else if (platform === 'armv7l-linux') {
+    platforms = ['linux-armhf'];
+  } else if (platform === 'x86_64-darwin') {
+    platforms = ['darwin-x64'];
+  } else if (platform === 'aarch64-darwin') {
+    platforms = ['darwin-arm64'];
+  } else {
+    platforms = [];
+  }
+
+  const nameVersion: NameVersion = {};
+  name.forEach(name => {
+    nameVersion[getExtensionName(name).toLowerCase()] =
+      getExtensionVersion(name);
+  });
+
+  const x = Object.fromEntries(
+    Object.entries(data)
+      .filter(([name]) => {
+        return plainNames.includes(name.toLowerCase());
+      })
+      .map(([key, value]) => {
+        const maxValue = value
+          .filter(item => {
+            const version = nameVersion[key];
+            if (version !== '' && item.v !== version) {
+              return false;
+            }
+            if (pre_release === false && item.r === true) {
+              return false;
+            }
+
+            if (item.p === undefined) {
+              return true;
+            }
+
+            if (!platforms.includes(item.p)) {
+              return false;
+            }
+
+            return isVersionValid(engine, undefined, item.e);
+          })
+          .reduce((l, r) => {
+            if (versionBe(l.v, r.v)) {
+              return l;
+            }
+
+            return r;
+          });
+        const [publisher, name] = key.split('.');
+        maxValue.u = getAssertUrl(
+          is_openvsx,
+          publisher,
+          name,
+          maxValue.v,
+          maxValue.p,
+        );
+        return [key, maxValue];
+      }),
+  );
+
+  return x;
 }

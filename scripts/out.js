@@ -498,6 +498,71 @@ function getAssertUrl(isOpenVsx, publisher, name, version, platform) {
   const extName = `${publisher}.${name}`;
   return `https://open-vsx.org/api/${publisher}/${name}${platformInfix}/${version}/file/${extName}-${version}${platformSuffix}.vsix`;
 }
+function versionForCode(data2, name, preRelease, platform, isOpenvsx, engine) {
+  const plainNames = name
+    .map(getExtensionName)
+    .map(value => value.toLowerCase());
+  let platforms = [];
+  if (platform === 'x86_64-linux' || platform === 'i686-linux') {
+    platforms = ['linux-x64'];
+  } else if (platform === 'aarch64-linux') {
+    platforms = ['linux-arm64'];
+  } else if (platform === 'armv7l-linux') {
+    platforms = ['linux-armhf'];
+  } else if (platform === 'x86_64-darwin') {
+    platforms = ['darwin-x64'];
+  } else if (platform === 'aarch64-darwin') {
+    platforms = ['darwin-arm64'];
+  } else {
+    platforms = [];
+  }
+  const nameVersion = {};
+  name.forEach(name2 => {
+    nameVersion[getExtensionName(name2).toLowerCase()] =
+      getExtensionVersion(name2);
+  });
+  const x2 = Object.fromEntries(
+    Object.entries(data2)
+      .filter(([name2]) => {
+        return plainNames.includes(name2.toLowerCase());
+      })
+      .map(([key, value]) => {
+        const maxValue = value
+          .filter(item => {
+            const version = nameVersion[key];
+            if (version !== '' && item.v !== version) {
+              return false;
+            }
+            if (preRelease === false && item.r === true) {
+              return false;
+            }
+            if (item.p === void 0) {
+              return true;
+            }
+            if (!platforms.includes(item.p)) {
+              return false;
+            }
+            return isVersionValid(engine, void 0, item.e);
+          })
+          .reduce((l, r) => {
+            if (versionBe(l.v, r.v)) {
+              return l;
+            }
+            return r;
+          });
+        const [publisher, name2] = key.split('.');
+        maxValue.u = getAssertUrl(
+          isOpenvsx,
+          publisher,
+          name2,
+          maxValue.v,
+          maxValue.p,
+        );
+        return [key, maxValue];
+      }),
+  );
+  return x2;
+}
 
 // main.ts
 var _args = parseArgs(Deno.args, {
@@ -532,68 +597,15 @@ var args = {
   pre_release: _args.prerelease === true,
   is_openvsx: _args.openvsx,
 };
-var platforms = [];
-if (args.platform === 'x86_64-linux' || args.platform === 'i686-linux') {
-  platforms = ['linux-x64'];
-} else if (args.platform === 'aarch64-linux') {
-  platforms = ['linux-arm64'];
-} else if (args.platform === 'armv7l-linux') {
-  platforms = ['linux-armhf'];
-} else if (args.platform === 'x86_64-darwin') {
-  platforms = ['darwin-x64'];
-} else if (args.platform === 'aarch64-darwin') {
-  platforms = ['darwin-arm64'];
-} else {
-  platforms = [];
-}
 var content = await Deno.readTextFile(args.file);
 var data = JSON.parse(content);
-var plainNames = args.name
-  .map(getExtensionName)
-  .map(value => value.toLowerCase());
-var nameVersion = {};
-args.name.forEach(name => {
-  nameVersion[getExtensionName(name).toLowerCase()] = getExtensionVersion(name);
-});
-var x = Object.fromEntries(
-  Object.entries(data)
-    .filter(([name]) => {
-      return plainNames.includes(name.toLowerCase());
-    })
-    .map(([key, value]) => {
-      const maxValue = value
-        .filter(item => {
-          const version = nameVersion[key];
-          if (version !== '' && item.v !== version) {
-            return false;
-          }
-          if (args.pre_release === false && item.r === true) {
-            return false;
-          }
-          if (item.p === void 0) {
-            return true;
-          }
-          if (!platforms.includes(item.p)) {
-            return false;
-          }
-          return isVersionValid(args.engine, void 0, item.e);
-        })
-        .reduce((l, r) => {
-          if (versionBe(l.v, r.v)) {
-            return l;
-          }
-          return r;
-        });
-      const [publisher, name] = key.split('.');
-      maxValue.u = getAssertUrl(
-        args.is_openvsx,
-        publisher,
-        name,
-        maxValue.v,
-        maxValue.p,
-      );
-      return [key, maxValue];
-    }),
+var x = versionForCode(
+  data,
+  args.name,
+  args.pre_release,
+  args.platform,
+  args.is_openvsx,
+  args.engine,
 );
 var yata = JSON.stringify(x);
 if (args.output) {

@@ -53,4 +53,4 @@ jobs:
       - name: Check Ts
         working-directory: ./scripts
         run: |
-          deno test
+          deno test --allow-all

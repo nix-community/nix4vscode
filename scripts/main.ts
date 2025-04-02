@@ -1,12 +1,5 @@
-import type { MarketplaceJson, NameVersion } from './main.d.ts';
 import { parseArgs } from './parse_args.ts';
-import {
-  getAssertUrl,
-  getExtensionName,
-  getExtensionVersion,
-  versionBe,
-} from './utils.ts';
-import { isVersionValid } from './version.ts';
+import { versionForCode } from './utils.ts';
 
 const _args = parseArgs(Deno.args, {
   string: ['engine', 'file', 'platform', 'output', 'help'],
@@ -43,75 +36,16 @@ const args = {
   is_openvsx: _args.openvsx,
 };
 
-let platforms: string[] = [];
-if (args.platform === 'x86_64-linux' || args.platform === 'i686-linux') {
-  platforms = ['linux-x64'];
-} else if (args.platform === 'aarch64-linux') {
-  platforms = ['linux-arm64'];
-} else if (args.platform === 'armv7l-linux') {
-  platforms = ['linux-armhf'];
-} else if (args.platform === 'x86_64-darwin') {
-  platforms = ['darwin-x64'];
-} else if (args.platform === 'aarch64-darwin') {
-  platforms = ['darwin-arm64'];
-} else {
-  platforms = [];
-}
-
 const content = await Deno.readTextFile(args.file);
 const data = JSON.parse(content) as MarketplaceJson;
 
-const plainNames = args.name
-  .map(getExtensionName)
-  .map(value => value.toLowerCase());
-const nameVersion: NameVersion = {};
-args.name.forEach(name => {
-  nameVersion[getExtensionName(name).toLowerCase()] = getExtensionVersion(name);
-});
-
-const x = Object.fromEntries(
-  Object.entries(data)
-    .filter(([name]) => {
-      return plainNames.includes(name.toLowerCase());
-    })
-    .map(([key, value]) => {
-      const maxValue = value
-        .filter(item => {
-          const version = nameVersion[key];
-          if (version !== '' && item.v !== version) {
-            return false;
-          }
-          if (args.pre_release === false && item.r === true) {
-            return false;
-          }
-
-          if (item.p === undefined) {
-            return true;
-          }
-
-          if (!platforms.includes(item.p)) {
-            return false;
-          }
-
-          return isVersionValid(args.engine!, undefined, item.e);
-        })
-        .reduce((l, r) => {
-          if (versionBe(l.v, r.v)) {
-            return l;
-          }
-
-          return r;
-        });
-      const [publisher, name] = key.split('.');
-      maxValue.u = getAssertUrl(
-        args.is_openvsx,
-        publisher,
-        name,
-        maxValue.v,
-        maxValue.p,
-      );
-      return [key, maxValue];
-    }),
+const x = versionForCode(
+  data,
+  args.name,
+  args.pre_release,
+  args.platform,
+  args.is_openvsx,
+  args.engine,
 );
 
 const yata = JSON.stringify(x);

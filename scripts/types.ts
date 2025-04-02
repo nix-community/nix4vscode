@@ -5,10 +5,10 @@ interface Marketplace extends ExportedData {
   u?: string;
 }
 
-interface MarketplaceJson {
+export interface MarketplaceJson {
   [key: string]: Marketplace[];
 }
 
-interface NameVersion {
+export interface NameVersion {
   [key: string]: string;
 }

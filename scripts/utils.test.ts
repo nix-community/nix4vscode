@@ -1,5 +1,10 @@
-import { assertEquals } from 'jsr:@std/assert';
-import { getExtensionName, getExtensionVersion } from './utils.ts';
+import { assertEquals, assertNotEquals } from 'jsr:@std/assert';
+import type { MarketplaceJson } from './types.ts';
+import {
+  getExtensionName,
+  getExtensionVersion,
+  versionForCode,
+} from './utils.ts';
 
 Deno.test('test name', () => {
   const testcase = [
@@ -21,4 +26,18 @@ Deno.test('test_version', () => {
   for (const [i, o] of testcase) {
     assertEquals(o, getExtensionVersion(i));
   }
+});
+
+Deno.test('test_version', async () => {
+  const content = await Deno.readTextFile('../data/extensions.json');
+  const data = JSON.parse(content) as MarketplaceJson;
+  const x = versionForCode(
+    data,
+    ['continue.Continue'],
+    false,
+    'aarch64-darwin',
+    false,
+    '1.89.0',
+  );
+  assertNotEquals(Object.entries(x).length, 0);
 });
