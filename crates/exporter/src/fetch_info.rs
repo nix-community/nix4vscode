@@ -50,15 +50,8 @@ pub async fn fetch_marketplace(
                     let visix = v.get_file(code_api::code::AssetType::Vsix)?;
                     let platform = v.target_platform.clone().unwrap_or("universal".to_string());
                     Some(Marketplace {
-                        name: item
-                            .extension_id
-                            .clone()
-                            .unwrap_or_else(|| item.extension_name.clone()),
-                        publisher: item
-                            .publisher
-                            .publisher_id
-                            .clone()
-                            .unwrap_or_else(|| item.publisher.publisher_name.clone()),
+                        name: item.extension_name.clone(),
+                        publisher: item.publisher.publisher_name.clone(),
                         version: v.version.clone(),
                         engine: engne,
                         platform,
