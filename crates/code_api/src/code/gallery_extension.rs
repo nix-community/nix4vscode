@@ -31,9 +31,9 @@ pub struct IRawGalleryExtensionPublisher {
 
 #[api]
 pub struct IRawGalleryExtension {
-    pub extension_id: String,
+    pub extension_id: Option<String>,
     pub extension_name: String,
-    pub display_name: String,
+    pub display_name: Option<String>,
     pub short_description: Option<String>,
     pub publisher: IRawGalleryExtensionPublisher,
     pub versions: Vec<IRawGalleryExtensionVersion>,
