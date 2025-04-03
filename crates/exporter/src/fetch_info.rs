@@ -51,7 +51,11 @@ pub async fn fetch_marketplace(
                     let platform = v.target_platform.clone().unwrap_or("universal".to_string());
                     Some(Marketplace {
                         name: item.extension_name.clone(),
-                        publisher: item.publisher.publisher_name.clone(),
+                        publisher: item
+                            .publisher
+                            .publisher_id
+                            .clone()
+                            .unwrap_or_else(|| item.publisher.publisher_name.clone()),
                         version: v.version.clone(),
                         engine: engne,
                         platform,
