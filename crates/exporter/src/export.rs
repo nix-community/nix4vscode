@@ -21,6 +21,7 @@ pub async fn export_toml(conn: &mut SqliteConnection, target: &str) -> anyhow::R
                 .or(platform.eq("universal")),
         )
         .filter(hash.is_not_null())
+        .filter(hash.is_not(""))
         .select(Marketplace::as_select())
         .load(conn)?;
 

@@ -2,6 +2,7 @@ use std::collections::HashSet;
 use std::sync::Arc;
 
 use crate::schema::marketplace::dsl::*;
+use anyhow::bail;
 use diesel::prelude::*;
 use diesel::SqliteConnection;
 use futures::stream;
@@ -12,7 +13,7 @@ use tracing::*;
 
 pub async fn fetch_hash(conn: &mut SqliteConnection, batch_size: usize) -> anyhow::Result<()> {
     let urls: HashSet<String> = marketplace
-        .filter(hash.is_null())
+        .filter(hash.is_null().or(hash.eq("")))
         .select(assert_url)
         .load(conn)?
         .into_iter()
@@ -62,7 +63,14 @@ pub async fn compute_hash(url: &str) -> anyhow::Result<String> {
         .await?
         .stdout;
 
-    Ok(String::from_utf8(sha256)?.trim().to_owned())
+    let h = String::from_utf8(sha256)?;
+    let h = h.trim();
+
+    if h.is_empty() {
+        bail!("hash is invalid");
+    }
+
+    Ok(h.to_string())
 }
 
 pub async fn nix_gc() -> anyhow::Result<()> {
