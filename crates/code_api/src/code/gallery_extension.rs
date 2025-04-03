@@ -23,7 +23,8 @@ pub struct IRawGalleryExtensionStatistics {
 #[api]
 pub struct IRawGalleryExtensionPublisher {
     pub display_name: String,
-    pub publisher_id: String,
+    /// In openvsx, this maybe empty.
+    pub publisher_id: Option<String>,
     pub publisher_name: String,
     pub domain: Option<String>,
 }
