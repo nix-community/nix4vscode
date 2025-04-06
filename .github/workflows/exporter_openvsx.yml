@@ -57,7 +57,7 @@ jobs:
           RUST_LOG: OFF,exporter=DEBUG
         run: |
           mkdir -p data
-          exporter --hash --batch-size=8 -o data/extensions_openvsx.json --max-run-time=19800 # 5.5h
+          exporter --hash --openvsx --batch-size=8 -o data/extensions_openvsx.json --max-run-time=19800 # 5.5h
           sqlite3 db.sqlite3 'VACUUM;'
           tar -cjf db.sqlite3.tar.xz db.sqlite3
 
