@@ -55,7 +55,10 @@ pub async fn fetch_hash(
                 let conn: &mut SqliteConnection = &mut conn;
                 let now = tokio::time::Instant::now();
                 if let Err(err) = diesel::update(marketplace)
-                    .filter(assert_url.eq(&url))
+                    .filter(publisher.eq(item.publisher))
+                    .filter(name.eq(item.name))
+                    .filter(version.eq(item.version))
+                    .filter(platform.eq(item.platform))
                     .set(hash.eq(file_hash))
                     .execute(conn)
                 {
