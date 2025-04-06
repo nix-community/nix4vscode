@@ -70,7 +70,7 @@ async fn main() {
     if args.hash {
         if let Err(err) = timeout(
             Duration::from_secs(args.max_run_time),
-            fetch_hash::fetch_hash(&mut conn, args.batch_size),
+            fetch_hash::fetch_hash(&mut conn, args.batch_size, endpoint),
         )
         .await
         {

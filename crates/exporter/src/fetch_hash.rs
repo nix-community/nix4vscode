@@ -1,8 +1,10 @@
-use std::collections::HashSet;
 use std::sync::Arc;
 
+use crate::models::Marketplace;
 use crate::schema::marketplace::dsl::*;
+use crate::utils::get_assert_url;
 use anyhow::bail;
+use code_api::code::ApiEndpoint;
 use diesel::prelude::*;
 use diesel::SqliteConnection;
 use futures::stream;
@@ -11,25 +13,39 @@ use tokio::sync::Mutex;
 use tracing::info;
 use tracing::*;
 
-pub async fn fetch_hash(conn: &mut SqliteConnection, batch_size: usize) -> anyhow::Result<()> {
-    let urls: HashSet<String> = marketplace
+pub async fn fetch_hash(
+    conn: &mut SqliteConnection,
+    batch_size: usize,
+    endpoint: ApiEndpoint,
+) -> anyhow::Result<()> {
+    let is_open_vsx = matches!(endpoint, ApiEndpoint::OpenVsx);
+    let urls: Vec<Marketplace> = marketplace
         .filter(hash.is_null().or(hash.eq("")))
-        .select(assert_url)
-        .load(conn)?
-        .into_iter()
-        .collect();
+        .select(Marketplace::as_select())
+        .load(conn)?;
     info!("count: {}", urls.len());
 
     let conn = Arc::new(Mutex::new(conn));
 
     let _: Vec<_> = stream::iter(urls)
         .enumerate()
-        .map(|(idx, url)| {
+        .map(|(idx, item)| {
             let conn = conn.clone();
             async move {
                 let now = tokio::time::Instant::now();
                 let _ = nix_gc().await;
-                let Ok(file_hash) = compute_hash(&url).await else {
+                let url = get_assert_url(
+                    is_open_vsx,
+                    &item.publisher,
+                    &item.name,
+                    &item.version,
+                    if item.platform == "universal" {
+                        None
+                    } else {
+                        Some(&item.platform)
+                    },
+                );
+                let Ok(file_hash) = compute_hash(&url).await.inspect_err(|err| error!(?err)) else {
                     return;
                 };
                 let escaped = now.elapsed().as_secs();
@@ -67,7 +83,7 @@ pub async fn compute_hash(url: &str) -> anyhow::Result<String> {
     let h = h.trim();
 
     if h.is_empty() {
-        bail!("hash is invalid");
+        bail!("hash is invalid of {url}");
     }
 
     Ok(h.to_string())
@@ -78,6 +94,6 @@ pub async fn nix_gc() -> anyhow::Result<()> {
         .arg("store")
         .arg("gc")
         .output()
-        .await;
+        .await?;
     Ok(())
 }
