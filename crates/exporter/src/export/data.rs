@@ -11,8 +11,8 @@ pub(crate) struct ExportedData {
     /// engine
     pub e: String,
     /// platform
-    #[serde(skip_serializing_if = "is_universal")]
-    pub p: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub p: Option<String>,
     /// hash
     pub h: String,
     /// is_prerelease
@@ -39,10 +39,6 @@ impl From<Marketplace> for ExportedData {
             r: is_prerelease,
         }
     }
-}
-
-fn is_universal(name: &str) -> bool {
-    name == "universal"
 }
 
 fn is_false(v: &bool) -> bool {

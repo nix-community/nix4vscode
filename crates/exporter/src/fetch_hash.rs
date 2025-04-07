@@ -39,11 +39,7 @@ pub async fn fetch_hash(
                     &item.publisher,
                     &item.name,
                     &item.version,
-                    if item.platform == "universal" {
-                        None
-                    } else {
-                        Some(&item.platform)
-                    },
+                    item.platform.as_deref(),
                 );
                 let Ok(file_hash) = compute_hash(&url).await.inspect_err(|err| error!(?err)) else {
                     return;
