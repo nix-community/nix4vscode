@@ -19,7 +19,7 @@ pub struct Marketplace {
     pub publisher: String,
     pub version: String,
     pub engine: String,
-    pub platform: Option<String>,
+    pub platform: String,
     pub is_prerelease: bool,
     pub hash: Option<String>,
 }

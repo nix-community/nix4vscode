@@ -5,10 +5,10 @@ use crate::schema::marketplace::dsl::*;
 use crate::utils::get_assert_url;
 use anyhow::bail;
 use code_api::code::ApiEndpoint;
-use diesel::prelude::*;
 use diesel::SqliteConnection;
-use futures::stream;
+use diesel::prelude::*;
 use futures::StreamExt;
+use futures::stream;
 use tokio::sync::Mutex;
 use tracing::info;
 use tracing::*;
@@ -39,7 +39,11 @@ pub async fn fetch_hash(
                     &item.publisher,
                     &item.name,
                     &item.version,
-                    item.platform.as_deref(),
+                    if item.platform == "universal" {
+                        None
+                    } else {
+                        Some(&item.platform)
+                    },
                 );
                 let Ok(file_hash) = compute_hash(&url).await.inspect_err(|err| error!(?err)) else {
                     return;

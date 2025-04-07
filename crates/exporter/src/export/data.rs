@@ -34,7 +34,11 @@ impl From<Marketplace> for ExportedData {
         Self {
             v: version,
             e: engine,
-            p: platform,
+            p: if platform == "universal" {
+                None
+            } else {
+                Some(platform)
+            },
             h: hash.unwrap(),
             r: is_prerelease,
         }

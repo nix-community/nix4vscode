@@ -6,8 +6,8 @@ diesel::table! {
         publisher -> Text,
         version -> Text,
         engine -> Text,
-        platform -> Nullable<Text>,
-        is_prerelease -> Bool,
+        platform -> Text,
         hash -> Nullable<Text>,
+        is_prerelease -> Bool,
     }
 }

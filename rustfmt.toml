@@ -1,4 +1,4 @@
-edition = "2021"
+edition = "2024"
 hard_tabs = false
 force_explicit_abi = true
 max_width = 100
@@ -11,5 +11,3 @@ tab_spaces = 4
 use_field_init_shorthand = true
 use_small_heuristics = "Default"
 use_try_shorthand = false
-format_code_in_doc_comments = true
-imports_granularity = "Crate"
