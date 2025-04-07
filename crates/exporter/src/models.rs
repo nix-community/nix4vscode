@@ -20,7 +20,6 @@ pub struct Marketplace {
     pub version: String,
     pub engine: String,
     pub platform: String,
-    pub assert_url: String,
     pub is_prerelease: bool,
     pub hash: Option<String>,
 }

@@ -1,13 +1,12 @@
 // @generated automatically by Diesel CLI.
 
 diesel::table! {
-    marketplace (name, publisher, version, engine, platform, assert_url) {
+    marketplace (name, publisher, version, engine, platform) {
         name -> Text,
         publisher -> Text,
         version -> Text,
         engine -> Text,
         platform -> Text,
-        assert_url -> Text,
         is_prerelease -> Bool,
         hash -> Nullable<Text>,
     }

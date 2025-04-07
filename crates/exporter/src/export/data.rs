@@ -28,7 +28,6 @@ impl From<Marketplace> for ExportedData {
             version,
             engine,
             platform,
-            assert_url: _,
             is_prerelease,
             hash,
         } = value;

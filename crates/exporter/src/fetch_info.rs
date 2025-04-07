@@ -47,7 +47,6 @@ pub async fn fetch_marketplace(
                     let Ok(engne) = v.get_engine() else {
                         return None;
                     };
-                    let visix = v.get_file(code_api::code::AssetType::Vsix)?;
                     let platform = v.target_platform.clone().unwrap_or("universal".to_string());
                     Some(Marketplace {
                         name: item.extension_name.clone(),
@@ -55,7 +54,6 @@ pub async fn fetch_marketplace(
                         version: v.version.clone(),
                         engine: engne,
                         platform,
-                        assert_url: visix.source.clone(),
                         hash: None,
                         is_prerelease: v.is_pre_release_version(),
                     })
