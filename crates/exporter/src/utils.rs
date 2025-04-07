@@ -43,3 +43,25 @@ pub fn get_assert_url(
         "https://open-vsx.org/api/{publisher}/{name}{platform_infix}/{version}/file/{ext_name}-{version}{platform_suffix}.vsix"
     )
 }
+
+pub fn version_compare(a: &str, b: &str) -> std::cmp::Ordering {
+    let mut a_parts = a.split('.');
+    let mut b_parts = b.split('.');
+
+    loop {
+        match (a_parts.next(), b_parts.next()) {
+            (Some(a_part), Some(b_part)) => {
+                let a_num = a_part.parse::<u32>().unwrap_or_default();
+                let b_num = b_part.parse::<u32>().unwrap_or_default();
+
+                match a_num.cmp(&b_num) {
+                    std::cmp::Ordering::Equal => continue,
+                    ordering => return ordering,
+                }
+            }
+            (Some(_), None) => return std::cmp::Ordering::Greater,
+            (None, Some(_)) => return std::cmp::Ordering::Less,
+            (None, None) => return std::cmp::Ordering::Equal,
+        }
+    }
+}

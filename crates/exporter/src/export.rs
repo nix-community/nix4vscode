@@ -4,6 +4,7 @@ use std::collections::BTreeMap;
 use crate::mini_json;
 use crate::models::*;
 use crate::schema::marketplace::dsl::*;
+use crate::utils::version_compare;
 use data::ExportedData;
 use diesel::prelude::*;
 use diesel::SqliteConnection;
@@ -18,7 +19,7 @@ pub async fn export_toml(conn: &mut SqliteConnection, target: &str) -> anyhow::R
                 .or(platform.eq("linux-armhf"))
                 .or(platform.eq("darwin-x64"))
                 .or(platform.eq("darwin-arm64"))
-                .or(platform.eq("universal")),
+                .or(platform.is_null()),
         )
         .filter(hash.is_not_null())
         .filter(hash.is_not(""))
@@ -39,6 +40,11 @@ pub async fn export_toml(conn: &mut SqliteConnection, target: &str) -> anyhow::R
             v.extend(chunk);
         });
     }
+
+    // sort by desc
+    data.iter_mut().for_each(|(_, v)| {
+        v.sort_by(|a, b| version_compare(&b.v, &a.v));
+    });
 
     tokio::fs::write(target, mini_json::to_string(&data)).await?;
 
