@@ -37,7 +37,7 @@ let
           parts = lib.strings.splitString "." xname;
           publisher = builtins.elemAt parts 0;
           name = builtins.elemAt parts 1;
-          url = "https://${publisher}.gallerycdn.vsassets.io/extensions/${publisher}/${name}/${info.v}/${info.u}/Microsoft.VisualStudio.Services.VSIXPackage";
+          url = info.u;
         in
         pkgs.fetchurl {
           url = url;
