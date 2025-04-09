@@ -8,8 +8,11 @@ let
     mktAttr: system:
     let
       name = "${mktAttr.mktplcRef.publisher}.${mktAttr.mktplcRef.name}";
+      overName = "nix4vscode-${mktAttr.mktplcRef.publisher}.${mktAttr.mktplcRef.name}";
     in
-    if builtins.pathExists ./decorators/${name}.nix then
+    if builtins.hasAttr overName pkgs then
+      lib.attrsets.recursiveUpdate mktAttr pkgs.${overName}
+    else if builtins.pathExists ./decorators/${name}.nix then
       let
         decorator = import ./decorators/${name}.nix {
           inherit pkgs lib system;
