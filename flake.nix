@@ -68,9 +68,13 @@
                 let
                   parts = lib.strings.splitString "." item;
                 in
-                if builtins.length parts < 3 then item else builtins.concatStringsSep "." (lib.lists.take 2 parts)
+                if builtins.length parts < 3 then
+                  (lib.strings.toLower item)
+                else
+                  (lib.strings.toLower (builtins.concatStringsSep "." (lib.lists.take 2 parts)))
               ) exts;
-              diff = listDifference names (builtins.attrNames vscode-marketplace);
+              attrs = (builtins.attrNames vscode-marketplace);
+              diff = listDifference names (builtins.map (x: lib.strings.toLower x) attrs);
 
               validateAttribute =
                 if builtins.length diff == 0 then
