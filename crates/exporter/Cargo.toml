@@ -15,7 +15,7 @@ diesel = { version = "2.2.8", features = [
   "sqlite",
   "returning_clauses_for_sqlite_3_35",
 ] }
-tokio = { version = "1.44.0", features = ["full"] }
+tokio = { version = "1.44.2", features = ["full"] }
 tracing.workspace = true
 tracing-subscriber = { version = "0.3.19", features = ["env-filter"] }
 code-api = { path = "../code_api" }
