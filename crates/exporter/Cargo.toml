@@ -10,7 +10,7 @@ display = []
 [dependencies]
 dotenvy = "0.15"
 anyhow.workspace = true
-clap = { version = "4.5.35", features = ["derive"] }
+clap = { version = "4.5.37", features = ["derive"] }
 diesel = { version = "2.2.8", features = [
   "sqlite",
   "returning_clauses_for_sqlite_3_35",
