@@ -45,7 +45,7 @@ thiserror = "2.0"
 lazy-regex = { workspace = true }
 derive = { path = "./crates/derive" }
 code-api = { path = "./crates/code_api" }
-rust-embed = "8.6"
+rust-embed = "8.7"
 itertools = "0.14.0"
 
 [package.metadata.deb]
