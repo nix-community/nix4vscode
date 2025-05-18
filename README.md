@@ -11,7 +11,7 @@ nix4vscode support vscode by Nix overlays, here's how you can use it:
     inputs = {
         nixpkgs.url = "github:NixOS:nixpkgs/release-24.11";
 
-        nix4vscode.url = {
+        nix4vscode = {
             url = "github:nix-community/nix4vscode";
             inputs.nixpkgs.follows = "nixpkgs";
         };
