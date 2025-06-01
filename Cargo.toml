@@ -38,7 +38,7 @@ futures = { workspace = true }
 anyhow = { workspace = true }
 semver = { workspace = true }
 clap.workspace = true
-minijinja = { version = "2.9", features = ["loader"] }
+minijinja = { version = "2.10", features = ["loader"] }
 nixpkgs-fmt = "1.3"
 redb = "2.5"
 thiserror = "2.0"
