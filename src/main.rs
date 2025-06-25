@@ -72,7 +72,7 @@ async fn main() -> anyhow::Result<()> {
 }
 
 fn init_logger() {
-    use tracing_subscriber::{fmt, prelude::*, util::SubscriberInitExt, EnvFilter};
+    use tracing_subscriber::{EnvFilter, fmt, prelude::*, util::SubscriberInitExt};
 
     let log_level = std::env::var("RUST_LOG")
         .unwrap_or("INFO".into())

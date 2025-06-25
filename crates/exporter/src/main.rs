@@ -1,3 +1,4 @@
+mod codellab;
 mod export;
 mod fetch_hash;
 mod fetch_info;
@@ -28,6 +29,9 @@ struct Args {
     /// Update hash of extension.
     #[clap(long, default_value_t = false)]
     hash: bool,
+
+    #[clap(long, default_value_t = false)]
+    codellab: bool,
 
     /// Batch size for coroutine pool
     #[clap(long, default_value_t = 4)]

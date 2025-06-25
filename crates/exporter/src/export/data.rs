@@ -18,6 +18,8 @@ pub(crate) struct ExportedData {
     /// is_prerelease
     #[serde(skip_serializing_if = "is_false")]
     pub r: bool,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub u: Option<String>,
 }
 
 impl From<Marketplace> for ExportedData {
@@ -30,6 +32,7 @@ impl From<Marketplace> for ExportedData {
             platform,
             is_prerelease,
             hash,
+            url,
         } = value;
         Self {
             v: version,
@@ -41,6 +44,7 @@ impl From<Marketplace> for ExportedData {
             },
             h: hash.unwrap(),
             r: is_prerelease,
+            u: url,
         }
     }
 }

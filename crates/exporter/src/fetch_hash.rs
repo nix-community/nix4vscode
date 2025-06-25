@@ -34,7 +34,7 @@ pub async fn fetch_hash(
             async move {
                 let now = tokio::time::Instant::now();
                 let _ = nix_gc().await;
-                let url = get_assert_url(
+                let asset_url = get_assert_url(
                     is_open_vsx,
                     &item.publisher,
                     &item.name,
@@ -45,7 +45,10 @@ pub async fn fetch_hash(
                         Some(&item.platform)
                     },
                 );
-                let Ok(file_hash) = compute_hash(&url).await.inspect_err(|err| error!(?err)) else {
+                let Ok(file_hash) = compute_hash(&asset_url)
+                    .await
+                    .inspect_err(|err| error!(?err))
+                else {
                     return;
                 };
                 let escaped = now.elapsed().as_secs();
@@ -75,9 +78,9 @@ pub async fn fetch_hash(
     Ok(())
 }
 
-pub async fn compute_hash(url: &str) -> anyhow::Result<String> {
+pub async fn compute_hash(asset_url: &str) -> anyhow::Result<String> {
     let sha256 = tokio::process::Command::new("nix-prefetch-url")
-        .arg(url)
+        .arg(asset_url)
         .output()
         .await?
         .stdout;
@@ -86,7 +89,7 @@ pub async fn compute_hash(url: &str) -> anyhow::Result<String> {
     let h = h.trim();
 
     if h.is_empty() {
-        bail!("hash is invalid of {url}");
+        bail!("hash is invalid of {asset_url}");
     }
 
     Ok(h.to_string())

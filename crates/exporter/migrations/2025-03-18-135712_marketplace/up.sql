@@ -7,5 +7,6 @@ CREATE TABLE marketplace (
     platform TEXT NOT NULL,
     is_prerelease BOOLEAN NOT NULL,
     hash TEXT NULL,
+    url TEXT NULL,
     PRIMARY KEY (name, publisher, version, engine, platform)
 )
