@@ -1,16 +1,16 @@
 use std::pin::pin;
 use std::str::FromStr;
 
-use code_api::code::is_version_valid;
 use code_api::code::ApiEndpoint;
 use code_api::code::AssetType;
 use code_api::code::HttpClient;
 use code_api::code::IQueryState;
 use code_api::code::IRawGalleryExtension;
 use code_api::code::TargetPlatform;
+use code_api::code::is_version_valid;
+use futures::StreamExt;
 use futures::future::join_all;
 use futures::stream;
-use futures::StreamExt;
 
 use semver::Version;
 use tracing::debug;

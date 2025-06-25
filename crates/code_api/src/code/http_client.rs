@@ -122,11 +122,7 @@ impl HttpClient {
                     .copied()
                     .collect();
 
-                if !j.is_empty() {
-                    j
-                } else {
-                    i
-                }
+                if !j.is_empty() { j } else { i }
             }
             Err(err) => {
                 error!("Error happend when get target_platform: {err}");

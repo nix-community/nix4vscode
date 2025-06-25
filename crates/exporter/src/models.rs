@@ -11,6 +11,7 @@ use diesel::prelude::*;
     PartialOrd,
     Ord,
     Eq,
+    Clone,
 )]
 #[diesel(table_name = crate::schema::marketplace)]
 #[diesel(check_for_backend(diesel::sqlite::Sqlite))]
@@ -22,4 +23,5 @@ pub struct Marketplace {
     pub platform: String,
     pub is_prerelease: bool,
     pub hash: Option<String>,
+    pub url: Option<String>,
 }

@@ -298,12 +298,18 @@ pub fn is_version_valid(
     if desired_version.major_base == 0 {
         // force that major and minor must be specific
         if !desired_version.major_must_equal || !desired_version.minor_must_equal {
-            return Err(anyhow!( "Version specified in `engines.vscode` ({0}) is not specific enough. For vscode versions before 1.0.0, please define at a minimum the major and minor desired version. E.g. ^0.10.0, 0.10.x, 0.11.0, etc.", requested_version));
+            return Err(anyhow!(
+                "Version specified in `engines.vscode` ({0}) is not specific enough. For vscode versions before 1.0.0, please define at a minimum the major and minor desired version. E.g. ^0.10.0, 0.10.x, 0.11.0, etc.",
+                requested_version
+            ));
         }
     } else {
         // force that major must be specific
         if !desired_version.major_must_equal {
-            return Err(anyhow!("Version specified in `engines.vscode` ({0}) is not specific enough. For vscode versions after 1.0.0, please define at a minimum the major desired version. E.g. ^1.10.0, 1.10.x, 1.x.x, 2.x.x, etc.", requested_version));
+            return Err(anyhow!(
+                "Version specified in `engines.vscode` ({0}) is not specific enough. For vscode versions after 1.0.0, please define at a minimum the major desired version. E.g. ^1.10.0, 1.10.x, 1.x.x, 2.x.x, etc.",
+                requested_version
+            ));
         }
     }
 

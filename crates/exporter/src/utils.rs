@@ -1,5 +1,5 @@
 pub fn init_logger() {
-    use tracing_subscriber::{fmt, prelude::*, util::SubscriberInitExt, EnvFilter};
+    use tracing_subscriber::{EnvFilter, fmt, prelude::*, util::SubscriberInitExt};
 
     tracing_subscriber::registry()
         .with(
