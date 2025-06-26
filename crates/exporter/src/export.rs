@@ -1,7 +1,9 @@
 mod data;
+mod mini_json;
+mod mini_toml;
+
 use std::collections::BTreeMap;
 
-use crate::mini_json;
 use crate::models::*;
 use crate::schema::marketplace::dsl::*;
 use crate::utils::version_compare;
@@ -10,7 +12,16 @@ use diesel::SqliteConnection;
 use diesel::prelude::*;
 use itertools::Itertools;
 
-pub async fn export_toml(conn: &mut SqliteConnection, target: &str) -> anyhow::Result<()> {
+pub enum ExportFormat {
+    Json,
+    Toml,
+}
+
+pub async fn export_data(
+    conn: &mut SqliteConnection,
+    target: &str,
+    format: ExportFormat,
+) -> anyhow::Result<()> {
     let mut record: Vec<Marketplace> = marketplace
         .filter(
             platform
@@ -46,7 +57,12 @@ pub async fn export_toml(conn: &mut SqliteConnection, target: &str) -> anyhow::R
         v.sort_by(|a, b| version_compare(&b.v, &a.v));
     });
 
-    tokio::fs::write(target, mini_json::to_string(&data)).await?;
+    let serialized = match format {
+        ExportFormat::Json => mini_json::to_string(&data),
+        ExportFormat::Toml => mini_toml::to_string(&data),
+    };
+
+    tokio::fs::write(target, serialized).await?;
 
     Ok(())
 }
