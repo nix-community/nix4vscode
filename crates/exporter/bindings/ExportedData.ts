@@ -12,7 +12,7 @@ export type ExportedData = {
   /**
    * platform
    */
-  p: string;
+  p: string | null;
   /**
    * hash
    */
@@ -21,4 +21,5 @@ export type ExportedData = {
    * is_prerelease
    */
   r: boolean;
+  u: string | null;
 };
