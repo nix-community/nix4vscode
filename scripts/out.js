@@ -528,7 +528,6 @@ var _args = parseArgs(Deno.args, {
   boolean: ["prerelease", "openvsx"],
   collect: ["name"]
 });
-console.log(_args);
 if (!_args.file || !_args.engine || !_args.platform || _args.name.length === 0 || _args.help) {
   console.log(`
 Usage deno run main.ts <args> --name "ms-vscode.cpptools" --name "ms-vscode.copilot-mermaid-diagram.0.0.3"
@@ -564,5 +563,5 @@ var yata = JSON.stringify(x);
 if (args.output) {
   await Deno.writeTextFile(args.output, yata);
 } else {
-  console.log(JSON.stringify(yata));
+  console.log(yata);
 }

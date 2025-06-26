@@ -7,7 +7,6 @@ const _args = parseArgs(Deno.args, {
   collect: ['name'],
 });
 
-console.log(_args);
 if (
   !_args.file ||
   !_args.engine ||
@@ -53,5 +52,5 @@ const yata = JSON.stringify(x);
 if (args.output) {
   await Deno.writeTextFile(args.output, yata);
 } else {
-  console.log(JSON.stringify(yata));
+  console.log(yata);
 }
