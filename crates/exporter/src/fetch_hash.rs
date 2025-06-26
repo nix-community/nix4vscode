@@ -2,7 +2,7 @@ use std::sync::Arc;
 
 use crate::models::Marketplace;
 use crate::schema::marketplace::dsl::*;
-use crate::utils::get_assert_url;
+use crate::utils::render_assert_url;
 use anyhow::bail;
 use code_api::code::ApiEndpoint;
 use diesel::SqliteConnection;
@@ -34,7 +34,7 @@ pub async fn fetch_hash(
             async move {
                 let now = tokio::time::Instant::now();
                 let _ = nix_gc().await;
-                let asset_url = get_assert_url(
+                let asset_url = render_assert_url(
                     is_open_vsx,
                     &item.publisher,
                     &item.name,
@@ -45,6 +45,7 @@ pub async fn fetch_hash(
                         Some(&item.platform)
                     },
                 );
+                let asset_url = item.url.unwrap_or(asset_url);
                 let Ok(file_hash) = compute_hash(&asset_url)
                     .await
                     .inspect_err(|err| error!(?err))
