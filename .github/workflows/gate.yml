@@ -42,6 +42,7 @@ jobs:
         env:
            RUST_LOG: DEBUG
         run: |
+          rustup component add clippy
           pip install pre-commit
           cargo clippy --all -- -Dwarnings
           cargo test --all
