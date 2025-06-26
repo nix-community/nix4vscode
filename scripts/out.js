@@ -1,6 +1,5 @@
 // parse_args.ts
-var FLAG_REGEXP =
-  /^(?:-(?:(?<doubleDash>-)(?<negated>no-)?)?)(?<key>.+?)(?:=(?<value>.+?))?$/s;
+var FLAG_REGEXP = /^(?:-(?:(?<doubleDash>-)(?<negated>no-)?)?)(?<key>.+?)(?:=(?<value>.+?))?$/s;
 var LETTER_REGEXP = /[A-Za-z]/;
 var NUMBER_REGEXP = /-?\d+(\.\d*)?(e-?\d+)?$/;
 var HYPHEN_REGEXP = /^(-|--)[^-]/;
@@ -14,7 +13,7 @@ function isNumber(string) {
 function setNested(object, keys, value, collect = false) {
   keys = [...keys];
   const key = keys.pop();
-  keys.forEach(key2 => (object = object[key2] ??= {}));
+  keys.forEach((key2) => object = object[key2] ??= {});
   if (collect) {
     const v = object[key];
     if (Array.isArray(v)) {
@@ -40,14 +39,14 @@ function aliasIsBoolean(aliasMap, booleanSet, key) {
   return false;
 }
 function isBooleanString(value) {
-  return value === 'true' || value === 'false';
+  return value === "true" || value === "false";
 }
 function parseBooleanString(value) {
-  return value !== 'false';
+  return value !== "false";
 }
 function parseArgs(args2, options) {
   const {
-    '--': doubleDash = false,
+    "--": doubleDash = false,
     alias = {},
     boolean = false,
     default: defaults = {},
@@ -55,7 +54,7 @@ function parseArgs(args2, options) {
     string = [],
     collect = [],
     negatable = [],
-    unknown: unknownFn = i => i,
+    unknown: unknownFn = (i) => i
   } = options ?? {};
   const aliasMap = /* @__PURE__ */ new Map();
   const booleanSet = /* @__PURE__ */ new Set();
@@ -66,29 +65,26 @@ function parseArgs(args2, options) {
   if (alias) {
     for (const [key, value] of Object.entries(alias)) {
       if (value === void 0) {
-        throw new TypeError('Alias value must be defined');
+        throw new TypeError("Alias value must be defined");
       }
       const aliases = Array.isArray(value) ? value : [value];
       aliasMap.set(key, new Set(aliases));
-      aliases.forEach(alias2 =>
-        aliasMap.set(
+      aliases.forEach(
+        (alias2) => aliasMap.set(
           alias2,
-          /* @__PURE__ */ new Set([
-            key,
-            ...aliases.filter(it => it !== alias2),
-          ]),
-        ),
+          /* @__PURE__ */ new Set([key, ...aliases.filter((it) => it !== alias2)])
+        )
       );
     }
   }
   if (boolean) {
-    if (typeof boolean === 'boolean') {
+    if (typeof boolean === "boolean") {
       allBools = boolean;
     } else {
       const booleanArgs = Array.isArray(boolean) ? boolean : [boolean];
       for (const key of booleanArgs.filter(Boolean)) {
         booleanSet.add(key);
-        aliasMap.get(key)?.forEach(al => {
+        aliasMap.get(key)?.forEach((al) => {
           booleanSet.add(al);
         });
       }
@@ -98,45 +94,39 @@ function parseArgs(args2, options) {
     const stringArgs = Array.isArray(string) ? string : [string];
     for (const key of stringArgs.filter(Boolean)) {
       stringSet.add(key);
-      aliasMap.get(key)?.forEach(al => stringSet.add(al));
+      aliasMap.get(key)?.forEach((al) => stringSet.add(al));
     }
   }
   if (collect) {
     const collectArgs = Array.isArray(collect) ? collect : [collect];
     for (const key of collectArgs.filter(Boolean)) {
       collectSet.add(key);
-      aliasMap.get(key)?.forEach(al => collectSet.add(al));
+      aliasMap.get(key)?.forEach((al) => collectSet.add(al));
     }
   }
   if (negatable) {
     const negatableArgs = Array.isArray(negatable) ? negatable : [negatable];
     for (const key of negatableArgs.filter(Boolean)) {
       negatableSet.add(key);
-      aliasMap.get(key)?.forEach(alias2 => negatableSet.add(alias2));
+      aliasMap.get(key)?.forEach((alias2) => negatableSet.add(alias2));
     }
   }
   const argv = { _: [] };
   function setArgument(key, value, arg, collect2) {
-    if (
-      !booleanSet.has(key) &&
-      !stringSet.has(key) &&
-      !aliasMap.has(key) &&
-      !(allBools && FLAG_NAME_REGEXP.test(arg)) &&
-      unknownFn?.(arg, key, value) === false
-    ) {
+    if (!booleanSet.has(key) && !stringSet.has(key) && !aliasMap.has(key) && !(allBools && FLAG_NAME_REGEXP.test(arg)) && unknownFn?.(arg, key, value) === false) {
       return;
     }
-    if (typeof value === 'string' && !stringSet.has(key)) {
+    if (typeof value === "string" && !stringSet.has(key)) {
       value = isNumber(value) ? Number(value) : value;
     }
     const collectable = collect2 && collectSet.has(key);
-    setNested(argv, key.split('.'), value, collectable);
-    aliasMap.get(key)?.forEach(key2 => {
-      setNested(argv, key2.split('.'), value, collectable);
+    setNested(argv, key.split("."), value, collectable);
+    aliasMap.get(key)?.forEach((key2) => {
+      setNested(argv, key2.split("."), value, collectable);
     });
   }
   let notFlags = [];
-  const index = args2.indexOf('--');
+  const index = args2.indexOf("--");
   if (index !== -1) {
     notFlags = args2.slice(index + 1);
     args2 = args2.slice(0, index);
@@ -163,12 +153,7 @@ function parseArgs(args2, options) {
         }
         const next = args2[i + 1];
         if (next) {
-          if (
-            !booleanSet.has(key) &&
-            !allBools &&
-            !next.startsWith('-') &&
-            (!aliasMap.has(key) || !aliasIsBoolean(aliasMap, booleanSet, key))
-          ) {
+          if (!booleanSet.has(key) && !allBools && !next.startsWith("-") && (!aliasMap.has(key) || !aliasIsBoolean(aliasMap, booleanSet, key))) {
             value = next;
             i++;
             setArgument(key, value, arg, true);
@@ -181,14 +166,14 @@ function parseArgs(args2, options) {
             continue;
           }
         }
-        value = stringSet.has(key) ? '' : true;
+        value = stringSet.has(key) ? "" : true;
         setArgument(key, value, arg, true);
         continue;
       }
-      const letters = arg.slice(1, -1).split('');
+      const letters = arg.slice(1, -1).split("");
       for (const [j, letter] of letters.entries()) {
         const next = arg.slice(j + 2);
-        if (next === '-') {
+        if (next === "-") {
           setArgument(letter, next, arg, true);
           continue;
         }
@@ -207,17 +192,13 @@ function parseArgs(args2, options) {
           setArgument(letter, arg.slice(j + 2), arg, true);
           continue argsLoop;
         }
-        setArgument(letter, stringSet.has(letter) ? '' : true, arg, true);
+        setArgument(letter, stringSet.has(letter) ? "" : true, arg, true);
       }
       key = arg.slice(-1);
-      if (key === '-') continue;
+      if (key === "-") continue;
       const nextArg = args2[i + 1];
       if (nextArg) {
-        if (
-          !HYPHEN_REGEXP.test(nextArg) &&
-          !booleanSet.has(key) &&
-          (!aliasMap.has(key) || !aliasIsBoolean(aliasMap, booleanSet, key))
-        ) {
+        if (!HYPHEN_REGEXP.test(nextArg) && !booleanSet.has(key) && (!aliasMap.has(key) || !aliasIsBoolean(aliasMap, booleanSet, key))) {
           setArgument(key, nextArg, arg, true);
           i++;
           continue;
@@ -229,11 +210,11 @@ function parseArgs(args2, options) {
           continue;
         }
       }
-      setArgument(key, stringSet.has(key) ? '' : true, arg, true);
+      setArgument(key, stringSet.has(key) ? "" : true, arg, true);
       continue;
     }
     if (unknownFn?.(arg) !== false) {
-      argv._.push(stringSet.has('_') || !isNumber(arg) ? arg : Number(arg));
+      argv._.push(stringSet.has("_") || !isNumber(arg) ? arg : Number(arg));
     }
     if (stopEarly) {
       argv._.push(...args2.slice(i + 1));
@@ -241,29 +222,27 @@ function parseArgs(args2, options) {
     }
   }
   for (const [key, value] of Object.entries(defaults)) {
-    const keys = key.split('.');
+    const keys = key.split(".");
     if (!hasNested(argv, keys)) {
       setNested(argv, keys, value);
-      aliasMap
-        .get(key)
-        ?.forEach(key2 => setNested(argv, key2.split('.'), value));
+      aliasMap.get(key)?.forEach((key2) => setNested(argv, key2.split("."), value));
     }
   }
   for (const key of booleanSet.keys()) {
-    const keys = key.split('.');
+    const keys = key.split(".");
     if (!hasNested(argv, keys)) {
       const value = collectSet.has(key) ? [] : false;
       setNested(argv, keys, value);
     }
   }
   for (const key of stringSet.keys()) {
-    const keys = key.split('.');
+    const keys = key.split(".");
     if (!hasNested(argv, keys) && collectSet.has(key)) {
       setNested(argv, keys, []);
     }
   }
   if (doubleDash) {
-    argv['--'] = notFlags;
+    argv["--"] = notFlags;
   } else {
     argv._.push(...notFlags);
   }
@@ -275,14 +254,14 @@ var VERSION_REGEXP = /^(\^|>=)?((\d+)|x)\.((\d+)|x)\.((\d+)|x)(\-.*)?$/;
 var NOT_BEFORE_REGEXP = /^-(\d{4})(\d{2})(\d{2})$/;
 function isValidVersionStr(version) {
   version = version.trim();
-  return version === '*' || VERSION_REGEXP.test(version);
+  return version === "*" || VERSION_REGEXP.test(version);
 }
 function parseVersion(version) {
   if (!isValidVersionStr(version)) {
     return null;
   }
   version = version.trim();
-  if (version === '*') {
+  if (version === "*") {
     return {
       hasCaret: false,
       hasGreaterEquals: false,
@@ -292,7 +271,7 @@ function parseVersion(version) {
       minorMustEqual: false,
       patchBase: 0,
       patchMustEqual: false,
-      preRelease: null,
+      preRelease: null
     };
   }
   const m = version.match(VERSION_REGEXP);
@@ -300,15 +279,15 @@ function parseVersion(version) {
     return null;
   }
   return {
-    hasCaret: m[1] === '^',
-    hasGreaterEquals: m[1] === '>=',
-    majorBase: m[2] === 'x' ? 0 : Number.parseInt(m[2], 10),
-    majorMustEqual: m[2] === 'x' ? false : true,
-    minorBase: m[4] === 'x' ? 0 : Number.parseInt(m[4], 10),
-    minorMustEqual: m[4] === 'x' ? false : true,
-    patchBase: m[6] === 'x' ? 0 : Number.parseInt(m[6], 10),
-    patchMustEqual: m[6] === 'x' ? false : true,
-    preRelease: m[8] || null,
+    hasCaret: m[1] === "^",
+    hasGreaterEquals: m[1] === ">=",
+    majorBase: m[2] === "x" ? 0 : Number.parseInt(m[2], 10),
+    majorMustEqual: m[2] === "x" ? false : true,
+    minorBase: m[4] === "x" ? 0 : Number.parseInt(m[4], 10),
+    minorMustEqual: m[4] === "x" ? false : true,
+    patchBase: m[6] === "x" ? 0 : Number.parseInt(m[6], 10),
+    patchMustEqual: m[6] === "x" ? false : true,
+    preRelease: m[8] || null
   };
 }
 function normalizeVersion(version) {
@@ -345,12 +324,12 @@ function normalizeVersion(version) {
     patchBase,
     patchMustEqual,
     isMinimum: version.hasGreaterEquals,
-    notBefore,
+    notBefore
   };
 }
 function isValidVersion(_inputVersion, _inputDate, _desiredVersion) {
   let version;
-  if (typeof _inputVersion === 'string') {
+  if (typeof _inputVersion === "string") {
     version = normalizeVersion(parseVersion(_inputVersion));
   } else {
     version = _inputVersion;
@@ -358,11 +337,11 @@ function isValidVersion(_inputVersion, _inputDate, _desiredVersion) {
   let productTs;
   if (_inputDate instanceof Date) {
     productTs = _inputDate.getTime();
-  } else if (typeof _inputDate === 'string') {
+  } else if (typeof _inputDate === "string") {
     productTs = new Date(_inputDate).getTime();
   }
   let desiredVersion;
-  if (typeof _desiredVersion === 'string') {
+  if (typeof _desiredVersion === "string") {
     desiredVersion = normalizeVersion(parseVersion(_desiredVersion));
   } else {
     desiredVersion = _desiredVersion;
@@ -398,11 +377,7 @@ function isValidVersion(_inputVersion, _inputDate, _desiredVersion) {
     }
     return patchBase >= desiredPatchBase;
   }
-  if (
-    majorBase === 1 &&
-    desiredMajorBase === 0 &&
-    (!majorMustEqual || !minorMustEqual || !patchMustEqual)
-  ) {
+  if (majorBase === 1 && desiredMajorBase === 0 && (!majorMustEqual || !minorMustEqual || !patchMustEqual)) {
     desiredMajorBase = 1;
     desiredMinorBase = 0;
     desiredPatchBase = 0;
@@ -478,107 +453,85 @@ function versionBe(l, r) {
   return false;
 }
 function getExtensionName(name) {
-  const pos = name.split('.');
-  return pos.slice(0, 2).join('.');
+  const pos = name.split(".");
+  return pos.slice(0, 2).join(".");
 }
 function getExtensionVersion(name) {
-  const pos = name.split('.');
-  return pos.slice(2).join('.');
+  const pos = name.split(".");
+  return pos.slice(2).join(".");
 }
 function getAssertUrl(isOpenVsx, publisher, name, version, platform) {
-  const platformSuffix =
-    platform === void 0 || platform.length === 0
-      ? ''
-      : `targetPlatform=${platform}`;
+  const platformSuffix = platform === void 0 || platform.length === 0 ? "" : `targetPlatform=${platform}`;
   if (!isOpenVsx) {
     return `https://${publisher}.gallery.vsassets.io/_apis/public/gallery/publisher/${publisher}/extension/${name}/${version}/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage?${platformSuffix}`;
   }
-  const platformInfix =
-    platform === void 0 || platform.length === 0 ? '' : `/${platform}`;
+  const platformInfix = platform === void 0 || platform.length === 0 ? "" : `/${platform}`;
   const extName = `${publisher}.${name}`;
   return `https://open-vsx.org/api/${publisher}/${name}${platformInfix}/${version}/file/${extName}-${version}${platformSuffix}.vsix`;
 }
-function versionForCode(data2, name, preRelease, platform, isOpenvsx, engine) {
-  const plainNames = name
-    .map(getExtensionName)
-    .map(value => value.toLowerCase());
+function versionForCode(data2, name, pre_release, platform, is_openvsx, engine) {
+  const plainNames = name.map(getExtensionName).map((value) => value.toLowerCase());
   let platforms = [];
-  if (platform === 'x86_64-linux' || platform === 'i686-linux') {
-    platforms = ['linux-x64'];
-  } else if (platform === 'aarch64-linux') {
-    platforms = ['linux-arm64'];
-  } else if (platform === 'armv7l-linux') {
-    platforms = ['linux-armhf'];
-  } else if (platform === 'x86_64-darwin') {
-    platforms = ['darwin-x64'];
-  } else if (platform === 'aarch64-darwin') {
-    platforms = ['darwin-arm64'];
+  if (platform === "x86_64-linux" || platform === "i686-linux") {
+    platforms = ["linux-x64"];
+  } else if (platform === "aarch64-linux") {
+    platforms = ["linux-arm64"];
+  } else if (platform === "armv7l-linux") {
+    platforms = ["linux-armhf"];
+  } else if (platform === "x86_64-darwin") {
+    platforms = ["darwin-x64"];
+  } else if (platform === "aarch64-darwin") {
+    platforms = ["darwin-arm64"];
   } else {
     platforms = [];
   }
   const nameVersion = {};
-  name.forEach(name2 => {
-    nameVersion[getExtensionName(name2).toLowerCase()] =
-      getExtensionVersion(name2);
+  name.forEach((name2) => {
+    nameVersion[getExtensionName(name2).toLowerCase()] = getExtensionVersion(name2);
   });
   const x2 = Object.fromEntries(
-    Object.entries(data2)
-      .filter(([name2]) => {
-        return plainNames.includes(name2.toLowerCase());
-      })
-      .map(([key, value]) => {
-        const maxValue = value
-          .filter(item => {
-            const version = nameVersion[key];
-            if (version !== '' && item.v !== version) {
-              return false;
-            }
-            if (preRelease === false && item.r === true) {
-              return false;
-            }
-            if (item.p === void 0) {
-              return true;
-            }
-            if (!platforms.includes(item.p)) {
-              return false;
-            }
-            return isVersionValid(engine, void 0, item.e);
-          })
-          .reduce((l, r) => {
-            if (versionBe(l.v, r.v)) {
-              return l;
-            }
-            return r;
-          });
-        const [publisher, name2] = key.split('.');
-        maxValue.u = getAssertUrl(
-          isOpenvsx,
-          publisher,
-          name2,
-          maxValue.v,
-          maxValue.p,
-        );
-        return [key, maxValue];
-      }),
+    Object.entries(data2).filter(([name2]) => {
+      return plainNames.includes(name2.toLowerCase());
+    }).map(([key, value]) => {
+      const maxValue = value.filter((item) => {
+        const version = nameVersion[key];
+        if (version !== "" && item.v !== version) {
+          return false;
+        }
+        if (pre_release === false && item.r === true) {
+          return false;
+        }
+        if (item.p === void 0) {
+          return true;
+        }
+        if (!platforms.includes(item.p)) {
+          return false;
+        }
+        return isVersionValid(engine, void 0, item.e);
+      }).reduce((l, r) => {
+        if (versionBe(l.v, r.v)) {
+          return l;
+        }
+        return r;
+      });
+      const [publisher, name2] = key.split(".");
+      maxValue.u = maxValue.u || getAssertUrl(is_openvsx, publisher, name2, maxValue.v, maxValue.p);
+      return [key, maxValue];
+    })
   );
   return x2;
 }
 
 // main.ts
 var _args = parseArgs(Deno.args, {
-  string: ['engine', 'file', 'platform', 'output', 'help'],
-  boolean: ['prerelease', 'openvsx'],
-  collect: ['name'],
+  string: ["engine", "file", "platform", "output", "help"],
+  boolean: ["prerelease", "openvsx"],
+  collect: ["name"]
 });
-if (
-  !_args.file ||
-  !_args.engine ||
-  !_args.platform ||
-  _args.name.length === 0 ||
-  _args.help
-) {
+console.log(_args);
+if (!_args.file || !_args.engine || !_args.platform || _args.name.length === 0 || _args.help) {
   console.log(`
-Usage deno run main.ts <args> "ms-vscode.cpptools" "ms-vscode.copilot-mermaid-diagram.0.0.3"
+Usage deno run main.ts <args> --name "ms-vscode.cpptools" --name "ms-vscode.copilot-mermaid-diagram.0.0.3"
 
 Args:
 --file: target to extensions.json
@@ -595,7 +548,7 @@ var args = {
   output: _args.output || null,
   name: _args.name,
   pre_release: _args.prerelease === true,
-  is_openvsx: _args.openvsx,
+  is_openvsx: _args.openvsx
 };
 var content = await Deno.readTextFile(args.file);
 var data = JSON.parse(content);
@@ -605,7 +558,7 @@ var x = versionForCode(
   args.pre_release,
   args.platform,
   args.is_openvsx,
-  args.engine,
+  args.engine
 );
 var yata = JSON.stringify(x);
 if (args.output) {

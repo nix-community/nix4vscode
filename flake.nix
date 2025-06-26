@@ -120,7 +120,8 @@
         {
           default = pkgs.mkShell {
             strictDeps = true;
-            packages = [
+            packages = with pkgs; [
+              esbuild
               (lib.hiPrio rust-stable)
               # Use rustfmt, and other tools that require nightly features.
               (pkgs.rust-bin.selectLatestNightlyWith (

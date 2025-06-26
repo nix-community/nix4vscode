@@ -114,7 +114,7 @@ export function versionForCode(
               return true;
             }
 
-            if (!platforms.includes(item.p)) {
+            if (!platforms.includes(item.p!)) {
               return false;
             }
 
@@ -128,13 +128,9 @@ export function versionForCode(
             return r;
           });
         const [publisher, name] = key.split('.');
-        maxValue.u = getAssertUrl(
-          is_openvsx,
-          publisher,
-          name,
-          maxValue.v,
-          maxValue.p,
-        );
+        maxValue.u =
+          maxValue.u ||
+          getAssertUrl(is_openvsx, publisher, name, maxValue.v, maxValue.p!);
         return [key, maxValue];
       }),
   );

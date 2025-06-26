@@ -7,6 +7,7 @@ const _args = parseArgs(Deno.args, {
   collect: ['name'],
 });
 
+console.log(_args);
 if (
   !_args.file ||
   !_args.engine ||
@@ -15,7 +16,7 @@ if (
   _args.help
 ) {
   console.log(`
-Usage deno run main.ts <args> "ms-vscode.cpptools" "ms-vscode.copilot-mermaid-diagram.0.0.3"
+Usage deno run main.ts <args> --name "ms-vscode.cpptools" --name "ms-vscode.copilot-mermaid-diagram.0.0.3"
 
 Args:
 --file: target to extensions.json
