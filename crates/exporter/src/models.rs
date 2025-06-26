@@ -25,3 +25,10 @@ pub struct Marketplace {
     pub hash: Option<String>,
     pub url: Option<String>,
 }
+
+impl Marketplace {
+    pub const AARCH64_DARWIN: &str = "aarch64-darwin";
+    pub const AARCH64_LINUX: &str = "aarch64-linux";
+    pub const X86_64_DARWIN: &str = "x86_64-darwin";
+    pub const X86_64_LINUX: &str = "x86_64-linux";
+}

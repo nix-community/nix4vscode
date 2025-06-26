@@ -101,25 +101,25 @@ fn drain_codelldb(codelldb: &HashMap<TagName, Release>, item: Marketplace) -> Ve
             let value = item.clone();
             if is_darwin_aarch64(&asset.name) {
                 Some(Marketplace {
-                    platform: "darwin-arm64".into(),
+                    platform: Marketplace::AARCH64_DARWIN.into(),
                     url: Some(asset.browser_download_url.to_string()),
                     ..value
                 })
             } else if is_darwin_x86_64(&asset.name) {
                 Some(Marketplace {
-                    platform: "darwin-x64".into(),
+                    platform: Marketplace::X86_64_DARWIN.into(),
                     url: Some(asset.browser_download_url.to_string()),
                     ..value
                 })
             } else if is_linux_aarch64(&asset.name) {
                 Some(Marketplace {
-                    platform: "linux-arm64".into(),
+                    platform: Marketplace::AARCH64_LINUX.into(),
                     url: Some(asset.browser_download_url.to_string()),
                     ..value
                 })
             } else if is_linux_x86_64(&asset.name) {
                 Some(Marketplace {
-                    platform: "linux-x64".into(),
+                    platform: Marketplace::X86_64_LINUX.into(),
                     url: Some(asset.browser_download_url.to_string()),
                     ..value
                 })
@@ -129,6 +129,10 @@ fn drain_codelldb(codelldb: &HashMap<TagName, Release>, item: Marketplace) -> Ve
         })
         .unique_by(|a| a.platform.clone())
         .collect_vec();
+
+    if x.is_empty() {
+        return vec![item];
+    }
 
     x
 }
