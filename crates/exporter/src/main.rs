@@ -1,5 +1,5 @@
 mod codellab;
-mod export;
+mod exporter;
 mod fetch_hash;
 mod fetch_info;
 mod models;
@@ -12,7 +12,7 @@ use clap::Parser;
 use code_api::code::ApiEndpoint;
 use diesel::prelude::*;
 
-use export::{ExportFormat, export_data};
+use exporter::{ExportFormat, export_data};
 use fetch_info::fetch_marketplace;
 use tokio::time::timeout;
 use tracing::error;

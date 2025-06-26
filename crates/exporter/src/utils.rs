@@ -12,7 +12,7 @@ pub fn init_logger() {
         .init();
 }
 
-pub fn get_assert_url(
+pub fn render_assert_url(
     is_open_vsx: bool,
     publisher: &str,
     name: &str,
