@@ -83,7 +83,12 @@
                 if builtins.length diff == 0 then
                   vscode-marketplace
                 else
-                  throw "The folloing extension filed get: ${builtins.concatStringsSep "," diff}";
+                  throw "
+The following extensions were not found: ${builtins.concatStringsSep "," diff}
+1) Is there a spelling error? (Case insensitive)
+2) Is there a version of the specified extension suitable for vscode `${engine}`
+3) If the specified extension has no stable version? If not, you may need forVscodePrerelease
+";
             in
             builtins.attrValues validateAttribute;
 
