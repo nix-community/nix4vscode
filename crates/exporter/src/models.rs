@@ -27,8 +27,8 @@ pub struct Marketplace {
 }
 
 impl Marketplace {
-    pub const AARCH64_DARWIN: &str = "aarch64-darwin";
-    pub const AARCH64_LINUX: &str = "aarch64-linux";
-    pub const X86_64_DARWIN: &str = "x86_64-darwin";
-    pub const X86_64_LINUX: &str = "x86_64-linux";
+    pub const DARWIN_AARCH64: &str = "darwin-arm64";
+    pub const DARWIN_X86: &str = "darwin-x64";
+    pub const LINUX_AARCH64: &str = "linux-arm64";
+    pub const LINUX_X86: &str = "linux-x64";
 }
