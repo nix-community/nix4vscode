@@ -4,6 +4,7 @@
 }:
 
 let
+  fetchurlModule = import ./fetchurl/fetchurl.nix { inherit pkgs lib; };
   applyDecorator =
     mktAttr: system:
     let
@@ -39,7 +40,7 @@ let
           name = builtins.elemAt parts 1;
           url = info.u;
         in
-        pkgs.fetchurl {
+        fetchurlModule.fetchurl {
           url = url;
           name = "${publisher}-${name}.zip";
           sha256 = info.h;
