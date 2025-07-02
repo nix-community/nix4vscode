@@ -24,7 +24,7 @@
         import nixpkgs {
           inherit system;
           overlays = [
-            self.overlays.default
+            self.overlays.forVscode
           ];
         }
       );
@@ -110,7 +110,6 @@ The following extensions were not found: ${builtins.concatStringsSep "," diff}
       }) pkgsFor;
 
       overlays = {
-        default = lib.composeManyExtensions [ self.overlays.nix4vscode ];
         forVscode = (
           final: _: {
             nix4vscode = customLib.${final.system};
