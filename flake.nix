@@ -33,16 +33,16 @@
         system: pkgs:
         let
           forVscodeVersionRaw =
-            extensionPath: engine: exts: pre_release:
+            dataPath: version: exts: pickPreRelease:
             let
               filters = builtins.map (v: ''--name="${v}"'') exts;
               filter = builtins.concatStringsSep " " filters;
-              prerelease = if pre_release then "--prerelease" else "";
+              prerelease = if pickPreRelease then "--prerelease" else "";
               mainTs = ./scripts/out.js;
               extensions = builtins.fromJSON (
                 builtins.readFile (
-                  pkgs.runCommandNoCC "nix4vscode-${engine}" { } ''
-                    ${pkgs.deno}/bin/deno run -A ${mainTs} --file ${extensionPath} --engine ${engine} --platform ${system} ${prerelease} --output=$out ${filter}
+                  pkgs.runCommandNoCC "nix4vscode-${version}" { } ''
+                    ${pkgs.deno}/bin/deno run -A ${mainTs} --file ${dataPath} --engine ${version} --platform ${system} ${prerelease} --output=$out ${filter}
                   ''
                 )
               );
@@ -75,7 +75,7 @@
                   throw "
 The following extensions were not found: ${builtins.concatStringsSep "," diff}
 1) Is there a spelling error? (Case insensitive)
-2) Is there a version of the specified extension suitable for vscode `${engine}`
+2) Is there a version of the specified extension suitable for vscode `${version}`
 3) If the specified extension has no stable version? If not, you may need forVscodePrerelease
 ";
             in
