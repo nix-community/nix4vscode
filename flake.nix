@@ -110,6 +110,11 @@ The following extensions were not found: ${builtins.concatStringsSep "," diff}
       }) pkgsFor;
 
       overlays = {
+        default = (
+          final: _: {
+            nix4vscode = customLib.${final.system};
+          }
+        );
         forVscode = (
           final: _: {
             nix4vscode = customLib.${final.system};

@@ -24,8 +24,9 @@
       let
         pkgs = import nixpkgs {
           inherit system;
+          config.allowUnfree = true;
           overlays = [
-            nix4vscode.overlays.forVscode
+            nix4vscode.overlays.default
           ];
         };
 
