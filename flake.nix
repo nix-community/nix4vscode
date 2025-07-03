@@ -41,7 +41,7 @@
               mainTs = ./scripts/out.js;
               extensions = builtins.fromJSON (
                 builtins.readFile (
-                  pkgs.runCommand "nix4vscode-${engine}" { } ''
+                  pkgs.runCommandNoCC "nix4vscode-${engine}" { } ''
                     ${pkgs.deno}/bin/deno run -A ${mainTs} --file ${extensionPath} --engine ${engine} --platform ${system} ${prerelease} --output=$out ${filter}
                   ''
                 )
