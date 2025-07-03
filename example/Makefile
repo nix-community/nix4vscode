@@ -1,4 +1,4 @@
 .PHONY: build
 
 build:
-	nix build '.#homeConfigurations.root.activationPackage'
+	nix build '.#homeConfigurations.root.activationPackage' --show-trace
