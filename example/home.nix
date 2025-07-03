@@ -49,9 +49,9 @@ in
             ++ forOpenVsx [
               "redhat.java"
             ]
-            ++ forOpenVsxVersion "1.100.2" [
-              "llvm-vs-code-extensions.vscode-clangd"
-            ]
+            # ++ forOpenVsxVersion "1.100.2" [
+            # "llvm-vs-code-extensions.vscode-clangd"
+            # ]
             ++ forOpenVsxPrerelease [
               "Dart-Code.flutter"
             ]
