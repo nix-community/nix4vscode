@@ -45,19 +45,19 @@ in
             ]
             ++ forVscodeVersionPrerelease "1.100.2" [
               "ms-toolsai.vscode-jupyter-cell-tags"
-            ]
-            ++ forOpenVsx [
-              "redhat.java"
-            ]
-            # ++ forOpenVsxVersion "1.100.2" [
-            # "llvm-vs-code-extensions.vscode-clangd"
-            # ]
-            ++ forOpenVsxPrerelease [
-              "Dart-Code.flutter"
-            ]
-            ++ forOpenVsxVersionPrerelease "1.100.2" [
-              "Continue.continue"
             ];
+          # ++ forOpenVsx [
+          #   "redhat.java"
+          # ];
+          # ++ forOpenVsxVersion "1.100.2" [
+          # "llvm-vs-code-extensions.vscode-clangd"
+          # ]
+          # ++ forOpenVsxPrerelease [
+          #   "Dart-Code.flutter"
+          # ]
+          # ++ forOpenVsxVersionPrerelease "1.100.2" [
+          #   "Continue.continue"
+          # ];
         };
       };
     };
