@@ -23,7 +23,7 @@ nix4vscode support vscode by Nix overlays, here's how you can use it:
             config.allowUnfree = true;
             system = "aarch64-darwin"; # One of supported systems
             overlays = [
-                nix4vscode.overlays.forVscode
+                nix4vscode.overlays.default
             ];
         };
 
