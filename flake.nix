@@ -45,6 +45,7 @@
               version ? pkgs.vscode.version,
               extensions,
               pickPreRelease ? false,
+              decorators ? null,
             }:
             let
               filters = builtins.map (v: ''--name="${v}"'') extensions;
@@ -62,7 +63,7 @@
                 inherit pkgs;
               };
               vscode-marketplace = vscode.extensionsFromInfo {
-                inherit system;
+                inherit system decorators;
                 extensions = filteredExtensions;
               };
               listDifference = a: b: builtins.filter (x: !(builtins.elem x b)) a;
@@ -109,8 +110,37 @@
               };
           };
 
+          generateSourceFunctionsExt = rawFunction: {
+            defaultExt = decorators: extensions: rawFunction { inherit extensions decorators; };
+            versionExt =
+              decorators: version: extensions:
+              rawFunction { inherit version extensions decorators; };
+            prereleaseExt =
+              decorators: extensions:
+              rawFunction {
+                inherit extensions decorators;
+                pickPreRelease = true;
+              };
+            versionPrereleaseExt =
+              decorators: version: extensions:
+              rawFunction {
+                inherit version extensions decorators;
+                pickPreRelease = true;
+              };
+          };
+
           vscodeVariants = generateSourceFunctions forVscodeVersionRaw;
           openvsxVariants = generateSourceFunctions (
+            attr:
+            forVscodeVersionRaw {
+              dataPath = openVsxPath;
+              version = pkgs.vscodium.version;
+            }
+            // attr
+          );
+
+          vscodeExtVariants = generateSourceFunctionsExt forVscodeVersionRaw;
+          openvsxExtVariants = generateSourceFunctionsExt (
             attr:
             forVscodeVersionRaw {
               dataPath = openVsxPath;
@@ -130,6 +160,16 @@
           forOpenVsxVersion = openvsxVariants.version;
           forOpenVsxPrerelease = openvsxVariants.prerelease;
           forOpenVsxVersionPrerelease = openvsxVariants.versionPrerelease;
+
+          forVscodeExt = vscodeExtVariants.defaultExt;
+          forVscodeExtVersion = vscodeExtVariants.versionExt;
+          forVscodeExtPrerelease = vscodeExtVariants.prereleaseExt;
+          forVscodeExtVersionPrerelease = vscodeExtVariants.versionPrereleaseExt;
+
+          forOpenVsxExt = openvsxExtVariants.defaultExt;
+          forOpenVsxExtVersion = openvsxExtVariants.versionExt;
+          forOpenVsxExtPrerelease = openvsxExtVariants.prereleaseExt;
+          forOpenVsxExtVersionPrerelease = openvsxExtVariants.versionPrereleaseExt;
 
         }
       );

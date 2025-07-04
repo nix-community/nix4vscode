@@ -71,17 +71,69 @@ Now, if you use VSCode with Home Manager, and you added overlays, you can instal
 
 The Overlays has exported the following functions:
 
+### Basic Functions
+
 | Usage                                                          | description   |
 | -------------------------------------------------------------- | ------------- |
-| `forVscode [ extension ]`                                        | TODO          |
-| `forVscodeVersion version [ extension ]`                         | TODO          |
-| `forVscodePrerelease [ extension ]`                              | TODO          |
-| `forVscodeVersionPrerelease version [ extension ]`               | TODO          |
-| `forOpenVsx [ extension ]`                                       | TODO          |
-| `forOpenVsxVersion version [ extension ]`                        | TODO          |
-| `forOpenVsxPrerelease [ extension ]`                             | TODO          |
-| `forOpenVsxVersionPrerelease version [ extension ]`              | TODO          |
+| `forVscode [ extension ]`                                        | Install extensions from VSCode marketplace using default version |
+| `forVscodeVersion version [ extension ]`                         | Install extensions for specific VSCode version |
+| `forVscodePrerelease [ extension ]`                              | Install prerelease extensions from VSCode marketplace |
+| `forVscodeVersionPrerelease version [ extension ]`               | Install prerelease extensions for specific VSCode version |
+| `forOpenVsx [ extension ]`                                       | Install extensions from OpenVSX registry |
+| `forOpenVsxVersion version [ extension ]`                        | Install extensions from OpenVSX for specific version |
+| `forOpenVsxPrerelease [ extension ]`                             | Install prerelease extensions from OpenVSX |
+| `forOpenVsxVersionPrerelease version [ extension ]`              | Install prerelease extensions from OpenVSX for specific version |
 
-* `version`: string
-* `[ extension ]`:
+### Extended Functions with Custom Decorators
+
+| Usage                                                          | description   |
+| -------------------------------------------------------------- | ------------- |
+| `forVscodeExt decorators [ extension ]`                         | Install extensions with custom decorators |
+| `forVscodeExtVersion decorators version [ extension ]`          | Install extensions with decorators for specific version |
+| `forVscodeExtPrerelease decorators [ extension ]`               | Install prerelease extensions with decorators |
+| `forVscodeExtVersionPrerelease decorators version [ extension ]` | Install prerelease extensions with decorators for specific version |
+| `forOpenVsxExt decorators [ extension ]`                        | Install OpenVSX extensions with decorators |
+| `forOpenVsxExtVersion decorators version [ extension ]`         | Install OpenVSX extensions with decorators for specific version |
+| `forOpenVsxExtPrerelease decorators [ extension ]`              | Install prerelease OpenVSX extensions with decorators |
+| `forOpenVsxExtVersionPrerelease decorators version [ extension ]` | Install prerelease OpenVSX extensions with decorators for specific version |
+
+### Parameters
+
+* `version`: string - VSCode version (e.g., "1.100.2")
+* `decorators`: attribute set - Custom decorators for extensions
+* `[ extension ]`: list of strings - Extension identifiers
     * type extension = "ms-vscode.cpptools" | "ms-vscode.cpptools.1.8.2"
+
+### Custom Decorators
+
+Decorators allow you to customize extension installation with patches, dependencies, or other modifications:
+
+```nix
+let
+  myDecorators = {
+    "ms-vscode.cpptools" = {
+      postPatch = ''
+        echo "Applying custom patch"
+        # Custom installation logic
+      '';
+      buildInputs = [ pkgs.clang-tools ];
+    };
+
+    "rust-lang.rust-analyzer" = { pkgs, lib, system }: {
+      # Dynamic decorator using function
+      buildInputs = [ pkgs.rust-analyzer ];
+    };
+  };
+in
+{
+  extensions = pkgs.nix4vscode.forVscodeExt myDecorators [
+    "ms-vscode.cpptools"
+    "rust-lang.rust-analyzer"
+  ];
+}
+```
+
+Decorator priority (highest to lowest):
+1. External decorators (passed via `decorators` parameter)
+2. Package overrides (in `pkgs.nix4vscode-publisher.extension`)
+3. Local decorator files (in `nix/decorators/`)
