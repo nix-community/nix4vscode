@@ -14,7 +14,25 @@ let
     forOpenVsxVersion
     forOpenVsxPrerelease
     forOpenVsxVersionPrerelease
+
+    forVscodeExt
+    forVscodeExtVersion
+    forVscodeExtPrerelease
+    forVscodeExtVersionPrerelease
+
+    forOpenVsxExt
+    forOpenVsxExtVersion
+    forOpenVsxExtPrerelease
+    forOpenVsxExtVersionPrerelease
     ;
+
+  myDecorators = {
+    "ms-vscode.cpptools" = {
+      postPatch = ''
+        echo "Custom decorator applied"
+      '';
+    };
+  };
 in
 
 {
@@ -35,7 +53,6 @@ in
             ]
             ++ forVscodeVersion "1.100.2" [
               "vadimcn.vscode-lldb"
-              "ms-vscode.cpptools"
               "jnoortheen.nix-ide"
               # theme
               "ms-ceintl.vscode-language-pack-zh-hans"
@@ -45,6 +62,9 @@ in
             ]
             ++ forVscodeVersionPrerelease "1.100.2" [
               "ms-toolsai.vscode-jupyter-cell-tags"
+            ]
+            ++ forVscodeExt myDecorators [
+              "ms-vscode.cpptools"
             ];
           # ++ forOpenVsx [
           #   "redhat.java"
@@ -57,6 +77,12 @@ in
           # ]
           # ++ forOpenVsxVersionPrerelease "1.100.2" [
           #   "Continue.continue"
+          # ];
+          # ++ forVscodeExtVersion myDecorators "1.100.2" [
+          #   "ms-python.python"
+          # ]
+          # ++ forOpenVsxExt myDecorators [
+          #   "redhat.java"
           # ];
         };
       };

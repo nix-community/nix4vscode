@@ -6,12 +6,24 @@
 let
   fetchurlModule = import ./fetchurl/fetchurl.nix { inherit pkgs lib; };
   applyDecorator =
-    mktAttr: system:
+    mktAttr: system: externalDecorators:
     let
       name = "${mktAttr.mktplcRef.publisher}.${mktAttr.mktplcRef.name}";
       overName = "nix4vscode-${mktAttr.mktplcRef.publisher}.${mktAttr.mktplcRef.name}";
+
+      hasExternalDecorator = externalDecorators != null && builtins.hasAttr name externalDecorators;
+      externalDecorator =
+        if hasExternalDecorator then
+          let
+            decorator = externalDecorators.${name};
+          in
+          if builtins.isFunction decorator then decorator { inherit pkgs lib system; } else decorator
+        else
+          null;
     in
-    if builtins.hasAttr overName pkgs then
+    if hasExternalDecorator then
+      lib.attrsets.recursiveUpdate mktAttr externalDecorator
+    else if builtins.hasAttr overName pkgs then
       lib.attrsets.recursiveUpdate mktAttr pkgs.${overName}
     else if builtins.pathExists ./decorators/${name}.nix then
       let
@@ -28,6 +40,7 @@ let
       extensions,
       engine ? pkgs.vscode.version,
       system ? builtins.currentSystem,
+      decorators ? null,
     }:
     let
       # infos = infoExtensionForEngineForSystem extensions engine system;
@@ -60,7 +73,7 @@ let
             };
           };
         in
-        vscode-utils.buildVscodeMarketplaceExtension (applyDecorator attr system)
+        vscode-utils.buildVscodeMarketplaceExtension (applyDecorator attr system decorators)
       ) extensions;
     in
     exts;
