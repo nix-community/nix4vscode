@@ -1,4 +1,4 @@
-import { ExportedData } from '../crates/exporter/bindings/ExportedData.ts';
+import { ExportedData } from '../../crates/exporter/bindings/ExportedData';
 
 interface Marketplace extends ExportedData {}
 

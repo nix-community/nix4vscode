@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "run": "qjs run --allow-read src/main.ts",
+    "bundle": "esbuild src/main.ts --bundle --outfile=out.js --format=esm --external:std",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.10",
+    "vitest": "^3.2.4"
+  }
+}

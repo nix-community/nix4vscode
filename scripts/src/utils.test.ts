@@ -1,35 +1,32 @@
-import { assertEquals, assertNotEquals } from 'jsr:@std/assert';
+import { readFileSync } from 'node:fs';
+import { expect, test } from 'vitest';
 import type { MarketplaceJson } from './types.ts';
-import {
-  getExtensionName,
-  getExtensionVersion,
-  versionForCode,
-} from './utils.ts';
+import { getExtensionName, getExtensionVersion, versionForCode } from './utils';
 
-Deno.test('test name', () => {
+test('test name', () => {
   const testcase = [
     ['cpptools', 'cpptools'],
     ['ms-vscode.cpptools', 'ms-vscode.cpptools'],
     ['ms-vscode.cpptools.1.23.5', 'ms-vscode.cpptools'],
   ];
   for (const [i, o] of testcase) {
-    assertEquals(o, getExtensionName(i));
+    expect(o).eq(getExtensionName(i));
   }
 });
 
-Deno.test('test_version', () => {
+test('test_version', () => {
   const testcase = [
     ['cpptools', ''],
     ['ms-vscode.cpptools', ''],
     ['ms-vscode.cpptools.1.23.5', '1.23.5'],
   ];
   for (const [i, o] of testcase) {
-    assertEquals(o, getExtensionVersion(i));
+    expect(o).eq(getExtensionVersion(i));
   }
 });
 
-Deno.test('test_version', async () => {
-  const content = await Deno.readTextFile('../data/extensions.json');
+test('test_version', async () => {
+  const content = readFileSync('../data/extensions.json').toString();
   const data = JSON.parse(content) as MarketplaceJson;
   const x = versionForCode(
     data,
@@ -39,5 +36,5 @@ Deno.test('test_version', async () => {
     false,
     '1.89.0',
   );
-  assertNotEquals(Object.entries(x).length, 0);
+  expect(Object.entries(x).length).eq(1);
 });
