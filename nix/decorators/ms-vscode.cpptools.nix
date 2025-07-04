@@ -1,11 +1,8 @@
 # https://github.com/NixOS/nixpkgs/raw/refs/heads/master/pkgs/applications/editors/vscode/extensions/ms-vscode.cpptools/default.nix
 {
   pkgs ? import <nixpkgs> { },
-  lib ? pkgs.lib,
-  system ? builtins.currentSystem,
-  gdbUseFixed ? true,
-  gdb ? pkgs.gdb, # The gdb default setting will be fixed to specified. Use version from `PATH` otherwise.
   clang-tools ? pkgs.clang-tools,
+  ...
 }:
 
 {

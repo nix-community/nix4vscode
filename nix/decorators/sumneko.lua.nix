@@ -1,8 +1,4 @@
-{
-  pkgs ? import <nixpkgs> { },
-  lib ? pkgs.lib,
-  system ? builtins.currentSystem,
-}:
+{ ... }:
 
 {
 
