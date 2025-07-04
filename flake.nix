@@ -32,8 +32,16 @@
       customLib = lib.mapAttrs (
         system: pkgs:
         let
+          vscodePath = ./data/extensions.json;
+          openVsxPath = ./data/extensions_openvsx.json;
+
           forVscodeVersionRaw =
-            dataPath: version: exts: pickPreRelease:
+            {
+              dataPath ? vscodePath,
+              version ? pkgs.vscode.version,
+              exts,
+              pickPreRelease ? false,
+            }:
             let
               filters = builtins.map (v: ''--name="${v}"'') exts;
               filter = builtins.concatStringsSep " " filters;
@@ -81,20 +89,46 @@ The following extensions were not found: ${builtins.concatStringsSep "," diff}
             in
             builtins.attrValues validateAttribute;
 
-          vscodePath = ./data/extensions.json;
-          openVsxPath = ./data/extensions_openvsx.json;
+          forOpenVsxVersionRaw =
+            attr:
+            forVscodeVersionRaw {
+              dataPath = openVsxPath;
+              version = pkgs.vscodium.version;
+            }
+            // attr;
 
         in
         {
-          forVscode = exts: forVscodeVersionRaw vscodePath pkgs.vscode.version exts false;
-          forVscodeVersion = version: exts: forVscodeVersionRaw vscodePath version exts false;
-          forVscodePrerelease = exts: forVscodeVersionRaw vscodePath pkgs.vscode.version exts true;
-          forVscodeVersionPrerelease = version: exts: forVscodeVersionRaw vscodePath version exts true;
+          forVscode = exts: forVscodeVersionRaw { inherit exts; };
+          forVscodeVersion = version: exts: forVscodeVersionRaw { inherit exts version; };
+          forVscodePrerelease =
+            exts:
+            forVscodeVersionRaw {
+              inherit exts;
+              pickPreRelease = true;
+            };
+          forVscodeVersionPrerelease =
+            version: exts:
+            forVscodeVersionRaw {
+              inherit version exts;
+              pickPreRelease = true;
+            };
 
-          forOpenVsx = exts: forVscodeVersionRaw openVsxPath pkgs.vscode.version exts false;
-          forOpenVsxVersion = version: exts: forVscodeVersionRaw openVsxPath version exts false;
-          forOpenVsxPrerelease = exts: forVscodeVersionRaw openVsxPath pkgs.vscode.version exts true;
-          forOpenVsxVersionPrerelease = version: exts: forVscodeVersionRaw openVsxPath version exts true;
+          forOpenVsx = exts: forOpenVsxVersionRaw { inherit exts; };
+          forOpenVsxVersion = version: exts: forOpenVsxVersionRaw { inherit exts version; };
+          forOpenVsxPrerelease =
+            exts:
+            forOpenVsxVersionRaw {
+              inherit exts;
+              pickPreRelease = true;
+            };
+          forOpenVsxVersionPrerelease =
+            version: exts:
+            forOpenVsxVersionRaw {
+              inherit version exts;
+              pickPreRelease = true;
+            };
+
         }
       ) pkgsFor;
     in
