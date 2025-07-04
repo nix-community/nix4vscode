@@ -19,17 +19,22 @@
       inherit (nixpkgs) lib;
 
       eachSystem = lib.genAttrs (import systems);
-      pkgsFor = eachSystem (
-        system:
-        import nixpkgs {
-          inherit system;
-          overlays = [
-            self.overlays.forVscode
-          ];
-        }
-      );
+      eachDefaultSystem =
+        f:
+        eachSystem (
+          system:
+          let
+            pkgs = import nixpkgs {
+              inherit system;
+              overlays = [
+                self.overlays.forVscode
+              ];
+            };
+          in
+          f system pkgs
+        );
 
-      customLib = lib.mapAttrs (
+      customLib = eachDefaultSystem (
         system: pkgs:
         let
           vscodePath = ./data/extensions.json;
@@ -130,18 +135,20 @@ The following extensions were not found: ${builtins.concatStringsSep "," diff}
             };
 
         }
-      ) pkgsFor;
+      );
     in
     {
       lib = customLib;
-      devShells = lib.mapAttrs (system: pkgs: {
-        default = pkgs.mkShell {
-          strictDeps = true;
-          packages = with pkgs; [
-            esbuild
-          ];
-        };
-      }) pkgsFor;
+      devShells = eachDefaultSystem (
+        system: pkgs: {
+          default = pkgs.mkShell {
+            strictDeps = true;
+            packages = with pkgs; [
+              esbuild
+            ];
+          };
+        }
+      );
 
       overlays = {
         default = (
