@@ -1,13 +1,26 @@
 import * as std from 'std';
 
-import { parseArgs } from './parse_args';
 import { versionForCode } from './utils';
 
-const _args = parseArgs(scriptArgs, {
-  string: ['engine', 'file', 'platform', 'output', 'help'],
-  boolean: ['prerelease', 'openvsx'],
-  collect: ['name'],
-});
+import { typeFlag } from 'type-flag';
+import type { MarketplaceJson } from './types';
+
+const { flags: _args } = typeFlag(
+  {
+    engine: String,
+    file: String,
+    platform: String,
+    output: String,
+    help: Boolean,
+    prerelease: Boolean,
+    openvsx: Boolean,
+    name: [String],
+  },
+  scriptArgs,
+);
+
+if (_args.help) {
+}
 
 if (
   !_args.file ||
@@ -17,15 +30,27 @@ if (
   _args.help
 ) {
   console.log(`
-Usage deno run main.ts <args> --name "ms-vscode.cpptools" --name "ms-vscode.copilot-mermaid-diagram.0.0.3"
+Usage:
+  qjs script.js [options]
 
-Args:
---file: target to extensions.json
---engine: Vscode Engine
---platform: 'x86_64-linux'| 'i686-linux'| 'aarch64-linux' | 'armv7l-linux' | 'x86_64-darwin' | 'aarch64-darwin'
---output?: writer output to file.
+Options:
+  --engine <version>        VSCode version string, e.g. "1.101.2"
+  --file <file>             Input source file path
+  --platform <platform>     Target platform, one of:
+                            'x86_64-linux', 'i686-linux', 'aarch64-linux',
+                            'armv7l-linux', 'x86_64-darwin', 'aarch64-darwin'
+  --output <path>           Output bundle path
+  --prerelease              Mark version as a prerelease
+  --openvsx                 Enable publishing to Open VSX
+  --name <name>             Component name (can be repeated)
+  --help                    Show this help message
+
+Example:
+  qjs out.js --file ../data/extensions.json --platform aarch64-darwin \\
+    --engine 1.101.2 --name "ms-vscode.cpptools"
 `);
-  std.exit(1);
+
+  std.exit(0);
 }
 
 const args = {
