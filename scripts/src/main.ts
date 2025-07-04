@@ -1,7 +1,9 @@
-import { parseArgs } from './parse_args.ts';
-import { versionForCode } from './utils.ts';
+import * as std from 'std';
 
-const _args = parseArgs(Deno.args, {
+import { parseArgs } from './parse_args';
+import { versionForCode } from './utils';
+
+const _args = parseArgs(scriptArgs, {
   string: ['engine', 'file', 'platform', 'output', 'help'],
   boolean: ['prerelease', 'openvsx'],
   collect: ['name'],
@@ -23,7 +25,7 @@ Args:
 --platform: 'x86_64-linux'| 'i686-linux'| 'aarch64-linux' | 'armv7l-linux' | 'x86_64-darwin' | 'aarch64-darwin'
 --output?: writer output to file.
 `);
-  Deno.exit(0);
+  std.exit(1);
 }
 
 const args = {
@@ -36,7 +38,7 @@ const args = {
   is_openvsx: _args.openvsx,
 };
 
-const content = await Deno.readTextFile(args.file);
+const content = std.loadFile(args.file);
 const data = JSON.parse(content) as MarketplaceJson;
 
 const x = versionForCode(
@@ -50,7 +52,9 @@ const x = versionForCode(
 
 const yata = JSON.stringify(x);
 if (args.output) {
-  await Deno.writeTextFile(args.output, yata);
+  const file = std.open(args.output, 'w');
+  file.puts(yata);
+  file.close();
 } else {
   console.log(yata);
 }

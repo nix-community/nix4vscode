@@ -1,5 +1,5 @@
-import type { MarketplaceJson, NameVersion } from './types.ts';
-import { isVersionValid, normalizeVersion, parseVersion } from './version.ts';
+import type { MarketplaceJson, NameVersion } from './types';
+import { isVersionValid, normalizeVersion, parseVersion } from './version';
 
 export function versionBe(l: string, r: string) {
   const lv = normalizeVersion(parseVersion(l));

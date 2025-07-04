@@ -55,7 +55,7 @@
               filteredExtensions = builtins.fromJSON (
                 builtins.readFile (
                   pkgs.runCommandNoCC "nix4vscode-${version}" { } ''
-                    ${pkgs.deno}/bin/deno run -A ${mainTs} --file ${dataPath} --engine ${version} --platform ${system} ${prerelease} --output=$out ${filter}
+                    ${pkgs.quickjs}/bin/qjs ${mainTs} --file ${dataPath} --engine ${version} --platform ${system} ${prerelease} --output=$out ${filter}
                   ''
                 )
               );
@@ -182,6 +182,7 @@
             strictDeps = true;
             packages = with pkgs; [
               esbuild
+              quickjs
             ];
           };
         }

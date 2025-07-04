@@ -1,4 +1,7 @@
-// parse_args.ts
+// src/main.ts
+import * as std from "std";
+
+// src/parse_args.ts
 var FLAG_REGEXP = /^(?:-(?:(?<doubleDash>-)(?<negated>no-)?)?)(?<key>.+?)(?:=(?<value>.+?))?$/s;
 var LETTER_REGEXP = /[A-Za-z]/;
 var NUMBER_REGEXP = /-?\d+(\.\d*)?(e-?\d+)?$/;
@@ -249,7 +252,7 @@ function parseArgs(args2, options) {
   return argv;
 }
 
-// version.ts
+// src/version.ts
 var VERSION_REGEXP = /^(\^|>=)?((\d+)|x)\.((\d+)|x)\.((\d+)|x)(\-.*)?$/;
 var NOT_BEFORE_REGEXP = /^-(\d{4})(\d{2})(\d{2})$/;
 function isValidVersionStr(version) {
@@ -428,7 +431,7 @@ function isVersionValid(currentVersion, date, requestedVersion) {
   return true;
 }
 
-// utils.ts
+// src/utils.ts
 function versionBe(l, r) {
   const lv = normalizeVersion(parseVersion(l));
   const rv = normalizeVersion(parseVersion(r));
@@ -522,8 +525,8 @@ function versionForCode(data2, name, pre_release, platform, is_openvsx, engine) 
   return x2;
 }
 
-// main.ts
-var _args = parseArgs(Deno.args, {
+// src/main.ts
+var _args = parseArgs(scriptArgs, {
   string: ["engine", "file", "platform", "output", "help"],
   boolean: ["prerelease", "openvsx"],
   collect: ["name"]
@@ -538,7 +541,7 @@ Args:
 --platform: 'x86_64-linux'| 'i686-linux'| 'aarch64-linux' | 'armv7l-linux' | 'x86_64-darwin' | 'aarch64-darwin'
 --output?: writer output to file.
 `);
-  Deno.exit(0);
+  std.exit(1);
 }
 var args = {
   file: _args.file,
@@ -549,7 +552,7 @@ var args = {
   pre_release: _args.prerelease === true,
   is_openvsx: _args.openvsx
 };
-var content = await Deno.readTextFile(args.file);
+var content = std.loadFile(args.file);
 var data = JSON.parse(content);
 var x = versionForCode(
   data,
@@ -561,7 +564,9 @@ var x = versionForCode(
 );
 var yata = JSON.stringify(x);
 if (args.output) {
-  await Deno.writeTextFile(args.output, yata);
+  const file = std.open(args.output, "w");
+  file.puts(yata);
+  file.close();
 } else {
   console.log(yata);
 }

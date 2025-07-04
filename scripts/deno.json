@@ -1,7 +1,0 @@
-{
-  "tasks": {
-    "run": "deno run --allow-read main.ts",
-    "bundle": "esbuild main.ts --bundle --outfile=out.js --format=esm"
-  },
-  "imports": {}
-}
