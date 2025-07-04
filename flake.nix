@@ -92,49 +92,44 @@
             in
             builtins.attrValues validateAttribute;
 
-          forOpenVsxVersionRaw =
+          generateSourceFunctions = rawFunction: {
+            default = extensions: rawFunction { inherit extensions; };
+            version = version: extensions: rawFunction { inherit version extensions; };
+            prerelease =
+              extensions:
+              rawFunction {
+                inherit extensions;
+                pickPreRelease = true;
+              };
+            versionPrerelease =
+              version: extensions:
+              rawFunction {
+                inherit version extensions;
+                pickPreRelease = true;
+              };
+          };
+
+          vscodeVariants = generateSourceFunctions forVscodeVersionRaw;
+          openvsxVariants = generateSourceFunctions (
             attr:
             forVscodeVersionRaw {
               dataPath = openVsxPath;
               version = pkgs.vscodium.version;
             }
-            // attr;
+            // attr
+          );
 
         in
         {
-          forVscode = extensions: forVscodeVersionRaw { inherit extensions; };
-          forVscodeVersion =
-            version: extensions:
-            forVscodeVersionRaw {
-              inherit version extensions;
-            };
-          forVscodePrerelease =
-            extensions:
-            forVscodeVersionRaw {
-              inherit extensions;
-              pickPreRelease = true;
-            };
-          forVscodeVersionPrerelease =
-            version: extensions:
-            forVscodeVersionRaw {
-              inherit version extensions;
-              pickPreRelease = true;
-            };
+          forVscode = vscodeVariants.default;
+          forVscodeVersion = vscodeVariants.version;
+          forVscodePrerelease = vscodeVariants.prerelease;
+          forVscodeVersionPrerelease = vscodeVariants.versionPrerelease;
 
-          forOpenVsx = extensions: forOpenVsxVersionRaw { inherit extensions; };
-          forOpenVsxVersion = version: extensions: forOpenVsxVersionRaw { inherit extensions version; };
-          forOpenVsxPrerelease =
-            extensions:
-            forOpenVsxVersionRaw {
-              inherit extensions;
-              pickPreRelease = true;
-            };
-          forOpenVsxVersionPrerelease =
-            version: extensions:
-            forOpenVsxVersionRaw {
-              inherit version extensions;
-              pickPreRelease = true;
-            };
+          forOpenVsx = openvsxVariants.default;
+          forOpenVsxVersion = openvsxVariants.version;
+          forOpenVsxPrerelease = openvsxVariants.prerelease;
+          forOpenVsxVersionPrerelease = openvsxVariants.versionPrerelease;
 
         }
       );
