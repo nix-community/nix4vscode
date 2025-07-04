@@ -1,11 +1,14 @@
 {
   "scripts": {
-    "run": "qjs run --allow-read src/main.ts",
+    "run": "pnpm bundle && qjs out.js",
     "bundle": "esbuild src/main.ts --bundle --outfile=out.js --format=esm --external:std",
     "test": "vitest run"
   },
   "devDependencies": {
     "@types/node": "^24.0.10",
     "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "type-flag": "^3.0.0"
   }
 }

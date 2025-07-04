@@ -1,257 +1,6 @@
 // src/main.ts
 import * as std from "std";
 
-// src/parse_args.ts
-var FLAG_REGEXP = /^(?:-(?:(?<doubleDash>-)(?<negated>no-)?)?)(?<key>.+?)(?:=(?<value>.+?))?$/s;
-var LETTER_REGEXP = /[A-Za-z]/;
-var NUMBER_REGEXP = /-?\d+(\.\d*)?(e-?\d+)?$/;
-var HYPHEN_REGEXP = /^(-|--)[^-]/;
-var VALUE_REGEXP = /=(?<value>.+)/;
-var FLAG_NAME_REGEXP = /^--[^=]+$/;
-var SPECIAL_CHAR_REGEXP = /\W/;
-var NON_WHITESPACE_REGEXP = /\S/;
-function isNumber(string) {
-  return NON_WHITESPACE_REGEXP.test(string) && Number.isFinite(Number(string));
-}
-function setNested(object, keys, value, collect = false) {
-  keys = [...keys];
-  const key = keys.pop();
-  keys.forEach((key2) => object = object[key2] ??= {});
-  if (collect) {
-    const v = object[key];
-    if (Array.isArray(v)) {
-      v.push(value);
-      return;
-    }
-    value = v ? [v, value] : [value];
-  }
-  object[key] = value;
-}
-function hasNested(object, keys) {
-  for (const key of keys) {
-    const value = object[key];
-    if (!Object.hasOwn(object, key)) return false;
-    object = value;
-  }
-  return true;
-}
-function aliasIsBoolean(aliasMap, booleanSet, key) {
-  const set = aliasMap.get(key);
-  if (set === void 0) return false;
-  for (const alias of set) if (booleanSet.has(alias)) return true;
-  return false;
-}
-function isBooleanString(value) {
-  return value === "true" || value === "false";
-}
-function parseBooleanString(value) {
-  return value !== "false";
-}
-function parseArgs(args2, options) {
-  const {
-    "--": doubleDash = false,
-    alias = {},
-    boolean = false,
-    default: defaults = {},
-    stopEarly = false,
-    string = [],
-    collect = [],
-    negatable = [],
-    unknown: unknownFn = (i) => i
-  } = options ?? {};
-  const aliasMap = /* @__PURE__ */ new Map();
-  const booleanSet = /* @__PURE__ */ new Set();
-  const stringSet = /* @__PURE__ */ new Set();
-  const collectSet = /* @__PURE__ */ new Set();
-  const negatableSet = /* @__PURE__ */ new Set();
-  let allBools = false;
-  if (alias) {
-    for (const [key, value] of Object.entries(alias)) {
-      if (value === void 0) {
-        throw new TypeError("Alias value must be defined");
-      }
-      const aliases = Array.isArray(value) ? value : [value];
-      aliasMap.set(key, new Set(aliases));
-      aliases.forEach(
-        (alias2) => aliasMap.set(
-          alias2,
-          /* @__PURE__ */ new Set([key, ...aliases.filter((it) => it !== alias2)])
-        )
-      );
-    }
-  }
-  if (boolean) {
-    if (typeof boolean === "boolean") {
-      allBools = boolean;
-    } else {
-      const booleanArgs = Array.isArray(boolean) ? boolean : [boolean];
-      for (const key of booleanArgs.filter(Boolean)) {
-        booleanSet.add(key);
-        aliasMap.get(key)?.forEach((al) => {
-          booleanSet.add(al);
-        });
-      }
-    }
-  }
-  if (string) {
-    const stringArgs = Array.isArray(string) ? string : [string];
-    for (const key of stringArgs.filter(Boolean)) {
-      stringSet.add(key);
-      aliasMap.get(key)?.forEach((al) => stringSet.add(al));
-    }
-  }
-  if (collect) {
-    const collectArgs = Array.isArray(collect) ? collect : [collect];
-    for (const key of collectArgs.filter(Boolean)) {
-      collectSet.add(key);
-      aliasMap.get(key)?.forEach((al) => collectSet.add(al));
-    }
-  }
-  if (negatable) {
-    const negatableArgs = Array.isArray(negatable) ? negatable : [negatable];
-    for (const key of negatableArgs.filter(Boolean)) {
-      negatableSet.add(key);
-      aliasMap.get(key)?.forEach((alias2) => negatableSet.add(alias2));
-    }
-  }
-  const argv = { _: [] };
-  function setArgument(key, value, arg, collect2) {
-    if (!booleanSet.has(key) && !stringSet.has(key) && !aliasMap.has(key) && !(allBools && FLAG_NAME_REGEXP.test(arg)) && unknownFn?.(arg, key, value) === false) {
-      return;
-    }
-    if (typeof value === "string" && !stringSet.has(key)) {
-      value = isNumber(value) ? Number(value) : value;
-    }
-    const collectable = collect2 && collectSet.has(key);
-    setNested(argv, key.split("."), value, collectable);
-    aliasMap.get(key)?.forEach((key2) => {
-      setNested(argv, key2.split("."), value, collectable);
-    });
-  }
-  let notFlags = [];
-  const index = args2.indexOf("--");
-  if (index !== -1) {
-    notFlags = args2.slice(index + 1);
-    args2 = args2.slice(0, index);
-  }
-  argsLoop: for (let i = 0; i < args2.length; i++) {
-    const arg = args2[i];
-    const groups = arg.match(FLAG_REGEXP)?.groups;
-    if (groups) {
-      const { doubleDash: doubleDash2, negated } = groups;
-      let key = groups.key;
-      let value = groups.value;
-      if (doubleDash2) {
-        if (value) {
-          if (booleanSet.has(key)) value = parseBooleanString(value);
-          setArgument(key, value, arg, true);
-          continue;
-        }
-        if (negated) {
-          if (negatableSet.has(key)) {
-            setArgument(key, false, arg, false);
-            continue;
-          }
-          key = `no-${key}`;
-        }
-        const next = args2[i + 1];
-        if (next) {
-          if (!booleanSet.has(key) && !allBools && !next.startsWith("-") && (!aliasMap.has(key) || !aliasIsBoolean(aliasMap, booleanSet, key))) {
-            value = next;
-            i++;
-            setArgument(key, value, arg, true);
-            continue;
-          }
-          if (isBooleanString(next)) {
-            value = parseBooleanString(next);
-            i++;
-            setArgument(key, value, arg, true);
-            continue;
-          }
-        }
-        value = stringSet.has(key) ? "" : true;
-        setArgument(key, value, arg, true);
-        continue;
-      }
-      const letters = arg.slice(1, -1).split("");
-      for (const [j, letter] of letters.entries()) {
-        const next = arg.slice(j + 2);
-        if (next === "-") {
-          setArgument(letter, next, arg, true);
-          continue;
-        }
-        if (LETTER_REGEXP.test(letter)) {
-          const groups2 = VALUE_REGEXP.exec(next)?.groups;
-          if (groups2) {
-            setArgument(letter, groups2.value, arg, true);
-            continue argsLoop;
-          }
-          if (NUMBER_REGEXP.test(next)) {
-            setArgument(letter, next, arg, true);
-            continue argsLoop;
-          }
-        }
-        if (letters[j + 1]?.match(SPECIAL_CHAR_REGEXP)) {
-          setArgument(letter, arg.slice(j + 2), arg, true);
-          continue argsLoop;
-        }
-        setArgument(letter, stringSet.has(letter) ? "" : true, arg, true);
-      }
-      key = arg.slice(-1);
-      if (key === "-") continue;
-      const nextArg = args2[i + 1];
-      if (nextArg) {
-        if (!HYPHEN_REGEXP.test(nextArg) && !booleanSet.has(key) && (!aliasMap.has(key) || !aliasIsBoolean(aliasMap, booleanSet, key))) {
-          setArgument(key, nextArg, arg, true);
-          i++;
-          continue;
-        }
-        if (isBooleanString(nextArg)) {
-          const value2 = parseBooleanString(nextArg);
-          setArgument(key, value2, arg, true);
-          i++;
-          continue;
-        }
-      }
-      setArgument(key, stringSet.has(key) ? "" : true, arg, true);
-      continue;
-    }
-    if (unknownFn?.(arg) !== false) {
-      argv._.push(stringSet.has("_") || !isNumber(arg) ? arg : Number(arg));
-    }
-    if (stopEarly) {
-      argv._.push(...args2.slice(i + 1));
-      break;
-    }
-  }
-  for (const [key, value] of Object.entries(defaults)) {
-    const keys = key.split(".");
-    if (!hasNested(argv, keys)) {
-      setNested(argv, keys, value);
-      aliasMap.get(key)?.forEach((key2) => setNested(argv, key2.split("."), value));
-    }
-  }
-  for (const key of booleanSet.keys()) {
-    const keys = key.split(".");
-    if (!hasNested(argv, keys)) {
-      const value = collectSet.has(key) ? [] : false;
-      setNested(argv, keys, value);
-    }
-  }
-  for (const key of stringSet.keys()) {
-    const keys = key.split(".");
-    if (!hasNested(argv, keys) && collectSet.has(key)) {
-      setNested(argv, keys, []);
-    }
-  }
-  if (doubleDash) {
-    argv["--"] = notFlags;
-  } else {
-    argv._.push(...notFlags);
-  }
-  return argv;
-}
-
 // src/version.ts
 var VERSION_REGEXP = /^(\^|>=)?((\d+)|x)\.((\d+)|x)\.((\d+)|x)(\-.*)?$/;
 var NOT_BEFORE_REGEXP = /^-(\d{4})(\d{2})(\d{2})$/;
@@ -277,20 +26,20 @@ function parseVersion(version) {
       preRelease: null
     };
   }
-  const m = version.match(VERSION_REGEXP);
-  if (!m) {
+  const m2 = version.match(VERSION_REGEXP);
+  if (!m2) {
     return null;
   }
   return {
-    hasCaret: m[1] === "^",
-    hasGreaterEquals: m[1] === ">=",
-    majorBase: m[2] === "x" ? 0 : Number.parseInt(m[2], 10),
-    majorMustEqual: m[2] === "x" ? false : true,
-    minorBase: m[4] === "x" ? 0 : Number.parseInt(m[4], 10),
-    minorMustEqual: m[4] === "x" ? false : true,
-    patchBase: m[6] === "x" ? 0 : Number.parseInt(m[6], 10),
-    patchMustEqual: m[6] === "x" ? false : true,
-    preRelease: m[8] || null
+    hasCaret: m2[1] === "^",
+    hasGreaterEquals: m2[1] === ">=",
+    majorBase: m2[2] === "x" ? 0 : Number.parseInt(m2[2], 10),
+    majorMustEqual: m2[2] === "x" ? false : true,
+    minorBase: m2[4] === "x" ? 0 : Number.parseInt(m2[4], 10),
+    minorMustEqual: m2[4] === "x" ? false : true,
+    patchBase: m2[6] === "x" ? 0 : Number.parseInt(m2[6], 10),
+    patchMustEqual: m2[6] === "x" ? false : true,
+    preRelease: m2[8] || null
   };
 }
 function normalizeVersion(version) {
@@ -525,23 +274,170 @@ function versionForCode(data2, name, pre_release, platform, is_openvsx, engine) 
   return x2;
 }
 
+// node_modules/.pnpm/type-flag@3.0.0/node_modules/type-flag/dist/index.mjs
+var V = "known-flag";
+var k = "unknown-flag";
+var C = "argument";
+var { stringify: h } = JSON;
+var O = /\B([A-Z])/g;
+var v = (t) => t.replace(O, "-$1").toLowerCase();
+var { hasOwnProperty: D } = Object.prototype;
+var w = (t, n) => D.call(t, n);
+var L = (t) => Array.isArray(t);
+var b = (t) => typeof t == "function" ? [t, false] : L(t) ? [t[0], true] : b(t.type);
+var d = (t, n) => t === Boolean ? n !== "false" : n;
+var m = (t, n) => typeof n == "boolean" ? n : t === Number && n === "" ? Number.NaN : t(n);
+var R = /[\s.:=]/;
+var B = (t) => {
+  const n = `Flag name ${h(t)}`;
+  if (t.length === 0) throw new Error(`${n} cannot be empty`);
+  if (t.length === 1) throw new Error(`${n} must be longer than a character`);
+  const r = t.match(R);
+  if (r) throw new Error(`${n} cannot contain ${h(r?.[0])}`);
+};
+var K = (t) => {
+  const n = {}, r = (e, o) => {
+    if (w(n, e)) throw new Error(`Duplicate flags named ${h(e)}`);
+    n[e] = o;
+  };
+  for (const e in t) {
+    if (!w(t, e)) continue;
+    B(e);
+    const o = t[e], s = [[], ...b(o), o];
+    r(e, s);
+    const i = v(e);
+    if (e !== i && r(i, s), "alias" in o && typeof o.alias == "string") {
+      const { alias: a } = o, l = `Flag alias ${h(a)} for flag ${h(e)}`;
+      if (a.length === 0) throw new Error(`${l} cannot be empty`);
+      if (a.length > 1) throw new Error(`${l} must be a single character`);
+      r(a, s);
+    }
+  }
+  return n;
+};
+var _ = (t, n) => {
+  const r = {};
+  for (const e in t) {
+    if (!w(t, e)) continue;
+    const [o, , s, i] = n[e];
+    if (o.length === 0 && "default" in i) {
+      let { default: a } = i;
+      typeof a == "function" && (a = a()), r[e] = a;
+    } else r[e] = s ? o : o.pop();
+  }
+  return r;
+};
+var F = "--";
+var G = /[.:=]/;
+var T = /^-{1,2}\w/;
+var N = (t) => {
+  if (!T.test(t)) return;
+  const n = !t.startsWith(F);
+  let r = t.slice(n ? 1 : 2), e;
+  const o = r.match(G);
+  if (o) {
+    const { index: s } = o;
+    e = r.slice(s + 1), r = r.slice(0, s);
+  }
+  return [r, e, n];
+};
+var $ = (t, { onFlag: n, onArgument: r }) => {
+  let e;
+  const o = (s, i) => {
+    if (typeof e != "function") return true;
+    e(s, i), e = void 0;
+  };
+  for (let s = 0; s < t.length; s += 1) {
+    const i = t[s];
+    if (i === F) {
+      o();
+      const l = t.slice(s + 1);
+      r?.(l, [s], true);
+      break;
+    }
+    const a = N(i);
+    if (a) {
+      if (o(), !n) continue;
+      const [l, f, g] = a;
+      if (g) for (let c = 0; c < l.length; c += 1) {
+        o();
+        const u = c === l.length - 1;
+        e = n(l[c], u ? f : void 0, [s, c + 1, u]);
+      }
+      else e = n(l, f, [s]);
+    } else o(i, [s]) && r?.([i], [s]);
+  }
+  o();
+};
+var E = (t, n) => {
+  for (const [r, e, o] of n.reverse()) {
+    if (e) {
+      const s = t[r];
+      let i = s.slice(0, e);
+      if (o || (i += s.slice(e + 1)), i !== "-") {
+        t[r] = i;
+        continue;
+      }
+    }
+    t.splice(r, 1);
+  }
+};
+var U = (t, n = process.argv.slice(2), { ignore: r } = {}) => {
+  const e = [], o = K(t), s = {}, i = [];
+  return i[F] = [], $(n, { onFlag(a, l, f) {
+    const g = w(o, a);
+    if (!r?.(g ? V : k, a, l)) {
+      if (g) {
+        const [c, u] = o[a], y = d(u, l), p = (P, A) => {
+          e.push(f), A && e.push(A), c.push(m(u, P || ""));
+        };
+        return y === void 0 ? p : p(y);
+      }
+      w(s, a) || (s[a] = []), s[a].push(l === void 0 ? true : l), e.push(f);
+    }
+  }, onArgument(a, l, f) {
+    r?.(C, n[l[0]]) || (i.push(...a), f ? (i[F] = a, n.splice(l[0])) : e.push(l));
+  } }), E(n, e), { flags: _(t, o), unknownFlags: s, _: i };
+};
+
 // src/main.ts
-var _args = parseArgs(scriptArgs, {
-  string: ["engine", "file", "platform", "output", "help"],
-  boolean: ["prerelease", "openvsx"],
-  collect: ["name"]
-});
+var { flags: _args } = U(
+  {
+    engine: String,
+    file: String,
+    platform: String,
+    output: String,
+    help: Boolean,
+    prerelease: Boolean,
+    openvsx: Boolean,
+    name: [String]
+  },
+  scriptArgs
+);
+if (_args.help) {
+}
 if (!_args.file || !_args.engine || !_args.platform || _args.name.length === 0 || _args.help) {
   console.log(`
-Usage deno run main.ts <args> --name "ms-vscode.cpptools" --name "ms-vscode.copilot-mermaid-diagram.0.0.3"
+Usage:
+  qjs script.js [options]
 
-Args:
---file: target to extensions.json
---engine: Vscode Engine
---platform: 'x86_64-linux'| 'i686-linux'| 'aarch64-linux' | 'armv7l-linux' | 'x86_64-darwin' | 'aarch64-darwin'
---output?: writer output to file.
+Options:
+  --engine <version>        VSCode version string, e.g. "1.101.2"
+  --file <file>             Input source file path
+  --platform <platform>     Target platform, one of:
+                            'x86_64-linux', 'i686-linux', 'aarch64-linux',
+                            'armv7l-linux', 'x86_64-darwin', 'aarch64-darwin'
+  --output <path>           Output bundle path
+  --prerelease              Mark version as a prerelease
+  --openvsx                 Enable publishing to Open VSX
+  --name <name>             Component name (can be repeated)
+  --help                    Show this help message
+
+Example:
+  qjs out.js --file ../data/extensions.json --platform aarch64-darwin \\
+    --engine 1.101.2 --name "ms-vscode.cpptools"
 `);
-  std.exit(1);
+  std.exit(0);
 }
 var args = {
   file: _args.file,
