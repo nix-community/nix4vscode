@@ -1,6 +1,10 @@
 {
-  pkgs ? import <nixpkgs> { },
+  decorators ? null,
+  extensions,
+  isOpenVsx ? false,
   lib ? pkgs.lib,
+  pkgs ? import <nixpkgs> { },
+  system ? pkgs.system,
 }:
 
 let
@@ -35,13 +39,24 @@ let
     else
       mktAttr;
 
-  extensionsFromInfo =
+  getUrl =
     {
-      extensions,
-      engine ? pkgs.vscode.version,
-      system ? builtins.currentSystem,
-      decorators ? null,
+      publisher,
+      name,
+      version,
+      platform ? null,
     }:
+    let
+      platformSuffix = if platform == null || platform == "" then "" else "targetPlatform=${platform}";
+      platformInfix = if platform == null || platform == "" then "" else "/${platform}";
+      extName = "${publisher}.${name}";
+    in
+    if isOpenVsx then
+      "https://open-vsx.org/api/${publisher}/${name}${platformInfix}/${version}/file/${extName}-${version}${platformSuffix}.vsix"
+    else
+      "https://${publisher}.gallery.vsassets.io/_apis/public/gallery/publisher/${publisher}/extension/${name}/${version}/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage?${platformSuffix}";
+
+  extensionsFromInfo =
     let
       # infos = infoExtensionForEngineForSystem extensions engine system;
       vscode-utils = pkgs.vscode-utils;
@@ -51,7 +66,11 @@ let
           parts = lib.strings.splitString "." xname;
           publisher = builtins.elemAt parts 0;
           name = builtins.elemAt parts 1;
-          url = info.u;
+          url = info.u or getUrl {
+            inherit publisher name;
+            version = info.v;
+            platform = info.p or null;
+          };
         in
         fetchurlModule.fetchurl {
           url = url;
@@ -78,8 +97,4 @@ let
     in
     exts;
 in
-{
-  inherit
-    extensionsFromInfo
-    ;
-}
+extensionsFromInfo
