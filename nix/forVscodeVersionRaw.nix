@@ -9,6 +9,7 @@
 }:
 let
   inherit (pkgs) lib system;
+  matchesVscodeVersion = import ./matchesVscodeVersion.nix lib version;
   allExtensions = lib.importJSON dataPath;
   platformMap = {
     x86_64-linux = "linux-x64";
@@ -49,69 +50,6 @@ let
       fullVersion = lib.concatStringsSep "." versions;
     in
     lib.nameValuePair (lib.toLower fullName) fullVersion;
-
-  /**
-    Indicate if the given version selector matches the vscode version.
-
-    - `^M.m.p` means `>=M.m.p`
-    - `~M.m.p` is undocumented. We assume it means `>=M.m.p && <M.(m+1).0`
-
-    DOCS https://code.visualstudio.com/api/working-with-extensions/publishing-extension#visual-studio-code-compatibility
-
-    # Type
-
-    ```
-    matchesVscodeVersion :: string -> boolean
-    ```
-
-    # Example
-
-    In the following examples, the contextual `vscodeVersion` is `"1.50.3"`:
-
-    ```nix
-    matchesVscodeVersion ">=1.50.1" -> true
-    matchesVscodeVersion ">1.50.1" -> true
-    matchesVscodeVersion "^1.50.1" -> true
-    matchesVscodeVersion "1.50.1" -> false
-    matchesVscodeVersion "~1.50.1" -> true
-
-    matchesVscodeVersion ">=1.49.1" -> true
-    mmatchesVscodeVersion ">1.49.1" -> true
-    matchesVscodeVersion "^1.49.1" -> true
-    matchesVscodeVersion "1.49.1" -> false
-    matchesVscodeVersion "~1.49.1" -> false
-
-    matchesVscodeVersion ">=0.99.1" -> true
-    matchesVscodeVersion "^0.99.1" -> false
-    matchesVscodeVersion "0.99.1" -> false
-    matchesVscodeVersion "~0.99.1" -> false
-    ```
-  */
-  matchesVscodeVersion =
-    versionSelector:
-    let
-      operator =
-        if lib.hasPrefix ">=" versionSelector then
-          ">="
-        else if lib.hasPrefix "^" versionSelector then
-          "^"
-        else if lib.hasPrefix "~" versionSelector then
-          "~"
-        else
-          "=";
-      version = lib.removePrefix operator versionSelector;
-      major = lib.versions.major version;
-      minor = lib.versions.minor version;
-      nextMinor = builtins.toString (lib.toInt minor + 1);
-      results = {
-        ">=" = lib.versionAtLeast version version;
-        ">" = !results."=" && results.">=";
-        "^" = results.">=";
-        "~" = results.">=" && lib.versionOlder "${major}.${nextMinor}" version;
-        "=" = version == version;
-      };
-    in
-    results.${operator};
 
   /**
     Get all versions of an extension from the allExtensions attribute set.

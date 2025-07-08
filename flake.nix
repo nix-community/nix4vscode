@@ -137,6 +137,7 @@
           default = pkgs.mkShell {
             strictDeps = true;
             packages = with pkgs; [
+              nix-unit
               nixfmt-rfc-style
               rustfmt
               taplo
@@ -157,6 +158,30 @@
           }
         );
       };
+
+      tests = import ./tests {
+        inherit (nixpkgs) lib;
+      };
+
+      checks = eachDefaultSystem (
+        system: pkgs: {
+          default =
+            pkgs.runCommand "tests"
+              {
+                nativeBuildInputs = [ pkgs.nix-unit ];
+              }
+              ''
+                export HOME="$(realpath .)"
+                # The nix derivation must be able to find all used inputs in the
+                # nix-store because it cannot download it during buildTime.
+                nix-unit --eval-store "$HOME" \
+                  --extra-experimental-features flakes \
+                  --override-input nixpkgs ${nixpkgs} \
+                  --override-input systems ${systems} \
+                  --flake ${self}#tests > $out
+              '';
+        }
+      );
 
     };
 }
