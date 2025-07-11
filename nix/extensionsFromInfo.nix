@@ -66,11 +66,12 @@ let
           parts = lib.strings.splitString "." xname;
           publisher = builtins.elemAt parts 0;
           name = builtins.elemAt parts 1;
-          url = info.u or getUrl {
-            inherit publisher name;
-            version = info.v;
-            platform = info.p or null;
-          };
+          url =
+            info.u or (getUrl {
+              inherit publisher name;
+              version = info.v;
+              platform = info.p or null;
+            });
         in
         fetchurlModule.fetchurl {
           url = url;
