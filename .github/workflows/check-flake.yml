@@ -1,4 +1,4 @@
-name: build-example
+name: check-flake
 
 on:
   workflow_dispatch:
@@ -19,11 +19,6 @@ jobs:
           extra_nix_config: |
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build example
-        working-directory: example
+      - name: Flake check
         run: |
-          nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixpkgs
-          nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
-          nix-channel --update
-          nix-shell '<home-manager>' -A install
-          make
+          nix flake check -L
