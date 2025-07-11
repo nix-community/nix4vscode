@@ -53,9 +53,6 @@ in
             ]
             ++ forVscodeVersion "1.100.2" [
               "vadimcn.vscode-lldb"
-              "jnoortheen.nix-ide"
-              # theme
-              "ms-ceintl.vscode-language-pack-zh-hans"
             ]
             ++ forVscodePrerelease [
               "ms-toolsai.vscode-jupyter-slideshow"
@@ -65,25 +62,37 @@ in
             ]
             ++ forVscodeExt myDecorators [
               "ms-vscode.cpptools"
+            ]
+            ++ forVscodeExtPrerelease myDecorators [
+              "matepek.vscode-catch2-test-adapter"
+            ]
+            ++ forVscodeExtVersionPrerelease myDecorators "1.100.2" [
+              "ms-azuretools.vscode-containers"
+            ]
+            ++ forOpenVsx [
+              "jnoortheen.nix-ide"
+            ]
+            ++ forOpenVsxVersion "1.100.2" [
+              "ms-ceintl.vscode-language-pack-zh-hans"
+            ]
+            ++ forOpenVsxPrerelease [
+              # "Dart-Code.flutter"
+            ]
+            ++ forOpenVsxVersionPrerelease "1.100.2" [
+              # "Continue.continue"
+            ]
+            ++ forVscodeExtVersion myDecorators "1.100.2" [
+              # "ms-python.python"
+            ]
+            ++ forOpenVsxExt myDecorators [
+              # "redhat.java"
+            ]
+            ++ forOpenVsxExtVersion myDecorators "1.100.2" [
+            ]
+            ++ forOpenVsxExtPrerelease myDecorators [
+            ]
+            ++ forOpenVsxExtVersionPrerelease myDecorators "1.100.2" [
             ];
-          # ++ forOpenVsx [
-          #   "redhat.java"
-          # ];
-          # ++ forOpenVsxVersion "1.100.2" [
-          # "llvm-vs-code-extensions.vscode-clangd"
-          # ]
-          # ++ forOpenVsxPrerelease [
-          #   "Dart-Code.flutter"
-          # ]
-          # ++ forOpenVsxVersionPrerelease "1.100.2" [
-          #   "Continue.continue"
-          # ];
-          # ++ forVscodeExtVersion myDecorators "1.100.2" [
-          #   "ms-python.python"
-          # ]
-          # ++ forOpenVsxExt myDecorators [
-          #   "redhat.java"
-          # ];
         };
       };
     };

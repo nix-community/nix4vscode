@@ -88,21 +88,25 @@
           vscodeVariants = generateSourceFunctions forVscodeVersionRaw;
           openvsxVariants = generateSourceFunctions (
             attr:
-            forVscodeVersionRaw {
-              isOpenVsx = true;
-              version = pkgs.vscodium.version;
-            }
-            // attr
+            forVscodeVersionRaw (
+              {
+                isOpenVsx = true;
+                version = pkgs.vscodium.version;
+              }
+              // attr
+            )
           );
 
           vscodeExtVariants = generateSourceFunctionsExt forVscodeVersionRaw;
           openvsxExtVariants = generateSourceFunctionsExt (
             attr:
-            forVscodeVersionRaw {
-              isOpenVsx = true;
-              version = pkgs.vscodium.version;
-            }
-            // attr
+            forVscodeVersionRaw (
+              {
+                isOpenVsx = true;
+                version = pkgs.vscodium.version;
+              }
+              // attr
+            )
           );
 
         in
