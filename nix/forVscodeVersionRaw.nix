@@ -100,10 +100,13 @@ let
           wantedVersion
         else
           throw "Extension ${wantedVersion} not found in ${lib.concatStringsSep ", " matchingVersions}";
+      firstWithoutPlatform = lib.findFirst (
+        spec: spec.v == reallyWantedVersion
+      ) (throw "Could not find version '${reallyWantedVersion}' for extension ${name}") filteredSpec;
     in
     lib.findFirst (
-      v: v.v == reallyWantedVersion
-    ) (throw "Could not find version '${reallyWantedVersion}' for extension ${name}") filteredSpec;
+      spec: spec.v == reallyWantedVersion && lib.hasAttr "p" spec
+    ) firstWithoutPlatform filteredSpec;
 
   filteredExtensions = lib.mapAttrs getBestVersionSpec wantedExts;
 
