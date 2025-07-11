@@ -74,7 +74,9 @@ let
     ">" = !results."=" && results.">=";
     "^" =
       results.">="
-      && lib.versionOlder vscodeVersion (if major == "0" && vscodeMajor == "0" then "0.${nextMinor}" else nextMajor);
+      && lib.versionOlder vscodeVersion (
+        if major == "0" && vscodeMajor == "0" then "0.${nextMinor}" else nextMajor
+      );
     "~" = results.">=" && lib.versionOlder vscodeVersion "${major}.${nextMinor}";
     "=" =
       xChangedPrefix == vscodeVersion || xChangedPrefix == "${vscodeMajor}.${vscodeMinor}.${vscodePatch}";
