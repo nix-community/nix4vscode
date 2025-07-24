@@ -14,7 +14,7 @@ repos:
     rev: "v0.4.0"
     hooks:
     - id: biome-check
-      additional_dependencies: ["@biomejs/biome@1.9.4"]
+      additional_dependencies: ["@biomejs/biome@2.0.0"]
       exclude: 'data/.*'
 
   - repo: local
