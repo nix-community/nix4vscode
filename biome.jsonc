@@ -1,10 +1,12 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
-  "organizeImports": {
-    "enabled": true
-  },
-  "files": {
-    "ignore": ["data/*.json", "scripts/out.js"]
+  "$schema": "https://biomejs.dev/schemas/2.0.0/schema.json",
+
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
   },
   "formatter": {
     "indentStyle": "space",
@@ -24,25 +26,28 @@
     }
   },
   "linter": {
-    "ignore": ["scripts/*.ts", "data/*.json"],
     "rules": {
       "correctness": {
-        "noUnusedImports": "warn",
-        "noUnusedVariables": "warn",
-        "useExhaustiveDependencies": "off"
+        "noUnusedImports": "off",
+        "noUnusedVariables": "off",
+        "useExhaustiveDependencies": "off",
+        "useHookAtTopLevel": "warn"
       },
       "style": {
         "useConst": "warn",
         "useNamingConvention": {
-          "level": "warn",
+          "level": "off",
           "options": {
             "requireAscii": true,
-            "strictCase": true
+            "strictCase": false
           }
         }
       },
       "complexity": {
         "noForEach": "off"
+      },
+      "suspicious": {
+        "noExplicitAny": "warn"
       },
       "security": {
         "noDangerouslySetInnerHtml": "off"
@@ -52,10 +57,12 @@
       },
       "nursery": {
         "useSortedClasses": {
+          "options": {},
           "level": "warn",
           "fix": "safe"
         }
       }
-    }
+    },
+    "includes": ["**/*.{js,jsx,ts,tsx,astro}"]
   }
 }
