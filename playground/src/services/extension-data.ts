@@ -1,15 +1,16 @@
 import { useQuery } from '@tanstack/react-query';
 import type { DataSource, ExtensionData } from '@/types/index';
 
-// Import data directly in development
-import vscodeData from '../../../data/extensions.json';
-import openvsxData from '../../../data/extensions_openvsx.json';
-
 const PRODUCTION_SOURCES = {
   vscode:
     'https://github.com/nix-community/nix4vscode/raw/refs/heads/master/data/extensions.json',
   openvsx:
     'https://github.com/nix-community/nix4vscode/raw/refs/heads/master/data/extensions_openvsx.json',
+};
+
+const DEVELOPMENT_SOURCES = {
+  vscode: '../../../data/extensions.json',
+  openvsx: '../../../data/extensions_openvsx.json',
 };
 
 const isDevelopment = import.meta.env.DEV;
@@ -18,8 +19,12 @@ async function fetchExtensionData(
   dataSource: DataSource,
 ): Promise<ExtensionData> {
   if (isDevelopment) {
-    // Return imported data directly in development
-    const data = dataSource === 'vscode' ? vscodeData : openvsxData;
+    // Use dynamic import in development
+    const modulePath = DEVELOPMENT_SOURCES[dataSource];
+    console.log(`Dynamically importing ${dataSource} data from ${modulePath}`);
+
+    const module = await import(/* @vite-ignore */ modulePath);
+    const data = module.default;
     return data as ExtensionData;
   }
 
