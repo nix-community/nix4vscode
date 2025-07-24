@@ -53,6 +53,7 @@ in
             ]
             ++ forVscodeVersion "1.100.2" [
               "vadimcn.vscode-lldb"
+              "continue.continue.1.1.67"
             ]
             ++ forVscodePrerelease [
               "ms-toolsai.vscode-jupyter-slideshow"
