@@ -3,6 +3,9 @@ name: deploy-playground
 on:
   push:
     branches: [ master ]
+    paths:
+      - playground/**
+      - .github/workflows/deploy-playground.yml
   workflow_dispatch:
 
 permissions:
