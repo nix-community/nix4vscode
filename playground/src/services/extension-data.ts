@@ -4,9 +4,8 @@ import type { DataSource, ExtensionData } from '@/types/index';
 const PRODUCTION_SOURCES = {
   vscode:
     'https://api.github.com/repos/nix-community/nix4vscode/contents/data/extensions.json',
-  // 'https://github.com/nix-community/nix4vscode/raw/refs/heads/master/data/extensions.json',
   openvsx:
-    'https://github.com/nix-community/nix4vscode/raw/refs/heads/master/data/extensions_openvsx.json',
+    'https://api.github.com/repos/nix-community/nix4vscode/contents/data/extensions_openvsx.json',
 };
 
 const isDevelopment = import.meta.env.DEV;
