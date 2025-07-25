@@ -1,14 +1,17 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { useState } from 'react';
+import { QueryClientProvider } from '@tanstack/react-query';
+import { Search } from 'lucide-react';
+import { useId, useState } from 'react';
+import { VscVscode } from 'react-icons/vsc';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 import { Toaster } from '@/components/ui/sonner';
 import { useSearch } from '@/hooks/useSearch';
 import { queryClient } from '@/lib/query-client';
 import { useExtensionData } from '@/services/extension-data';
-import type { DataSource, SearchFilters } from '@/types/index';
-import { Button } from './ui/button';
-import { Checkbox } from './ui/checkbox';
-import { Input } from './ui/input';
-import { Label } from './ui/label';
+import type { SearchFilters } from '@/types/index';
 import VirtualExtensionList from './VirtualExtensionList';
 
 function SearchContent() {
@@ -28,6 +31,9 @@ function SearchContent() {
 
   const { data, isLoading, error } = useExtensionData(filters.dataSource);
   const filteredExtensions = useSearch(data, filters);
+  const search_input = useId();
+  const version_input = useId();
+  const prerelease = useId();
 
   return (
     <div className="min-h-screen bg-background">
@@ -40,15 +46,11 @@ function SearchContent() {
           </p>
         </div>
 
-        {/* Search Controls */}
-        <div className="mx-auto mb-8 max-w-4xl">
-          <div className="space-y-4 rounded-lg border bg-card p-6">
-            {/* Data Source Selector */}
+        <Card className="mx-auto mb-8 max-w-4xl">
+          <CardContent className="flex flex-col gap-4">
             <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-              <span className="min-w-fit font-medium text-sm">
-                Data Source:
-              </span>
-              <div className="flex gap-2">
+              <span>Data Source: </span>
+              <div className="flex gap-4">
                 <Button
                   type="button"
                   onClick={() => updateFilter('dataSource', 'vscode')}
@@ -70,16 +72,15 @@ function SearchContent() {
               </div>
             </div>
 
-            {/* Search Input */}
-            <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+            <div className="flex flex-row items-center gap-4">
               <Label
-                htmlFor="search-input"
+                htmlFor={search_input}
                 className="min-w-fit font-medium text-sm"
               >
-                Search:
+                <Search className="mt-1 h-6 w-6" />
               </Label>
               <Input
-                id="search-input"
+                id={search_input}
                 type="text"
                 value={filters.query}
                 onChange={e => updateFilter('query', e.target.value)}
@@ -87,16 +88,15 @@ function SearchContent() {
               />
             </div>
 
-            {/* Additional Filters */}
-            <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+            <div className="flex flex-row items-center gap-4">
               <Label
-                htmlFor="version-input"
+                htmlFor={version_input}
                 className="min-w-fit font-medium text-sm"
               >
-                VSCode Version:
+                <VscVscode className="mt-1 h-6 w-6" />
               </Label>
               <Input
-                id="version-input"
+                id={version_input}
                 type="text"
                 value={filters.vscodeVersion}
                 onChange={e => updateFilter('vscodeVersion', e.target.value)}
@@ -106,18 +106,18 @@ function SearchContent() {
 
             <div className="flex items-center gap-2">
               <Checkbox
-                id="prerelease"
+                id={prerelease}
                 checked={filters.includePrerelease}
                 onCheckedChange={checked => {
                   updateFilter('includePrerelease', checked === true);
                 }}
               />
-              <label htmlFor="prerelease" className="font-medium text-sm">
+              <label htmlFor={prerelease} className="font-medium text-sm">
                 Include prerelease versions
               </label>
             </div>
-          </div>
-        </div>
+          </CardContent>
+        </Card>
 
         {/* Results Section */}
         <div className="mx-auto max-w-6xl">

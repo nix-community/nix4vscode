@@ -45,7 +45,7 @@ export function useSearch(
         // Filter versions based on criteria
         const filteredVersions = extension.versions.filter(version => {
           // VSCode version compatibility
-          if (filters.vscodeVersion && filters.vscodeVersion.trim()) {
+          if (filters.vscodeVersion?.trim()) {
             if (!versionMatches(version.e, filters.vscodeVersion)) {
               return false;
             }
@@ -66,7 +66,7 @@ export function useSearch(
         ...extension,
         versions: extension.versions.filter(version => {
           // Apply same filters to versions
-          if (filters.vscodeVersion && filters.vscodeVersion.trim()) {
+          if (filters.vscodeVersion?.trim()) {
             if (!versionMatches(version.e, filters.vscodeVersion)) {
               return false;
             }
