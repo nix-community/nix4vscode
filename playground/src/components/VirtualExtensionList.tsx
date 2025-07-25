@@ -1,6 +1,8 @@
 import { useVirtualizer } from '@tanstack/react-virtual';
 import { ChevronDown, ChevronRight } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
+import { FaApple, FaFlask, FaLinux } from 'react-icons/fa';
+import { IoEarth } from 'react-icons/io5';
 import { toast } from 'sonner';
 import type { ExportedData, ExtensionItem } from '@/types/index';
 import { Badge } from './ui/badge';
@@ -16,6 +18,31 @@ interface ExtensionItemComponentProps {
   onToggleExpand: () => void;
 }
 
+function platformIcon(platform: string | null) {
+  if (!platform) {
+    return <IoEarth className="h-5 w-5" title="Universal" />;
+  }
+  const isDarwin = platform.toLowerCase().includes('darwin');
+  const isX86 = platform.toLowerCase().includes('64');
+  const c = isX86 ? 'x86' : 'ARM';
+
+  if (isDarwin) {
+    return (
+      <div className="flex gap-2">
+        <FaApple className="h-5 w-5" title={platform} />
+        {c}
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex gap-2">
+      <FaLinux className="h-5 w-5" title={platform} />
+      {c}
+    </div>
+  );
+}
+
 function VersionRow({ version }: { version: ExportedData }) {
   return (
     <div className="flex items-center justify-between gap-4 border-border/50 border-t px-4 py-2 text-sm">
@@ -28,13 +55,13 @@ function VersionRow({ version }: { version: ExportedData }) {
         </Badge>
         <span className="truncate text-muted-foreground">{version.e}</span>
         <span className="text-muted-foreground text-xs">
-          {version.p || 'Universal'}
+          {platformIcon(version.p)}
         </span>
       </div>
       {version.r && (
-        <span className="rounded bg-orange-100 px-1.5 py-0.5 text-orange-800 text-xs">
-          Prerelease
-        </span>
+        <Badge className="bg-orange-100 text-orange-800 text-xs">
+          <FaFlask />
+        </Badge>
       )}
       <Badge
         variant="secondary"
@@ -46,7 +73,7 @@ function VersionRow({ version }: { version: ExportedData }) {
           }
         }}
       >
-        {version.h.slice(0, 8)}...
+        {version.h.slice(0, 6)}
       </Badge>
     </div>
   );
@@ -87,18 +114,18 @@ function ExtensionItemComponent({
             <div className="mt-1 text-muted-foreground text-sm">
               <span className="inline-flex items-center gap-2">
                 <span>Latest: {latestVersion?.v}</span>
-                {latestVersion?.r && (
-                  <span className="rounded bg-orange-100 px-1.5 py-0.5 text-orange-800 text-xs">
-                    Prerelease
-                  </span>
-                )}
               </span>
             </div>
             <div className="mt-1 text-muted-foreground text-xs">
               Engine: {latestVersion?.e} | Platform: {latestVersion?.p || 'Any'}
             </div>
           </div>
-          <div className="flex flex-col items-end gap-1">
+          <div className="flex flex-row items-end gap-2">
+            {latestVersion?.r && (
+              <Badge className="bg-orange-100 text-orange-800 text-xs">
+                <FaFlask />
+              </Badge>
+            )}
             <Badge
               variant="secondary"
               className="cursor-pointer font-mono"
@@ -110,7 +137,7 @@ function ExtensionItemComponent({
                 }
               }}
             >
-              {latestVersion?.h.slice(0, 8)}...
+              {latestVersion?.h.slice(0, 6)}
             </Badge>
           </div>
         </div>
