@@ -23,7 +23,7 @@ pub struct MiniSerializer {
 impl Serializer for MiniSerializer {
     type Ok = String;
 
-    type Error = toml_edit::ser::Error;
+    type Error = toml_edit::ser::SerializerError;
 
     type SerializeSeq = Self;
 
@@ -218,7 +218,7 @@ impl Serializer for MiniSerializer {
 impl SerializeStruct for MiniSerializer {
     type Ok = String;
 
-    type Error = toml_edit::ser::Error;
+    type Error = toml_edit::ser::SerializerError;
 
     fn serialize_field<T>(&mut self, key: &'static str, value: &T) -> Result<(), Self::Error>
     where
@@ -248,7 +248,7 @@ impl SerializeStruct for MiniSerializer {
 impl SerializeSeq for MiniSerializer {
     type Ok = String;
 
-    type Error = toml_edit::ser::Error;
+    type Error = toml_edit::ser::SerializerError;
 
     fn serialize_element<T>(&mut self, value: &T) -> Result<(), Self::Error>
     where
@@ -276,7 +276,7 @@ impl SerializeSeq for MiniSerializer {
 impl SerializeMap for MiniSerializer {
     type Ok = String;
 
-    type Error = toml_edit::ser::Error;
+    type Error = toml_edit::ser::SerializerError;
 
     fn serialize_key<T>(&mut self, key: &T) -> Result<(), Self::Error>
     where
