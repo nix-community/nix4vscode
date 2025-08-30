@@ -81,6 +81,8 @@ pub async fn fetch_hash(
 
 pub async fn compute_hash(asset_url: &str) -> anyhow::Result<String> {
     let sha256 = tokio::process::Command::new("nix-prefetch-url")
+        .arg("--name")
+        .arg("prefetched-asset.zip") // Ensure filename is valid for Open VSX URLs containing @
         .arg(asset_url)
         .output()
         .await?
