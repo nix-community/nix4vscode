@@ -19,18 +19,25 @@ pub fn render_assert_url(
     version: &str,
     platform: Option<&str>,
 ) -> String {
-    let platform_suffix = match platform {
-        Some(platform) if !platform.is_empty() => {
-            format!("targetPlatform={platform}")
-        }
-        _ => String::default(),
-    };
     if !is_open_vsx {
+        let platform_suffix = match platform {
+            Some(platform) if !platform.is_empty() => {
+                format!("targetPlatform={platform}")
+            }
+            _ => String::default(),
+        };
+
         return format!(
             "https://{publisher}.gallery.vsassets.io/_apis/public/gallery/publisher/{publisher}/extension/{name}/{version}/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage?{platform_suffix}"
         );
     }
 
+    let platform_suffix = match platform {
+        Some(platform) if !platform.is_empty() => {
+            format!("@{platform}")
+        }
+        _ => String::default(),
+    };
     let platform_infix = match platform {
         Some(platform) if !platform.is_empty() => {
             format!("/{platform}")
