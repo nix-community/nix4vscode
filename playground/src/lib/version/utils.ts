@@ -46,14 +46,19 @@ export function getAssertUrl(
   version: string,
   platform?: string,
 ) {
-  const platformSuffix =
-    platform === undefined || platform.length === 0
-      ? ''
-      : `targetPlatform=${platform}`;
   if (!isOpenVsx) {
+    const platformSuffix =
+      platform === undefined || platform.length === 0
+        ? ''
+        : `targetPlatform=${platform}`;
+
     return `https://${publisher}.gallery.vsassets.io/_apis/public/gallery/publisher/${publisher}/extension/${name}/${version}/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage?${platformSuffix}`;
   }
 
+  const platformSuffix =
+    platform === undefined || platform.length === 0
+      ? ''
+      : `@${platform}`;
   const platformInfix =
     platform === undefined || platform.length === 0 ? '' : `/${platform}`;
   const extName = `${publisher}.${name}`;
