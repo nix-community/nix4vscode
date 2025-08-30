@@ -6,4 +6,5 @@
   upstreamVersionTests = import ./upstreamVersionTests.nix {
     inherit lib;
   };
+  getExtensionUrl = import ./getExtensionUrl.nix;
 }
