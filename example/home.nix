@@ -56,9 +56,11 @@ in
             ]
             ++ forVscodePrerelease [
               "ms-toolsai.vscode-jupyter-slideshow"
+              "ms-dotnettools.csdevkit"
             ]
             ++ forVscodeVersionPrerelease "1.100.2" [
               "ms-toolsai.vscode-jupyter-cell-tags"
+              "ms-dotnettools.csharp"
             ]
             ++ forVscodeExt myDecorators [
               "ms-vscode.cpptools"
@@ -76,22 +78,25 @@ in
               "ms-ceintl.vscode-language-pack-zh-hans"
             ]
             ++ forOpenVsxPrerelease [
-              # "Dart-Code.flutter"
+              "Dart-Code.flutter"
             ]
             ++ forOpenVsxVersionPrerelease "1.100.2" [
-              # "Continue.continue"
+              "Continue.continue"
             ]
             ++ forVscodeExtVersion myDecorators "1.100.2" [
-              # "ms-python.python"
+              "ms-python.python"
             ]
             ++ forOpenVsxExt myDecorators [
-              # "redhat.java"
+              "redhat.java"
             ]
             ++ forOpenVsxExtVersion myDecorators "1.100.2" [
+              "charliermarsh.ruff"
             ]
             ++ forOpenVsxExtPrerelease myDecorators [
+              "svelte.svelte-vscode"
             ]
             ++ forOpenVsxExtVersionPrerelease myDecorators "1.100.2" [
+              "posit.shiny"
             ];
         };
       };
