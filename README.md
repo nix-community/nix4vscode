@@ -47,7 +47,7 @@ Alternatively, if you use nix-darwin or NixOS you can add overlays to `nixpkgs` 
 ```nix
 # `self` or `input` attribute is the attribute you pass via `specialArgs` when you call `darwinSystem` or `nixosSystem`
 { self, ... }: {
-    nixpkgs.overlays = [ self.inputs.nix4vscode.forVscode ];
+    nixpkgs.overlays = [ self.inputs.nix4vscode.overlays.forVscode ];
 }
 ```
 
