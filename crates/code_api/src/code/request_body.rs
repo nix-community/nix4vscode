@@ -1,14 +1,16 @@
-use derive::api;
-
 use super::*;
 
-#[api]
+#[derive(serde::Serialize, serde::Deserialize, Debug, Clone, Default)]
+#[serde(default)]
+#[serde(rename_all = "camelCase")]
 pub struct ICriterium {
     pub filter_type: FilterType,
     pub value: String,
 }
 
-#[api(nodefault)]
+#[derive(serde::Serialize, serde::Deserialize, Debug, Clone)]
+#[serde(default)]
+#[serde(rename_all = "camelCase")]
 pub struct IQueryState {
     pub page_number: u64,
     #[serde(skip_serializing_if = "is_u64_max")]

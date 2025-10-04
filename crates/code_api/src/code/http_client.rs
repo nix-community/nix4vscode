@@ -125,7 +125,7 @@ impl HttpClient {
                 if !j.is_empty() { j } else { i }
             }
             Err(err) => {
-                error!("Error happend when get target_platform: {err}");
+                error!("Error happened when get target_platform: {err}");
                 vec![]
             }
         }

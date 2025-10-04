@@ -1,15 +1,16 @@
 use anyhow::anyhow;
-use derive::api;
 use itertools::Itertools;
-use serde_with::serde_as;
 use serde_with::DefaultOnNull;
+use serde_with::serde_as;
 
 use crate::code::PropertyType;
 
 use super::*;
 
 #[serde_as]
-#[api]
+#[derive(serde::Serialize, serde::Deserialize, Debug, Clone, Default)]
+#[serde(default)]
+#[serde(rename_all = "camelCase")]
 pub struct IRawGalleryExtensionVersion {
     pub version: String,
     pub last_updated: String,

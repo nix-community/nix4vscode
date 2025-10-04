@@ -2,25 +2,29 @@ mod extension_version;
 mod version;
 use std::fmt::Display;
 
-use derive::api;
-
 pub use extension_version::*;
 pub use version::*;
 
 use super::{ResultMetaData, TargetPlatform};
 
-#[api]
+#[derive(serde::Serialize, serde::Deserialize, Debug, Clone, Default)]
+#[serde(default)]
+#[serde(rename_all = "camelCase")]
 pub struct IRawGalleryQueryResult {
     pub results: Vec<IRawGalleryExtensionsResult>,
 }
 
-#[api]
+#[derive(serde::Serialize, serde::Deserialize, Debug, Clone, Default)]
+#[serde(default)]
+#[serde(rename_all = "camelCase")]
 pub struct IRawGalleryExtensionStatistics {
     pub statistic_name: String,
     pub value: f64,
 }
 
-#[api]
+#[derive(serde::Serialize, serde::Deserialize, Debug, Clone, Default)]
+#[serde(default)]
+#[serde(rename_all = "camelCase")]
 pub struct IRawGalleryExtensionPublisher {
     pub display_name: String,
     /// In openvsx, this maybe empty.
@@ -29,7 +33,9 @@ pub struct IRawGalleryExtensionPublisher {
     pub domain: Option<String>,
 }
 
-#[api]
+#[derive(serde::Serialize, serde::Deserialize, Debug, Clone, Default)]
+#[serde(default)]
+#[serde(rename_all = "camelCase")]
 pub struct IRawGalleryExtension {
     pub extension_id: Option<String>,
     pub extension_name: String,
@@ -55,7 +61,9 @@ impl Display for IRawGalleryExtension {
     }
 }
 
-#[api]
+#[derive(serde::Serialize, serde::Deserialize, Debug, Clone, Default)]
+#[serde(default)]
+#[serde(rename_all = "camelCase")]
 pub struct IRawGalleryExtensionsResult {
     pub extensions: Vec<IRawGalleryExtension>,
     pub result_metadata: Vec<ResultMetaData>,

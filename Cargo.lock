@@ -281,7 +281,6 @@ dependencies = [
  "async-stream",
  "bitflags",
  "chrono",
- "derive",
  "futures",
  "itertools",
  "lazy-regex",
@@ -401,15 +400,6 @@ checksum = "9c9e6a11ca8224451684bc0d7d5a7adbf8f2fd6887261a1cfc3c0432f9d4068e"
 dependencies = [
  "powerfmt",
  "serde",
-]
-
-[[package]]
-name = "derive"
-version = "0.1.0"
-dependencies = [
- "darling 0.20.11",
- "quote",
- "syn",
 ]
 
 [[package]]

@@ -1,4 +1,3 @@
-use derive::api;
 use serde::{Deserialize, Serialize};
 
 // https://github.com/microsoft/vscode/blob/d187d50a482ff80dcf74c35affb09dda1a7cd2fe/src/vs/platform/extensions/common/extensions.ts
@@ -49,13 +48,17 @@ impl From<&str> for TargetPlatform {
     }
 }
 
-#[api]
+#[derive(serde::Serialize, serde::Deserialize, Debug, Clone, Default)]
+#[serde(default)]
+#[serde(rename_all = "camelCase")]
 pub struct MetaDataItem {
     pub name: String,
     pub count: u64,
 }
 
-#[api]
+#[derive(serde::Serialize, serde::Deserialize, Debug, Clone, Default)]
+#[serde(default)]
+#[serde(rename_all = "camelCase")]
 pub struct ResultMetaData {
     pub metadata_type: String,
     pub metadata_items: Vec<MetaDataItem>,
