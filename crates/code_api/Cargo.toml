@@ -19,6 +19,5 @@ reqwest = { version = "0.12", default-features = false, features = [
   "json",
 ] }
 
-derive = { path = "../derive" }
 itertools = "0.14.0"
 serde_with = "3.15.0"

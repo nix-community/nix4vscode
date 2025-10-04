@@ -1,14 +1,16 @@
 use std::fmt::Display;
 
-use derive::api;
-
-#[api]
+#[derive(serde::Serialize, serde::Deserialize, Debug, Clone, Default)]
+#[serde(default)]
+#[serde(rename_all = "camelCase")]
 pub struct IRawGalleryExtensionProperty {
     pub key: String,
     pub value: String,
 }
 
-#[api]
+#[derive(serde::Serialize, serde::Deserialize, Debug, Clone, Default)]
+#[serde(default)]
+#[serde(rename_all = "camelCase")]
 pub struct IRawGalleryExtensionFile {
     pub asset_type: String,
     pub source: String,

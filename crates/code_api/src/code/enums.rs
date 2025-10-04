@@ -1,8 +1,8 @@
 use std::fmt::Display;
 
-use derive::api;
-
-#[api(nodefault)]
+#[derive(serde::Serialize, serde::Deserialize, Debug, Clone)]
+#[serde(default)]
+#[serde(rename_all = "camelCase")]
 pub struct FilterType(u8);
 
 impl Default for FilterType {
@@ -72,7 +72,9 @@ impl From<&PropertyType> for &str {
     }
 }
 
-#[api]
+#[derive(serde::Serialize, serde::Deserialize, Debug, Clone, Default)]
+#[serde(default)]
+#[serde(rename_all = "camelCase")]
 pub struct SortOrder(u8);
 
 impl SortOrder {
@@ -81,7 +83,9 @@ impl SortOrder {
     pub const DESCENDING: Self = Self(2);
 }
 
-#[api]
+#[derive(serde::Serialize, serde::Deserialize, Debug, Clone, Default)]
+#[serde(default)]
+#[serde(rename_all = "camelCase")]
 pub struct SortBy(u8);
 
 impl SortBy {

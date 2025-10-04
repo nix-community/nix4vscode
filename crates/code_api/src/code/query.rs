@@ -1,11 +1,12 @@
-use derive::api;
 use itertools::Itertools;
 
 use crate::config::Extension;
 
 use super::*;
 
-#[api]
+#[derive(serde::Serialize, serde::Deserialize, Debug, Clone, Default)]
+#[serde(default)]
+#[serde(rename_all = "camelCase")]
 pub struct Query {
     pub filters: Vec<IQueryState>,
     pub asset_types: Vec<String>,
