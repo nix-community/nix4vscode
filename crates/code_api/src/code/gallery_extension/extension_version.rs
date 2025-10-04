@@ -1,17 +1,21 @@
 use anyhow::anyhow;
 use derive::api;
 use itertools::Itertools;
+use serde_with::serde_as;
+use serde_with::DefaultOnNull;
 
 use crate::code::PropertyType;
 
 use super::*;
 
+#[serde_as]
 #[api]
 pub struct IRawGalleryExtensionVersion {
     pub version: String,
     pub last_updated: String,
     pub asset_uri: String,
     pub fallback_asset_uri: String,
+    #[serde_as(deserialize_as = "DefaultOnNull")]
     pub files: Vec<IRawGalleryExtensionFile>,
     pub properties: Vec<IRawGalleryExtensionProperty>,
     pub target_platform: Option<String>,
