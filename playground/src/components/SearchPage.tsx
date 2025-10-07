@@ -1,6 +1,6 @@
 import { QueryClientProvider } from '@tanstack/react-query';
 import { Search } from 'lucide-react';
-import { useId, useState } from 'react';
+import { useCallback, useEffect, useId, useState } from 'react';
 import { FaGithub } from 'react-icons/fa6';
 import { VscVscode } from 'react-icons/vsc';
 
@@ -17,19 +17,68 @@ import type { SearchFilters } from '@/types/index';
 import VirtualExtensionList from './VirtualExtensionList';
 
 function SearchContent() {
-  const [filters, setFilters] = useState<SearchFilters>({
+  const getDefaultFilters = (): SearchFilters => ({
     query: '',
     dataSource: 'vscode',
     vscodeVersion: '',
     includePrerelease: true,
   });
 
+  const getFiltersFromUrl = useCallback((): SearchFilters => {
+    if (typeof window === 'undefined') {
+      return getDefaultFilters();
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    return {
+      query: params.get('q') || '',
+      dataSource: (params.get('source') as 'vscode' | 'openvsx') || 'vscode',
+      vscodeVersion: params.get('version') || '',
+      includePrerelease: params.get('prerelease') !== 'false',
+    };
+  }, []);
+
+  const [filters, setFilters] = useState<SearchFilters>(getDefaultFilters);
+  const [isHydrated, setIsHydrated] = useState(false);
+
+  useEffect(() => {
+    setFilters(getFiltersFromUrl());
+    setIsHydrated(true);
+  }, [getFiltersFromUrl]);
+
+  const updateUrl = useCallback((newFilters: SearchFilters) => {
+    if (typeof window === 'undefined') return;
+
+    const params = new URLSearchParams();
+
+    if (newFilters.query) params.set('q', newFilters.query);
+    if (newFilters.dataSource !== 'vscode')
+      params.set('source', newFilters.dataSource);
+    if (newFilters.vscodeVersion)
+      params.set('version', newFilters.vscodeVersion);
+    if (!newFilters.includePrerelease) params.set('prerelease', 'false');
+
+    const newUrl = `${window.location.pathname}${params.toString() ? '?' + params.toString() : ''}`;
+    window.history.replaceState({}, '', newUrl);
+  }, []);
+
   const updateFilter = <K extends keyof SearchFilters>(
     key: K,
     value: SearchFilters[K],
   ) => {
-    setFilters(prev => ({ ...prev, [key]: value }));
+    const newFilters = { ...filters, [key]: value };
+    setFilters(newFilters);
+    updateUrl(newFilters);
   };
+
+  useEffect(() => {
+    const handlePopstate = () => {
+      setFilters(getFiltersFromUrl());
+    };
+
+    window.addEventListener('popstate', handlePopstate);
+    return () => window.removeEventListener('popstate', handlePopstate);
+  }, [getFiltersFromUrl]);
 
   const { data, isLoading, error } = useExtensionData(filters.dataSource);
   const filteredExtensions = useSearch(data, filters);
@@ -121,7 +170,7 @@ function SearchContent() {
             <div className="flex items-center gap-2">
               <Checkbox
                 id={prerelease}
-                checked={filters.includePrerelease}
+                checked={isHydrated ? filters.includePrerelease : true}
                 onCheckedChange={checked => {
                   updateFilter('includePrerelease', checked === true);
                 }}

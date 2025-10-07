@@ -56,9 +56,7 @@ export function getAssertUrl(
   }
 
   const platformSuffix =
-    platform === undefined || platform.length === 0
-      ? ''
-      : `@${platform}`;
+    platform === undefined || platform.length === 0 ? '' : `@${platform}`;
   const platformInfix =
     platform === undefined || platform.length === 0 ? '' : `/${platform}`;
   const extName = `${publisher}.${name}`;
