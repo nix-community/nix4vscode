@@ -1,79 +1,55 @@
 # Nix4Vscode
 
-nix4vscode is a nix overlay for vscode. It supports both vscode and openvsx.
+nix4vscode is a Nix overlay for VSCode. It supports both VSCode and OpenVSX.
 
 ## Usage
 
-nix4vscode support vscode by Nix overlays, here's how you can use it:
+nix4vscode supports VSCode by Nix overlays, here's how you can use it:
 
 ```nix
 {
-    inputs = {
-        nixpkgs.url = "github:NixOS:nixpkgs/release-24.11";
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/release-24.11";
 
-        nix4vscode = {
-            url = "github:nix-community/nix4vscode";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
+    nix4vscode = {
+      url = "github:nix-community/nix4vscode";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
+  };
 
-    outputs = { nixpkgs, nix4vscode ... }:
+  outputs =
+    { nixpkgs, nix4vscode, ... }:
     let
-        pkgs = import <nixpkgs> {
-            config.allowUnfree = true;
-            system = "aarch64-darwin"; # One of supported systems
-            overlays = [
-                nix4vscode.overlays.default
-            ];
-        };
-
-        # Now you can access nix4vscode utilities from pkgs.nix4vscode
-        extensions = pkgs.nix4vscode.forVscode [
-            "tamasfe.even-better-toml"
-            "ms-vscode-remote.remote-containers"
-            # Using the specified version
-            "editorconfig.editorconfig.0.9.4"
-            /* ... */
+      pkgs = import nixpkgs {
+        config.allowUnfree = true;
+        system = "aarch64-darwin"; # One of supported systems
+        overlays = [
+          nix4vscode.overlays.default
         ];
+      };
+
+      # Now you can access nix4vscode utilities from pkgs.nix4vscode
+      extensions = pkgs.nix4vscode.forVscode [
+        "tamasfe.even-better-toml"
+        "ms-vscode-remote.remote-containers"
+        # Using the specified version
+        "editorconfig.editorconfig.0.9.4"
+        # ...
+      ];
     in
     {
-        # ... your flake outputs
+      # ... your flake outputs
     };
 }
 ```
 
-Alternatively, if you use nix-darwin or NixOS you can add overlays to `nixpkgs` attribute in your one of modules:
+## Supported Functions
 
-```nix
-# `self` or `input` attribute is the attribute you pass via `specialArgs` when you call `darwinSystem` or `nixosSystem`
-{ self, ... }: {
-    nixpkgs.overlays = [ self.inputs.nix4vscode.overlays.forVscode ];
-}
-```
-
-Now, if you use VSCode with Home Manager, and you added overlays, you can install your extensions like this:
-
-```nix
-{ pkgs, ... }: {
-    programs.vscode = {
-        enable = true;
-        enableUpdateCheck = false; # Disable VSCode self-update and let Home Manager to manage VSCode versions instead.
-        enableExtensionUpdateCheck = false; # Disable extensions auto-update and let nix4vscode manage updates and extensions
-        extensions = pkgs.nix4vscode.forVscode [
-            "tamasfe.even-better-toml"
-            "ms-vscode-remote.remote-containers.0.397.0" # You can also install specific version of extensions
-        ];
-    };
-}
-```
-
-## Supported function
-
-The Overlays has exported the following functions:
+The overlay has exported the following functions:
 
 ### Basic Functions
 
-| Usage                                                          | description   |
+| Usage                                                          | Description   |
 | -------------------------------------------------------------- | ------------- |
 | `forVscode [ extension ]`                                        | Install extensions from VSCode marketplace using default version |
 | `forVscodeVersion version [ extension ]`                         | Install extensions for specific VSCode version |
@@ -86,7 +62,7 @@ The Overlays has exported the following functions:
 
 ### Extended Functions with Custom Decorators
 
-| Usage                                                          | description   |
+| Usage                                                          | Description   |
 | -------------------------------------------------------------- | ------------- |
 | `forVscodeExt decorators [ extension ]`                         | Install extensions with custom decorators |
 | `forVscodeExtVersion decorators version [ extension ]`          | Install extensions with decorators for specific version |
@@ -119,10 +95,16 @@ let
       buildInputs = [ pkgs.clang-tools ];
     };
 
-    "rust-lang.rust-analyzer" = { pkgs, lib, system }: {
-      # Dynamic decorator using function
-      buildInputs = [ pkgs.rust-analyzer ];
-    };
+    "rust-lang.rust-analyzer" =
+      {
+        pkgs,
+        lib,
+        system,
+      }:
+      {
+        # Dynamic decorator using function
+        buildInputs = [ pkgs.rust-analyzer ];
+      };
   };
 in
 {
@@ -137,3 +119,7 @@ Decorator priority (highest to lowest):
 1. External decorators (passed via `decorators` parameter)
 2. Package overrides (in `pkgs.nix4vscode-publisher.extension`)
 3. Local decorator files (in `nix/decorators/`)
+
+## Example
+
+The [`example/`](./example/) directory provides a complete Home Manager configuration example that demonstrates how to use nix4vscode with various extensions from both VSCode Marketplace and OpenVSX registries. It includes examples of version-specific extensions, prerelease extensions, and custom decorators.
