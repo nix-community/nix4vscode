@@ -1,7 +1,9 @@
 import { QueryClientProvider } from '@tanstack/react-query';
 import { Search } from 'lucide-react';
 import { useId, useState } from 'react';
+import { FaGithub } from 'react-icons/fa6';
 import { VscVscode } from 'react-icons/vsc';
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Checkbox } from '@/components/ui/checkbox';
@@ -39,11 +41,23 @@ function SearchContent() {
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-8">
         {/* Header Section */}
-        <div className="mb-8 text-center">
-          <h1 className="mb-4 font-bold text-4xl">Extension Search</h1>
-          <p className="text-muted-foreground">
-            Search VSCode and OpenVSX extensions
-          </p>
+        <div className="relative mb-8">
+          <div className="text-center">
+            <h1 className="mb-4 font-bold text-4xl">Extension Search</h1>
+            <p className="text-muted-foreground">
+              Search VSCode and OpenVSX extensions
+            </p>
+          </div>
+          {/* GitHub Link */}
+          <a
+            href="https://github.com/nix-community/nix4vscode"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute top-0 right-0 flex items-center gap-2 rounded-lg border border-input bg-background px-3 py-2 font-medium text-foreground text-sm transition-colors hover:bg-accent hover:text-accent-foreground"
+          >
+            <FaGithub className="h-6 w-6" />
+            GitHub
+          </a>
         </div>
 
         <Card className="mx-auto mb-8 max-w-4xl">
