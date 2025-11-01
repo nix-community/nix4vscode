@@ -11,7 +11,7 @@ display = []
 dotenvy = "0.15"
 anyhow.workspace = true
 clap = { version = "4.5.48", features = ["derive"] }
-diesel = { version = "2.2.12", features = [
+diesel = { version = "2.3.3", features = [
   "sqlite",
   "returning_clauses_for_sqlite_3_35",
 ] }
