@@ -8,7 +8,7 @@ futures = { workspace = true }
 tracing = { workspace = true }
 anyhow = { workspace = true }
 serde = { workspace = true }
-bitflags = { version = "2.9", features = ["serde", "std"] }
+bitflags = { version = "2.10", features = ["serde", "std"] }
 async-stream = "0.3"
 serde_json = { workspace = true }
 chrono = { workspace = true }
