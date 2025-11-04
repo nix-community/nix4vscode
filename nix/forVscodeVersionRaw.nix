@@ -8,7 +8,9 @@
   isOpenVsx ? false,
 }:
 let
-  inherit (pkgs) lib system;
+  inherit (pkgs) lib;
+  system = pkgs.stdenv.hostPlatform.system;
+
   matchesVscodeVersion = import ./matchesVscodeVersion.nix lib version;
   allExtensions = lib.importJSON dataPath;
   platformMap = {

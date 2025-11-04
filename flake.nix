@@ -153,12 +153,12 @@
       overlays = {
         default = (
           final: _: {
-            nix4vscode = self.lib.${final.system};
+            nix4vscode = self.lib.${final.stdenv.hostPlatform.system};
           }
         );
         forVscode = (
           final: _: {
-            nix4vscode = self.lib.${final.system};
+            nix4vscode = self.lib.${final.stdenv.hostPlatform.system};
           }
         );
       };
