@@ -61,12 +61,12 @@ jobs:
           sqlite3 db.sqlite3 'VACUUM;'
           tar -cjf db.sqlite3.tar.xz db.sqlite3
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           path: data/extensions_openvsx.json
           name: extensions_openvsx.json
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           path: db.sqlite3
           name: db.sqlite3
