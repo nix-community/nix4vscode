@@ -46,11 +46,15 @@ let
   vscodePatch = lib.versions.patch vscodeVersion;
 
   # Wanted version
-  version = lib.removePrefix operator versionSelector;
-  major = lib.versions.major version;
-  minor = lib.versions.minor version;
-  patch = lib.versions.patch version;
-  labels = lib.removePrefix "${major}.${minor}.${patch}" version;
+  versionWithLabels = lib.removePrefix operator versionSelector;
+  major = lib.versions.major versionWithLabels;
+  minor = lib.versions.minor versionWithLabels;
+  patch = lib.versions.patch versionWithLabels;
+  labels = lib.removePrefix "${major}.${minor}.${patch}" versionWithLabels;
+
+  datePattern = "^-[0-9]{8}$";
+  hasDateSuffix = builtins.match datePattern labels != null;
+  version = if hasDateSuffix then "${major}.${minor}.${patch}" else versionWithLabels;
 
   # Next version
   nextMajor = builtins.toString (lib.toInt major + (if major == "0" then 2 else 1));
