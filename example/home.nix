@@ -51,6 +51,10 @@ in
             forVscode [
               "zhuangtongfa.material-theme"
             ]
+            # issue #338
+            ++ forVscodeVersion "1.104.0" [
+              "github.copilot-chat.0.31.0"
+            ]
             ++ forVscodeVersion "1.100.2" [
               "vadimcn.vscode-lldb"
             ]
