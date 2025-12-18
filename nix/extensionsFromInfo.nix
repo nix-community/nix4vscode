@@ -59,7 +59,7 @@ let
         in
         fetchurlModule.fetchurl {
           url = url;
-          name = "${publisher}-${name}.zip";
+          name = "${publisher}-${name}.vsix";
           sha256 = info.h;
         };
       exts = builtins.mapAttrs (
