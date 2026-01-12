@@ -8,7 +8,6 @@
 }:
 
 let
-  fetchurlModule = import ./fetchurl/fetchurl.nix { inherit pkgs lib; };
   getExtensionUrl = import ./getExtensionUrl.nix;
   applyDecorator =
     mktAttr: system: externalDecorators:
@@ -57,7 +56,7 @@ let
               platform = info.p or null;
             });
         in
-        fetchurlModule.fetchurl {
+        builtins.fetchurl {
           url = url;
           name = "${publisher}-${name}.vsix";
           sha256 = info.h;
