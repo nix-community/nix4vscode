@@ -42,7 +42,8 @@ let
   extensionsFromInfo =
     let
       # infos = infoExtensionForEngineForSystem extensions engine system;
-      vscode-utils = pkgs.vscode-utils;
+      vscode-utils = pkgs.callPackage ./vscode-utils {
+      };
       fetchExtension =
         xname: info:
         let
