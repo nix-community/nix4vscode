@@ -17,7 +17,7 @@ diesel = { version = "2.3.7", features = [
 ] }
 tokio = { version = "1.50.0", features = ["full"] }
 tracing.workspace = true
-tracing-subscriber = { version = "0.3.22", features = ["env-filter"] }
+tracing-subscriber = { version = "0.3.23", features = ["env-filter"] }
 code-api = { path = "../code_api" }
 futures.workspace = true
 serde.workspace = true
