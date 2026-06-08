@@ -57,12 +57,32 @@ pub async fn export_data(
         v.sort_by(|a, b| version_compare(&b.v, &a.v));
     });
 
-    let serialized = match format {
-        ExportFormat::Json => mini_json::to_string(&data),
-        ExportFormat::Toml => mini_toml::to_string(&data),
-    };
+    let mut out_files: Vec<BTreeMap<String, Vec<ExportedData>>> = vec![];
 
-    tokio::fs::write(target, serialized).await?;
+    for _ in 0..26 {
+        out_files.push(Default::default());
+    }
+
+    for (key, data) in data {
+        let hkey = crown::hash::blake2b::sum256(key.as_bytes());
+        let idx = u32::from_le_bytes(hkey[0..4].try_into().unwrap());
+        let idx = (idx % 26) as usize;
+        let v = out_files.get_mut(idx).unwrap();
+        v.insert(key, data);
+    }
+
+    if let Err(err) = std::fs::create_dir_all(target) {
+        tracing::error!("create {target} failed: {err}");
+    }
+
+    for (idx, data) in out_files.into_iter().enumerate() {
+        let serialized = match format {
+            ExportFormat::Json => mini_json::to_string(&data),
+            ExportFormat::Toml => mini_toml::to_string(&data),
+        };
+
+        tokio::fs::write(format!("{target}/data_{idx}.json"), serialized).await?;
+    }
 
     Ok(())
 }
