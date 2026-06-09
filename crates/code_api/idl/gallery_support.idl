@@ -1,0 +1,24 @@
+@rename_all("camelCase")
+struct ICriterium {
+    FilterType filter_type;
+    string value;
+};
+
+@rename_all("kebab-case")
+@derive(Hash)
+enum TargetPlatform {
+    Win32X64,
+    Win32Ia32,
+    Win32Arm64,
+    LinuxX64,
+    LinuxArm64,
+    LinuxArmhf,
+    AlpineX64,
+    AlpineArm64,
+    DarwinX64,
+    DarwinArm64,
+    Universal,
+    Web,
+    Unknown,
+    Undefined,
+};
