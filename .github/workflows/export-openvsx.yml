@@ -74,19 +74,19 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          if git diff --quiet data/extensions_openvsx.json; then
-            echo "No changes detected in extensions_openvsx.json"
+          if git diff --quiet data/openvsx/; then
+            echo "No changes detected in data/openvsx"
             echo "changes=false" >> $GITHUB_OUTPUT
           else
-            echo "Changes detected in extensions_openvsx.json"
+            echo "Changes detected in data/openvsx"
             echo "changes=true" >> $GITHUB_OUTPUT
           fi
 
       - name: Commit and push changes
         if: steps.changes.outputs.changes == 'true'
         run: |
-          git add data/extensions_openvsx.json
-          git commit -m "chore: update extensions_openvsx.json"
+          git add data/openvsx/
+          git commit -m "chore: update data/openvsx"
           git pull origin master --rebase
           git push
 

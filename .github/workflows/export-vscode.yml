@@ -74,19 +74,19 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          if git diff --quiet data/extensions.json; then
-            echo "No changes detected in extensions.json"
+          if git diff --quiet data/vscode/; then
+            echo "No changes detected in data/vscode"
             echo "changes=false" >> $GITHUB_OUTPUT
           else
-            echo "Changes detected in extensions.json"
+            echo "Changes detected in data/vscode"
             echo "changes=true" >> $GITHUB_OUTPUT
           fi
 
       - name: Commit and push changes
         if: steps.changes.outputs.changes == 'true'
         run: |
-          git add data/extensions.json
-          git commit -m "chore: update extensions.json"
+          git add data/vscode/
+          git commit -m "chore: update data/vscode"
           git pull origin master --rebase
           git push
 
