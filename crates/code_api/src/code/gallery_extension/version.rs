@@ -1,21 +1,5 @@
 use std::fmt::Display;
 
-#[derive(serde::Serialize, serde::Deserialize, Debug, Clone, Default)]
-#[serde(default)]
-#[serde(rename_all = "camelCase")]
-pub struct IRawGalleryExtensionProperty {
-    pub key: String,
-    pub value: String,
-}
-
-#[derive(serde::Serialize, serde::Deserialize, Debug, Clone, Default)]
-#[serde(default)]
-#[serde(rename_all = "camelCase")]
-pub struct IRawGalleryExtensionFile {
-    pub asset_type: String,
-    pub source: String,
-}
-
 pub enum AssetType {
     Icon,
     Details,

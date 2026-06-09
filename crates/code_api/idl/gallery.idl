@@ -1,0 +1,83 @@
+@rename_all("camelCase")
+struct IRawGalleryQueryResult {
+    sequence<IRawGalleryExtensionsResult> results;
+};
+
+@rename_all("camelCase")
+struct IRawGalleryExtensionStatistics {
+    string statistic_name;
+    double value;
+};
+
+@rename_all("camelCase")
+struct IRawGalleryExtensionPublisher {
+    string display_name;
+    @optional
+    string publisher_id;
+    string publisher_name;
+    @optional
+    string domain;
+};
+
+@rename_all("camelCase")
+struct IRawGalleryExtension {
+    @optional
+    string extension_id;
+    string extension_name;
+    @optional
+    string display_name;
+    @optional
+    string short_description;
+    IRawGalleryExtensionPublisher publisher;
+    sequence<IRawGalleryExtensionVersion> versions;
+    sequence<IRawGalleryExtensionStatistics> statistics;
+    string release_date;
+    string published_date;
+    string last_updated;
+    @optional
+    sequence<string> categories;
+    string flags;
+};
+
+@rename_all("camelCase")
+struct IRawGalleryExtensionsResult {
+    sequence<IRawGalleryExtension> extensions;
+    sequence<ResultMetaData> result_metadata;
+};
+
+@rename_all("camelCase")
+struct IRawGalleryExtensionVersion {
+    string version;
+    string last_updated;
+    string asset_uri;
+    string fallback_asset_uri;
+    @optional
+    sequence<IRawGalleryExtensionFile> files;
+    sequence<IRawGalleryExtensionProperty> properties;
+    @optional
+    string target_platform;
+};
+
+@rename_all("camelCase")
+struct IRawGalleryExtensionProperty {
+    string key;
+    string value;
+};
+
+@rename_all("camelCase")
+struct IRawGalleryExtensionFile {
+    string asset_type;
+    string source;
+};
+
+@rename_all("camelCase")
+struct MetaDataItem {
+    string name;
+    unsigned long long count;
+};
+
+@rename_all("camelCase")
+struct ResultMetaData {
+    string metadata_type;
+    sequence<MetaDataItem> metadata_items;
+};

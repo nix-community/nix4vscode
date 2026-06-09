@@ -21,3 +21,6 @@ reqwest = { version = "0.12", default-features = false, features = [
 
 itertools = "0.14.0"
 serde_with = "3.17.0"
+
+[build-dependencies]
+xidl-build = "0.77.0"

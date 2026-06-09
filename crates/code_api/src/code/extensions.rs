@@ -48,22 +48,6 @@ impl From<&str> for TargetPlatform {
     }
 }
 
-#[derive(serde::Serialize, serde::Deserialize, Debug, Clone, Default)]
-#[serde(default)]
-#[serde(rename_all = "camelCase")]
-pub struct MetaDataItem {
-    pub name: String,
-    pub count: u64,
-}
-
-#[derive(serde::Serialize, serde::Deserialize, Debug, Clone, Default)]
-#[serde(default)]
-#[serde(rename_all = "camelCase")]
-pub struct ResultMetaData {
-    pub metadata_type: String,
-    pub metadata_items: Vec<MetaDataItem>,
-}
-
 #[cfg(test)]
 mod test {
     use super::*;
