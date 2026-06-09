@@ -1,26 +1,9 @@
 use anyhow::anyhow;
 use itertools::Itertools;
-use serde_with::DefaultOnNull;
-use serde_with::serde_as;
 
-use crate::code::PropertyType;
+use crate::code::{IRawGalleryExtensionFile, IRawGalleryExtensionVersion, PropertyType};
 
 use super::*;
-
-#[serde_as]
-#[derive(serde::Serialize, serde::Deserialize, Debug, Clone, Default)]
-#[serde(default)]
-#[serde(rename_all = "camelCase")]
-pub struct IRawGalleryExtensionVersion {
-    pub version: String,
-    pub last_updated: String,
-    pub asset_uri: String,
-    pub fallback_asset_uri: String,
-    #[serde_as(deserialize_as = "DefaultOnNull")]
-    pub files: Vec<IRawGalleryExtensionFile>,
-    pub properties: Vec<IRawGalleryExtensionProperty>,
-    pub target_platform: Option<String>,
-}
 
 impl Display for IRawGalleryExtensionVersion {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -51,13 +34,9 @@ impl IRawGalleryExtensionVersion {
     }
 
     pub fn get_file(&self, file_kind: AssetType) -> Option<&IRawGalleryExtensionFile> {
-        match self
-            .files
+        self.files
+            .as_ref()?
             .iter()
-            .position(|item| item.asset_type == file_kind.to_string())
-        {
-            Some(idx) => Some(&self.files[idx]),
-            None => None,
-        }
+            .find(|item| item.asset_type == file_kind.to_string())
     }
 }

@@ -8,6 +8,12 @@ mod query;
 mod request_body;
 mod version;
 
+mod generated {
+    include!(concat!(env!("OUT_DIR"), "/gallery.rs"));
+}
+
+pub use generated::*;
+
 pub use extensions::*;
 pub use gallery_extension::*;
 
