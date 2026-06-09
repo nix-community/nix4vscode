@@ -446,6 +446,7 @@ dependencies = [
  "itertools",
  "lazy-regex",
  "reqwest",
+ "rustls",
  "serde",
  "serde_json",
  "serde_with",
