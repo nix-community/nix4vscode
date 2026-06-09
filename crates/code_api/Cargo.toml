@@ -14,6 +14,7 @@ serde_json = { workspace = true }
 chrono = { workspace = true }
 lazy-regex = { workspace = true }
 reqwest = { version = "0.13", features = ["gzip"] }
+rustls = { version = "0.23", features = ["aws_lc_rs"] }
 xidl-rust-axum = "0.77.0"
 
 itertools = "0.14.0"

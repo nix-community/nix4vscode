@@ -24,6 +24,7 @@ pub struct HttpClient {
 
 impl HttpClient {
     pub fn new(endpoint: ApiEndpoint) -> anyhow::Result<Self> {
+        let _ = rustls::crypto::aws_lc_rs::default_provider().install_default();
         let http = xidl_rust_axum::reqwest::Client::builder()
             .no_proxy()
             .gzip(true)
