@@ -5,7 +5,11 @@ use tracing::debug;
 
 macro_rules! texpr {
     ($ex1:expr => $ex2:expr , $ex3:expr) => {
-        if $ex1 { $ex2 } else { $ex3 }
+        if $ex1 {
+            $ex2
+        } else {
+            $ex3
+        }
     };
 }
 

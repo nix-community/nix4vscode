@@ -13,11 +13,8 @@ async-stream = "0.3"
 serde_json = { workspace = true }
 chrono = { workspace = true }
 lazy-regex = { workspace = true }
-reqwest = { version = "0.12", default-features = false, features = [
-  "rustls-tls",
-  "gzip",
-  "json",
-] }
+reqwest = { version = "0.13", features = ["gzip"] }
+xidl-rust-axum = "0.77.0"
 
 itertools = "0.14.0"
 serde_with = "3.17.0"

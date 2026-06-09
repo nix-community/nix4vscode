@@ -1,14 +1,6 @@
 use super::*;
 
-#[derive(serde::Serialize, serde::Deserialize, Debug, Clone, Default)]
-#[serde(default)]
-#[serde(rename_all = "camelCase")]
-pub struct ICriterium {
-    pub filter_type: FilterType,
-    pub value: String,
-}
-
-#[derive(serde::Serialize, serde::Deserialize, Debug, Clone)]
+#[derive(serde::Serialize, serde::Deserialize, Debug, Clone, PartialEq)]
 #[serde(default)]
 #[serde(rename_all = "camelCase")]
 pub struct IQueryState {

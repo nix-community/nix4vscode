@@ -1,5 +1,5 @@
 use crate::{
-    code::{self, IRawGalleryExtensionsResult, IRawGalleryQueryResult, TargetPlatform},
+    code::{self, GalleryServiceClient, IRawGalleryExtensionsResult, TargetPlatform},
     config::Extension,
 };
 
@@ -15,22 +15,25 @@ pub enum ApiEndpoint {
     OpenVsx,
 }
 
-#[derive(Debug, Clone)]
+const ACCEPT: &str = "application/json; charset=utf-8; api-version=7.2-preview.1";
+const ACCEPT_ENCODING: &str = "gzip";
+
 pub struct HttpClient {
-    pub client: reqwest::Client,
-    pub endpoint: &'static str,
+    pub client: GalleryServiceClient,
 }
 
 impl HttpClient {
     pub fn new(endpoint: ApiEndpoint) -> anyhow::Result<Self> {
-        let client = reqwest::Client::builder().gzip(true).build()?;
-        let endpoint = match endpoint {
-            ApiEndpoint::Vscode => {
-                "https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery"
-            }
-            ApiEndpoint::OpenVsx => "https://open-vsx.org/vscode/gallery/extensionquery",
+        let http = xidl_rust_axum::reqwest::Client::builder()
+            .gzip(true)
+            .build()?;
+        let base_url = match endpoint {
+            ApiEndpoint::Vscode => "https://marketplace.visualstudio.com/_apis/public/gallery",
+            ApiEndpoint::OpenVsx => "https://open-vsx.org/vscode/gallery",
         };
-        Ok(Self { client, endpoint })
+        Ok(Self {
+            client: GalleryServiceClient::with_http(base_url, http),
+        })
     }
 
     pub fn get_extension_response(
@@ -48,17 +51,7 @@ impl HttpClient {
                 trace!("send request: {body}");
                 let response = self
                     .client
-                    .post(self.endpoint)
-                    .header("CONTENT-TYPE", "application/json")
-                    .header(
-                        "ACCEPT",
-                        "application/json; charset=utf-8; api-version=7.2-preview.1",
-                    )
-                    .header("ACCEPT-ENCODING", "gzip")
-                    .body(body)
-                    .send()
-                    .await?
-                    .json::<IRawGalleryQueryResult>()
+                    .extension_query(ACCEPT.to_string(), ACCEPT_ENCODING.to_string(), query)
                     .await?;
 
                 if response.results.is_empty() {
@@ -81,18 +74,10 @@ impl HttpClient {
     ) -> anyhow::Result<IRawGalleryExtensionsResult> {
         let query = Query::create_search(publisher_name, extension_name);
         let body = serde_json::to_string(&query)?;
+        trace!("send request: {body}");
         let txt = self
             .client
-            .post("https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery")
-            .header(
-                "Accept",
-                "Application/json; charset=utf-8; api-version=7.2-preview.1",
-            )
-            .header("Content-Type", "application/json")
-            .body(body)
-            .send()
-            .await?
-            .json::<code::IRawGalleryQueryResult>()
+            .extension_query(ACCEPT.to_string(), ACCEPT_ENCODING.to_string(), query)
             .await?;
         txt.results.into_iter().next().ok_or(anyhow!("Unknown"))
     }
@@ -122,7 +107,11 @@ impl HttpClient {
                     .copied()
                     .collect();
 
-                if !j.is_empty() { j } else { i }
+                if !j.is_empty() {
+                    j
+                } else {
+                    i
+                }
             }
             Err(err) => {
                 error!("Error happened when get target_platform: {err}");

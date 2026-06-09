@@ -1,4 +1,23 @@
 @rename_all("camelCase")
+struct Query {
+    sequence<IQueryState> filters;
+    sequence<string> asset_types;
+    unsigned long flags;
+};
+
+interface GalleryService {
+    @post(path = "/extensionquery")
+    IRawGalleryQueryResult extension_query(
+        @header @rename("Accept")
+        string accept,
+        @header @rename("Accept-Encoding")
+        string accept_encoding,
+        @flatten
+        Query query
+    );
+};
+
+@rename_all("camelCase")
 struct IRawGalleryQueryResult {
     sequence<IRawGalleryExtensionsResult> results;
 };

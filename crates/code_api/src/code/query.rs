@@ -4,15 +4,6 @@ use crate::config::Extension;
 
 use super::*;
 
-#[derive(serde::Serialize, serde::Deserialize, Debug, Clone, Default)]
-#[serde(default)]
-#[serde(rename_all = "camelCase")]
-pub struct Query {
-    pub filters: Vec<IQueryState>,
-    pub asset_types: Vec<String>,
-    pub flags: u32,
-}
-
 impl Query {
     pub fn new(extensions: &[Extension], page_number: u64, args: IQueryState) -> Self {
         let fixed = vec![
