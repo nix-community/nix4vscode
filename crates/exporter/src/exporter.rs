@@ -59,14 +59,14 @@ pub async fn export_data(
 
     let mut out_files: Vec<BTreeMap<String, Vec<ExportedData>>> = vec![];
 
-    for _ in 0..26 {
+    for _ in 0..128 {
         out_files.push(Default::default());
     }
 
     for (key, data) in data {
         let hkey = crown::hash::blake2b::sum256(key.as_bytes());
-        let idx = u32::from_le_bytes(hkey[0..4].try_into().unwrap());
-        let idx = (idx % 26) as usize;
+        let idx = u32::from_le_bytes(hkey[0..4].try_into().unwrap()) as usize;
+        let idx = idx % out_files.len();
         let v = out_files.get_mut(idx).unwrap();
         v.insert(key, data);
     }

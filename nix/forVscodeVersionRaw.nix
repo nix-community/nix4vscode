@@ -1,6 +1,6 @@
 {
   pkgs,
-  dataPath ? if isOpenVsx then ../data/extensions_openvsx.json else ../data/extensions.json,
+  dataPath ? if isOpenVsx then ../data/openvsx else ../data/vscode,
   version ? pkgs.vscode.version,
   extensions,
   pickPreRelease ? false,
@@ -12,7 +12,13 @@ let
   system = pkgs.stdenv.hostPlatform.system;
 
   matchesVscodeVersion = import ./matchesVscodeVersion.nix lib version;
-  allExtensions = lib.importJSON dataPath;
+  allExtensions =
+    let
+      readJson = f: lib.importJSON (dataPath + "/${f}");
+      files = builtins.readDir dataPath;
+      jsonFiles = lib.filterAttrs (name: type: type == "regular" && lib.hasSuffix ".json" name) files;
+    in
+    lib.foldl' (acc: f: acc // (readJson f)) { } (builtins.attrNames jsonFiles);
   platformMap = {
     x86_64-linux = "linux-x64";
     i686-linux = "linux-x64";
