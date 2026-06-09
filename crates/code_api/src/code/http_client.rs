@@ -25,6 +25,7 @@ pub struct HttpClient {
 impl HttpClient {
     pub fn new(endpoint: ApiEndpoint) -> anyhow::Result<Self> {
         let http = xidl_rust_axum::reqwest::Client::builder()
+            .no_proxy()
             .gzip(true)
             .build()?;
         let base_url = match endpoint {
