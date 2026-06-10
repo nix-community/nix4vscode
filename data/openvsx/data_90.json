@@ -152,6 +152,7 @@
 {"v":"4.0.2","e":"^1.5.1","h":"01g4y1wxzggdrddc66sp3n0jzflk1kvy00i13nlxfh0lzb3hqbjq"}
 ],
 "bismarkvargas.bkcode":[
+{"v":"1.9.0","e":"^1.80.0","h":"0d54a6nal2bm70i8i70v2mspb0zqj9kcajr4qdmnfb9cr24qzsdh"},
 {"v":"1.8.0","e":"^1.80.0","h":"02qip9f4yr5mky8x2xrrwrh1sgazc3n3kyjhrqwngnr7fp91mciv"},
 {"v":"1.7.0","e":"^1.80.0","h":"0i6wd4facxn639rwvq9ff9iyg1r1n4nrbi1ql48vpf46aa222i7x"},
 {"v":"0.89.0","e":"^1.80.0","h":"050w5ixf80dhz9zarrc7hmhv3y317vpzcl5y91147w4lhalvs2aq"},
@@ -845,6 +846,10 @@
 {"v":"1.0.0","e":"^1.90.0","h":"0402ac2asafw1dfffr2maka83phchsg5n90z92hcl242z0l4mmpi"}
 ],
 "mosaico.mosaico-reference-client":[
+{"v":"0.1.1781008317","e":"^1.70.0","p":"darwin-arm64","h":"0wwp17lx7cn0wimvhszkiaqbx4md8nvsbyb5xp5i07dkvll25kgp","r":true},
+{"v":"0.1.1781008317","e":"^1.70.0","p":"darwin-x64","h":"03mb0g8fsxyjz9y1w81vqnpa77jz8fx5dlici8i0af3i8xy7ih6i","r":true},
+{"v":"0.1.1781008317","e":"^1.70.0","p":"linux-arm64","h":"1cxhnmdsxna4xzpxxbkrj5180jlv726jmr70zl4ggzs57dc5y43x","r":true},
+{"v":"0.1.1781008317","e":"^1.70.0","p":"linux-x64","h":"1ljscjcj6rlp4wwhjq8hj9p3lnxvb4a7sa54rfkiafh2s8zqv4nn","r":true},
 {"v":"0.1.1780048910","e":"^1.70.0","p":"darwin-arm64","h":"13kvyfib4i2xyvkvzwid021lxjsczv9pmkcsd5mi7hl1wqfb07xq","r":true},
 {"v":"0.1.1780048910","e":"^1.70.0","p":"darwin-x64","h":"0mxisfcpcrvr1s2da4yi7fy72azbwqwla6phww75v2n24vzx0hfx","r":true},
 {"v":"0.1.1780048910","e":"^1.70.0","p":"linux-arm64","h":"1bc2m43w3v894vw5yzsxm28raq52rywprjkzbqmki3q9cbx2wi85","r":true},
@@ -1292,6 +1297,9 @@
 {"v":"1.0.1","e":"^1.105.0","h":"1g5wpd0f870hzj7h1z75jcwa5abyfbrg5l4csf1znxclvnygwd9l"},
 {"v":"1.0.0","e":"^1.105.0","h":"06z797fvcrkjdm61a6bqivvprjr7m1cvr386i3ayf3vsmbii214h"}
 ],
+"ollyhayes.colmak-vim":[
+{"v":"0.0.1","e":"^1.80.0","h":"0sxhdnqvxhn51jca6mm4is3lq820nnv1wfpyq0fkz2c0rjdqjy73"}
+],
 "openintent.oiml-intent-validator":[
 {"v":"0.1.6","e":"^1.85.0","h":"0b483dca41scdbhlgnalcbq4raiypk1sxqkha1j9r6mij2r57092"},
 {"v":"0.1.5","e":"^1.85.0","h":"0ya0qxdmrnivkz79dl7f8fp2vwkcxmcqsavgh86jm14z0f32ni01"},
@@ -1389,6 +1397,7 @@
 {"v":"0.25.0","e":"^1.66.0","h":"06gam4cn3vd0fdqibh9pp5nga9s7qxaxfgdh7iln5x99gdk7nazs"}
 ],
 "redhat.vscode-yaml":[
+{"v":"1.24.2026060909","e":"^1.63.0","h":"0fycgvcbrl6z08rif4cqdg1lv5h994h8qz2f49w7pilxwr1if0rr","r":true},
 {"v":"1.24.2026060608","e":"^1.63.0","h":"1gw187yxzqq1g3isamxj1kwi4kpp3lcm8kkv1v81nnamarq0dz2x","r":true},
 {"v":"1.24.2026060409","e":"^1.63.0","h":"1scw3bwxbxqqpg0jxca4pshvzjvbnd9100pb1k0y7wxbhkpb1gxl","r":true},
 {"v":"1.24.2026060309","e":"^1.63.0","h":"1d1bj0d93p8v7ivw878b5473riz955ry8gpcxgaqma6nxi17rh33","r":true},
