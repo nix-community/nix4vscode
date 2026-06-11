@@ -319,6 +319,7 @@
 {"v":"0.0.1","e":"^1.85.0","h":"07r9ls36pcxc26m6mh75rqjfxgzbr1wglh8c344mjswpgx6zwz38"}
 ],
 "andreas-prouza.obi":[
+{"v":"1.2.11","e":"^1.66.0","h":"1lr8fs11rbsnzcc0zp345vpijgnmmp9ds9rxii90z9d80fflmfda"},
 {"v":"1.2.10","e":"^1.66.0","h":"0yqqcwz9j6ffngagw72r8d4vchba9vngcd0ddhlvp41d00yjigr3"},
 {"v":"1.2.9","e":"^1.66.0","h":"0i89sn5r0h99hmr38dx89h1v2sk19a01ikndh9h0yycb69i1vppz"},
 {"v":"1.2.8","e":"^1.66.0","h":"06k6zm4sf5ng7r83iv38hkhpqyssp5kbgi44wi44wqwzbn559gaf"},
@@ -3270,7 +3271,11 @@
 {"v":"0.0.3","e":"^1.107.0","h":"0iah418l4sx2cprd0fd8356m0jj9zm2s6g4fakkq42184idm6im8"}
 ],
 "iii-hq.iii-lsp":[
-{"v":"0.2.3","e":"^1.75.0","h":"1js1mghljjib91vimmv385asn58jc74988s5l8fcl4cab8f510vp"}
+{"v":"0.2.6","e":"^1.75.0","h":"0vk320j8lj9da67fz02l9rzmhh70i4prpmjwd7iff3hp8f2s06kx"},
+{"v":"0.2.5","e":"^1.75.0","h":"08f6aa144s9jgyjcjfgm08hvpgfwj2irhf7lwvhslyr83z9qfx24"},
+{"v":"0.2.4","e":"^1.75.0","h":"1gbnx8yqwp5hz7i57qbmgflb2a22k66dyy036x8klp6mkm5224fs"},
+{"v":"0.2.3","e":"^1.75.0","h":"1js1mghljjib91vimmv385asn58jc74988s5l8fcl4cab8f510vp"},
+{"v":"0.1.2","e":"^1.75.0","h":"1flxppzkr5v1rz2akzhpdczz5hcwfa52hi59ag5k41rls6w54ag5"}
 ],
 "ilylia.sproto-support":[
 {"v":"0.0.1","e":"^1.5.0","h":"0q81c1z7hd424yancwsylpay4q3krmxmhgjxgv2335fpqb6yybkg"}
@@ -4355,6 +4360,8 @@
 {"v":"1.0.0","e":"^1.70.0","h":"12s4fij1yjhhm0n1my8c5v0vqlgqqbkh4sj35lkcj1z0nh6g1x9l"}
 ],
 "liamwynne.erd-studio":[
+{"v":"0.6.46","e":"^1.85.0","h":"157g263333vmqqzk81s8ji8wzz8khjjz98fdixfhj81if806xcpv"},
+{"v":"0.6.45","e":"^1.85.0","h":"03ycys0618clpib389j8xn8hx6wfhkq8rf2cfab5sn6q56ng8awi"},
 {"v":"0.6.44","e":"^1.85.0","h":"1xizg2im6c3876abyzac5y2haaka5798a90mb2wfihwfnp1glk78"},
 {"v":"0.6.43","e":"^1.85.0","h":"0cxjiyc513pz8qkcv98kx2xdkj10dml19myjiaw5h8b33yvrvp3h"},
 {"v":"0.6.42","e":"^1.85.0","h":"017ll0ijmnhhz1ia5lqb6mgbynqwzxnyi14kv0lnw2hrxhab6c2s"},
@@ -5111,6 +5118,9 @@
 "mirza-hernic.vscode-smc":[
 {"v":"1.0.0","e":"^1.2.0","h":"08bzlvvzlc1bm1p0pmlaa40krpr7zs450rymfc7c6fpcfplk4arh"}
 ],
+"mjethwa-streamlit.schemadoc":[
+{"v":"1.0.0","e":"^1.85.0","h":"1izi6p2irb9hsadj0ypjzlh5y2g3yy3r8iwkmxnz74am1rsalkwj"}
+],
 "mllann01.azure-devops-backlog-explorer":[
 {"v":"0.3.1","e":"^1.85.0","h":"11fj5pf7g957yjg6bcsni5dgh5iyhm62mhz4xma9k587kax4wsi0"},
 {"v":"0.3.0","e":"^1.85.0","h":"1pjj1jzvpy6m2ya5hvclfsf2p7ad1w54i2j0sfw1i1d7jr0mh1nv"},
@@ -5840,6 +5850,7 @@
 {"v":"1.0.0","e":"^1.65.0","h":"198d8bw1q7s754nxwa8mj6idk4bmr50yw2ms276xgsws670d032x","r":true}
 ],
 "oracle.oracle-java":[
+{"v":"26.0.0","e":"^1.84.0","h":"0vkvx1sy1ciwiqwwxsm9940iwhjiain0mf2qc7f1a05f4hx4rxj9"},
 {"v":"25.1.0","e":"^1.84.0","h":"1dsjwcppq0m7x07ihmha4119pymc88sr5vpx0d4i34msy6bd4c0y"},
 {"v":"25.0.1","e":"^1.84.0","h":"0psy5q84621xw90njr2lpm0hcjhyna4apsg7pj1132w6bjs54pga"},
 {"v":"25.0.0","e":"^1.84.0","h":"0y5awqal5a9xm0agx4pgklmwbc4hyh4fddkz7y62rp5yipxwwh3v"},
@@ -10351,6 +10362,8 @@
 {"v":"0.0.1","e":"^1.71.0","h":"0zw38202kfj3iyswgy4f84n2mms6mpxxcw76579rhqgd4p7hbldr"}
 ],
 "trananhtai-lge.exacode-for-copilot":[
+{"v":"0.1.21","e":"^1.116.0","h":"0ghsgryxxx46ibh61g7hgaanba1vxcv80jazsv0axrh4p5m7kzrs"},
+{"v":"0.1.20","e":"^1.116.0","h":"1vmdah548bsr6ji951vrlfpp8qgldqqvzshmvd25sqsaw6aajkqx"},
 {"v":"0.1.19","e":"^1.116.0","h":"0f0zmxr87kzwn9zkld6lf4psavwk8lhjd34qzwd4p0x8qrxzv5wx"},
 {"v":"0.1.17","e":"^1.116.0","h":"0c4wlh26jx2xsyg71imhfhpwk8xs13zbh0iq0pngpck1lw240aly"},
 {"v":"0.1.16","e":"^1.116.0","h":"1mrhw6inc6pspmfx14divyfxq9500jdjykv5l5256v900mxps96w"},

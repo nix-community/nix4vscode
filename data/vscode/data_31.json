@@ -885,6 +885,9 @@
 "bhwa233.switch-tab":[
 {"v":"1.0.1","e":"^1.71.0","h":"08p29zwy46k8jgdfx8d0kvarsy4w02mlc7mfwiy7qb3viizlbl04"}
 ],
+"bidutkarki.walk-reminder":[
+{"v":"1.0.0","e":"^1.74.0","h":"1nikkn1lxlqy8vnilk7h3df40q3b8db1qqk9r6py11qyvxhsy060"}
+],
 "binbiubiubiu.show-theme-variables":[
 {"v":"0.0.2","e":"^1.80.0","h":"11dra26my66pb3813i426a4670498fmzdn6kcc4q3n8ngx1rqgqk"}
 ],
@@ -1350,6 +1353,7 @@
 {"v":"0.0.2","e":"^1.55.0","h":"098l79j8s65qclvvyhvmicgr1k4zfflvban4pcsqxjwx241i0mf8"}
 ],
 "codesetu.codesetu":[
+{"v":"0.4.0","e":"^1.85.0","h":"0yi3g98r7599g5d59bpy355vrmkd13zmb7imi60b175a7r62ps07"},
 {"v":"0.3.0","e":"^1.85.0","h":"1zq23n2l25qgybdzjgvf8bfqkiv6a5v0n7wwpx2m30qmrzzkj1wm"},
 {"v":"0.2.2","e":"^1.85.0","h":"0k3x0fr1dqbwk6z4maxiyn6vvgjnl4fmldaj3xpcilaj39gdqd9v"},
 {"v":"0.1.1","e":"^1.85.0","h":"09db3sxhccrm5lhcjqkl2026gx3w2r5dpml7bdz81y9g18309dq6"},
@@ -1847,6 +1851,10 @@
 {"v":"1.6.1","e":"^1.30.0","h":"0qkqf5pd5x8r20275ahxclgaadagq04mln0lhkmv6w34n5qx6ibw"}
 ],
 "devprod.vulnerability-extension":[
+{"v":"1.2026.610001","e":"^1.100.0","p":"darwin-arm64","h":"1agqzhksa0d3j2aj98za5n7wfspsngjwdr73jj353fax7193pq1w","r":true},
+{"v":"1.2026.610001","e":"^1.100.0","p":"darwin-x64","h":"0k1b7xr00g90087rnrfmcmbxf7qva0kxasmjkgkysq0yrwxfy1mf","r":true},
+{"v":"1.2026.610001","e":"^1.100.0","p":"linux-arm64","h":"07prfing5x0i330az1dzj8yg5z156llcwyi3x21l8qv6qyz9c99j","r":true},
+{"v":"1.2026.610001","e":"^1.100.0","p":"linux-x64","h":"0w71nylqbq1gy0wa7kjxhipf12p9r8k7jngwka05f63gai4x7csq","r":true},
 {"v":"1.2026.609001","e":"^1.100.0","p":"darwin-arm64","h":"1yy8x8x2jml23736ghz07bhf2vwvrzkzgfp4cx0s1rm9wx66qs8f","r":true},
 {"v":"1.2026.609001","e":"^1.100.0","p":"darwin-x64","h":"1sghnysfvw9v65z2yxjyfq88zkwxxz43p5fbid42s2p9bavaqlkp","r":true},
 {"v":"1.2026.609001","e":"^1.100.0","p":"linux-arm64","h":"1rbin5dcr9js08xswd77hf05p7132rqvycdbphmqv4j639rf1vsp","r":true},
@@ -9725,6 +9733,7 @@
 {"v":"0.0.1","e":"^1.28.0","h":"13j16h8lgkpzsap53008gwwpss79wcqdqncbqi9gm6xcd1ckzd0s"}
 ],
 "zacharysnewman.open-in-sourcegraph":[
+{"v":"1.2.0","e":"^1.94.0","h":"0k22makz9xks57cd7prx9ffl9ckd5c42pxzjjf7nkb1f3wp5mjjr"},
 {"v":"1.1.2","e":"^1.94.0","h":"1ac5y9ch8jv9xqfc1jjmrjrs3jgfgifab94nfl2042x0nmnfdilm"},
 {"v":"1.1.1","e":"^1.94.0","h":"1h5lc00ibjv8sl67njw4847gfzznxgl61pqf99l6462yshlr1598"},
 {"v":"1.1.0","e":"^1.94.0","h":"1cc5smx51m2dy9lw0ii5albd0dbf1i4arzkgnv784maqxa2zxwbb"},
