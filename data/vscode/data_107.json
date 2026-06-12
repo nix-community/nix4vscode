@@ -2451,6 +2451,7 @@
 {"v":"0.0.1","e":"^1.47.0","h":"00k8izn8m5mrfyl35xp19slra6i5nhkdlimwf3fnflq5w55hfygc"}
 ],
 "dbtlabsinc.dbt":[
+{"v":"0.79.1","e":"^1.100.0","h":"0kfsdw67c3gpr88rsrvx7q6fl1mrhj76q9gzn8mzx6n9j9wifqhp","r":true},
 {"v":"0.79.0","e":"^1.100.0","h":"1c22yskc8l155gi0wg2dnlyk9kkp0j028vpds6qb1vn672nxdgch","r":true},
 {"v":"0.78.0","e":"^1.100.0","h":"05xx1fzpamgb5xach31r4bkmbkg89r17b9iiiiaw4zn7nq72f5yd"},
 {"v":"0.77.4","e":"^1.100.0","h":"02lfrb8z0pkam29m3fj8r22kiyksb42p4b236s2pv5hh5143pr0n","r":true},
@@ -2825,6 +2826,9 @@
 ],
 "diycode.diycode-hello":[
 {"v":"0.0.1","e":"^1.55.0","h":"00y9nzr6lm25i52a5xcxpa6847idr31kmkdxw631db02ba7azk7c"}
+],
+"djalua.remote-runner":[
+{"v":"0.0.1","e":"^1.85.0","h":"0rrnd0ysrp76giknv4c9wyjh0166w2vh9gs8clsyixyi9qychsqm"}
 ],
 "djbrown184.cakephp-4-snippets":[
 {"v":"1.0.1","e":"^1.41.0","h":"1m410vkbgrmsrwxhsbv2n3m392igy5sxik3501q1d7kmirny4whp"}
@@ -5965,6 +5969,7 @@
 {"v":"0.0.1","e":"^1.76.0","h":"1ah2a1jkmmrb68w9lrb2xh15g3ykm0mccy88d1hvyw4j05zbc68z"}
 ],
 "maazizit.tokguess-copilot":[
+{"v":"0.6.11","e":"^1.80.0","h":"0ih93c2v5fl089adyq7b7yd3rqp610rcj9jwla4c937vvzbxd746"},
 {"v":"0.6.10","e":"^1.80.0","h":"085m7jhnpb4whcxx4bf8l4jm7bqsdxzzp721bc0z82dfblpyy1jz"},
 {"v":"0.6.9","e":"^1.80.0","h":"0mircvrima90ijl33xjzws02zbn8ifgf5mngakk1nckgpgfhl37b"},
 {"v":"0.6.8","e":"^1.80.0","h":"1477y3lxg11p9brpm4ihvha1cf64zkaq4rs8b7azvbiiz4676xzf"},
@@ -6623,6 +6628,7 @@
 {"v":"0.0.1","e":"^1.88.0","h":"0y1k4civbdpyb5mq7n8yxndzp8vy0bhpkf7x2mv4v1by080n4jnq"}
 ],
 "momentumchat.momentum-chat":[
+{"v":"0.0.5","e":"^1.116.0","h":"137p8n4x8i1yxw5p3sgqp7i10znzd2p0ga3180fqi1vbg06jwglb"},
 {"v":"0.0.4","e":"^1.116.0","h":"062l0lls0hg1gfd7jx6rilmbpqggi00sda4mq3lnbj5dz9wk3rvw"},
 {"v":"0.0.3","e":"^1.116.0","h":"0rm7xfr4ggrww46dwl2ylyzknwjxk27kxp2fiv123ias0vgy9xc9"},
 {"v":"0.0.2","e":"^1.116.0","h":"1ahvbx1ir6ddjfk75wfgqpyga5ibk2d52xlmqf4yw0jrndam1k6s"},
@@ -7696,6 +7702,7 @@
 {"v":"0.1.0","e":"^1.99.0","h":"0z3xv3pw2kh8nxi1q4if440wa7lf62qanih3ykv60y0lb3fx8l5m"}
 ],
 "progress-software.progress-openedge-mcp-connector-abl":[
+{"v":"1.9.5","e":"^1.85.0","h":"1kix4v34i6aww27ajbymgv17fb5rg4dqnkp4f2l47b4cscwkwz1q"},
 {"v":"1.9.4","e":"^1.85.0","h":"136xrrrgqbdcpvvg7sbn4padvb2flqprgiizrnaq968idmn5y35q"},
 {"v":"1.9.1","e":"^1.85.0","h":"1f9mbgic39rp0xv81xhdgqvrh9fjmfnjznxhk0vvgz7h8m5v3szh"},
 {"v":"1.9.0","e":"^1.85.0","h":"1fbab431iqglb5m3k85afj3z2njir8ab5nlna7j4pngdsdr9bd5n"},
@@ -9846,6 +9853,8 @@
 {"v":"1.1.0","e":"^1.54.0","h":"0yigzrsyfjk3vcixhnmx9b8vkdrw879ddwyjmi4q2mgvbll1r1il"}
 ],
 "vmware.vscode-bosh":[
+{"v":"2.0.2026061100","e":"^1.75.0","h":"0y1vpfk5192af6bcl79snm8b2qf6ij3miyvn0j3b20qpb4cfhcga","r":true},
+{"v":"2.0.2026061008","e":"^1.75.0","h":"01mfbrigz4gf0w2bddxcczq860a2kpdj7xq0g97x4l75qqy6cxvz","r":true},
 {"v":"2.0.2026052300","e":"^1.75.0","h":"14g6yfmzakdqjiab8h4bqdpywlam5xf6b9qbwkpp0dr7wgi8b79c","r":true},
 {"v":"2.0.2026052100","e":"^1.75.0","h":"0dz8p2zsf1yav29nxgwmjm1pqfljaq48j0mdymamcykmk45i5bxy","r":true},
 {"v":"2.0.2026051900","e":"^1.75.0","h":"13xnfy6g9nbskz3m7x2w5v216riwr3wx5b9ax7djgjq8h6aysafj","r":true},

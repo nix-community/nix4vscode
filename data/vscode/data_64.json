@@ -1303,6 +1303,9 @@
 {"v":"0.0.2","e":"^1.85.0","h":"10vfzf4bz8s503sjzklvskkpimfmmnnpan1876rw9cs98znvsi04"},
 {"v":"0.0.1","e":"^1.85.0","h":"11kqldb74md6cpj0db0mw6wxqna4wli7s9sg5j82k35j15mpnbr3"}
 ],
+"bronivsego.broni-vsego-bron-system":[
+{"v":"1.0.0","e":"^1.60.0","h":"14v0bf2wzfq9ni04sdvdk0z8fd5mrad56znzgk024lhs1v4wdq72"}
+],
 "brunomnsilva.mingw-c-configuration":[
 {"v":"0.9.1","e":"^1.8.0","h":"1823x14mi4854lgf7qaw2p2f4bfmd96x5hhbx5s41h0j6q8ppysi"},
 {"v":"0.9.0","e":"^1.8.0","h":"0ygw5nwqk1s7mf4g262z4sffzkmdzvph5ivjf37hb9yib4p96br3"}
@@ -4437,6 +4440,7 @@
 {"v":"0.0.1","e":"^1.91.0","h":"0pqi9yhpfqhaisb3318iqngc7w4zy37g60b41x02szh7rnf41dv2"}
 ],
 "letitia.md-human-review":[
+{"v":"1.5.5","e":"^1.74.0","h":"0mid06k0y2ykf7509yrx23b2xk147lddij2b1hl09wm7f9sc77f3"},
 {"v":"1.5.4","e":"^1.74.0","h":"1pw4kh85ja5wwbml2fc9qv5gy6m9ij45fpffppj3cfprl4yr61iv"},
 {"v":"1.5.3","e":"^1.74.0","h":"02y5j77y1x559hv4sdscy83w8bis16l09n5hqll00s0mlrqbw1lb"},
 {"v":"1.5.2","e":"^1.74.0","h":"1z4cd0c918bpn9n4rw0czs37nkpmqa6a2d8bjf17n1krd4jxgxha"},
@@ -4987,6 +4991,7 @@
 {"v":"0.2.0","e":"^1.90.0","h":"0r8yh1nlbh19qxj3k7472byqqzhng11md8grpcblis6crwak7bzn"}
 ],
 "maya-dev.maya-ai-assistant":[
+{"v":"1.2.3","e":"^1.85.0","h":"15afzxjsysrsmhwi9rixxlhy5x31fk5mfmvlk1d36gfgzgvv1did"},
 {"v":"1.1.66","e":"^1.85.0","h":"02xrccy4hm6h36yiggb6ry1lrh676fi8pj6cj4fc87q54adq31vv"},
 {"v":"1.1.65","e":"^1.85.0","h":"13fcnam48h2ryncn0dl1capl3idgd121g0ywlg80x67ag1j5mci7"},
 {"v":"1.1.64","e":"^1.85.0","h":"1v87kap5fnawxh3gk8rj3c3yc6d8rw16sylq87f53nv7ddrxhkiq"},
@@ -5869,6 +5874,7 @@
 {"v":"0.0.1","e":"^1.64.0","h":"11xbm2zgipwvizidyk68syfmyqp98gai79f3gazcrg285mdyb6vi"}
 ],
 "muhammad-ahmad.xlsx-viewer":[
+{"v":"1.9.9","e":"^1.60.0","h":"0951mm3lbsaja23dhy39psidxaqs551ns6xxpa178p468iyvhg09"},
 {"v":"1.9.8","e":"^1.60.0","h":"0ndsiipkj4ph82fnx9ry4lc4d80yz0n36khi6s2fiscq21fflyxb"},
 {"v":"1.9.7","e":"^1.60.0","h":"0fmjqrlf4k7xagfbdjqn9xzih6v5qy19pcy6vdjnjvhn1a72811a"},
 {"v":"1.9.6","e":"^1.60.0","h":"102xgplnnk7fpyq5hs4khhlg7qclirh6h4yklb9gl4bskhgp0nrv"},
@@ -6053,6 +6059,7 @@
 {"v":"0.0.1","e":"^1.106.1","h":"0z0wsh5dgf8zx2hkdl2f3pcq9pz8jilq31gix6a1x4arflf8zkbw"}
 ],
 "niwantha33.micropython-studio":[
+{"v":"2.1.0","e":"^1.75.0","h":"0j4h25zrkq1xkzmsik0k63gqd1cjnc8460cjdmvxr3gjc54ykwia"},
 {"v":"2.0.0","e":"^1.75.0","h":"13qc7hy2arc9y5n92nczkgaacbzfnmdrv5pz077vfnzggdv8k12c"},
 {"v":"1.5.0","e":"^1.75.0","h":"1d17m9k0hacv98ij84qs1dbyp96w0ywcdjhkblss6w6fy6qdfk9j"},
 {"v":"1.4.0","e":"^1.75.0","h":"1vx91r69ldpbp8jfvfw26zcsvnqampwcx6m7a2936bbh1rn7yw06"},
@@ -6138,6 +6145,12 @@
 {"v":"1.1.0","e":"^1.74.0","h":"02z15kf8wkjvn64hp2wfs39ya5hhgxgc5n1pwh9f2dd2bwschi9f"}
 ],
 "nrigalle.claude-trace":[
+{"v":"1.8.1","e":"^1.85.0","p":"darwin-arm64","h":"0f8vqd25lvzng4cmm73xm4ihx6g9fjmg6yk51fcxpi212kyk1yh8"},
+{"v":"1.8.1","e":"^1.85.0","p":"linux-arm64","h":"0hcwzr4xgj1s699m4m2pwd4a8j71aa0nv9gwp72hyhnafh1aqzms"},
+{"v":"1.8.1","e":"^1.85.0","p":"linux-x64","h":"1b54wrm35aj9pvcscafjnp2hwr0imcbbn9467wgq56jac46287nw"},
+{"v":"1.8.0","e":"^1.85.0","p":"darwin-arm64","h":"1l4l43qdbacmjd86kr3rnrznwcl0dj3xkzg05zdni4skjif23j18"},
+{"v":"1.8.0","e":"^1.85.0","p":"linux-arm64","h":"08dw4ssrnlgvniw49r8vj213dzf22669sxiz1symyaqwcfsdskfq"},
+{"v":"1.8.0","e":"^1.85.0","p":"linux-x64","h":"1v21wzz25hgb3a0dcfpbqr6gv36n994y1vfhk0f7kp4iwvqsws0j"},
 {"v":"1.7.0","e":"^1.85.0","p":"darwin-arm64","h":"14fvm7360pvyb5kyqdlrdl343nc4a6yg4q2gcj0iv3rhpj25wzlq"},
 {"v":"1.7.0","e":"^1.85.0","p":"linux-arm64","h":"1f14pbbj5wxam0v2cm8mggfrzq2wqbcrx36l425hhdnrxzjhp4ii"},
 {"v":"1.7.0","e":"^1.85.0","p":"linux-x64","h":"0afk9na4qyv2m8ra9jy2jdrpdv8z1spip4csjl8l0f3nws40hw62"},
@@ -7260,6 +7273,7 @@
 {"v":"0.0.1","e":"^1.107.0","h":"1d3vvbm91p4zbz7h32a5knr025j5bd1ca3p8nz43klmq1hxdljqi"}
 ],
 "rayliu.solution-development-studio-extension-pack":[
+{"v":"1.1.5","e":"^1.105.0","h":"0vbl0d67rllv6imrmv9cpdqag8h26wwybpn5b0y772l72m6wjfl2"},
 {"v":"1.1.4","e":"^1.105.0","h":"1vb4fb57wf0pfxxn27bh4603ffq00bcp21v5js27p2a9nw7plrry"},
 {"v":"1.1.3","e":"^1.105.0","h":"1x960gffchw7s5l5jipjrysn9xwgwk8spw805dicswlf3izrvliv"},
 {"v":"1.1.2","e":"^1.105.0","h":"1xl9syl347cywvqa3rwx4vn7bnp39ljk1qpmg808a6rbxz8vf927"},
