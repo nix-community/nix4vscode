@@ -3,8 +3,7 @@ use serde::Serialize;
 
 use super::Marketplace;
 
-#[derive(Debug, Serialize, Deserialize, PartialEq, Eq, PartialOrd, Ord, ts_rs::TS)]
-#[ts(export)]
+#[derive(Debug, Serialize, Deserialize, PartialEq, Eq, PartialOrd, Ord)]
 pub(crate) struct ExportedData {
     /// version
     pub v: String,
