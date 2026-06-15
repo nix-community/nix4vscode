@@ -6,6 +6,7 @@
 
 nix4vscode is a Nix overlay for VSCode. It supports both VSCode and OpenVSX.
 
+
 ## Usage
 
 nix4vscode supports VSCode by Nix overlays, here's how you can use it:
@@ -133,3 +134,7 @@ configuration example that demonstrates how to use nix4vscode with various
 extensions from both VSCode Marketplace and OpenVSX registries. It includes
 examples of version-specific extensions, prerelease extensions, and custom
 decorators.
+
+## Credits
+
+- [nix-vscode-extensions](https://github.com/nix-community/nix-vscode-extensions)
