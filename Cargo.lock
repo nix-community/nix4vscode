@@ -1848,13 +1848,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "nix32"
-version = "0.0.11"
-dependencies = [
- "hex",
-]
-
-[[package]]
 name = "nu-ansi-term"
 version = "0.50.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
