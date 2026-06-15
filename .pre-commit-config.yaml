@@ -1,21 +1,22 @@
 # See https://pre-commit.com for more information
 # See https://pre-commit.com/hooks.html for more hooks
+exclude: data
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.2.0
     hooks:
       - id: check-merge-conflict
       - id: end-of-file-fixer
-        exclude: 'data/.*'
+        exclude: "data/.*"
       - id: mixed-line-ending
       - id: trailing-whitespace
 
   - repo: https://github.com/biomejs/pre-commit
     rev: "v0.4.0"
     hooks:
-    - id: biome-check
-      additional_dependencies: ["@biomejs/biome@2.0.0"]
-      exclude: 'data/.*'
+      - id: biome-check
+        additional_dependencies: ["@biomejs/biome@2.0.0"]
+        exclude: "data/.*"
 
   - repo: local
     hooks:
@@ -23,7 +24,9 @@ repos:
         name: rustfmt
         language: system
         types_or: [rust]
-        entry: rustfmt
+        entry: cargo fmt
+        files: \.rs$
+        pass_filenames: false
 
   - repo: local
     hooks:
