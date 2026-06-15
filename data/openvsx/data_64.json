@@ -33,6 +33,9 @@
 "avetis.tokyo-night":[
 {"v":"1.0.2","e":"^1.60.0","h":"1b4zyv0gjwr79bs2fycyr7g3a5kx6r8vvwkili7j3f65sns075l5"}
 ],
+"ayushpatil.codeplayer":[
+{"v":"1.0.0","e":"^1.85.0","h":"1k6vbjziargxasszhj6fqm79jfgqb077ripffqvy7gnjh5l01gxp"}
+],
 "azuralight.midnight-erd":[
 {"v":"0.1.0","e":"^1.85.0","h":"1slxzpmb1mwv2mp0ppmicq7qgqlv6ck4h0gmcda2c5jsp49473cl"}
 ],
@@ -169,6 +172,9 @@
 {"v":"0.0.3","e":"^1.82.0","h":"1fq6p2nf6aaq7zfrknp027s135cddjxsx22qnfvnsbl2hi60z6jp"},
 {"v":"0.0.2","e":"^1.82.0","h":"1r2bksm0xmxl4pikiclgq2s0h4ha5lkfmdpipzjx1la57r9s96ph"}
 ],
+"darkmusic.fossil-scm":[
+{"v":"1.0.8","e":"^1.95.0","h":"0z1ihsw7kw1w3j5mg5l8ppypkxjiq2kh7hx60ws9jhharl654inr"}
+],
 "darkphoenix.debian-changelog-item-creator":[
 {"v":"0.2.0","e":"^1.89.0","h":"07jssxh53am41nq0xfava5dfsnlhdw3543p866a3ywmdpqd7naw3"}
 ],
@@ -183,6 +189,9 @@
 ],
 "dsrkafuu.vscode-theme-aofuji":[
 {"v":"0.3.6","e":"^1.31.1","h":"0s3w75hg9d2pinxgjsx12nqrfzvr3bc2az48mm5xf3wv2l3ycdlm"}
+],
+"duchuynguyen.android-emulator":[
+{"v":"0.0.1","e":"^1.85.0","h":"1ryyigwi93yghw2g2mkcyjknjl0r2rdxqnywkzyd6x3mnvzls9rz"}
 ],
 "dwmud-fyi.luggage-plugin-dev":[
 {"v":"1.0.3","e":"^1.85.0","h":"1a49494ahcwwyvljb904grih17lbxvzwgv7iadcmkg26gyn6kr20"},
@@ -226,9 +235,11 @@
 {"v":"0.1.0","e":"^1.99.0","h":"1k02br92xfg5wybwr9zc4alq22jd3kw2xaz6kr1a0lrm0cxmgs3r"}
 ],
 "ericnewton.tree-join":[
+{"v":"1.1.0","e":"^1.85.0","h":"03nr0d82rqk82d71f8s34y9592bqjq47mip9aw928z9nzm4zyqgq"},
 {"v":"1.0.0","e":"^1.85.0","h":"1yd2k594hyasbqr70jnydy7hg8bpkjgddzisblanws6m3n6cz9f2"}
 ],
 "es6kr.claude-sessions":[
+{"v":"0.4.10","e":"^1.85.0","h":"1l0al0yczjgsbx5r3znciw12yfy57y83f6lzqg9yn1clbq6801x0"},
 {"v":"0.4.9","e":"^1.85.0","h":"11zh056cbwjkw5rsiwh8iannlyf65nq2cs13pq1lx318fxsqbx25"},
 {"v":"0.4.8","e":"^1.85.0","h":"0yxai0by14zb0x04h16jr2x28y7xxqbl125i1fqn1l6bnqhr6sdg"},
 {"v":"0.4.7","e":"^1.85.0","h":"189gbpqs105zz0i6pzm74jqhn3xzdwiy9cwvqfdzifxz4xpamb8f"},
@@ -423,6 +434,7 @@
 {"v":"0.8.2","e":"^1.65.0","h":"0wbxzvmhk0g6d8bnkbkrw3zngwm4kdfz805a1h0bbyz55bq2ls75"}
 ],
 "jtpeller.nebulous-color-themes":[
+{"v":"0.2.2","e":"^1.0.0","h":"1mrqf69frfvn3ivr0lr53kbfigm4kan7jzafq1qhyfld34raknz2"},
 {"v":"0.2.1","e":"^1.0.0","h":"094n2z1hiky1cahax2m5rpf5b138zl3qk2469nzbwxs97cg3w863"}
 ],
 "kevin-ashton.vsc-encrypt-file-with-env-variables":[
@@ -444,6 +456,7 @@
 {"v":"1.0.0","e":"^1.104.0","h":"0mc168hlwp5rlhj9gscalm9l44y8pwc54776c230fd40jnhvjzr5"}
 ],
 "letitia.md-human-review":[
+{"v":"1.5.6","e":"^1.74.0","h":"0w7zirsc0vg6vz5gs8lj542gip9wfd6an3y76mk1xqd32hg2ry8l"},
 {"v":"1.5.5","e":"^1.74.0","h":"1hpcp6svhsvw2a4rx5psxjapndzps15aii6rhlhz725nvmfx271n"},
 {"v":"1.5.4","e":"^1.74.0","h":"0mf9ybah978zj2a5n69x1ba0gzsrz95gkzqa1ssg8ircivms41a9"},
 {"v":"1.5.3","e":"^1.74.0","h":"1ralhlm2yfpw9r377faa6i6f50m81q8jghy1r498bnn4kdq4jg7c"},
@@ -489,6 +502,11 @@
 ],
 "meximized.vit-python":[
 {"v":"0.0.2","e":"*","h":"0qyvq3blvjyqgl8xjjrwv442k3ym1jqcsypqqb79fbnfnhhirsj7"}
+],
+"mikesoft.vscode-kilo-cli-launcher":[
+{"v":"0.2.7","e":"^1.86.0","h":"075zxk4nal7zwdanc4z4hpilp97jjfj2dlbawcjacz3cxmpwm8qm"},
+{"v":"0.2.6","e":"^1.86.0","h":"070x3psc7f9sqvc4gax4l22yi6q2h3npmgrhqg69jpm9b4c93f4r"},
+{"v":"0.2.5","e":"^1.86.0","h":"0wybs3xi5g3aym09137ap2iz3rfvdd85vvvgbviq31kl82grck76"}
 ],
 "mintchipleaf.fairyfloss":[
 {"v":"1.0.0","e":"^1.12.0","h":"0hplh6fihx2z4b76x11ai4p3a8vfi5f8vvszmgm7dc520439m6cw"}

@@ -583,6 +583,9 @@
 {"v":"0.0.3","e":"^1.90.0","h":"09837m6qd2c79pgr89hj7a0kblz5xp43giq87ppdsl3x00rkx0fj"},
 {"v":"0.0.2","e":"^1.90.0","h":"0b4bvrmim3fadzw1sjl2ii6ib89wzzjz3nh1idn9gvkp642yrhiy"}
 ],
+"portbook.portbook":[
+{"v":"0.1.0","e":"^1.75.0","h":"128a2z0957wgxidd3gs28ly23ka7fwiq4j55jvhz1gs0xc2vc356"}
+],
 "pouya.justifier":[
 {"v":"0.0.13","e":"^1.81.0","h":"0bdbjzmgkkz4rbc1jxiqzpqc5xdiilr4mdl3l94bbaw2lfd023h8"}
 ],
@@ -601,6 +604,11 @@
 {"v":"0.0.4","e":"^1.92.0","h":"1py5h26iw7lb2x0a3s8nhdsrr22simb6ij0683irwbr1hly6lj6n"}
 ],
 "redhat.java":[
+{"v":"1.55.2026061309","e":"^1.77.0","h":"0axwi1x78nzmh21rbqg7jx2y1mhkqc8n3l0jhn6xxcqs3bh4by9f","r":true},
+{"v":"1.55.2026061309","e":"^1.77.0","p":"darwin-arm64","h":"1bkirmjg1mas9yjwxfy2jqymxy65k93xn4haxm8qhsmn09i8dq6s","r":true},
+{"v":"1.55.2026061309","e":"^1.77.0","p":"darwin-x64","h":"0lv98j5wyma67zbj4gwzdy3r95x4v4imzhzgbyihjzfd2ph6r4li","r":true},
+{"v":"1.55.2026061309","e":"^1.77.0","p":"linux-arm64","h":"0nq5mm7irhhji6i4ryhigzkcz0jraxsayjmj1sdfcvvcgynpfyd3","r":true},
+{"v":"1.55.2026061309","e":"^1.77.0","p":"linux-x64","h":"0p67hqm9wqblifg9h9k5jdrm475lrfmazisikvhk5y3yvb5ilf2w","r":true},
 {"v":"1.55.2026060409","e":"^1.77.0","h":"18a51057ks50l12zwvxww87zm432ch78v978ry0zcf653v3svndn","r":true},
 {"v":"1.55.2026060409","e":"^1.77.0","p":"darwin-arm64","h":"135whi4c5yf53yp5mb0bfrnafq1pxkmx6yqbd80940cvaiqkaaw4","r":true},
 {"v":"1.55.2026060409","e":"^1.77.0","p":"darwin-x64","h":"1q842z9qgj1mzl4rn2r9h0ny78vj7z937fjcir421ivgn83vl3kb","r":true},
@@ -3591,6 +3599,7 @@
 {"v":"0.0.7","e":"^1.75.0","h":"02krpcg4lx70rcf85rk3qg50g8b0lrj4xcfy0wr4g2bhh2anmz3f"}
 ],
 "ric-v.nexql-themes":[
+{"v":"0.0.7","e":"^1.85.0","h":"1i3z1ry7k7lkkxia1srwwpgsy1b7s86maslwrr27z2qp5sn59nc1"},
 {"v":"0.0.6","e":"^1.85.0","h":"0x6hv04la9rg2yzjh7zlhwycfxhmvnmmj64iwl0r68w7xq9kj5bh"},
 {"v":"0.0.5","e":"^1.85.0","h":"0mxaij05kb69p68q7cpvjg1rxgdrx2f3lkyv14xggfv78bqp9ih4"}
 ],
@@ -3792,6 +3801,9 @@
 {"v":"0.1.2","e":"^1.74.0","h":"1dvlkzw7anl4858ijjkljxk65y9w6npppm8bb968k78bimb24hsl"},
 {"v":"0.1.1","e":"^1.74.0","h":"0kysh19xdxwbsm3v620z4jiz0ghybkl73gqmcxpmfciw297rla3a"},
 {"v":"0.1.0","e":"^1.74.0","h":"1mr4dn8a1z2ydgja7yhn84kg2cg168wk4j45q5iblbhnv476myqg"}
+],
+"ust-pace-ai.copilot-wrapper":[
+{"v":"0.1.0","e":"^1.90.0","h":"0ggy7xiiblvvp7d4qsm9dhvfq0a1b5qiamfc6yhjxngmsjf9kdkx"}
 ],
 "vasilevalyudmila252.tldraw-vscode":[
 {"v":"2.216.19","e":"^1.96.0","h":"0vxiz324y52ywm5im3acn3gzg1mkv0khalm4f1vmqlywvp4v6amz","r":true}

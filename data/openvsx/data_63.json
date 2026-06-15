@@ -172,6 +172,9 @@
 "cheshirekow.cmake-format":[
 {"v":"0.6.13","e":"^1.23.0","h":"116hj54rmln73k5ig5k96nrab4yvfiqywvpjf2qc145wsh1b774a"}
 ],
+"chihhao-su.vscode-gaoproject-mk2":[
+{"v":"0.0.1","e":"^1.106.0","h":"0gm312df1kacccnj35999a4gsyl18ylka262p76q3xjx15igm5b3"}
+],
 "christian-kohler.path-intellisense":[
 {"v":"2.8.0","e":"^1.43.0","h":"0h5rmqbxhgq1bffypx9lrfvfwygy4vw11v41sl1lp6sddx1y8mm8"},
 {"v":"2.7.0","e":"^1.43.0","h":"1zs2gi66b46v1yh4lnwvy9lj65pg37s288ijcbnvmbcdp46ripk6"},
@@ -369,6 +372,9 @@
 {"v":"0.0.3","e":"^1.80.0","h":"1w8m7gchb5wq7yni2ni5kl15wpqn7hwqfd9khfcqi1b4dw9fgfnz"},
 {"v":"0.0.2","e":"^1.106.1","h":"13q4pr1s1qnmjnfaivm8di99dcd0602x3b77k5v517d42klsgn2v"}
 ],
+"haskell.language-haskell":[
+{"v":"3.7.0","e":"^1.0.0","h":"1ci47ns654bp766a1vdlxgq1lcfyfmyfd18p9i0k92hhvv74hpg2"}
+],
 "hugehardzhang.lake-editor":[
 {"v":"0.0.17","e":"^1.58.0","h":"1hqpn0i3flv987xvd2hlp0xd9h5kz6saycjmdvn7h82xh4m0w4jh"},
 {"v":"0.0.16","e":"^1.58.0","h":"1pvz7fjmxrip5y0j20nxm9diyvzpla08w80gxk98izkj1212rhds"},
@@ -376,6 +382,7 @@
 {"v":"0.0.14","e":"^1.58.0","h":"03lk5r6h6krwxnjihf952lqrf9miphppqbb6jcdx19ki1cdiafh9"}
 ],
 "inference-labs.stats-compass-mcp":[
+{"v":"2.0.0","e":"^1.101.0","h":"0rq0whyqi3i9ijb9xzj10mhdhk64wxy5wlq2y0cffaf3jjsq7dnk"},
 {"v":"1.0.5","e":"^1.101.0","h":"101zamhxpp9w2cl596zkc1ws78kp5y7pd785wn5danw0z4sqbgpl"},
 {"v":"1.0.4","e":"^1.101.0","h":"0jlx5vh2c0z50jfaqawqyfyan2qfyn1317s9pm8lr7ihirmh50cd"}
 ],
@@ -565,6 +572,7 @@
 {"v":"1.0.0","e":"^1.80.0","h":"09p2jl8jpcnga2pjjhkzs0wx6bjaxfbkzc8h7hdnfj5xkcy834z2"}
 ],
 "lukattt.vscode-stats-tracker":[
+{"v":"0.7.0","e":"^1.85.0","h":"1qgj82gnc5zmgfmn4w6bvxhjdy4mbi516arhmxjsj8d9pnqz7ply"},
 {"v":"0.6.0","e":"^1.85.0","h":"184gbwg19dnvar6c8m1g50jx4h2xxshfz9kk05bxx3ccyyys28ma"},
 {"v":"0.5.2","e":"^1.85.0","h":"05i2c0lmz9cyi102l5vzx79l2njjp7d8w5r5fyfcq98ww4a2w816"},
 {"v":"0.4.1","e":"^1.85.0","h":"11qr07z90s1nwcba8k4csf8v3rl0signsq6567xfn2xah31g93c4"},
@@ -690,7 +698,18 @@
 {"v":"0.0.2","e":"^1.88.0","h":"0q5m5v7fa5xhcb94947ivpfrg735l3v37zgfz7dq3lskk9s82gza"},
 {"v":"0.0.1","e":"^1.88.0","h":"1h9f6524rwlgdxp2l1ykzi43cf00jr52qmr6ykd6qviprzl5sarr"}
 ],
+"sakethsreeram.smart-task-focus-timer":[
+{"v":"1.0.0","e":"^1.89.0","h":"1b4jl3hck77j41f8lfgbdrglwg64112788awkfviac5ha6rbiz0i"}
+],
 "salesforce.salesforcedx-einstein-gpt":[
+{"v":"4.1.0","e":"^1.101.0","p":"darwin-arm64","h":"1schbg9isf002l44zgkll9b0myy7li4d1gh5n9z6zd9z84010yhd"},
+{"v":"4.1.0","e":"^1.101.0","p":"darwin-x64","h":"0mmk8gb99pakmlb4jg2hc14bkzd8my2i8vbcbhh6vfcfjywrgk1n"},
+{"v":"4.1.0","e":"^1.101.0","p":"linux-arm64","h":"03nhga5xmj06x3cw9qn0h0i527yccvf17q387cypqy6qwsg9gcs2"},
+{"v":"4.1.0","e":"^1.101.0","p":"linux-x64","h":"0px43x12m1xll93gg7d90z75s7kdjjr5zmka0iafw8078zsjcgvs"},
+{"v":"4.0.5","e":"^1.101.0","p":"darwin-arm64","h":"1x9fk910wbxkpv80dw1c6yrd1910jhc679329d1p9lifyrkr4lry","r":true},
+{"v":"4.0.5","e":"^1.101.0","p":"darwin-x64","h":"13f4kgwkg03ad9bqc0qnjgp6s271a8wn087m8mkh4ly3pic0vg49","r":true},
+{"v":"4.0.5","e":"^1.101.0","p":"linux-arm64","h":"1pc75s16yd2svywd2vy2xivisiaknynghi0001638l1g2z0yy53y","r":true},
+{"v":"4.0.5","e":"^1.101.0","p":"linux-x64","h":"0qnsi4d49h792lqrnrjxayk8rz85nisk5wy4iywr4c4a8xaypdmc","r":true},
 {"v":"4.0.4","e":"^1.101.0","p":"darwin-arm64","h":"17hsib192g41hfr8lxi8xwwwdfm0yp57gzn5i4d7ykizmgxd19mh","r":true},
 {"v":"4.0.4","e":"^1.101.0","p":"darwin-x64","h":"0aj4pilk6b5b04q6zyq5lhq1sy59vr3zq53j2ipmc8lxkk6qapc4","r":true},
 {"v":"4.0.4","e":"^1.101.0","p":"linux-arm64","h":"1ahlji95qr82ilfqxqkqldg41pnp8fd17qswqgjwizsm8sqzwfb4","r":true},
@@ -1012,6 +1031,9 @@
 "takline.cloudflare-bindings-explorer":[
 {"v":"1.0.10","e":"^1.75.0","h":"0a8cp6fpywmndpfgcniv4pa2gf598ny6lsnx6c8iykhzlbnszahk"}
 ],
+"tbcode-org.osaka-jade":[
+{"v":"0.1.0","e":"^1.70.0","h":"198cszj4a512ksjpw6955b6xradlqbqccr2pya1p19bn6mm9ikyl"}
+],
 "trevor.trevor":[
 {"v":"0.2.0","e":"^1.99.0","h":"1kam29g355yjdsnvp7a9nf4jlfb0lnk6i41563i1q3wmcp7lzwsn"}
 ],
@@ -1041,6 +1063,7 @@
 {"v":"1.0.4","e":"^1.32.0","h":"0fs4vlc8scrk7w8zi4dqrhcb2wdzh0qfihwd0df63wr26cflmiah"}
 ],
 "vaulttec-dev.snakeflow-dev-manager":[
+{"v":"0.5.30","e":"^1.85.0","h":"1w0g21assnc14ldciz0vqdcs54amdgcix79w7pggmciddamhfd52"},
 {"v":"0.5.29","e":"^1.85.0","h":"0j3zw1cyd8imy1wk0ly54rhr4h28x2lz37l795n232v42rknw2ca"},
 {"v":"0.5.28","e":"^1.85.0","h":"1283nhqvc9az249fwjblppbmq3z31jcm1dmmi6276w0sb2qgq920"},
 {"v":"0.5.27","e":"^1.85.0","h":"01q83vl9n0gxg8rncmlbwsiwyfrbp9yjhz4i8l655bai1jcz8p10"},
@@ -1084,6 +1107,7 @@
 {"v":"0.0.10","e":"^1.68.0","h":"06sw34dmabp08gq6nh46zysprc859dzgwylbl8znidvh2rgxsd6b"}
 ],
 "worklifesg.archsketch":[
+{"v":"0.1.5","e":"^1.120.0","h":"1ncpyz4ks3wpr6ynlpc0s0icjwr770z0dcbxypy43bq4s3q7054z"},
 {"v":"0.1.4","e":"^1.90.0","h":"116cpblv0qlcc7rp8f9qbglb6kcqn37nqz3m941r26iijs22zmk5"},
 {"v":"0.1.3","e":"^1.90.0","h":"102mf6nac3rd83npw5mslwa3mqwy58pyjrakywkzkkwkpzg47niw"}
 ],
