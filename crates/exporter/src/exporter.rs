@@ -1,6 +1,5 @@
 mod data;
 mod mini_json;
-mod mini_toml;
 
 use std::collections::BTreeMap;
 
@@ -12,16 +11,7 @@ use diesel::SqliteConnection;
 use diesel::prelude::*;
 use itertools::Itertools;
 
-pub enum ExportFormat {
-    Json,
-    Toml,
-}
-
-pub async fn export_data(
-    conn: &mut SqliteConnection,
-    target: &str,
-    format: ExportFormat,
-) -> anyhow::Result<()> {
+pub async fn export_data(conn: &mut SqliteConnection, target: &str) -> anyhow::Result<()> {
     let mut record: Vec<Marketplace> = marketplace
         .filter(
             platform
@@ -76,10 +66,7 @@ pub async fn export_data(
     }
 
     for (idx, data) in out_files.into_iter().enumerate() {
-        let serialized = match format {
-            ExportFormat::Json => mini_json::to_string(&data),
-            ExportFormat::Toml => mini_toml::to_string(&data),
-        };
+        let serialized = mini_json::to_string(&data);
 
         tokio::fs::write(format!("{target}/data_{idx}.json"), serialized).await?;
     }

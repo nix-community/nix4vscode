@@ -3,10 +3,6 @@ name = "exporter"
 version = "0.0.11"
 edition = "2024"
 
-[features]
-default = ["display"]
-display = []
-
 [dependencies]
 dotenvy = "0.15"
 anyhow.workspace = true
@@ -22,9 +18,9 @@ code-api = { path = "../code_api" }
 futures.workspace = true
 serde.workspace = true
 serde_json = "1.0.149"
-toml = "0.9.4"
-toml_edit = "0.23.2"
+toml = "1.1.2"
+toml_edit = "0.25.12"
 lazy-regex = "3.6.0"
 itertools = "0.14.0"
-octocrab = "0.49.7"
+octocrab = "0.53.1"
 crown = { version = "0.20.0", default-features = false, features = ["alloc"] }

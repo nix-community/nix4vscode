@@ -12,7 +12,7 @@ use clap::Parser;
 use code_api::code::ApiEndpoint;
 use diesel::prelude::*;
 
-use exporter::{ExportFormat, export_data};
+use exporter::export_data;
 use fetch_info::fetch_marketplace;
 use tokio::time::timeout;
 use tracing::error;
@@ -44,9 +44,6 @@ struct Args {
 
     #[clap(long, default_value_t = false)]
     openvsx: bool,
-
-    #[clap(long, default_value = "json")]
-    format: String,
 }
 
 // #[dotenvy::load]
@@ -55,14 +52,6 @@ async fn main() {
     let _ = dotenvy::dotenv();
     init_logger();
     let args = Args::parse();
-
-    let format = match args.format.to_lowercase().trim() {
-        "json" => ExportFormat::Json,
-        "toml" => ExportFormat::Toml,
-        _ => {
-            panic!("unexpected format: {}", args.format)
-        }
-    };
 
     let endpoint = if args.openvsx {
         ApiEndpoint::OpenVsx
@@ -92,7 +81,7 @@ async fn main() {
     }
 
     if let Some(target) = args.output {
-        if let Err(err) = export_data(&mut conn, &target, format).await {
+        if let Err(err) = export_data(&mut conn, &target).await {
             error!(?err);
         }
     }
