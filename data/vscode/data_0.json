@@ -1302,6 +1302,9 @@
 {"v":"4.6.126032502","e":"^1.100.0","p":"darwin-x64","h":"0ggkhz67mca3mx7lmig9c0gcm6yffdf8kxz59d9m36s1jhif4883","r":true},
 {"v":"4.6.126032502","e":"^1.100.0","p":"linux-arm64","h":"05xakbn0sk9l4ydgpb3kmvj64ya6vdrgiihfjjg34j8hv2dpfzxv","r":true},
 {"v":"4.6.126032502","e":"^1.100.0","p":"linux-x64","h":"1807jan7i9ykvz76msa5sz2xvi6za7klgkzy1msc9zhp583m81am","r":true},
+{"v":"4.5.226061707","e":"^1.100.0","p":"darwin-arm64","h":"0wx55d2rgdxz4r30hkglvizgsm1zsncrhhi58cwsclcxwdx4ywxb","r":true},
+{"v":"4.5.226061707","e":"^1.100.0","p":"darwin-x64","h":"15yrmhxlhmh6rbzflkyc1lj8v593vxjzjax3hkbdag7hcd0c3ywf","r":true},
+{"v":"4.5.226061707","e":"^1.100.0","p":"linux-x64","h":"1y911934lh00c9939f587f5s4p8z58zawhm2900f8hgi6xnklpxg","r":true},
 {"v":"4.5.226051906","e":"^1.100.0","p":"darwin-arm64","h":"1ml2wwkprsgya1kz4hdz7clr3zrzgxhgqxsm6wfk05vwxp7kip4l","r":true},
 {"v":"4.5.226051906","e":"^1.100.0","p":"darwin-x64","h":"0qsv9i0i807a81xw7pi86wd9xpkzyf40c9w5z4iz4jmikpag36dx","r":true},
 {"v":"4.5.226051906","e":"^1.100.0","p":"linux-x64","h":"1a6i6617nyzfj354qgbvi9jl69f8si9gsprqna94sq4kqh1jc9ys","r":true},
@@ -5482,6 +5485,7 @@
 {"v":"0.1.0","e":">=1.80.0","h":"0ypxb6rpykf216lqsa4xsv87nj1npz4qha0gayfacyklkdv9waf0"}
 ],
 "nedonatelli.sidecar-ai":[
+{"v":"0.113.0","e":"^1.116.0","h":"010imi7a0xn48mr13jgr8r32r1wx27qxs8rznd4cf6qhvv43ji7a"},
 {"v":"0.112.21","e":"^1.116.0","h":"004hc4hz9bmcpriz67r559flg74mcc117q56aj4xmbs14cyi9mmd"},
 {"v":"0.112.1","e":"^1.116.0","h":"12rpf26375pfi6x0ssyyd0m8rn5wrc356f8dmffnvx6s8rlcw912"},
 {"v":"0.112.0","e":"^1.116.0","h":"1llmda4x68jg5pn0f1v7z2jjpp2rwv4wjls9wqlsnpa07znjw31d"},
@@ -6442,6 +6446,7 @@
 {"v":"0.1.0","e":"^1.32.0","h":"1v612rdxd6h645scqjp6hr0a2aa8ri4gvi4fvdqm9vzw7gvhvibk"}
 ],
 "postqode.postqode":[
+{"v":"3.0.13","e":"^1.99.1","h":"1fw2f5q003x75wqryvx9r00080habgv2anwryv9v3rvjp547c3qn"},
 {"v":"3.0.11","e":"^1.99.1","h":"1a85b3gmxwi5xmawk6z444i25lvg292lx2l4vhq9677yfdwrah02"},
 {"v":"3.0.10","e":"^1.99.1","h":"00x49r7ilb4gq85klk7zv7qc8xykvzpsk474m2jfva7vg627qanj"},
 {"v":"3.0.9","e":"^1.99.1","h":"0yr3zn886w805334npwc5vsqs48w0m7gpc86lfryfmr3nigs68x0"},
@@ -7184,6 +7189,7 @@
 {"v":"0.1.0","e":"^1.109.0","h":"1c4j6qyjwnfvxkk1n34xkrinlyg0kbl0xfkijrvc7hj8gxn10h5j"}
 ],
 "salesforce.salesforcedx-vscode-lightning":[
+{"v":"67.1.0","e":"^1.90.0","h":"115ary2qlfs30794237cdkafsiznzrdw7srb8pc463j00kxwamim"},
 {"v":"66.15.0","e":"^1.90.0","h":"16wwwp22ri9wrjwhi1h8vbz1zz9x7m3l7rpsrismpc4ildjb4v6p"},
 {"v":"66.14.2","e":"^1.90.0","h":"0wngl5w1v47hsj2rgmvn5np0ph84kp1dhk2hffzlciv8x44dihll"},
 {"v":"66.12.3","e":"^1.90.0","h":"06yx695snp92gr2rh5vs44hxhddzxk6p13xdcm4al13iljdc086i"},
@@ -9382,6 +9388,7 @@
 {"v":"0.0.1","e":"^1.52.0","h":"0a0sgryaj57npmxclglc33k6lsqq036cn37lj66wkd1wn85df657"}
 ],
 "vmware.vscode-manifest-yaml":[
+{"v":"2.0.2026061800","e":"^1.75.0","h":"1ypfbcgf8y02i2jf3vyw315k239mg4vlw5mf60d5d5n9y3nl19dn","r":true},
 {"v":"2.0.2026061601","e":"^1.75.0","h":"0f5d8zz3cx3bhsvv2hyvcgm33zg65ljhv4xf0lmj40d5233735cp","r":true},
 {"v":"2.0.2026061301","e":"^1.75.0","h":"0ghv84hc1n57gnv4kpia72n68hp24702bpdd7g20sbhq255qa8vd","r":true},
 {"v":"2.0.2026061100","e":"^1.75.0","h":"0h4j47hjn5kqqnqi20lv69knqcv69xclhhv9nl5fl3f7m7isw9bl","r":true},

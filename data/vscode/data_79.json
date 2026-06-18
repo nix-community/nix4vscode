@@ -1439,6 +1439,7 @@
 {"v":"1.0.0","e":"^1.58.0","h":"1iq3qv7if3jmh7a6rsx39fin0k7db9i1vc3h172fr9ilmawvffa5"}
 ],
 "dam-pav.bc-dev-toolset":[
+{"v":"1.1.12","e":"^1.101.0","h":"1kx2h7rz9addr3l5fpv66szhvwz82illzh0q1jf303hh3mvmcvwb","r":true},
 {"v":"1.1.11","e":"^1.101.0","h":"1pm6d1z4x0m1a7whab08kw1ixsglz6vl56lzak3b70wincbz24g0","r":true},
 {"v":"1.1.10","e":"^1.101.0","h":"19dpbsiz4w6d28r3fly1zwc50zsjf3y34g61hh20nrv98sdqh9ki","r":true},
 {"v":"1.1.9","e":"^1.101.0","h":"00va6a909sq3752p62jg7s67gcxfzhfbasdphaqsfa3p86k8xll7","r":true},
@@ -2759,6 +2760,13 @@
 {"v":"1.2.0","e":"^1.86.0","h":"0dy6bwiafgzfzmav8x2879ma0db7lvrkwaf80abhb5x7bg3wlb5b"},
 {"v":"1.1.0","e":"^1.86.0","h":"0jm3gpq1iwga2yrdpgq9g19j4kay0ykmw4vz820adm9pvv2xiy2f"},
 {"v":"1.0.0","e":"^1.94.0","h":"1vcb5v7q25vn2qkzv9shj41z4d85cilab0bxadp1jql6afjsz5c6"}
+],
+"igormenin.ai-library-manager":[
+{"v":"1.0.4","e":"^1.75.0","h":"0d0dq1ipfkxn3z2vw4cmpy7alin20lyr9hqwgv8fc5lg4msz92ip"},
+{"v":"1.0.3","e":"^1.75.0","h":"17nj10a58vlr17flg8ikpnqyjhvl14607z55sk1c0c1n74qkpi1s"},
+{"v":"1.0.2","e":"^1.75.0","h":"0c5rf725i5argfrkahm90qynqcxjayg6dsz71wzd623r0r51zhjv"},
+{"v":"1.0.1","e":"^1.75.0","h":"1p1ahng95qhai6ix4r8kkm29micg5lfwlaqwvwgqm47bpvpcb2v2"},
+{"v":"1.0.0","e":"^1.75.0","h":"00ymhq0p6d7rpargh9j61g62k97baajlga4bpjh17h5bv195pr6k"}
 ],
 "imperiumclansoftware.symfonybundlegenerator":[
 {"v":"0.0.5","e":"^1.63.2","h":"1k0nmi35vci0766h12cbbbps64lj7d7kmhd6d6g69k181k8z1qkc"},
@@ -5370,6 +5378,7 @@
 {"v":"1.0.0","e":"^1.63.0","h":"1v0q57gf63l8shkyz9k3b9srk15vsjh4pqggdb8l850xad8azvc9"}
 ],
 "reepolee.ree-templates":[
+{"v":"1.0.31","e":"^1.107.0","h":"0wj8l1y3ml4870cp3ckbfa2nljp5vpd7jczsgs5k4abmh2dvy2v0"},
 {"v":"1.0.25","e":"^1.107.0","h":"0d0s57kc8k1yyr9ajy074vlmmmc31jp7znbqcia98ldi91kx1dp7"},
 {"v":"1.0.24","e":"^1.107.0","h":"1jz4rcdm7hyvy56ylhkq8rnhfnnjl0bmcwvxylrk72wml4slhf1p"},
 {"v":"1.0.23","e":"^1.107.0","h":"1m41pmpxqk5ciyx9fnjsvwc11ds6xs6zyvilp14r3kx992aw72wc"},
@@ -5880,6 +5889,7 @@
 {"v":"1.0.0","e":"^1.50.0","h":"1q9c3ffnyi5arb0vrbsq9xf9mjp3dn6mr3rjwd31y7s6b2x0l4zz"}
 ],
 "sharepointembedded.ms-sharepoint-embedded-vscode-extension":[
+{"v":"1.0.5","e":"^1.94.0","h":"0dk5b4d0lagl2y6aw745w4dnpqz8mlx5cm106cvqzv3ccjibqpx8"},
 {"v":"1.0.4","e":"^1.94.0","h":"0mlwprhnbfds0rsw9vrh3v2p6fl26y5bjyinxg9lywlxn22pcm1c"},
 {"v":"1.0.3","e":"^1.94.0","h":"0bwfcp0nc3762lxpf840bzqwdvc76338crhpqbqs85vw55fczvf9"},
 {"v":"1.0.2","e":"^1.81.0","h":"1m6kb7shi0fdizw53d4whpnhlq0srl4iswxx5sksjnvkgigakwzd"},
@@ -6959,6 +6969,11 @@
 {"v":"0.0.2","e":"^1.28.0","h":"0krkcxbvs3njsimkhi0yj8zn20bpgvks38jczhx9z3csb0j2l1qy"}
 ],
 "traycer.traycer-vscode":[
+{"v":"2.16.6","e":"^1.75.0","p":"darwin-arm64","h":"1448r65a8m3k2dmdllir3d4nn1zshwjw7wbnzh8dzyq0jbdnw684"},
+{"v":"2.16.6","e":"^1.75.0","p":"darwin-x64","h":"1z544gv3paqzcaz1wi0qw6g7xf424z8273bmmrhimlh551hqnlb5"},
+{"v":"2.16.6","e":"^1.75.0","p":"linux-arm64","h":"1wn13rsmwfkw8svia9jbk59m9qinbf8nyy980a95hwbwsi0ja7iz"},
+{"v":"2.16.6","e":"^1.75.0","p":"linux-armhf","h":"1s2150yiqkhyisc2xw3lq82hj0bw7mhich3wf9j5w3cma4xmqs0w"},
+{"v":"2.16.6","e":"^1.75.0","p":"linux-x64","h":"01q5j9g5k5w7cigw8c60wl05y58d2is6718rzbpbk4phrb8ln7lf"},
 {"v":"2.16.5","e":"^1.75.0","p":"darwin-arm64","h":"03f6zsl9x2ggggqiklpvnil1ka69mxacj41ps3bhyfczl2g9avci"},
 {"v":"2.16.5","e":"^1.75.0","p":"darwin-x64","h":"0za1ks9k274ycrfkdz3mfzzya0ivx37iv9d4flbbqf978vfyc0dl"},
 {"v":"2.16.5","e":"^1.75.0","p":"linux-arm64","h":"0rg58gsams7i83m1zmsp88z51nvj9w0zykv558hy0n8j1r4p8bm1"},
