@@ -93,6 +93,8 @@
 {"v":"2026.1.1","e":"^1.90.0","h":"13vvks2bw87fjv5ll4gy7gbm94klkkyr6lsaakybk1g4rc7fk1fb"}
 ],
 "connexcs.cx-connect":[
+{"v":"2.0.23","e":"^1.80.0","h":"1vbnx1fwmbv747zz7cwjsijwfxxgh2hbbhd3qvv1m0csdyqwpqs6"},
+{"v":"2.0.22","e":"^1.80.0","h":"1w57s16k3dqyawy9k1ffkj5l29r7w4b02hjiwm3fwd9z3fzqyvkx"},
 {"v":"2.0.21","e":"^1.80.0","h":"1146z2v6g646ph7npjn0bg8j63ijfqkyb5sgwjvl1r8lpcpqy7sn"},
 {"v":"2.0.20","e":"^1.80.0","h":"06xziwmp5bcyapa4ic21xcql0y350hj3xncn72k4f869z4c40y3q"},
 {"v":"2.0.19","e":"^1.80.0","h":"1gi963awjql6dnj5nqpc6n0pmgbks76awc4aslsxb13qzmdxlq82"},
@@ -149,6 +151,9 @@
 "dendron.dendron-paste-image":[
 {"v":"1.1.0","e":"^1.54.0","h":"1kzi92x2gabv0n5waxazsbhkdf04vyy4pa05scq4k1v19q6sdggi"},
 {"v":"1.0.4","e":"^1.0.0","h":"1p22d6jqz1c7rj0ylpc7c0q7bnyc3cn7y2ynh81dra5ilbxbks5i"}
+],
+"devcoramdeo.my-agy-usage":[
+{"v":"1.0.1","e":"^1.90.0","h":"13sn4g3ahvkh2l1mmpv1ikhj4k3frpbg7ly352vng0panica8s5z"}
 ],
 "draivin.hsnips":[
 {"v":"0.2.9","e":"^1.52.0","h":"1ajiw84k3kv64nf33xnsb6rxv111hhd90wqk13cm8swhh6pkklcr"},
@@ -253,6 +258,7 @@
 {"v":"1.1.1","e":"^1.75.0","h":"15yg7cjzzd9s228cp0ph3sana23klr68c2wsk2j4qr8d3pjh6vsi"}
 ],
 "hotmartcybersecurity.cybersecurityextension":[
+{"v":"0.8.5","e":"^1.100.0","h":"0if5zcng49crp6sng41f8pdfsnjwz0iyp9jhdw71nfirv5ca2zcm"},
 {"v":"0.8.4","e":"^1.100.0","h":"1r3qyhhx65x67jcfrm6c6waw9sz7mxc2rhx1rvjyb23jgxqqc16n"},
 {"v":"0.8.2","e":"^1.100.0","h":"1zdsqsyrh11ihksavwy1gig0q8cd7qzzxc2wn7sxpmljhhig838f"},
 {"v":"0.8.1","e":"^1.100.0","h":"1n2ni3rylzjswglynahyr6irg6yvi2vaq7wh1al9bvg1xmqbpd0h"},
@@ -336,6 +342,11 @@
 ],
 "kwinsolin.act-extension":[
 {"v":"0.5.16","e":"^1.49.0","h":"17zcik0w4lsss2ili568jgxa1cj5690ncddmkxv9b482ibl14z9m"}
+],
+"labpinky-xapi.xapi-claude-setup":[
+{"v":"1.1.0","e":"^1.85.0","h":"0n883967sx7nivwv4yzjby3mjaz6zid3qq84ms7bydiw1yaya4bx"},
+{"v":"1.0.1","e":"^1.85.0","h":"07kzjgj2dybj3fz981hvchdi2nk4nzqsvj2f2ljxrcn50ic7pwbs"},
+{"v":"1.0.0","e":"^1.85.0","h":"1w9ivvha7xzq73nrzq2xryfrjz0vi7lswkcrkdjkp532rj588sgj"}
 ],
 "lee-bechtelar36.playwright":[
 {"v":"1.1.18","e":"^1.93.0","h":"0nxfkgmr6rzwqcypxlz3wahxwxc3fj7bf059vjpgdf5530a905vp"}
@@ -813,9 +824,11 @@
 {"v":"0.0.1","e":"^1.90.0","h":"1q5wba5vxcsj8i8vq6dq59g1l2l7fsn95ag9k049dvmmrmskas6w"}
 ],
 "toppymicroservices.beads-git-graph":[
+{"v":"0.4.20260618","e":"^1.120.0","h":"1fga7qp5jpbqxqbqlrsb4q4pzg157kmwxilf8qgb8l7dhny3d328","r":true},
 {"v":"0.4.20260617","e":"^1.110.0","h":"1792z4l5jfnmv5m4mq291z09gq8h3123gcrhh78hjxc0z8gf64mh","r":true},
 {"v":"0.4.20260616","e":"^1.110.0","h":"1j4hp8183fgk4la78p7iq4jc8gk5d6sai4x7728gm10h47dv9kg4","r":true},
 {"v":"0.4.20260615","e":"^1.110.0","h":"1favgjzjibcvz204nvbwsa2bq9walp9fifbvc7r8h3vkp60w0z93","r":true},
+{"v":"0.3.1","e":"^1.120.0","h":"1gskmhkla6vx14p792bqjdxcwi24w9c7jyypmbcilya8kx9v8vkk"},
 {"v":"0.3.0","e":"^1.110.0","h":"09s1dvb0a7yfzhan9a7094wm33jzq68swy27kpi17affnld18x3c"},
 {"v":"0.2.20260613","e":"^1.110.0","h":"08v8gykpwx5s3gdb80qkjqra85p6dkp8n020jr2shfsk8axrh0x1","r":true},
 {"v":"0.2.20260612","e":"^1.110.0","h":"1rr5s1v38cc5sz7k6anh6dn8isvgbv9h6b7h2iqis8h70piyhqg2","r":true},
