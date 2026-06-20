@@ -187,6 +187,7 @@
 {"v":"0.0.1","e":"^1.93.0","h":"0nb7bd57khqir60c7wxkyyjd1ba7bxld1hjfim2d6vx5a4ccqqls"}
 ],
 "dannysteenman.cloudformation-yaml-snippets":[
+{"v":"5.112.0","e":"^1.31.0","h":"1lz9ns7vlwvl0v035s2xb8hdkq2kfqwja8sdn83w602fc5i3sx29"},
 {"v":"5.111.0","e":"^1.31.0","h":"0w8nmw45rya2c6s0d0x3kaydjch5i5hc2rszm49wn4pskd7v488v"},
 {"v":"5.110.0","e":"^1.31.0","h":"17idr3xlppyy88jfvdwwwphj11wcgkwiimk3gl9aaisa624dzjac"},
 {"v":"5.108.0","e":"^1.31.0","h":"0si58kcylcb4k3f5vd38hskyjq2gsy2w1w3vai0hg7xg2ds3ykbm"},
@@ -899,6 +900,12 @@
 {"v":"0.0.1","e":"^1.88.0","h":"1cffxhzq5wvhx1rn3g8agay2aar1cli0z1ka6z7xy8mr6rwwfq0h"}
 ],
 "myriad-dreamin.tinymist":[
+{"v":"0.15.0","e":"^1.97.0","h":"18zjf8qh5jrgijkgvjq4ipc3q0y269bwbfcqdzicj5hf8vj5cjpf"},
+{"v":"0.15.0","e":"^1.97.0","p":"darwin-arm64","h":"15ar3zp6556chv1c6awag7h5nny5m35z6ahqma8xcrfw73xa2lsa"},
+{"v":"0.15.0","e":"^1.97.0","p":"darwin-x64","h":"0pp503gaa5habnxyjlz1n40yj4m50j9hlibnvxr0ypaj8cpalrpf"},
+{"v":"0.15.0","e":"^1.97.0","p":"linux-arm64","h":"0dnsja6j26b484whbrpbjxz84xry3092pn37mpmpgp1h5rj9v2cl"},
+{"v":"0.15.0","e":"^1.97.0","p":"linux-armhf","h":"0bylyl768m5sd6zkw2y8kc1zr7z625a40igkj51jyjhvaj4bsy6g"},
+{"v":"0.15.0","e":"^1.97.0","p":"linux-x64","h":"1ldwqcg44vrdlagrchna35xn1lyky5r40jjmjxjp2qiyi5q4927f"},
 {"v":"0.14.25","e":"^1.97.0","h":"0c911fbyrdm6rnvpw0k591llpq9ygz19smc39nz63zarc31ylzyp","r":true},
 {"v":"0.14.25","e":"^1.97.0","p":"darwin-arm64","h":"1376qwk6zigpaw2d3817kljlv0cl5iapryinz44224ga942ic1y0","r":true},
 {"v":"0.14.25","e":"^1.97.0","p":"darwin-x64","h":"1i5cj8na5q3pjsy15gxzmldgvz1y32cc5pcikalcn0xzn811qjg4","r":true},
@@ -1411,6 +1418,7 @@
 {"v":"0.28.9","e":"^1.78.0","h":"0asrjhc921w3gvjp59379h5znvac7cfsll46bixv0vi8k7n2zkw4"}
 ],
 "pedromencias.nocodequest":[
+{"v":"1.0.5","e":"^1.75.0","h":"191qxixz8x487h5cv06yljhckcc9jzhrnf7v7nyiyxd163h01hhy"},
 {"v":"1.0.4","e":"^1.75.0","h":"1mqdqpd34avhnams30vfqr49gfighyww98lwrhjhyi0fr353j1dg"},
 {"v":"1.0.1","e":"^1.75.0","h":"1ma7l9wakfw96cwjy3m0g6hgf2hcx1lciam4ci59cbjrjxqc2lq6"}
 ],
@@ -1459,6 +1467,9 @@
 {"v":"0.4.5","e":"^1.80.0","h":"0lvadhy70vnwffj8jrx7a7ywzvppbbiaghwxixp35wikzsy55cwv"},
 {"v":"0.4.4","e":"^1.80.0","h":"02pqk14kdpmz50p5d8kq4mjcbs4yb45bgp8zzimaj78m4hq4zi6h"},
 {"v":"0.4.3","e":"^1.80.0","h":"11n97cpr2dhadc3pldkz6016x9069dglahm0g36gmand8yc2gmx9"}
+],
+"rikkeisoft.rai-ide":[
+{"v":"0.1.0","e":"^1.85.0","h":"1pj6i23wqlrzmw9k2b89xnny2m7rkdqsh55vq1j7x8lrkzai8vn1"}
 ],
 "robole.snippets-ranger":[
 {"v":"1.8.0","e":"^1.4.0","h":"1rbbcj6da2lp6kyvmxsjddsp67i3pv37yshlqmialr53r0wd1gaf"},
@@ -1973,6 +1984,7 @@
 {"v":"0.1.0","e":"^1.85.0","h":"03wndk4mifx39vy7q8r5ib5qi6zrp7b6ch2p6hk3wjzxwsi7sg1v"}
 ],
 "slint.slint-nightly":[
+{"v":"2026.6.1815","e":"^1.82.0","h":"1p8d6a3zvyxzm9h5la3492m6xw26cp9h9hcddf3x39dqx00ycgnn"},
 {"v":"2026.6.1711","e":"^1.82.0","h":"1wq9kssjnpk4rzliq3yd67sibjcskbl033psmvas9n06gcjak5dh"},
 {"v":"2026.6.1611","e":"^1.82.0","h":"1f1qpxxv44ckdynr2l2in0hpxbw86769qlzim2301v50i4db8jd7"},
 {"v":"2026.6.1517","e":"^1.82.0","h":"1waqwl0ysg9d9350gw97110x07l6xlf4sbw7r2gird9984wrj3pq"},

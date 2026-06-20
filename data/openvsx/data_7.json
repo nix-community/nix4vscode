@@ -192,6 +192,7 @@
 {"v":"1.0.5","e":"^1.80.0","h":"1p8y7hyhcy5891209ga47brks694vd36i3nzrlhfszb1k1xwd0vq"}
 ],
 "dannysteenman.iam-service-principal-snippets":[
+{"v":"1.75.0","e":"^1.31.0","h":"1bs40385k0cd4sr4glfm2gwyi7jw3pyy3wrvycysymyijkx1y4if"},
 {"v":"1.74.0","e":"^1.31.0","h":"151jhcv8951p77c96r2l0g4zlh06xz3m0jg0wbvjabn0f56xdjvy"},
 {"v":"1.73.0","e":"^1.31.0","h":"08c82li1k1l94zx0pg55fnp7cf00an707kaxab2fyggm03asbxq4"},
 {"v":"1.72.0","e":"^1.31.0","h":"077fbh4gykwzx742m0ny6xf2rbaf4szsnn1q6nrf5d7pcvlgxkyp"},
@@ -675,7 +676,10 @@
 {"v":"0.0.10","e":"^1.80.0","h":"11a7vz4c57ycar33yq5416l42sr5q5133qkpylckj09nksp6ykw8"}
 ],
 "jo-hemphill.llm-sidecar":[
-{"v":"0.1.0","e":"^1.96.0","h":"1h8rpi31rcyxr8dpbcl5x9664qcwylspk5lbhk5rqymk24k50swf"}
+{"v":"0.1.0","e":"^1.96.0","h":"1h8rpi31rcyxr8dpbcl5x9664qcwylspk5lbhk5rqymk24k50swf"},
+{"v":"0.1.0","e":"^1.96.0","p":"darwin-arm64","h":"106fyyawgzsrc2hgb5hmmkag2y1dv6jr9a2qway3msm17imssy82"},
+{"v":"0.1.0","e":"^1.96.0","p":"darwin-x64","h":"0q8japq3ls2bjpb3367dfjqnx5qnkzq5bs58zvjzscj46k6r86j6"},
+{"v":"0.1.0","e":"^1.96.0","p":"linux-x64","h":"1bhz6amhzc4n0aslyvs8zwdgi1lkf86van5ycg727r8hd5ixm8k8"}
 ],
 "juanblanco--.solidity":[
 {"v":"0.0.189","e":"^1.85.0","h":"1p47w0jyrb7df6pcwx43awyhsqwzb767sj5ijnqjknhmh3258rnf"}
@@ -1023,6 +1027,10 @@
 {"v":"1.2.0","e":"^1.71.0","h":"0b2a4dzpvfp7sg46hj26j6gmgj252y580d23ckkzmps86r69y97x"}
 ],
 "rvben.rumdl":[
+{"v":"0.0.270","e":"^1.82.0","p":"darwin-arm64","h":"1myz87ih1l4s1l52iz21pfyv18vyg9f4k0jj2c5lnl2mrnk4hkrp"},
+{"v":"0.0.270","e":"^1.82.0","p":"darwin-x64","h":"1lmj839zpjfmy94g14vwkisgiw2rc65jmbmwxckyps25a6gkx0ql"},
+{"v":"0.0.270","e":"^1.82.0","p":"linux-arm64","h":"0qp4b9878q31nw6gdk65m88wf54m814a99fl0d6gpls6lg22ay9s"},
+{"v":"0.0.270","e":"^1.82.0","p":"linux-x64","h":"0qkzhz38ik6hpdxrs8xn5hyaq1sn7dmbja5b4jixh3r6shnb1x2p"},
 {"v":"0.0.269","e":"^1.82.0","p":"darwin-arm64","h":"18in54phgqjmgc90w0x5vrhxii280lc72qy3nbx1sa0xlpwf4zjj"},
 {"v":"0.0.269","e":"^1.82.0","p":"darwin-x64","h":"1xa9g4srgp7zbh46zp63xs1df1k2rdibx8z8zxyrgg4s1kshjmwi"},
 {"v":"0.0.269","e":"^1.82.0","p":"linux-arm64","h":"0f7i3xvv1ng6ng3qmggdvy854vqck3afcf839s4m6m4s441l1rx3"},
