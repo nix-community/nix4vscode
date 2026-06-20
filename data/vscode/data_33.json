@@ -151,6 +151,7 @@
 {"v":"1.0.1","e":"^1.65.0","h":"01idpfd6va38brm58yln7nxiz9nhi8m0ss17b7whp0g0qfkmwc7y"}
 ],
 "aet-tum.iris-thaumantias":[
+{"v":"0.4.6","e":"^1.97.0","h":"10sw4l32msx3w9df5xbs5l57b4x123d6aw00hpmx8m5mk79jpz02"},
 {"v":"0.4.5","e":"^1.97.0","h":"1zr3amdag0inahdlms3b283x8f2mi8w50b00wln7bk4k541ycbld"},
 {"v":"0.4.4","e":"^1.97.0","h":"08vr9z65fmjdvkn3w3d2c42qg41gx6ism754q6jasmgvpdhszkj6"},
 {"v":"0.4.0","e":"^1.97.0","h":"06sx3ljxw3f2172asz3nj1c8s6k7bzbxnify5i014204v4dnszjn"},
@@ -2298,6 +2299,7 @@
 {"v":"0.0.7","e":"^1.27.0","h":"1akzqrnzghc0bwvqxlyfm2k137gddd30ydjjrzkpv35gxffxsan0"}
 ],
 "cweijan.vscode-postgresql-client2":[
+{"v":"9.0.1","e":"^1.68.0","h":"0m36xjmx4jl42zrqlyqflcl06zacsp47w568ak15pylkigcam2nv"},
 {"v":"9.0.0","e":"^1.68.0","h":"1h407x3sjwzcmd83l1h7k8gm8nz0gpqfq3d2b5wxvjisy46ijl1q"},
 {"v":"8.5.1","e":"^1.68.0","h":"05bvc34pryc5vy5ln2vl3srfa4pz17ygqgcx6phv3g3xgg7x8lpv"},
 {"v":"8.5.0","e":"^1.68.0","h":"1vlnsn28n03d66dc5gciyav7f9isw8g9mjy8way5g0bpajiapmka"},
@@ -3080,6 +3082,11 @@
 ],
 "eonacat.eonacatlight":[
 {"v":"1.0.0","e":"^1.74.0","h":"0irpb925yfhdx28ncxjja5qv0n04r785ia617mdijj5a0nm2k76c"}
+],
+"erenleryazilim.vscode-tesbih":[
+{"v":"1.0.2","e":"^1.85.0","h":"1chj4rayqzvv41ky83sr117r5n6nvn1qrhnh0vw20aq75x7gj8vj"},
+{"v":"1.0.1","e":"^1.85.0","h":"11qaz4bxj0wzfi6wlikv9rjmf7ibgy0yfzd3azbgnpkhikgy870v"},
+{"v":"1.0.0","e":"^1.85.0","h":"1v37hlghim184qw5z7af4xv1sj2qv2fi9y8dy4lizbk6sm5gnxi2"}
 ],
 "erenndriel.remote-copilot-host":[
 {"v":"1.2.5","e":"^1.109.0","h":"14778xfr0gdjj3fi63glcgbsqxx6fvwpvnwblq68hnphvbkmn7z4"},
@@ -4314,6 +4321,7 @@
 {"v":"0.0.1","e":"^1.70.0","h":"0n0fijcnc0dhdhjhmikq8v78p83c2iwgb0wjh7dsas21q9sjkns7"}
 ],
 "jhhtaylor.tabstronaut":[
+{"v":"1.6.3","e":"^1.99.0","h":"00chkkaqmlm0897fbrvaisiz9kdji84m4klrn9kacn0m83ljcxly"},
 {"v":"1.6.2","e":"^1.99.0","h":"0bhmk7w332y1gjy6xggbhv7car9aq92ll6lcmvf1waz0b7pc0v06"},
 {"v":"1.6.1","e":"^1.99.0","h":"1v76z8asz2flk1kr51x4q82z1h3vzypdv6iy2l5nr3jzb5zzy26p"},
 {"v":"1.6.0","e":"^1.99.0","h":"13n3s7mhw6pazg1ia1r5m2bd24p5wbjyz6ca90jkpqkwq485afdv"},
@@ -5283,6 +5291,8 @@
 {"v":"0.0.1","e":"^1.63.0","h":"13qmfxgkj4xingxcsa4av6a9a528p574ypf6p4fybffhnwskhf4a"}
 ],
 "mark-ku.super-mermaid":[
+{"v":"0.7.9","e":"^1.85.0","h":"1dhda6xc5npbmvnjwm95bvhvj7p45f9a9phfjcir54jr19ih68d6"},
+{"v":"0.7.7","e":"^1.85.0","h":"19kwsjchrpz3scvmaiqdijf7213qq5a393r24i211avy2gg18s70"},
 {"v":"0.7.5","e":"^1.85.0","h":"154ad642i469jsvisb95402xrabg9b654qii468raacqvs8z7a4q"},
 {"v":"0.7.2","e":"^1.85.0","h":"0fzx1gcklp3kxvaxxbjij0d31w3p6a6qm4kimnwh17iflwhjdh73"},
 {"v":"0.7.1","e":"^1.85.0","h":"0rljbv5lqpxa0x78lg24rbkzmx0ib7dmmip6bb2j302hmj1lvl5q"},
@@ -6892,6 +6902,9 @@
 {"v":"0.0.3","e":"^1.90.0","h":"183v1i1x1gal221q9f58ldc7nrrs39f8xcniqy6gfx5z7rfdp38z"},
 {"v":"0.0.2","e":"^1.90.0","h":"0sbp2sg471b5fdskc41cz84i9cp8nin5589bkc5dg1fdcsbibjim"},
 {"v":"0.0.1","e":"^1.90.0","h":"1y7djzpqxxs314a2kykblf77gqb5481fqd0pxhl86vr5nf30m4cm"}
+],
+"robertoborges.azure-migration-squad-vscode":[
+{"v":"0.1.0","e":"^1.85.0","h":"09iz2pijqwyk8mgxxkdkv50vhyjbkcd6cm7lhvcblvsgyqg4g44q"}
 ],
 "rocq-prover.vsrocq":[
 {"v":"2.4.3","e":"^1.74.0","h":"1am4v7x8mhkyxhqakvs8s39bkb2rxnq060qk82ciaqc3614frnm3"},
