@@ -32,6 +32,7 @@
 {"v":"0.3.0","e":"^1.90.0","h":"06gbpskss4pyzkb649sph2kp9p5n21ra5nvyxn84f5258gs49fpb"}
 ],
 "1103slabo.fe-pseudo-lang":[
+{"v":"1.7.2","e":"^1.100.0","h":"1qpjlz62k61azajrw468r564yf22d9lby4vzf9vmcq990b7c743a"},
 {"v":"1.7.1","e":"^1.100.0","h":"0y0xa27vh337h6zyhlch6aras8ajsqz9qrc16qyhh5wkr6rrzf6c"},
 {"v":"1.7.0","e":"^1.100.0","h":"0cs62phmjd2v181d54hf0shivglk86h91y757p1qbw9bfcl0j41c"},
 {"v":"1.5.0","e":"^1.100.0","h":"01l7a0n3fb3h0kfmcxg6243ccb15r8hwam5a8ws7rd30gcwp5rhg"},
@@ -727,6 +728,9 @@
 "apeanut.vs-office":[
 {"v":"1.1.0","e":"^1.81.0","h":"176h53qa0q2zj3y2bl8cp9cknjvdr5xx3793r73jq24v0s7h98yl"},
 {"v":"1.0.0","e":"^1.81.0","h":"1fh1iwfw7v4c5pxk4dvq1drxhgl0ya2qywiw2d21cbh7b13nf5i5"}
+],
+"appcreatellc.boardtrackappl":[
+{"v":"1.7.4","e":"^1.80.0","h":"1g52ndhj68msfxx87n7kzh49i04b6l0lglg5fp5wl6rjj8icrdhp"}
 ],
 "appgates.open-test-adapter":[
 {"v":"0.0.34","e":"^1.90.0","h":"1gzij0333z2i87zfmk813gj7ab2jrin64wqc2fxfrryipby9njcq"},
@@ -1919,6 +1923,7 @@
 {"v":"0.0.1","e":"^1.102.0","h":"14xryihq92wpy83hc8iblc8fh4yfw5r8w7jhin273yahai6r2rpg"}
 ],
 "dbr-ext.dbr-ext":[
+{"v":"1.0.1","e":"^1.90.0","h":"1q979wjxgkkx81dn3f2lwrz354z5hj62nlpvixsp2q56gg5w4j91"},
 {"v":"1.0.0","e":"^1.90.0","h":"1xa1m33f9zwpap47r83q1v30lzw0lj6pmf2jgzxw8qiv5qdq76a1"},
 {"v":"0.0.6","e":"^1.90.0","h":"1kj1mbm9yyhb1b2a4ff7fkkrr7jdwylxqnhx6gclmrz2bvzcgb9f"},
 {"v":"0.0.5","e":"^1.90.0","h":"12cfpnrlmns52s88hcdksihibn836nvnx5dc9cy7mz6bja48n0ia"},
@@ -6283,6 +6288,10 @@
 {"v":"0.2.0","e":"^1.95.0","h":"08bndxgdq6jcrkxp8n6qhy1bzp4mjyajsjvv4if7bsi42k6xdbrj"},
 {"v":"0.1.0","e":"^1.95.0","h":"1cas70b0gdy0z0ilwfyn2f73pp269fx0xpad0k6dqcc711p5ysgr"}
 ],
+"nimblesite.osprey":[
+{"v":"0.2.1","e":"^1.96.0","p":"darwin-arm64","h":"1f18rgbzirk1y2mazs8id7xz0vikb3fmsh2s4pv6ynx74ylnkkkz"},
+{"v":"0.2.1","e":"^1.96.0","p":"linux-x64","h":"02ps6b69ir76pp9vzf84glk2xx1sz42ar4b85a69f4805bl37vyd"}
+],
 "nitin.glamorous-snippets":[
 {"v":"1.1.0","e":"0.10.x","h":"0dc9ws2648aj4lyibv8krznvbs1d181vwkf7193wzkwj9ddlnl0q"},
 {"v":"1.0.0","e":"0.10.x","h":"0rdmj1is5nnxiz9fph762jflv7bs1v3524m0djfhklmyzqw95vxj"},
@@ -8074,6 +8083,7 @@
 {"v":"0.2.20","e":"^1.18.0","h":"0hx8425syslsmzd2hdyczqc7rrk8lbrnk4yl79nhxcrjg4z1hp2d"}
 ],
 "the-long-ride.antigravity-quota-quickcheck":[
+{"v":"1.2.0","e":"^1.80.0","h":"0k8nc3k5iiphpvxahdp5mnm7pv72q343m4jgbvim1fxj0fx4s6py"},
 {"v":"1.1.7","e":"^1.80.0","h":"0329zbkvnyalb42a2bgh5ga4rwj9jznas2c0kqpv9zw8040ypqwb"}
 ],
 "theandtor.andtorconvertertext":[
@@ -8367,6 +8377,8 @@
 {"v":"1.0.0","e":"^1.74.0","h":"0sxhdm6ypmcdbkn9hm6p32dcaslrxydc7cy7sly3jhpz9xnkklgl"}
 ],
 "tradeskillmaster.wowlua-ls":[
+{"v":"0.21.0","e":"^1.75.0","h":"0nxb0102cv2nxa7qkjrdzlcl1d3ikmh40wzh2wa0114x4lskkixa"},
+{"v":"0.20.3","e":"^1.75.0","h":"1r63r6dfdxn40pcdbjiswsbkncvviyff5nv6lcamb0z55q68kc5l"},
 {"v":"0.20.2","e":"^1.75.0","h":"113qhcf43xkhs9qa6xlx1g2rk7jwvjs9la38xi7v3kpr107i0nzy"},
 {"v":"0.20.1","e":"^1.75.0","h":"0di8qz4bdr4r8s95fjd1hnmh43ivbz04mlwjklmiif2r858nx706"},
 {"v":"0.20.0","e":"^1.75.0","h":"059ydywjiqj7affnrjm5w4q5b8dvgw8xmw0gsjd65p8534g9q0ak"},
