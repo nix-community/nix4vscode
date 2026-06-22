@@ -171,6 +171,7 @@
 {"v":"0.1.1","e":"^1.99.0","h":"00h261cp945zlmzp8ax6xhs3j9rp70myv1zb434wjbq9pvlyqvqb"}
 ],
 "agentstudioia.agent-studio-ia":[
+{"v":"0.1.8","e":"^1.110.0","h":"0rphx6vis47a3nn60wl6vz2vnnrc3rxywzra7aaggwlv5id29sp1"},
 {"v":"0.1.4","e":"^1.110.0","h":"0rf79zp46pkqianr0npv242ssxkx6wm512mrhbg76iygk0amnfz7"},
 {"v":"0.1.3","e":"^1.110.0","h":"1gh3wil2w1m8fwl0vqzkimd89yp26q10lsh0lmvajijr8baxhlf3"},
 {"v":"0.1.2","e":"^1.110.0","h":"0917bbb3pbxar8wzgxkh0l68dpwsp9ilnpnr4gi9q4yfp2i5k86v"},
@@ -187,6 +188,7 @@
 {"v":"0.0.1","e":"^1.85.0","h":"14fwa29hlzqidh6vpzpbn0brkmbv9k9xq1i5billja0w1anlja5v"}
 ],
 "ai4you.openedge-config-management":[
+{"v":"0.1.17","e":"^1.101.0","h":"17dyfg2i4aijsx4yg4y9k2s1wjjbwsvdv7l2kqpm47351vs9v1sr","r":true},
 {"v":"0.1.16","e":"^1.101.0","h":"1cyy4d0wnyblq81n7qw7k8pija95bkjpbzn7fbgw6jfqfswi7nzf"},
 {"v":"0.1.15","e":"^1.101.0","h":"093b0ca1pj377vbbvvdqw8161y6n9mmccldgwqwfbllqi66lv484","r":true},
 {"v":"0.1.14","e":"^1.101.0","h":"1xjn2zlcphi0birjpv75m23zj2hi49cj8ys9g1vapji0q2yvm1kj","r":true},
@@ -1573,6 +1575,8 @@
 {"v":"0.0.1","e":"^1.56.0","h":"08wp0jnpvvbw8clr4jdzn83v6wdp6hv52zfa3lakzh1pvbqxzi5k"}
 ],
 "comarchsa.mcp-integration-tool":[
+{"v":"1.15.0","e":"^1.104.0","h":"1bnj60ngnka9mf7d6s6zb6zdqrwrda70df87l8npxfv9vqlqlbf9"},
+{"v":"1.14.2","e":"^1.104.0","h":"040azvck2fs8sdqsdlhinbq83x8pmmnqm94fa6hwi70ybm55mmsx"},
 {"v":"1.14.1","e":"^1.104.0","h":"1x49cid1szdkf1ml9vcv7aks11swly4sriv1q90znzx4r13cw0ws"},
 {"v":"1.14.0","e":"^1.104.0","h":"0hrkhqfv79hv1pqapsmslm8fq3khfaaixzbj4m19z83bzl8jmqzj"},
 {"v":"1.13.0","e":"^1.104.0","h":"1lb519bjl4rnaifb6scb28xdkqk0sikbgncr3ivs8s48acp29z2s"},
@@ -4579,6 +4583,12 @@
 {"v":"0.0.4","e":"^1.0.0","h":"0b4y3zlwcxkcaalvdcyj4bm6xgmdbsgrxjgg0bnrh7jjfhig6z2x"}
 ],
 "linusn.lin-lang":[
+{"v":"0.3.1795","e":"^1.88.0","p":"darwin-arm64","h":"03bcf21wdi2jay2d2jvwsfq3qb4cxklfn5x7psf6p23fa891j4kf"},
+{"v":"0.3.1795","e":"^1.88.0","p":"linux-x64","h":"1l6bfq7sz0zhbckk9q2dpzmld1pfxja5r1l1q6sbx3p04v163va0"},
+{"v":"0.3.1785","e":"^1.88.0","p":"darwin-arm64","h":"0gmn4pmm8kfhb95bg9am4mbwj5mi9l3bhm7698mwlcrfcc8skfzd"},
+{"v":"0.3.1785","e":"^1.88.0","p":"linux-x64","h":"1pp4l6yiwn4yain4aibxxfvsaqzwj3rhnm1s6188adq3b2pnz5dg"},
+{"v":"0.3.1783","e":"^1.88.0","p":"darwin-arm64","h":"0xdinxxsbnp9xx99izx7zh1cfyqcgi3a8imqs4lrhcqcdkj6xd4q"},
+{"v":"0.3.1783","e":"^1.88.0","p":"linux-x64","h":"0cv2aa62pfa9lr2600329748as84sfbik3ymnrh4warcdwipdk4x"},
 {"v":"0.3.1679","e":"^1.88.0","p":"darwin-arm64","h":"1a62bb3kmcrw5mam733zakr5zqzxszvb9xvfpw1x16b7qway40yx"},
 {"v":"0.3.1679","e":"^1.88.0","p":"linux-x64","h":"150gr9mcm6why63zd81bwzdqwa56mismsh4p6wjgbnbzsqz9cz8p"},
 {"v":"0.3.1678","e":"^1.88.0","p":"darwin-arm64","h":"0r039a4kg46fwf82zl7fplwnmzc6z6qzc3njnapkck356v2vsxx6"},
@@ -5443,6 +5453,9 @@
 {"v":"0.2.0","e":"^1.85.0","h":"0va1w0kdygpqwp7vb0152wc3vzz706pp64z5qzdrcy5j9fzi21aw"},
 {"v":"0.1.1","e":"^1.85.0","h":"19zwm1sf7vgvn302ymmjwfbqfg14a6hp37df8ym12779rll6cxbb"},
 {"v":"0.1.0","e":"^1.85.0","h":"157amy7cgvj5aj81mlrbx0lix06c85ngf0iizpznb11hiiv1ghsz"}
+],
+"mrohleder.photo-slides":[
+{"v":"0.1.0","e":"^1.85.0","h":"0ld3pijivyssx3hqa8lfay0xrgg5xiz2b7izz4q4mqnq4bwxj9c1"}
 ],
 "ms-azuretools.vscode-apimanagement":[
 {"v":"1.3.0","e":"^1.50.1","h":"0mfx8v9prad61b8yywkysdl6f497512c9v5b8wkzwd3ixpk2xm0c"},
@@ -8425,6 +8438,7 @@
 {"v":"1.0.0","e":"^1.47.0","h":"11558jhvxq6l19p4ajg60hl9x5xs5vjqigxdp8523pi26a6d4lr0"}
 ],
 "rezbouchabou.remote-ssh-sudo":[
+{"v":"2.0.0","e":"^1.80.0","h":"1i95vxkppqppasi4847mdrvfw070rz9m6xhhh9z63w9ljdrjrg2q"},
 {"v":"1.4.0","e":"^1.80.0","h":"08na42i7zgbhc7224phvvqxyny6bmyb2j8pciwmf5gxw94315kv8"},
 {"v":"1.3.0","e":"^1.80.0","h":"0j0h88fk89fra3cp3cfahavzznkziv0xfiy6dwjdcc63vg1h3jh1"},
 {"v":"1.2.0","e":"^1.80.0","h":"1djg827hhhmjs37ialqb7yjjbrp2wsifbr5vfsml4qnan50r8d3s"},
@@ -10269,6 +10283,12 @@
 ],
 "vidy.just-jump":[
 {"v":"1.0.5","e":"^1.60.0","h":"1pamdnrrx3404d7ywhawy3hc7dihg521s5shclaxa3q87f41c0gf"}
+],
+"vikram-n.cpq-bml":[
+{"v":"1.2.0","e":"^1.107.0","h":"02ywcw12g85zvslbb0g5mp1yjq4jv5mgjrbki5m466gh1i93bc8z"},
+{"v":"1.1.1","e":"^1.107.0","h":"14hra31zdw8jc75fc5jmfh2aaysf4c4j7k9aci165cg2q2risq6d"},
+{"v":"1.1.0","e":"^1.107.0","h":"16clc4simm34j1in2r1b3a94ad2cl34fl5m3sf1q9bga76437vk4"},
+{"v":"1.0.0","e":"^1.107.0","h":"1r3wzm2gc63xr3sj204gb1snh00sr2nvghcsmr0mf70p3wkhm4yb"}
 ],
 "viral-team.carbon-candy":[
 {"v":"0.2.12","e":"^1.92.0","h":"0qg12df5lyjg8pzifwxamr4khhvskwnx9gnmgi5x0cgijh6m4kpg"},

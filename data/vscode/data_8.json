@@ -1023,6 +1023,7 @@
 {"v":"0.0.1","e":"^1.35.0","h":"09vfbvqbwzssvkdqw9h0f2zdpkd9ablzdls5lwvz3j3rapwcg9az"}
 ],
 "chadroesler.seren-memory":[
+{"v":"2.2.5","e":"^1.90.0","h":"16kxlkvqd6vxryskfxydwkylxsdbnymsl6pig7534yfzhvl173fi"},
 {"v":"2.2.4","e":"^1.90.0","h":"05hbfmcj8imh75gq8rl6jmpsyf0lv2d351zpyz3j83f07x3zgjf3"},
 {"v":"2.2.3","e":"^1.90.0","h":"188lfak6ns45qaqn2xx8gq216qnbakizm6hq2y4nlycg9va3dx2y"},
 {"v":"2.2.2","e":"^1.90.0","h":"0rcx4b99wd590dpsbw0i82zwdd791sffycd6l78lhf8ln2ch82w2"},
@@ -4151,6 +4152,15 @@
 {"v":"0.0.2","e":"0.10.x","h":"0az6jyvgx4sf3winpvv1zs73xcpkmg88x8dcjg76hcabyp9ry9ia"},
 {"v":"0.0.1","e":"0.10.x","h":"0m0mf5jm2r2z6f7nzc31z4xcxhyqpk4ygxnjf7q8ifz1m47x3012"}
 ],
+"kitpilot.kitpilot-bridge":[
+{"v":"0.2.5","e":"^1.90.0","h":"030zf2d0nsdxpsljip8cnd16glngq2qdyyj74w42a8fawh6fb8f9"},
+{"v":"0.2.4","e":"^1.90.0","h":"17a70cicy55xqj1wp22pbdpxwh9qz50csxb1kf3pvsnsw9n8ibi3"},
+{"v":"0.2.3","e":"^1.90.0","h":"1h6hg7h4xxf54bhjp7h0isbb673j99y507z8lxw0v4akirx9c41b"},
+{"v":"0.2.2","e":"^1.90.0","h":"02p1dkjqx6brfx6i7ca5md1vl3gmzpqndbh3apwv8147ppys6lfv"},
+{"v":"0.2.1","e":"^1.90.0","h":"19vif32lvj5nxsfqibbazpkkwr74i2ski97njlja3swaxsay8qyr"},
+{"v":"0.2.0","e":"^1.90.0","h":"00a6yzpdg5sbz9bhdnzchajigrb6y1vkhb0qqj7fcf1073m5w8yx"},
+{"v":"0.1.0","e":"^1.90.0","h":"1z3rd982lbnr5d77s2pvln47ann8z79ypnh369qx0ww8nz0k1mz9"}
+],
 "kocdev.text-to-report":[
 {"v":"1.1.1","e":"^1.85.0","h":"1b30q2j94ci7pa3kg9csalhpl61w6pw7v7vcjysp8qpsiw99y35i"}
 ],
@@ -6668,6 +6678,9 @@
 {"v":"2026.0.0","e":"^1.107.0","h":"0slx4b07nvj73wfjdhq2hny5vz5iy5b709fxpcrswr096ps00v5v"}
 ],
 "nimblesite.basilisk":[
+{"v":"0.18.0","e":"^1.99.0","p":"darwin-arm64","h":"0r0j1hrrn83mmy4f86ccw58j9p0spggp2zmkgsw15ndlkjjivh69"},
+{"v":"0.18.0","e":"^1.99.0","p":"linux-arm64","h":"0xwd18r7xk7wxh3xflb2cr8adl3kq546z95njgd7x09b7cyswdjz"},
+{"v":"0.18.0","e":"^1.99.0","p":"linux-x64","h":"1k5jj22x55ag0f2xgjpvz4bq9777mvzkxhismmfhwhgskdxy3w1n"},
 {"v":"0.17.1","e":"^1.99.0","p":"darwin-arm64","h":"17zxjhj1ibzrdfchw44h8pkx2vr491yrcid27lpg88nigpv52wld"},
 {"v":"0.17.1","e":"^1.99.0","p":"linux-arm64","h":"1xh6p5gnqczybp9hln3d93wc55r7wn1ncn8s63fvr8950p3k770k"},
 {"v":"0.17.1","e":"^1.99.0","p":"linux-x64","h":"0v8cjm6p6l8wphvs5l1rkb36lyanjf9naxyk18wp03g358cd0m2n"},
@@ -7258,6 +7271,9 @@
 {"v":"0.5.8","e":"^1.75.0","h":"1z4zmx3q5w3s8j2kzyqanfapc422hf7vs78p18izlq4wjlzi95l3"}
 ],
 "pollux.gmod-glua-ls":[
+{"v":"1.1.0","e":"^1.120.0","p":"darwin-arm64","h":"1rjkkhh9s5dzrggz4sgcgaim0vqdnas5jcd4d59vkaym07sm0nyg","r":true},
+{"v":"1.1.0","e":"^1.120.0","p":"darwin-x64","h":"00vjf264rribyc51b3grhzgfr0ns1jwsj547lf6g6hdadsbfywfl","r":true},
+{"v":"1.1.0","e":"^1.120.0","p":"linux-x64","h":"1b9ap3dx10k5i0vfvnrzf1jzsgqxmvmdjrdxh643wfxcncvs64sp","r":true},
 {"v":"1.0.27","e":"^1.120.0","p":"darwin-arm64","h":"0m863swnji6b5v361vw1xfwqik9ddmlm2n5fb280lzbd9rq8paxw"},
 {"v":"1.0.27","e":"^1.120.0","p":"darwin-x64","h":"0mf3j9pbnvbf7dfxs5cf84phs1sz5r9dwqsm1kndfsxcfl5yliy0"},
 {"v":"1.0.27","e":"^1.120.0","p":"linux-x64","h":"025ylnnjvipg452wip7v46v0qwjqdsn8n4m7kvjpi7jnbp7yz0r8"},
@@ -8014,6 +8030,8 @@
 {"v":"0.0.1","e":"^1.51.0","h":"0n4n7rxkh8rn5grkdkxql5lldfkyhhapcrwa8z4q85xsnwb34hah"}
 ],
 "serhiivoinolovych.claude-skill-deployer":[
+{"v":"1.0.89","e":"^1.99.0","h":"0cihb22f2c81s60bp80a1d54casiac0in0xwz2kaq683bn9w2xyl"},
+{"v":"1.0.84","e":"^1.99.0","h":"08xvf0386d6i9aa9akly7404nvlkwhl7wbvf2sccjr89w1dvfq9x"},
 {"v":"1.0.81","e":"^1.99.0","h":"1xwwh7qr18y8hd4h1zwys8kamikdaa6kczc9shckhwmw560gin29"},
 {"v":"1.0.79","e":"^1.99.0","h":"0iwqd7b7g23djmzanqhfqijf8dpmb6lwrjl0bqwd410vh2sf8kjz"},
 {"v":"1.0.78","e":"^1.99.0","h":"1phjpg95swqvhv9i0slml8zmahp38waywhhcja7fcfzxqnvvwn90"},
@@ -9165,6 +9183,8 @@
 {"v":"0.0.1","e":"^1.50.0","h":"0ykxfpmyx4dz7kj3aic9fwwal1kpca45wsm3jg54ajz3ipzsnfsa"}
 ],
 "vallentastudio.vallenta-studio":[
+{"v":"1.1.1","e":"^1.85.0","h":"167fywq1bsax5y9zqr62r12nzafsrjk5awz549qvfhfas0f8c3vj"},
+{"v":"1.1.0","e":"^1.85.0","h":"1k27nbpxh88r8m04nw3flbvajdklyffiv283wpaih3ssrkrc43xj"},
 {"v":"1.0.10","e":"^1.85.0","h":"0xs9xmnkds3jw0ibp8wzinlcqn275gkib7a320mpg0qs1fb5zhg8"},
 {"v":"1.0.9","e":"^1.85.0","h":"133wh1a4xcxnjfyac17z2hzzzjsa2xancaydw1k5k11xw7cncqln"},
 {"v":"1.0.8","e":"^1.85.0","h":"0vn77gk2m0dnqbr141qpgwbpsy0lqlyirir48x2g0vxpj8yrxkf8"},
