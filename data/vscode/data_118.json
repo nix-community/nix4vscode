@@ -1927,6 +1927,9 @@
 "efredriksson.cerulean-teal":[
 {"v":"1.0.0","e":"^1.96.0","h":"1y1jgvas5qcdc2fffk7rh4shf69im0wl53nifv1l8swxw7g0yasq"}
 ],
+"ehwan.rustylr-lsp":[
+{"v":"0.1.0","e":"^1.90.0","h":"0q5ray3hd8g1ajz0lzqwi71zvdqafk3dq8wkccyb3ccd1097akzs"}
+],
 "eight84.nicely-neon-theme":[
 {"v":"1.9.8","e":"^1.74.0","h":"17klk8sqali3lh3yd01k867qlga69zp5l779jy54c8xdamyh2kzi"},
 {"v":"1.9.7","e":"^1.74.0","h":"0ikhbpa2az3qqss8f88gk1c32qn0l5vvdbj3xrkhkmz7wr3hpvcs"},
@@ -2388,6 +2391,7 @@
 {"v":"0.1.0","e":"^1.45.0","h":"144q79336qi1nsnn2140glj9903wkwzwhy8916kp889h499r19zh"}
 ],
 "gitlab.gitlab-workflow":[
+{"v":"6.84.0","e":"^1.92.2","h":"1nrwc4jd789nh4rqd532sn521ljdh3ax464krn1agfw9nsjlqbcd","r":true},
 {"v":"6.83.4","e":"^1.92.2","h":"0b1r9iwlykz8d36hrnc4f1nrjfj7dhhh3ksfl7lx4x0yc87rbr77","r":true},
 {"v":"6.83.3","e":"^1.92.2","h":"0im5sz9pnzc3bpbcdpig6qkfj6rkpfzw6lr3lrkypgh614xrqy2a","r":true},
 {"v":"6.83.2","e":"^1.92.2","h":"068msb4jcszmbj1j4q72npb5r5p1ygj8391lkl55cmls1zf8mj12"},
@@ -4592,6 +4596,12 @@
 "liwei0831.git-explorer-extension":[
 {"v":"1.0.0","e":"^1.74.0","h":"1axq2hxwhk25m0jckrdk3zds2jk3r0bz0yivncrmjp4k5wf1p950"}
 ],
+"lobster.abas-fo-language":[
+{"v":"0.1.4","e":"^1.80.0","h":"18ahn1vi1lkp4z2llp37nr42v7zb81j7bcv7bjsbhwaj653lqgys"},
+{"v":"0.1.3","e":"^1.80.0","h":"01s8sv4nb4yhy4irkrsfpihpajc77fypwllcw089qm0bb3d1kcsd"},
+{"v":"0.1.2","e":"^1.80.0","h":"134w86x9ihkklmp0sz7ls171gddsvi36vx0yj5pd2nrja228vy21"},
+{"v":"0.1.1","e":"^1.80.0","h":"107qdnwrm36ng54dapy4k1ymkgr3yi7mscrhg4scjjkfmfcmwz4v"}
+],
 "lotus-browser.lotus-browser-automation":[
 {"v":"0.2.0","e":"^1.80.0","h":"177zjwpxx8s30a5v76klvb613qv0n32xj8jnbsxn9ssqridnwx57"}
 ],
@@ -5218,6 +5228,7 @@
 {"v":"1.0.3","e":"^1.74.0","h":"0l5ii2ljk0wfc45dmj8h9z1qvrqmdai2ixi5jlv3p5w47fc1xgv0"}
 ],
 "mistweaverco.kulala":[
+{"v":"0.2.0","e":"^1.105.1","h":"02g57g1qvqwbnl48c12wmmgw8d9wn6h6hjbi4h3zhbkcg1xfj9s3"},
 {"v":"0.1.6","e":"^1.105.1","h":"1hz2cv9wckf2xffx9xrbgfi47j004kgwiym0fki5c2l2p9c5drqy"},
 {"v":"0.1.5","e":"^1.105.1","h":"0di5d0cn4vzkvnxiv1w7q5hch2vlyw3y18hgs12l9zqd1xibxpsk"},
 {"v":"0.1.4","e":"^1.105.1","h":"1lbbc6cwwv7clz84rqg3156xbw5jhbwkvvacc5acsz0qrjamadyb"},
@@ -6642,6 +6653,7 @@
 {"v":"1.0.0","e":"^1.104.0","h":"1l38i3m9l86a543r9jyg50sja2l8rxjg6gg0g5gc7hiavykzvygl","r":true}
 ],
 "saposs.sap-ux-sap-systems-ext":[
+{"v":"1.0.3","e":"^1.102.0","h":"08whwm7ja893wilnx5w2glv0zddkxhd6n9kmzvivzf41sd2k1752"},
 {"v":"0.5.2","e":"^1.102.0","h":"1i3rk76l3fxki0hqga6apccxq31vxy7gpvjgqfj7dmi6xj8l0rvf"},
 {"v":"0.4.5","e":"^1.102.0","h":"0nmjckx9djkdn3hp83yap4hcwwsmgacjca8ahgdd27f458vb98pj"},
 {"v":"0.3.11","e":"^1.102.0","h":"0div7hbdq7cdmf8w0q80nfm82y94jz0c32gcspxiym6srppd3gza"},
@@ -7680,6 +7692,10 @@
 "swisstool.convert-to-folder":[
 {"v":"1.0.1","e":"^1.90.0","h":"0wdj992vzp9azf8x99y5nlx3hcshrzqjyh3hc74svxqj53a1gj3c"},
 {"v":"1.0.0","e":"^1.90.0","h":"0g00ajp6rva5gm4bysszidragqvn97xmxs8ib9iqsm4v5sig2jls"}
+],
+"syed-masood-divan-oli.azure-pr-comment-resolver":[
+{"v":"0.0.3","e":"^1.85.0","h":"0zy30yzj1vqbdnycc3m9axgbwn3fnhf52fzq1xxs900vrvirdbwy"},
+{"v":"0.0.1","e":"^1.85.0","h":"0lq5pjzhm07ad1ra4jsps9m8zyir0vk938xlp1znw19sfd331vib"}
 ],
 "systemcn.code-style":[
 {"v":"0.0.8","e":"^1.90.0","h":"0v8shdlsxr1gy74mj1ycwqjd3mj81sxfn8xvzmzkgagcbx259a7m","r":true},

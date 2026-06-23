@@ -1900,6 +1900,10 @@
 {"v":"1.6.1","e":"^1.30.0","h":"0qkqf5pd5x8r20275ahxclgaadagq04mln0lhkmv6w34n5qx6ibw"}
 ],
 "devprod.vulnerability-extension":[
+{"v":"1.2026.622001","e":"^1.100.0","p":"darwin-arm64","h":"0j2lbn9704hh653827sclkpshn8z43pfn0y14vy8f3pbs66w2cd0","r":true},
+{"v":"1.2026.622001","e":"^1.100.0","p":"darwin-x64","h":"0qxv92qbl429i2n7isbs88ny51v48jka5nfdzxny7jqz1qs9gjgb","r":true},
+{"v":"1.2026.622001","e":"^1.100.0","p":"linux-arm64","h":"1dzfgnjcv30dh19gb774pk0zxzv135hj3llvdq7670pjg0cw601c","r":true},
+{"v":"1.2026.622001","e":"^1.100.0","p":"linux-x64","h":"1i3aidx59qdyvni1bfff06wbxx680hmj0ng9pciw6iv2wa85bhi4","r":true},
 {"v":"1.2026.620001","e":"^1.100.0","p":"darwin-arm64","h":"158ysch293fy9s2qsrh7lwnj80f0sqf6jx2794vqg00aq42i7dra","r":true},
 {"v":"1.2026.620001","e":"^1.100.0","p":"darwin-x64","h":"1qr0z583sfpmdc475dv759mbac96i5ha3rg4sfliqz6h9h1rn8zd","r":true},
 {"v":"1.2026.620001","e":"^1.100.0","p":"linux-arm64","h":"0gghg95yqaqymkaq0n45byawb9pa7wbzx485axdaz7r5f962wnvr","r":true},
@@ -4422,6 +4426,7 @@
 {"v":"1.0.0","e":"^1.50.0","h":"18g5im4imsf2g2vi42yz2y0xpc33nj0pk6avsixzb0qk2vp02ya1"}
 ],
 "f5xc-salesdemos.xcsh":[
+{"v":"2.2606.222105","e":"^1.120.0","h":"1gh3l1yg7qzmn16zr2a4khk2xz0hir2r3j9jw0dfmd22jcv5xas4"},
 {"v":"2.2606.201823","e":"^1.120.0","h":"1rnalysmhivkrlc0ny9iw5ldb4q1438j4h8mrmnlrg8d6ki5la1p"},
 {"v":"2.2606.200352","e":"^1.120.0","h":"0mpdz1d1xcwdvww73lx570zjdz9y0lqlzfgsj499xggb80bdqj2g"},
 {"v":"2.2606.200351","e":"^1.120.0","h":"0cs0007jzdvv6ffaa0dy4jj27m72k2kd5ggjgm4ap1lzrvscz6wc"},
@@ -6113,6 +6118,10 @@
 "jssamurai.devdojoseppuku":[
 {"v":"0.1.0","e":"^1.53.0","h":"10r9pw6645bhcsyjqqi3grf40374rhjy2y1lcrkwwq5750kb6ijf"}
 ],
+"junbao-zhou.monokai-dark-crisp":[
+{"v":"0.0.6","e":"^1.125.0","h":"05yn47is8hwv9lmqdkq38wgj1wjnv6kr4vx3am4ak61rwsmcs7l9"},
+{"v":"0.0.5","e":"^1.125.0","h":"0bv5mkhvbf15yj49srq97sk1yc6vqmp1168vf7j72mqs58i0bc6y"}
+],
 "junseokahn.vs-linker":[
 {"v":"1.2.0","e":"^1.69.0","h":"0ywxpg3538jgsy7g1gs9p2jfrq6zv9rkxbiarsa3wpa3q417ma5p"},
 {"v":"1.1.8","e":"^1.69.0","h":"0g743ixqhzpdhqf99f7arcrjlbrgyhxrqij2xa6rz1lh3n8vwbcg"},
@@ -7386,6 +7395,9 @@
 {"v":"0.0.3","e":"^1.96.0","h":"1yywng4p1fyva5k6x2lns9ll44199v9nhxypank6y0h7x23bn27h"},
 {"v":"0.0.2","e":"^1.96.0","h":"1na9dkimw59ja3r0dk4as7w4d9as44mi7v086wrx6z5k9n0pkkki"},
 {"v":"0.0.1","e":"^1.96.0","h":"1dqkw5hxlcph5pwd4cm9fjxvxg1vxq0fdly85v55bljji4mpf1x4"}
+],
+"mtech-systems.flutter-mobile-emulator":[
+{"v":"1.0.0","e":"^1.74.0","h":"1yp9zawix2al1ir6a99q2gkg19nphgphq2a4czpy6kyx78rakp8v"}
 ],
 "muhammadabbasbangash.codevibe":[
 {"v":"1.0.0","e":"^1.85.0","h":"161jyfpdw73ypjia8a10vr3wh9xabppbnmk966za3cd94d4h62zx"}
@@ -8942,6 +8954,9 @@
 {"v":"0.0.2","e":"^1.8.0","h":"02csf3jkm8cwvf6gxbcx5miasfzyijd301fn97ddcn1j2c42rqxq"},
 {"v":"0.0.1","e":"^1.8.0","h":"01nr7plkq3gn35z694k9y066kq4pb6xf2s9nc0x4fh0sz93r8sax"}
 ],
+"sulagnatesting.sulagnachamber20":[
+{"v":"0.1.5","e":"^1.106.1","h":"1cg283lavamlrdzzq7vpa02ffbyfgqvdbjpv8jfxn1fjzn2zmn4p"}
+],
 "sumitdev.promptious-optimizer":[
 {"v":"1.0.7","e":"^1.74.0","h":"1cmvh1ip3a0xgsp7g3b815aisdqmirm75xik4r2xfzhk2y8hgg5r"},
 {"v":"1.0.6","e":"^1.74.0","h":"1wn93wwi5f64s3xwz2bqjad3vyyimkzx09k6dwcn1hh0l48yyq9r"},
@@ -9287,6 +9302,7 @@
 {"v":"1.0.0","e":"^1.0.0","h":"1k985k52x20x8fwxxj53klfg0ixar4lbl2v71n698z4y7jjkq7xq"}
 ],
 "uqbar.pelela-vscode":[
+{"v":"1.0.1","e":"^1.105.0","h":"0jcybpxb99zy8ph19irlc09n3ikv8hciszl3cks3fc72265my8m5"},
 {"v":"1.0.0","e":"^1.105.0","h":"0n3hlmd9wgfcarvgm6y25mk7izmdj3hmpkz4pwzh3ll8s8qb44sq"},
 {"v":"0.2.5","e":"^1.105.0","h":"1d05qvsba0a1gh4hcvjvh9d9rn8bwyqg31bjpszc88bf6wya828z"},
 {"v":"0.2.4","e":"^1.105.0","h":"0k1x6av63liqmh2mwyhw474dm4l1s413kvy4xa02m2nma54l452x"},
@@ -9574,6 +9590,9 @@
 "weiqiang.quick":[
 {"v":"0.0.2","e":"1.40.0","h":"0jbwjhrzgsvv5hvgjxap971j7pfg243sbmb7b3bncm5i4mi7yl3w"},
 {"v":"0.0.1","e":"1.40.0","h":"0279a9dhghdqzjz9pn3aaq04zmzkfsa79p5v05ap3zi3r534gjlj"}
+],
+"weixu.wx-vsce-cargo-make":[
+{"v":"0.1.2","e":"^1.96.0","h":"06kkywgdacp9chqrbzzbpbc8i6mwz13nfhy8amvz8dig598cgqkb"}
 ],
 "wellingtonnadson.dark-nads":[
 {"v":"0.0.5","e":"^1.73.0","h":"1al8rffw77nb2rj6ndmw5iaca0z436grhrjhirjnalvdnf739ahi"},
