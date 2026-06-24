@@ -394,6 +394,10 @@
 "ameykalekar.ibmi-field-length-change-impact-check":[
 {"v":"1.0.1","e":"^1.80.0","h":"19mxkpnqh8hfglzsnvijy39rx112my2d7xy04ajm2kixgnqy22zz"}
 ],
+"ameykalekar.ibmi-rpg-debugger":[
+{"v":"0.1.1","e":"^1.85.0","h":"1ig59ffz5smwib53l7cs296yf5gxgkkr156fw4fib67f99jfq6y1"},
+{"v":"0.1.0","e":"^1.85.0","h":"0lcy512c3510dp5qx7xzcvdz9jq5bx7m5brwv1j0ny9w9dsc9xhj"}
+],
 "andreabaccin.vscode-hpprime":[
 {"v":"1.0.5","e":"^1.80.0","h":"0xafz3fj9ypwyp9d8hp2jk69sp1rxzhdyjs9h6mgm6kn52dkmzzd"},
 {"v":"1.0.4","e":"^1.80.0","h":"142f3nf6j5byyan30m33sga23y8jqlhax4sfamxrl3x8pzfp4bzh"},
@@ -5287,6 +5291,7 @@
 {"v":"1.0.0","e":"^1.83.0","h":"0sspb2xcijwv2vgm93fkbnp5lr392cj34h7mhlgapanfvf8zaq4c"}
 ],
 "joynulabedinshokal.token-eater-dashboard":[
+{"v":"0.3.4","e":"^1.92.0","h":"0ynn3lnqznjsb9ps5vj8n002pcism1qa1hx0y7q5509rgybw3546"},
 {"v":"0.3.3","e":"^1.92.0","h":"1pmkmc1dccpagp8qympq2r170xvndkdskfc255xk000in1l38pp0"},
 {"v":"0.3.2","e":"^1.92.0","h":"1rk59d57skgz4mfpc95v0nb84n8ndy2gl7m1c19rw1s9cw9pb8f6"},
 {"v":"0.3.1","e":"^1.92.0","h":"1877i8w998m5ybvqly8g9v92n1j3dk3g8jvqv69kzqmypskwiji9"},
@@ -7191,8 +7196,13 @@
 {"v":"1.4.11","e":"^1.93.0","h":"0v8rdvl6q95yqbk3a56smlzcdf8ws2kwjvj78w50xv8xs30mcvza"}
 ],
 "openai.chatgpt":[
+{"v":"26.5616.81150","e":"^1.96.2","p":"darwin-arm64","h":"0i7wfybxkgrwipn5rwvsh2p2yz2pvglrdnmxv1c168zw1pnh2n36","r":true},
+{"v":"26.5616.81150","e":"^1.96.2","p":"darwin-x64","h":"012cxqnmxy35kwycn0d5lx4wvmxp2s1gdlm01ay5ywlw6nqcpgx1","r":true},
+{"v":"26.5616.81150","e":"^1.96.2","p":"linux-arm64","h":"10ybc1lpilpzgkpx1rfgpfzblqmlmn5w75bi72zc7s87krl6jgrx","r":true},
+{"v":"26.5616.81150","e":"^1.96.2","p":"linux-x64","h":"0j65p69znbamb5yhxic04fmnjll2xqy2rdnq9ds00iwi3drv46vr","r":true},
 {"v":"26.5616.71553","e":"^1.96.2","p":"darwin-arm64","h":"0wx4wywjs6i47v5ndasj8064qv9mpp1bs9cmwgsadar40b3mvhar","r":true},
 {"v":"26.5616.71553","e":"^1.96.2","p":"darwin-x64","h":"19dqcw3hpvaz7c9aw5zsz05c64raw0v5dgkdb41ifwidx1glxhc0","r":true},
+{"v":"26.5616.71553","e":"^1.96.2","p":"linux-arm64","h":"1na9flsb247ybak9r7m5rpgzjk3xl6mp1qaa96gr5zjl9z33h54q","r":true},
 {"v":"26.5616.71553","e":"^1.96.2","p":"linux-x64","h":"1pnkmgppa40hfwgf8q7znsy5ir3ml1h50armpvn27p3rq8jyxcvj","r":true},
 {"v":"26.5616.51431","e":"^1.96.2","p":"darwin-arm64","h":"04vaqr7x6bxdb6b43ryhail8n2bj093s69vqhxfiqfjib9fvq2q8","r":true},
 {"v":"26.5616.51431","e":"^1.96.2","p":"darwin-x64","h":"15a8zysiwbbs4kdaswsb7h1w3lp4x8mmcyrb0ad8fsmhnkc1mzrf","r":true},
@@ -7434,6 +7444,10 @@
 {"v":"26.5304.11628","e":"^1.96.2","p":"darwin-x64","h":"1vhvj11bab3i547bbsyi273k06bhaaxlvwqrcn4a5z8g3wbwnvlv","r":true},
 {"v":"26.5304.11628","e":"^1.96.2","p":"linux-arm64","h":"12xxgxfyjgpjg6n8bv4izsshp9j2yivk7n91v3k43p8sgj8wpd7z","r":true},
 {"v":"26.5304.11628","e":"^1.96.2","p":"linux-x64","h":"0crjk689s5ihjra1nk1r8lmqzq6vms0q8pc9941vvxvwrg02j295","r":true},
+{"v":"26.616.81150","e":"^1.96.2","p":"darwin-arm64","h":"140v4mlvqacpz3yly597csl7wha3fl0bfdz8gqx9kdxc5pdhkwv0"},
+{"v":"26.616.81150","e":"^1.96.2","p":"darwin-x64","h":"1i6x1v0wrzpa8sk7kqfgdqm7npaw6ngvri7wq09wh9ksqmd25s4y"},
+{"v":"26.616.81150","e":"^1.96.2","p":"linux-arm64","h":"1xpvyyapmaw100zgykyr853bh40kap6jyqc1za3x7q4fhwbdrdg0"},
+{"v":"26.616.81150","e":"^1.96.2","p":"linux-x64","h":"0d2kkm49x5vsbglqd3x9j5l944rhzny56wjs0szlic8isq676rcm"},
 {"v":"26.616.71553","e":"^1.96.2","p":"darwin-arm64","h":"12m296534adl5p8pjija6ih7x65vsprzlzr1lrh9h3mwfl8msshk"},
 {"v":"26.616.71553","e":"^1.96.2","p":"darwin-x64","h":"1802brzlhgka82qfwgbnrjarqx422adcg684zvizmh1mp4fyssg6"},
 {"v":"26.616.71553","e":"^1.96.2","p":"linux-arm64","h":"16bhk48kjfvf87r6mdbz2vyaj975lisyr7m9ficf7hb9ifvdxv62"},
@@ -8285,6 +8299,7 @@
 {"v":"0.1.1740505811","e":"^1.92.0","p":"darwin-arm64","h":"0968a8431ngkxwcrg1f37i4mg5rahkww7hj6jylq0j1ai8b9cs4d"}
 ],
 "openlibing.devstation":[
+{"v":"0.0.11","e":"^1.85.0","h":"1jz1wnxzm52nsnnl9dd9pr1vz2f5f9frq7c1d2ryrcwmhi792d55"},
 {"v":"0.0.10","e":"^1.85.0","h":"0rahbbb5dxpa847jkwg9p6ra463ncvglakffgx2n180awg269fzb"},
 {"v":"0.0.1","e":"^1.85.0","h":"00xcdr7lgxffzxs027llggh4k6ydna1sby6nwmrb00fn4z4pd2qz"}
 ],

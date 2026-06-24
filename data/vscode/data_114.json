@@ -961,6 +961,7 @@
 {"v":"1.0.0","e":"^1.80.0","h":"14nac6hzmjnwaapq74j6qw8idlrjbly0g72z8dn93cwhs3525hyf"}
 ],
 "broadcommfd.hlasm-language-support":[
+{"v":"1.23.0","e":"^1.82.0","h":"0nbqn9kg1456kn7i9ichmpdbk4f5vssf4mjzcngbwxs0ds1sm220"},
 {"v":"1.22.1","e":"^1.82.0","h":"181gcirmilzcrz4w8mjvccz16ln6ygihhj5433lyx2czi0q3gd1l"},
 {"v":"1.22.0","e":"^1.82.0","h":"0y8njbnamhcl935zfnvyyy21ilakmfs9hqglkzc3lxss0qvg9jax"},
 {"v":"1.21.0","e":"^1.82.0","h":"07sqnnc5z4c0mwskz7ilpkli04pr13rb0a0x42jn08yqn1rxjrjb"},
@@ -1320,6 +1321,7 @@
 {"v":"0.0.1","e":"^1.52.0","h":"0zis1p6q74aazn7zc1ysd4y6ypa2c84wyvi610v01xqgn3yfnfhx"}
 ],
 "cppchecksolutionsab.cppcheck-official":[
+{"v":"1.0.8","e":"^1.96.0","h":"08qfdq9671v5n61v8ngdq72v8jkvfrwx7r9nkdqcnq2xnbvsia1w"},
 {"v":"1.0.7","e":"^1.96.0","h":"19rpk6cxcp9bdclxwsza010n7hdx4wh4gwm4d9p666j8rpfi10ld"},
 {"v":"1.0.6","e":"^1.96.0","h":"0z4d0hv3l2bwbx232ira953gdj8sxc51n20y7c001xwzkr0r416h"},
 {"v":"1.0.5","e":"^1.96.0","h":"11b9rv10xj8vvswxg4qz6f2i6qab8ly4mjlbazqxrz7h271x0292"},
@@ -3205,6 +3207,7 @@
 {"v":"0.1.0","e":"^1.18.0","h":"0fjr6q39lnanvlh63gm0lalq9w7i0m4fhskn9kycsd4ag35lszyh"}
 ],
 "jacklin0912.et-for-me":[
+{"v":"0.4.302","e":"^1.92.0","h":"1lg993qc0ypnlhkwgkj837giiby2wxccyn68b8vzkqvmk5i4w0d4"},
 {"v":"0.4.301","e":"^1.92.0","h":"0jpa3dd1759mgn5f3rcii2z5n93i0irgxkfvjv63b8nazdx7v3ql"},
 {"v":"0.4.300","e":"^1.92.0","h":"0gk0w5lnlimrsblybbz6l3fiyrsvk61s63ixwmnrvw9v01w0vy8n"},
 {"v":"0.4.299","e":"^1.92.0","h":"1hhmabaaq45n5w42r5mnrcpimv6hd23yy922m5n996zdlk687jsy"},
@@ -4096,6 +4099,7 @@
 {"v":"0.0.1","e":"^1.17.0","h":"05cwv5as9yjfbkj0c4557n0a3w5cgmvv32gcm5mhc78c9mli4b2n"}
 ],
 "kternai.codegenie-agent":[
+{"v":"2.0.5","e":"^1.105.1","h":"0dl9q1vwwi1n2i4491wy5jlwbgin16zfmkzrpma50aagwhyj0ml8"},
 {"v":"2.0.4","e":"^1.105.1","h":"1adzmd9cd7c30cm65sszl853akav681rx0h00fj6p4plyz700nnm"},
 {"v":"2.0.3","e":"^1.105.1","h":"1ydx3bynb4k1hi99dnyxpy6yaq5xj9rp92dvy5fl8mxzlac0avyg"},
 {"v":"2.0.2","e":"^1.105.1","h":"1lpj0vx6v9d9jswn83w1nmf934489si0nfr3yvr6s6ivhl9j0qp2"},
@@ -4411,6 +4415,7 @@
 {"v":"0.0.1","e":"^1.51.0","h":"0fg0arpxhjrnp05gkb0lqz0bqb1nbs1jc7j0768klz5jasf3993w"}
 ],
 "mahdigh99.rtl-for-claude":[
+{"v":"1.1.0","e":"^1.75.0","h":"1lq0lp16rkddz8yvm3nm379va72wsrl37n9zqrar852f17j0g3aq"},
 {"v":"1.0.0","e":"^1.75.0","h":"1q2szc5az0265kvfrw765gm3hp9sxsjz62n1n7abavgnrz3wah66"}
 ],
 "mahgoh.radiant":[
@@ -4976,6 +4981,11 @@
 {"v":"0.0.1","e":"^1.42.0","h":"0a029xyjih4cspmybfxk0dy1sac01s5hss0pq19lj8mpa40l0am9"}
 ],
 "ms-python.vscode-python-envs":[
+{"v":"1.37.2026062301","e":"^1.110.0-20260204","p":"darwin-arm64","h":"13cw23ar8lq9jy2z4034g6fqjn4wrs85b7r4pp27gswkvg65w4ag","r":true},
+{"v":"1.37.2026062301","e":"^1.110.0-20260204","p":"darwin-x64","h":"16k4dd5kx7943y4gwmr1paysfipqbdc0j1k9yhfmcyh0s6zh9g29","r":true},
+{"v":"1.37.2026062301","e":"^1.110.0-20260204","p":"linux-arm64","h":"0166brzp0l1yn30p9gyxc16pdj1ahpiazj9sz36dlzar76x0157x","r":true},
+{"v":"1.37.2026062301","e":"^1.110.0-20260204","p":"linux-armhf","h":"1751s24giqr95zji5iqgk6m8gavzxb7w0j9v8b1d3grjlr0sa5kv","r":true},
+{"v":"1.37.2026062301","e":"^1.110.0-20260204","p":"linux-x64","h":"0nsbfq7sl2y2v3s9yyd3vxnj5p5jppakza3kk4af266q39wsknab","r":true},
 {"v":"1.37.2026061901","e":"^1.110.0-20260204","p":"darwin-arm64","h":"0wlyg102n79mh8dgrfv95vaf5srk46ammyd8zlp1khs695232vpa","r":true},
 {"v":"1.37.2026061901","e":"^1.110.0-20260204","p":"darwin-x64","h":"1hr6p86j39kvqlz6sqi3wvzi0s12a6w9p3lipykrk8r75l2x9lsy","r":true},
 {"v":"1.37.2026061901","e":"^1.110.0-20260204","p":"linux-arm64","h":"15x59my9xxfm63bs8w33b0l6dyqwf69r68w78wvyfv95ymmlyzja","r":true},
@@ -6690,6 +6700,8 @@
 {"v":"0.0.1","e":"^1.103.0","h":"17kxdfmqca3hd0d7086111xck54p6sx2id3d6wd68chgh13df04y"}
 ],
 "openmodelica.modelica-language-server":[
+{"v":"0.3.0","e":"^1.75.0","h":"1hxl538r0x5wdyabg5srjkih62zgpz5fffhr6zp6aqgmk4s1zs3j"},
+{"v":"0.2.3","e":"^1.75.0","h":"0kgzqx8bvkmv8zpimcdwpn5z2rsf0shsyl9kvpxffpvmm1937hl4"},
 {"v":"0.2.2","e":"^1.75.0","h":"03lmdh23zm547cdba99s357jqhdn7lapyf92pc9lbczdpqac14dq"},
 {"v":"0.2.1","e":"^1.75.0","h":"1faxhg81yvdgd7jk4bpnb580s7xj786m7hh898gbz81lirdaclyy"},
 {"v":"0.2.0","e":"^1.75.0","h":"05nz4g5kphk66659cdr6a08sb4y7656689j834b4ry96zany55hq"}

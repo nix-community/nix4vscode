@@ -93,6 +93,7 @@
 {"v":"0.0.3","e":"^1.24.0","h":"1wxpshahgn2svc17r5pmwmy945zhd4xn85ln5pjfadf2pqzvcs5g"}
 ],
 "actifsource.actifsource-tools":[
+{"v":"1.3.0","e":"^1.85.0","h":"1p7dp2xpndarkqyfg672s42snx6sdy86dh4qr8b8w5f0n8iz7gan"},
 {"v":"1.2.0","e":"^1.85.0","h":"0jxm9g3ji5k6ac02p06yp7x98f21k50xifqlk7k5vc1p21r8lr4z"},
 {"v":"1.0.0","e":"^1.85.0","h":"11vv8sbkwb2sb01fngmzamxcrxfmjvxz2q97kk7w6sq7pba43rjh"},
 {"v":"0.5.0","e":"^1.85.0","h":"12brnfc6xifafkx2b5xvd2jp895mmq7nx2k8kaxc45zk6ra2h3xv"},
@@ -426,6 +427,10 @@
 {"v":"0.1.0","e":"^1.65.0","h":"0wbyx93lqcbih0ws1a8pqpfd81gx20yzlm0d20zihlxqwvb9rw4g"}
 ],
 "anthropic.claude-code":[
+{"v":"2.1.187","e":"^1.94.0","p":"darwin-arm64","h":"1c08jk5c4g5pflh2b8g6mf5801hw2m8v3fzxb0dmv81c2da1k0p5"},
+{"v":"2.1.187","e":"^1.94.0","p":"darwin-x64","h":"05dlnl1lg8aii5j9vssvkig1jfxlj4rajhbps30yhd26vgs38w8c"},
+{"v":"2.1.187","e":"^1.94.0","p":"linux-arm64","h":"053wfmy6403xjylp29cjn9yqi3m4jhq5n5myaj6sf9aybbk5gbsk"},
+{"v":"2.1.187","e":"^1.94.0","p":"linux-x64","h":"0l050f7jawb0ngrlvpzjcnmihx6mxbf51q9bn4xkdjf0y7hkqyzy"},
 {"v":"2.1.186","e":"^1.94.0","p":"darwin-arm64","h":"1z3k6id7n77s385zx2yjpv6ypsjvwryirznjlmmj79lzgdqn3hpr"},
 {"v":"2.1.186","e":"^1.94.0","p":"darwin-x64","h":"1gjap0kxglrn4ysa2831asliygg4sbzk6w17rj50c51iqr8fcy6s"},
 {"v":"2.1.186","e":"^1.94.0","p":"linux-arm64","h":"0f6vk1mqj64pdnbzjl2lqcz5cygkxkhaf1lsar0282pfli13hay2"},
@@ -6417,6 +6422,7 @@
 {"v":"1.0.0","e":"^1.67.0","h":"15z0x45chk9dvv7cfa1mp8i2cjcxg7j3ih3nbkqjgvnqx4zcw1hc"}
 ],
 "cywcd.yc-helper":[
+{"v":"1.0.9","e":"^1.95.0","h":"1mdybzna3jcqdpfncvab30lv1gbif73fvxvsbqg9xpvpl5ivigyz"},
 {"v":"1.0.8","e":"^1.95.0","h":"1sx2khx18qy09ycaahldjmcz5j0yghgqyzqp7skb799s616bjb0a"},
 {"v":"1.0.7","e":"^1.95.0","h":"0whrwk528jsy6h82fb2nrkrzcl5vhn6ca5frrwc5z1g9n916ddl9"},
 {"v":"1.0.6","e":"^1.95.0","h":"1vhrlmi6w2hr2p0v3f8gc9cjy9ifpwiaj0rj6qq2rjm0rcfwhqlm"},
@@ -6737,6 +6743,11 @@
 ],
 "dexlab.code-xl-participant":[
 {"v":"0.0.2","e":"^1.95.0","h":"0my2wiry1cv3fgmfn5n8ga8950cmmw3d2xwl4m38cxn11b3xi4dk"}
+],
+"dghuuloc.devspec-markdown-vscode":[
+{"v":"0.0.3","e":"^1.96.0","h":"04x4s7p4wb56dw5854dm39l9iv3wicafysvmk07snfnpn9kjjl82"},
+{"v":"0.0.2","e":"^1.96.0","h":"1f4dr6b5f0620x6ld9xgiq0al1g11ns043wvgavrjrdk8w16lndr"},
+{"v":"0.0.1","e":"^1.96.0","h":"0w22zifqcvl89z0ldjrnwjaqhamidlgh9wvsq53r7x6l71xm7pwl"}
 ],
 "dhavalsavalia.devstories":[
 {"v":"1.0.0","e":"^1.90.0","h":"141iqnrnwpb48dzjgxc97y98r3gyyvr4bi6s6j0jkmn8gqmam19k"}
@@ -9515,6 +9526,9 @@
 {"v":"0.0.2","e":"^1.78.0","h":"1irzhpc8hq3bljq3dx8m767fssywh2kscq5d0r68kv11zr5z7lw2"},
 {"v":"0.0.1","e":"^1.78.0","h":"0k2w82h6373mbl37l3r09q1dmfbiga9xgr7vsipazbj1d04qfm0v"}
 ],
+"madhavijandrotia.codepawlice":[
+{"v":"0.0.1","e":"^1.125.0","h":"1cg4c47j5zzk1i6nvbz7d7jahn8319x4fq4zgjiqs80slx90nm08"}
+],
 "madiyarzhunussov.traceback-ai":[
 {"v":"0.1.1","e":"^1.85.0","h":"0dzfwv1s6h9j5vnj4iqarvf8fwzrf2q7s3lfy0nr4ah0hrjg93w4"},
 {"v":"0.1.0","e":"^1.85.0","h":"07rnjlybmn88kh4mx0xz434an60myi4w5y3slm21nffviybahj5i"}
@@ -10994,6 +11008,7 @@
 {"v":"0.1.0","e":"^1.80.0","h":"0mc6b9cp45hwcrh28b2qv6sjwisndm8rcw5pkr23qk5qgjackkca"}
 ],
 "ronidover.gnosis":[
+{"v":"0.0.31","e":"^1.85.0","h":"1cy7yvswyhgc4fql0rkbabcaic74skd5991qbh7ybj8vd34n2ch3","r":true},
 {"v":"0.0.29","e":"^1.85.0","h":"1dxrnmnby3qa1snpyrpcysghqc85pvw7r80146ris1p1rkdqj52d","r":true},
 {"v":"0.0.27","e":"^1.85.0","h":"1bk7i8nhdyk5d7abiz7dwl1kyfxmgqq6y9sgc7qb3dvynbb88wz3","r":true},
 {"v":"0.0.25","e":"^1.85.0","h":"0sc3ifkkmijdlc5xfwh77x09k0msb8l6yr43axlvrbnvgvbb5v29","r":true},
@@ -11328,6 +11343,10 @@
 ],
 "shellomo.react-snippets-pro":[
 {"v":"1.0.0","e":"^1.85.0","h":"1vsb48m655dknks64zswcr7slkfpzaxamrsys9q7318kbl5djs3h"}
+],
+"shubay1000.highlightmanager":[
+{"v":"1.0.1","e":"^1.74.0","h":"03bs105mgj5gk7a9pb7v5flakby3c1s8vhh65zhca6n0sa0jh4v9"},
+{"v":"1.0.0","e":"^1.74.0","h":"1g2zchy0ks0zkzyrymjaf2wln6fiy31zwwmh5gka9hfh7zyxfv79"}
 ],
 "shubham-patel.syntrax":[
 {"v":"1.0.0","e":"^1.80.0","h":"0n9hz3qzjyy9lvssmjn1xd6nnw7b3jxmd1lwagywvid5rzlzzb12"}
@@ -12251,6 +12270,10 @@
 ],
 "vmaspad.project-initiator":[
 {"v":"0.0.1","e":"^1.89.0","h":"1gm1lh89hbiqaj8xrcklqki0sdj9d3ng0hiplrll9yyb666im7v6"}
+],
+"vois.devagentassistant":[
+{"v":"0.2.11","e":"^1.101.0","h":"063d5kh1hs4v8rl6dd67xzhn0q2jn2ccdjai1nk76nbmcflmrk0a"},
+{"v":"0.2.10","e":"^1.101.0","h":"0445d791gy4fa5x1g509iv7k63ya259z9c0qnq15cw3qvazni6aj"}
 ],
 "voxel.minode":[
 {"v":"0.10.0","e":"^1.96.0","h":"0via7ngj92zflxzfdkvjhlaqhjczj3khnijfcijyjdhmwf5hki7j"},

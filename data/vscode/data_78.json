@@ -171,6 +171,7 @@
 {"v":"0.1.1","e":"^1.99.0","h":"00h261cp945zlmzp8ax6xhs3j9rp70myv1zb434wjbq9pvlyqvqb"}
 ],
 "agentstudioia.agent-studio-ia":[
+{"v":"1.0.0","e":"^1.110.0","h":"1z1nq0jklhb1hhv27mnbwzxa9grk8imgq2bm039v2ck4nn3amk0y"},
 {"v":"0.1.8","e":"^1.110.0","h":"0rphx6vis47a3nn60wl6vz2vnnrc3rxywzra7aaggwlv5id29sp1"},
 {"v":"0.1.4","e":"^1.110.0","h":"0rf79zp46pkqianr0npv242ssxkx6wm512mrhbg76iygk0amnfz7"},
 {"v":"0.1.3","e":"^1.110.0","h":"1gh3wil2w1m8fwl0vqzkimd89yp26q10lsh0lmvajijr8baxhlf3"},
@@ -1547,6 +1548,11 @@
 {"v":"1.2.0","e":"^1.75.0","h":"1bq8hbl561ln3n3kca69jamqx0ad28jwygp8lfy13nxbnmry6z6m"},
 {"v":"1.1.0","e":"^1.75.0","h":"0b051dwc15a3kp5j0w0wzfq1lrmw2k0piba0qlb43i5y2bjcjd0d"}
 ],
+"codescope.codescope-offline":[
+{"v":"1.0.2","e":"^1.80.0","h":"1zgl1wgsms9sh9mm43la4ffp44f8005k0qgdlgl1fs2xk8nlwpxc"},
+{"v":"1.0.1","e":"^1.80.0","h":"1xdrvw7wz55gw94lkxdw184pk969l51zmfpd3qcpm1hvdqvrhrxr"},
+{"v":"1.0.0","e":"^1.80.0","h":"1svjbvhr1aarm2y9kfvamagk4z1xzwcm4wbgyxalf9d8s9bxim2j"}
+],
 "codetomermaidconverter.openai-mermaid-converter":[
 {"v":"1.0.0","e":"^1.60.0","h":"17jlg8n384q5f9b2gci47y8c0vh8r1k50d4rgx4s8p4vqss80mj2"}
 ],
@@ -2710,6 +2716,15 @@
 {"v":"1.0.1","e":"^1.96.0","h":"0c01ghycbcqzmmh754p4sjif9mazkzvs15cqsnycsvaqlcc62d2p"}
 ],
 "fwcloud916.git-braid":[
+{"v":"0.2.1","e":"^1.93.0","p":"darwin-arm64","h":"0dmk90jl66ikms1p2vj0grj8rfknzq13cw063fikag54jlbip7fw"},
+{"v":"0.2.1","e":"^1.93.0","p":"darwin-x64","h":"02cna2mixhhnr4ww3sf7pc76x3v9f0jqi7gp89bhrv0nf8divvi8"},
+{"v":"0.2.1","e":"^1.93.0","p":"linux-x64","h":"0pw11a7g5k50mrc9i6xj7rn0ydmnga5lklk96mrjrfmpvq9sxd44"},
+{"v":"0.2.0","e":"^1.93.0","p":"darwin-arm64","h":"0m397f0z4l4hb51pd63f6vvdfjbnyk7fwaklf521kxgqrd05vp8k"},
+{"v":"0.2.0","e":"^1.93.0","p":"darwin-x64","h":"0fbrivihhjb3cfg2rl37ksjqvam7b033jq6n3ry9rgp0p9i62k77"},
+{"v":"0.2.0","e":"^1.93.0","p":"linux-x64","h":"185dh1240qwg2kxvk30f5k6q39bqj1y3xmjvarhh3r0g89r5pqa8"},
+{"v":"0.1.2","e":"^1.93.0","p":"darwin-arm64","h":"1bxrwiyjnj5xj8hl1a7vzb8hrqr46nmmszyswp4f761wg0ig5kv7","r":true},
+{"v":"0.1.2","e":"^1.93.0","p":"darwin-x64","h":"1n60qkr98rz3r79365k3j33kfivaykgxcsw4qmbsl2gri4lnnn7g","r":true},
+{"v":"0.1.2","e":"^1.93.0","p":"linux-x64","h":"1drxfzha48ji8mqxf7cz3sf4vj5m0lfiq1p5ikxpa04k9z3v1hda","r":true},
 {"v":"0.1.1","e":"^1.93.0","p":"darwin-arm64","h":"1kf6qdm1hyizj7ij066kz3vd4d942vyxymjdfiw8ncgqkz0ydv2k","r":true},
 {"v":"0.1.1","e":"^1.93.0","p":"darwin-x64","h":"09m61zbh2lp5s5f4r9bcc7ic7vg2qjgzp7y6ra6w3hisddc8gnlb","r":true},
 {"v":"0.1.1","e":"^1.93.0","p":"linux-x64","h":"1h7a6724j4r98in7fvl1gi7bv2wr458vc6js3p502rpr3jws7927","r":true},
@@ -4001,6 +4016,8 @@
 {"v":"0.0.1","e":"^1.66.0","h":"181lb5lgfmm3fk95m3iss110fzyry4qgxk9qasxiycs21yqm2m1l"}
 ],
 "jubinsoni.foundry-trace-inspector":[
+{"v":"0.1.5","e":"^1.85.0","h":"1jqm64dnxsfly352zsjs0vgj0akjiw1gjb6m77v06c0nflxfxph5"},
+{"v":"0.1.4","e":"^1.85.0","h":"0vpcia54ia8dq9ww71dr1fli4js4qfl9rxnjscwmbfyq7v529z22"},
 {"v":"0.1.3","e":"^1.85.0","h":"1lqqii0ngr3nyrzgr1b13qlgrwpy4x6np120d86ckjhxkqpn3fvj"},
 {"v":"0.1.2","e":"^1.85.0","h":"1hcr6wp1zkl8vdfkvwfs3ws6jfs852majc37ynmpiwrjq8ggxwy7"},
 {"v":"0.1.1","e":"^1.85.0","h":"0hav09qggjxz60w1d6m3gkxdx877y1mjrcrs80jqnbimjk8mwnpj"},
@@ -10262,6 +10279,9 @@
 {"v":"1.0.1","e":"^1.70.0","h":"0p981pmxwly9yy72slbw3xhiv0rjf1ri4zzs9jksk6r0jhmha7m7"},
 {"v":"1.0.0","e":"^1.70.0","h":"1qdrw09xghpx5xnyxk8ccdjy318b3p3xvrrl5yv874j8l25hk90l"}
 ],
+"venomnbb.hdl-blockseal":[
+{"v":"1.0.0","e":"^1.60.0","h":"08fnh6a2yhg2pi6dhy1p1ig39ns6k80xwffkvb867mfspq406xmj"}
+],
 "ventura.ees":[
 {"v":"1.2.10","e":"^1.65.0","h":"1g93n4775ilm5b25zgzm4sx39l0hbss6g9l8n9wchglivnw7l1nw"},
 {"v":"1.2.9","e":"^1.65.0","h":"1k88s7c78y891ccm0nvw6cf32s7rxx2gvq13khm7rdy155bmh9mb"},
@@ -10777,6 +10797,7 @@
 {"v":"1.0.0","e":"^1.74.0","h":"0zpmhm8vxjrwbyinznrqrq03ii3jygryqppxwdalz2dyf8mm942s"}
 ],
 "yuzhiwen.zep-cat":[
+{"v":"1.1.0","e":"^1.85.0","h":"008n77fq4dxpvs32y7mxg17qr2zf5zkya0758dqx4bizw5gdzsr6"},
 {"v":"1.0.2","e":"^1.85.0","h":"0913jp9vpx6405606vq8ydh4hbqa5v2vqnsr62a7fyfzx6246gvj"},
 {"v":"1.0.1","e":"^1.85.0","h":"0c07x6may7lr183imxh16v5bl39vapwb2d69s86by782jwdk74i7"}
 ],

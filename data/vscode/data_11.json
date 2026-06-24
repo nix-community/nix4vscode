@@ -3936,6 +3936,8 @@
 {"v":"1.0.0","e":"^1.51.0","h":"1mazgwi91wcq1r6z032a7l3kfsqz685npqh67i586v49zgk0m4h7"}
 ],
 "klarityai.stackdecide":[
+{"v":"1.1.1","e":"^1.80.0","h":"1c981v7kamw5qf6cdr96c0dmrvy0n6wamp6glx4qjh1idf4rgpbb"},
+{"v":"1.1.0","e":"^1.80.0","h":"1zh6n00v6ywncpkc2qlv7s0hm0yjfcbjf7gcpz9ylm05cssbyddi"},
 {"v":"1.0.0","e":"^1.80.0","h":"1av1s2czdpl82k4l6y1z2lr4p9ha214n3rwm0qinn9fbxvi4w1kh"},
 {"v":"0.0.1","e":"^1.80.0","h":"01f23mjyvqdn30bw15nqfnlyynk4jw3kzk33jmpkaf0agnmbkjsr"}
 ],
@@ -5629,6 +5631,7 @@
 {"v":"0.0.3","e":"^1.62.0","h":"098w5gdshc1b17yx19vbnp6kjwimlh0qk56mjrb0lpjkwbyqykss"}
 ],
 "nicolasburford.json-schema-nav":[
+{"v":"0.0.6","e":"^1.85.0","h":"19jrpn4i9b2fmni6mdgdyws3yaw01bxs1vm7qpn18rn9nacvny7s"},
 {"v":"0.0.5","e":"^1.85.0","h":"0yvbsjs1bsnldpfbkkqa2r98i5cs1vy1g05dwld0djfj761rnyf6"},
 {"v":"0.0.3","e":"^1.85.0","h":"11q0l9x6rcslyhhlj62nxn6hh4g9vh8whlwlnmd2axibkskpgwvn"},
 {"v":"0.0.2","e":"^1.85.0","h":"0jjrv8znbngswl319a82ckcy1mzywj8j5nv6wjpi8pb3mb8qgc1m"},
@@ -6427,6 +6430,11 @@
 {"v":"0.0.2","e":"^1.33.0","h":"0dk4rx1wk3c85hp8h0difk892850y5haihakpa3sy74sqfl3c3c5"}
 ],
 "redhat.java":[
+{"v":"1.55.2026062309","e":"^1.77.0","h":"0wcbab3gdqjcw1zizf8d6ixswqswkkxzl3lrmxkixqgqiaqvjgli","r":true},
+{"v":"1.55.2026062309","e":"^1.77.0","p":"darwin-arm64","h":"18mv440fx2jmhm1p1ynl8pc8n89jzyyj6d1w4jlzlh9sn43sj6z9","r":true},
+{"v":"1.55.2026062309","e":"^1.77.0","p":"darwin-x64","h":"04d3q519lg8pdg53719jrprradqylc1w1rl503w9sx5qywnnjc7s","r":true},
+{"v":"1.55.2026062309","e":"^1.77.0","p":"linux-arm64","h":"1g78dwv6c49hyykcp0xcgpmnmlg72k2qlawsm2zj7wlj9sgxvz08","r":true},
+{"v":"1.55.2026062309","e":"^1.77.0","p":"linux-x64","h":"1058275g6sxfd4laq88m28ml4xh2v12vdbjh33qh66c5mfxq15yr","r":true},
 {"v":"1.55.2026061909","e":"^1.77.0","h":"17ra5gdaahkiqhl9ayh5h6i4f77vkv0x9q13dqqxc166a008kgy7","r":true},
 {"v":"1.55.2026061909","e":"^1.77.0","p":"darwin-arm64","h":"18wflf2sik89l7bjayqzjj8jw21w4md9majlr84r656gvcfml3bm","r":true},
 {"v":"1.55.2026061909","e":"^1.77.0","p":"darwin-x64","h":"0b2a8n6rv844xxs3sigv9r1vpdwb5yhpan40gpcw64l9kjk13v7r","r":true},
@@ -10127,6 +10135,7 @@
 {"v":"1.0.0","e":"^1.43.0","h":"178f3ismf9ysp3xnx871mcgjk4b62r0ky7lzpfriwlrrbxdd962f"}
 ],
 "reslava.reslava-result-extensions":[
+{"v":"1.5.1","e":"^1.78.0","h":"118xqrdfsfwy1mfkqn426yzw1dvqxqwsrs7nwrqvfq3af5jj2cmi"},
 {"v":"1.5.0","e":"^1.78.0","h":"1zvcwp40c3vwb6llsbzqndv07rdmbj2dyilywfg7m23m3crymbwq"},
 {"v":"1.4.2","e":"^1.78.0","h":"1jjmvndnmcs7c10gar01zdsc5c7ql43b1ilxhdz8fkd72d081yl6"},
 {"v":"1.4.1","e":"^1.78.0","h":"1scki1h48wd828wq60625k4rak9is51vfjk3gm7k78yql5l7fl5l"},
@@ -11423,6 +11432,7 @@
 {"v":"0.0.1","e":"^1.90.0","h":"1g5fkbrbksvjsf6ziz11ngw48d4i0qx3fyh8qxk624qlpnwkhrjg"}
 ],
 "ust-pace-ai.copilot-wrapper":[
+{"v":"0.1.4","e":"^1.90.0","h":"0zpd9wcihc8mdsr46g70cc47qsf1babf77ss5a649wdc338s1k02"},
 {"v":"0.1.3","e":"^1.90.0","h":"0a0pqh8a18simjqkd2ppy13jmnal48clhhad05wd2n39wwqg7bb9"},
 {"v":"0.1.2","e":"^1.90.0","h":"1v08sm96iysbglakg9ylc1mrbvysfzk4jid2rvf73sg0hb16ziha"},
 {"v":"0.1.0","e":"^1.90.0","h":"0ggy7xiiblvvp7d4qsm9dhvfq0a1b5qiamfc6yhjxngmsjf9kdkx"}
