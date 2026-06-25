@@ -93,6 +93,7 @@
 {"v":"0.0.3","e":"^1.24.0","h":"1wxpshahgn2svc17r5pmwmy945zhd4xn85ln5pjfadf2pqzvcs5g"}
 ],
 "actifsource.actifsource-tools":[
+{"v":"1.4.0","e":"^1.85.0","h":"1zar7psgxg124clvdzvr1xvy7rcqfbk8bnl19cisd9s6zghzv3dq"},
 {"v":"1.3.0","e":"^1.85.0","h":"1p7dp2xpndarkqyfg672s42snx6sdy86dh4qr8b8w5f0n8iz7gan"},
 {"v":"1.2.0","e":"^1.85.0","h":"0jxm9g3ji5k6ac02p06yp7x98f21k50xifqlk7k5vc1p21r8lr4z"},
 {"v":"1.0.0","e":"^1.85.0","h":"11vv8sbkwb2sb01fngmzamxcrxfmjvxz2q97kk7w6sq7pba43rjh"},
@@ -427,6 +428,14 @@
 {"v":"0.1.0","e":"^1.65.0","h":"0wbyx93lqcbih0ws1a8pqpfd81gx20yzlm0d20zihlxqwvb9rw4g"}
 ],
 "anthropic.claude-code":[
+{"v":"2.1.191","e":"^1.94.0","p":"darwin-arm64","h":"12kqbgmxqvj9bk7g9r0cqjry7dzsd6p14jzvx70yjajp3hi6icc0"},
+{"v":"2.1.191","e":"^1.94.0","p":"darwin-x64","h":"1hnrz2kqrpqgcsqvzh0zrli3mj6ggbs099crdgpwchlabj89x0yg"},
+{"v":"2.1.191","e":"^1.94.0","p":"linux-arm64","h":"1p007j039rmkxcsxj0a7y0rgb2hf0pbfy7cbib10d49z337n741x"},
+{"v":"2.1.191","e":"^1.94.0","p":"linux-x64","h":"13pa55z08zx5klcmmwx172cll88nb3kiabcykp6njafgn0wg9ikf"},
+{"v":"2.1.190","e":"^1.94.0","p":"darwin-arm64","h":"09l6r2cfm9g8g5zysxpj9d1d8s3a4jk7izliv9mzvfnihw0ng7am"},
+{"v":"2.1.190","e":"^1.94.0","p":"darwin-x64","h":"0py2cgd1svb2yj5r0s839bcl397l354y7fkqm2y3mzxv7bmqjhpi"},
+{"v":"2.1.190","e":"^1.94.0","p":"linux-arm64","h":"1a84vy4232fy2h2m6r8wqqcj0kk47n2sv8pyg3as0b2848kv0av5"},
+{"v":"2.1.190","e":"^1.94.0","p":"linux-x64","h":"1kf2m52mx5l0kdchiw6n98m1pwh6hw5297b9bz82k5bcsv4xkzda"},
 {"v":"2.1.187","e":"^1.94.0","p":"darwin-arm64","h":"1c08jk5c4g5pflh2b8g6mf5801hw2m8v3fzxb0dmv81c2da1k0p5"},
 {"v":"2.1.187","e":"^1.94.0","p":"darwin-x64","h":"05dlnl1lg8aii5j9vssvkig1jfxlj4rajhbps30yhd26vgs38w8c"},
 {"v":"2.1.187","e":"^1.94.0","p":"linux-arm64","h":"053wfmy6403xjylp29cjn9yqi3m4jhq5n5myaj6sf9aybbk5gbsk"},
@@ -6756,6 +6765,7 @@
 {"v":"0.0.1","e":"^1.99.0","h":"1xfnqc95gdvz9cbq242nayzpkmiggjdjwxlz2qrxs1qayknnh2g0"}
 ],
 "digitalassetholdingsllc.daml":[
+{"v":"3.5.1","e":"^1.87.0","h":"01ngjki2zx1gs22vdqwlzfa2brrl8n2r01ris9w5v1wq60b03bnr"},
 {"v":"3.4.11","e":"^1.87.0","h":"07nj4xwv1fqc9hi31n604bdz2i9bjcg64b515cmcbdpza0ys4bnl"},
 {"v":"3.4.10","e":"^1.87.0","h":"0qfcyikv2mh7ny1k5ag0dqjk30bpf6rxkyrqw0w3gh9rimqx1qvk"},
 {"v":"3.4.9","e":"^1.87.0","h":"1nm6pfqvn381lazdw8ais4mvz5phw7kqb1jhha43whwy9zyxm9sf"},
@@ -8401,6 +8411,9 @@
 {"v":"1.0.1","e":"^1.85.0","h":"1827pbikhnbc3zz3hd61wv65a1xhxkqffxqmn6dbys5ml4fg2lrh"},
 {"v":"1.0.0","e":"^1.85.0","h":"05fg68nm39lk9i8n7yhjh0dfj9jbfxsgi48100iw3z9l65d9v4y3"}
 ],
+"huxlabs.huxlabsapp":[
+{"v":"1.0.2","e":"^1.80.0","h":"1mccl29kh3bghzyi1iyi6hss0jshyh6j3qyfs74w77j9vb7b4db1"}
+],
 "hwrn001.snakemake-lang-pre-release":[
 {"v":"0.7.2","e":"^1.75.0","h":"1jjcmwn9lv6ly5f6ckqq4icc6539akbna8763hpghdb0iv1rjql5","r":true},
 {"v":"0.7.1","e":"^1.75.0","h":"0krfvr19wpm1fnl7fcyhi540sn5nyipbf01abfkvc96hvs0wq29p"}
@@ -9674,6 +9687,7 @@
 {"v":"1.0.5","e":"^1.85.0","h":"0vlxwq19v958bgzb3bjbh6vjfsq2whwlrmdmmpa1ikrcid90ziln"}
 ],
 "mermaid-lint.mermaid-lint-vscode":[
+{"v":"0.13.0","e":"^1.85.0","h":"096lg42nlv116wcx4hr2hjjrrk85g0asjzj5zcxxrk75xzlgx96s"},
 {"v":"0.11.2","e":"^1.85.0","h":"1nnxdxdsaafibpff2dbqj79qfv1rvq2sfmq5bn781rim8s7f3jx1"},
 {"v":"0.11.1","e":"^1.85.0","h":"1j6fzvzk8z3cwcj4jh0q6rr9bf6mn95q6mcnr9cn2h2sgpfa7060"},
 {"v":"0.11.0","e":"^1.85.0","h":"1vnc8jw8z959qikn50s698pj7qzypmb2nv2sb180zjl1z7q3jcqk"}
@@ -11345,6 +11359,7 @@
 {"v":"1.0.0","e":"^1.85.0","h":"1vsb48m655dknks64zswcr7slkfpzaxamrsys9q7318kbl5djs3h"}
 ],
 "shubay1000.highlightmanager":[
+{"v":"1.0.2","e":"^1.74.0","h":"1g4l4xlcvbgn2hx9nxb2mhpbilrvy1gwwrs3a9p8fd8qxjp0c5bp"},
 {"v":"1.0.1","e":"^1.74.0","h":"03bs105mgj5gk7a9pb7v5flakby3c1s8vhh65zhca6n0sa0jh4v9"},
 {"v":"1.0.0","e":"^1.74.0","h":"1g2zchy0ks0zkzyrymjaf2wln6fiy31zwwmh5gka9hfh7zyxfv79"}
 ],
@@ -11802,6 +11817,9 @@
 {"v":"1.0.0","e":"^1.74.0","h":"0wqs9968ki8icpz34p194wfjd4cxl6b4msic81snilm4wcjil07d"}
 ],
 "svenzhao.sven-devtools":[
+{"v":"0.1.8","e":"^1.90.0","h":"16mljm49jq0g7v48v8jpz9cmdd7s8bz9z4b1yp5dh2nc88v6pf4f"},
+{"v":"0.1.7","e":"^1.90.0","h":"1k1p2rs5g8bxi11hfqp03w7ydch2yr08sbyig5cmw8q6cy97b89b"},
+{"v":"0.1.6","e":"^1.90.0","h":"0fr82b7mavz9np4vbc85zzy2shzxw183g1lfihjsrd3cbbkmywdy"},
 {"v":"0.1.5","e":"^1.90.0","h":"0jgynks3d6j3nlh194qvb55mplir3yxb6vr9csz7lqi4zs3gv6n4"},
 {"v":"0.1.4","e":"^1.90.0","h":"0cl6n4zam7m578b3j0r46rkvc16j1z1lwx87xfip33b8h3dp1y3v"},
 {"v":"0.1.1","e":"^1.90.0","h":"1mghs6nsbfhmj7ar7kbwfn0fshib0s5xhidnny97ih26rnqxa50i"},

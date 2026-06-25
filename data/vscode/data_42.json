@@ -5145,6 +5145,12 @@
 {"v":"1.23.0","e":"^1.23.0","h":"097vydbzy1g7a9cggp1vfjb0d6fv88irarl0rc2jmyby7ydr412q"}
 ],
 "ms-python.debugpy":[
+{"v":"2026.7.11751008","e":"^1.92.0","h":"19bpr1i2qikd7g69wvpkdb0gwhilaisdhd7wawqsv4d87m6hay7s","r":true},
+{"v":"2026.7.11751008","e":"^1.92.0","p":"linux-arm64","h":"00fz7ajm31mgmna41x982ydpqg2wrckxiwamhn5fqxakr2qvdhpj","r":true},
+{"v":"2026.7.11751008","e":"^1.92.0","p":"linux-x64","h":"05q5v2nz7fd4vmkk9fnb0nifrhkxlhrqhjd8c3jq9c368nih8z44","r":true},
+{"v":"2026.7.11751006","e":"^1.92.0","p":"linux-armhf","h":"1grsmyy9750gz5n8znjipbwpbabkdi4x230fb8ny8jpi727kpdw5","r":true},
+{"v":"2026.7.11751005","e":"^1.92.0","p":"darwin-arm64","h":"1x5ic1cfm2sq2lmry1bynr1hx6i7g9zsbmmnf89iiidb3j4dzwjp","r":true},
+{"v":"2026.7.11751005","e":"^1.92.0","p":"darwin-x64","h":"01irz50898b233nl2j23mxvnjdgb3bbifmrqdvasafm698z7s00k","r":true},
 {"v":"2026.7.11741010","e":"^1.92.0","h":"05qlfd030174479z4w47q8aab6hg5b6h28h3libi4gaqlqkhmm3i","r":true},
 {"v":"2026.7.11741010","e":"^1.92.0","p":"linux-arm64","h":"03dbwvjqw40lnxy7jqd1qs9qcacysi9zzbkwrw81rsx9iajddx4f","r":true},
 {"v":"2026.7.11741010","e":"^1.92.0","p":"linux-armhf","h":"1pqmcqx88cv4whfgr5jf7xfxxjxr6k2l90w0ykgz30rd15c8szvd","r":true},
@@ -8150,6 +8156,10 @@
 {"v":"0.1.0","e":"^1.80.0","h":"0hwz7zshf2xv9hl348n7g9izr3jjl1ckzyj0095ivk5k9m2ckf22"}
 ],
 "nexosqlstudio.nexo-sql-studio":[
+{"v":"1.37.0","e":"^1.120.0","p":"darwin-arm64","h":"1w37h9n6x2xv5093cd3qvlgjnk33wp755hvpabl0fryk62mvn94c"},
+{"v":"1.37.0","e":"^1.120.0","p":"darwin-x64","h":"15mwi3sgwz19iq9xniy535nz0hn2di1b7vg0xz4ism2ga7hr7gxa"},
+{"v":"1.37.0","e":"^1.120.0","p":"linux-arm64","h":"0dw5x70mwknpndk8mwid5r386hgpasglc3dqqj8320n7bcnkvv5f"},
+{"v":"1.37.0","e":"^1.120.0","p":"linux-x64","h":"0sbr16kdkscqqk6q51fksx71lw7lbiqli0apns4wmr067k022ia8"},
 {"v":"1.36.0","e":"^1.120.0","p":"darwin-arm64","h":"1mgwrccgmqdv4aq15r8jw6pmrc9cdhd97f8iizxwpm22v8iv8515"},
 {"v":"1.36.0","e":"^1.120.0","p":"darwin-x64","h":"0x745rl553cz3nqc3wz3c4xwh6vx874851vhc702g13ifszx9k0a"},
 {"v":"1.36.0","e":"^1.120.0","p":"linux-arm64","h":"0lxzbf6dmdcql0p2vdzzpvfqzwv1csk5l8nm71w1wsrmjfqrci1r"},
@@ -9776,6 +9786,7 @@
 {"v":"1.0.0","e":">=1.84.2","h":"01262k8jip6hzyksv0k8qwck9v8zq9mzf32igsqa17vv35b0qs2i"}
 ],
 "salesforce.salesforcedx-vscode-apex-debugger":[
+{"v":"67.2.0","e":"^1.90.0","h":"01di63liz690z93k2npyc59rvgj68sg71pjr1b5fnkggzn2a6jv0"},
 {"v":"67.1.0","e":"^1.90.0","h":"1in64lc4n91v0lriq60gryd60s3ssvm4lj4a07vrqpwzdpg9w4xm"},
 {"v":"66.15.0","e":"^1.90.0","h":"1a8zgsccc2xj9fawib3rsq2dhaq09pmj5l8kj788l0l0dgs7cql3"},
 {"v":"66.14.2","e":"^1.90.0","h":"0m704cf0dy0kba1pa5ys02b70scwgk3my2hp700bb4dpc3n7cxg4"},
