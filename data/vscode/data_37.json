@@ -330,6 +330,8 @@
 {"v":"0.0.1","e":"^1.74.0","h":"19wpkfqy0sr6bqbyszcf4fcynrbnzh5yy9sfipsnxqq7zxvm4j6k"}
 ],
 "analysis-services.powerbi-modeling-mcp":[
+{"v":"0.5.11","e":"^1.80.0","p":"linux-arm64","h":"1sdlg9wz3077bwks29jz5hiqkjdzyd4lcnaqa3hq94gqk7w7kdmd"},
+{"v":"0.5.11","e":"^1.80.0","p":"linux-x64","h":"0k9ds5nwk73m6psb10zc56c612r0p68iq0bmppczfk1kfsy9ki9k"},
 {"v":"0.5.10","e":"^1.80.0","p":"linux-arm64","h":"0q0b2lnf4lx39dx7d033y1pcz0r7ypbifbf6r28f6nwhlfxfnfk8"},
 {"v":"0.5.10","e":"^1.80.0","p":"linux-x64","h":"15mqrigjxd9dv1jkxcg3lnnxz36zbpcpwhrwgbxw3gc7djx4b28j"},
 {"v":"0.5.9","e":"^1.80.0","p":"linux-arm64","h":"0qgmgmca1gqfsbmblbifznvfqxh55isafj26f0wn6xlh24f1qx2j"},
@@ -5896,6 +5898,13 @@
 {"v":"1.0.2","e":"^1.33.0","h":"01nh748rpz27sm90zza24xc841hx03dj6hw05zaza78gn5di77gz"},
 {"v":"1.0.1","e":"^1.33.0","h":"1z8wpysrfgsfgv5vyf447xn0h3bf59navqm7p3np15jwki5pj4w7"}
 ],
+"researchanddesire.fumadocs-vscode-plugin":[
+{"v":"1.2.0","e":"^1.85.0","h":"1mzcx62ffpcvp87p178wnscnki9n3a5dw5l5r6wr1qlz0rgbaly5"},
+{"v":"1.1.0","e":"^1.85.0","h":"0xnkn914cp2zfkjxczsz3zy0d0pknxf8yj91m1nswibhy31m49ln"},
+{"v":"1.0.0","e":"^1.85.0","h":"1c9x6ahgchggrs0hi50v1as2dv94mikfsn4xn9yh5qsg8ka28lvy"},
+{"v":"0.9.0","e":"^1.85.0","h":"19d0v0a1214839n6f8y6gv5d31a2a6jqgc7dmdj36vacwhvyhplp"},
+{"v":"0.5.4","e":"^1.85.0","h":"10gl2yncailwqq369g7wh0lfk1cd24m66i5ds92bnhny89mfslnh"}
+],
 "rhamakrisner.intellij-color-theme-packs":[
 {"v":"1.0.0","e":"^1.100.0","h":"10wj7sxzph21j1q52m8h9xk55250qxh3njcjy92p2pdd6mbvqgj3"}
 ],
@@ -6032,6 +6041,7 @@
 {"v":"0.0.1","e":"^1.105.0","h":"0vqvyrq65iq1q8yvdnmkyasayj66x1mnxs41wpr26dw7zzzy6xf3"}
 ],
 "ryancoding777.folder-board":[
+{"v":"0.0.5","e":"^1.106.0","h":"1ymil9np62201crfzb2w6n0jkcx5hkzqzx17f7llwdvg8y8g5bma"},
 {"v":"0.0.4","e":"^1.106.0","h":"1m77p4mgmsmfp5yf814vm339hshsyrhcrx4r9m3gj0s3fhb8plp1"},
 {"v":"0.0.3","e":"^1.106.0","h":"18bwp3lj7h9j6cis6mmflw5fbm92q31c8s9045k94j37jdx7bqql"},
 {"v":"0.0.2","e":"^1.106.0","h":"1d8a8d0gmh7jq9nqcfj1k8w9x1fz0bmmxmbgab10g8f5v91sf27l"},
@@ -7523,6 +7533,8 @@
 {"v":"0.0.1","e":"^1.99.0","h":"0ka1bqnk6g6lww7d0mfhknsdgl270amqp6h0mlpnc8rw803plmwg"}
 ],
 "tsucky230.comp-vscode":[
+{"v":"0.8.5","e":"^1.91.0","h":"1c5axj6zd1kd18j3hils7as388mjiz0mrd4c987wdjfma24pllki"},
+{"v":"0.8.4","e":"^1.91.0","h":"149d4dqq43l621gqmr5q6hb7m2x2szk7c3r46l22y04kk53srpy9"},
 {"v":"0.8.3","e":"^1.91.0","h":"1kwjmn4grivcicyfqmx9b6f3s103dgkcm94idwfpbzf17zwdysnq"},
 {"v":"0.8.1","e":"^1.91.0","h":"1m8l4liy2xznmc69cc3gxnkwxvrazr4c9fyxyfyki8hdwpwzx10b"},
 {"v":"0.8.0","e":"^1.91.0","h":"1lra336ck8cmd97h4y4ka2xi2rdi8isan4jvsqlbaxdal17hzvh6"},
@@ -8523,5 +8535,10 @@
 ],
 "zwad3.sec-lang-vscode":[
 {"v":"0.0.1","e":"^1.34.0","h":"1mlkx596dv0jhsf89a9kd90lnancq85bhkyn5kchzpncl2v0xv4l"}
+],
+"zzurto.vbv":[
+{"v":"0.0.3","e":"^1.125.0","h":"0pdkzn6kyri1qhiw18c5l6252lqcf8br9610qp83kms4q02ykhcn"},
+{"v":"0.0.2","e":"^1.125.0","h":"097p0c73619q8c35pac4q4cr0rzc5dk8x27p6jd3wsx55ww3lahr"},
+{"v":"0.0.1","e":"^1.125.0","h":"0fz0f33zi1nj0ry5h07hs9jamjimnmks3f6zxb3dm7fpxya0i1nk"}
 ]
 }
