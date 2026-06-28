@@ -176,6 +176,10 @@
 {"v":"3.0.0","e":"^1.63.0","h":"1ykpaf2y7ff0qjpwszywhnbld4hsrs4qxavyrm0jf29x4z1zvpjz","r":true},
 {"v":"2.2.4","e":"^1.40.0","h":"0z7x795izl13i8x8plkxwgygk69nd2rbyqpg02x6fld230hn1sgq"}
 ],
+"ecocitizenz.eczid-dependency-security":[
+{"v":"0.1.2","e":"^1.90.0","h":"1mapvbai8c41rf0hhxvxgc0pqdaqcd0ycv2q7zlr78r6r8xv25wl"},
+{"v":"0.1.1","e":"^1.90.0","h":"183qcr28xc7vy39559xj5sinracxv3dfnfxw991wiv8l01x6zyqs"}
+],
 "effectful.debugger":[
 {"v":"2.0.5","e":"^1.93.0","h":"16zq4p6kay0j7mrpgrax8dfj4afzpg3kb42x9fmxfgqbfmdi3wnq"}
 ],
@@ -296,6 +300,9 @@
 ],
 "kayorama.kayorama-autopilot":[
 {"v":"8.0.0","e":"^1.75.0","h":"01rb7jr3f5knazgfyg9zsrn8sr3p40f4f6m0rskqplfk74hyn84h"}
+],
+"kieltech.human-language":[
+{"v":"0.1.5","e":"^1.80.0","h":"0ya4nc2m32jh0929izalksxj0w0vxqa58pidn7s0r5v6i0q3hawa"}
 ],
 "kisstkondoros.vscode-gutter-preview":[
 {"v":"0.32.2","e":"^1.88.1","h":"151dw9r08ipy25bh8knc3j8cjall1rvkfg5hibz4s8fipqm0d4zj"},
@@ -472,6 +479,9 @@
 {"v":"2026.1.0","e":"^1.107.0","h":"1sizx7xr92bc31fz4xbz69pflnhzq0lkwsxmz78yaaaisnxc3bi6"}
 ],
 "nimblesite.basilisk":[
+{"v":"0.23.0","e":"^1.99.0","p":"darwin-arm64","h":"1if1binmpk17hqh4xzdwq72kx0rdl60nqarj1v7j81qz3sghbaki"},
+{"v":"0.23.0","e":"^1.99.0","p":"linux-arm64","h":"0ap3h8raciayl2h5v6pw84rjpyg5836sl8m8gqyv816q8wnbghrp"},
+{"v":"0.23.0","e":"^1.99.0","p":"linux-x64","h":"0cvyvldkci1iz05khwjm90hix5b89nc17gsdkqfkh2j28wm65q4s"},
 {"v":"0.22.0","e":"^1.99.0","p":"darwin-arm64","h":"0jpd7pvs65bi35lp78x3m2nvybzwlf3zk1s6h0jwh0l3kllv3fns"},
 {"v":"0.22.0","e":"^1.99.0","p":"linux-arm64","h":"0lnhqhi8h9icx69aw49vjn8jp2f6xw8fgkfbv7isz7mw5w70rc8n"},
 {"v":"0.22.0","e":"^1.99.0","p":"linux-x64","h":"130drl8wcz2bpgiqj999wgbnpkqf4sg0s2g4kf9n3c876fizya76"},
@@ -569,6 +579,9 @@
 {"v":"0.1.0","e":"^1.99.0","p":"darwin-arm64","h":"1jnc238940yhjl9vqdd2rl0a9dhm7cx170zg9b9848xb2jwjj40n","r":true},
 {"v":"0.1.0","e":"^1.99.0","p":"linux-arm64","h":"0szx6p2gzbjsrayf25sx2zy80r4qk6javz6hjrvn91bnhrqbj800","r":true},
 {"v":"0.1.0","e":"^1.99.0","p":"linux-x64","h":"19ym4q9jj54rvrp40ypjsbnzksh5ix5bdxdf08pd9522ypvddbv9","r":true}
+],
+"novumstartup.novum-tracker":[
+{"v":"1.0.1","e":"^1.85.0","h":"00k7s3z4v0kqimz2l0nzx0n1qzy7r8qxbjc8mk66risy6xf6bpbg"}
 ],
 "ocamlpro.superbol":[
 {"v":"0.3.0","e":"^1.64.0","h":"03fqv1jznkxls3av3sd4w82i642751wqxbhafdsxq4gfp0wf1r85"},
@@ -733,6 +746,9 @@
 {"v":"1.0.22","e":"^1.85.0","h":"045awgd2sdw6pxw8x2wq0swzsskwfwzpqfgjq6r0air1min5xdhf"},
 {"v":"1.0.21","e":"^1.85.0","h":"05ndr3zbgiscbz1l8j1cg31kiy7r4na62ffyqvfvbsyy0mrs0725"},
 {"v":"1.0.20","e":"^1.85.0","h":"0rpqyc217az88pw01hh221j98pkmi4ccqrmpy3b908kffdblv53f"}
+],
+"sfdc-eng.bazel-vscode":[
+{"v":"0.26.106021821","e":"^1.100.0","h":"0n6gh165sd9ka438gn5484z4syhrvwcjgfkn9yvj80kqvrxl5b7k","r":true}
 ],
 "shadowline-trx.gravitypilot":[
 {"v":"4.2.3","e":"^1.80.0","h":"1pvlf8yqf6n4hjxmym6ab2nkl9kp6gyv84164kh3h2w4yijmlnlb"},
