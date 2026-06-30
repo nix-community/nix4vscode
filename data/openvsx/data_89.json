@@ -137,6 +137,8 @@
 {"v":"1.0.0","e":"^1.76.0","h":"11ay8az74f7s5hpya2lx0zigid7c0id09n3rj6clp4p2yspix9b1"}
 ],
 "barekey.svelte-effect-runtime-vscode":[
+{"v":"3.3.1","e":"^1.100.0","h":"0izvg4yvvj4yg1wn341dkjq4b4y80sc03ar6ca37wzd24i9a94i3"},
+{"v":"3.3.0","e":"^1.100.0","h":"0jznb0wfrkm6cg5dpd6h22ysd4fwm2r9hjpdx3vfcg1p50ggrx8n"},
 {"v":"3.2.2","e":"^1.100.0","h":"0rpzmndfswkv0iqh81hz54f763rkh38yp74hyq1hgp0a4f54hfdd"},
 {"v":"3.2.0","e":"^1.100.0","h":"0jxjf5q3jqc4wdvzhxpnq4ljhaw9r2an71jp7z85cyc45xv870ps"},
 {"v":"3.1.0","e":"^1.100.0","h":"1s4fck5h604hj7hw5nw7ssn5j0a9s391hs713g32x4k9wdq82dzi"},
@@ -1225,6 +1227,10 @@
 {"v":"0.1.8","e":"^1.54.0","h":"1pnz6wnvmwi7rxx4b5i23mhxan1yqfzrkwgrcw25sb69mz13shbd"},
 {"v":"0.1.7","e":"^1.48.0","h":"0akybs7rl5kdss2hx17scgg2lwk65i2vbg4yff9dqvygiibpmshb"}
 ],
+"studiohaze.lispex":[
+{"v":"0.1.1","e":"^1.75.0","h":"0idvm9qvp1bfc7s892a19miix683k36qbf41n53v6qf96fixrfbv"},
+{"v":"0.1.0","e":"^1.75.0","h":"1d47lnil5nwbf18p1ly0bpyn6pvapr9ngdnblb58pq045xb1yzfp"}
+],
 "switch-dimension.prompt-manager":[
 {"v":"0.0.1","e":"^1.85.0","h":"0k13gwfbgim7m3lcvfpgvk4yiaz9v8a5gfdlq2rx7s0l0s3rwp6s"}
 ],
@@ -1296,7 +1302,11 @@
 {"v":"1.0.0","e":"^1.85.0","h":"0kirzrvj0jp3wz8xkv87n4q46agbp0pa1zwr09q50zfb8z4vygih"}
 ],
 "wgsl-analyzer.wgsl-analyzer":[
+{"v":"0.12.391","e":"^1.120.0","p":"linux-armhf","h":"1np48gwqpyq2a3szb40xiv8hzn1627claslmmd82lv15c3smqn2h","r":true},
 {"v":"0.12.390","e":"^1.120.0","p":"linux-arm64","h":"0iw7mi7vfhc5z3maa3y3c9j36k59b2yq5pkimnnpfwrfln30hhcl","r":true},
+{"v":"0.12.390","e":"^1.120.0","p":"darwin-arm64","h":"1dci9vv85b8di4ymc92d74268xhb0h9d777x8wnsqrk19sxrlg23","r":true},
+{"v":"0.12.390","e":"^1.120.0","p":"linux-armhf","h":"0nzk2xm9k9s1ldkjdq6fg5pa313nrlkq4a7gpwsq1jp82w2qk4ii","r":true},
+{"v":"0.12.390","e":"^1.120.0","p":"linux-x64","h":"054r0pc3p9lmbvwdjxsbfcyrm8w7i4j65rm5ynkmisg4gwxybr05","r":true},
 {"v":"0.12.388","e":"^1.120.0","p":"linux-arm64","h":"0wba9pkkfiks1p0nvbdiqbj19iifjaama7n9phfa47x2fq44y3nv","r":true},
 {"v":"0.12.388","e":"^1.120.0","p":"linux-x64","h":"1gps3y2p7h9v9yirwgbq976ab62g8bljh1sns1z5ampi5myg6pl0","r":true},
 {"v":"0.12.388","e":"^1.120.0","p":"darwin-arm64","h":"1qsmmcdxjqii7w80j9ngsc26h03na57h4xnh1cfimqgixs7mfr3s","r":true},
