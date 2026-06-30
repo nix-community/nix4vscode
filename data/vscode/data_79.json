@@ -1445,6 +1445,8 @@
 {"v":"1.0.0","e":"^1.58.0","h":"1iq3qv7if3jmh7a6rsx39fin0k7db9i1vc3h172fr9ilmawvffa5"}
 ],
 "dam-pav.bc-dev-toolset":[
+{"v":"1.2.4","e":"^1.101.0","h":"01v9f1f334vmp17wc794bmfgsrr71ahwr68x6xwd4gd0xpkd1fww","r":true},
+{"v":"1.2.3","e":"^1.101.0","h":"17r7ad9v4v8dxvsn7pz27b9n26k9y1003vv6hc42h2ki2bh8n51l","r":true},
 {"v":"1.2.2","e":"^1.101.0","h":"1f85v2hcddc06w0f2172267dz7jb15ar196c51a264cyqjpwacww","r":true},
 {"v":"1.2.0","e":"^1.101.0","h":"1kijkb4lrzlian33ij52n6838vcipa9dgw3abzbiz71c3zsvwy9k"},
 {"v":"1.1.14","e":"^1.101.0","h":"1jbgxnsvprlci77sswixfapvg25629svv7632yb59a5r327mv03b","r":true},
@@ -1828,6 +1830,12 @@
 {"v":"1.3.0","e":"^1.96.0","h":"0a09cfrm2j481218klnzwp8sc43vrdq0jkzjm8c6xxyj67q128nc","r":true}
 ],
 "dnakode.vbnet-language-support":[
+{"v":"0.1.19","e":"^1.80.0","p":"darwin-arm64","h":"0rdj66w6x41r8jlcdrfkhg2d1afgcfz5n9p0k5871l6sy5z8my48","r":true},
+{"v":"0.1.19","e":"^1.80.0","p":"darwin-x64","h":"0h86y3ylz83r4yjzihqjv1m46w8xhkfdggl8kgkh9ahcz2w4zzz5","r":true},
+{"v":"0.1.19","e":"^1.80.0","p":"linux-x64","h":"18c3l8gpphccqgxcfn8jr17x1n9pphjsn3fj8a8gspdaalhhz4k8","r":true},
+{"v":"0.1.18","e":"^1.80.0","p":"darwin-arm64","h":"04bpzpd6d72dy6dqi5xlk5z5xvffj8l1yp8hvkrn3qmnkn6x1m9z","r":true},
+{"v":"0.1.18","e":"^1.80.0","p":"darwin-x64","h":"1kwwzvxacxg3yxayy0anyf3n4c39dkk5w3fzpskf3am8zdd7x7f9","r":true},
+{"v":"0.1.18","e":"^1.80.0","p":"linux-x64","h":"1xiqb2xpgyxf6xv008w1mvim2s0m6fd8vz5k9kgcklax0cxd4wxl","r":true},
 {"v":"0.1.17","e":"^1.80.0","p":"darwin-arm64","h":"1z1sxk3kxdgh8r02h6rh5d59mhvxg80pb4wd48g4a6ra17xzw7mi","r":true},
 {"v":"0.1.17","e":"^1.80.0","p":"darwin-x64","h":"0by03r4w5vvyqc1yk1yzhgzs61m7qakzavcc9q8ldcadsb7syz5q","r":true},
 {"v":"0.1.17","e":"^1.80.0","p":"linux-x64","h":"1721kavh01rm6vm1i45vh24a0nm62psnq48ljhs5gxgb6hyy3l7x","r":true},
@@ -3480,6 +3488,7 @@
 {"v":"0.0.1","e":"^1.45.0","h":"1gfvziai2f2aiwmam1l3s8xi1s7kw08c5k6280dmnprib1py7lbn"}
 ],
 "kirorlovskyi.pacific-ocean":[
+{"v":"1.5.0","e":"^1.68.0","h":"1cd0ffjmc6b20q7jjc1rr9dzv9disljgjpsyxhpmlqqir6qqr15y"},
 {"v":"1.3.0","e":"^1.68.0","h":"0wsd627ng3149d5cqg98hx7jw8b3k1b0jrzgfkx7myx47vsxryyz"},
 {"v":"1.2.1","e":"^1.68.0","h":"01sbhkwzvp8agli536yw7f1ryxcgcz2yjml1r6ffzby5qfrixj7n"},
 {"v":"1.2.0","e":"1.68.0","h":"0mzasar220ndvxm245fp3r26689pgrw6zw6k3q03jl9ml06phcwq"},
@@ -4830,6 +4839,7 @@
 {"v":"0.0.1","e":"^1.30.0","h":"0ql2q6zyl6rrfbvkijhqns40q0m3s4ms4ila5yavnnks7ssk9dsk"}
 ],
 "npv2k1.theme-dracula-gray":[
+{"v":"1.0.2","e":"^1.13.0","h":"0sl3xcnrvk0vdpcc55gj0x8wj5mgzhzznm141z84qb5mcj4ss2j2"},
 {"v":"1.0.1","e":"^1.13.0","h":"1cgk4g89lr6k4nn8pq0ch9xbw8rzbjfp5x3gxkrjqj73qbk6l2dy"},
 {"v":"0.0.3","e":"^1.13.0","h":"1ilxpsibhdfcdyij6hb8i0jqax9vxc3hl6095k4sv35fdkmlxknv"}
 ],
@@ -5309,6 +5319,9 @@
 {"v":"1.0.2","e":"^1.43.0","h":"0pzvgjv23g021a21x7hgpspqsqf4n44ri2mckspxwlqi1sjcrllg"},
 {"v":"1.0.1","e":"^1.43.0","h":"1zbpr0hb59488ra92fz1qcwyg56gcf3rjzlynmv9dj1qff7v3pz7"},
 {"v":"1.0.0","e":"^1.43.0","h":"1cjbaqgd4mv28dh0pz1jyzxdwsgrdhn6xi4wabyi86id0g4vmj9h"}
+],
+"qmitek.mytab":[
+{"v":"0.1.0","e":"^1.82.0","h":"0lyafpbiy6dcbbiplv59c7vvia7a2rfxs6x9qwx6j8di91qbpgaa"}
 ],
 "qrexxed.python-all-in-one":[
 {"v":"0.0.1","e":"^1.100.0","h":"05iygy0lqnsrnm3sl39pq029jv42wc1g1fylhh5amlhnvdpvkas2"}

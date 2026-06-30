@@ -429,6 +429,10 @@
 {"v":"0.1.0","e":"^1.65.0","h":"0wbyx93lqcbih0ws1a8pqpfd81gx20yzlm0d20zihlxqwvb9rw4g"}
 ],
 "anthropic.claude-code":[
+{"v":"2.1.196","e":"^1.94.0","p":"darwin-arm64","h":"1sbmc3qm8hcjxz76mnlkddxkigynpgc1jg1aiksqlf7mzblin9rm"},
+{"v":"2.1.196","e":"^1.94.0","p":"darwin-x64","h":"1j1rhzgjxp39xlg3hvakrrhnphh1fbv3z6q5sp6jm6qhpkvyidyd"},
+{"v":"2.1.196","e":"^1.94.0","p":"linux-arm64","h":"0wwabgladhs1k5hlpnnvzww2nbbig97nk5wz6bb4djyjbmxghs3s"},
+{"v":"2.1.196","e":"^1.94.0","p":"linux-x64","h":"0384c8m0i2sfymmhxvy93j780b498304ddhmxpg8d1khcgw2jny2"},
 {"v":"2.1.195","e":"^1.94.0","p":"darwin-arm64","h":"0v8fjsirfh9lrpjwy6khqznqsar36gisgl5aq6lf2aklbn50k45i"},
 {"v":"2.1.195","e":"^1.94.0","p":"darwin-x64","h":"0yz4f4zvnf3156p83a9x37qg3bajggrjbnydzb8fsvklzxwql12l"},
 {"v":"2.1.195","e":"^1.94.0","p":"linux-arm64","h":"0paaf45nw21zq16d57xjih6lba5jpns3lr8v6ikx457p6lbwz3g3"},
@@ -6995,6 +6999,7 @@
 {"v":"0.0.1","e":"^1.81.0","h":"1dahkfxhwqdxys0s7lyl9p8niagzr7svjl3rpklksznvhb0zdgb7"}
 ],
 "easytocloud.bedrock-claude-code":[
+{"v":"0.3.26","e":"^1.98.0","h":"0xxnb0xx6c47s5nd7x9cgn6d2hq8cq8wb60vm2w4zqzf9r35x879"},
 {"v":"0.3.25","e":"^1.98.0","h":"0zp40jlqbx4a7l992p8hm28f2g6ykhramvrgr5dc860awiyyrm15"},
 {"v":"0.3.24","e":"^1.98.0","h":"1rh4i91ysdi2jznkkfjvxp40y58vbvha5r6r7k3bnrr27d8c0ahb"},
 {"v":"0.3.23","e":"^1.98.0","h":"17vv4kx7v3aqv2255ypc10flh9q2iv6j9b143vrrys9x135q9ns3"},
@@ -7806,6 +7811,11 @@
 "fogio.inline-go-struct-tags-syntax-highlight":[
 {"v":"1.0.1","e":"^1.21.0","h":"08abc359rk1hz2c31sgc992xq9maglfvwwyf6xr5fc91rckqkwjl"},
 {"v":"1.0.0","e":"^1.21.0","h":"1gavrvl6klhifwx54rfhbkg65c7dwc7k9dddfy0avqzcs4y82nyh"}
+],
+"foreverskywalker.foreverskywalker-stellaris-cwtools":[
+{"v":"2.7.4","e":"^1.90.0","h":"1hw0fzhazbrr13syynhyah8rsmyqr3j0y8ia6qq5hyjb1s39cwyj"},
+{"v":"2.7.3","e":"^1.90.0","h":"1pmmgc7dqmr8n4swybc9d90nggii3wfdcraq9clfcqja00hb9v7i"},
+{"v":"2.7.2","e":"^1.90.0","h":"0w02s10i2dpgr5v1wfpy0lx86wjiizbff0zlbygclzxqzwm7ipr6"}
 ],
 "foshati.rnx-snippets":[
 {"v":"1.1.0","e":"^1.80.0","h":"1l4qzx6bgyz43i7z7gjc4dr3hc7p100s87vhn3sls1554ag8k0iw"},
@@ -11056,6 +11066,10 @@
 {"v":"0.1.0","e":"^1.80.0","h":"0mc6b9cp45hwcrh28b2qv6sjwisndm8rcw5pkr23qk5qgjackkca"}
 ],
 "ronidover.gnosis":[
+{"v":"0.0.47","e":"^1.85.0","h":"01nfn6q08xdg753i6vghk4b3d2d4qa58mxhia0vm4j61yrw23ggc","r":true},
+{"v":"0.0.45","e":"^1.85.0","h":"1wib9scgcs30qrzdgmrik6nyaidmn1xdzzp5267l8d9zw3vkfdiy","r":true},
+{"v":"0.0.43","e":"^1.85.0","h":"0nvb7820rjlvh1sih59nmlak84ybczy3nm0kxjsnay9ss9y0jhcn","r":true},
+{"v":"0.0.39","e":"^1.85.0","h":"1giqcz8gckzgv67hj06rsr2m8xlnmlq2h4q7hli2magay2z3rqkh","r":true},
 {"v":"0.0.37","e":"^1.85.0","h":"013j7j015aiidkwlnnav5004jym3r2n5mmk0bsy2pw38xmxq58b6","r":true},
 {"v":"0.0.35","e":"^1.85.0","h":"0k97rjfsrz6cvhzr07ys6wq9vxvvk0hp9b3vfnraqmvdnn5dhkdq","r":true},
 {"v":"0.0.33","e":"^1.85.0","h":"009djrkl6fjmqkd94ll1gk8825ai9az1qdwf5mdpmfciz9cb47jc","r":true},
@@ -11856,6 +11870,7 @@
 {"v":"1.0.0","e":"^1.74.0","h":"0wqs9968ki8icpz34p194wfjd4cxl6b4msic81snilm4wcjil07d"}
 ],
 "svenzhao.sven-devtools":[
+{"v":"0.1.9","e":"^1.90.0","h":"1w2m6gds5r5qicv4523clawgd1w2mbisnnprl3jd8lpiki9n8n96"},
 {"v":"0.1.8","e":"^1.90.0","h":"16mljm49jq0g7v48v8jpz9cmdd7s8bz9z4b1yp5dh2nc88v6pf4f"},
 {"v":"0.1.7","e":"^1.90.0","h":"1k1p2rs5g8bxi11hfqp03w7ydch2yr08sbyig5cmw8q6cy97b89b"},
 {"v":"0.1.6","e":"^1.90.0","h":"0fr82b7mavz9np4vbc85zzy2shzxw183g1lfihjsrd3cbbkmywdy"},
@@ -11917,6 +11932,13 @@
 {"v":"1.0.2","e":"^1.75.0","h":"17wmvxvwk2gs7rls6q0a949ls72zffnvr19xwphsdclm3rp8gbja"},
 {"v":"1.0.1","e":"^1.75.0","h":"1m2dd88bkh8s1plgi45lrjj3rix7wi929k8qi3x7ysa0irnhvc2r"},
 {"v":"1.0.0","e":"^1.75.0","h":"13qy6wkhn3h6sdxjbnn5izp975bhhywdzcx7vn61rabdavdw553z"}
+],
+"talaljaber.vibeguard-scanner":[
+{"v":"0.1.4","e":"^1.90.0","h":"07ydd2jrbqwk9r29whszpxn632rbx9dpy7iph128vpj24xzxlqr9"},
+{"v":"0.1.3","e":"^1.90.0","h":"07x2m9y3hh5409n3l3kjy41d1cjcc1x97pgsv6jbv6n65vvpxw6w"},
+{"v":"0.1.2","e":"^1.90.0","h":"0jfah8hxfimph7qpg4kglz5z9a0195pfj7y4xglm7znd7ha70f9j"},
+{"v":"0.1.1","e":"^1.90.0","h":"0dyw5yvx38v0dsnjap8p6lcpbcxi36qwa3q800g50ydimzvi6bxy"},
+{"v":"0.1.0","e":"^1.90.0","h":"18vjl125lfd39ahl83l3vk7s1ifsnwwab1dzc0bw2ziwmq593vjx"}
 ],
 "tanben.vsc-nr1-debugger-extpack":[
 {"v":"0.0.1","e":"^1.49.0","h":"1f2l5p64jn5rhrh61an692wz414jj40kbb2j86a9v83igm9wpzbf"}
