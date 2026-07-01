@@ -555,9 +555,9 @@ checksum = "d0a5c400df2834b80a4c3327b3aad3a4c4cd4de0629063962b03235697506a28"
 
 [[package]]
 name = "crown"
-version = "0.20.0"
+version = "0.24.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6f84312773ebee9aad212c693d53564d198531895e81419f48be1cd33c345357"
+checksum = "d571e0ed310092c92136d3eb0e045cad7040cbbc97cbd421a95d9b3371306569"
 dependencies = [
  "block-padding",
  "bytes",
