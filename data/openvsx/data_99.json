@@ -1,4 +1,5 @@
 {"abridge.file-explorer-tools":[
+{"v":"2.0.0","e":"^1.85.0","h":"1pkxqxm1inz7hi5jkm8zaqnqd6q6sr9k3rybvjzwnr1gnc639dlm"},
 {"v":"1.4.0","e":"^1.85.0","h":"02dgry046316p1sm7459vizn1jyynwiny6zs15zs6f2f8drjc2lq"},
 {"v":"1.3.2","e":"^1.85.0","h":"00p65rm5ypxd3fdbgfd44g8x6cfskjmz5ggq1g78azaj8cd6d7sh"},
 {"v":"1.3.1","e":"^1.85.0","h":"08isv5xs81cxdzdqv2r019xzcaqsh3wbpbbm623x3bsplxx9va6l"},
@@ -1061,6 +1062,7 @@
 {"v":"1.0.0","e":">=1.66.2","h":"1z85shjhx9hq7sxd10i7417b9wy5bk8r6vr5g917np44kksszzvs"}
 ],
 "patchloom.patchloom":[
+{"v":"0.0.8","e":"^1.90.0","h":"18kdcr22162rqz11krfdnpvrziapryawgqrscp3jb410c70jjind"},
 {"v":"0.0.7","e":"^1.90.0","h":"0fbk7xgfwwfp24p9jvvhqpxindc3jr10aancqyjnh1xpwb09jkvf"},
 {"v":"0.0.6","e":"^1.90.0","h":"187kv2p4nsmqcfgbqy0akbjyjaszbc3pdvs4rbqra3n34n8xvpqv"},
 {"v":"0.0.5","e":"^1.90.0","h":"050b74z7kqkm6k8n0sfan4pbjjhraxxz96576px4ps1zdx4wr9fs"},
@@ -1167,6 +1169,12 @@
 {"v":"1.110.1","e":"^1.110.0","h":"0v5c8302hlrvms6w9laa013lsd34wgiw5hr8mw7hih9538s6klxc"}
 ],
 "rust-lang.rust-analyzer":[
+{"v":"0.4.2957","e":"^1.93.0","h":"1i5s7xsylxajvlanspgk108izs04dm5gmr9aksxjrby8f292wjjd","r":true},
+{"v":"0.4.2957","e":"^1.93.0","p":"darwin-arm64","h":"1gdf62wx3xllab9mcgnd6bmbszj8ycq64qmz22ydn5zzvaay001p","r":true},
+{"v":"0.4.2957","e":"^1.93.0","p":"darwin-x64","h":"0dvwqc0gwd8qlph1g0z2qzycr6axcvmjbls1pg0jdpdpjhsgy9vl","r":true},
+{"v":"0.4.2957","e":"^1.93.0","p":"linux-arm64","h":"1rl4x4qac3pwqdw1q6fizim8zwyfcxcfny4y8vp7md7xb0yckj3w","r":true},
+{"v":"0.4.2957","e":"^1.93.0","p":"linux-armhf","h":"1w5wc1i53mv7ab8rllqyz5xl40izzrg52kh3150xiz1ghmkw5nyn","r":true},
+{"v":"0.4.2957","e":"^1.93.0","p":"linux-x64","h":"1pj9cgrfx4m7f6cnn2pfjf8g48rxwzjrcglg50bba6nx5w2w5vs0","r":true},
 {"v":"0.4.2956","e":"^1.93.0","h":"0z4mr5b2ym3c1a1c3g0vyfaa6nd0np90wy08iag45y8y40w7qrvs","r":true},
 {"v":"0.4.2956","e":"^1.93.0","p":"darwin-arm64","h":"149zkpkggbw3l5a13ha7x8lpamdc3lj5inavyzw2svl2ljcl2lb4","r":true},
 {"v":"0.4.2956","e":"^1.93.0","p":"darwin-x64","h":"0454jd8vhvvnncm87y1937d5cjzrsnk34wafkjhzr9b6r6yxs14z","r":true},
