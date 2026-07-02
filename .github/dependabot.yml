@@ -12,16 +12,6 @@ updates:
     commit-message:
       prefix: "ci"
 
-  - package-ecosystem: "cargo"
-    directory: "/"
-    schedule:
-      interval: "monthly"
-
-  - package-ecosystem: "cargo"
-    directory: "/derive"
-    schedule:
-      interval: "monthly"
-
   - package-ecosystem: "nix"
     directory: "/"
     schedule:
