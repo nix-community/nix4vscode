@@ -1426,6 +1426,7 @@
 {"v":"0.4.0","e":"^1.74.0","h":"1x79qqb9ka2vxvcvq2baswwkhwd3mm4lgbxqsbn9l0w7i252sfki"}
 ],
 "chriswiegman.cw-changie":[
+{"v":"0.4.3","e":"^1.125.0","h":"0bd4109xmics6qq2n36z415v7m2crksm3667xmlqrmczbmk198az"},
 {"v":"0.4.2","e":"^1.120.0","h":"0y5fmnvpcswbv6zr3hij4642zw81mba3115f2433p7s9bl1vc8j0"},
 {"v":"0.4.1","e":"^1.120.0","h":"1176pwg3gyhwhmgxd1ga6s9pxcpvdk38454yv2m7zvs3pnzwazpq"},
 {"v":"0.4.0","e":"^1.118.0","h":"1ga6mn5hynamivh36clzivfckxdd7dvl35c4dpc9ajcffg3bax9b"},
@@ -3414,6 +3415,10 @@
 {"v":"0.2.3","e":"^1.116.0","h":"1n79cm4528dc2x77kmd04jxk764d8ll02j9i536m0634rn6m1fg0"}
 ],
 "ignite-ember.ember-code-vscode":[
+{"v":"0.8.3","e":"^1.90.0","h":"0dl721wzza18zr5m4hwncfh2vdgnkrs4bwx5zrmkhl9m58c6apf6"},
+{"v":"0.8.2","e":"^1.90.0","h":"11mk2hiiya0r91kjn9szwhli2hkazgvnfqb8mmysp6bif8vzdh79"},
+{"v":"0.8.1","e":"^1.90.0","h":"0r7l6a3y7a1mzlzljp3x118znmb7v0172jfsixy0s2bm21h3q79c"},
+{"v":"0.8.0","e":"^1.90.0","h":"09hyci8nnpqsd9sm6ppjr13shlia178mvxxizyl3jjnni1a2n2lv"},
 {"v":"0.7.5","e":"^1.90.0","h":"1fz5c8zbxn8mvqgb4dlzmpzlm7ywyw854r0sh1mdpzv6fnrl7vxr"},
 {"v":"0.7.4","e":"^1.90.0","h":"000nsmkzfraqfgwgyanvhh1x0gzkqqqgm8f7d7264crjfc1a0nrf"},
 {"v":"0.7.3","e":"^1.90.0","h":"1pl7bi7nihsrznjsljd81isc74pq6p9fw9m6zl6g6yk7n8ks5hx0"},
@@ -3648,6 +3653,7 @@
 {"v":"1.0.0","e":"^1.108.0","h":"0hmc61spzwnpr2iny8pf1a0wah9nrsnjgz717a1xjz7j2l8nmrdl"}
 ],
 "jeroen-meijer.pubspec-assist":[
+{"v":"2.4.0","e":"^1.90.0","h":"1sdh2d6nhwjgag8p5h54aa5kfh6c5210kq6yh7mp8614gqgybs08"},
 {"v":"2.3.2","e":"^1.61.0","h":"1zdv8i6i4hka536i52qbqpmghs6jyn22vgzxp7jfnvxvx9nirjgq"},
 {"v":"2.3.0","e":"^1.49.0","h":"1s99fph2z763ha6ph7bhvn81sdx0vc48hcjcv6p7vqb3rmazilic"},
 {"v":"2.2.1","e":"^1.49.0","h":"0hfz31fhh9vh66ih77yhr67006w5n1yj1igjlmdzza4hisj6z7p7"},
@@ -4819,6 +4825,9 @@
 {"v":"0.0.3","e":"^1.73.0","h":"1l7717m96f6ypmk81rcx8lk4aahxc9vm3ncx0m7pdly46pci3n5y"},
 {"v":"0.0.2","e":"^1.73.0","h":"1mskjlkv9yvinlhl0q88rjyw2a4pzzk1671ri0qx09bsi4v288c3"},
 {"v":"0.0.1","e":"^1.73.0","h":"078h7bnp2w7s2rka2k4cilwnc6a0rgga82ki74vbr0pbbykq98c0"}
+],
+"mateogiraz.git-risk-analyzer":[
+{"v":"0.1.0","e":"^1.100.0","h":"0iwb1drwwv5ccz219whpagfh2vwavdp50sqldfjpvjf9hpcnn3g9"}
 ],
 "mathcale.google-that-for-me":[
 {"v":"0.0.1","e":"^1.38.0","h":"0d60838ah5lw6yvry015s04dz45yyxvvr836dvnr0h3s7gvmx59c"}
@@ -7020,6 +7029,14 @@
 {"v":"1.0.0","e":"^1.89.0","h":"1b4jl3hck77j41f8lfgbdrglwg64112788awkfviac5ha6rbiz0i"}
 ],
 "salesforce.salesforcedx-einstein-gpt":[
+{"v":"4.13.0","e":"^1.101.0","p":"darwin-arm64","h":"15lsp4x59413bj9zxynj18l90sv8w5vfam7ifs4j5wjfy5bwfqsw"},
+{"v":"4.13.0","e":"^1.101.0","p":"darwin-x64","h":"18xg1kdvdx07a9k5bslqyaqfigm96zgvzr7l7y525ygx1f0cx4dr"},
+{"v":"4.13.0","e":"^1.101.0","p":"linux-arm64","h":"17d70g9dvq9cdvm080b4fjfwpb89zmgwhxhb9gxgjplvm498xjj8"},
+{"v":"4.13.0","e":"^1.101.0","p":"linux-x64","h":"07jdfjs4wvm87qnv739h339nnb8fjnwzi0dvcaj16mggziv8q70b"},
+{"v":"4.12.1","e":"^1.101.0","p":"darwin-arm64","h":"11dik24w4vrkd6iwc6p8l35h7bd0d49qhvk24437r9wzwpkfvdhq","r":true},
+{"v":"4.12.1","e":"^1.101.0","p":"darwin-x64","h":"1m7w4pv528337jnk2f6zfx6dar5l9lbgszr2h9d3lrpdkn75rzzl","r":true},
+{"v":"4.12.1","e":"^1.101.0","p":"linux-arm64","h":"1pacvnfzjxci1ilagxhbnj0iyri1h3231cklj66xvkh5mnv1p0bj","r":true},
+{"v":"4.12.1","e":"^1.101.0","p":"linux-x64","h":"0qz33yv5hwxa218vydcbsmq2ayipm9kgmv8sclx9r80yvswmwkw1","r":true},
 {"v":"4.12.0","e":"^1.101.0","p":"darwin-arm64","h":"09zy55didkmrca4pn4117a0dydni4cq274rs2jm0jrc2wln6z8ai","r":true},
 {"v":"4.12.0","e":"^1.101.0","p":"darwin-x64","h":"0sr9q3dizkjakzgmrfbdxx5drpndyfdz91nrcs9dfhgkip47zdlk","r":true},
 {"v":"4.12.0","e":"^1.101.0","p":"linux-arm64","h":"1givi11nfjkazgzs2xy8q47rdz4gcf6zqp2csz30wi0pqq7agkgy","r":true},
@@ -7627,6 +7644,7 @@
 {"v":"0.9.4","e":"^1.70.0","h":"18ph2lpvsjqh8l5ckcs4mgs93ldwfkdc39nrqm6ix8giyzrg2d6n"}
 ],
 "sapse.xs-migration-bas-extn":[
+{"v":"3.0.5","e":"^1.102.0","h":"0m42i3nd6r93ngmh08ym211x2f97ki10gl3zim3kznn8bqvw33b2"},
 {"v":"3.0.1","e":"^1.102.0","h":"0ykw2ahxi43wy9v4wkg4l742vg8p4jdijw95x8xli0ax9zxkd3j0"},
 {"v":"3.0.0","e":"^1.102.0","h":"0dz6rhd1f47zk0xd9q8pmjiyh8j2c7kp9hdicx8ikwz485y5kmp5"}
 ],
