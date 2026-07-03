@@ -2093,6 +2093,9 @@
 {"v":"0.0.2","e":"^1.108.0","h":"00rvbxv0zcr1xzs5ywsbcq5lsf7nyx7vmz9d8cv5mbz4j87qg3s2"},
 {"v":"0.0.1","e":"^1.108.0","h":"12i9vfz57p1yxjafpi32dxc9hfi25knm8qigfpkldvxssfacqrh7"}
 ],
+"bygao.graphloupe":[
+{"v":"0.3.0","e":"^1.90.0","h":"1964lbb9xdqm2a7bvgikmmx50qxb6nzxr67sb0c8jmg0b2bp3my8"}
+],
 "byroger.foam-central":[
 {"v":"0.3.0","e":"^1.90.0","h":"0xh081v8bpsvw71pjwdiwncnws57s9sa2hplg4wxp2vzfi63g33h"},
 {"v":"0.2.0","e":"^1.90.0","h":"0jn2l2xq1q4ixfsg78lkplss0qc86sa5cmmpa05fmv6jnrx8nwwb"},
@@ -3702,6 +3705,10 @@
 {"v":"2.0.0","e":"^1.85.0","h":"1i0k69yqwl9j75m8l82mrbymlrvakz9bvcd3srbvg2hrqqvyc3mk"},
 {"v":"1.1.0","e":"^1.85.0","h":"0d3w42jpwi66pg06v1c4zlmash29ky9cnj5qycn3pvvin1zlc49j"}
 ],
+"forward.forward-vscode":[
+{"v":"0.1.1","e":"^1.85.0","h":"0xqrsdwizadvymrh9p2hl42vxabzpsk91h288iwzgcy6s5g1a1l2"},
+{"v":"0.1.0","e":"^1.85.0","h":"0bhpwc3g0vhgriga7pyc8f0yc3msdj3fba1vwf3y6dfp1mkrq1y1"}
+],
 "franneck94.vscode-python-dev-extension-pack":[
 {"v":"2.1.0","e":"^1.81.0","h":"08zi95j4nb7202iv250am2v2w0vjx867fksvqv574497ba5mz564"},
 {"v":"2.0.0","e":"^1.81.0","h":"0icws51p3kzvi0wd95db9infvjfdgklrn1nyv9qw6zr6scdmzwdm"},
@@ -4917,6 +4924,12 @@
 {"v":"0.0.2","e":"^1.92.0","h":"1f1p8xq6haps9lvh24d1wlaaxa9zy4wms16hjcxvmvdi9xrkv9hm"},
 {"v":"0.0.1","e":"^1.92.0","h":"03y90xdz99sd665fkrzg2q0xkxar7yynr4cdlld45wrhcgyddlkg"}
 ],
+"jolars.fatou":[
+{"v":"0.4.0","e":"^1.91.0","p":"darwin-arm64","h":"1yy27r9q39m29szasz0s2s4l45gprmxa9xlw7bdm145xakhkf387"},
+{"v":"0.4.0","e":"^1.91.0","p":"darwin-x64","h":"01a91q3ynv2apgzysg2w4y9iczjrmfqcnymjdz9krfkhgra7zbxb"},
+{"v":"0.4.0","e":"^1.91.0","p":"linux-arm64","h":"1lvrrv6k9b0z8gsbvbpjk2gw46mhpjpfy97a1hywjaiy7xmfa361"},
+{"v":"0.4.0","e":"^1.91.0","p":"linux-x64","h":"1ykhq7k02x6iv7jsmsfczqvqlvgqfbnlqqhpgc4xnx96l81mr1kh"}
+],
 "jomblebee.jomblebee-csharp-solution-explorer":[
 {"v":"0.9.0","e":"^1.85.0","h":"0y0rrx7jk1wj2c27i7qrhvaq0sd4f0v40h8rd4j0c7cmvrb872mj"},
 {"v":"0.8.0","e":"^1.85.0","h":"1n4c2pfgvn3xcmn33v45cxxrgm1y826adcw1lqamyi0m1lplm0ll"},
@@ -5031,6 +5044,7 @@
 {"v":"0.0.7","e":"^1.52.0","h":"0sci6fx6g3q41sj2zrldw8bcxl6mknapclq37nwpqawdrr7ixif9"}
 ],
 "khrotu.arc-code":[
+{"v":"0.4.11","e":"^1.95.0","h":"036sdai9y5x7c9bldddw8jd7df0xvilhq5ms7y97s6v4f2m9wxid"},
 {"v":"0.4.10","e":"^1.95.0","h":"0m1pi43i1m6ni2ah8prj69mks3yb5bykrj6rpz6fy99wrrxi5fx4"},
 {"v":"0.4.9","e":"^1.95.0","h":"05qzrkhvzk6m8fkwls0mqlh4z4fdzna2qd8sq1xb5zj9rmwwcfsv"},
 {"v":"0.4.8","e":"^1.95.0","h":"0cif4kgnh7sypxa0xy5wyi6yrd5k8d7dxgry8z5cizyyfsfhd2fl"},
@@ -6203,6 +6217,9 @@
 {"v":"1.0.2","e":"^1.0.0","h":"01s861s0zg8dss84xzgh4s0646glmxlj60r1mbhx9192z7rjdyxq"}
 ],
 "nimblesite.sharplsp":[
+{"v":"0.11.0","e":"^1.99.0","p":"darwin-arm64","h":"0jwzp7k5n68cxi2aqvzdrsb7vns16sqc3dyw28c8pk8dmjmsrnha"},
+{"v":"0.11.0","e":"^1.99.0","p":"linux-arm64","h":"0jwayfnnysm8bsx49lrzyfdkwyc9474ar6jalb3l64asz6n04mc2"},
+{"v":"0.11.0","e":"^1.99.0","p":"linux-x64","h":"036njzcf4qm4ymb2s619gmvb6fa8pz180klli1r3jihqb9fjsgsh"},
 {"v":"0.10.2","e":"^1.99.0","p":"darwin-arm64","h":"0zi5wp5q5yy92kvb4279s8n4ns4zzqakd216sy1j602syw66fndl"},
 {"v":"0.10.2","e":"^1.99.0","p":"linux-arm64","h":"0w5ig6ss3zhb6cfv3mchjv43hhgqbaa4fcfblp0zblm34x4mf42r"},
 {"v":"0.10.2","e":"^1.99.0","p":"linux-x64","h":"0lsb48pic569df8qy1c9icy1qa4bm1vkfmw0b31sp11fxj8dnhy1"},
@@ -8467,6 +8484,10 @@
 {"v":"0.0.2","e":"^1.89.0","h":"12w0zhj28rvdjfmc4js77xmg18dxw05xw4qvprd20qwakx6kxk9n"},
 {"v":"0.0.1","e":"^1.89.0","h":"1iaq6nmks0dh48pnhc5n5b24ndf6845ds4mqy6zii47i29gg6nwh"}
 ],
+"testmasterhubai.airaiinteractionrecorder":[
+{"v":"0.1.1","e":"^1.90.0","h":"19g0jabiqvbhl176vqbrr475ngzzx6iy3c8292xvq931yf0dibnp"},
+{"v":"0.1.0","e":"^1.90.0","h":"02mk8izxk64d73ns4zfppzcp5vprz842ib22mnwr3amzbb5l9ibj"}
+],
 "tfdocs.tfdocs-code":[
 {"v":"1.3.1","e":"^1.98.0","h":"12dl0ll475wapsi020l9q9x501jih9dm6nd7rbvagbp2q1199b2j"},
 {"v":"1.3.0","e":"^1.98.0","h":"0qx80lrfb9bq0m03s8zblw476vryi23vkr290hr1bjxm73pcvqyf"},
@@ -9433,6 +9454,7 @@
 {"v":"0.1.1","e":"^1.85.0","p":"linux-x64","h":"0856l40bhmqgh2iassjkpcdmsa3widwcm6x7y64r135626g368zf"}
 ],
 "zcy-zero-moss-team.zero-moss-extension":[
+{"v":"0.1.6","e":"^1.99.0","h":"0bwg5530wcilhz637z2p9x9nmp5ab6150djnl8c6zv8hlz7nva7s"},
 {"v":"0.1.4","e":"^1.99.0","h":"1cgz02qi16l5j31nrnncz1jcr2axp6vfpinxhi4csk0k1s6vsr2l"},
 {"v":"0.0.6","e":"^1.99.0","h":"0n0cmvfwpni7xdmabk03ziiy4g7bdwl7lcqs4f0f4swsw0505zzx"},
 {"v":"0.0.5","e":"^1.99.0","h":"1753kapmzvr36h1yv6j5m6317vc773ghs5i0pnlqwpx31bbb2yd7"},

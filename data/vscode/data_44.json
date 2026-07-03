@@ -291,6 +291,7 @@
 {"v":"0.0.1","e":"^1.64.0","h":"10yfhpcr9s4rja99kkwhhdmr8ibi0nhipsgawx6wynaxyssa0cs7"}
 ],
 "aikidosecurity.aikido":[
+{"v":"1.0.107","e":"^1.83.0","h":"11rvwliraymq6qqyrbdjr0yx9q48f3lqiajmdngmaj7bkgk08ml8"},
 {"v":"1.0.106","e":"^1.83.0","h":"162g24m8r2w83v2pv6h4mlkj4zivf39ibx3vjgcj07v5p2rjp4x4"},
 {"v":"1.0.105","e":"^1.83.0","h":"08hf5cy5dyjmkd108ylw3c6qslfg4wf8la27wjvmsc26mba7agn8"},
 {"v":"1.0.104","e":"^1.83.0","h":"0phi3164bzn7wkcbqbmdi6bf5gm8sf7gh86p2ay6sbqjbqxxdm6s"},
@@ -834,6 +835,7 @@
 {"v":"0.0.1","e":"^1.66.0","h":"1zl50wzq86b2ncmd7wjxl75p8fmlhbf23yh9a8h4zr436g3qzlq9"}
 ],
 "anghelll.bdd-pilot":[
+{"v":"1.3.0","e":"^1.90.0","h":"1ddspp86arg5fw1jl74a4kzrsy0vp5bcylwwcki0khah90dxd5dy"},
 {"v":"1.2.8","e":"^1.90.0","h":"065diw9nc6a4kfwv6hai2ksqxvkgrl8nh1964089l2a6b39xgd1x"},
 {"v":"1.2.7","e":"^1.90.0","h":"0fzw6dd2n987v8zdkg24600wcc0p5dbsbg9xnnx9ng9kd21bgn17"},
 {"v":"1.2.6","e":"^1.90.0","h":"0jda8cqlw2vr1g6m4q5k4dklr6v8jp8cf27mlbk736cqmwh9iyq3"},
@@ -2388,6 +2390,7 @@
 {"v":"0.0.1","e":"^1.86.0","h":"01i2l7ma0cy2fv3h0yw6ris2sl2qs5di9jy57yzrfv11as9nq1mb"}
 ],
 "cyrus-build.cyrus-missions":[
+{"v":"1.6.0","e":"^1.84.0","h":"0w5v1akq29zn1lm6l1jva779x0wl2ycbbhaybc79krgmd4dz27bj"},
 {"v":"1.5.2","e":"^1.84.0","h":"10cdx05ivldrs3gxx8qajz6jl1dcn4n013yfhxwvlfl12cxx2skw"},
 {"v":"1.5.1","e":"^1.84.0","h":"0qpkjqdkr4xdzqfr0qy37n52naaf0bha1mxvfpf7hx3vvza5czh6"},
 {"v":"1.5.0","e":"^1.84.0","h":"1b0igzhyi047ymrd6hc4qrkng9l6sixg1d3rjz5bcqgj0i91ipbb"},
@@ -2478,6 +2481,9 @@
 ],
 "dash.json-editor-dash":[
 {"v":"0.1.1","e":"^1.74.0","h":"1pxnwckj5326al0djbck8mbfy9r79dqfc3n6xcr1xd5jk51d3lp1"}
+],
+"data-generador.data-generator":[
+{"v":"1.0.0","e":"^1.85.0","h":"0xg4nr8f91yy7nzd2cvcw7s247acg3qld3rbxc3g4bip2amdflyw"}
 ],
 "davelopez.galaxy-workflows":[
 {"v":"0.5.0","e":"^1.81.0","h":"1gbnny7cnccvfkkvdyg84qnw1jlkl26n2gkfr9jax9qih7p1mdna"},
@@ -6980,6 +6986,10 @@
 {"v":"0.0.1","e":"^1.62.0","h":"1l0wddnxfz46rwmflc9bmi375izm8dxdb313qw1mp961aldzdsr1"}
 ],
 "pulseengine.spar-aadl":[
+{"v":"0.23.0","e":"^1.85.0","p":"darwin-arm64","h":"108laa490xf1cianxvp9x6livjl0rbs1mp5mmm3ka51jzh1ir9vd"},
+{"v":"0.23.0","e":"^1.85.0","p":"darwin-x64","h":"10pz9ak5j5vmwnvfjn5lmlqphl5sq4vcx7lcjn0frz4jvsf9ykr7"},
+{"v":"0.23.0","e":"^1.85.0","p":"linux-arm64","h":"1qaxbjl7cdm4sq780l9fg4l7sqdnrw0vzzch1i3w1q6aisk51w2h"},
+{"v":"0.23.0","e":"^1.85.0","p":"linux-x64","h":"0ismxzps9nlj1mlp50gy8xgmy0hnjacq31qgsg92hl7b18h4zad5"},
 {"v":"0.22.0","e":"^1.85.0","p":"darwin-arm64","h":"0vyw5xkmlxp1gg8x5rl33gizzi0cfvkb6l753yp0vsjsa16jq1q3"},
 {"v":"0.22.0","e":"^1.85.0","p":"darwin-x64","h":"1dl20c46jhjbjiff5607kph0a8ypf5fxjh8r1g3xlkp2fwb17wwk"},
 {"v":"0.22.0","e":"^1.85.0","p":"linux-arm64","h":"0j68cq22cnr8rh77b1k7jxdd4rbfhlyp5065jlrbw8fqgwx4yc1w"},
@@ -7470,6 +7480,9 @@
 {"v":"2.0.0","e":"^1.90.0","h":"1d2ad68n8fm45d3jznmghzal5a4m6vikwk6pls5kxmlkyir0xvkd"}
 ],
 "rowla.copilot-auto-continue":[
+{"v":"3.7.0","e":"^1.96.0","h":"1wy75h8vbnb2mlx5nr0ykafsssxqqbczagxg5vkw1db2p90grm2r"},
+{"v":"3.6.4","e":"^1.96.0","h":"06y18cfk1jy7ys5a6r09i0394gq7ygclblkdvsmj9zsc2zwsivki"},
+{"v":"3.6.3","e":"^1.96.0","h":"19rchvnzsn6hnpcw88gx2zasy66jj8j23mfsf3wghyzcnfg6167b"},
 {"v":"3.6.2","e":"^1.96.0","h":"1681aj85b0crv6ndw0i4j65g9xj958r33vf6wyhjv346gm0d6x0a"},
 {"v":"3.6.1","e":"^1.96.0","h":"085br9z9yn92cpjljxjh7mxml14w63w3n958hxnxr9jxd15lb0lm"},
 {"v":"3.6.0","e":"^1.96.0","h":"1d5n8mmjajxmdmksbkgld40i5d2q5dmlgvfax9bmhb9i4knm43ma"},
@@ -7543,6 +7556,7 @@
 {"v":"0.0.1","e":"^1.107.1","h":"05irnwrwygzq8lxfj1276m7sfx6fs4j1zqzdgw58kddqrsgn9dqd"}
 ],
 "sagez.ai-sidebar-terminal":[
+{"v":"3.3.1","e":"^1.106.0","h":"0hcfwvly9rmqn9ywskra0fz6w0jpajbh10pl7ydh7276lbz6a31l"},
 {"v":"3.3.0","e":"^1.106.0","h":"04hjafyzgf4mgnj584xxndgfvl43p6d21zvbdvirl4avjxdjvg53"},
 {"v":"3.2.0","e":"^1.106.0","h":"065hs2csphkpxkgfrgfk43zjsym4cyawp62pk4iic8l13xqjs603"},
 {"v":"3.1.0","e":"^1.106.0","h":"1gkyb8j8a4diphn397imb3y98b1s653zcid67gcyr9ivrdhx2spb"},
@@ -8542,6 +8556,9 @@
 {"v":"0.0.1","e":"^1.89.0","h":"1h65lk9lzxnfx6zx1mzpzjbmlgp2rkghlmdw2crg02al94myz297"}
 ],
 "tigerdev1991.github-ssh-profile-switcher":[
+{"v":"0.0.23","e":"^1.92.0","h":"02sn41phnmv64mq8myq85z2745sz9k7kzi02kdckyjj5avi9gbxz"},
+{"v":"0.0.22","e":"^1.92.0","h":"13467hnhfnri4rx3a0cync91vwa48rzrqmaqkd1zf7h0jxhgchz7"},
+{"v":"0.0.21","e":"^1.92.0","h":"1232iml4zv80vzkvd53maw644nn3nlv0nwlyyqd1l7z5n78qnv2h"},
 {"v":"0.0.20","e":"^1.92.0","h":"1f2kpmaf5z2q2ygmaili9v2vg82rhikmpdrpglmzj455qxznk10f"},
 {"v":"0.0.19","e":"^1.92.0","h":"0hfk2jnml584ps2l6fcp5kyv9vz3s3zwbbd48i84gz0w1amlvra2"},
 {"v":"0.0.18","e":"^1.92.0","h":"1clasv6c99493fd1f3rkczs8nm4w2vyzdgx9y3rdgmywhbaz9xmc"},

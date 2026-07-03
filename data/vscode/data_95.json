@@ -907,6 +907,7 @@
 {"v":"0.0.10","e":"^1.84.2","h":"1xnl62axw5qrcr7y30961a8bkxdl1g424fzgih0jdmv7v1b4cnv6"}
 ],
 "architrathod.fairlint-dl":[
+{"v":"1.0.3","e":"^1.78.0","h":"01cg75ky5x11502c4zigf60dlh4ciiqnsi1rxbg15cb21mcz4ygz"},
 {"v":"1.0.1","e":"^1.78.0","h":"110r1xn6910shhjfxwvjn4glxlrhp0av7f2i74rdqx9lh5hhx00l"},
 {"v":"1.0.0","e":"^1.78.0","h":"1yzyy7lw9a545akrxljxnxn29hp8xpmmn5r81d635gzzg0ip6v6s"}
 ],
@@ -2377,6 +2378,9 @@
 {"v":"0.0.1","e":"^1.96.0","h":"0gla5cipc8ljg3s6awlrm8az3c9yn5n01mvycgval0i8arl5n5v3"}
 ],
 "driftsys.markspec-ide":[
+{"v":"0.10.1","e":"^1.101.0","p":"darwin-arm64","h":"05yqhdp57s0w1djv3jf5jdrjqlk850m9xkpc5b9bksbnwj7x25y1"},
+{"v":"0.10.1","e":"^1.101.0","p":"darwin-x64","h":"14kwc15yn38mavnf5jshhiglk5yfzpad9razisa8p523gbp5jgyh"},
+{"v":"0.10.1","e":"^1.101.0","p":"linux-x64","h":"1v1avlsrvcqpr3dpc01w0p470fjfsx3ygkjgdy77y8rqqjjw8dq2"},
 {"v":"0.8.0","e":"^1.101.0","p":"darwin-arm64","h":"0j0i4pwfq9adcsqa2lnl3n3dr97157221496wy1ky0hykds825qs"},
 {"v":"0.8.0","e":"^1.101.0","p":"darwin-x64","h":"0xvqkzvclhjq09xxs60501b2z64a8j8vyx6gq33s4qs0x43yvvw0"},
 {"v":"0.8.0","e":"^1.101.0","p":"linux-x64","h":"0mdvmad6jhk0px3fznqm8qpbdhp1nigci4d4zgr7nk43i3z6l6lm"},
@@ -2798,6 +2802,7 @@
 {"v":"0.0.3","e":"^1.15.0","h":"0d3s0rw3z4c4ryb7345fml4wf0xlhc87pp0mplaqhn56r5xpdac8"}
 ],
 "fchasen.phabricator-review-vscode":[
+{"v":"0.0.9","e":"^1.90.0","h":"02pigrwv6nzcl34hb9lcaj5bih18i90hp3v4g00fj6knkjipx9q5"},
 {"v":"0.0.8","e":"^1.90.0","h":"0v6lnaqydb27zgiwa3ac89rvi3ykv03k0bflh8xvzmm54f96ljk2"},
 {"v":"0.0.7","e":"^1.90.0","h":"079192mhxinfc5w678vli43j0nl91vjxkmz5iybqmbjppvhpnhrc"},
 {"v":"0.0.6","e":"^1.90.0","h":"1rj7jwpiwp2bsrvvddw3ba249d36080bx03qrxqd23sn35ajikrf"},
@@ -4926,6 +4931,11 @@
 {"v":"0.0.3","e":"^1.106.1","h":"0s1grgx2hqy8wm5rikcgxn0p41yvbwrb3jqhv66iy6kwjxwnwc3p"}
 ],
 "malloydata.malloy-vscode":[
+{"v":"0.3.1783014818","e":"^1.82.0","p":"darwin-arm64","h":"1i9w9wyggxvj0c1z2d5za5hligrjvkfjklkhnarw67gnz0gldwc0","r":true},
+{"v":"0.3.1783014818","e":"^1.82.0","p":"darwin-x64","h":"1b3kwm6p0jrsh07fz4i0zbldcg5x75ngmagdc7kd7v8z75p50zfi","r":true},
+{"v":"0.3.1783014818","e":"^1.82.0","p":"linux-arm64","h":"1acfr019yp7jcx77d2sgndn5ah2v5j83g9l1vd5760q16d5qhqiq","r":true},
+{"v":"0.3.1783014818","e":"^1.82.0","p":"linux-armhf","h":"0rj9n6zzvn99viblcrimyklhwmhfylcd963yzmlifxzn7ncmzjbz","r":true},
+{"v":"0.3.1783014818","e":"^1.82.0","p":"linux-x64","h":"0wb6gdwl16f9apxys9nly9hw2xrw7kqrflbhqzxbrbjqdsxbgn4q","r":true},
 {"v":"0.3.1782518932","e":"^1.82.0","p":"darwin-arm64","h":"1yla5v0almsdj1mzzgnrwr12jzk54qk1j6kpw79v3iazflnjjj15","r":true},
 {"v":"0.3.1782518932","e":"^1.82.0","p":"darwin-x64","h":"1xw2m17czksb2p13j3iph7jy6nc4rygfcd312f1sl7jmd37cfbbv","r":true},
 {"v":"0.3.1782518932","e":"^1.82.0","p":"linux-arm64","h":"1pldfzlff84g4bh1diws04v5ay533njyi2yaxkc3y3ar5nz8w0ay","r":true},
@@ -8966,6 +8976,11 @@
 {"v":"0.3.1659990587","e":"^1.63.0","p":"linux-armhf","h":"1gs01adgqnk0j6jm0xh84asinnapdxcnmr1kmxflkknwm8z7gl6h","r":true},
 {"v":"0.3.1659990587","e":"^1.63.0","p":"linux-x64","h":"0gy0bj2nbdc6gbgnly75gb62b8sn7zw4f6lc9kil2iardb3pghc7","r":true},
 {"v":"0.3.1659990587","e":"^1.63.0","p":"linux-arm64","h":"1rlgsjf1gjmqgxn2l1csgm6dxvv80kmx9a9h03j7i8s3a5ryy5fr","r":true},
+{"v":"0.2.1783014968","e":"^1.82.0","p":"darwin-arm64","h":"0d1xg4sz018f3yzkxs1hcjqhmk16l0arhnpvrf1y9z23vz8y341p"},
+{"v":"0.2.1783014968","e":"^1.82.0","p":"darwin-x64","h":"1niy4q55v40637n3lhwmixilqz37mzjws34m22n0ay1bfqdmf4cq"},
+{"v":"0.2.1783014968","e":"^1.82.0","p":"linux-arm64","h":"0yib0859rz9hdch247p8xj53wd7mis338g4ifxvsx4pi6z6ihd4r"},
+{"v":"0.2.1783014968","e":"^1.82.0","p":"linux-armhf","h":"1zh9jm0f7sw9np9av963y388gz72kf9fz0p6qj423ks9xv4l3k73"},
+{"v":"0.2.1783014968","e":"^1.82.0","p":"linux-x64","h":"0n277axgx95i2vjiknzvhm9dpxlbydi60hb3rv787l6nm1rhfc3g"},
 {"v":"0.2.1781326405","e":"^1.82.0","p":"darwin-arm64","h":"18g38hgmxh66aslrdfshi54gnnxzd9y1xnr9c85m0lckcpp76r8f"},
 {"v":"0.2.1781326405","e":"^1.82.0","p":"darwin-x64","h":"0aa10si60pg071r4a4ah14qavk98ggi6qjq4l61h47vh8wlc9i60"},
 {"v":"0.2.1781326405","e":"^1.82.0","p":"linux-arm64","h":"12da391553y8p8s9x98r1mapgn60nyl82q0vsb8yadr2cg67afz4"},
