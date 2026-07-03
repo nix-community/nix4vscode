@@ -393,6 +393,10 @@
 {"v":"2.1.2","e":"^1.73.0","h":"15db4rsdqb3yr01wy51daahv8gnn4ailhk21dwkz4gn39w1sipzz"}
 ],
 "codescene.codescene-codehealth-mcp":[
+{"v":"1.3.7","e":"^1.96.0","p":"darwin-arm64","h":"0hlfdjf4b82lqva4hrbhhangvzsrqvzqpbbhcfilcibmxv7qcv9i"},
+{"v":"1.3.7","e":"^1.96.0","p":"darwin-x64","h":"1i50zzygp9kqzjalbdwxd8zaqjfr2smxscxwcm2sd4sv1z076b96"},
+{"v":"1.3.7","e":"^1.96.0","p":"linux-arm64","h":"1cim7bhvq6003rgfskbqd53wk3vzpyhbv7sxs0zdj3cfq03cnaj5"},
+{"v":"1.3.7","e":"^1.96.0","p":"linux-x64","h":"07nhvyjj5pa17lpricdxs5r36l4mk3brqpz471x63jjdwgy170a7"},
 {"v":"1.3.6","e":"^1.96.0","p":"darwin-arm64","h":"18fh08wxxil5wdsqr14kaj9psm54dzcfrc1g33cv8gk2gny0wk1n"},
 {"v":"1.3.6","e":"^1.96.0","p":"darwin-x64","h":"1xkybk5whgv89m4gv42izk7c5w6wq40myhrgi2z9gnpi1q9kvpq8"},
 {"v":"1.3.6","e":"^1.96.0","p":"linux-arm64","h":"18cr3j7ksp8pp1l760f04vszkpjw6vkg0mcy6dpplwf88d7i30r2"},
@@ -945,6 +949,7 @@
 {"v":"0.1.2","e":"^1.87.0","h":"0m0igypbwakm6a12xmlnx7d6y7nschabf3c2jxw5gfndy1lxxar1"}
 ],
 "kalmigs.trilkeep":[
+{"v":"0.2.0","e":"^1.90.0","h":"1h65acps5qnj3hqrnbzwmklac7x0qspj3ip1v04bjsyyvnv4nq4z"},
 {"v":"0.1.0","e":"^1.90.0","h":"1qg5h2sz1fjq6wnpiiac91vyq0aspvfbjhqab0hp71ilnfj3z5x8"}
 ],
 "keksiqc.idx-monospace-theme":[
@@ -956,6 +961,15 @@
 {"v":"0.6.6","e":"^1.75.0","h":"1284n33nzbb367sa4gyrnnrvqjmih009kpxxvbaxvgdgdcxzcg9f"},
 {"v":"0.6.5","e":"^1.75.0","h":"050k326bqdakpj511wk3nyrkj01dqmwprrvaa51l5aip9jrv9x5a"},
 {"v":"0.6.4","e":"^1.75.0","h":"0yqrl8x97m8i9215p42jp2ypnc6i8dhrxdddvfbcxzxwqxcxy171"}
+],
+"kipngenokoech.weightless":[
+{"v":"0.1.7","e":"^1.75.0","h":"05hlmhy4b3cifrjmx2iws4c6pc235d7mqa6j6v3wjj2r9jbaspkl"},
+{"v":"0.1.6","e":"^1.75.0","h":"0vc1naz3lxaqyjnwx9scbvyn0qlv7s0gjnf1vw4fp7x1yg23vxlq"},
+{"v":"0.1.5","e":"^1.75.0","h":"1c5z8l51jpspijfj9bdqvr73sdw2d7vrsrbfmyk9kbzifs5j7a0r"},
+{"v":"0.1.4","e":"^1.75.0","h":"1hcdnr1xxn1d924jcvi1hgddmn7xl6cxljknny0lib6hxjd4vkl8"},
+{"v":"0.1.3","e":"^1.75.0","h":"0nkmxq0wxkldgypp64vi25n1c65ddp0f1i4y7ircm60vkicvm1fz"},
+{"v":"0.1.2","e":"^1.75.0","h":"02lpin1n2z2acrl7s6whj83h4rihjnmnb1wq6m880100fhzgj7rd"},
+{"v":"0.1.1","e":"^1.75.0","h":"1dqaq19vkvxw39dh0rjvcrf0f5f5h0s1bhlf2x99rd1dja79znl8"}
 ],
 "kodetech.krom-debug":[
 {"v":"20.6.0","e":"^1.18.0","h":"06693n8bq337rybjbq226674hbyb25fghardmccjaax8zm1gdk3y"}
