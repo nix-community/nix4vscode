@@ -53,6 +53,10 @@
 {"v":"1.23.0","e":"^1.75.0","p":"darwin-x64","h":"0rbzyrvlkjsczcivb2182f2ff27simz1saf76zxi26rzz3im6zxm","r":true},
 {"v":"1.23.0","e":"^1.75.0","p":"linux-arm64","h":"1kr4p5rfhmkw5kc7jlg9addf9ysd24j2ar4ci46pyiamvd4dd7yq","r":true},
 {"v":"1.23.0","e":"^1.75.0","p":"linux-x64","h":"1a91l5fz0v0kyflybp9rwmdgf317bd4p5sqz8d1sbwj1l9s61d86","r":true},
+{"v":"1.22.1","e":"^1.75.0","p":"darwin-arm64","h":"1ci5ya6d377x2cwk61jb66bsrgyg9k0ha8jk11hvddx1a7sf7zxw"},
+{"v":"1.22.1","e":"^1.75.0","p":"darwin-x64","h":"1szpms0afkfsaz2mj45hhznvhmbxarmhlp4zyisz03vrm32yldzq"},
+{"v":"1.22.1","e":"^1.75.0","p":"linux-arm64","h":"04j9qsah0kwapklddl2qdwnxv65xxh3yrac1srxq8rzcapffgjbx"},
+{"v":"1.22.1","e":"^1.75.0","p":"linux-x64","h":"1rh018mmqxij80i4k5sankz3jhmn62qsib4y9pn19gh49c86y9bj"},
 {"v":"1.22.0","e":"^1.75.0","p":"darwin-arm64","h":"02dy6isklxaf0whlg4yq0lv6n9fiwi6j43pdbqqaxqqlpkv7lick"},
 {"v":"1.22.0","e":"^1.75.0","p":"darwin-x64","h":"0wk60vadlbwwcl6n5h9a49yfrdq9hs6wf66nrgnghi2cz2n02899"},
 {"v":"1.22.0","e":"^1.75.0","p":"linux-arm64","h":"1jm497fhf51lfcilgd6fbbbh2ssnm3frzs5wgyrj32kdvm7np8mf"},
@@ -614,6 +618,9 @@
 ],
 "hubto-cloud.application-basis-vscode-extension":[
 {"v":"0.0.0","e":"^1.83.0","h":"17xmmrzi8rmbvpxfrsnh4hln4chsx9x25gq3b1l5irgc4kw6znbx"}
+],
+"ikasann-self.vscode-chat-gpt":[
+{"v":"1.2.0","e":"^1.77.0","h":"1rrjd8bal2026s2zwawdvj52f26hy3qkywazw6vxq130yjw4vhky"}
 ],
 "jakubkozera.csharp-dev-tools":[
 {"v":"1.5.3","e":"^1.100.0","h":"0rdw8mwhcgj9xn1yp1pzl368ir0zx2hgzpk0gp4pif3cbsr02cid"},
@@ -4117,6 +4124,8 @@
 {"v":"1.48.3","e":"^1.48.0","h":"0ziz4fgbw9fpx6jq5ml3np3a4b8g5l7a64pclklgapa492h8fa38"}
 ],
 "mt-codezy.testagent":[
+{"v":"1.0.3","e":">=1.85.0","h":"0v0iiwpinjq2lrhdm8ivwsacy4w631mmvx4avg9w2cw252n6mb4b"},
+{"v":"1.0.1","e":">=1.85.0","h":"1sz0xby7r5rwx6lz3aj6bdwvlvz989c9bsg39maciiyrh39q4qhz"},
 {"v":"0.0.8","e":">=1.85.0","h":"00ddzxcynzciglvi74ym28q34clbbfx5wjw9700ry57ipb0djc41"},
 {"v":"0.0.7","e":">=1.85.0","h":"0x8c2hpgjgngp9304yycgs2fbqjjvc0wz6s5ckbw9h4hm98yf00z"},
 {"v":"0.0.6","e":">=1.85.0","h":"17r03jw2yp6d8mdlynlalnzvxcqjznwglxr7zwwb4m2brf81wv90"},
