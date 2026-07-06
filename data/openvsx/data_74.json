@@ -445,6 +445,10 @@
 {"v":"1.2.1","e":"^1.90.0","h":"124g32jffwrl0kiw00ql5h0ahjiqrxal3i6krsgji2z7dp17dnw4"}
 ],
 "electivus.apex-log-viewer":[
+{"v":"0.49.11","e":"^1.90.0","p":"darwin-arm64","h":"0l5jigfz7dmrifk0xifv6zm7zvwplv7pa9n9cgkfkbk0y8nnskyx","r":true},
+{"v":"0.49.11","e":"^1.90.0","p":"darwin-x64","h":"0pznb31dwrps9978wdpafc46w2jpvf92in62gk2r7xyqfh227jdz","r":true},
+{"v":"0.49.11","e":"^1.90.0","p":"linux-arm64","h":"17j5gfl7na1dqwwv9pvlw3qz8iybafvbwz06rmzp9myw06n0yzlm","r":true},
+{"v":"0.49.11","e":"^1.90.0","p":"linux-x64","h":"1g8vy6clryshnnv38nwf0l07qravxn5fibrfapgzvfi7i39s13hb","r":true},
 {"v":"0.49.10","e":"^1.90.0","p":"darwin-arm64","h":"0nxnngik5y6d8x2hgmrid0pz6b7mf4wafmcjz83wq9zk7xkj36ld","r":true},
 {"v":"0.49.10","e":"^1.90.0","p":"darwin-x64","h":"0h29ikzl6gz4z76lsbp501bh6hmbgb3ffgxwzqpab39f9bmzkwkl","r":true},
 {"v":"0.49.10","e":"^1.90.0","p":"linux-arm64","h":"0iy18b2w1k6wy1lnb3j0x8rk3xymrvhw17js0h2cqri7bymfnh9j","r":true},
@@ -1149,6 +1153,9 @@
 {"v":"1.0.1","e":"^1.98.0","h":"1jdhfvnv0wz3mvwm8y165rbprb8q8xac4a6qzjw2ccfmw2a03zf6"},
 {"v":"1.0.0","e":"^1.98.0","h":"0irhamyy90mw7zwmx2x1km8nn33pxyi5ib1q7x48j7935ajws5hd"}
 ],
+"oscarcs.dart-syntax-highlighting-only":[
+{"v":"1.0.1","e":"^1.25.0","h":"0hx81c013p7skvga63r80ih0p6g4vs678ys6fhcjgphh60m0vj1h"}
+],
 "ottojimb.quickchars":[
 {"v":"1.0.3","e":"^1.95.0","h":"0iywcsa3rrij8dfzjk1wqdgacrgj4s81k2ggvcj5b2kmkr87xkik"},
 {"v":"1.0.1","e":"^1.102.0","h":"0j8ai4zrfkp6v6vhxdzy8gdzdpvfkxwnb1ady29gj7rbpsv2hjkr"}
@@ -1269,6 +1276,7 @@
 {"v":"0.0.2","e":"^1.74.0","h":"1y1pn4232vkhbkxbqn1cxlcyvs8qyx5marznzy066y4hzxs0f7bf"}
 ],
 "sweetpad.sweetpad":[
+{"v":"0.2.7","e":"^1.85.0","h":"0zj74gbdcljliyclrj6p5zk6nmygk4cmmq4gawhfp8j3cfi02axs"},
 {"v":"0.2.6","e":"^1.85.0","h":"18bz3lclpyrb5xbfbkg7rrqxn2a6jlyyg7ycgq7cc7cxicmjs4vx"},
 {"v":"0.2.5","e":"^1.85.0","h":"0fffmgcf16yk3xx833q41xp155dw5p2fmw1rd1y5jkh4lf9lvhx3"},
 {"v":"0.2.4","e":"^1.85.0","h":"02fnlqz0xqwy9rgr72x0k96i97lyr7j50fh3rmphysvxzz8sl41d"},
@@ -1692,6 +1700,7 @@
 {"v":"1.0.3","e":"^1.74.0","h":"1ffd7i3fbx03xyaq88b7ibrzd182521pbdxcc9ngswq30dbwdla8"}
 ],
 "ziplineai.zipline-assistant":[
+{"v":"1.17.3","e":"^1.80.0","h":"1x2qx87r0km7spy97x6my5qg5mr9rq2sicj6c1vird9nkdr5bq33"},
 {"v":"1.17.2","e":"^1.80.0","h":"09kvakak17cdb4akvnqi3p75f66qw64mj48kiakc69l0cl64dlrs"},
 {"v":"1.17.1","e":"^1.80.0","h":"15dccsq2vl0yaji70iyh5sl9zfbc85ds6vxv0h9v0iykicyvxcxr"},
 {"v":"1.17.0","e":"^1.80.0","h":"0xl3lcgc4gxb0bjiwfsm27nnmdb2qv7syrvb1qwsqccdvl7g0ccs"},
