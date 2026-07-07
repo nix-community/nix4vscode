@@ -80,6 +80,7 @@
 {"v":"1.0.3","e":"^1.107.0","h":"0dhxd70mqvjpimjgig79sjh29px2lixjh5ql2703z39fvml4h69z"}
 ],
 "acedatacloud.mcp-fish":[
+{"v":"2026.704.0","e":"^1.99.0","h":"0wca364yl7girw4f55mcvg9vmhi7p16wd8hs9yfdw938x36kwhkz"},
 {"v":"2026.702.3","e":"^1.99.0","h":"12mmvn1arfgw52pxzvnpml0ckq351byalgggf8s7bmkyji7dqpqf"},
 {"v":"2026.702.2","e":"^1.99.0","h":"1szxwylmxdxv88mq3wnsdlbkipbs3h3qxbi855n28zm3zlddlkrw"},
 {"v":"2026.702.1","e":"^1.99.0","h":"1j4cpymh4g742sqclh6d7pdn1rf5q9gb2zxpir1av3z5gcdn6jca"},
@@ -6773,6 +6774,15 @@
 {"v":"2026.0.0","e":"^1.107.0","h":"0slx4b07nvj73wfjdhq2hny5vz5iy5b709fxpcrswr096ps00v5v"}
 ],
 "nimblesite.basilisk":[
+{"v":"0.30.0","e":"^1.99.0","p":"darwin-arm64","h":"19zcb7nyf1j5rgf4wgnhk3ick93dhjj7ks5xwqjllrd8qr6344rz"},
+{"v":"0.30.0","e":"^1.99.0","p":"linux-arm64","h":"1irvg5sh763zxghnnidvaprnn0qvlhskl3zwpr0ra8b2sfsvrvda"},
+{"v":"0.30.0","e":"^1.99.0","p":"linux-x64","h":"1yxk15y8imwnrbhcz9w85k3v6zb5fx9hwnha6qrp9hkkz39hy3rd"},
+{"v":"0.29.0","e":"^1.99.0","p":"darwin-arm64","h":"0b4c665vykk0rlm6ih57zfzv2spvm7wvsc82wgi5ayr5faayr75s"},
+{"v":"0.29.0","e":"^1.99.0","p":"linux-arm64","h":"0nqkgxbgwzyc81m8kl1xhj34hwb1grd70cxhksi5g998gbqschl5"},
+{"v":"0.29.0","e":"^1.99.0","p":"linux-x64","h":"035v7d9cjihywc28g9vvagnxvm9wv5ag3mwz9i3d3hs41y5v0p14"},
+{"v":"0.28.0","e":"^1.99.0","p":"darwin-arm64","h":"0k5fbsdbbkn4br90wqbkj9zw5diiplw0wgmj41drlscz8cp0skar"},
+{"v":"0.28.0","e":"^1.99.0","p":"linux-arm64","h":"09rh4zy8cixpnbsfnvn70x6kq1s1x93ghny05xg3v9rmr4425a90"},
+{"v":"0.28.0","e":"^1.99.0","p":"linux-x64","h":"0lbl2024ib5db1y2vjcgi2zygh3k7x4fv0bdcwjsikzb4mbabiqs"},
 {"v":"0.27.0","e":"^1.99.0","p":"darwin-arm64","h":"10szv87zcdh7i6vanx9jwh9h5261h45ghwrvvz67mi5d17ikbhy8"},
 {"v":"0.27.0","e":"^1.99.0","p":"linux-arm64","h":"1ndan9aplkxfa28k9f3mws1f8482vnnmxagv00bzyv31w1p023py"},
 {"v":"0.27.0","e":"^1.99.0","p":"linux-x64","h":"0rk97llmlxqgkpssagf275iyzsm6ji65pchfgm6d5dxgvxlfxmmg"},
@@ -8074,6 +8084,11 @@
 {"v":"0.1.1","e":"^1.116.0","h":"0b5y2i87cd5yagfdcd7rwqvz8dnwqggscs3dc48ic2h7ldnfjdz3"},
 {"v":"0.1.0","e":"^1.116.0","h":"0pvha5fr41hmjcpnmrxcnc92564x9rzhwgfrpm1s920si76s0dj1"}
 ],
+"samerde.personas":[
+{"v":"0.8.6","e":"^1.90.0","h":"0rfsc1anca1yj2g1m6ba0h231hd9klqpdfwyh0xzv2axlygn764x"},
+{"v":"0.8.5","e":"^1.90.0","h":"0ca0cganl5n6qw70bqp5065fdpdszpkp3mkg9lh8l61m25g9ih5i"},
+{"v":"0.8.4","e":"^1.90.0","h":"0pfi8lx3j85l2kfav8ilsqjyk4ksra13qkxhg7prp450pnyjrjwc"}
+],
 "samjack.git-latest-trace":[
 {"v":"0.1.0","e":"^1.56.0","h":"0l2xms14ms8j8nk7gnr97a54k8fdgd5krjslgfrb8fgrj355nrrj"},
 {"v":"0.0.3","e":"^1.56.0","h":"11rkha9nwzhg2al54kymsn15j5x8bwyb6dsbz43sq0g6fmhsq5m6"},
@@ -8186,6 +8201,7 @@
 {"v":"0.0.1","e":"^1.51.0","h":"0n4n7rxkh8rn5grkdkxql5lldfkyhhapcrwa8z4q85xsnwb34hah"}
 ],
 "serhiivoinolovych.claude-skill-deployer":[
+{"v":"1.0.107","e":"^1.99.0","h":"1xqqkb2ysjyn8rq9s34a5gys6z8yljnkhnbd3vs9yv9y5p6hl352"},
 {"v":"1.0.104","e":"^1.99.0","h":"0gkgflxalmxc6a2lypdf20s6nx18f4fbnx6xsq9rnmvj3nibppl0"},
 {"v":"1.0.103","e":"^1.99.0","h":"08rxnv8y1hrp4q75cqij2gkc5svr42hzlavfkjz5z2siy8pq0whw"},
 {"v":"1.0.92","e":"^1.99.0","h":"12xd86kfrb9akvm35d26yb3c6hlv763m2gyclsax7w04ml05awy9"},

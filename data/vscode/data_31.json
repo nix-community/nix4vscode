@@ -1929,6 +1929,10 @@
 {"v":"1.6.1","e":"^1.30.0","h":"0qkqf5pd5x8r20275ahxclgaadagq04mln0lhkmv6w34n5qx6ibw"}
 ],
 "devprod.vulnerability-extension":[
+{"v":"1.2026.706001","e":"^1.100.0","p":"darwin-arm64","h":"1bw0ygl5pbbxgn43mzgkc0q54gq5m1b2xdb7rs1skklz6i3bv56h","r":true},
+{"v":"1.2026.706001","e":"^1.100.0","p":"darwin-x64","h":"002g6fwvdh0qipvwhaznjrvjrs931v322gjml3id0n3f627h1llh","r":true},
+{"v":"1.2026.706001","e":"^1.100.0","p":"linux-arm64","h":"0jy6jwj0bbp285zhb9ci0ccxynwfqh8l9rp4wcljs2y05yw2y8hm","r":true},
+{"v":"1.2026.706001","e":"^1.100.0","p":"linux-x64","h":"0jfqahgfzdh5gqrvc69w5kdsqlh7kv5jncw26ih7liqi42vy117q","r":true},
 {"v":"1.2026.705001","e":"^1.100.0","p":"darwin-arm64","h":"0fbi42a3azl7a1ck0d63m0zbar5c4h8fsds2bv54wz3h3ndwsddm","r":true},
 {"v":"1.2026.705001","e":"^1.100.0","p":"darwin-x64","h":"1zg6z62nvniic3wkkwh92i026ywaislqwa8xnzybwdc1vrxkmkj0","r":true},
 {"v":"1.2026.705001","e":"^1.100.0","p":"linux-arm64","h":"02a9kdjz1701mzgnhknfri3h2ifkxljf1zkhdfnf39pvaabr3hj9","r":true},
@@ -8963,10 +8967,14 @@
 {"v":"0.0.3","e":"^1.73.0","h":"1pgcb0z43pkfas5s0b79bgb4faf2k24cyqggcd5isab210nxc9fb"}
 ],
 "snowbros.snowbros-atlas":[
+{"v":"0.2.2","e":"^1.85.0","h":"1k1pq2ryasacghvhaxxvbwy04g649gryrs0dhaixz7pl25w98baj"},
+{"v":"0.2.1","e":"^1.85.0","h":"0fgy0a8m3dbnzndrd8w5si5jhzd2m7vcpdfklzkp6m4r3f6yw7ma"},
+{"v":"0.1.2","e":"^1.85.0","h":"10xv83d63gryrii3h40vmi4lkjc91hspmk2aldjvsq5br73jlln1"},
 {"v":"0.1.1","e":"^1.85.0","h":"19zkl4773d7ghvsbjxjq0jqlr8ifqvgdcxfny7q94qiy181pbk0g"},
 {"v":"0.1.0","e":"^1.85.0","h":"1xpk6323zamq04kwyh25y0dw1dkvr92xdp4fvswa75m6pyrfbhbg"}
 ],
 "socialentropyllc.mcuxpresso-project-to-sdk-diff":[
+{"v":"1.2.0","e":"^1.75.0","h":"0zwz397sz9r7vdasn742bijaspgba5107bmcp6s2g8fiyg7b53wc"},
 {"v":"1.1.0","e":"^1.75.0","h":"07lrs8l3vwxpiqaxa8lz6sw0sgkbq3hx3d056mlgy6fj5hz33jfk"},
 {"v":"1.0.3","e":"^1.75.0","h":"1vwp91z0v2r461s24qawryr19nfdc7gf4rph8499ra72ldh458xs"},
 {"v":"1.0.2","e":"^1.75.0","h":"050pgpiq7ravljbgpcqmg80p4h90k5fp9qpf3dc2i2mi9vr4l8ng"},
