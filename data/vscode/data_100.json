@@ -1278,6 +1278,7 @@
 {"v":"0.2.2","e":"^1.85.0","h":"0m9zs4g0bp8p8ry7sdl4fw9ij8fq4vr9ax7y8lwnqz5vwgnxyy10"}
 ],
 "cpulvermacher.claude-model-provider":[
+{"v":"0.5.0","e":"^1.107.0","h":"0ch64w7q4vqa003x3bk48r8s4dbmwca4jkbg3vbirimlmk9phx6v","r":true},
 {"v":"0.4.1","e":"^1.107.0","h":"1q8krxnbiq1mkpsj3sfakwczhygnihrc2np5d0r0fv2sdjd6r6r8"},
 {"v":"0.4.0","e":"^1.107.0","h":"0ca3kf9ybx86nah5zwvps9js0x7ish6fnl7c8nlk2m3h8swfd4x3","r":true},
 {"v":"0.3.4","e":"^1.107.0","h":"1inymnpg3vzvwjb1axwawhn8cjcs1q2bwfkazvsajh47nj1qizih"},
@@ -2607,6 +2608,7 @@
 {"v":"0.0.1","e":"^1.78.0","h":"1xfm7ycj9nklfgbfz1yqq75k8j0b7jq6rf6z5n2mhnz2qx3q8vqi"}
 ],
 "github.vscode-pull-request-github":[
+{"v":"0.157.2026070910","e":"^1.129.0","h":"159akyq68abmqnjyh577x398fbqdr4s8afz3s8aay8cmnfsizn9p","r":true},
 {"v":"0.157.2026070710","e":"^1.121.0","h":"0ymhfn6yynzwqrylzkw35ki71i1cf86z47rx1dnsvgpy75w4yqnq","r":true},
 {"v":"0.156.0","e":"^1.121.0","h":"1wdc26pip3cgwhls75lmw1j2gb4r6rz6ih013rj84rlgl25753qs"},
 {"v":"0.155.2026070604","e":"^1.121.0","h":"1yi7pk36l00j32bp6r5mc8v1jr3af5m2rlhi31bwgx1xhhk68l15","r":true},
@@ -4597,6 +4599,7 @@
 {"v":"0.0.1","e":"^1.74.0","h":"08h1cx122q3i2lb8c5irr7synsfackjzrqapnm7fbfp5vrpl5j0i"}
 ],
 "junolang.junolang":[
+{"v":"0.0.5","e":"^1.90.0","h":"05l2zy5bbmql37hgkamxavci24svyxvhhhgqb6yk0aj3ls7c6sch"},
 {"v":"0.0.4","e":"^1.90.0","h":"0712lf00n6219jxx5i96y9rq8n7cg8n92wqkp58jcjim2gqm92gy"},
 {"v":"0.0.3","e":"^1.125.0","h":"1c1m13c35d89nmpnjcjl7hh3a8vgfs0cg48hvsk6x5pywz26wl60"},
 {"v":"0.0.2","e":"^1.125.0","h":"08i8rf71qldv9sarpflhx7m41s4ah3cw62fy5axaf0w7qjph9na0"},
@@ -4782,6 +4785,14 @@
 {"v":"0.0.16","e":"^1.63.0","h":"1531708xyq9mqmql4v5ycb2f96yqh282cf72h3a1zrj0mkcdwg7y"}
 ],
 "kilocode.kilo-code":[
+{"v":"7.4.5","e":"^1.105.1","p":"darwin-arm64","h":"1rkrz5207wrgprbkzcn06j7s2hmnghqdarbz9vjq9p5m5qlgv9bf"},
+{"v":"7.4.5","e":"^1.105.1","p":"darwin-x64","h":"1n00nahnssz6vqj7hjf09jkzr3zyhcfkhivb817nx4jfn9rpvwkb"},
+{"v":"7.4.5","e":"^1.105.1","p":"linux-arm64","h":"1pmwm3rda12y7ll294qd30fxv51pqbrwjmd996aihpsnkrs6laag"},
+{"v":"7.4.5","e":"^1.105.1","p":"linux-x64","h":"117nnlimbnp46w92jh6x5da7svga3hj9bzj0j8xwsc1zcrrd89rl"},
+{"v":"7.4.2","e":"^1.105.1","p":"darwin-arm64","h":"0xic76gn1ym08ffdx2n6v136kn9gs6pn89ikqn8rrqvfr8zziyb0","r":true},
+{"v":"7.4.2","e":"^1.105.1","p":"darwin-x64","h":"1yrczzdaswijci1hjzn7w3h30v6qcak9j6hf0ndzgldaf5gy29g3","r":true},
+{"v":"7.4.2","e":"^1.105.1","p":"linux-arm64","h":"1f37yhszpsz5kz3x3vgvxwwn7mzqrsgbmw7as81dm69qg9m1az9v","r":true},
+{"v":"7.4.2","e":"^1.105.1","p":"linux-x64","h":"13nwb8d2wink29f2h4xrclfzmijnzwp1yyrvqam8f66jiamcyr2j","r":true},
 {"v":"7.4.1","e":"^1.105.1","p":"darwin-arm64","h":"190yldgrrwipqgrnmsqwl2361vk1frxr57pb2z7bb151z40qfpxi"},
 {"v":"7.4.1","e":"^1.105.1","p":"darwin-x64","h":"1c1xajxk8l5v0z25v77rgxgg9syylhdwmm9kwlrxmh11gppgkvbf"},
 {"v":"7.4.1","e":"^1.105.1","p":"linux-arm64","h":"16fk5s8m5hprrkw3cz7ahhxnzzszynji74xs0667zx091nnild6y"},
@@ -6857,6 +6868,9 @@
 {"v":"0.1.3","e":"^1.80.0","p":"linux-x64","h":"0hb9iypm66gq2y5cqjwbgqrgkr4kw4r5x8sjq5m8bjgfc8mc303k"}
 ],
 "nexrallcode.nexrall-code-vscode":[
+{"v":"1.0.63","e":"^1.90.0","h":"171lmrcg9iahs7n0bplb41pcb2y9d05w4qn9xx68zfskacip5rs0"},
+{"v":"1.0.62","e":"^1.90.0","h":"1dnffpp387p5pjwx36zh96m8hhs8irrifj0asf8k9g0xvs3w52md"},
+{"v":"1.0.61","e":"^1.90.0","h":"0ipl5lcgsqkj6rgw3yc76hyvwnmjvaw839ydipb4zngbkvk741na"},
 {"v":"1.0.60","e":"^1.90.0","h":"09sk765xq77528lm5n2vzsp1akkbghx6cng8pan960hd1ki6vwjz"},
 {"v":"1.0.59","e":"^1.90.0","h":"1rcvvrdis8xj6ivdh78qbi13l3khgvwp4qs3qk068i1kj9sg3r7z"},
 {"v":"1.0.58","e":"^1.90.0","h":"0q49wvqs9md178wz0332nzwzmqsjgzbmj8kgdkw56h0qsa45fhcw"},
@@ -10470,6 +10484,9 @@
 ],
 "yangkang.markdown-aheads":[
 {"v":"1.0.1","e":"^1.98.0","h":"05ny389lb96iqg1hzcbq1w9a5svy511hvhm2zl2jndhggb6zblrz"}
+],
+"yapayzekalab.yapayzekalab-code-assistant":[
+{"v":"1.3.3","e":"^1.105.0","h":"0bmgzbvy0iz58jlf3kql3sj86bhs7jylm074yahhj1cg06zj8iyy"}
 ],
 "yds-ide.yonbuilder-development-studio-copilot":[
 {"v":"1.1.4","e":"^1.84.0","p":"darwin-arm64","h":"0afd3imsgvwly4c6klw6n89k1wchxk7h7g2yg2cinmddb9nq6965","r":true},
