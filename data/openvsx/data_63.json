@@ -440,6 +440,8 @@
 {"v":"0.4.0","e":"^1.82.0","h":"0rjgqi48l78yzv4l3wxhy8nsv8n9h6d1lg2i1ghk8aan7mmwi3ff"}
 ],
 "juanlias.ultra-instinct-theme":[
+{"v":"1.0.1","e":"^1.90.0","h":"1f0ddy49hga3brnnsvh3m053lj5k68s40x915kl43zvcd4vyj8lm"},
+{"v":"1.0.0","e":"^1.90.0","h":"1lmqr0gsga74rfprnb1si083a45hg0ksdblkqdnb6gl66d5wx6gi"},
 {"v":"0.1.6","e":"^1.75.0","h":"0kjdffkddlkyryj69kc6h9s1y5c44q7nyk84xdamc048qfh6sj9x"},
 {"v":"0.1.5","e":"^1.75.0","h":"1b43zxmhnhzhpywx6snnrikz865j5m4mvr5g34v1d7a301zakxbf"},
 {"v":"0.1.4","e":"^1.75.0","h":"0nkzhgs75hja862jj83d27xnjyb79rn1ddpyl63l08grzjkfdfcn"},
@@ -671,6 +673,7 @@
 {"v":"1.0.4","e":"^1.70.0","h":"0dimxln5fq228hrqy9nx8x57jzdxpf5l1hd47hg62cmca4d0knqa"}
 ],
 "miragon-gmbh.team-topologies-modeler":[
+{"v":"0.5.0","e":"^1.96.0","h":"0z63ilcw65r0lsrjsjqll92z2l2qfwknpvzph00wwjvv5llipmg8"},
 {"v":"0.4.0","e":"^1.96.0","h":"06r9dbjy5ahiaq3bcwq62akqsky70v7h6i44gnvaazznmjq5fmjk"},
 {"v":"0.3.1","e":"^1.96.0","h":"0l4x7ldn2qz2qspbc08140cxcz8np24fm271zm6ify8jg045zid5"}
 ],
@@ -761,6 +764,14 @@
 {"v":"1.0.0","e":"^1.89.0","h":"1b4jl3hck77j41f8lfgbdrglwg64112788awkfviac5ha6rbiz0i"}
 ],
 "salesforce.salesforcedx-einstein-gpt":[
+{"v":"4.15.0","e":"^1.101.0","p":"darwin-arm64","h":"0diwrcfisc1l3795dh6ga7b9mcrijfxgv4hhjhz8r7c8h0hzzcl5"},
+{"v":"4.15.0","e":"^1.101.0","p":"darwin-x64","h":"1zvr7crjapn1akyhjx8xykm7y64mw9x8f8kqq092jdgwpwj6iy93"},
+{"v":"4.15.0","e":"^1.101.0","p":"linux-arm64","h":"0laxc3m8ipxq00yg7ds2a2qcnmj4ch1dqn9ccm2xbrqc82cnph8k"},
+{"v":"4.15.0","e":"^1.101.0","p":"linux-x64","h":"072s9xj8cxkngfcr7dccin3j63a39wpz5bmx6irbq2h8488nm3n6"},
+{"v":"4.14.0","e":"^1.101.0","p":"darwin-arm64","h":"1ppx42i6vnaa656lj9mf69nnxkgggna995skyrscq92pxjz23qyg","r":true},
+{"v":"4.14.0","e":"^1.101.0","p":"darwin-x64","h":"1h3yk6288avc224w0z7d1xzlxcjfar5hg9afndfav9zw71r1jvvj","r":true},
+{"v":"4.14.0","e":"^1.101.0","p":"linux-arm64","h":"1x1wpjqi5vifib8mc1d4p0mxs19cl28dhk4vih164ja09yby6jg0","r":true},
+{"v":"4.14.0","e":"^1.101.0","p":"linux-x64","h":"14ysx0cpjg3wvcaw7qmc6pq66n5idkx9rm8hwlpxdc4dhc9qcjp2","r":true},
 {"v":"4.13.0","e":"^1.101.0","p":"darwin-arm64","h":"15lsp4x59413bj9zxynj18l90sv8w5vfam7ifs4j5wjfy5bwfqsw"},
 {"v":"4.13.0","e":"^1.101.0","p":"darwin-x64","h":"18xg1kdvdx07a9k5bslqyaqfigm96zgvzr7l7y525ygx1f0cx4dr"},
 {"v":"4.13.0","e":"^1.101.0","p":"linux-arm64","h":"17d70g9dvq9cdvm080b4fjfwpb89zmgwhxhb9gxgjplvm498xjj8"},
@@ -1157,6 +1168,13 @@
 ],
 "trevor.trevor":[
 {"v":"0.2.0","e":"^1.99.0","h":"1kam29g355yjdsnvp7a9nf4jlfb0lnk6i41563i1q3wmcp7lzwsn"}
+],
+"ty-ler.vue-find-usages":[
+{"v":"0.1.6","e":"^1.75.0","h":"0slpixpfr5han49db21v4bfqmvkq6lygj18mzqfvawrahi4xhbgq"},
+{"v":"0.1.5","e":"^1.75.0","h":"0dvgsswfsy611sk2ihanf300dzjxm0sda7pi7j0jvpbxcz2fw8yw"},
+{"v":"0.1.4","e":"^1.75.0","h":"1lhxmj5i1v2mccxhf027i3vnhh4lybmp6gdn58blb4726jcaiwq5"},
+{"v":"0.1.3","e":"^1.75.0","h":"1rl0ddnr06x2kqwf10fvwn5lkya9dc2z6f3afn9rknl466s7kbay"},
+{"v":"0.1.1","e":"^1.75.0","h":"0qzq50i7ipwin74xap6qr9z4mvv1g2dakvl5vi33xyw7di8b5h3l"}
 ],
 "typedown.typedown-vscode-integration":[
 {"v":"0.2.17","e":"^1.75.0","h":"0yjidy5sp2011qsl4mjg5dr97v0npdsxwqszj33546rfv6v5g6dv"},

@@ -45,6 +45,7 @@
 {"v":"1.0.0","e":"^1.79.0","h":"0xvfxk96fxn13l1w174gkpqylc53wrhj4p35q54w0w1dw0xp8wz5"}
 ],
 "andrevops.epic-lens":[
+{"v":"0.22.2","e":"^1.95.0","h":"0d43bjvczzvirwdwxydqs2jfkcn3mkyfz571zcg9lgk2bph6yyfa"},
 {"v":"0.22.1","e":"^1.95.0","h":"1m39jn2zr10f8xwi56mxjpjv2dwyjqdq374kxki0i84lz4za66vd"},
 {"v":"0.22.0","e":"^1.95.0","h":"14l3jpkgybvsrnmbl19vhsmw0hc6623pq1n4353wv0c9yngz7ppm"},
 {"v":"0.21.2","e":"^1.95.0","h":"0fah1mxq5v16sk4b91dm2igpamhq93pn6p377fq1hn7qj8wz3v10"},
@@ -758,11 +759,21 @@
 {"v":"0.3.1","e":"^1.80.0","h":"0z0ik2w5pfj3lf09yhk3mbsd2dlwc630bvq88xa56bdrx80rab78"}
 ],
 "redhat.devspaces-remote-ssh":[
+{"v":"0.5.2026070909","e":"^1.79.0","h":"1x4ybvw29vwcxlk7b7ai0mj3lfpp59hz72ywml1y5j9yzi9hv7qz","r":true},
+{"v":"0.5.2026070909","e":"^1.79.0","p":"darwin-arm64","h":"1gz6fq4jdjycs0jgq9w550jsz4p0bfpb0axn209d938is53i8cmp","r":true},
+{"v":"0.5.2026070909","e":"^1.79.0","p":"darwin-x64","h":"0s5cwydfv2zv6jcf5fqjg5ar38fbabj3zbbny9myscdq1vh05liv","r":true},
+{"v":"0.5.2026070909","e":"^1.79.0","p":"linux-arm64","h":"06gl14vc9j0vd9awychkx964qgkc4jwzwpvy832lxpylwbzyb10q","r":true},
+{"v":"0.5.2026070909","e":"^1.79.0","p":"linux-x64","h":"0zqbblk08wx2rlxl378d0925dc64axy9yddfyqrj0krzzsybh1ix","r":true},
 {"v":"0.5.2026070808","e":"^1.79.0","h":"0gfwq473xvz0fii7i3x3d30lshfnmy8vajzm2sbiz0fbxabzj7js","r":true},
 {"v":"0.5.2026070808","e":"^1.79.0","p":"darwin-arm64","h":"0rb2a3vsazvfbd4156934la4g77dw5lcfmapz2d1b86dz7w85ba3","r":true},
 {"v":"0.5.2026070808","e":"^1.79.0","p":"darwin-x64","h":"12m0zkl0v4p5c8mgw574imp1bd0hd3k871vxghx3ib94wx868v19","r":true},
 {"v":"0.5.2026070808","e":"^1.79.0","p":"linux-arm64","h":"1v6qha2rhy8x306ca29nckwhiqg2srjkp2f7wpnja8slpxhkvli2","r":true},
 {"v":"0.5.2026070808","e":"^1.79.0","p":"linux-x64","h":"0fin7zdhgdj1lwjf0g3s5zvgxl4x5vsvl64lwdrvpisr9rw6y00n","r":true},
+{"v":"0.5.0","e":"^1.79.0","h":"13rgpyd5lg7zrddn9alp2la2x5wd56x0r1ifgpxvkml37s7zklfx"},
+{"v":"0.5.0","e":"^1.79.0","p":"darwin-arm64","h":"0ns6j240r4f1jc4v4zvx0fmrs12cbkqvhjym8xm76i42d82aykyq"},
+{"v":"0.5.0","e":"^1.79.0","p":"darwin-x64","h":"0dxmqa27zymy4nh2lzpvgn5h83vhhjl4yvhhzd2189g0y0r56ms3"},
+{"v":"0.5.0","e":"^1.79.0","p":"linux-arm64","h":"0v2vqd6llhvsk3lavja6xns8mg8fmxz253vzyvwn7201mzc4pamp"},
+{"v":"0.5.0","e":"^1.79.0","p":"linux-x64","h":"13xbsxh4baypwxgp4rrv98xabxp23rmh6n94sdj6sg9avhmh3fhz"},
 {"v":"0.4.2026061209","e":"^1.79.0","h":"136j7hkfnc3g3lg4yk496jii188wigzpnwc1v50ywl3jbag1aqxl","r":true},
 {"v":"0.4.2026061209","e":"^1.79.0","p":"darwin-arm64","h":"072wlpbrg9rvnzvqbdc6bijlwa26ajd1xk1mmvqfq3p84dqirlva","r":true},
 {"v":"0.4.2026061209","e":"^1.79.0","p":"darwin-x64","h":"0qqs67rg0x42d90nslpcd44wwp3s40rn5yxbfjmah50zkhda9qy1","r":true},
@@ -900,6 +911,10 @@
 {"v":"1.0.0","e":"^1.85.0","h":"02misjz9zf6yim3a13029i7b4c05csmsx48w5dqj67jbvyha8g0b"}
 ],
 "reslava.loom-vscode":[
+{"v":"1.22.0","e":"^1.85.0","h":"1p5dc22pci27aa81nl9wkbfxli7yn2k0pfjckx6ww4s9yg9nag1a"},
+{"v":"1.21.2","e":"^1.85.0","h":"0hh8014zw3j6fg1wl85ivzs4lbd71hlppkgjny4n9p416xpdg6lc"},
+{"v":"1.21.1","e":"^1.85.0","h":"1j0547dqrjgpmxhhnblxaqzas2qcq0m4zsawhklpxb0pq2manh10"},
+{"v":"1.21.0","e":"^1.85.0","h":"1hqyws2hkq8l479v55i2pinwmnjia00w39hkb1apsbrw40j3lnvp"},
 {"v":"1.20.0","e":"^1.85.0","h":"11rzf4dxazqgjiazan92j6rdvdb53m651pizrj12fvjd4g4pr93f"},
 {"v":"1.19.0","e":"^1.85.0","h":"1l6sbj46b07yr047xa1nzsyn0k9gklivq7z605zx6kgwq0ljkxnb"},
 {"v":"1.18.0","e":"^1.85.0","h":"00g1zv0nm1ln4l58996nbzy8wjg9akzvrwh0y3s1jmz8iqlhpbfm"},
@@ -937,6 +952,7 @@
 {"v":"0.3.0","e":"^1.74.0","h":"1picma0nv6km44v6izf6hhbx6j7s5v6s02d7jb2w85xxrb9sykr8"}
 ],
 "ric-v.postgres-explorer-nightly":[
+{"v":"2.3.0","e":"^1.105.0","h":"082hy33d9b8pxj48b8z2xachmm9ayzyyv6vc9w9g6848zhmwapzy"},
 {"v":"2.1.5","e":"^1.105.0","h":"16p16bjhf2q49mc985sb2nvpkdcfh9vlyqqd395g89rsd1whs555"},
 {"v":"2.1.4","e":"^1.105.0","h":"0m92vcxi0ibsig4n8jfkd1p05vzciss2fny8cpfnaph9cmirqg80"},
 {"v":"2.1.3","e":"^1.105.0","h":"14ki5khksnqs5hw88zf90407qfzgrgdcp4jjdwvh64mykvnlwjy2"},
@@ -1323,6 +1339,7 @@
 {"v":"0.0.9","e":"^1.94.0","h":"162smhrv7hmh2jb2sm2f70q1zl51bjdgzkp94mrk1hrwx4n4fhr9"}
 ],
 "vs-code-database-client.vscode-data-grip":[
+{"v":"0.0.13","e":"^1.90.0","h":"1dbcdhg35z9ckl6nf0yk0zp3xwzszb0br98mcfh5x3acg5y5yk92"},
 {"v":"0.0.12","e":"^1.90.0","h":"1fhsb423i5a30zhsbs1yqn9xgdjlkxhg74lwqmnhr4ys999ylg2h"}
 ],
 "vsly-ru.serika-pro-theme":[
