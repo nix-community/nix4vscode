@@ -46,6 +46,7 @@
 {"v":"2.12.10","e":"^1.100.0","h":"1f0mh0bh7c3am9hpmwywk2fxgy96wl33kvniymd7nv4mi3fc10xs"}
 ],
 "autoreg.autoreg-skill-installer":[
+{"v":"1.1.1","e":"^1.85.0","h":"1906nd07xcsfczsschi66pg509ww6cqxiibwy2bvdl6ck8bldliz"},
 {"v":"1.1.0","e":"^1.85.0","h":"1zjgici8l1wk764ck99rsl7fssib0cc0hib3p5sr0z4ckjasv7pf"}
 ],
 "awwwadem.language-professional-tools":[
@@ -633,6 +634,11 @@
 {"v":"0.0.4","e":"^1.92.0","h":"1py5h26iw7lb2x0a3s8nhdsrr22simb6ij0683irwbr1hly6lj6n"}
 ],
 "redhat.java":[
+{"v":"1.56.2026071108","e":"^1.77.0","h":"1a1738rhcaqv7wn4ww4w79fyq4cx5wy4ipr5s7vg733dnaiq4ba8","r":true},
+{"v":"1.56.2026071108","e":"^1.77.0","p":"darwin-arm64","h":"10qrxzlrb2sm5a6zvcsy5wfyddryz8kk441i6bgxnkfxziwcvr9i","r":true},
+{"v":"1.56.2026071108","e":"^1.77.0","p":"darwin-x64","h":"0wd672ryhymf8hj8x4g3xsazfg8madhb6s35adqcr8777r4vjzn3","r":true},
+{"v":"1.56.2026071108","e":"^1.77.0","p":"linux-arm64","h":"1yy7ja3v3kq4s9bwxhg1nr6xkg2ny8ph0v39iv71blcm3j06w0hb","r":true},
+{"v":"1.56.2026071108","e":"^1.77.0","p":"linux-x64","h":"0g83gb5qr2wmzy48kg183j925fxj5cp2z4iyi3zyqgclmhy50yf9","r":true},
 {"v":"1.56.2026071009","e":"^1.77.0","h":"0jwr3w37m3yq302qpik1csjiici474bwbsaccdkjvnbpn05nmsx5","r":true},
 {"v":"1.56.2026071009","e":"^1.77.0","p":"darwin-arm64","h":"06syljmlv9zw3w5fphjkn5dapbrl28gn3i9193fy0ahp68pgj1xp","r":true},
 {"v":"1.56.2026071009","e":"^1.77.0","p":"darwin-x64","h":"0ijcwn76v07bi7yda89n860dnh5wcwsbqr0lsa3j6nnq59xcfhgs","r":true},
@@ -3897,6 +3903,9 @@
 {"v":"0.1.2","e":"^1.74.0","h":"1dvlkzw7anl4858ijjkljxk65y9w6npppm8bb968k78bimb24hsl"},
 {"v":"0.1.1","e":"^1.74.0","h":"0kysh19xdxwbsm3v620z4jiz0ghybkl73gqmcxpmfciw297rla3a"},
 {"v":"0.1.0","e":"^1.74.0","h":"1mr4dn8a1z2ydgja7yhn84kg2cg168wk4j45q5iblbhnv476myqg"}
+],
+"ts-org.dark-remix":[
+{"v":"1.0.0","e":"^1.12.0","h":"10lpfvkh70mzr0y3lf2wskjjzj9m7s5r2ywfa05hxmld2z7406b5"}
 ],
 "ust-pace-ai.copilot-wrapper":[
 {"v":"0.1.9","e":"^1.90.0","h":"1lw6fqs1w04x3p3r4vjgd81v728sqbdfn69ga9hkvmsvqbvq297c"},
