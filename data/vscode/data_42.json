@@ -1887,6 +1887,9 @@
 {"v":"0.0.4","e":"^1.74.0","h":"0r2g40vhs87xdmjl41bagzdilyr3ia92fvg6yxq22wspchscpdiw"},
 {"v":"0.0.3","e":"^1.74.0","h":"0cg5nndhm7bfh9d50ixg2sgicxi41zprdwj9hsi1fv6zf0ngjm7b"}
 ],
+"devflex.devflex-ide-sync":[
+{"v":"1.0.2","e":"^1.80.0","h":"04qrhck12y7p4rmijkh44nn3wjf0gv52rhxfk5gacsy1h18fn1y9"}
+],
 "devflorez.rubber-duck-copilot":[
 {"v":"0.0.3","e":"^1.103.0","h":"0b9iwbrpq57pikgs076jb85pfdalp701zdhhpq1zrghs54k9g6vr"},
 {"v":"0.0.2","e":"^1.103.0","h":"13iw5zvr958afflcw85wpcrcqvlf4vfd6jj107vzai8ckin490zy"},
@@ -2862,6 +2865,7 @@
 {"v":"0.0.1","e":"^1.98.0","h":"1ji6ng3pbwiqwxn0jfi7chjvhb717jjbgwqmflzd1070gny4qq2a"}
 ],
 "gsharplang.vscode-gsharp":[
+{"v":"0.3.33","e":"^1.85.0","h":"19qxy8vwdswrcf4vk470n0015f59va256smdiwpbnkbv7xjbc6k4"},
 {"v":"0.3.8","e":"^1.85.0","h":"1pp7says7qwkaxxlvwm04da4c9n5iq5ih4ivllcg9aqnhk3b4j1f"},
 {"v":"0.3.1","e":"^1.85.0","h":"0jwg3gx4m6giwg7f3lqvn94pdpki2w8kjb52mvpxhbycsjpiln0r"},
 {"v":"0.2.764","e":"^1.85.0","h":"0jn5xqqvf6977lr71ib92c6rf6ywpxmazxislijcp6hmdxbmvvbr"},
@@ -3167,6 +3171,10 @@
 ],
 "igoruam.linearappextension":[
 {"v":"0.0.1","e":"^1.109.0","h":"0amb3mjjjmdvgs05jr39js3azs7bin4ankapyg9xw28f34dcmnfy"}
+],
+"ijyalabs.ijyalabs-daacini-vscode":[
+{"v":"2.0.1","e":"^1.75.0","h":"176n2xvcff3s8nxpphs4g0n95p09scpngnhds8wggdski7zw4sm7"},
+{"v":"2.0.0","e":"^1.75.0","h":"0hp5cy9l6yv5qfmznvz7k5n9sv7wkmardf1hdmn0zw2fn9bbc9ij"}
 ],
 "ilseoblee.opencode-sidebar-tui":[
 {"v":"0.1.7","e":"^1.106.0","h":"0fxr4ys79775spfr5wfjmg1921089fhxk6i42fhw4gdyjqi4x7fi"},
@@ -8178,6 +8186,7 @@
 {"v":"1.0.0","e":"^1.104.0","h":"0jfzl1qksf854m19qb7szdv2gkqxgaxhw7w2fa5bfm85lmk9bbxv"}
 ],
 "neo4j-extensions.neo4j-for-vscode":[
+{"v":"1.17.28","e":"^1.75.0","h":"0iw4nvh9aql3zyyb8hq1qxs851ifgwm43pr3hi4hhsn0g77pbwpb","r":true},
 {"v":"1.17.27","e":"^1.75.0","h":"1h06lxjs00wsg041z910fwl7cdg573j1abx3ys0slzv7iacdyjc9","r":true},
 {"v":"1.17.26","e":"^1.75.0","h":"1v0dlwsva8jm6v2n74y8dnjghlf874awbm8a2myzl8qm6gfkq4v6","r":true},
 {"v":"1.17.25","e":"^1.75.0","h":"1nqq8hvzq3kfrf039f17d044aspwlzx9mb2b17n4wvlin08wrypv","r":true},
@@ -8277,6 +8286,10 @@
 {"v":"0.1.0","e":"^1.80.0","h":"0hwz7zshf2xv9hl348n7g9izr3jjl1ckzyj0095ivk5k9m2ckf22"}
 ],
 "nexosqlstudio.nexo-sql-studio":[
+{"v":"1.42.1","e":"^1.120.0","p":"darwin-arm64","h":"0sjinhazxnmrdk5v4c5l9pffizs1yxfalhggvi2pwfvzcri6lylh"},
+{"v":"1.42.1","e":"^1.120.0","p":"darwin-x64","h":"0jbwsffa7dk0p080701p3fai3iim6wzpsqcmsln0wr37xpidryad"},
+{"v":"1.42.1","e":"^1.120.0","p":"linux-arm64","h":"1ppzr369ggnsfzpx8lx8jww1c56cabs1zfigwikkg1dvhklc5yp7"},
+{"v":"1.42.1","e":"^1.120.0","p":"linux-x64","h":"1kfawwiwkbqpd38lrylknpplqm08l5r5jz2qw5j8gfxlik57pakp"},
 {"v":"1.42.0","e":"^1.120.0","p":"darwin-arm64","h":"192jq5sxmcclxz3lb4m2nf2yaqmxj1km47x8mzmbhn7kw3ikg6vh"},
 {"v":"1.42.0","e":"^1.120.0","p":"darwin-x64","h":"0yj4dl6ihfd86wvkrknlngakfk99qa56kp68bi31mhgfbnjb0nvp"},
 {"v":"1.42.0","e":"^1.120.0","p":"linux-arm64","h":"1f663g0p9zdgkvig8qyhlsr9m08dbfc0bfj9d5giqfs7nlgxmy4f"},
@@ -9972,6 +9985,7 @@
 {"v":"1.0.0","e":">=1.84.2","h":"01262k8jip6hzyksv0k8qwck9v8zq9mzf32igsqa17vv35b0qs2i"}
 ],
 "salesforce.salesforcedx-vscode-apex-debugger":[
+{"v":"67.5.0","e":"^1.90.0","h":"1vkh7x5aq7nw1196k8vqsnkp5x12z0vcfhmx7lm896l3i4w3kq93"},
 {"v":"67.4.0","e":"^1.90.0","h":"0m4qih25yfdapzqifrmyxrh0wd63vpc6aysnfpl8kjj68nib7f3r"},
 {"v":"67.3.0","e":"^1.90.0","h":"0d39k86x13l1nb4xs6v76g7yfd9rr9p8b5nsa7kbvbgwj5jcjx8v"},
 {"v":"67.2.0","e":"^1.90.0","h":"01di63liz690z93k2npyc59rvgj68sg71pjr1b5fnkggzn2a6jv0"},
@@ -11180,6 +11194,10 @@
 {"v":"1.6.1","e":"^1.102.0","h":"12nkbv56ahkb7rkyfhdhdwkmngvnh9ckv2c4k17ihd13fbwknaaw"},
 {"v":"1.6.0","e":"^1.102.0","h":"0h7sp868il6whqi0cqvbmxkmgp6if0nlyi19mbggad8031wl4ljq"}
 ],
+"truxt.truxt-ai-coach":[
+{"v":"0.3.28","e":"^1.96.0","h":"1vsns7xj2ndzcj9q6s6wjj5pgv3vx7ij90ivncslxhfdllsgpj0p"},
+{"v":"0.3.26","e":"^1.96.0","h":"1826w20ksr3l6lyf0bbhv7crina3snwa8abc9i8dbcam8vivk78g"}
+],
 "tukilogicsuryamalla.check-valid-node":[
 {"v":"0.0.1","e":"^1.77.0","h":"05vhxr1bzwgvk3szp55i9dd8s2367kgicw0zkww4wpjwkbjlmv9f"}
 ],
@@ -11429,6 +11447,7 @@
 {"v":"0.0.1","e":"^1.66.0","h":"1cjdvhsxkkgjyj0k7ycrh1hx7pppjirr00s7v11hxwkbjfy6kc11"}
 ],
 "waylongleon.navigation-history":[
+{"v":"1.2.1","e":"^1.80.0","h":"0gqbv2mv2pjagvl378fi8jj7zbnhz04rmi8ql3zawl3kdvq3w0wh"},
 {"v":"1.2.0","e":"^1.80.0","h":"0i2qdlqzvs938lk9mrhp2w33f11ywyy7myxwx17adicfac00q092"},
 {"v":"1.1.0","e":"^1.80.0","h":"0jz3ffkbszf30g196v2qh4c3w14r80g6kkdsixl3jajyywajv0g5"},
 {"v":"1.0.6","e":"^1.80.0","h":"1s2a39pipnrwh9jxxwk4hvyxc9n41w8hb7wdhdg8c5y63lvi4cjn"},
