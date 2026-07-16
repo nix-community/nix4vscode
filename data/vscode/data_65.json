@@ -1960,6 +1960,7 @@
 {"v":"1.0.0","e":"^1.80.0","h":"1mf3qx9knp4vhjb1s9jms75339m3sgnmbzd1lh7xl5vmz1arb4r7"}
 ],
 "damolinx.tracciatto":[
+{"v":"0.3.7","e":"^1.105.0","h":"13k46wv7mv7rklng8l7303f9dsa0gm6qik6dqpdcarpy84rlh2dg"},
 {"v":"0.3.6","e":"^1.105.0","h":"1splaja9p3mwrhmr7ax4gpm9qq79vlypfdl176alrgp9nmifzd4r"},
 {"v":"0.3.5","e":"^1.105.0","h":"0g19xh2wlsk1ywllfbpn09i4l69jbxsxjjvyg9jbnqw3l4p6z95x"},
 {"v":"0.3.4","e":"^1.105.0","h":"07jscd5rmnkifkvylyy263jnv1x4qsgfraqkiindgz6sbnmfgh47"},
@@ -6974,6 +6975,7 @@
 {"v":"0.0.1","e":"^1.80.0","h":"1c1hiskfw53mzy41rn6bjqr9zigb4xfc3xarq23x854c4bqkvbkj"}
 ],
 "punktero.punktero-sops":[
+{"v":"0.7.1","e":"^1.85.0","h":"1sc0k69dj4dim2wwy52ifj79xmb870chyryya185x1nmhzlg3ah4"},
 {"v":"0.6.6","e":"^1.85.0","h":"0brvaizriizdi3gny8ychdzv3wpyy5y98ylcga1dz9vzb87cs82k"},
 {"v":"0.6.5","e":"^1.85.0","h":"1rip12ydkq0bwbhqnw060kh3p6yb8zbzc1yhig12dbjap6vrjw0p"}
 ],
@@ -7552,6 +7554,10 @@
 "rokkit-exe.mycopilot":[
 {"v":"0.0.2","e":"^1.96.0","h":"1v4n72s3k25rrpqnf6ghkgzkx8dzg3mprrhym51wxvkykzc50806"},
 {"v":"0.0.1","e":"^1.96.0","h":"15qmij4yr86h42yryik35437x95ffv4zbjbmzhdg3725yc5g4smh"}
+],
+"romrd.docker-php-formatter":[
+{"v":"0.1.1","e":"^1.85.0","h":"1xxlf9kbwddazxrrzwfi21k9mjzki6qdh2gaa9hdx0fv6hcavq8f"},
+{"v":"0.1.0","e":"^1.85.0","h":"15kxmd2mkppp56lk5rznb3bvaxxi3ib7l1cliphplhlys2zi7h59"}
 ],
 "root16.bamboo-pa-vscode":[
 {"v":"0.3.4","e":"^1.73.0","h":"05mq075rdlhkkji46rbryz209qw2bvx4gwdl76mg6rxh5nncds3j"},
@@ -8950,6 +8956,11 @@
 {"v":"0.1.0","e":"^1.70.0","h":"0l4xmmwi11f3h5pzb0k94d4cwa6nv2bfjvwydnr7ld4zj44fpzk6"}
 ],
 "typescriptteam.vscode-typescript-nightly":[
+{"v":"0.20260715.1","e":"^1.126.0","p":"darwin-arm64","h":"0b470y7qn1nfbwapmjismyxvycqc3xf0zyqqq8npckv13802mxnx"},
+{"v":"0.20260715.1","e":"^1.126.0","p":"darwin-x64","h":"12f1zkchgydp5mw2yhy9jljwlqp0jpbd3any9drm9y370zvb4ydn"},
+{"v":"0.20260715.1","e":"^1.126.0","p":"linux-arm64","h":"07qsckmg0xmjczrwq90qbxic2lsl644hjijqwg6x4kyy2m2mhy7y"},
+{"v":"0.20260715.1","e":"^1.126.0","p":"linux-armhf","h":"1pnwbmjkjnidznxp6qvd5dimvnky2py41g8vsxl4scb07f8pnswr"},
+{"v":"0.20260715.1","e":"^1.126.0","p":"linux-x64","h":"03f1yjbdmg6syrsx961aydz4fkm1ayslxgw5y96nyh7lkv4cyrz6"},
 {"v":"0.20260714.1","e":"^1.126.0","p":"darwin-arm64","h":"0i2zxf5b3rxyxnc3jkb6w412bshisckqkvc89dk7zqikqg4bc1w0"},
 {"v":"0.20260714.1","e":"^1.126.0","p":"darwin-x64","h":"1fvp0rsxhx9zy4vrh4xg7a1rj6cchh9g9h1kfdl32w4z3nvlskqr"},
 {"v":"0.20260714.1","e":"^1.126.0","p":"linux-arm64","h":"125c31s9cdqs7lc5i71b4804wb48gsdj44iaglr5wnrq0s0h9db5"},
@@ -9214,6 +9225,7 @@
 {"v":"0.2.4","e":"^1.85.0","h":"0x9vfv3cdw33hlp5si2bf7bwjla6cib71yknx2pff7hnjq0xk8g8"}
 ],
 "vmware.vscode-concourse":[
+{"v":"2.0.2026071600","e":"^1.75.0","h":"18jh6n63q287g3v54lhpp6xnjk86lbg754559nby11dq16w9mq3j","r":true},
 {"v":"2.0.2026071400","e":"^1.75.0","h":"1dh067ibfq6cdcn0hpsn4fys79z2qlhf4bx1kz900z4bln55bji4","r":true},
 {"v":"2.0.2026071100","e":"^1.75.0","h":"1fd6k55y6md0jkd65bfjhd5bs4np3mnzxzgagn3snkxa6j7i8gx6","r":true},
 {"v":"2.0.2026070901","e":"^1.75.0","h":"15q668p5vacwjkmxwa5pf12frch5maca64arrpjj7inxh2bz5d71","r":true},
