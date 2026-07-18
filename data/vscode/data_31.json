@@ -1950,6 +1950,10 @@
 {"v":"1.6.1","e":"^1.30.0","h":"0qkqf5pd5x8r20275ahxclgaadagq04mln0lhkmv6w34n5qx6ibw"}
 ],
 "devprod.vulnerability-extension":[
+{"v":"1.2026.717001","e":"^1.100.0","p":"darwin-arm64","h":"04mzlkjaydl5az5imzji4shb9wzag29jxglx4a4xl9b4wn6z3169","r":true},
+{"v":"1.2026.717001","e":"^1.100.0","p":"darwin-x64","h":"0p4hlmvr0vl28vy3dp62992n3ymjrr6bg0zzp4sm17fqnqs2bh98","r":true},
+{"v":"1.2026.717001","e":"^1.100.0","p":"linux-arm64","h":"1kprr3kwjmmqkyc217faap9kardm7irwn4bks6nl4zp7z04wsz2z","r":true},
+{"v":"1.2026.717001","e":"^1.100.0","p":"linux-x64","h":"1yg65lzymdcq79whh8x6047yp7h69yqa59ggmzr5prf3fn0zjxc7","r":true},
 {"v":"1.2026.715002","e":"^1.100.0","p":"darwin-arm64","h":"0cs88ny1jnh83dlk9gzf4v5x7bja8d4107kkn29ws0dbb7al0gcr","r":true},
 {"v":"1.2026.715002","e":"^1.100.0","p":"darwin-x64","h":"08r76yq4cr6rj8vvqwl432pi6b45kd1kvvfm01ic61s6m8d93bzl","r":true},
 {"v":"1.2026.715002","e":"^1.100.0","p":"linux-arm64","h":"0v3pnl3rw53fn9f0xmxnzdqxnzgziisyygcz9jxr3x7wrh9l1m7i","r":true},
@@ -4993,6 +4997,8 @@
 {"v":"0.0.1","e":"^1.52.0","h":"0qsxpamm1c3q9184rv6wr4fakdwxp2l7dxjjp0k73xcdny9vfqcl"}
 ],
 "glitch-sound.glitchlens":[
+{"v":"0.1.0","e":"^1.125.0","h":"0fr840p71fxcdzm9cdi4s4a2914i7amkvb1p11a85mi9w6ivzrdh"},
+{"v":"0.0.11","e":"^1.125.0","h":"1jyh3imx0348nn284gq8sfwcnxqwcnnlgcs27qa95wljq6hn8mq2"},
 {"v":"0.0.10","e":"^1.125.0","h":"0xdwq22kynwpb0i3biadksncsh3i2xnh3m5qngbwxwnql5p7if1c"},
 {"v":"0.0.9","e":"^1.125.0","h":"0a5x890mq7q5x6zwz9snm7ahqsffwf8mckwhqkm7m1acfa93hv5z"},
 {"v":"0.0.8","e":"^1.125.0","h":"0rhccbfdc5wbnpw84v7q1dr3dc3y9w7irbwmb50dfrgkag62id6v"},
@@ -9001,6 +9007,9 @@
 {"v":"0.1.1","e":"^1.21.0","h":"0fh20r5i0smy5gx8lh3c9zgs6x1bnw4sn9qm2p7hf604h3km3zg7"},
 {"v":"0.0.1","e":"^1.21.0","h":"1ycs6a6calbv1q9h4yq95lzw3qi8c368j19gw3hf1p1f7dg4c28w"}
 ],
+"smash.vscode-smash":[
+{"v":"0.0.5","e":"^1.120.0","h":"0wn9znwy7qvaf2rbwlnrv30zbqiqkqkl3k1rswzj9kxkr18v0dk7"}
+],
 "smilesb101.better-formate":[
 {"v":"1.2.2","e":"^1.32.0","h":"1zvx89d1l9mbc3p9ihd08k24vj5p4zy8s7dfij9qpj67z4j4lqp4"}
 ],
@@ -9229,6 +9238,7 @@
 {"v":"0.0.1","e":"^1.8.0","h":"01nr7plkq3gn35z694k9y066kq4pb6xf2s9nc0x4fh0sz93r8sax"}
 ],
 "stup702-animeshbarua.memu8086":[
+{"v":"0.7.90","e":"^1.80.0","h":"0xfs78v2x0qp87rz1a1zvcjbrvjm2pw57fqkypcyc4z15jkg1jbf"},
 {"v":"0.7.85","e":"^1.80.0","h":"1x6mq1dnmv2mnk454aij396mq7869k5a28yy5p94abcwx62xvz7g"}
 ],
 "subinshakya.juggle-master":[

@@ -190,6 +190,12 @@
 {"v":"0.0.1","e":"^1.73.0","h":"05lghs0knv7rh530k9yb8ahp8ns4s52w4h244bdl113a7q331rfs"}
 ],
 "aizenvolt.damocles":[
+{"v":"2.8.0","e":"^1.123.0","p":"darwin-arm64","h":"19dvcqi4hsvgni49mfb4a8mjapi2zf2lxzlnjy5n2k8k9jcsrrwc"},
+{"v":"2.8.0","e":"^1.123.0","p":"linux-arm64","h":"1f8vczi0jxkg7fcddh48cmxilczgld1lvh15piqb8nzfqgraj893"},
+{"v":"2.8.0","e":"^1.123.0","p":"linux-x64","h":"08y9nk0p9jy7h5ds7y6y9bdsnym36ggsicf2911lmmcz8h1hwhni"},
+{"v":"2.7.0","e":"^1.123.0","p":"darwin-arm64","h":"18g9pqjb16zfqrcfq80d76ipg88a7snw0kxb8y73xipznvdyiryz"},
+{"v":"2.7.0","e":"^1.123.0","p":"linux-arm64","h":"0nz2rkg9c9f70p8awqhinbbr2m4rk6zwm39vagr14xhdy32dwi5k"},
+{"v":"2.7.0","e":"^1.123.0","p":"linux-x64","h":"0qzx93m1ysgdmbk8wx23bd9ikziwpc8k2css55zm4zhjwvnq6qxp"},
 {"v":"2.6.0","e":"^1.123.0","p":"darwin-arm64","h":"00638di0c4kw9pv1k9jgqwrkipn3vsy4rd00982lx61gr037jr4p"},
 {"v":"2.6.0","e":"^1.123.0","p":"linux-arm64","h":"0myn18v5i5sykp7f1yg2mdgpz0wi5pdb5pjm8lz0bcdljcvqd3sv"},
 {"v":"2.6.0","e":"^1.123.0","p":"linux-x64","h":"0v4gbiygjbklmqf99jcx3x8jn334kcszssbay35ma92vp7fvma69"},
@@ -1923,6 +1929,9 @@
 {"v":"0.0.2","e":"^1.42.0","h":"1va960k2v8sv07n84fi96c6ghj32l11ya27c8659r3fzh7xfrnvx"},
 {"v":"0.0.1","e":"^1.42.0","h":"0lpj8brxyhw84ylm8b8sz9p9b7xyx08hpv3acx069xph3w00x9dz"}
 ],
+"cthulhudevs.jsonpathtranslate":[
+{"v":"0.0.1","e":"^1.125.0","h":"1ibvvkj0lbdwxfanmwp2v9pfx2h5kbc8lshdkrwvqzyx8c08ssf0"}
+],
 "cukehater.create-css-modules":[
 {"v":"0.0.4","e":"^1.85.0","h":"1x93kc0n9k7hg3x2yb8mvfnavwx2hvga3ixx7l02b09jqlfpkf25"},
 {"v":"0.0.3","e":"^1.85.0","h":"0if4ibdgzxcnlwjd8cin6ngr4ph1b0rxhx2aqzysbsmiij9zk4pv"},
@@ -2847,6 +2856,7 @@
 {"v":"0.1.20","e":"^1.85.0","h":"0gnsmxh13s6ii10zihhqpxz1yy8nw0i4f38c7g8sxlsyjrl27nrg"}
 ],
 "firebridge.firebridge-vscode-ext":[
+{"v":"1.0.8","e":">=1.99.0-0 <2.0.0","h":"0rz4c3ywism0d05xifz634mpr6mdycsksgjpr5q674xb0faqhq08"},
 {"v":"1.0.7","e":">=1.99.0-0 <2.0.0","h":"1ww286pfnk8cm9gsdifhk31b34mgwgjpqd5bq3xs2f5lcxjb95dg"},
 {"v":"1.0.6","e":">=1.99.0-0 <2.0.0","h":"1ai7fjfc4pg25if3ss080b2s9gia527l707xwlpbfrafq82qwgsc"},
 {"v":"1.0.5","e":">=1.99.0-0 <2.0.0","h":"16238b2wxpzm9qqiypxylmz171fi6w0xs20rnf9c481r8s1hyiyp"},
@@ -4048,6 +4058,9 @@
 {"v":"0.0.2","e":"^1.82.0","h":"0kfrq6n25x7jzv74s9rwjd6iba1ary2albjiq7bcl9mvvvlai1g6"}
 ],
 "jorgecscardoso.iaedu-vscode-chat":[
+{"v":"0.9.2","e":"^1.90.0","h":"18ahmhyz53z8yal7sp8z10n6wv6jfx4lfg8v0lchrfmh9xmknwaq"},
+{"v":"0.9.1","e":"^1.90.0","h":"0ds6sfzdijzx1nmvsrjbx6xi3x6831a722rb9x8y2ipc7jz0kxf3"},
+{"v":"0.9.0","e":"^1.90.0","h":"08m7h19hwg09bm9q8lx3ks3wglxd0jgqf9ha8hddkkzvb7fbs5fc"},
 {"v":"0.8.0","e":"^1.90.0","h":"0igcd7q00s6p53x0fs4rdmnxchvj2yj4fh5dvcm61yjfhbh72rbp"},
 {"v":"0.6.0","e":"^1.90.0","h":"04v9npylqif6rjc3x8chidmmflhraqi7l1smxhr0s3pwxkp5zhjj"}
 ],
@@ -5907,6 +5920,9 @@
 {"v":"0.2.1","e":"^1.45.0","h":"1zidf1j1zfbd64j18h6ir6653vyin9793gj0smp7c9m6nnan9p90"},
 {"v":"0.2.0","e":"^1.45.0","h":"17z3klhgr46lr08m5vignhici8ymgg4q3rscfnvljacw5hzd20hs"}
 ],
+"mercury.img2webp-convert":[
+{"v":"0.1.0","e":"^1.80.0","h":"17al92j78rcx1i9nc9hippr1asl23m699sh3kraqir672dql8h3d"}
+],
 "metecakir.fluka-vscode":[
 {"v":"0.4.0","e":"^1.85.0","h":"0b4lsnbhpr25qi76bfsy70mijkd5rlbkfgj8wn6vmhadpa01hy45"}
 ],
@@ -6572,6 +6588,7 @@
 {"v":"0.0.1","e":"^1.87.0","h":"0bpy0v29x87lw2n9av37q9v7cgcr6ylmm5lq1s1ijrvnhbir1vj5"}
 ],
 "nvisiondata.datalexicon":[
+{"v":"1.0.8","e":"^1.85.0","h":"1mlkmgjvgfgc05wmhz6zr94v8avjwwwny4jbrvwyfgihwx9sbw2p"},
 {"v":"1.0.7","e":"^1.85.0","h":"1nc8zp7q9jqh6ikjn4w4xchkab69adnqy01vhc8bca6k27jqvf94"},
 {"v":"1.0.6","e":"^1.85.0","h":"12knnwmg2b8ikq1clz7j8s9isz7vcjw93mmy5j990k9q42znza6r"},
 {"v":"1.0.5","e":"^1.85.0","h":"1879hg0byx6jkxy3bz9sciba2dng6zqr9z7afrq5ak4vc0hn24ig"},
@@ -8970,6 +8987,11 @@
 {"v":"0.1.0","e":"^1.70.0","h":"0l4xmmwi11f3h5pzb0k94d4cwa6nv2bfjvwydnr7ld4zj44fpzk6"}
 ],
 "typescriptteam.vscode-typescript-nightly":[
+{"v":"0.20260717.1","e":"^1.126.0","p":"darwin-arm64","h":"10lyf4n0xylw2r4lzmks15hzfic7j26162mzsiw3547l5m45qv01"},
+{"v":"0.20260717.1","e":"^1.126.0","p":"darwin-x64","h":"19bzvyhjddb7cpnb8zx8gbig8as798cy48wp83h0f7wnqqin7gnf"},
+{"v":"0.20260717.1","e":"^1.126.0","p":"linux-arm64","h":"15hsx5q480hkb92y22g1dcdn9mfmykj85c5dxjjymq86g1smvw79"},
+{"v":"0.20260717.1","e":"^1.126.0","p":"linux-armhf","h":"13hwzy5q5l764g5knyqv03fsda9yk057bsmh9xn1rrcbijmz54x7"},
+{"v":"0.20260717.1","e":"^1.126.0","p":"linux-x64","h":"068d9n7jv5a5klirhn3lsg7jv5jrjcq1fghhqrwl58rkjjz2inyr"},
 {"v":"0.20260715.1","e":"^1.126.0","p":"darwin-arm64","h":"0b470y7qn1nfbwapmjismyxvycqc3xf0zyqqq8npckv13802mxnx"},
 {"v":"0.20260715.1","e":"^1.126.0","p":"darwin-x64","h":"12f1zkchgydp5mw2yhy9jljwlqp0jpbd3any9drm9y370zvb4ydn"},
 {"v":"0.20260715.1","e":"^1.126.0","p":"linux-arm64","h":"07qsckmg0xmjczrwq90qbxic2lsl644hjijqwg6x4kyy2m2mhy7y"},
@@ -9245,6 +9267,7 @@
 {"v":"0.2.4","e":"^1.85.0","h":"0x9vfv3cdw33hlp5si2bf7bwjla6cib71yknx2pff7hnjq0xk8g8"}
 ],
 "vmware.vscode-concourse":[
+{"v":"2.0.2026071800","e":"^1.75.0","h":"0nshgwiy8mfi0ib4a7hd2nfa3ki8x69f6lhaawilsi1r1qcnzhks","r":true},
 {"v":"2.0.2026071600","e":"^1.75.0","h":"18jh6n63q287g3v54lhpp6xnjk86lbg754559nby11dq16w9mq3j","r":true},
 {"v":"2.0.2026071400","e":"^1.75.0","h":"1dh067ibfq6cdcn0hpsn4fys79z2qlhf4bx1kz900z4bln55bji4","r":true},
 {"v":"2.0.2026071100","e":"^1.75.0","h":"1fd6k55y6md0jkd65bfjhd5bs4np3mnzxzgagn3snkxa6j7i8gx6","r":true},
@@ -10120,6 +10143,9 @@
 {"v":"1.1.0","e":"^1.0.0","h":"0vkxpcwkc4m6yzq2shf0kf91mlbc4cm3fgnb3hqxzxb25gq5hv7z"},
 {"v":"1.0.0","e":"^1.0.0","h":"1fmxhyd1vscpw38gc10qi7z65m1g2iahrb00qpj7f9xg9q4ip692"}
 ],
+"xcxlang-org.xcx-vscode":[
+{"v":"4.2.0","e":"^1.7.0","h":"1ikya8xyrd6f0m881mgfm9d9q9ixr33phf8brrcwqblcvhxf3fn4"}
+],
 "xiabin.json-formatter-yao":[
 {"v":"0.1.1","e":"^1.60.0","h":"08li20y119v70apfsksmdrs8kwj7svwwzrzr7bsl54mn2hk4vw9q"}
 ],
@@ -10145,6 +10171,9 @@
 {"v":"1.0.2","e":"^1.47.0","h":"0zsqf7447360bmh1lf2g7ybyprspc2100l7smc749gh0p48375by"},
 {"v":"1.0.1","e":"^1.47.0","h":"0kvi3v55v9pfpvh7qrwlfbckcsn3lkrs9y9x7s4bwdr4vh1wpnia"},
 {"v":"1.0.0","e":"^1.47.0","h":"1znxiadq6cilwa3infvkdm5lw6s5vpbjwv1bhyjhylwz1s7j72pl"}
+],
+"yalambersubba.workspace-folder-focus":[
+{"v":"0.1.0","e":"^1.85.0","h":"0d7skrg0s37d68s2ix90ljq3z86davgyz9xjwkbxsiza1q4ssal5"}
 ],
 "yarus07.darkmoonlight":[
 {"v":"0.2.0","e":"^1.72.0","h":"07xzkgid97qqc9f358i6fyd8i5f6gcrrp1ysdldb1bipicnhrhb1"},
