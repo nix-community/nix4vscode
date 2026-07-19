@@ -1547,6 +1547,7 @@
 {"v":"0.0.1","e":"^1.125.0","h":"05d6ah21kks30nj1w9anjjg6pgdax9fq6ba6c5hr6af37f1ldgps"}
 ],
 "core-aix.agitrack-vscode":[
+{"v":"0.5.0","e":"^1.93.0","h":"0bf22dx2i03sgw52mkx1mj6a062ffvnpc3y4mj328vmzbk9dll69"},
 {"v":"0.4.5","e":"^1.93.0","h":"0jrjsmqciv5i447vy2mm6r4zvlgmi2836zjb75k8vv6mx4jw3x64"},
 {"v":"0.4.4","e":"^1.93.0","h":"048ihjlxr2krv1ig9s3wzv6mz7g6diaqn1z3810qh78rnllcp5xm"},
 {"v":"0.4.3","e":"^1.93.0","h":"1a12fmg69g8x1alsk6m0yd0f21vwi51v6v73941fvh3b1q3kc5zk"},
@@ -2448,6 +2449,9 @@
 "fabianjakobs.lox-lsp":[
 {"v":"0.0.3","e":"^1.77.0","h":"1djhy9g1lwi8pnjys1h8g9x35nvb1pcihbswl1dwfw8brn8clkjc"},
 {"v":"0.0.2","e":"^1.77.0","h":"0izp80a83khzfyizis93qz7mhjm6qf1l0kl7kdm6qhqkjdvvkam2"}
+],
+"fabiospampinato.vscode-cloner":[
+{"v":"1.0.0","e":"^1.87.0","h":"1qf08myqlaxhhx0434d0msmbqrj82ms0bwg98dj2a54sycjkgszr"}
 ],
 "fabiospampinato.vscode-open-in-npm":[
 {"v":"2.1.0","e":"^1.87.0","h":"0sys5jaxld649r74vdscj4gq962pl32dz2swhfwwndf943ccdr46"},
@@ -6154,6 +6158,7 @@
 {"v":"1.0.0","e":"^1.85.0","h":"1f3yr5wxsf4xrxwrgadc7gkm44xcivrjdzpgcz40sschla7babdj"}
 ],
 "rime.cozy-critic-md":[
+{"v":"0.4.9","e":"^1.85.0","h":"0fnjfzv95n66y6ivmknq5jli01pk9g5w4vr33ryp93pmwab98jl4"},
 {"v":"0.4.6","e":"^1.85.0","h":"0znwnw7a0r0v9280d6g2ibbz7h8n1qb5vmfkdjl7w2qfhfmcw2sr"}
 ],
 "risixdzn.purple-dark-horizon":[
@@ -7858,6 +7863,10 @@
 {"v":"0.1.0","e":"^1.90.0","h":"1xm280fvw7qdrh6bkzn0hh01xibwn36gp17jbwk5xqiy5z7llsj1"}
 ],
 "wgsl-analyzer.wgsl-analyzer":[
+{"v":"0.12.410","e":"^1.120.0","p":"darwin-arm64","h":"1fkbm6m31mwgwlf6jgqhnmfinqpzs2xwf7j97c5flglpyk7mqkav","r":true},
+{"v":"0.12.410","e":"^1.120.0","p":"linux-arm64","h":"1vqvj8r86cdda3w3n1x4kppfpw0yxgmc8l5gghpf9hb70h4pwcn7","r":true},
+{"v":"0.12.410","e":"^1.120.0","p":"linux-armhf","h":"0y6kr5afsxyi1i1wqmvzp98dyn8c8hvfdy1d0impzw06wa5wvmvi","r":true},
+{"v":"0.12.410","e":"^1.120.0","p":"linux-x64","h":"0fa4pvk09b6qjw4zaz0k54g8nyh8vgqbqm8scrr6g2djgx4525xn","r":true},
 {"v":"0.12.409","e":"^1.120.0","p":"darwin-arm64","h":"09vp3njqdvwswjk04gywbxmw1zf0sczwg2rslncqjf1zfxi9sdkb","r":true},
 {"v":"0.12.409","e":"^1.120.0","p":"linux-arm64","h":"1ay9mf2q977xxg0v83bsvfcy6xqimlxsihi92l16i0qk8vhykq1q","r":true},
 {"v":"0.12.409","e":"^1.120.0","p":"linux-armhf","h":"0b9iaznji7rn1zaq20x39mj2dkyq4xx4fya1frjwm4rn2jzv2f9a","r":true},
@@ -10099,6 +10108,9 @@
 {"v":"1.0.1","e":"^1.90.0","h":"144w6mr5vj426127xiy25gfjb3ak6dwds2mni9xz8rgcvy4h8j3k"},
 {"v":"1.0.0","e":"^1.90.0","h":"0gyjal7x9vadi44sxd4chx6qwzvmczsxyscmar8lmysynlq9rakb"},
 {"v":"0.0.1","e":"^1.90.0","h":"16nhysa9jlky3j3b5bxcsqbi8hdi3hfrglgavhdphkxys1miwnn1"}
+],
+"yma.starfall-lua":[
+{"v":"0.1.0","e":"^1.85.0","h":"0qqf5lp63zj9k2as82ydpahfmsjj86f6cb27alxnjyqx3l7i903n"}
 ],
 "yo56789.yoextension":[
 {"v":"0.1.1","e":"^1.58.0","h":"1la561b8p0zg4sgcmviblipjig760bxcl6jaxmk1ddf4wifkp7ak"},
