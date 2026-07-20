@@ -1655,6 +1655,7 @@
 {"v":"1.0.0","e":"^1.5.0","h":"1nda9s6p06897kxm64z0gx481a9s56qwlddrf34mc6skvi8p95c7"}
 ],
 "dce-developer.data-curation-environment":[
+{"v":"1.7.88","e":"^1.90.0","h":"0azks91nsqsc5icmp4jlji8zwqfi07nm68yaz4qq6rvmdqprghvg"},
 {"v":"1.7.87","e":"^1.90.0","h":"1fxxwbqk7as7740iximswmjzz5jwwpjdjiz575vhajpr8mvyk2z4"},
 {"v":"1.7.86","e":"^1.90.0","h":"1y01q7nnb8n2224ia9x7fzx5a3dnaw8lf9hvlvkai9rghwyddsah"},
 {"v":"1.7.85","e":"^1.90.0","h":"12678yfmds3c33hlgarqna8fw7jnd1qibyp8z16hmj7a1ipvn67l"},
@@ -6642,6 +6643,11 @@
 {"v":"0.0.2","e":"^1.33.0","h":"0dk4rx1wk3c85hp8h0difk892850y5haihakpa3sy74sqfl3c3c5"}
 ],
 "redhat.java":[
+{"v":"1.56.2026071808","e":"^1.77.0","h":"0ks666s3mhx7dk7hydwnnj92gz4rgcq2d22n2m6vxd4gn0iqfbkg","r":true},
+{"v":"1.56.2026071808","e":"^1.77.0","p":"darwin-arm64","h":"04a42h8zp2gh6wj3a9xgwq6n3f88kylnbcvbly9sb531amy4659l","r":true},
+{"v":"1.56.2026071808","e":"^1.77.0","p":"darwin-x64","h":"042jjqq8zzj4agkgiwarrsq2vm5pj2h1mak1vz12zdi6b67sbxh6","r":true},
+{"v":"1.56.2026071808","e":"^1.77.0","p":"linux-arm64","h":"075w5cfigm7fs3nvnzxj9npvw8azj75pnw5qv2azpjbics2dydl5","r":true},
+{"v":"1.56.2026071808","e":"^1.77.0","p":"linux-x64","h":"0ljss8myssb0ikskzxz2bjbq056xy77w4ccrfq1jn6f7kh8c6fxx","r":true},
 {"v":"1.56.2026071508","e":"^1.77.0","h":"0s0m2s4nnbjm4948b27zbahrc42gbvi1xxvy8dn1m0af58lrjq0z","r":true},
 {"v":"1.56.2026071508","e":"^1.77.0","p":"darwin-arm64","h":"14p8zd6lxjwlp0ailqkx9f9jpdli1fhxjmzcwis9n9nxac141pmg","r":true},
 {"v":"1.56.2026071508","e":"^1.77.0","p":"darwin-x64","h":"06mjdrlcc3lljh9inix4ki08zq9rnp1s8m70xajjbhawf1ganqhg","r":true},
@@ -11579,6 +11585,9 @@
 "timlappe.vscode-elephactor":[
 {"v":"0.1.0","e":"^1.95.0","h":"1513pj5bs2vs89y1sghvn87vvwzij85j7pz5z74dfkxylwwzzh4v"},
 {"v":"0.0.1","e":"^1.95.0","h":"0f3kyzflswzhxm21a841gq4gnxdx0ljw92jqw8bm398l7qfaazkd"}
+],
+"tinylang.tiny-language-support":[
+{"v":"1.0.0","e":"^1.90.0","h":"0vq1vrv4sklbkg4dpm1am0xi53w7z8qmy01k8j9k9cjqy3w69b1i","r":true}
 ],
 "tjmora.vscode-tlo-styled":[
 {"v":"1.0.6","e":"^1.63.0","h":"0rrhdprhpjaq6v4ysds0j4iacvpi8fpzm0vw52vyaqky01vhxbwq"},
