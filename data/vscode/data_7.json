@@ -435,6 +435,9 @@
 {"v":"0.3.2","e":"^1.90.0","h":"19ixrpbiwb88b6amq44mc60km9926zbqbrl0hwfa5zk5k5ma40mr"},
 {"v":"0.3.1","e":"^1.90.0","h":"15qq1f0r97sm7j8jrahfi04r5zpw6lgjkv0hmg1wppd8b6x4blig"}
 ],
+"ankraft.gridtable-preview":[
+{"v":"0.3.0","e":"^1.85.0","h":"0bhrywa0i1nvx5pd322wy20an6l4arpx1bdyq6f29j16kr59cnp8"}
+],
 "anmoti.extension-pack-csharp":[
 {"v":"0.0.2","e":"^1.100.0","h":"0cnbpi82g5xpbgfp9axhlk2j7dd30hdkfcdx5ljafflzzdhx6ma6"},
 {"v":"0.0.1","e":"^1.100.0","h":"1wbn72fkzhpivdq5l6svp38m8777gkam83mic952y8z4749lfz46"}
@@ -2181,6 +2184,14 @@
 {"v":"1.0.0","e":"^1.63.0","h":"1mcycklagfcqaphpn6934lvh78q8n9gzpnmclgbdca208yi9np08"}
 ],
 "embedder.embedder-enterprise-ef7":[
+{"v":"0.3.160","e":"^1.106.0","p":"darwin-arm64","h":"0h1i46qfp28dbabd63pq4ld1wjcxhdk3pyjhqq1pxp2d9w93mssv"},
+{"v":"0.3.160","e":"^1.106.0","p":"darwin-x64","h":"0w3bvrz18vh2hnsq2x0aywgn6awqa7cbi36hs8b7xm39v4l7ff4x"},
+{"v":"0.3.160","e":"^1.106.0","p":"linux-arm64","h":"1dfrpx1kgvxjchkgxwz7aqy2fqzd3xaihhczz0c98nflhw3qvsj6"},
+{"v":"0.3.160","e":"^1.106.0","p":"linux-x64","h":"00xc5i03xx348lyszh5hfv6v1f0vgclpjk96adp1pnk42pdi2ywj"},
+{"v":"0.3.159","e":"^1.106.0","p":"darwin-arm64","h":"0hkmcv5v8fv9pwdidy47h0cvaas2vzzprrxvsswpych5ncsn5kzd"},
+{"v":"0.3.159","e":"^1.106.0","p":"darwin-x64","h":"1qjhmkyfrnwygcg8g154rd1g5drcaqxy2ayiz3bxqxxz26y06fgn"},
+{"v":"0.3.159","e":"^1.106.0","p":"linux-arm64","h":"0gh446kr4w9bydzh57y848kanwaiwd63l6qir7hpws90i4xmi86n"},
+{"v":"0.3.159","e":"^1.106.0","p":"linux-x64","h":"1n70djcyik7ckx3kfhiamczp6rswfgv54rl82xc17ylgknv377js"},
 {"v":"0.3.158","e":"^1.106.0","p":"darwin-arm64","h":"0md0aracjickzwa0ykiq7vv8900j1l1fyq9x3sbs9iwamxya123z"},
 {"v":"0.3.158","e":"^1.106.0","p":"darwin-x64","h":"05zf8vqfnwqwdwnskbjdc6lj9nw769y7caild2p61q9ipkrw05xr"},
 {"v":"0.3.158","e":"^1.106.0","p":"linux-arm64","h":"1mfhgdai146p0za57yhg7glr3rw8dlxl3hr4sw3c19qznyrikgcx"},
@@ -2382,6 +2393,12 @@
 {"v":"0.1.0","e":"^1.0.0","h":"0va3j1z5k8ykzqv0c2mb0nvanmpzba3i8yx89g1w0a3yy85qm50l"}
 ],
 "feima.copilot-alternatives":[
+{"v":"0.1.8","e":"^1.85.0","p":"darwin-arm64","h":"0dcagwc7gci0mmvyp8bna2m9hbr8dk1jsll7nbxkmn94c6gg6c01"},
+{"v":"0.1.8","e":"^1.85.0","p":"linux-x64","h":"063k2m5d28xz72x87vn6763adx9bh01bipwj3863ayaqmyd1cy2d"},
+{"v":"0.1.7","e":"^1.85.0","p":"darwin-arm64","h":"0x9h795295dxq75y5r4d4zbff3z7jhdbwvbxr94n3iaf0137rh9b"},
+{"v":"0.1.7","e":"^1.85.0","p":"linux-x64","h":"0yvfvxhhz3pjc85ih6wwvksm6kc8bdz9wfackcnklbwxivvi6va8"},
+{"v":"0.1.6","e":"^1.85.0","p":"darwin-arm64","h":"1naddiv1lqkhpn5w9rbf8wfi1n73gnhm68309pbk9p8941g6l4i9"},
+{"v":"0.1.6","e":"^1.85.0","p":"linux-x64","h":"1g7038gnq9l8glwsj3i6a7bka0x67vrlm2hk9ywnd8bkn73xwhlj"},
 {"v":"0.1.4","e":"^1.85.0","h":"0na804p32y0fbszbd7fhfrcccdfxpl07sa5r5xxn94g5igpdydqd"},
 {"v":"0.1.3","e":"^1.85.0","h":"0c58yfj7vwmpaqixg5dmm7js2k1ivkv5vp4lacls1jw93f5m3lkl"},
 {"v":"0.1.0","e":"^1.85.0","h":"0g8jl35lkfnbcsnh93qln32zmxcwy34rgcb9m8df97lyispgk1l4"}
@@ -3384,6 +3401,9 @@
 {"v":"1.0.1","e":"^1.0.0","h":"05by0sbrrphq239pawmviy6vz9002yv9zmj6hxnhgdqf1mgryzrm"},
 {"v":"1.0.0","e":"^1.0.0","h":"1j572000903bc4inrc0jkssbq3s38v3bm0bax19lgj34m41qhii0"}
 ],
+"iobend.iobend":[
+{"v":"1.0.0","e":"^1.85.0","h":"1zmx631kqc4sjh2ahy164f9rqgalg8nlsav07i1jj78bwsgpwk4s"}
+],
 "ishugodev.ishugodev-pack":[
 {"v":"0.0.1","e":"^1.104.0","h":"0j5pa976gwpi06n1sd6ir9jbdjhpranjp8ch60b0p4vxcqp0sa3r"}
 ],
@@ -3909,6 +3929,8 @@
 {"v":"0.1.3","e":"^1.40.0","h":"09x27qb5ijriknj3hqpnddjspsai76awyzl49v6iwnmq9mncma0y"}
 ],
 "joericks.jadelang-extension":[
+{"v":"1.1.1","e":"^1.75.0","h":"0ha2sa7n8lfv9vdl7f3kxkszbgy90x5q9xyv983v7q300mvyp87p"},
+{"v":"1.1.0","e":"^1.75.0","h":"0s3qwv5l6wcv0z180k4jdybghcw8lqk2ych38gxg8ik4xzhrf1r5"},
 {"v":"1.0.1","e":"^1.75.0","h":"12g9daynrqhaz4qwpv6x6wsyws4rgk501jxg09ficig45j26drm4"},
 {"v":"0.0.2","e":"^1.75.0","h":"1nxj8gna4nvjpgndp58xjahq23q857av1mr6j9vvc0hrhfjgl13b"}
 ],
@@ -4263,6 +4285,7 @@
 {"v":"0.0.1","e":"^1.85.0","h":"1bff17fbi4gqdp7314llfy8zxf271vpcd1w3fk3nn98w3b3fmya4"}
 ],
 "kswpsclaude.wps-claude-vscode":[
+{"v":"0.4.5","e":"^1.90.0","h":"1ywkp7iznwhs8myhmgnxwyw46chf2z26zb15w3nc5k37xlw6aq4l"},
 {"v":"0.4.4","e":"^1.90.0","h":"01jwy7i1f009gpjqfhhld8jb6dk5jwc4bd5cxqb6wwl6j79cr7bn"},
 {"v":"0.4.3","e":"^1.90.0","h":"1cb343haqih8zqn1qqp1alxd9hivw2wvy69ravfsk0paixjknmij"},
 {"v":"0.4.2","e":"^1.90.0","h":"11navy9ci25nscj96m55sgd4b7ihqr584mxylws79pvfpd01akj8"},
@@ -6910,6 +6933,7 @@
 {"v":"0.1.0","e":"^1.85.0","h":"1xsx8bgwjnr63sk83zvkz9yds30hvskhj1h5xqzyvpjqqjlc76kn"}
 ],
 "reqlan.reqlan":[
+{"v":"1.1.0","e":"^1.91.0","h":"1aq97xnrmgq60f4b9hw6i7k9gahl40aqz68cb188pzhsaggjrn4r"},
 {"v":"1.0.1","e":"^1.91.0","h":"136g7yr0558yak307l233f2zxs51fzg8nn854ad4fmh9ijzg4ph5"},
 {"v":"1.0.0","e":"^1.91.0","h":"199n68sikscc9hwsb81qphrb0hzi4lzx4b1grjs4k4dccdrk5jk2"},
 {"v":"0.1.1","e":"^1.91.0","h":"0kw3kjd5jc1z2kz08w6v8079mk4mj07zf765dcasrx5mq6inxry2"},
@@ -7019,6 +7043,10 @@
 {"v":"1.0.0","e":"^1.71.0","h":"06i141cwdaf6v0fgn40vm3h5xxnqg0ndhcpk8c99g2kdmjb9mkqx"}
 ],
 "rvben.rumdl":[
+{"v":"0.0.286","e":"^1.82.0","p":"darwin-arm64","h":"1s6mkw533dg0wl1p632pr2g3mh0x1iwsvqx6j91mn8zl3wg5ckr5"},
+{"v":"0.0.286","e":"^1.82.0","p":"darwin-x64","h":"0ly3m4fs0qb3hr4wvrib7pi9iy1llkkgqsa13mvf2pmk04h60agp"},
+{"v":"0.0.286","e":"^1.82.0","p":"linux-arm64","h":"1nfd66hz9rjbwnnxcig4ja5wqv1x295qigjh3c7kivqnhbbvmj6h"},
+{"v":"0.0.286","e":"^1.82.0","p":"linux-x64","h":"16b40w1k68d5yayy1dhsv9w8ncqrcpvk4m70596hizgd0kz1752g"},
 {"v":"0.0.285","e":"^1.82.0","p":"darwin-arm64","h":"1fqaz0c10g054vvqngs9r5k3klmml94dzbxsln26k7py8v36jri1"},
 {"v":"0.0.285","e":"^1.82.0","p":"darwin-x64","h":"19x4c9dwly7z5s48jx3dahcv5nw4rp5hczaw71mnq65y783nrd8g"},
 {"v":"0.0.285","e":"^1.82.0","p":"linux-arm64","h":"1i9bv48yqilb37gg0vgfkp0xk3bpjnjggimixcbyh4wbbj2k9nkr"},
@@ -8853,6 +8881,10 @@
 {"v":"2.5.0","e":"^1.95.0","h":"1z205n7syvxdgr7c5nrv6pbj4mk38lgp8c7pgwm6x3n7a4a6bdjl","r":true},
 {"v":"2.4.0","e":"^1.95.0","h":"1029yl6mp2p1mvsh53m72pxi51cyrlrpw1l7wdzii95ihc5pp8l3","r":true},
 {"v":"1.6.0","e":"^1.95.0","h":"1r48a2a8s3s81k9czlnq8bx0bwkg5x5rp3lhpl5nci021d7vcz0l"}
+],
+"unastaziabo.tmtp":[
+{"v":"0.1.1","e":"^1.85.0","h":"1kmg73c4na9fqh2wr85y73b6xk1g800lnxb45s1j2ac9npk6y3hz"},
+{"v":"0.1.0","e":"^1.85.0","h":"0ivn6wkx4czzmp10la6fv2i79z47vz4wnzqg0ps1svr90m7041sv"}
 ],
 "upply.geobid-extension":[
 {"v":"0.0.3","e":"^1.71.0","h":"134bz23wby5h5s19g5pr96i3cwkpkry4jp7y9h2ksziglc0pgg94"},
