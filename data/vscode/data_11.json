@@ -1481,6 +1481,7 @@
 {"v":"0.9.1","e":"^1.85.0","h":"0iz53jwb7mnsk73k88jcry7c7v3qm4dr11l6i0vy6p4bnyhp00wd"}
 ],
 "correiadark.dark-ever":[
+{"v":"1.17.0","e":"^1.70.0","h":"0rw6b2bbf7jgjxh30rmdygfkarlbadwwxm6c4sflkprws840ll6r"},
 {"v":"1.16.0","e":"^1.70.0","h":"0pj3qq1gspnxpjpjnnvaxg3b2mh31k61qqg5fmas0gkzwg2r4x49"},
 {"v":"1.12.0","e":"^1.70.0","h":"0v5vd909rs8k54qjh3zaz3vymyfqbz7vm515ggymnbvgb0f7w6nh"},
 {"v":"1.9.0","e":"^1.70.0","h":"1k4cglwm8ym4l98yigs4g6vi6akpc3a4pcfyam5mdv44v70wz978"},
@@ -1656,6 +1657,8 @@
 {"v":"1.0.0","e":"^1.5.0","h":"1nda9s6p06897kxm64z0gx481a9s56qwlddrf34mc6skvi8p95c7"}
 ],
 "dce-developer.data-curation-environment":[
+{"v":"1.7.94","e":"^1.90.0","h":"130w4r11rswi4iaxsaxzbvrcdr92vki30msgf2fbmawc5wi1xnim"},
+{"v":"1.7.93","e":"^1.90.0","h":"0xl9zzllkrl1csk8i5nhzpsfx5srig3995czp8kspgvfma6lnh0v"},
 {"v":"1.7.92","e":"^1.90.0","h":"0y95aq2hs1nsa7h5r080r6qwq0lp4vcwinr7942diqsysh9s3vag"},
 {"v":"1.7.91","e":"^1.90.0","h":"0l7m3fwkprzh224axiwa50j0wf8r3pp6iimngj5rqb3i2p950p8a"},
 {"v":"1.7.90","e":"^1.90.0","h":"1sa46l1vp6g1pwvg4862qslkkdrmalw2hs7ppcrsvslyw3rbrc02"},
@@ -4625,6 +4628,10 @@
 {"v":"0.0.1","e":"^1.96.0","h":"1jd7j5cldjz66zf6y26qv0azq3y9pni34fz4slw1yzygcxj6qik8"}
 ],
 "mai-engineeringsystems.mai-papyrusproxy":[
+{"v":"2.20260721.7","e":"^1.98.0","h":"1wwn7xjyw86444lqw0fnclgy3asqi5kz5nhgl73sfybzhpz41slh"},
+{"v":"2.20260721.6","e":"^1.98.0","h":"13z36fhzb3j12jh6qb9lgg5n72d5yp3nvh46p8m9qii3xkvwyxck"},
+{"v":"2.20260721.5","e":"^1.98.0","h":"04kalnxyrkvyf5i1ds17c3vwql3f3v44j6q5b1f4q5yl5hyqq6an"},
+{"v":"2.20260721.4","e":"^1.98.0","h":"1y3y28ma3yvcwv790kss4y717h2vq3xxcy33p8k7y4zg4i0ymgch"},
 {"v":"2.20260720.5","e":"^1.98.0","h":"05c1wswlw6z2xqagldp8srsf9b8ffja2yx1xf9dn4ayyx7cy0iml"},
 {"v":"2.20260717.2","e":"^1.98.0","h":"16q0d1nnns6nxqc0gbrlxa73fygwfyhcnr4f73w2csqfqxr2wrpm"},
 {"v":"2.20260717.1","e":"^1.98.0","h":"028qj4yg2slha5qhg64hzdhshbsplpdwdqy164xqn38aq1qn2qls"},
@@ -5154,6 +5161,7 @@
 {"v":"0.0.1","e":"^1.85.0","h":"0zgvh1w2f4qpx141r2cl6w9568ah1ipnrgjj7qq4qg73l7w5cj74"}
 ],
 "ms-python.vscode-pylance":[
+{"v":"2026.3.1","e":"^1.107.0","h":"1blk6jllyhm6mga639iwm7aaplv5r1vg4165s7ah7qsw1fc5yp96"},
 {"v":"2026.2.109","e":"^1.107.0","h":"1qkjzf0vg63zba1l774kh55pc7pcx1q7kvqf0mfbszp1smd20gzj","r":true},
 {"v":"2026.2.108","e":"^1.107.0","h":"1vscs2chvg13kyynbaqybxm4v4n5lfmbagmc1c0wxbhvk8qbjn0n","r":true},
 {"v":"2026.2.107","e":"^1.107.0","h":"1mdqizm2x7sx57wkj9z2b7fxkkxp7ggl0k3qq4l9f1n5gfshqlh5","r":true},
@@ -6653,6 +6661,11 @@
 {"v":"0.0.2","e":"^1.33.0","h":"0dk4rx1wk3c85hp8h0difk892850y5haihakpa3sy74sqfl3c3c5"}
 ],
 "redhat.java":[
+{"v":"1.56.2026072108","e":"^1.77.0","h":"0b8krqw8ndvzb8brgj423433xjxa59bd7fm024vg7fi189v76siw","r":true},
+{"v":"1.56.2026072108","e":"^1.77.0","p":"darwin-arm64","h":"1gj7r8hdk8n1jh70qm6vjdizkw3cxx46jz28in8fkqvnbgj7jafs","r":true},
+{"v":"1.56.2026072108","e":"^1.77.0","p":"darwin-x64","h":"17nanzbp76g2hk0xzhnhnyl09ym42qdvvnl35v0psnj9jrsscqdw","r":true},
+{"v":"1.56.2026072108","e":"^1.77.0","p":"linux-arm64","h":"0f8whhhy322bxw46v064lqysrfgz081hdm4mb785vh6n35p6wr13","r":true},
+{"v":"1.56.2026072108","e":"^1.77.0","p":"linux-x64","h":"0p9ayihaq9a9agcwryam4xk9gwi5zshfivpg1dpbhm1qxlya1gpa","r":true},
 {"v":"1.56.2026071808","e":"^1.77.0","h":"0ks666s3mhx7dk7hydwnnj92gz4rgcq2d22n2m6vxd4gn0iqfbkg","r":true},
 {"v":"1.56.2026071808","e":"^1.77.0","p":"darwin-arm64","h":"04a42h8zp2gh6wj3a9xgwq6n3f88kylnbcvbly9sb531amy4659l","r":true},
 {"v":"1.56.2026071808","e":"^1.77.0","p":"darwin-x64","h":"042jjqq8zzj4agkgiwarrsq2vm5pj2h1mak1vz12zdi6b67sbxh6","r":true},
@@ -11070,6 +11083,7 @@
 {"v":"0.2.0","e":"^1.85.0","h":"1l258wbrr1aghncicip2sfikcwsnb20iw8jyqk7ippy4564p60av"}
 ],
 "srl-labs.vscode-containerlab":[
+{"v":"0.26.1","e":"^1.105.1","h":"1bar5ln4q9h8gygl7m53rk6jym4pcwl1l28ikwvm0yl7gy33ygbr"},
 {"v":"0.26.0","e":"^1.105.1","h":"13ds8hzdy734vjaszvqwsx07qv0jp2k8532vnbdv6w32g312zqwz"},
 {"v":"0.25.4","e":"^1.99.0","h":"1dgnw61mnlfp48sbvpmmyf8y5z9w8khd0hf1vasfjhm2337s1jbj"},
 {"v":"0.25.3","e":"^1.99.0","h":"0nfyr1zd6kjblqzbpk8r41ijrsacw6hr7q0zq1dy5kbx4a91mh77"},
