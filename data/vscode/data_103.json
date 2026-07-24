@@ -370,6 +370,11 @@
 {"v":"1.0.1","e":"^1.93.0","h":"1bly13391611ff8i5rdkv0z81kdf86djixwf46iz6wkcvmcxs1pn"},
 {"v":"1.0.0","e":"^1.93.0","h":"16r082zgm5gaszlxkwv0l6hd52sz6j9n22ypq6zih1lj4jg3rbwq"}
 ],
+"amitworx.bba-localllm-bridge":[
+{"v":"0.0.3","e":"^1.105.0","h":"0bpx2hjm7skpg8qwi82m1dacwq0kn53119ny34d29k7spy7b8yq5"},
+{"v":"0.0.2","e":"^1.105.0","h":"0fqmj955swf86m6zy2hfkf39q5nmr0dxnq5r7ydgpvpz02arc1fb"},
+{"v":"0.0.1","e":"^1.105.0","h":"1knrbnzdh11dh61jn3qwnx2hp1agh7y5in3j467prskpjf266z6d"}
+],
 "amityadav.c-logs":[
 {"v":"0.0.6","e":"^1.89.0","h":"05idkacvwdx30k8bbgfxdxr6zwa21y7n6n7cclbx9il9y817fbck"},
 {"v":"0.0.5","e":"^1.89.0","h":"1xmxz24yg4cb5f1wh4a1vf7c8a60g229iynmyipc9sxdq7ggn9w7"},
@@ -2138,6 +2143,7 @@
 {"v":"0.0.1","e":"^1.67.0","h":"0vjdm9kip125vgzxz7l2pk9jkgjhwf573sx5jkan22lr7h6sxrq8"}
 ],
 "didispace.soloent-cn":[
+{"v":"0.10.1","e":"^1.84.0","h":"17wjhbhlq8zrsx4584j50p3xpwazddmz6w931pc9p71sh7dihhmz"},
 {"v":"0.10.0","e":"^1.84.0","h":"0zr7zhwj5p5dy43v1xllq6wsdk519jz3ziagxrq4vmvringd8s2a"},
 {"v":"0.9.3","e":"^1.84.0","h":"0i4sxhpp1pfhszsgjh0mdi45xhh1ics1avch0xmkaw4ibrrgf9yp"},
 {"v":"0.9.1","e":"^1.84.0","h":"0a0jacjp8rv317xw18cny3zlhq3hcxzzdnx9f52zga2fi0hkv64z"},
@@ -2717,6 +2723,7 @@
 {"v":"0.0.1","e":"^1.25.0","h":"1p2mzcjwx82085qhvgq70w7rl65ybqhg5iqbh6hmzygkv77y31j8"}
 ],
 "garroter.spyglass":[
+{"v":"0.2.7","e":"^1.85.0","h":"0785h8psvpcq7xdplkx7nk3dqasr11619y2jy61yawr6w2pv9wvz"},
 {"v":"0.2.6","e":"^1.85.0","h":"0x6crz05w2z0vlcn2gh64dq33nq37zmff9d5xnkvq3f2kh9ii1vr"},
 {"v":"0.2.5","e":"^1.85.0","h":"14ayx5nm354r171y169bmj2b6iv6drwsf69cbvw0pkldg1zzdl2m"},
 {"v":"0.2.4","e":"^1.85.0","h":"1h1yw89kc31lyhn474r33kqvwsji6jm1rfrgiqm9gylfq7f2jyrl"},
@@ -4261,6 +4268,7 @@
 {"v":"2077.0.0","e":"^1.52.0","h":"17g0dsrshdz5r96vysnsmspkhwc0f6p4gg8s8195g43p61lzxnb4"}
 ],
 "kuaijs.ms-vscode-plugin":[
+{"v":"1.3.49","e":"^1.99.0","h":"18smrqrq3601dmpp605048dckb1xjm86ghaijhrbiv6q4j5n2azy"},
 {"v":"1.3.48","e":"^1.99.0","h":"0jklmm0rrq8kd94j2aihs2z5h5v9fc4qyf9wj7397g3kcqb3l4vg"},
 {"v":"1.3.47","e":"^1.99.0","h":"1g97svz6r5zsj29jqgc9b1iw3rl3kc29xcplkdbjzcy1h6vnb1x2"},
 {"v":"1.3.46","e":"^1.99.0","h":"0k2rhw8rycxbr80w7cf01ybww5jpxnyn6bn1yp4vgf55xlrbn5x4"},
@@ -4762,6 +4770,7 @@
 {"v":"0.0.1","e":"^1.46.0","h":"1gcg0agmf3kb8dr091fsrnvgpj01jxni8sb49wf97b4vw3lcqlmi"}
 ],
 "llvm-vs-code-extensions.lldb-dap":[
+{"v":"0.7.20260723","e":"^1.90.0","h":"11klik5h520xfixf9zs1jrx646vypn18m500k6my2yhjamp8dwr8","r":true},
 {"v":"0.7.20260722","e":"^1.90.0","h":"15s92j9av0mj7vr10c3rsc3vb2c50r0zrrkzcy6j6zh55s13f181","r":true},
 {"v":"0.7.20260721","e":"^1.90.0","h":"10nzi11n7gnp5p5d8piwlniw88gwjcszbs1b7f9qzhfikjqncjp4","r":true},
 {"v":"0.7.20260720","e":"^1.90.0","h":"08m3j1sxm4qwpsms8rxbc53mdiyvdgsljxw2gngysli17sj72pvm","r":true},
@@ -7846,6 +7855,9 @@
 {"v":"0.0.2","e":"^1.36.0","h":"0c57pqxizz9404vkdfs9i7wj2rxs2qz1yj48m77b3bb4lvsmb4g7"},
 {"v":"0.0.1","e":"^1.36.0","h":"0m00142pgaxmk8c3nh3q49canpaanh809f2gi2hl9lazv9r7sfz9"}
 ],
+"sim-too-real.grok-build-powerhouse":[
+{"v":"3.11.6","e":"^1.90.0","h":"0shzwmywpqdas9i160a57ckxfdvz14qs7c42x05y8bds1hc173qr"}
+],
 "simnjs.uefn-verse-logs":[
 {"v":"0.1.2","e":"^1.85.0","h":"1fm43s0qjajywrzmv6kpybp4gpmkl3i4lrqh9k7y386spjb3md2y"},
 {"v":"0.1.1","e":"^1.85.0","h":"0b158kbajsmwxg6p85c4z5dnfgvdfad0a9nklnhn15bskhb4pfq1"},
@@ -8113,6 +8125,7 @@
 {"v":"1.0.0","e":"^1.68.0","h":"1nig5z2qjm8d1gcpkv64h3w208f1dhjw0rwl6rs6kxqp8gg90pvh"}
 ],
 "tarikkavaz.workspace-todos":[
+{"v":"1.1.2","e":"^1.60.0","h":"1is47pslslhnh7qvzd1r3ydanfzikyv7rwl0mdwbb021by695bna"},
 {"v":"1.1.0","e":"^1.60.0","h":"0jackk4vq4rkkqlgxffpldq73rdn7aa1r59fp9g4gh66a8yv0xfg"},
 {"v":"1.0.6","e":"^1.60.0","h":"1vdmj348ymg2h5lhxwg8l6xjjwkvyvkyfbcs14gp6ljc08zkv4wh"},
 {"v":"1.0.5","e":"^1.60.0","h":"1pabs08pm507fapm9dvy1l6ff0jqbdrz3kbixxs1qff4p6vgpr0j"},
@@ -8608,6 +8621,7 @@
 {"v":"1.0.0","e":"^1.102.0","h":"1lajrmym177195mlbw9zws2n7zp4c38308ps3bi9b69cbrgl181s"}
 ],
 "vitalyn.easy-headroom":[
+{"v":"0.2.0","e":"^1.85.0","h":"0d7bzjbm8r2cy113kh6q6lhibfg1n37lpc0gpipciys1b752pilx"},
 {"v":"0.1.0","e":"^1.85.0","h":"0qz4wkl240pyplym9w9vy8f8symanf7rg0q6ykncihl2s80qg6yf"}
 ],
 "vivekkumar27.alert-on-error":[
