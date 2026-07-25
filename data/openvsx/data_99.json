@@ -233,6 +233,7 @@
 {"v":"0.1.4","e":"^1.85.0","h":"1ih8hrv262sx12w7snd5avxfmlm2lx3jxjmmqxcgjqm9kbf8ngh8"}
 ],
 "etienne-lescot.n8n-as-code":[
+{"v":"2.40.0","e":"^1.85.0","h":"1k985lf9gjhjzg02zg43smp5c3c312kllpcsc3p990qbv9r6m1fy"},
 {"v":"2.38.0","e":"^1.85.0","h":"01id2nnmjy86ksd0k6i01dsrl6qb6zvbhfcrb9fk3pl350jhhgd3"},
 {"v":"2.36.0","e":"^1.85.0","h":"1ky43j5j34g67ffk6ilhg67yyxnqaifllpz9hf1hma3qcir1smh5"},
 {"v":"2.34.0","e":"^1.85.0","h":"0x59vvrjypcriygn1s5d31i74lzc67424b28w1kipvgi69sp23ba"},
@@ -1085,6 +1086,7 @@
 {"v":"1.0.0","e":">=1.66.2","h":"1z85shjhx9hq7sxd10i7417b9wy5bk8r6vr5g917np44kksszzvs"}
 ],
 "patchloom.patchloom":[
+{"v":"0.2.0","e":"^1.90.0","h":"0yi7yiwn5lgn49fsmix633x30n7iqzdcvfa741g6yjyai9wigyyp"},
 {"v":"0.1.0","e":"^1.90.0","h":"0k79s1swbchq2viglny1fivz3anm86968vkz8lzrxpch60ydgvz3"},
 {"v":"0.0.9","e":"^1.90.0","h":"00xpsld185zsza4m9vk0q3kxqvsjr23lc41lc0qjsn5mk7m27igh"},
 {"v":"0.0.8","e":"^1.90.0","h":"18kdcr22162rqz11krfdnpvrziapryawgqrscp3jb410c70jjind"},
@@ -1197,6 +1199,12 @@
 {"v":"1.110.1","e":"^1.110.0","h":"0v5c8302hlrvms6w9laa013lsd34wgiw5hr8mw7hih9538s6klxc"}
 ],
 "rust-lang.rust-analyzer":[
+{"v":"0.4.2986","e":"^1.93.0","h":"035626m8bqcvli9n5w766ivy6gjvgg18fa0v2kn17dhh9z22kk74","r":true},
+{"v":"0.4.2986","e":"^1.93.0","p":"darwin-arm64","h":"1039myrqkc8ppkyzrri4ygbkckl50x7cgbxdqm3cwz24n7iq8jj6","r":true},
+{"v":"0.4.2986","e":"^1.93.0","p":"darwin-x64","h":"1lr232sscxr37ar2smck7dgsibm2g4mnx5y3l44hq8vi9k4zvz47","r":true},
+{"v":"0.4.2986","e":"^1.93.0","p":"linux-arm64","h":"1znczj1y9c5ab3h4597640091jna1gsvj8nmffiy39y9hxgpq5yn","r":true},
+{"v":"0.4.2986","e":"^1.93.0","p":"linux-armhf","h":"1fvhvj8h2mbq2w05wf5z078rawn9h5vrvmdji90w1fr77idd0y8g","r":true},
+{"v":"0.4.2986","e":"^1.93.0","p":"linux-x64","h":"02xgbhi6g5khi4jq8xlmhpp54g2297vxr11w1axg2b6nc44arvmd","r":true},
 {"v":"0.4.2985","e":"^1.93.0","h":"18jvcyl10dcfpx79qwcpxhnk1n057dsqf44z8ivmf8r9rab3zkf6","r":true},
 {"v":"0.4.2985","e":"^1.93.0","p":"darwin-arm64","h":"1qq735yxsn0cll2b70gy5z5d5m2b6hpvalbsriyg9xb84m7wmf70","r":true},
 {"v":"0.4.2985","e":"^1.93.0","p":"darwin-x64","h":"0bzgwqrr7rl3gj0dbi4nbgbzarhjlqxdp9mf1hs11qss9xsmwjp7","r":true},
@@ -8915,6 +8923,9 @@
 "toff.markem":[
 {"v":"0.0.4","e":"^1.60.0","h":"1cpajw6rgrpg6d0qa6vh35d57d0wp1p7p6r0k3712d84irmgmn3g"},
 {"v":"0.0.3","e":"^1.102.0","h":"0xzsqbv93rka7ix0sasl9y5nwvwa0ddg3a96rjcnm5zvmrl8cn2s"}
+],
+"tsukinoko-kun.fff-code":[
+{"v":"0.1.1","e":"^1.105.0","h":"0jk959ghak94wksabnbzx5g8f0x9bh9hvpa5f69qqmbjjr5pbk7v"}
 ],
 "ttoowa.in-your-face-incredible":[
 {"v":"1.1.0","e":"^1.61.0","h":"19rcydq97krbnp4ly83gxmzgn69c159jzrnz11jab3drixagwsip"}
