@@ -1957,6 +1957,10 @@
 {"v":"1.6.1","e":"^1.30.0","h":"0qkqf5pd5x8r20275ahxclgaadagq04mln0lhkmv6w34n5qx6ibw"}
 ],
 "devprod.vulnerability-extension":[
+{"v":"1.2026.725001","e":"^1.100.0","p":"darwin-arm64","h":"178y83knmrn8lq932vgg9sshk738nwz0cnh7g971d58y53dvvqgi","r":true},
+{"v":"1.2026.725001","e":"^1.100.0","p":"darwin-x64","h":"14zzsfzj5bjagyjfjqi6kxpb44y5yl2ynkhc2zl6wczb9s672wpz","r":true},
+{"v":"1.2026.725001","e":"^1.100.0","p":"linux-arm64","h":"18iz65d08vssy61ax7j3m7qclz22vy3a45z052y5pvmr8741x8si","r":true},
+{"v":"1.2026.725001","e":"^1.100.0","p":"linux-x64","h":"07q778yfk77jwcs24fp0k115aq937gi348w2jdxp8pdh0b5y65fw","r":true},
 {"v":"1.2026.724001","e":"^1.100.0","p":"darwin-arm64","h":"1bj4wpz4nfmj1kcl8l1na8hkg9b70wbqy6d0xv031ysw6ranaqc0","r":true},
 {"v":"1.2026.724001","e":"^1.100.0","p":"darwin-x64","h":"1g59wpxhc91jxq3z0pz45206450p0ygqwjqcrj64ds57s17sbpci","r":true},
 {"v":"1.2026.724001","e":"^1.100.0","p":"linux-arm64","h":"1xkhlbxfyrhpgghbhj9nvn2bzx8l0v6rdn3vw0mbn8psiwqalamj","r":true},
@@ -8734,6 +8738,7 @@
 {"v":"0.0.1","e":"^1.97.0","h":"1w424zfhhjvcxb6n0gca45vaqwklppf0g3f4khxhpk048n0p7cn1"}
 ],
 "samchon.ttsc":[
+{"v":"0.22.0","e":"^1.94.0","h":"17p0zsa89wrlxvvjzq11kzis0lnjr4c0435bj8rfr8i0vnp1f0wz"},
 {"v":"0.21.0","e":"^1.94.0","h":"1iny7gj99rw4nzcdalk3v09k6d0f5vfqx51vsgbp71v3f0k603cw"},
 {"v":"0.20.1","e":"^1.94.0","h":"1g5rh9f5j5xqid5fzz5x96zpxc8nnrpf0pxjwcazl33jspgx29wk"},
 {"v":"0.20.0","e":"^1.94.0","h":"0k51ry3y7pkij3xn1c1y696bxfcffwf9mgry5s18bcr905gs91b1"}
