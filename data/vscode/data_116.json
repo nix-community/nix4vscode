@@ -1424,6 +1424,10 @@
 {"v":"0.1.2","e":"^1.91.0","h":"019q17arlk66m56ij175sasw2iahn3yaf6iikj1s3sk9fzxafp71"},
 {"v":"0.1.1","e":"^1.91.0","h":"0r46jvrwnf71q4imlvb6yvi0d4gjvny32y9i8vhih6zrvy1xk0zi"}
 ],
+"clustercode.clustercode":[
+{"v":"0.1.1","e":"^1.74.0","h":"1kr2jwhgklm1hj4yzsv2iai7m7gqzix7n3f8kyr75csbw165sjqf"},
+{"v":"0.1.0","e":"^1.74.0","h":"0fq531w8xz95mxhazdh0n0nyrnlycaz0fqb9dgi5c8lxz03gw7ng"}
+],
 "code-mentor.code-mentor":[
 {"v":"1.0.0","e":"^1.109.0","h":"0ci1br75sn5jlj5ngyszh3rv6my27lcn5qzqvcyip45gkqmgica1"}
 ],
@@ -1556,6 +1560,11 @@
 {"v":"0.0.3","e":"^1.95.0","h":"1ykbf3633sr5c8fllcy18ygi5ynsj0cchgnnj091wc0aag99j31g"}
 ],
 "context-engine.context-engine-uploader":[
+{"v":"2.3.19","e":"^1.110.0","h":"004wvxzixjyxrc5jgq9kn0mkbiyq0qz5kr5wk6khyn5vk4k33yy0"},
+{"v":"2.3.19","e":"^1.110.0","p":"darwin-arm64","h":"107nrljqxlfkag27fx7wlslvyn0gihg0h1vbvj186cy0k8q9z7nb"},
+{"v":"2.3.19","e":"^1.110.0","p":"darwin-x64","h":"16mfgfbppsmdcqi3naxfqaib0b2njfwq399ddb2gqd3lwj0sxxkg"},
+{"v":"2.3.19","e":"^1.110.0","p":"linux-arm64","h":"0zb12dcskw286sj68lbkwqjn4gk1ns4mya26zyxhf7ilr0azc2p5"},
+{"v":"2.3.19","e":"^1.110.0","p":"linux-x64","h":"17qy10jwk4wp71jnkj2vgmc7g027jyypm24323hync4pbp1647gr"},
 {"v":"2.3.18","e":"^1.110.0","h":"03ms6jlv9j2ia5jwpdd2w4xyfhf23qgsms4is6jvxkrw0lk3lyx7"},
 {"v":"2.3.18","e":"^1.110.0","p":"darwin-arm64","h":"0hv6j7zdl72nz7xsvwa8c87rx6shckqsq8grw2j7pvs6ibxcvqdc"},
 {"v":"2.3.18","e":"^1.110.0","p":"darwin-x64","h":"0jb4a4rfcdj8kq93skk4sn9xndyj2jgi86njk47i5pxwq6zf62j2"},
@@ -4309,6 +4318,7 @@
 {"v":"0.1.0","e":"^1.86.0","h":"1902dr691xndjmgyli1qv5z9zchxm63b70k07nwm6b0f3n04ih3a"}
 ],
 "icomedias.hfdevtools-extension":[
+{"v":"2.2.5","e":"^1.102.0","h":"0v36s88mma9jhvs0z7k5rqkb4x381ix5i3a0cnlgsx5cxjdl4a5n"},
 {"v":"2.2.4","e":"^1.102.0","h":"0w92ziy833di2zm915c86y365sr8qk6c4gz3vwyi95ysmbsywkvd"},
 {"v":"2.2.2","e":"^1.102.0","h":"18anaqc3mfgah47yf6qr61qvp627ganh21xdb3lg8dv0ngf09xi3"},
 {"v":"2.2.1","e":"^1.102.0","h":"0j4j5ib34a7c5cympll8w3wnpd15r4hvkcbqx1hk143w00yj2wxa"},
@@ -5819,6 +5829,7 @@
 {"v":"0.0.1","e":"^1.85.0","h":"1b261r15y5q0vzyi59f9wi3ayajdv2vidxsf66s05v4pxzw95kgh"}
 ],
 "lynxdi.lynxdi-pdf-studio":[
+{"v":"0.27.3","e":"^1.85.0","h":"0a8vr4vyn6wiw7i919blzxa1397zbx1b1b6agyjjiriqgpyxppxl"},
 {"v":"0.22.4","e":"^1.85.0","h":"0syqdipws2q9fxvzdf441bqmv1bgc8ka5adz600scbxsma49wk11"},
 {"v":"0.22.1","e":"^1.85.0","h":"01hh6zg0qs03crj36kh0ihcgn5h7sz3ar1mbsyspd6i0yipy7kcj"},
 {"v":"0.21.0","e":"^1.85.0","h":"0anqlny5fbsqw4vai5g0jmlzcmqaf0b83f8wjpbahc4r14b7cqnr"},
@@ -7196,6 +7207,9 @@
 "pythonteacher.pythonteacher":[
 {"v":"0.0.1","e":"^1.94.0","h":"04xggijzsx9v16j0rwjzb0pj9bmgnfln3j2zpv2anfdx7ssw5fhh"}
 ],
+"qdev.zapad-ai":[
+{"v":"0.0.1","e":"^1.85.0","h":"1qhm5rymm7qasc27xi80bgmpi7jhxpqb88lpzy6c8l6jlydxjzr5"}
+],
 "qualys-inc.qualys-iac-security":[
 {"v":"0.0.7","e":"^1.64.0","h":"0r4skrb8cp9gymn4x3zrqi8hqr42bmhnmxmw8b988aq07k711fa7"}
 ],
@@ -7211,6 +7225,7 @@
 {"v":"0.0.1","e":"^1.68.0","p":"linux-x64","h":"1rnkp7xidcimj52d1ssisjkbfcp61pvfmnp2b0kf7d1dhngh3sz4"}
 ],
 "quectel.unirtos":[
+{"v":"1.1.2","e":"^1.60.0","h":"18bwvk7vb8wq06vjjg7zxa24s3svwinxqizrs2m76nqj9i5fganc"},
 {"v":"1.1.1","e":"^1.60.0","h":"11cwlvaf8y2kkx6p8fiwgdn0y3dshxqpk3gnqmah1dfg5grh0fq6"},
 {"v":"1.1.0","e":"^1.60.0","h":"0lsmjsmyzg7mswrwj7b7lm89csc7y2jcbglaasnhikzd9m4kdd50"},
 {"v":"1.0.5","e":"^1.60.0","h":"1wambdv3ki8wfph109g33ldj8ndibm340csqriicxbfwwby9v63l"},
@@ -10012,6 +10027,7 @@
 {"v":"0.0.1","e":"^1.45.0","h":"172m9hyhaf5zx5pf254gpdz3zgsnqn281nix9gzni2czw0mns04s"}
 ],
 "zrnge.navy-coder":[
+{"v":"0.2.5","e":"^1.90.0","h":"0ng4hvq1c0h0955shkl9xks12n20p3zj3kiqymgpy62laqjfpw38"},
 {"v":"0.2.4","e":"^1.90.0","h":"0zvdykkmx31f34fwmskqwfyjycqlzfg1px00ngdhi5yhv6biy1gz"},
 {"v":"0.2.3","e":"^1.90.0","h":"1bbzd3jya49x9xni3vmjh3l134l4bgwpzbvib94frm9paazbzirg"},
 {"v":"0.2.2","e":"^1.90.0","h":"1b02wazj3rihzn9c7bvl84y2ijfxx0inzlnr3y89805j22b51b0r"},
