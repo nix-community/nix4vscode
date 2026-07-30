@@ -10,7 +10,7 @@ in
       platform = "linux-x64";
       isOpenVsx = false;
     };
-    expected = "https://extensionPublisher.gallery.vsassets.io/_apis/public/gallery/publisher/extensionPublisher/extension/extensionName/1.0.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage?targetPlatform=linux-x64";
+    expected = "https://extensionPublisher.gallery.vsassets.io/_apis/public/gallery/publisher/extensionPublisher/extension/extensionName/1.0.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage?targetPlatform=linux-x64&redirect=true";
   };
   testNoPlatform = {
     expr = getExtensionUrl {
@@ -19,7 +19,7 @@ in
       version = "1.0.0";
       isOpenVsx = false;
     };
-    expected = "https://extensionPublisher.gallery.vsassets.io/_apis/public/gallery/publisher/extensionPublisher/extension/extensionName/1.0.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage?";
+    expected = "https://extensionPublisher.gallery.vsassets.io/_apis/public/gallery/publisher/extensionPublisher/extension/extensionName/1.0.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage?redirect=true";
   };
   testOpenVsxWithPlatform = {
     expr = getExtensionUrl {

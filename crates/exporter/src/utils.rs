@@ -28,7 +28,7 @@ pub fn render_assert_url(
         };
 
         return format!(
-            "https://{publisher}.gallery.vsassets.io/_apis/public/gallery/publisher/{publisher}/extension/{name}/{version}/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage?{platform_suffix}"
+            "https://{publisher}.gallery.vsassets.io/_apis/public/gallery/publisher/{publisher}/extension/{name}/{version}/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage?{platform_suffix}&redirect=true"
         );
     }
 
