@@ -55,6 +55,7 @@
 {"v":"1.0.0","e":"^1.85.0","h":"0dhpjci4szz33r6w2yc78rdjkk52v96ch52kxpsy38pq5m48sb7r"}
 ],
 "abbalochdev.opencode-for-copilot":[
+{"v":"3.8.2","e":"^1.116.0","h":"1ajkxn9pxjaksqnlv7ghbmj2gy5m4vsgi9bz75g167bbr7y1jq30"},
 {"v":"3.8.1","e":"^1.116.0","h":"0wc2jsrvz1cknd5r2mmdx1jsr8m9gsnf799dpwd28k7s38pkisc4"},
 {"v":"3.8.0","e":"^1.116.0","h":"06m9mlylakjnwv1fqfqlb64hc6crxvgxb7abbrhihjh68ii48khk"},
 {"v":"3.7.0","e":"^1.116.0","h":"13py7f4k5jkh2b4kvdikvmkwwmclawyjvnlh5jv47ha4qpw0iza0"},
@@ -2263,6 +2264,10 @@
 {"v":"0.0.1","e":"^1.96.0","h":"0cw2m2iiga1jplpn3b32vq7iacrpv7q003fgbk62xhyxnl24l7kx"}
 ],
 "djouallah.onelake-studio":[
+{"v":"0.1.2","e":"^1.90.0","p":"darwin-arm64","h":"15gsak4i91iq5mna2jm500d0a4gqklzxm9issnpansvy1bb1mwa5"},
+{"v":"0.1.2","e":"^1.90.0","p":"darwin-x64","h":"16yyxqd77i4w9pb8h6bhk4v143fl7xfkdk85bc6hlk8xswxsl483"},
+{"v":"0.1.2","e":"^1.90.0","p":"linux-arm64","h":"0cdnh4ngvvi1v8dfi0zl4j3awyx63vw086n74rv50b67f28l8dn4"},
+{"v":"0.1.2","e":"^1.90.0","p":"linux-x64","h":"19vxn7bq7adcdfnmxy5f7mazxi25ghx74lvckhw18ckzw38pmzmd"},
 {"v":"0.1.1","e":"^1.90.0","h":"1ckkfc8xnjby4hkf6kmhmz6bmhcw8sfci88mffwhl1ww4a0n3pn2"},
 {"v":"0.1.0","e":"^1.90.0","h":"0ab1xgjjxsbarmzksdrggn2rl3zwn3fq27759588cgqb3s9nq8k2"}
 ],
@@ -4957,6 +4962,9 @@
 {"v":"0.0.3","e":"^1.76.0","h":"0fz00kbaw0fig79s6bds7hqycm2f2hbs6mbgk6kbvvgcja89wdbc"},
 {"v":"0.0.2","e":"^1.76.0","h":"155jcyvdd950wz32mg03cd2rn43zsqcdxx7ha9whbh6wy7j11ja6"}
 ],
+"jimtyler.powershell-engineer":[
+{"v":"0.1.0","e":"^1.95.0","h":"14k1h1dn71ybk4s4igcbsh4cb2s7nkqiph32vxpgb26f3g5l4krd"}
+],
 "jkxln.multi-case-converter":[
 {"v":"0.0.1","e":"^1.25.0","h":"0hf0r0i5s8mbld2sg9qi74wcwjygflnk3znrh1dsdy9gl9bqdqdl"}
 ],
@@ -5039,6 +5047,8 @@
 {"v":"0.1.0","e":"^1.49.0","h":"06gjk3h9v57hqiaxz30xvrmzbyzmpdmxymn311gjjp7xn7cs50sn"}
 ],
 "jonathanmaes.mumax3-highlighter":[
+{"v":"0.2.6","e":"^1.49.0","h":"1lvs2v4mcws68vjj9nr6r4r5zz36hzp9drhrkx9dzyf968ddkm4r"},
+{"v":"0.2.5","e":"^1.49.0","h":"1psh8h20zchcqk44f98p73y0x9j24hirz34svbh5c0n1ghx9lar7"},
 {"v":"0.2.4","e":"^1.49.0","h":"0rhqjkx09fwvizv9ms62m3q0wvsmk534frjrmjba7qgkfdi6gj70"},
 {"v":"0.2.3","e":"^1.49.0","h":"1c21j152r7fkn0nj6anaazlbkw9dm7b0r7c77q3k6x230bdd4mzi"},
 {"v":"0.2.2","e":"^1.49.0","h":"1fq9sd9ii88na75jn2ii5ycvbdlg901dv7vrwfvd80d995gpk6mh"},
@@ -5150,6 +5160,9 @@
 {"v":"0.0.1","e":"^1.70.3","h":"12q672i0jccadah43wz4aqqm2f8sxfb1jj12v8ydi1bhcn5g9f5n"}
 ],
 "kairos-lab.covenant-lang":[
+{"v":"0.9.6","e":"^1.85.0","p":"darwin-arm64","h":"0d87aqv6yxqg20sidaz0yf2arh0a0fqzgjvzn28czlbxb1ixn6s4"},
+{"v":"0.9.6","e":"^1.85.0","p":"linux-arm64","h":"0y7lgzv1nkrvi5nlvqgzk07g56b65nvlg9jb0zp9cimw5b2mclfj"},
+{"v":"0.9.6","e":"^1.85.0","p":"linux-x64","h":"14w83ij6gn1xp854m1frqd74vqlj239572yfdx54h37fxn2cnk1d"},
 {"v":"0.9.5","e":"^1.85.0","p":"darwin-arm64","h":"174w6zb051vljflfhbvv4h695zxycfq9b5yk15y4x52ac7zvkf5p"},
 {"v":"0.9.5","e":"^1.85.0","p":"linux-arm64","h":"0zf5yl82jr30458jwl5gyxwj9ggvk3x0q046mrm9ispqmgk369ch"},
 {"v":"0.9.5","e":"^1.85.0","p":"linux-x64","h":"0i1z9vcb7rfdxynv1b1ywfr8mg8s3d2fn63yillyg52x9cmhkxv6"},
@@ -10456,6 +10469,10 @@
 {"v":"0.12.0","e":"^1.97.0","h":"0xj88bxaj9973ijcns4gpmzjmqc8a7wlhdw2m8kimxfzjsrpkrz0"},
 {"v":"0.2.0","e":"^1.97.0","h":"0r4sk5z75pqqkn3lc51ij1ah018hrnqvhfpd0iwljnl9d42d9g68"}
 ],
+"siliroid.claude-workflow-monitor":[
+{"v":"0.7.1","e":"^1.85.0","h":"19qkhipsg8f4ckf3b6dimp9zddb9d3p245bn05h968b5msygajqi"},
+{"v":"0.7.0","e":"^1.85.0","h":"1ns94dh6yzl5a379y4l255vyfwxymkj718zdmhw6ck25bniqnrrq"}
+],
 "simonhe.simon-plugin":[
 {"v":"0.0.1","e":"^1.96.0","h":"16wxmwzb3hvx76nrqdy5mhwbxl20nb87av3140wi3v6yvgn0syf7"}
 ],
@@ -10506,6 +10523,9 @@
 {"v":"0.0.1","e":"^1.78.0","h":"0fk7nmxs13ccrqn5brdqymfbgp2n8jrphb6l04zlmdlih9is79k5"}
 ],
 "sinnconsulting.loopboard-todo":[
+{"v":"2.16.1","e":"^1.90.0","h":"147y3fy0dx9yy4rzrxvkc9y46ki1g5nf67qjkwfwm38bdk578549"},
+{"v":"2.16.0","e":"^1.90.0","h":"1ln0nnx9clgkajkcfcq96a4pw36c0b4vc8r2fys8niyzvzm3wpr1"},
+{"v":"2.15.1","e":"^1.90.0","h":"0lbfikxhnklx2314xnyxg21dsq0lbz1z20z42fv2yqsnja433fp1"},
 {"v":"2.15.0","e":"^1.90.0","h":"1mw8ka57zhf2c1v76y036ksg5kc4pm9iqhynd245057n5hrq7ldg"},
 {"v":"2.14.0","e":"^1.90.0","h":"1wk5mhl0yr6mrpca3bxddbpj7pky0n5r6g3i73xb8xydljzd0vzn"},
 {"v":"2.12.1","e":"^1.90.0","h":"1qylsgk4h73l0d3ajda1665446924p9f92nirz737675zmlypan5"},
