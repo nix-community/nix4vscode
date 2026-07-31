@@ -108,6 +108,9 @@
 "bearmett.nextjs-url-generator":[
 {"v":"0.0.5","e":"^1.93.0","h":"1d6wdkgpmcgdfhv65jr2qmxgpc84m76rvscrkhv5s5ipxyracfcr"}
 ],
+"bharathikannann.vscode-ifc-viewer":[
+{"v":"1.0.0","e":"^1.96.0","h":"1300fj8r7r3xmzya9hi52qqpfhm2pz6cqs812dd048vwvw6ilbsq"}
+],
 "blackswan.header-helper":[
 {"v":"0.2.1","e":"^1.85.0","h":"0yr2wad1fml021cs9lfg68xqi2xmh9lvhyfns2x6a397wr8dzi9r"},
 {"v":"0.2.0","e":"^1.85.0","h":"16gr3qwmbl2zja9387axfwd2r20qs24r02s2qx377zy3sscb601f"}
@@ -1086,6 +1089,7 @@
 {"v":"1.0.0","e":">=1.66.2","h":"1z85shjhx9hq7sxd10i7417b9wy5bk8r6vr5g917np44kksszzvs"}
 ],
 "patchloom.patchloom":[
+{"v":"0.3.0","e":"^1.90.0","h":"1pjbssq1cqzdbbd6pa9lkzmz3s6nm9w0i9lrr8i3x3mknkc268z3"},
 {"v":"0.2.0","e":"^1.90.0","h":"0yi7yiwn5lgn49fsmix633x30n7iqzdcvfa741g6yjyai9wigyyp"},
 {"v":"0.1.0","e":"^1.90.0","h":"0k79s1swbchq2viglny1fivz3anm86968vkz8lzrxpch60ydgvz3"},
 {"v":"0.0.9","e":"^1.90.0","h":"00xpsld185zsza4m9vk0q3kxqvsjr23lc41lc0qjsn5mk7m27igh"},
@@ -1199,6 +1203,12 @@
 {"v":"1.110.1","e":"^1.110.0","h":"0v5c8302hlrvms6w9laa013lsd34wgiw5hr8mw7hih9538s6klxc"}
 ],
 "rust-lang.rust-analyzer":[
+{"v":"0.4.2993","e":"^1.93.0","h":"1m7lzc8vljika4nr9wf08l32mxmchbflfyf40ahrvmsvbinsdzci","r":true},
+{"v":"0.4.2993","e":"^1.93.0","p":"darwin-arm64","h":"0hrhb7yq7iczd24hz7h737q9m4fizr8crrqd0zl0hfj6bc6dairw","r":true},
+{"v":"0.4.2993","e":"^1.93.0","p":"darwin-x64","h":"0yxqhs0q5jbf2x2f6crpgsw8m7m7r9v7nz035ypxn59mnhms8mdc","r":true},
+{"v":"0.4.2993","e":"^1.93.0","p":"linux-arm64","h":"19gyinsy54a915z0ipgbq59hkv2bapwysavsa27nxsbpi2swdvwi","r":true},
+{"v":"0.4.2993","e":"^1.93.0","p":"linux-armhf","h":"1r41jn0bznansxinh6vzbf0s33g1h3v1ll37vah25v1xjvsap300","r":true},
+{"v":"0.4.2993","e":"^1.93.0","p":"linux-x64","h":"1s1ibzv1jhrr4vff1mx7c30syfc5686r84xq5jl9hsphnbp8v6wi","r":true},
 {"v":"0.4.2992","e":"^1.93.0","h":"1pr90237c8z2ni3ihq7sbs98d05s6vlwnxhn9mlv0d3mdsnk7p5b","r":true},
 {"v":"0.4.2992","e":"^1.93.0","p":"darwin-arm64","h":"02fqgfnxr9iv2mpi937jzbr4nbnls3i813ybpy6a28r629i1gpbj","r":true},
 {"v":"0.4.2992","e":"^1.93.0","p":"darwin-x64","h":"1h20z0rlkxxly5ifzg7p0287wqrr6i2vqxdlwn4qf52hpf6dy3ry","r":true},
