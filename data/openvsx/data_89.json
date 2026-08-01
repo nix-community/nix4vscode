@@ -656,6 +656,12 @@
 "jackmacwindows.vscode-computercraft":[
 {"v":"1.1.1","e":"^1.20.0","h":"19fh1dbw02qlrn5zil4s1bnc8s6wh367yaj794fj7silhkg4ikbr"}
 ],
+"jetbrains.kotlin-server":[
+{"v":"0.0.7","e":"^1.105.1","p":"darwin-arm64","h":"132pzdg0x1glivg1q063hb1i4fs5l7pd9nz5hckjjy5cjhr4iqvg"},
+{"v":"0.0.7","e":"^1.105.1","p":"darwin-x64","h":"0jvrr7rhb32k4g57j92md62xm5kq3wggd928zikjs1ai66rgp3ha"},
+{"v":"0.0.7","e":"^1.105.1","p":"linux-arm64","h":"0lkn1vsbw5g4ci3b82g56sl8g2jvh2gy6a8im6piqwmw843f1vwv"},
+{"v":"0.0.7","e":"^1.105.1","p":"linux-x64","h":"14ks85rchw0mvb25ynf6ivs62nh643c7y9qjrcq4g0c7j2wgdz9s"}
+],
 "jirimachynka.git-file-rewind":[
 {"v":"0.1.3","e":"^1.85.0","h":"12hdzrvgz0rh4mp8mdvy0w7phkcgk63r0rr6nkzcq7dz11qr5dwr"},
 {"v":"0.1.2","e":"^1.85.0","h":"1wl1xmfjnmca526z7gn26n82wggcmznp2sf67m9b4y1j31689s75"}
@@ -1351,6 +1357,10 @@
 {"v":"1.0.0","e":"^1.85.0","h":"0kirzrvj0jp3wz8xkv87n4q46agbp0pa1zwr09q50zfb8z4vygih"}
 ],
 "wgsl-analyzer.wgsl-analyzer":[
+{"v":"0.12.422","e":"^1.120.0","p":"darwin-arm64","h":"0pfgx3fxyjaaq89a39bz0yn2lq2s5nv5z9rhzrs84s504wjvxlg5","r":true},
+{"v":"0.12.422","e":"^1.120.0","p":"linux-arm64","h":"0mxp7s89yyksnc44qjzvkp5qrkhl5ddgdfjsqg4r68lxwx68va2x","r":true},
+{"v":"0.12.422","e":"^1.120.0","p":"linux-armhf","h":"0fw9g5w0wwdsqgj1saaizlh9a0h1wdvsmn1zn0g9n26hfibp6a95","r":true},
+{"v":"0.12.422","e":"^1.120.0","p":"linux-x64","h":"1crf7phb01wl6i5jckaqx3qi732dsiy1ski3gciqidyffv415sp2","r":true},
 {"v":"0.12.421","e":"^1.120.0","p":"darwin-arm64","h":"1argrc10i36x7hzhqx1g07g53a8azqfhhqagr3vfiag6cfxfxzvk","r":true},
 {"v":"0.12.421","e":"^1.120.0","p":"linux-arm64","h":"1pa982d7fsv8p66dixm5hp464xz5s07a7p13vaazk6drirz6ib1q","r":true},
 {"v":"0.12.421","e":"^1.120.0","p":"linux-armhf","h":"0l51qymlkldr0nd1y1a3nvcclijndwp7n2chj4fgqxg5m7afj398","r":true},
