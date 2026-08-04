@@ -42,6 +42,9 @@
 {"v":"0.1.4","e":"^1.85.0","h":"14pj4r5wqsr1d9ws3ya6bdqy6jibbkspk2sy31phiv67v2c5khxf"}
 ],
 "aizenvolt.damocles":[
+{"v":"2.19.1","e":"^1.123.0","p":"darwin-arm64","h":"0k32xx8lk4vndy1jmkvc6pvjx2d7nf5s4spsvgr34p4ajjmmqaxh"},
+{"v":"2.19.1","e":"^1.123.0","p":"linux-arm64","h":"08n6d02c0x97bfni1p5yxs4ynxk2mbr21vp3nz5n8cnxzjk36xdp"},
+{"v":"2.19.1","e":"^1.123.0","p":"linux-x64","h":"1prsaikb2cfgr167d2bspm2vsj5x4q0ndjyl5kllwf9s2ysk58ps"},
 {"v":"2.19.0","e":"^1.123.0","p":"darwin-arm64","h":"0fa2zx5nn66cik5vbc2ysfinjn41cqc482rgxx9pmn85fgn1yxjr"},
 {"v":"2.19.0","e":"^1.123.0","p":"linux-arm64","h":"07slc6wmqnbmafwzy843lwxs6cwx8wd391i6g2wzvhnr2n03yf5k"},
 {"v":"2.19.0","e":"^1.123.0","p":"linux-x64","h":"1rnymzsf6bprf1wzzl5plqzvsfc0crkzprb7a02jwmbnyzsij7a3"},
@@ -1222,6 +1225,7 @@
 {"v":"1.0.21","e":"^1.75.0","h":"01kn081cn6wwil872mahfsk7ikk38y40jbl8raqi268bnxxvr12i"}
 ],
 "krevas.local-model-provider":[
+{"v":"1.1.3","e":"^1.100.0","h":"0lq1wwsl16287gdys1lr7lam3b2vg2l46lm094d6z6ljb0qxnq3m"},
 {"v":"1.1.2","e":"^1.100.0","h":"0c0lmafk9pi6j9x152nhqg0cmz07wr03d6z2gjr1izyqf27inf54"},
 {"v":"1.1.1","e":"^1.100.0","h":"1i2ixpzvww18nmyfa34gw80s4i8lq1jdil8y6qsk63fysnyxm8sf"},
 {"v":"1.1.0","e":"^1.100.0","h":"0hys0xx3739gf18dk40ia0d103nykpphrhxmh4zlq047d11gzrif"},
@@ -1379,6 +1383,10 @@
 {"v":"0.4.1","e":"^1.52.0","h":"0qa878slqy4flkplh7jyl850pv6m6ssdi4xv0r52vblw4h92m0i4"},
 {"v":"0.4.0","e":"^1.52.0","h":"0xjdn6i02cp7cv8z8klhnv6a6wp9dldjch9ws6v903djidx00kgj"},
 {"v":"0.3.7","e":"^1.52.0","h":"008gzzz0n6x4s1gsrbxxdqz1znrdd9pcmg4smag7ck2jh2cry1ql"}
+],
+"opticquiz.opticquiz-colorblind-check":[
+{"v":"0.4.1","e":"^1.75.0","h":"03wl13p9jvhhb120ird83abinzx1nbzgcy03s8qq6ciddndvb469"},
+{"v":"0.4.0","e":"^1.75.0","h":"16y3jqxjm625aqgmbnvddnrmbbiybr6aihnmvjpsj5mjkrfv00ks"}
 ],
 "optimalai.optibot-extension":[
 {"v":"1.2.1","e":"^1.85.0","h":"15bvjlqi5krlh03k17m6771vbxbdpj0gxr3qgaagmrsgynxcx1z6"},
@@ -1626,6 +1634,7 @@
 {"v":"0.2.4","e":"^1.85.0","h":"0x9vfv3cdw33hlp5si2bf7bwjla6cib71yknx2pff7hnjq0xk8g8"}
 ],
 "vmware.vscode-concourse":[
+{"v":"2.0.2026080400","e":"^1.75.0","h":"0799akw5qvfbck1zfbiqbsp93h3qpvcp05m72mn35z00h89y40gf","r":true},
 {"v":"2.0.2026080100","e":"^1.75.0","h":"1iwm6g6086fgx4hswzy990myfbqnc1lpiznd0d2cdq71mhgc1lks","r":true},
 {"v":"2.0.2026073000","e":"^1.75.0","h":"07ldm6schppcx4ac3mcvyc2aww97mr5j0j654rxbmar19rw5403z","r":true},
 {"v":"2.0.2026072800","e":"^1.75.0","h":"1i9ckw28jgb3jsy96k0vsql1ch2vx48gx1s9hnsv12cfigcagbrd","r":true},
