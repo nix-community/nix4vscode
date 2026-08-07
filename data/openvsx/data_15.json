@@ -40,6 +40,7 @@
 {"v":"0.1.5","e":"^1.19.0","h":"16lhscq8j7l489bci27i5wdd684w8j2nj8baayhw7rmxzx6igkx4"}
 ],
 "barineco.perwrite":[
+{"v":"0.0.31","e":"^1.120.0","h":"0f6rkw2chq7wx4wyn5cgzw6jqx2sacpy67n5mc4x8dwc5wahrlxc"},
 {"v":"0.0.30","e":"^1.120.0","h":"0a5gv0h4qr59hl87xanc5nn52jbrwr8msvw5pczj7bq65948hava"},
 {"v":"0.0.27","e":"^1.120.0","h":"1ihpy4fga1niv9mj7hkkhfpccgjfmlcz2v1qgci48zqfi979aiak"},
 {"v":"0.0.26","e":"^1.120.0","h":"15djq65b1vqvpnjr6yh28cvzs8jnb7mh38nvq285b8n463mrsn0s"},
@@ -302,6 +303,12 @@
 {"v":"0.1.5","e":"^1.105.1","h":"0a5kdwvv4x45pmj1kwva2yyi8jam4ksnnmbgqxf7bdv3hn8r5k4h"},
 {"v":"0.1.3","e":"^1.105.1","h":"0gjlrys59868jphm06grdl7cp110k3gp26zl3kr94n6v0jk6ifwq"},
 {"v":"0.1.2","e":"^1.105.1","h":"1nximdc8szfbbnwgnwdiqblcwkqq3pkjbjr8wfzkxqx3vd0hdfqn"}
+],
+"franciscobrioneslavados.listener2prompt":[
+{"v":"0.1.3","e":"^1.85.0","h":"1kmsmg7zkgh7bs9pvps0bw27p6lswf920smarsdi96zg2jiqi8a8"},
+{"v":"0.1.2","e":"^1.85.0","h":"14hi685g77cvajmg7rmlkyc38h5g395ynp5ik7ba3mrz0lgzvdkr"},
+{"v":"0.1.1","e":"^1.85.0","h":"0zs092m80cm3ziqyf20nswv9vbw7x2ppzmg5vxlwf3iq0hdi404h"},
+{"v":"0.1.0","e":"^1.85.0","h":"0lwcbv0m8xh7v2p928d35fww135ppgy1qyk280hhb35cr038w53j"}
 ],
 "gancao-webteam.gc-workflow-helper":[
 {"v":"1.5.4","e":"^1.75.0","h":"0ghsdlqcm7asx62nkpdy5zwr3rh3ys82qkqdriwchrc85hj6vgbq"},
@@ -658,6 +665,11 @@
 {"v":"0.3.0","e":"^1.90.0","h":"1xavmprmzmfdbi4hg9cr81pk9rn5g1hmmr256g159z4ixj2jlw3n"},
 {"v":"0.1.0","e":"^1.90.0","h":"148x8b5m6qijw8g1sflbwp70m0fwns4cjinwcn1kj308sf1wxd79"}
 ],
+"n0m4dz.remote-host":[
+{"v":"1.0.3","e":"^1.85.0","h":"1zf0mm34g3zqid0471kyjfdynrnjy9r0l9v1ck8nassfpqm9pksb"},
+{"v":"1.0.2","e":"^1.85.0","h":"1s47l9k4xf91q2asb2a09k163al7fwdf42jsa5kndvm8i2rbsa76"},
+{"v":"1.0.1","e":"^1.85.0","h":"1pw9zmdbygcbwihdfr44l1ir55wk6b2nnqb0fnkpjsk6wkx02dyp"}
+],
 "namopins.prettier-pro-vscode-extension":[
 {"v":"11.0.3","e":"^1.80.0","h":"19zjybpn6jy41j0yrk37vlqskh3ll05h0cbr3519imr9yia3akgq"},
 {"v":"11.0.2","e":"^1.80.0","h":"1icib6b6hlpa3ry5wi4qcf1sbsrmm4q15shssp998mk5n10sv2xp"},
@@ -942,6 +954,9 @@
 {"v":"0.0.2","e":"^1.89.0","h":"1kxxiplj0nipjbxqy97jxlpc6bdx0s6s6zl3hdizlk64zns208zz"},
 {"v":"0.0.1","e":"^1.89.0","h":"0lvpbmk91jjm2m7g65r6gfgpgwrw9h4ss3wzfmpxf1dz5na40bvf"}
 ],
+"tipandtale.bts-pastel-purple-vscode-theme":[
+{"v":"0.0.1","e":"^1.80.0","h":"1sdnaa1nkf1l436fzw7bc89crjxxfjprgwq4fxrbxqawkzkxxcpp"}
+],
 "tokenrollai.recorder":[
 {"v":"0.0.6","e":"^1.90.0","h":"1f93sdd2n7dsvp9b2srbvzcw6na0qc64djyjrhf5qhdbn7larxav"},
 {"v":"0.0.4","e":"^1.90.0","h":"01dvvi0kiricjfhl9hw0k8nmfxmgqrgv9az28zhgdjj9r62qcqjv"},
@@ -950,6 +965,7 @@
 {"v":"0.0.1","e":"^1.90.0","h":"1q5wba5vxcsj8i8vq6dq59g1l2l7fsn95ag9k049dvmmrmskas6w"}
 ],
 "toppymicroservices.beads-git-graph":[
+{"v":"0.7.20260806","e":"^1.120.0","h":"0js0sf4k7zgg1v8hmans8riby2cbqzraak7j46pdh60p1d1k4fqh","r":true},
 {"v":"0.7.20260805","e":"^1.120.0","h":"1rg94j1pi393bdhj37hw7mcz06sji23isqjhpx8lz7bzhn1havf4","r":true},
 {"v":"0.7.20260804","e":"^1.120.0","h":"12d1mdfxrrbh51n5r3kicqx0bax7i3phwi2d6blrgyhf8h4k3429","r":true},
 {"v":"0.7.20260803","e":"^1.120.0","h":"0j5yjpcz6hbcghpfsl7dpadma28vb4wv0zp35nrvkpd5xsbz7v7x","r":true},
