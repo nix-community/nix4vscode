@@ -34,6 +34,7 @@
 {"v":"2.10.0","e":"^1.74.0","h":"0qhc1ykhd2gaf4r7q2cb3gy16g76fz0cyg6jcq1rxvm2hlbpri7d"}
 ],
 "anandshah.sqlite-pilot":[
+{"v":"0.4.1","e":"^1.75.0","h":"0idwj72k044avx1vkxnk0666rrc84cg3gsq5rjiazk2dq5a5ns8b"},
 {"v":"0.1.0","e":"^1.75.0","h":"12sj1f3wjk29y7ihkylq1vn3xi381wprxyfjb5nsqipjmfizk9d1"}
 ],
 "anandsingh.pybricks-runner":[
@@ -1100,6 +1101,10 @@
 "itzhakl.claude-code-voice":[
 {"v":"0.8.0","e":"^1.90.0","h":"06ycp06z4mw68wffp3hczrvg59gay1qc6svvry6a20z47nwjwnbp"}
 ],
+"joeltok.yamltabl-extension":[
+{"v":"2.0.2","e":"^1.85.0","h":"074n9fcgbkr1gz2kkjjwz86wapwabqyl803w1nwbn00iihy3mhdc"},
+{"v":"2.0.1","e":"^1.85.0","h":"1y1yfcp4l0w8isdzv2lylh7awjg8wz2d8ih72jlavf7ia4dgf1cg"}
+],
 "joshraphael.rascript":[
 {"v":"0.5.2","e":"^1.105.0","h":"0lks1z3spxc73q48afk5ynh5hmvfnfacyad8wp2pwxjm5frjb7ry"},
 {"v":"0.5.1","e":"^1.105.0","h":"0jfxkb0k8k0n6r3svsz54n5a9mxgdqqqrbnvr3qx3pmjh20kpk1l"},
@@ -1185,6 +1190,10 @@
 {"v":"0.3.2","e":"^1.74.0","h":"1xkxqx51fwx2sr8n2wa54bgyx6czs1hlly12vdalgbjsqgran7jb"},
 {"v":"0.3.1","e":"^1.74.0","h":"0rr1aaha1i0fmgsmj2ybs441yj76qynh65snx6b0jj8ylmyhppsj"},
 {"v":"0.3.0","e":"^1.74.0","h":"03ln3k9y227hqp39cc4nxca4bdcz2ryaddln3hy3aq8jn79fwmh2"}
+],
+"kuaishou.budapest-vscode-extension":[
+{"v":"0.1.1","e":"^1.97.0","h":"0y5k1dxxdk2bah8s79ld2p8p2dxhbdsrpn0i5vf8py474iy12yb1"},
+{"v":"0.1.0","e":"^1.97.0","h":"1p3dnxs1r0amsas8bhrx0yyk9jqw91c839dgmyf8pb1vc3nhy5mb"}
 ],
 "kv9898.positron-r-package-manager":[
 {"v":"0.2.5","e":"^1.96.0","h":"1l6s9nyk9xwgn99alwngcwjaky283n8mllvj500n4kc3rwj6imi4"},
@@ -1310,6 +1319,11 @@
 {"v":"1.1.3","e":"^1.52.0","h":"04qdmv4xil899xz61kqj2v8y7i2j7ijbhvwxvnjp8qp7b487nn9m"},
 {"v":"1.0.5","e":"^1.52.0","h":"07w09i66giv8p9a5w1bkpsqd7fvsgkh82m2raryfjm40kdn460fy"},
 {"v":"1.0.2","e":"^1.52.0","h":"160md16sw7z1mcbf7q0sajri9fjfkdmg03ybd32v0jbams5pb1yn"}
+],
+"pragmatest.lvkit":[
+{"v":"0.6.3","e":"^1.101.0","p":"darwin-arm64","h":"189nkmdcqyfixc67ajn83z1a0ylxdz0gf1i73yj426xf5jf0kixj"},
+{"v":"0.6.3","e":"^1.101.0","p":"darwin-x64","h":"0b2vxcz83qyp7cmiwxf0y29kl88swnshi6f00hfh0y4hjmqmg3zk"},
+{"v":"0.6.3","e":"^1.101.0","p":"linux-x64","h":"1c1bxgichmdcwlj34qj2894hz62f8ylwycb795sj4ijvz5apa5gw"}
 ],
 "pranoybiswaas.youtube-music-streamer":[
 {"v":"1.2.3","e":"^1.60.0","h":"09nxqijlr5ic572nqcj1i4kz0s7v0shinr8z4zx49x6brv8bhjk6"}
@@ -1909,6 +1923,8 @@
 {"v":"0.2.1","e":"^1.90.0","h":"1bxzbmawnc6fihmf5ixra7pzlp965q73j9x2m6g6a7znxcfvj0a0"}
 ],
 "winterdrive.virtual-tabs":[
+{"v":"0.11.0","e":"^1.75.0","h":"141s630yq3i3jz9kjz2q7f577m5np78nkbqmk9wivyyvgnaps3w1","r":true},
+{"v":"0.10.0","e":"^1.75.0","h":"0rhgq3d8l4nvxqkif9s58x7dmsimdsnmdyg2j6ai2c4ycfb3ipp5"},
 {"v":"0.9.0","e":"^1.75.0","h":"0mv8iypcwmmfxhfa38yxwi6c67bcsw3dm7bhi4k66x0021iniy4q","r":true},
 {"v":"0.8.0","e":"^1.75.0","h":"124w12shndbb7a86qp77v40ljavrjpiyn8afrndspkirx9z7h44n"},
 {"v":"0.7.8","e":"^1.75.0","h":"0xydkgg7n870ixk027vy7sl19lpq4ail3l2d1mwpbhfyiqwxh16k","r":true},
