@@ -1958,6 +1958,10 @@
 {"v":"1.6.1","e":"^1.30.0","h":"0qkqf5pd5x8r20275ahxclgaadagq04mln0lhkmv6w34n5qx6ibw"}
 ],
 "devprod.vulnerability-extension":[
+{"v":"1.2026.903001","e":"^1.100.0","p":"darwin-arm64","h":"1g1gj4zmxiyn96jgc9nk1qbn36iz15xj46nv1n8n7wj9lhaw0bpi","r":true},
+{"v":"1.2026.903001","e":"^1.100.0","p":"darwin-x64","h":"1zs6ik80zq1r880wv6rxvs7b0gsfasysjkbv5xll20bnwpidk9dc","r":true},
+{"v":"1.2026.903001","e":"^1.100.0","p":"linux-arm64","h":"00drndprxy87r93jj323hv367cig2vgkw1lnakn5aqjrmm03ikj9","r":true},
+{"v":"1.2026.903001","e":"^1.100.0","p":"linux-x64","h":"1gacm87hd7yfgihdpjj4fqrr284r1hkm6vaw57cq01ifglsfhinq","r":true},
 {"v":"1.2026.902001","e":"^1.100.0","p":"darwin-arm64","h":"1gvk85701gn7jj30cz94rcm3lxxixy2c3pazk5kinjpld39bc18m","r":true},
 {"v":"1.2026.902001","e":"^1.100.0","p":"darwin-x64","h":"0836ihd7nkbzf9llwbd24mm1giv14cv02x20gxdpw365y4ib49yh","r":true},
 {"v":"1.2026.902001","e":"^1.100.0","p":"linux-arm64","h":"0rk21v24qsmszr8ba8ifq9bh3fg7rq0gydh0kp5z50j2ps0hinmy","r":true},
@@ -5212,6 +5216,14 @@
 {"v":"0.0.1","e":"^1.66.0","h":"0v47cvhr9kc2q9r3i30l5ssw6g6p24iz95fxcn6dx1jh6bgypnkb"}
 ],
 "google.gn":[
+{"v":"1.17.0","e":"^1.82.0","p":"darwin-arm64","h":"0c9825rm1dwdz9ijv4p63p51f7aw3x2dny8l8mw3ii6rmr6mifww","r":true},
+{"v":"1.17.0","e":"^1.82.0","p":"darwin-x64","h":"12fvr9cf9h9hc9ncrslln5zl8hrabnxk4n06q63gzfagaw6n8yhf","r":true},
+{"v":"1.17.0","e":"^1.82.0","p":"linux-arm64","h":"0q8r0lwxq06z6g3y4a5nc4cr5fg33jcahzc8rn61s0zq1gavw467","r":true},
+{"v":"1.17.0","e":"^1.82.0","p":"linux-x64","h":"1yg6hm7wiil641pggd5hyycblqmmjaswd71yphy5w764kwg3186m","r":true},
+{"v":"1.16.0","e":"^1.82.0","p":"darwin-arm64","h":"0p1v8c6q8xj10ly4ap2smkrdal7z2hyyq8jwn996g8ayy303qahh"},
+{"v":"1.16.0","e":"^1.82.0","p":"darwin-x64","h":"1dxg0jlx7c4amvkf0xfs9x34928rpvv1ah05b84rgric5zs7p8sq"},
+{"v":"1.16.0","e":"^1.82.0","p":"linux-arm64","h":"0kbza7h7l04ci8lrlv85hy62df88cagssg8fwcyi01i65zw81rx7"},
+{"v":"1.16.0","e":"^1.82.0","p":"linux-x64","h":"0hvgskld9lwzghvr4d6bzl9w7qic35mxjvz7in0pywy62rhazq64"},
 {"v":"1.15.3","e":"^1.82.0","p":"darwin-arm64","h":"0i1c9qqjyg5376lk67dam3nmz1csiil5vngq3p5zxp3gani0ydiy","r":true},
 {"v":"1.15.3","e":"^1.82.0","p":"darwin-x64","h":"1bch281cnkl0pb7zdqa9bpsvkxyn1yc9bc5yvxc7k3r5bak4gn8r","r":true},
 {"v":"1.15.3","e":"^1.82.0","p":"linux-arm64","h":"1zyc7fdnf1vgip3m36yxja4v66c4b7vvsgmkxpapfqm4acjdpfh0","r":true},
