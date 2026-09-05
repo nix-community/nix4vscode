@@ -259,6 +259,9 @@
 "aga.addons-maker-plugin":[
 {"v":"1.0.1","e":"0.10.x","h":"1yixv8g8xi8v800919x993jljf8fdarzdzk1b9smkbm9zxm449qy"}
 ],
+"agent-review.agent-review-security":[
+{"v":"0.1.0","e":"^1.85.0","h":"0vpykia4cav6y2h2al3a2ffr9jff2x208lj0rwqrwzynrw12ha3s"}
+],
 "agusrdz.harmonia-shortcuts":[
 {"v":"1.0.0","e":"^1.85.0","h":"0a5pd2m4b1n47dbinka25ng3mgjchvyy93nmj0rqajg96gbmh4qm"}
 ],
@@ -881,6 +884,10 @@
 ],
 "balduinlandolt.zio-snippets":[
 {"v":"0.0.1","e":"^1.74.0","h":"0p0kzwknzd9samq5wxcrcdajr8manvf6dg9bv5zm1zfrsxnbwqj3"}
+],
+"bartosz-warzocha.openspec-ledger":[
+{"v":"0.1.1","e":"^1.104.0","h":"1xn0zp2glxy034ijf8n20plbaz807disvrmq53gc8yc7cwsyvgjm"},
+{"v":"0.1.0","e":"^1.104.0","h":"0l381abg887xly0rnv98mpb8yqmshz8kbbw7azr7klasndh2yw15"}
 ],
 "bcanzanella.openmatchingfiles":[
 {"v":"0.5.4","e":"^1.31.0","h":"0n8ffxqa9mwmg3y01rik67n2zi7pcqb2pmw6nyi84h897r5jfi52"},
@@ -2020,6 +2027,10 @@
 {"v":"1.6.1","e":"^1.30.0","h":"0qkqf5pd5x8r20275ahxclgaadagq04mln0lhkmv6w34n5qx6ibw"}
 ],
 "devprod.vulnerability-extension":[
+{"v":"1.2026.904001","e":"^1.100.0","p":"darwin-arm64","h":"0rdf493szk4pjzz4145d46k3yac2hwlws6ng346yyhp0yd77b7vh","r":true},
+{"v":"1.2026.904001","e":"^1.100.0","p":"darwin-x64","h":"1n7wa93chixzm4ghsbwxykznci4qljfz9xddk371ij3n4mwpc637","r":true},
+{"v":"1.2026.904001","e":"^1.100.0","p":"linux-arm64","h":"0wkvhn6awxqp21wk6yi5dnbhcxlixk4ifwv8jxbbm6p49q0wrhvi","r":true},
+{"v":"1.2026.904001","e":"^1.100.0","p":"linux-x64","h":"0mdjsfbh780g2ywpx2a16hw802p7z2f7b2jjkspa3pqaqdqgqji2","r":true},
 {"v":"1.2026.903001","e":"^1.100.0","p":"darwin-arm64","h":"1g1gj4zmxiyn96jgc9nk1qbn36iz15xj46nv1n8n7wj9lhaw0bpi","r":true},
 {"v":"1.2026.903001","e":"^1.100.0","p":"darwin-x64","h":"1zs6ik80zq1r880wv6rxvs7b0gsfasysjkbv5xll20bnwpidk9dc","r":true},
 {"v":"1.2026.903001","e":"^1.100.0","p":"linux-arm64","h":"00drndprxy87r93jj323hv367cig2vgkw1lnakn5aqjrmm03ikj9","r":true},
@@ -6477,6 +6488,7 @@
 {"v":"0.0.1","e":"^1.78.0","h":"0h4fysz5pd1mbm7lhi1s3j4s3vzpjjw0s0chlmbb4rxk4xras7v8"}
 ],
 "jshinonome.vscode-q":[
+{"v":"5.0.2","e":"^1.107.0","h":"12m1b9m1b99pc2akwqbfjvrjydckfz32b58by9in9rxfd9jy67xm"},
 {"v":"5.0.1","e":"^1.107.0","h":"14ihgz50sp665nxr02i2ph6ydbgwmw5yv06lqriyrmri05ck8w0k"},
 {"v":"5.0.0","e":"^1.107.0","h":"07sz34jdx31l1clz3ljg4gardjycn8shb0wivyxi9xiprgd9197h"},
 {"v":"3.2.2","e":"^1.82.0","h":"0shhsn34c6dkr0dd2ziwmrxyfvhc5b22qlsx92yfxp3nbcmf3pm9"},
@@ -9121,6 +9133,7 @@
 {"v":"0.0.1","e":"^1.97.0","h":"1w424zfhhjvcxb6n0gca45vaqwklppf0g3f4khxhpk048n0p7cn1"}
 ],
 "samchon.ttsc":[
+{"v":"0.28.6","e":"^1.94.0","h":"1s3s7a61vd8dvdabcpwxxzv77lds2qlf409l1w6ki4zg0bxjy9ng"},
 {"v":"0.28.5","e":"^1.94.0","h":"003nmidbw37748sy4lzd0h9hwcvn87b9bwxjx2cvrpjg2vm0rifd"},
 {"v":"0.28.4","e":"^1.94.0","h":"04hg672azgqw2w7z3pg9w9sivf54g3vdjjlhzsvyh1fsppyrzdsr"},
 {"v":"0.28.3","e":"^1.94.0","h":"07a2iim6082bb694n09fskvc1fmp52i465sxqwcpc35a9b9pcna8"},
