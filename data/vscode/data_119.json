@@ -1457,6 +1457,9 @@
 {"v":"0.0.2","e":"^0.10.x","h":"1w9vgl9160lqfxi5s1qlb57015qm06gx6qvbc3a33b7jzxb9l7f8"},
 {"v":"0.0.1","e":"^0.10.x","h":"1yyjcnhvjgg46ja0nab80lzvlkh42xx1jsmkcaxkjvbg762fljij"}
 ],
+"chiragtak.errorlogger":[
+{"v":"0.2.0","e":"^1.93.0","h":"0rz5fx0f06zvlpnhdnwjg0b1789638mfqki4rnk0fmninp21v1gz"}
+],
 "choiseongho.boj-starter":[
 {"v":"0.1.6","e":"^1.92.0","h":"13rsddj4icsv4lbsvaqf885kpx8ilrbqapsjhan11jc75l0ay0zj"},
 {"v":"0.1.5","e":"^1.92.0","h":"1xa5j0kn4mj8qb5x8vlf9sq9f5hhg941h6vbpv1xlhfyxgc92z88"},
@@ -1477,6 +1480,7 @@
 {"v":"1.0.0","e":"^1.0.0","h":"1p0nz0lbqkwls97hrmkiphvh45y69vr1jvbn1z1js81zw46xbc7a"}
 ],
 "clawagents.clawagents":[
+{"v":"1.0.181","e":"^1.85.0","h":"0dymbhhrvx9r8fvnp0ghwm1vkvg8jhqhsd0vyn18239sb49jwn6b"},
 {"v":"1.0.180","e":"^1.85.0","h":"1z9gqf83jlfpv8f2jn0qn26ahid3gfp1bxvp26gigjdf1hrqjark"},
 {"v":"1.0.179","e":"^1.85.0","h":"1nigx0b0hhwpqsswpd0crwwhskni2vdnchd67w6a05pcabqgml5l"},
 {"v":"1.0.178","e":"^1.85.0","h":"038395i716qyril0c8c10rpqi0jsadwa44i91zg3bvc36cmqipl1"},
@@ -3765,6 +3769,7 @@
 {"v":"0.0.1","e":"^1.18.0","h":"09x21zm21800zgxbkcwq661pqq3f84gpyqg099f0x7zbvibkc4pg"}
 ],
 "gb-bittencourt.ozurac":[
+{"v":"1.1.0","e":"^1.75.0","h":"1z08c92h4dr43mywmaqsyrx5xfbyaqb7kkq8aczbfddbf2f7k1ly"},
 {"v":"1.0.4","e":"^1.75.0","h":"19dgydkz046lgxswdcckx00v7ygj5531w51skz5ddnkilj1qbvlv"},
 {"v":"1.0.3","e":"^1.103.0","h":"1s101qjxj8z9aj8xif9w0yfdji5svi9fq4039bhxkvj34nn7w82j"},
 {"v":"1.0.2","e":"^1.103.0","h":"01ham8sqfpnk84a2n8g7rjjiy87hab9chhmr35646gvwx59zpxrp"},
@@ -6591,6 +6596,12 @@
 {"v":"1.0.1","e":"^1.81.0","h":"1xqa6axjcl957dgkimp4147gwshhh76zz825q7k3vwbg5irhwx3c"}
 ],
 "obukhovai.image-compare":[
+{"v":"0.5.0","e":"^1.85.0","h":"0hjkbclpvz7njygkzfhsnl6718jz1h7ah8is3q0zlwkwv3m7zrnp"},
+{"v":"0.5.0","e":"^1.85.0","p":"darwin-arm64","h":"1xg2a5iwmp44pf434ngkk1ashhhj9a4ffikjvycippp4iq1fpb17"},
+{"v":"0.5.0","e":"^1.85.0","p":"darwin-x64","h":"0a3w4g1hdkh764jxpqskxrjpmg3iwgbyldqvyihdz2ficpjdg34y"},
+{"v":"0.5.0","e":"^1.85.0","p":"linux-arm64","h":"0g6vmcplmgrpq9ys0k2cq94iqd6r37j1nkxiwj8q3dqzq8ajhn2q"},
+{"v":"0.5.0","e":"^1.85.0","p":"linux-armhf","h":"1wd9lkkj6w1638dy6a87g6p76pcv3n2shq4xs386rcq3fl2y1qip"},
+{"v":"0.5.0","e":"^1.85.0","p":"linux-x64","h":"0iqkwpq52541l6a18qsdik9gnx2g9gp24ngpyfzz37hc8l320h27"},
 {"v":"0.4.1","e":"^1.85.0","h":"0z3avnmj6qd5i4m746kcgd5jayj8gn8s6mg0lqj4xhg61z0xpr29"},
 {"v":"0.4.1","e":"^1.85.0","p":"darwin-arm64","h":"0yfqqy3n5zhr1nmr849y25lhfa0f4iisazrff98yaznyld55nsa1"},
 {"v":"0.4.1","e":"^1.85.0","p":"darwin-x64","h":"12mmslvsji37sq5w1ibvwary2iwa4y6il8i32g5zynlp2dwldn2h"},
@@ -7688,6 +7699,8 @@
 {"v":"1.0.1","e":"^1.74.0","h":"01qbkicn1jx23vl2r82a439afrbcz8lhas3rl4h3m1wkd7wams15"}
 ],
 "salesforce.mule-dx-mule-dev-component":[
+{"v":"3.33.2","e":"^1.99.3","p":"darwin-arm64","h":"03rg82nhr4fq3m1azw778v44pmfz23vywj30da4ymwaczsp590m6"},
+{"v":"3.33.2","e":"^1.99.3","p":"darwin-x64","h":"0bavnzk72gnhz0qmn01l42npvrfv5rm3izjkvrzqxq57zrqi240g"},
 {"v":"3.33.1","e":"^1.99.3","p":"darwin-arm64","h":"0cid2rk43hzyc4apb83zzqz2lpi8a5bbj4il6pss9j4v7161c4hg"},
 {"v":"3.33.1","e":"^1.99.3","p":"darwin-x64","h":"14g87pilh3ppi423k31ffv85g42jybk7jbzp8hlb1d2kfvxhhqcv"},
 {"v":"3.32.1","e":"^1.99.3","p":"darwin-arm64","h":"1zc655l7ihysh0dzqkazpkk08di6ksspi24cv89yp6pr4xk25x3n"},
@@ -8553,6 +8566,10 @@
 {"v":"0.0.3","e":"^1.14.0","h":"0a4cp7qk47plxx1m59k2gmsf2fywcxf67ql4f7ar0xmah4y1i60p"},
 {"v":"0.0.2","e":"^1.14.0","h":"0xga41z3ga041kp4shy0pd4as6qrbb2ncnvazhs38c58qa553ln5"},
 {"v":"0.0.1","e":"^1.14.0","h":"12vz9xvpmqrf81l22f3rqpnjp1x0qhdvah9jzm4avs5xbvjfvm8m"}
+],
+"song-chaoyang.uuyc-cli":[
+{"v":"0.8.1","e":"^1.136.0","h":"1pbrlrj176n4igk7s1bksds2cjmjrilsk9kl65z3lhzsm9q5srvg"},
+{"v":"0.0.1","e":"^1.136.0","h":"0d7b965fzxya143qfimhfnkfrvm6bgqsq8rq4ypv981vvk7wv0x5"}
 ],
 "soranoana.ai-approval-guard-soranoana":[
 {"v":"1.0.0","e":"^1.100.0","h":"0zml89vgm9ldxyin2yxk5dk2hr85ymwsnvv1bhk81br9i9craql2"}
