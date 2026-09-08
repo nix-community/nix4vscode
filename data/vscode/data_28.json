@@ -4124,6 +4124,7 @@
 {"v":"0.7.0","e":"^1.52.0","h":"0vbnnhpdjzy58fhrvd2cnkfn80r7bbysq1x05r03xvw3i6fsxlf1"}
 ],
 "ginexys.ginexys-schema":[
+{"v":"0.3.3","e":"^1.99.0","h":"0ziy3655y94cspy6lgfhzqvrcafa4majgix0krxfczz2d207ibav"},
 {"v":"0.3.1","e":"^1.99.0","h":"1g4qb9qiwcqp1qvl7cscjd4df5v35psjqqyg9j1y62j0lwhgj51k"},
 {"v":"0.3.0","e":"^1.99.0","h":"0md0vmc7yfqlzbad4fiz8gy8wd7i3v2qm99vmdlpr4y07njj9c1l"},
 {"v":"0.2.0","e":"^1.99.0","h":"0rzc0s2p21hi25jrnakg1slf3wv7vwnykda8i5j01fi91lax385a"},
@@ -5562,6 +5563,10 @@
 {"v":"0.0.2","e":"^1.91.0","h":"1aqfwsj94qg8whq3ndzf4zc0pk9lf4x9896fir3pdhabxnlhgqk5"},
 {"v":"0.0.1","e":"^1.91.0","h":"13xhji0w9jvccpcvaad6pinr74sf5m5vq054xqvwfhcmx6pvgj54"}
 ],
+"launchappsllc.launchdesk-app":[
+{"v":"1.0.1","e":"^1.80.0","h":"07jrbhn0czpbj9xyplkba9229qgail0badznig7sr7csdzfmpxf4"},
+{"v":"1.0.0","e":"^1.80.0","h":"1s5f1vma32xlzdmv8rb0j2bdpc3qy92giins3y02n211x79330h9"}
+],
 "lauren.angular-pack":[
 {"v":"1.0.0","e":"^1.50.0","h":"13s34b9rvxkvqlh318lzzzzi3mk0paffw3w2a701qgbmqchr82p6"}
 ],
@@ -6600,6 +6605,9 @@
 {"v":"1.0.2","e":"^1.0.0","h":"01s861s0zg8dss84xzgh4s0646glmxlj60r1mbhx9192z7rjdyxq"}
 ],
 "nimblesite.sharplsp":[
+{"v":"0.21.0","e":"^1.125.0","p":"darwin-arm64","h":"0h8ad5fmhq3n0kfrcb61c312dqs0my3y9ys03fb6pspndaqi76c7"},
+{"v":"0.21.0","e":"^1.125.0","p":"linux-arm64","h":"131cg21f79gmv9izg6i5hffpbfbip24fxjmxri9r0yc4cawp3xc9"},
+{"v":"0.21.0","e":"^1.125.0","p":"linux-x64","h":"114skvdqkhrags272lh4ww5ya829vybg91c5b0hw0skpax34i6nk"},
 {"v":"0.20.0","e":"^1.125.0","p":"darwin-arm64","h":"1jawji4jkqpczk8jsfaqsqczm57bhdrz92jjq4kgvxb89bchfrjn"},
 {"v":"0.20.0","e":"^1.125.0","p":"linux-arm64","h":"0xzi3pwbqpzzic2zp4i8bgi6mzxv4q5m8v67zb2iqskp4nh59jra"},
 {"v":"0.20.0","e":"^1.125.0","p":"linux-x64","h":"1yqrgr8165vxanksgv7iph1jqz89fpbsa80cx74iigvxfyw4q7mm"},
@@ -7480,6 +7488,8 @@
 {"v":"0.0.1","e":"^1.88.0","h":"1l7icxms7rm309z5bmaqi5vbmnr4k49aq7zygjfij7kfag9drpx6"}
 ],
 "rapidkit.rapidkit-vscode":[
+{"v":"0.47.1","e":"^1.106.0","h":"0n008f12r5cngwf5gvavdvy2yzgsd3dhzanilma0nkp0apgka0i4"},
+{"v":"0.47.0","e":"^1.106.0","h":"1zkgcz4mg5jxhc7095z21mhk8vrgm7j1iwsdaj0apwy7jplli3ik"},
 {"v":"0.46.0","e":"^1.106.0","h":"0amdyv6cwn8lr6d5qijvcqhjc2m03a0icppsyfl7n3lw7ybq8isy"},
 {"v":"0.45.0","e":"^1.106.0","h":"0wwks23yrwbn9mxkbs0ha9ylwnf7s1lpvhmz6zvn1hny78lqfg8b"},
 {"v":"0.44.0","e":"^1.106.0","h":"0s63mv5kv3x5sssv5chwk1sjs94isj6j67gpal37nd5b4v3nnkmh"},
@@ -8581,6 +8591,9 @@
 {"v":"1.0.0","e":"^1.90.0","h":"19k64abcgxlvamfblhgkpvgr2war9bn89994d363v14hh7x2gh7s"}
 ],
 "seredalabs.query-console-1c":[
+{"v":"0.1.30","e":"^1.90.0","h":"0ivs22wi7ga9pfvyx6nlz2cjdf6kl5r50jyqbv08q5lalraa4gzz"},
+{"v":"0.1.29","e":"^1.90.0","h":"1lkyclznnarblbw017p2rr0d3s8ycd1m1kdr7spygjjic68a3k7k"},
+{"v":"0.1.28","e":"^1.90.0","h":"1qn5w44zafz78q7x8gcf24xmgrrvsdnfi814djnji6dmh4rmsm91"},
 {"v":"0.1.27","e":"^1.90.0","h":"0d9w524v2gxbcfb94m759l6blzjsy0hrnjvk1in9vnrnnspsnb54"},
 {"v":"0.1.26","e":"^1.90.0","h":"0c5kp9cj36ycn4w2mdmf54yycsy12552la2jxzsa5jg84cfpkr0m"},
 {"v":"0.1.25","e":"^1.90.0","h":"180f84z98y903wys708y5lr5b1xj62dwj4x5dapj9davl7hd6n51"},
@@ -10187,6 +10200,11 @@
 {"v":"0.0.1","e":"^1.76.0","h":"0zl4svwr8mcps80asg4q921ckbc0nsypysrfvvwgyddmybxmrf6l"}
 ],
 "yotsuda.lilysharp":[
+{"v":"0.6.0","e":"^1.90.0","p":"darwin-arm64","h":"0w05h6c7smbknkq2mk8q73m209x606n6wl40y1zrzmk5nhqx112s"},
+{"v":"0.6.0","e":"^1.90.0","p":"darwin-x64","h":"1fpws2vg3yxxqzbch3md2ph5fdnrnqws1cpkqq500yjhlyczzm2w"},
+{"v":"0.6.0","e":"^1.90.0","p":"linux-arm64","h":"1d7h3y60bmk0iqkds3h1s3a1cgf8mazxwz0rf4ijzkx1d6dd9is6"},
+{"v":"0.6.0","e":"^1.90.0","p":"linux-armhf","h":"11dnyprvv1ii482a3v4x1gg3af9bp7sqb6h1w0s4h38z0lh9rdib"},
+{"v":"0.6.0","e":"^1.90.0","p":"linux-x64","h":"0i5nmmwjbvf9q2hgcppfnzph0mwvnvihdrgj2fngpplavbn9c8pc"},
 {"v":"0.5.0","e":"^1.90.0","p":"darwin-arm64","h":"180zq3d2j7mk8sc6hyp4q46innfjv2892nszhn2ammkm9qa60xxa"},
 {"v":"0.5.0","e":"^1.90.0","p":"darwin-x64","h":"0rcf4c2040zcq1hy71bxjh4fk3xk71f0z5zpnf1k8zwi1jc94w32"},
 {"v":"0.5.0","e":"^1.90.0","p":"linux-arm64","h":"1dfdlxmiqca3jg4xm5f5rn72m1qwav6kim8gljn0s3vywh0cxhdl"},

@@ -320,6 +320,7 @@
 {"v":"0.0.1","e":"^1.85.0","h":"1yfbrm9515b50hhz3vcnzc0sypxlffxd0nfyifr4s1m4xz10s024"}
 ],
 "afunana.afunana":[
+{"v":"0.21.33","e":"^1.85.0","h":"00gbmhrxi3kvvgwfjyws6h4xihhbgh5z1gshiiq16x1p4j4bnff7"},
 {"v":"0.21.32","e":"^1.85.0","h":"16wcar7avqmq39l0m4qkp723wlbyvnd40li438gi1rbvbyqqmj0i"},
 {"v":"0.21.31","e":"^1.85.0","h":"0pv3hg6vx49c4swdv7lhf65finzxnlnnf7a3yrfrbxm434sns4zy"},
 {"v":"0.21.30","e":"^1.85.0","h":"0lhw8i3vxs9rjrbpi0ya39jwb08hmb0xs1mpbx91mv0fir3gx1kg"},
@@ -3590,6 +3591,11 @@
 {"v":"0.0.1","e":"^1.108.1","h":"0nn3dmlxicfkixwf2y2yli7anbjvbmjqn53hjkl5vx20f64g9i41"}
 ],
 "dynatraceplatformextensions.dynatrace-extensions":[
+{"v":"3.0.3","e":"^1.100.0","p":"darwin-arm64","h":"135ij31m2lsfqsy3nvpaylhkfax3x970vzrxqh6gzvrj821fpww9"},
+{"v":"3.0.3","e":"^1.100.0","p":"darwin-x64","h":"1ybl9kf6jha3jrwr06g3rfyi0m39kwdn7v8aycvn6gzhqlyziaaw"},
+{"v":"3.0.3","e":"^1.100.0","p":"linux-arm64","h":"12hdq4i6c7xqx9871m2fy50wzw6mszlvk73kwiaxqd4gya74ias4"},
+{"v":"3.0.3","e":"^1.100.0","p":"linux-armhf","h":"0q3cn6405bzclj177ylw3cq4h9rlldyilaa6d6f56dz90m7bn3z6"},
+{"v":"3.0.3","e":"^1.100.0","p":"linux-x64","h":"09yrfxxgmppjl6frhzyay4zcjxzlwpwn5np36jd3sai0vqcphjb0"},
 {"v":"3.0.2","e":"^1.100.0","p":"darwin-arm64","h":"005i7yghis5vwcnxakjfhbyar50rh1chs0d4cdkd747c3qdmv0hp"},
 {"v":"3.0.2","e":"^1.100.0","p":"darwin-x64","h":"179sxn95hqrb55v8bw5m99y3mbzsd48ka4fihpifvm0qf15gj9sv"},
 {"v":"3.0.2","e":"^1.100.0","p":"linux-arm64","h":"1xcwsb51fpfp1fa8z9am4d08lvip9awdn6xrg4qhx030y0cvm09v"},
@@ -5464,6 +5470,7 @@
 {"v":"1.1.0","e":"^1.85.0","h":"057s6racqkcf15bx35l7gi33m00iz7zb093961nznm4qhzzr5dab"}
 ],
 "koenma.terminal-grid":[
+{"v":"0.7.0","e":"^1.80.0","h":"0r1wb838pqm57isbd8mxpm7zmk8ipnpj9hfy08flwbb92ygmxskh"},
 {"v":"0.4.0","e":"^1.80.0","h":"1fp0mbvh2x0hlfzlfn4qk0n6mlpqg0408byj8a2iswbzj1fishll"},
 {"v":"0.3.7","e":"^1.80.0","h":"0wk4wak3778cvl6f5jbvaakqlkzydd4q0v76agz9mgccdkw4j25i"},
 {"v":"0.3.6","e":"^1.80.0","h":"1dyq65wsq34qb4vf2i50f8sq6a16h271xcasdqabvsyc270d5iyk"},
@@ -7319,6 +7326,13 @@
 "pankajghosh.next-horizon":[
 {"v":"0.2.0","e":"^1.107.0","h":"0ala42nc8hcx7ny9zrp63frzdwz6zi4dgxw3gkpb6igrgqm63x53"},
 {"v":"0.0.1","e":"^1.107.0","h":"125pacmdmna0imm1cs9czclvim42rscd6y5v2071ggml71p7h2ln"}
+],
+"pason.wiki-preview-pr":[
+{"v":"0.6.4","e":"^1.85.0","h":"0abj4m6brk7jqk87l3fkdkn639qy8zn9i5g5igjqkq5yai6fagvc"},
+{"v":"0.6.0","e":"^1.85.0","h":"0qysv6k3vbbpgyzzbvm9qj84dzlkhh0l63rxr91s72kcqc1lhr3r"},
+{"v":"0.5.0","e":"^1.85.0","h":"0lvxrsnsxczj50xbpbrbl9dn5b17fgmal8ac0h0hy0ysxs6vcvdy"},
+{"v":"0.4.1","e":"^1.85.0","h":"0jnqq5kzgx7lvddbrp6wanvxm3jrwkl0ica36m3cmb48zgg7cq8j"},
+{"v":"0.3.0","e":"^1.85.0","h":"0igdh6s3qigc6mdvgr8hva6grajrhv4apaxga5sgw67vr33yd2xs"}
 ],
 "patbenatar.advanced-new-file":[
 {"v":"1.2.2","e":"^1.17.0","h":"09a6yldbaz9d7gn9ywkqd96l3pkc0y30b6b02nv2qigli6aihm6g"},
@@ -14275,6 +14289,7 @@
 {"v":"0.0.2","e":"^1.93.0","h":"0015sii3dji4ggl1bliswdwwszxn3l5i358f404v79cq0nys8yk5"}
 ],
 "successible.markdown-wiki":[
+{"v":"2.61.0","e":"^1.134.0","h":"0cj1xzv024gkka0aagij9yp08ahiwfm4ya7jk9p6yw026v7lpn4r"},
 {"v":"2.60.0","e":"^1.125.0","h":"1warw90iykgykk1h2w99a13mzrphd2mq37dfkxr110vsd62bydrd"},
 {"v":"2.59.1","e":"^1.125.0","h":"00mb5xgh5lcj52f4l7h1i05km00388zf85kphb32g6hx5s5kk8ff"},
 {"v":"2.58.0","e":"^1.120.0","h":"0hicwm29p9gazdzqdy6ckfxkb2fr0nilmjqjw1r6h85xvnfi6fqg"},
@@ -14979,6 +14994,8 @@
 {"v":"0.1.0","e":"^1.86.0","h":"0lz8v6nhh3fdsz29k4ml2y207vlvidqc9alxdq5zwwnrskr0il8c"}
 ],
 "vegadevshop.orbit-routines":[
+{"v":"0.4.2","e":"^1.136.0","h":"0kx87ckx0dkcab5psjrga64psazaramzmi7zq23x199abrhn6wpc"},
+{"v":"0.4.1","e":"^1.136.0","h":"1n3i4gn783zwcnc1j57vgfmgk0r092ada7mnkrjbv0i2b50520s8"},
 {"v":"0.4.0","e":"^1.136.0","h":"13m4rlwypdr5h53mwpqvbnkkaxk86jry0hdvx9jmxfgsv06dwysf"}
 ],
 "victor-hero-net.ic10-code":[
@@ -15234,6 +15251,7 @@
 {"v":"0.0.1","e":"^1.74.0","h":"0lqamgbijzj14yb7x9gcnqm0hvf1lmh5kigxy9avlcv16bz14wzs"}
 ],
 "xinwangtao.cursor-auto-approve":[
+{"v":"0.1.69","e":"^1.85.0","h":"1q3h25r174xh1l7q1vjiahndggm8hmy9mrrlf9cd8faknazzvx3g"},
 {"v":"0.1.19","e":"^1.85.0","h":"1nn6l3nygb26sqrxmdgfx4pv7bvjp9pcpp5c3qs9yy14kgk38z2m"}
 ],
 "xlt-icon.xlt-jetbrains-icon-theme":[
