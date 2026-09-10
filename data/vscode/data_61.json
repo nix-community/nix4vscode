@@ -1499,6 +1499,9 @@
 {"v":"0.2.1","e":"^0.10.1","h":"0lvmlhp4w39hvhvmcpalqrsfk02lddh9miz91pa9anbv7p3ss09k"},
 {"v":"0.2.0","e":"^0.10.1","h":"0am8ny89c94i089farixsllig56yrpc8arl8q5qd8a2vzksqh9m5"}
 ],
+"dbconvert.dbconvert-sqlite-viewer":[
+{"v":"1.0.0","e":"^1.85.0","h":"11jkpdimnv98s05b57r4zli21jmlj2rmxpnrjqin24m9sixvnwmh"}
+],
 "ddl-vscode.ddl":[
 {"v":"0.2.0","e":"^1.0.0","h":"00fsacjbp3d2bic86d45jv5dwsfzc6qilcl734sfcapgy81v57xy"},
 {"v":"0.1.0","e":"^1.36.0","h":"1bkrwdcj880a8872v4qw83ig6572v0qh9ygddmdg9pn7h3f92hxg"}
@@ -2566,6 +2569,7 @@
 {"v":"0.0.1","e":"^1.68.0","h":"08bfl2rq064k7baqym74rfqwwf4zix4igqmr5rnnw50hszlpyl80","r":true}
 ],
 "gethnet.litellm-connector-copilot":[
+{"v":"2.5.6","e":"^1.125.0","h":"1aaavgc0k7lh53471zbn7vl2frdnl7rzxsqgf8b9ybli496kcrz9"},
 {"v":"2.5.5","e":"^1.125.0","h":"1856x8kqqc9npjbhvwymbw82b81szs115gfmp4j5c5np6jrki3sz"},
 {"v":"2.5.4","e":"^1.125.0","h":"0k6dw2m7n5yaimz5g2dk85k70x54gqbydc52viq93f85z2pp77yx"},
 {"v":"2.5.3","e":"^1.125.0","h":"0c1838dvnwwivhaf823kc2pnq4ks1bi3whypw4mlrz08qkpplr16"},
@@ -4268,6 +4272,13 @@
 {"v":"0.0.1","e":"^1.84.0","h":"1v7g18k4li9z9lli2x9rhq2y19bqcx21nd0708bhnjrfk826phbp"}
 ],
 "keithfajardo.dbt-open-lineage":[
+{"v":"0.4.94","e":"^1.90.0","h":"0880z7cda0brxzn57p6gdzssjx95pnn1zs32nw226aw43g1ylmks"},
+{"v":"0.4.93","e":"^1.90.0","h":"1qfxvdxsvcj0hiwx78i0q3jzdvyk2f8nm7y0cf334mn65gnh8bzj"},
+{"v":"0.4.92","e":"^1.90.0","h":"0x6qadnmb9m3rabk9wllv2vsdrld0v1yw0pjw3y9w47wffvha17w"},
+{"v":"0.4.91","e":"^1.90.0","h":"07y3ac1ilkx6yij80nz5b3qz2mfiylf7dadn142sl0v89nbi6iy4"},
+{"v":"0.4.90","e":"^1.90.0","h":"1lalszlhp9l4z6rv8g37vi4slpcz86cy5hb8whh9cjqkmimfk0nl"},
+{"v":"0.4.89","e":"^1.90.0","h":"1czlbqmhpy6iyjzgg6cdpxg3srqgnjm9vc5jv6cv999aq07y3hy7"},
+{"v":"0.4.88","e":"^1.90.0","h":"1wsscq7yl4ziyp9laswd0isqpvw4ma10nw7ksczir3y7akd5gcr6"},
 {"v":"0.4.87","e":"^1.90.0","h":"0m9749740ibwdq6w3hwxzyfkhalggbrw82c7fff347kafnm46dih"},
 {"v":"0.4.84","e":"^1.90.0","h":"04czkfki6yfq7qg1rlnf38xksna6cg4kslfiky4146hkyf07hrnr"},
 {"v":"0.4.80","e":"^1.90.0","h":"1yhipmlyc15frxmq2cpzk06cq44ld4a40fhaj3310815pb646xdp"},

@@ -2402,6 +2402,7 @@
 {"v":"7.4.1","e":"^1.40.0","h":"12y147snl0mviyaayizf7gqwxnynf8j4r70c0rfcs3zif7jwn2fb"}
 ],
 "erdemgiray.claude-code-notifier-companion":[
+{"v":"1.1.0","e":"^1.85.0","h":"1hbyl497i05f5ni9sqxaaiwhmx5k03grqs49vp8kyxr4nm4xa53y"},
 {"v":"1.0.0","e":"^1.85.0","h":"1jaifybk29y9imdqvr5djnkj6c7ialmrad2g1n7hs0803x3w6jb3"}
 ],
 "ericadamski.darkwater":[
@@ -2520,6 +2521,7 @@
 {"v":"0.0.1","e":"^1.96.0","h":"1x0bmqn07lj1bd904nanbm6gf4mzr14i8cy1lwxa4h6hn2si3miy"}
 ],
 "fengze233.dsh-vscode-panel":[
+{"v":"0.4.0","e":"^1.91.0","h":"0zpn7j7xxgka37mw5xyrsq4hlwrvwir2fmizby75s1w4558x79z3"},
 {"v":"0.3.1","e":"^1.91.0","h":"1hkvp4gfjqcjxw9m4mbwdh4gizk67l61wdm59ax51p2hk7wcn1b7"},
 {"v":"0.3.0","e":"^1.91.0","h":"0bs2m6hyqypb0vs59mvv90779262qhx0v2kvvj5vqh2kgklxw5sq"},
 {"v":"0.2.4","e":"^1.91.0","h":"1645ywxfrjkggv1n3fzgs3pjfsxmrfmjkzvdvvh2fx2h8wbf30zl"},
@@ -3305,6 +3307,8 @@
 {"v":"0.0.1","e":"^1.47.0","h":"10vw8mc6ma9w4dal5rs4p844bv81yhl8yc8z1znl8lrblf72sv0n"}
 ],
 "huanent.toolkit":[
+{"v":"1.3.1","e":"^1.125.0","h":"1q63sbx7w9x4rnz8z4x3x2kfaxjz35s8g1ky4vd24spn936h5yln"},
+{"v":"1.3.0","e":"^1.125.0","h":"13cayfsvg527k6gp6z7fyzphqxwdswsxdzm94s3yl9c15q84pna7"},
 {"v":"1.2.3","e":"^1.125.0","h":"021g3a8flnfxvi6w87dcn8dscsypxm28mk85hf1lscmqdyawhpmq"},
 {"v":"1.2.2","e":"^1.125.0","h":"1v997a6ppgdgrbnpnw76llxsvap3199mcw897fx500ii6ka1l736"},
 {"v":"1.2.1","e":"^1.125.0","h":"1jsdi2gqgdz961pihrwwafimfv1f1ndrgiq4fawvg0z9dnqld3xb"},
@@ -8635,6 +8639,7 @@
 {"v":"1.0.0","e":"^1.104.0","h":"0jfzl1qksf854m19qb7szdv2gkqxgaxhw7w2fa5bfm85lmk9bbxv"}
 ],
 "neo4j-extensions.neo4j-for-vscode":[
+{"v":"1.19.29","e":"^1.75.0","h":"1cfjazc64817mp7bf8npx03rxkx9xz5i1bazvfwfwykxz5nb3z0a","r":true},
 {"v":"1.19.28","e":"^1.75.0","h":"13m7kk8s3drlrqdcikfys9fhbb2vzifk3cwy9n4azynds0bdpv4c","r":true},
 {"v":"1.19.27","e":"^1.75.0","h":"1nppw3732xl9bl8iw054x0z5kxlcm88bdrn0lgyqs5ms1wbihbsw","r":true},
 {"v":"1.19.26","e":"^1.75.0","h":"0bbxx84cj0pdryw565l8xb5pgh3vx58xi0i5r71qnrx4cyaikg5g","r":true},
@@ -8774,6 +8779,10 @@
 {"v":"0.1.0","e":"^1.80.0","h":"0hwz7zshf2xv9hl348n7g9izr3jjl1ckzyj0095ivk5k9m2ckf22"}
 ],
 "nexosqlstudio.nexo-sql-studio":[
+{"v":"1.51.1","e":"^1.120.0","p":"darwin-arm64","h":"0dd1j3di026af2jnphrrhnpvm19b3snvpqfscwcr4chfj8486nyz"},
+{"v":"1.51.1","e":"^1.120.0","p":"darwin-x64","h":"1vb7a13rz7rljm56rgprn1ghdl0bkxa7c9rx4gsqdkc6dlcr2cr9"},
+{"v":"1.51.1","e":"^1.120.0","p":"linux-arm64","h":"0ij2r3iv0965kq84qjixv901m0hzv25w5g5775sh31srpz5h8cyz"},
+{"v":"1.51.1","e":"^1.120.0","p":"linux-x64","h":"0jw3s2yj2blmb6lpa1niy7rd1ya1g1zbnv38y3smbgsdl0hq90w7"},
 {"v":"1.51.0","e":"^1.120.0","p":"darwin-arm64","h":"0wzw4m9lmalscwwsqnn79rxm81iy5gff1gmabjqbxg7rm97br2w2"},
 {"v":"1.51.0","e":"^1.120.0","p":"darwin-x64","h":"08vrsjzd9q91gf5w4viwppcvca3pqi534p3c3mgi5lrinbvfj41q"},
 {"v":"1.51.0","e":"^1.120.0","p":"linux-arm64","h":"0vhr7qsvaml4smy1jifqlm6ffzk7blf5cg8jbw12hlkd2hgclb14"},
@@ -10690,6 +10699,9 @@
 {"v":"1.0.0","e":">=1.84.2","h":"01262k8jip6hzyksv0k8qwck9v8zq9mzf32igsqa17vv35b0qs2i"}
 ],
 "salesforce.salesforcedx-vscode-apex-debugger":[
+{"v":"67.17.9","e":"^1.90.0","h":"17qxamapdi5lpjpy8mji5gvfn8dslwfdk6dmgag9rfl788d80bzn","r":true},
+{"v":"67.17.8","e":"^1.90.0","h":"1m9srm9bsld1jwc7m2chqnrm1h1q1zkgl645xsl5api0vqrcc25s","r":true},
+{"v":"67.17.7","e":"^1.90.0","h":"1xab4b08pzlfwgmr0fnk4rm23sz9z1zhnh8c6iy59zfk7icp75x2","r":true},
 {"v":"67.17.3","e":"^1.90.0","h":"0ww607a0p00v4g2apgpr5jfyicv6ra9cxk9hm62hr6303y0frq4x","r":true},
 {"v":"67.17.2","e":"^1.90.0","h":"0a6k9jdv2jkc77dg7bw9fwjiziza0fdia60b5mkzyn40zvvk5vif"},
 {"v":"67.14.0","e":"^1.90.0","h":"1iyf6yjjgqg88c99bnirda1r48yqv1pxyzkv0h74gkg7ns9w6yia"},
@@ -11890,6 +11902,9 @@
 "tonylizj.config-sync":[
 {"v":"0.0.2","e":"^1.52.0","h":"11fkvqv6yjdmcr2dfq9i86vvblpwqw5zl3il01cx9mqsdc52dmdh"},
 {"v":"0.0.1","e":"^1.52.0","h":"0wl0drw0vnjpywl5qmabpk0pnb8k0a0qb44pd6gg5800my9s8635"}
+],
+"tonymorris.drop-in":[
+{"v":"0.1.0","e":"^1.85.0","h":"0jfw105vgps8m7qcpfpvxw2b8p63mdvqz6rdp61d4a6yvm3w8l56"}
 ],
 "totvs.thf-snippets-vscode":[
 {"v":"1.1.0","e":"0.10.x","h":"0j6zly9blpjcixxy8nccb9lipxldby3dvrk4i4niffzqnc6skx4i"},
