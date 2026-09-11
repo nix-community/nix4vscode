@@ -1027,6 +1027,7 @@
 {"v":"11.1.0","e":"^1.70.0","h":"04yj42x0828mld9rnf36q833cix9gvfap1zr7v1pksgk35ryl0rx"}
 ],
 "betterthantomorrow.calva-backseat-driver":[
+{"v":"0.0.42","e":">=1.96.2","h":"0i596w3wwys7j6k6i9bxv4apyndq2va4ls7cwf516rypd514m7p9"},
 {"v":"0.0.41","e":">=1.96.2","h":"1vmvln9rh5ppy8rwzfg7zk46ac3ac0xalgh3rl48b93jvcm8l9nw"},
 {"v":"0.0.40","e":">=1.96.2","h":"1zs3g6cvc2mzsks1b8hb1cvrizjc9lgxmk0h4v2w1n07wax3q1c4"},
 {"v":"0.0.39","e":">=1.96.2","h":"12dqdsngakrxwjpk8g6yb67gfzrgn2d5r3xm8sav1pysxjg0c8k1"},
@@ -7424,6 +7425,18 @@
 {"v":"1.0.0","e":"^1.89.0","h":"1b4jl3hck77j41f8lfgbdrglwg64112788awkfviac5ha6rbiz0i"}
 ],
 "salesforce.salesforcedx-einstein-gpt":[
+{"v":"4.31.0","e":"^1.101.0","p":"darwin-arm64","h":"18xbkwfkj72m4nky572zwn0yhbd0dlgprbyrava0jdffjif59kh0"},
+{"v":"4.31.0","e":"^1.101.0","p":"darwin-x64","h":"1125ps81d3kd4l8fagg9aknyiqnr8q395q2wilz881d5zn25pjq9"},
+{"v":"4.31.0","e":"^1.101.0","p":"linux-arm64","h":"1ki3hd5qdmn7ivgxlgxr5qadjaci7lbs9r0nmmawd0ln5j0qa3lm"},
+{"v":"4.31.0","e":"^1.101.0","p":"linux-x64","h":"1bkqvcamk3hnc2wysnjpvq6ixz6m3skvjl9l6i24vfyxxfi2hfx6"},
+{"v":"4.30.0","e":"^1.101.0","p":"darwin-arm64","h":"0m4nnx1f72481ihv9kr3nw3xhfqy3gkn8fcnzab71p6wki7bf9i4","r":true},
+{"v":"4.30.0","e":"^1.101.0","p":"darwin-x64","h":"0iyc2pg82xzy2lfykx813m99kkf0mxdqybngymf7293xzqp18kmk","r":true},
+{"v":"4.30.0","e":"^1.101.0","p":"linux-arm64","h":"0ckn7wwpsw2yv6d5iphwng3dyz41fwyskri84brf8bbwry7ffimk","r":true},
+{"v":"4.30.0","e":"^1.101.0","p":"linux-x64","h":"0xfbc5h6a4jydkn56dv0rddga9bnhp7z6i59k666539372hv3c82","r":true},
+{"v":"4.29.0","e":"^1.101.0","p":"darwin-arm64","h":"0x1nwcqz5d0kwpb8iwcp7cr45nyvqs84dvivsv63lkappjii3kfa"},
+{"v":"4.29.0","e":"^1.101.0","p":"darwin-x64","h":"07vwh5zvjdrw3802k3lq5x37cqcqz9yhylqmmsfdczn03pyl4gg0"},
+{"v":"4.29.0","e":"^1.101.0","p":"linux-arm64","h":"1kgf9mw2jhdisngfhibni8rc6zczdbxfnh3xr1z2mican14ihnsn"},
+{"v":"4.29.0","e":"^1.101.0","p":"linux-x64","h":"0vn3fac8xarc952kfaj908wqc4yi6js2cbricrixjkmfalfcjaln"},
 {"v":"4.27.0","e":"^1.101.0","p":"darwin-arm64","h":"09gi46l8802qb44gi0p8v9qks9d3s20z0frpxsw9q6g9fmkm15l9"},
 {"v":"4.27.0","e":"^1.101.0","p":"darwin-x64","h":"109bkgx6a8xm8dzr7wwibdfnb4s6sdbpyfibpv22rvs86xg5mvy3"},
 {"v":"4.27.0","e":"^1.101.0","p":"linux-arm64","h":"1bipn9l7mi38bymr95i6da9ail9dcnfpp4jqkqz38p6ibzgl4g70"},
@@ -8042,6 +8055,7 @@
 {"v":"40.12.0","e":"^1.13.0","h":"03bn01a371mvsy88bkcka2cmy0xi6sj3p1ldmdq1zczwmlllj1hm"}
 ],
 "salesforce.salesforcedx-vscode-metadata":[
+{"v":"67.17.10","e":"^1.90.0","h":"07ll0pc4hz4l7w9ml9h95axvyk14z6yxzg724q6xhzarnljhh9kz","r":true},
 {"v":"67.17.9","e":"^1.90.0","h":"0qh9jyp034kmxwjhmnsa0xzfp2vi7ax1bwcq8sbhr4v98h5jnnyg","r":true},
 {"v":"67.17.8","e":"^1.90.0","h":"09q4vfypy75rg59zn9ma1rn7vz5jw0h73k0yrqks7125d6zq2lq5","r":true},
 {"v":"67.17.7","e":"^1.90.0","h":"0n1j7fnszk9hzzzzi72sbgi5qq2qdrbaim3apy78cjc06yi2vcpm","r":true},
@@ -9316,6 +9330,7 @@
 {"v":"0.0.1","e":"^1.71.0","h":"02r9zfs2lm1x4va8wc9aqvmbx5afzh6a24s85xqhkc50g6j5mxk9"}
 ],
 "tosnix.tosnix-code":[
+{"v":"1.0.7","e":"^1.84.0","h":"1yl1ylyqf368ivh72xs50h6fpsizhigi26kk75di2idz6p3svalq"},
 {"v":"1.0.6","e":"^1.84.0","h":"16ki678sw7rdci9f43lx5n6v9qbvlyh075hpr38yhrahkfd9jabf"},
 {"v":"1.0.5","e":"^1.84.0","h":"1zi2ww6rr7b2933fm0w3jyz8hj1b2lqh7qi67achws9h7pwjcba2"},
 {"v":"1.0.4","e":"^1.84.0","h":"0dxkw803qq01i77gnjrd484ghs2xzi7ia2mv7makkqcya1z3abyj"},
