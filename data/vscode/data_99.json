@@ -6049,6 +6049,7 @@
 {"v":"0.0.1","e":"^1.103.0","h":"0zkd3q2yqa54anrzw5zjfvna1apxajkjkjl4x5rmacxdk656hbpg"}
 ],
 "marc2016.auspex":[
+{"v":"1.2.0","e":"^1.90.0","h":"14kx6irpcydz28wr7rz44n8p2bw9ayh236dlrvz0qlhcrnd2m2vn"},
 {"v":"1.1.0","e":"^1.90.0","h":"0711j2swb7ssiv0b1hhnzylbc0mwmaghdbjnd3kq51ryrcrfynmg"},
 {"v":"1.0.0","e":"^1.90.0","h":"1dbb0rv5sh1jzdb5nk6z36ks9nh6hpznyi9vfd3dsn1zjjyvzy20"}
 ],
@@ -7033,6 +7034,11 @@
 "osyrisrblx.theme-chromodynamics-fixed":[
 {"v":"0.0.1","e":"^1.26.0","h":"0z71zybwh55bsfjg7hldzmpp3kpqblw0afklb826kykk8v8462gp"}
 ],
+"otoneko1102.kiritan":[
+{"v":"0.2.0","e":"^1.85.0","h":"10n5cmax1ngyx4ji0qf8kmg0j934nqj2aap6aqxrc1hjsb2mk3ar"},
+{"v":"0.1.1","e":"^1.85.0","h":"0k8r8aaaf0g5j7iqj7yza6113vp6a4fcwa26cbxbsf0n0rqah5nm"},
+{"v":"0.1.0","e":"^1.85.0","h":"1bpcg1swaspfmjpa8z26ixhs9n2306fm1r826yk0bx1sanfdjpkv"}
+],
 "ovo.konng":[
 {"v":"5.0.0","e":"^1.107.0","h":"1g5jnwnjkpchgnzcqvr3nrwvv0261bvgwjy9m1hnla54a2cqpxqx"},
 {"v":"4.5.0","e":"^1.46.0","h":"0xkgvmykb4ij2aib468n5ybmlf4jf3hhnck1rkb5b8pmlnkk2596"},
@@ -8004,6 +8010,12 @@
 {"v":"0.0.3","e":"^1.58.0","h":"128bp94gn1m2svza8wpnq30mgigx68rix8y1xpclc0brcv3v19mv"}
 ],
 "rust-lang.rust-analyzer":[
+{"v":"0.4.3048","e":"^1.93.0","h":"0gw29mhq6wsbyhp58w9wm31vh3l58274j5lfjzjj9h30x6raz7dl","r":true},
+{"v":"0.4.3048","e":"^1.93.0","p":"darwin-arm64","h":"11bpp6ga6lfcv2a9f76b7s1kah7xhi4fy9acf6bnw2v9g6r8xypw","r":true},
+{"v":"0.4.3048","e":"^1.93.0","p":"darwin-x64","h":"1k87kwzvlfvkkhznkqiaricyqdc63q91yiixplcaw4xqbkrswnks","r":true},
+{"v":"0.4.3048","e":"^1.93.0","p":"linux-arm64","h":"186w9pgmpjkhxy78wr050ags88q1h54pdsdp3wsrxb9sa5sm4220","r":true},
+{"v":"0.4.3048","e":"^1.93.0","p":"linux-armhf","h":"0pgbd6m2s2f73bkxj39l5mp3qwp6vpszs7s1zf5q34qypbg3f6l8","r":true},
+{"v":"0.4.3048","e":"^1.93.0","p":"linux-x64","h":"131bpsxmag3xmq5c05bs3zjq5x5zqrr53kk0sa20zgp7172xpd65","r":true},
 {"v":"0.4.3047","e":"^1.93.0","h":"1pflkxl6qws7482vi5kyp3hlzmbgj5crq255dkbb0wm7r6jlrx66","r":true},
 {"v":"0.4.3047","e":"^1.93.0","p":"darwin-arm64","h":"0vizvijzkrr6b3szixsg33hj10xy2s8ky1klrlyyzm7fl0r09ki5","r":true},
 {"v":"0.4.3047","e":"^1.93.0","p":"darwin-x64","h":"0q299zxnafg4ca4xh07x2y32d8jdl7f3pljrkx8cyrl3rr9w431c","r":true},

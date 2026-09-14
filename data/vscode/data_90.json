@@ -3225,6 +3225,7 @@
 {"v":"0.0.1","e":"^1.90.0","h":"18fq0cj03fixm4vlm8h3a8majmhnrxzc87i5fbgfbmrwmn7994jz"}
 ],
 "harv3n.peek-react-preview":[
+{"v":"0.2.1","e":"^1.134.0","h":"0a74i7gyc2v2lc8immr5dlihblr1m3hg2sjsb5zrzgq2aiddjkcv"},
 {"v":"0.2.0","e":"^1.134.0","h":"16gw6806lmy9lkdpkz07iav4ackv51fbrdishy9rj68bdn53pl8r"},
 {"v":"0.1.1","e":"^1.134.0","h":"0wzg0arxysbcyb0r40zkywavmkn7vpvdm9pq8mcsv9n1hlyvfl10"},
 {"v":"0.1.0","e":"^1.134.0","h":"1rr9m8bqqhv1gyzx7j7635ffgxy5gf683klg794dy96gxg4q09ni"}
@@ -5369,6 +5370,9 @@
 {"v":"0.1.2","e":"^1.22.0","h":"1937nj2fm5ib29z9p11yz5cmrbszpyhi6js2klr1pz3yn4hxydc3"},
 {"v":"0.1.0","e":"^1.22.0","h":"1b63p8ai8z7v6al5bn2i1gwkz5n1kbg8qg8gdv4mg0fv3ckn9xp1"}
 ],
+"mboss.mboss-vscode":[
+{"v":"0.0.7","e":"^1.120.0","h":"0sl2r8a0ab76hlc7pp7ybbdq49znp714b407wh6aj4lla606smsh"}
+],
 "mcpp-community.mcpp-vscode":[
 {"v":"0.3.1","e":"^1.90.0","h":"144h7ammwlyxfhkxlj72hf46ba16lrkfw57ndqnlmwbzyb8hyrdw"},
 {"v":"0.3.0","e":"^1.90.0","h":"0gyh68xdq07iigxwx65ja7677pwkf0l198gzyd9pbi0hj9j18nq6"},
@@ -5766,6 +5770,10 @@
 {"v":"0.0.1","e":"^1.19.0","h":"06bng0fy8csn0harf2s44w02mp4hgsqh46gnzyxz0nasjj0ai137"}
 ],
 "ms-azuretools.vscode-azure-mcp-server":[
+{"v":"3.0.43","e":"^1.101.0","p":"darwin-arm64","h":"00m6q2hxy9w9jb716v3yyizfja3xgbga10g8c5f2krlglfmjj37y","r":true},
+{"v":"3.0.43","e":"^1.101.0","p":"darwin-x64","h":"1x30l29jn8s2yp9p37gi5hrr8x0pv4w616aw7q2l1cyzvwvppcg2","r":true},
+{"v":"3.0.43","e":"^1.101.0","p":"linux-arm64","h":"1x0kylhg2xf4hbagsqpd0naqrcsklcmybg0vmlywwmww4z25ydxj","r":true},
+{"v":"3.0.43","e":"^1.101.0","p":"linux-x64","h":"1gqpa6gpfwxxrah5s6dv7ax5r7fqf4vz7wphp0j2q4d412vnzjv0","r":true},
 {"v":"3.0.42","e":"^1.101.0","p":"darwin-arm64","h":"13fb0b2hmjdhr9wp1f4g0a3a2qfxdsap1jf4lb8fqlxz9wb2s4na","r":true},
 {"v":"3.0.42","e":"^1.101.0","p":"darwin-x64","h":"1wjl8rs20k9m5lgxdl1z2sh1kapmdkwa3yx12zwl2lk06x0c21fz","r":true},
 {"v":"3.0.42","e":"^1.101.0","p":"linux-arm64","h":"00fn0jsd07p1xplygq92w9jwnm1s9jgqm0mrgiv43ilwj1b3s97g","r":true},
@@ -6958,6 +6966,10 @@
 ],
 "novora.novora-forge-vscode":[
 {"v":"0.2.0","e":"^1.85.0","h":"0din4llmcx1zx6z88y34x35zqn7cfg1xi1clv9vxndas7zqfnmr3"}
+],
+"ntkhang03.tree-builder":[
+{"v":"1.0.2","e":"^1.85.0","h":"1hydvzjy3b87xjvy3hs435cd1ajrscnjkrcwwy0zdpwnacpxxwg8"},
+{"v":"1.0.1","e":"^1.85.0","h":"16cb7rifz17cqvbp7pr15293d32g114x260vqif2aq6basqhi7dc"}
 ],
 "nulldef.remove-active-file":[
 {"v":"0.0.1","e":"^1.71.0","h":"199fwqlx75wgdm1nwpmgyp32h8ljbiw940zf834lfdibhskydlz3"}
@@ -11476,6 +11488,8 @@
 {"v":"1.0.0","e":"^1.68.0","h":"1587n2p2pynnx1dh9p119cwajzy74v6mvdrbn8iivbq1mlzw11x9"}
 ],
 "zoocodeorganization.zoo-code":[
+{"v":"3.83.100485","e":"^1.100.0","h":"18vb5scnpsybgiyiln3xr7dwygyxsf2y9kk0ay1kmc2vkhziqhm4","r":true},
+{"v":"3.83.100484","e":"^1.100.0","h":"1wfbz4fd61npqqi8s1mr7bf51m18gfxzz2vpsch6pg1ab5qb07jp","r":true},
 {"v":"3.83.100483","e":"^1.100.0","h":"0gnyaljnmdrg5l0ii8lminn2n7zs0xkpwsgxpmp0s6arv217crpn","r":true},
 {"v":"3.83.100482","e":"^1.100.0","h":"0vsqdpqbwskjsni4agw5vgpmkldsbgl3z3520gkwdc4s9h5dkg6w","r":true},
 {"v":"3.83.100481","e":"^1.100.0","h":"00i0pd6ccg1gi2m1kpmv2s4sqwjdqg2nayjgfrjv2hjvxx3s9bdw","r":true},

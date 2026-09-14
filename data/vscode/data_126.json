@@ -24,6 +24,7 @@
 {"v":"0.0.1","e":"^1.73.0","h":"1nifrwscy13ybqlb0yvcj91884rlsswsi540ygfg4w61jm9ps1sq"}
 ],
 "13hakta.i-rebase":[
+{"v":"1.0.4","e":"^1.93.0","h":"1c6qbrb62a0i92xvz585q189lwk0pf5bhj9w9zpc3ica466zvf1n"},
 {"v":"1.0.3","e":"^1.93.0","h":"054ag4aav6x691lfr8d9p0kyr7faqf62376f814yirjgnrslxfax"},
 {"v":"1.0.2","e":"^1.93.0","h":"190k1ml47jjfj21qrr6l7nj4lin7kfbp81avjw4nasn4y5wi5wxv"},
 {"v":"1.0.1","e":"^1.93.0","h":"0lcdpb28ry48nc3gg3n98mgw2farf877k54jq6jh4min8rfvlhs1"},
@@ -1369,6 +1370,7 @@
 {"v":"1.1.0","e":"^1.90.0","h":"08rhj3m20y6qvdlg9cj0fz4q4xkibygyl995h0k1h15l2f8i9kfg"}
 ],
 "cleanpythoncode.clean-python-code":[
+{"v":"0.6.1","e":">=1.90.0","h":"01xh8r0y608qiabjsx9ar2wf41yk37a0900dd58hfjq25nvih851"},
 {"v":"0.4.0","e":">=1.90.0","h":"0c2q3yxbss9xpbqp8mvd18hp0xw2gdmxlk2p7hv5vfn0n4xa2z0a"},
 {"v":"0.3.10","e":">=1.90.0","h":"01wamfwfhn103sxj2xvsdsrkvqg4igb7mk6dlc54idrvx1jy3rnx"},
 {"v":"0.3.3","e":">=1.90.0","h":"04rmpwcinis194ibp1mn0araij37q1gnampw4k9k4ikd4wiqrzmg"},
@@ -3902,6 +3904,9 @@
 {"v":"1.1.1","e":"^1.10.0","h":"0m3fgrbmr0g689mm3mvygbsrki17dwbgfyy807axdp67x5wc2g9l"},
 {"v":"1.1.0","e":"^1.10.0","h":"120jvnmg2qwq6l7kcvsznzvajb5cm785nnz74iam8yql29za2b10"},
 {"v":"1.0.0","e":"^1.10.0","h":"0cmn8dn0ysgcvqqqq171qsdp6x0cn1c7nabgi6pijpd47dxqwrnj"}
+],
+"irfanali.project-port-manager":[
+{"v":"1.0.0","e":"^1.90.0","h":"0d6gl9riv0p26avk4vsrqbdn365rfwz9ljl37f0ldxm29h3qlmdw"}
 ],
 "ironbeast.py4nb":[
 {"v":"0.1.6","e":"^1.100.0","h":"1r097w9k4pbx8ylzhm55a5dbcxzd8rk044cndskf1z7zcgjg8rb2"},
@@ -8216,6 +8221,7 @@
 {"v":"0.1.0","e":"^1.85.0","h":"010jlmamvffiqna8p77xh53qjhjsbxawbjkgkxsyxav0vkq0iqc0"}
 ],
 "timcsy.semorphe-vscode":[
+{"v":"0.20.0","e":"^1.74.0","h":"0mahpsj1xl9n4zlm7hwfzbcwlfm7j2snw3xv0hbmhxsqy6idyvzi"},
 {"v":"0.19.0","e":"^1.74.0","h":"1xi53yrjw282h6khzx96lr268pxd9j6zadqlbrnpvdijj6lw6ss4"},
 {"v":"0.18.0","e":"^1.74.0","h":"1mrb4iy10c155blygfkhby04if8h0vcbib8pig3vzc3sab09rq03"},
 {"v":"0.17.0","e":"^1.74.0","h":"13zg6xa8hyr76vwvx6ry7d64wdvh6ny56xd2w13sayg9giqs9ccc"},
@@ -8456,6 +8462,9 @@
 {"v":"1.0.0","e":"^1.95.0","h":"0bwip5zhdd13ynl21hlmrwkh6jylcai56x0vspdf0d5zklf59zgs"}
 ],
 "ubugeeei.vscode-ox-content":[
+{"v":"3.2.3","e":"^1.125.0","p":"darwin-arm64","h":"1ip2i9rw3xa5c08hyyamrg030kgvf06vlkf844s1k0lmimkg8nhy"},
+{"v":"3.2.3","e":"^1.125.0","p":"darwin-x64","h":"0m54dvir4cz9i5y03gcbw3qibfj53660vrixnfy9b5i2r9yhd54j"},
+{"v":"3.2.3","e":"^1.125.0","p":"linux-x64","h":"0bhsd5wzgz2dijk6v1rqdd2ar4bvyqlfiy3klx3nw7fk9dkyb7iq"},
 {"v":"3.2.2","e":"^1.125.0","p":"darwin-arm64","h":"12g6x600jjm4a0yzdxb95qxw99i85nvzgayh1hdgv8nds73y0gxs"},
 {"v":"3.2.2","e":"^1.125.0","p":"darwin-x64","h":"11081q5rf2jridqdds3lgj3pknxbym95q6hvwd49wvwg5pdyq5af"},
 {"v":"3.2.2","e":"^1.125.0","p":"linux-x64","h":"1f4gn26558gxfr7i74gm1shi1dyfc03nh1ih4p7x9i7bvghxkvpi"},
@@ -9181,6 +9190,9 @@
 ],
 "zaqueurodrigues.vscode-eclipse-keymap-complete":[
 {"v":"1.0.0","e":"^1.60.0","h":"1zyb7rvvmfk6qz5xxd0l3j1ggzgdvd7h2z4827a0zsldyfqfva0k"}
+],
+"zenfrog.synchrony":[
+{"v":"0.9.2","e":"^1.93.0","h":"1yzg8w3wqrpbyfhljss504jbsj7xnfnsmg2v1b53y4b87gznsdnl"}
 ],
 "zetta.qsharp-extensionpack":[
 {"v":"0.0.1","e":"^1.32.0","h":"06zkz7aanp60af62qgh1z21rf9qjs3yvr3hy8c1d3axrzf10kps8"}
