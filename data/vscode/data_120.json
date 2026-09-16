@@ -1756,6 +1756,7 @@
 {"v":"0.0.1","e":"^1.5.0","h":"0njf9q0f0f34vh0hz743kr7lxs7w1q82vmbiiynwsrksq0wlgmnw"}
 ],
 "crusshq.crusshq":[
+{"v":"0.5.5","e":"^1.85.0","h":"0a5zppzc1mvqi3v7sqkmnnlfwdb9rlpknxiw7bmmbvww656nirq7"},
 {"v":"0.5.4","e":"^1.85.0","h":"1aqk0lmyj2adkglnxfrk0wn47sizay3w8ijryrmxlqcnafka6chs"},
 {"v":"0.5.3","e":"^1.85.0","h":"0mifx2j9jswn1gmqlcq8ylywfp26zp460879k0824573mm2j2vyd"}
 ],
@@ -2298,6 +2299,10 @@
 {"v":"1.8.0","e":"^1.80.0","h":"1llhmhgqi2sz5xy2jyp9lfixa3xfnfjsivy31nc34b27jiylwqy7"}
 ],
 "embedder.embedder-enterprise-2f3":[
+{"v":"0.3.190","e":"^1.106.0","p":"darwin-arm64","h":"1fmnjzh8ncc0n5p2jdw0xs2a25yf0ip88pn8j6d1qgal6d5f0xf6"},
+{"v":"0.3.190","e":"^1.106.0","p":"darwin-x64","h":"0jdz4hsphcwxdsj9h3gf77cz7kmk9bqpmc85danklqy7qn9x1kp1"},
+{"v":"0.3.190","e":"^1.106.0","p":"linux-arm64","h":"1k4xkv7l619g80l015mlmh1978rhlrhbxslwjbkp85c298m4r46x"},
+{"v":"0.3.190","e":"^1.106.0","p":"linux-x64","h":"1dc7qkklcggwkxb8bqf2iwiz0cixjyf8h05xpbcr4gdsz51wmdj1"},
 {"v":"0.3.188","e":"^1.106.0","p":"darwin-arm64","h":"1jwm19kxrpffiw14kw1zb8550skyr484nlqz153iaypwmdifm99c"},
 {"v":"0.3.188","e":"^1.106.0","p":"darwin-x64","h":"154kzm88vhwbbisr676h1yjgiqp9vad81ffhxiys3iqp9wdn4mcz"},
 {"v":"0.3.188","e":"^1.106.0","p":"linux-arm64","h":"1qmh5mcww0qbdrr70s9ic858ahfy2z950vf5ghgaxw495va852yf"},
@@ -2874,6 +2879,8 @@
 {"v":"1.0.0","e":"^1.99.3","h":"1m7qvbhykc9y5mnx1c1gzhjzv9y81557c5ha6sc6s83xadvh11bs"}
 ],
 "genroc.genroc":[
+{"v":"0.5.0","e":"^1.85.0","h":"0c7xznsvv06j9mvd97avkpm3qr97pk42k4xp61vvkx252zvr204w"},
+{"v":"0.4.0","e":"^1.85.0","h":"0fvzccf07vh0qzdnlc8sz4x144xr9xswh12q31rzxf131pcbs8pc"},
 {"v":"0.3.0","e":"^1.85.0","h":"0iyy2syk0h8l4mw9k0j59bpy26csxinadq0qj823y9dxrpi2xzkd"},
 {"v":"0.2.0","e":"^1.85.0","h":"0lvg487p481v5hw67q7r9pdc5w3l9m0kp4icwk6bqlj6j4yld8sj"},
 {"v":"0.0.0","e":"^1.85.0","h":"1lq74zd8gh3p95dg313kgrddbgiasa0ahm78dk966bp2awv1fb6s"}
@@ -3372,6 +3379,7 @@
 {"v":"0.0.1","e":"^1.51.0","h":"047l11lk8j8mb35a9w17ygwdhhrm6rxxk6x16ziv31facpf71qk2"}
 ],
 "hummerbor.pi-for-vscode":[
+{"v":"0.0.93","e":"^1.85.0","h":"0syzd6s5s585s05j4kzdd89vknd2x7430nwscx2sag669k508m5s"},
 {"v":"0.0.92","e":"^1.85.0","h":"1gb6f01j0wqx8ar55bncp7mcx833927dy8bjqy3220v0g7sdsnb5"},
 {"v":"0.0.88","e":"^1.85.0","h":"0534q73xb40i95pv7bg2zps9rl6hvwlbmccqgnjaxkj074220457"},
 {"v":"0.0.87","e":"^1.85.0","h":"13829qkxajjpycjl5y6p6klxrlpnkqvxg2i0y1fqw5cmpi4gv93p"},
@@ -3959,6 +3967,7 @@
 {"v":"0.6.2","e":"*","h":"1ss5f9qwpxc872v47gyl7pida1snb2yckgnfxrrb2qnp9ympnvxq"}
 ],
 "ixxydev.yoptascript":[
+{"v":"1.15.1","e":"^1.85.0","h":"0nyqjimn8f02idcqzraa6a5w8x2mpw10426wb3s1gv5zqrbxallh"},
 {"v":"1.5.0","e":"^1.85.0","h":"021v2137sf07alqzq09d01a0gzzrq7v9335388d2nq3fwwjfaaw7"}
 ],
 "izoard.spherescript-syntax-highlight-formatter":[
@@ -5294,6 +5303,15 @@
 {"v":"0.1.1","e":"^1.28.0","h":"06wvg3g0w3k9is09r2nl2lj92csc9d6b4x73y6l0kzpanz7zcy5q"},
 {"v":"0.1.0","e":"^1.28.0","h":"08f5yh42niqdia7p24r983ljy4wl9vrgd7rxa03l9w9qlmwylwj3"},
 {"v":"0.0.1","e":"^1.28.0","h":"0rwsdidxivryqjrcx33qnbyyc7a6y03mcy94qshrnsv32ig6v7w8"}
+],
+"llinkam.llinkam-stm32-tools":[
+{"v":"0.3.9","e":"^1.90.0","h":"1kyvgj835h91baishqcrvhpp9wjfyrynscvwd2wxr3c566z4rvkp"},
+{"v":"0.3.8","e":"^1.90.0","h":"01wiv6g1zba32h4cp36lv39g7a8lc3d58j6hn0cv6kg271bd1xmb"},
+{"v":"0.3.7","e":"^1.90.0","h":"1c5h6dz89pj685lxqi8cja55irw2zyzn6syng7lz0c4xhfbg1fs2"},
+{"v":"0.3.6","e":"^1.90.0","h":"07p06mn1zfb8c51yx23gdhilhwzl8vhjpq717rwx3dfggl0adfdy"},
+{"v":"0.3.5","e":"^1.90.0","h":"1y4bzl1ir5i7b6i884fli4xbj90ik7ywzaahpxz2dbzc5782p9gz"},
+{"v":"0.3.4","e":"^1.90.0","h":"1bkln2r3wa62vbh714jg0lmn192skdjn4cgshdi23mhiyjcsf2ax"},
+{"v":"0.3.1","e":"^1.90.0","h":"020dvzw77vfm3bjjl39d2q2rbg41hblbv5r70inb7y0ngzqmbkh1"}
 ],
 "local-smart.excel-live-server":[
 {"v":"4.0.34","e":"^1.59.0","h":"13kjnjzqdlnyqgc1yffsy1j2myb1vrz6qfn6hbcgif4kn5gyg0cy"},
@@ -8004,6 +8022,8 @@
 {"v":"1.0.0","e":"^1.56.0","h":"14b4p8nqgi3iyzv0x86i54wgvvxwyg7dzdivf7azbd8wb35p5y5h"}
 ],
 "seredalabs.editor-toolbar":[
+{"v":"1.3.2","e":"^1.85.0","h":"0lgwgifhnyp1x1116ng8a22jgri3g13nzqsa40qw1himx8kd9znq"},
+{"v":"1.3.1","e":"^1.85.0","h":"0zs676yn4v8k6bchm6ng2zlw3i7mpgrfwhxi4avy8rmib0msjgpz"},
 {"v":"1.3.0","e":"^1.85.0","h":"1aj3kymlqmcly1kil7sqpx33dcx0l5braq5ckfdqqkl11idfpvqc"},
 {"v":"1.2.0","e":"^1.85.0","h":"13jf19chba164qincf77vrllz889ihsxmg9h5r27jg1q1fag9iwl"},
 {"v":"1.1.2","e":"^1.85.0","h":"0grcmbrdz2riaw1zm1sz306s0p16ph3vcr4mh1vx8flkhw9y2c6y"},
@@ -8928,6 +8948,10 @@
 {"v":"0.1.0","e":"^1.79.0","h":"0npy2pkjps53xfvdnz43jjda1vjk9d28c75gcsj5xwp4v0zjg0h3"}
 ],
 "tooltitudeteam.tooltitude":[
+{"v":"1.55.3","e":"^1.82.0","p":"darwin-arm64","h":"0v7kpszmrl3jff5dhl73iwqk0fgmrdgqdm0ap0gawakwd5z73ym7"},
+{"v":"1.55.3","e":"^1.82.0","p":"darwin-x64","h":"13gmjvvfb7jzvhhwncwvwr80fpiv7h396ykh2r4vsv9295xd8787"},
+{"v":"1.55.3","e":"^1.82.0","p":"linux-arm64","h":"1x4wlr8wkf072bpin083j99f5z91i5zsnbs116x5nafb7s04vrdi"},
+{"v":"1.55.3","e":"^1.82.0","p":"linux-x64","h":"0ahi86ycyz0hym1z0y8xcks4yllqgczxb613028v05c9jdni45vq"},
 {"v":"1.55.2","e":"^1.82.0","p":"darwin-arm64","h":"00d4k7a7q6g2xfzbjwg0w1r58lpwyxrv988km0kp9ykaa959nzgn"},
 {"v":"1.55.2","e":"^1.82.0","p":"darwin-x64","h":"1mql34z7d14zj4iwd1xwz3cdhhjb7xz9hcyqg81119qfk320rw5w"},
 {"v":"1.55.2","e":"^1.82.0","p":"linux-arm64","h":"146iy817hww66ydjjlznfdif01x2378ir4lcv6sl6cmkg4bs70dd"},
@@ -11361,6 +11385,7 @@
 {"v":"0.0.1","e":"^1.104.0","h":"103qzvkm4xkjljxy6cn63awq4pg0vmlyhlrs4b6jhl28qbg93hwq"}
 ],
 "tutivog.plainmark":[
+{"v":"1.13.1","e":"^1.96.0","h":"10934hp7nrchlk0xi3wdbfrqwpfp9yki3ras3fpqamiqmj2zyr51"},
 {"v":"1.13.0","e":"^1.96.0","h":"09i804bkh7rqlmvprm99nyxk99gk2c77a6rfpzkr6bswrzgbgs5x"},
 {"v":"1.12.3","e":"^1.96.0","h":"1p2kvbhh13hsqvw2dqbg4m3h02d132prh2jl2f5133pbwsp3hyl1"},
 {"v":"1.12.2","e":"^1.96.0","h":"0xvshpcryfhmvgr020rajyzwwjhsc1m8fi0a9fw27a0wxf1w2dz8"},
@@ -11728,6 +11753,7 @@
 {"v":"1.0.0","e":"^1.88.0","h":"1c9hjydnpcxz7flsk1427l073pk9k0i4pqg1pa5fjj1w7yacz760"}
 ],
 "vitorbastosbn.nobackend":[
+{"v":"1.0.1","e":"^1.85.0","h":"0wf9n0myibpsg20xdxagsi1zvz2frrx5d290f5b1sqnfhjl8bxi9"},
 {"v":"1.0.0","e":"^1.85.0","h":"1k62nx783v0gqjbjgfz6zp7yn39a5v797jg3wib0bdjkyq8n8das"}
 ],
 "vladstudio.coco-convert-colors":[
