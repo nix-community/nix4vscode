@@ -398,6 +398,7 @@
 {"v":"0.0.1","e":"^1.0.0","h":"19ppmz77bkh4jzjdhcz85j2l10gblwccivq1na80fzmcnz7yynrb"}
 ],
 "altium.developer":[
+{"v":"0.4.46","e":"^1.85.0","h":"0pflbsv5fz63nylnlx6n5k2x971xdgpbdsdaqvpy8djbkbr8pmys","r":true},
 {"v":"0.4.32","e":"^1.85.0","h":"0h69fjc4a00xa60ayp1q0hla40y26i8db581xzhi5fxh3mxh197p","r":true},
 {"v":"0.4.30","e":"^1.85.0","h":"1yh8phwmnly5l5r2l2l0gpjy2cjqmvrrmkhwaql45756jvyrhx8g","r":true},
 {"v":"0.4.29","e":"^1.85.0","h":"0bj9sk52f49kp8snb3w9sp9ixyw52lg4sqimhai8961pki9fb21l","r":true},
@@ -2625,6 +2626,7 @@
 {"v":"1.0.0","e":"^1.64.0","h":"1i8vrhbf1hs2rfas5xzjq4kmp5aswf40v1p2iv7m4355vj20hkmg"}
 ],
 "eamodio.gitlens":[
+{"v":"2026.9.161208","e":"^1.101.0","h":"14zbihwjg4l6kqnlhidx72vjdlqfcyinvs531q064v383g5ihvh9","r":true},
 {"v":"2026.9.151317","e":"^1.101.0","h":"1nk5bcm2j3x922ampn12hpygg0yk1z7h5ryr7qp0al5w1ikmm8mw","r":true},
 {"v":"2026.9.92030","e":"^1.101.0","h":"1x0a48qwks10bjqb2fqq1nplzmdcb589a37i2m108f808aj5cii7","r":true},
 {"v":"2026.9.91140","e":"^1.101.0","h":"1s2fbxwrridy8nqkkgn7lvznhc7vj8q7dk5299nr4nwyxr1ampwz","r":true},
@@ -3791,6 +3793,7 @@
 {"v":"2022.10.1905","e":"^1.72.0","h":"1xj59g0zy9k06aipfhmx9flxsqn6j4mrpjqmpnbd1ffc8s2q6k4p","r":true},
 {"v":"2022.10.1805","e":"^1.72.0","h":"1sm7bjdsp6qc9pw3v5hd3prc32wb83gwam5sligd1fvym82yhafs","r":true},
 {"v":"2022.10.1719","e":"^1.72.0","h":"0pz2b6hbqwvj8x3jfzlgrqfi15nian8l47czsrzq0jx68sh315n2","r":true},
+{"v":"19.2.0","e":"^1.101.0","h":"1paqvv6jzp82aqdfpbk6vzqz7f8vr65ymrlimj8hc23jd6bqbcbx"},
 {"v":"19.1.0","e":"^1.101.0","h":"1kk8qp52amn1v37vsfdbj38255lympsp31rayg4gymwzp99md7pq"},
 {"v":"19.0.1","e":"^1.101.0","h":"0q7zcv4ac67nf30ysm6sp67dv9i6k2f4xfa6lgykpjsrn0qshkp9"},
 {"v":"19.0.0","e":"^1.101.0","h":"00qsw6s5f5vizxps1n2ifa3ngy6vizfsr536qapdz73szb5wl72b"},
@@ -4199,6 +4202,9 @@
 {"v":"1.1.0","e":"^1.56.0","h":"1msmv7nprg2a98jzbqwi138pmb1i0aaz5kd827limhz54dya7x3s"},
 {"v":"1.0.0","e":"^1.56.0","h":"1yhj753sfhwwh88lxb7fmpvshfkq7y5mzlxsr4rzr54wyz4j098w"},
 {"v":"0.0.1","e":"^1.56.0","h":"0p5iz12dlbzwjvh2hd91912wr7yapykdp7mrx6s5c5jcna3x3yj2"}
+],
+"eiwa-lang.eiwa-lang":[
+{"v":"0.1.1","e":"^1.80.0","h":"0dfvi828izhgr0r18id6vnzv2i2z2hb9q8m2xxlh71svmghvwmq6"}
 ],
 "elastic-ai.elastic-code":[
 {"v":"0.2.9","e":"^1.84.0","h":"01ambsz7lavazr1gfxyi784n6j43m2n4mzqigvqwxhmh047lbsd8"},
@@ -5308,6 +5314,14 @@
 {"v":"1.0.0","e":"^1.109.0","h":"1m3qfib1jm4npxs5pv6xjsxhi4j06yqx8sg56xb71ckwzig4pgg2"}
 ],
 "hiiiid.mar-code":[
+{"v":"0.0.27","e":"^1.125.0","p":"darwin-arm64","h":"04m2ajwwh63h51av55bc972s64smnd6xhw5356dgs875vn9ahdwc"},
+{"v":"0.0.27","e":"^1.125.0","p":"darwin-x64","h":"0ll569s51m02wpbsv3a7jg5vgjrgwv304gq42v1pm6bfq79fvw6v"},
+{"v":"0.0.27","e":"^1.125.0","p":"linux-arm64","h":"010h82iwi0igldnrw3a0c4hgsv6nr2x9gyb2nvy1kh42jjy8w78k"},
+{"v":"0.0.27","e":"^1.125.0","p":"linux-x64","h":"1d7zdcskandvsya8wadnrnbn8hl3s1kqn8nlxxkm70zni34g0g2w"},
+{"v":"0.0.26","e":"^1.125.0","p":"darwin-arm64","h":"15v3ra57iqgqrjnpgg9mardjzv10zlvr99v3zzkzr4nbqprv1cim"},
+{"v":"0.0.26","e":"^1.125.0","p":"darwin-x64","h":"0iiaqlks16j0ym63rpj7zmvc9pjmdl95fmxs6bjv6gsr4bsbd5xm"},
+{"v":"0.0.26","e":"^1.125.0","p":"linux-arm64","h":"1p33qpspq3p9plxvzlmxw1yf3kvf3x19ldvpwxphp5nqgg3w1kpv"},
+{"v":"0.0.26","e":"^1.125.0","p":"linux-x64","h":"0f94w2am3ccc0h344x9a6hnz32dbrqjv812frhywmqrqs2d4zhj2"},
 {"v":"0.0.25","e":"^1.125.0","p":"darwin-arm64","h":"044nwi5bi8dqg99nn2gf309n4fvfx6wf4nwilhbr6lyqidvijc46"},
 {"v":"0.0.25","e":"^1.125.0","p":"darwin-x64","h":"03lvsxblr5gmm55k67m03yc4casj1f72ysgd214lwjzapxkgsxzv"},
 {"v":"0.0.25","e":"^1.125.0","p":"linux-arm64","h":"1iyhjdvdpzc9gs2zn4d3g7w49gj1gclwyipnzgckfimm4ff90pck"},
@@ -11489,6 +11503,8 @@
 {"v":"0.0.1","e":"^1.4.0","h":"142kjmc2i2immjsxcskzpknwvrb8zwvzkgv1gwh6ynrg8c6z9c6q"}
 ],
 "yeonje.yeonjes-vibecoder":[
+{"v":"0.9.5","e":"^1.85.0","h":"1jiz6sk31x0v31a9mbnbl5bc2hzh0ifwggqhn0jbncw9f16yrpky"},
+{"v":"0.9.4","e":"^1.85.0","h":"00faf4kxn9y2xz3wkrwgxvhlb6qx4li64l3v2vnb5agdjgd6z0ha"},
 {"v":"0.9.3","e":"^1.85.0","h":"18sfvmn063niyq4g12qbhqp7fkvw3h7n0q5s9j3cgfw71flx4h6b"},
 {"v":"0.9.2","e":"^1.85.0","h":"1w808ibc5zr52bykr90iigr1dkv4lv50lcb7ah66ffy53kjfd2l8"},
 {"v":"0.8.0","e":"^1.85.0","h":"1wagq3pda0r7ji3ibkf965bwkqfpniv47cblpi33wj1vkbhn9wmq"},

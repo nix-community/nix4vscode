@@ -329,6 +329,9 @@
 {"v":"0.2.0","e":"^1.85.0","h":"0dmw1ha45m4rm4lnymypz0bw6bnj2yr48y97b18kz8pkr8m04ra2"},
 {"v":"0.1.0","e":"^1.85.0","h":"18xgmlhk6khzymakjwj0cflc13igmzyzqd5fx5wj6xsampy9n39h"}
 ],
+"alphaz.code-review-vscode":[
+{"v":"0.4.1","e":"^1.85.0","h":"0aycmyawqdyyhaj99dj860jw03g9gpddp78l3rayksqsdn2sl3ss"}
+],
 "ammarmughalaii.emotify":[
 {"v":"1.0.0","e":"^1.70.0","h":"1ygaj1zwv4fllzz1ad6wli5zqa9jjx6bpks32b7znsimlxn3slw8"}
 ],
@@ -1663,6 +1666,7 @@
 {"v":"0.1.0","e":"^0.10.1","h":"1sjmxrs0s49v0crris04hrcwrjj9y3ivlpznpsn4jgr0rymvrf10"}
 ],
 "digital-overground.mischief":[
+{"v":"0.2.0","e":"^1.85.0","h":"1c1a8f1svhdcd2rzrafa4sy33lmllhpvp3m4ncz3snmxqpndwr13"},
 {"v":"0.1.0","e":"^1.85.0","h":"1c5krl2xp63d112h0ys3w33q0y14x8mr0qvii1dv0630gqwkgv3c"}
 ],
 "digizentinternational.email-platforms-snippets":[
@@ -1826,6 +1830,7 @@
 {"v":"0.0.13","e":"^1.96.0","h":"0r00ym8z3ba0ra7blc12nl5ydqjkl6l7f8zgnpr9m70p5i4fdwhp"}
 ],
 "editor-code-assistant.eca":[
+{"v":"0.54.4","e":"^1.75.0","h":"1fs38r5w85660y2hd04g22b8gp5gf5sbym0x1mmm47jrvbp4zw7h"},
 {"v":"0.54.3","e":"^1.75.0","h":"1mp6c8vb9p192yr4mbqaaqsw4i6fb1pbmwcr353haq9fp9fg4yqh"},
 {"v":"0.54.2","e":"^1.75.0","h":"06ahbd8z9gwg6hzcpsf88n85zdywqgdx5rnz62lnd4c5hshl3454"},
 {"v":"0.54.1","e":"^1.75.0","h":"0achs9vgdc7n0bc17f94yp1mz89dwzfvids6n7k2yk6zrp3iiglw"},
@@ -2864,6 +2869,7 @@
 {"v":"0.1.0","e":"^1.41.0","h":"1rg8309ac3zly9yssaqzk75bb6cgdqpfljkiqn7xgqjlfyms1rwp"}
 ],
 "hidenobunagai.commandcode-goat-provider":[
+{"v":"0.1.18","e":"^1.104.0","h":"1x8bg8nmsml9aqr0c4nihdqdy0dkcn69j65xg7gj7q6c275zi6k6"},
 {"v":"0.1.17","e":"^1.104.0","h":"1qxp22ark8jwi3wkib71fm0izpymjcw3jh93l9ybcdqs50bscy3v"},
 {"v":"0.1.16","e":"^1.104.0","h":"15rjrgrsdisqx8qzxz53dhdfbx2x88rvy35rc5ih5pniipxa13jn"},
 {"v":"0.1.15","e":"^1.104.0","h":"15mbj3q2340pz8v3bzskanzd5530f1y7av3mclf628iziwnirfb5"},
@@ -6115,6 +6121,16 @@
 {"v":"0.6.2","e":"^1.90.0","h":"0iazxgcjz32w54awk5q9337pnpgw2fpn5541290ifw1i89qxdl4y"}
 ],
 "poolside-ai.acp-assistant":[
+{"v":"1.5.9","e":"^1.85.0","h":"0qamxzhm71135vrhp4s80cy7h5sa32r0318bw5c6p7wsn7lxm2nr","r":true},
+{"v":"1.5.9","e":"^1.85.0","p":"darwin-arm64","h":"11yppkzlsc8c76dxd3wilfxkjh60ilqqj6965m4f4m4qs6y6jy12","r":true},
+{"v":"1.5.9","e":"^1.85.0","p":"darwin-x64","h":"06d26bi9wqhd8adcsc68ahg7f5ix1zv1ps5hhlkf103h81s77gpv","r":true},
+{"v":"1.5.9","e":"^1.85.0","p":"linux-arm64","h":"1lffbwgddr7bjl5a2ybd1pl2ffvm3kxmvd9l862nw4jvnrhpj361","r":true},
+{"v":"1.5.9","e":"^1.85.0","p":"linux-x64","h":"19dkg1kcd7ilbz56ryb470qlarbhhxayq3z2r5bizazc6nnhl1fn","r":true},
+{"v":"1.5.8","e":"^1.85.0","h":"1qglb5xbrfvv48yhmnrhybvhnjj904m46jwff26bz7vh9sf9phhx","r":true},
+{"v":"1.5.8","e":"^1.85.0","p":"darwin-arm64","h":"02amvhr5m1qlcjldscxhanj7p0c5knq3zbq2jljdfjajibrwx8mz","r":true},
+{"v":"1.5.8","e":"^1.85.0","p":"darwin-x64","h":"0c7w3rqy5k7ljq7bvg9qaczxqbr6d5csv8s274375i7nkf7swsh9","r":true},
+{"v":"1.5.8","e":"^1.85.0","p":"linux-arm64","h":"0314jpmnbymg08ad42dqf57hrswvvwflciabhyiljbrzlhbgikdb","r":true},
+{"v":"1.5.8","e":"^1.85.0","p":"linux-x64","h":"02h11rp3b6l5iq6ynbbsm4sfifjc9qdm47j98fbzbgz3c2q922wf","r":true},
 {"v":"1.5.7","e":"^1.85.0","h":"0nhwmwc9fxmw4nac3dg118mqp7ni2f595qzwgjg24afrszf61115","r":true},
 {"v":"1.5.7","e":"^1.85.0","p":"darwin-arm64","h":"19ggi71ry79ifzp6s1yh8mrr8cis2jg83bpc96274xhqgn6g2jsc","r":true},
 {"v":"1.5.7","e":"^1.85.0","p":"darwin-x64","h":"0hmpywy9xpjnv146vxhs0qqdcfvq2q0cwz7vbaa7qx9bqvc80ifk","r":true},
@@ -6822,6 +6838,8 @@
 {"v":"1.0.0","e":"^1.63.0","h":"1zjs7ziwglx8njka0hf1pdw1fk2fm541zcswzib4ch68wxy5ib20"}
 ],
 "riversidesoftware.openedge-abl-lsp":[
+{"v":"1.37.4","e":"^1.97.0","h":"07pxrwy0hrznpiv7xid94d1pvg9lpclzsi2359wk2an104j34i0v","r":true},
+{"v":"1.37.4","e":"^1.97.0","p":"linux-x64","h":"1a2g6b6y2q06qkzfl416gbhnfjdx4l9rr0914m5lv31504sxlmcq","r":true},
 {"v":"1.37.3","e":"^1.97.0","h":"1wyqfwf8c1w3razz2vbjrqw4xrf20krha75flddchxpvs7xm5zs6","r":true},
 {"v":"1.37.3","e":"^1.97.0","p":"linux-x64","h":"1g0kkv6as1ipzgkc6spgzhv1lrjw1d4pxa43ylpsb72gniahqqwl","r":true},
 {"v":"1.37.2","e":"^1.97.0","h":"19ivnqdcy1p4vc7j3mk28fsz2za8gs2cmz9934w09la7ppj82rc7","r":true},
@@ -7573,6 +7591,9 @@
 ],
 "saostad.writelog-snippets":[
 {"v":"0.1.0","e":"^1.40.0","h":"0jwjpfrjgkagwk6i94damxa2rgi19wkxviiimkhmn7d6gmj69mb2"}
+],
+"saposs.ui-api-extension-for-sap-business-one-web-client":[
+{"v":"1.0.0","e":"^1.119.0","h":"1ip3jqd67dypgmwbj63lnfx3xiywa5sgxmc1d9zn13yj7sdhf956"}
 ],
 "saravana88.drawio-architect":[
 {"v":"0.2.0","e":"^1.90.0","h":"1c61fd19diffgai55x6nda4snhymbpwdplva45a4xqnrif4v455b"},

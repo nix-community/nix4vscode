@@ -489,6 +489,9 @@
 {"v":"0.0.1","e":"^1.94.0","h":"1v027kizrcknnzn3yvjhd9maiis4bq7vxp9zs0s0j8jpvvwk4vyr"}
 ],
 "ar2em1s.yalsp":[
+{"v":"0.5.0","e":"^1.108.0","p":"darwin-arm64","h":"19nfjbajvqknw49kbi3iyx7xjmcsmbh842h86ivd6275fg3j34r9"},
+{"v":"0.5.0","e":"^1.108.0","p":"linux-arm64","h":"1h9jar8w7gdd31gx2imz3q5d91vnp6clbr4njlk0l09s5g13mg50"},
+{"v":"0.5.0","e":"^1.108.0","p":"linux-x64","h":"16554b83bv5birpxpj536kqqjyivcg11y477ddhic986kch3jf4i"},
 {"v":"0.4.0","e":"^1.108.0","p":"darwin-arm64","h":"1l3vw4w3pdgc3y7llhvsc4b45r1hz81fai44dnykx8yvh94d9liv"},
 {"v":"0.4.0","e":"^1.108.0","p":"linux-arm64","h":"0g374vw0wywb067v5dhxgdykssghmav3ydhimshdm8np3kph8fl9"},
 {"v":"0.4.0","e":"^1.108.0","p":"linux-x64","h":"099g9y4xpaz1n6zxpxzp22fx5g1rdi61azjh1nba0mrriv9h9rsd"},
@@ -1293,6 +1296,7 @@
 {"v":"1.0.0","e":"^1.85.0","h":"0fyqjgppkvww4w94y7znql2nhrjik0cl2667svpq3jlvzal2brbj"}
 ],
 "bruno-api-client.bruno":[
+{"v":"6.0.0","e":"^1.80.0","h":"15h117gpgrz58lp819pj1208nvhv99h4if1f1qpsf8hxm3pq13y5"},
 {"v":"5.0.2","e":"^1.80.0","h":"0xmz8037lqdjc68mfq0jsxqa75q1v036y9m2y0l6ss92y61v8a85"},
 {"v":"5.0.1","e":"^1.80.0","h":"0fdrg77xab1a4cas0hdbm2igcwnvvd6awh3k4f7pk7pba68xlp62"},
 {"v":"5.0.0","e":"^1.80.0","h":"06pnd4rq6n3wap9rfg5z0lbga3lxj46c6flgwab4479plysv6iaf"},
@@ -1361,6 +1365,7 @@
 {"v":"0.1.0","e":"^1.85.0","h":"0wmv67g0srjwj1c62jhvicx3h4dv203bllj2wyj9jd4lyq1d4lkj"}
 ],
 "byeong-cheolkim.tk-form":[
+{"v":"1.9.1","e":"^1.94.0","h":"0l7k3j782762ixf1x09mqbxv9vmfkfrq47ly6s2a9bjr5b12hq4l"},
 {"v":"1.8.0","e":"^1.94.0","h":"0r9bcpvr0610lk7xw0gvx699p4r7n8r07p3qrsbp6i3vy7kdra5l"},
 {"v":"1.6.0","e":"^1.94.0","h":"0lgrqbxibpw5bjfxp9cxryk3mbxsmchh1yh4ynbb3lgpx4ijacbh"},
 {"v":"1.5.0","e":"^1.94.0","h":"1fr2zjmx0hjw87d6ghxi9qhw449iyy6prpkprw5z0s1cb49bil2r"},
@@ -2889,6 +2894,8 @@
 {"v":"0.0.1","e":"^1.70.0","h":"0p9hczvyl91ri5zl9y8gj40z0q6wi9160j1vnlinn5452522ldla"}
 ],
 "grgrwlkr.claude-dashboard":[
+{"v":"0.60.0","e":"^1.100.0","h":"1lkx5myj7afnbdgh8pmyg9scnqkw7ycb4ci06yg5fbpmqw96938i"},
+{"v":"0.58.0","e":"^1.100.0","h":"0qlsmr24raqgf87bqwi2y08f11lmfmviamdhxl9f9swk59yfmhrq"},
 {"v":"0.56.0","e":"^1.100.0","h":"1dwhrzb2rnsddvfh6m6h5admwdvd7wnq992i188955rjz7q3k06l"},
 {"v":"0.54.0","e":"^1.100.0","h":"1ilkwzc3lswqyz6hmjxalz8lf947yb0nk9841r51hqsig0dbi1bz"},
 {"v":"0.52.1","e":"^1.100.0","h":"0iw9591l3cr6hfjk3xl0a29m6ahzl76yz9850xlyhvyhqc5gx9yb"},
@@ -4983,6 +4990,9 @@
 {"v":"0.1.0","e":"^1.120.0","h":"1733lp63qmjb56ahvr03d7ajg1zqsza50d0mk513z7s8h9jg3sdv"},
 {"v":"0.0.5","e":"^1.120.0","h":"1ik4h8v7jy47h013vmjficsciaqfyrllknjlplhgrrwx2njb63vh"},
 {"v":"0.0.4","e":"^1.120.0","h":"00zgh9vaj1spf6k6rdm30dxs9pibg1jyg1g85d2nh0zn64zzgdla"}
+],
+"livshitz.native-rtl":[
+{"v":"0.1.0","e":"^1.136.0","h":"060gdkka39x7wsasfm3mj9553f9ypwd1z9ky7rqyrg3yksaks0j3"}
 ],
 "liwenming.vscode-extension-helloworld":[
 {"v":"0.0.1","e":"^1.62.0","h":"0v6da2sjv7zrd0l0s1hy2abw6198c51jlk6mslrjxpdd3b7kwyxc"}
@@ -8297,6 +8307,9 @@
 {"v":"1.0.0","e":"^1.85.0","h":"05sr7s3x378rf9dk1k6v50fkg7ckp3z8ga477ilajka9559f271w"}
 ],
 "sumneko.y3-helper":[
+{"v":"2.3.3","e":"^1.102.0","h":"1h52c1daq149g5bwabi9vxxqgaq82rrh05jfhrhc5cwvhisnj50g"},
+{"v":"2.3.2","e":"^1.102.0","h":"1gw0zw4mpipn4d2z1fndalhkf2rwhmrli3vfr9vxjl3p86dc4wh2"},
+{"v":"2.3.1","e":"^1.102.0","h":"1kq0phmnhk446nkj0mi8k5x03h8cjdv151xbkdr1fk7w6ydwjnyl"},
 {"v":"2.3.0","e":"^1.102.0","h":"0dkqr203l7mqhpmpzkg3nix92vs21ldkp9kzfjmkhpddgr9r3iy8"},
 {"v":"2.2.0","e":"^1.96.0","h":"0pik3a4hinz6mrxa9bazq3r5b8x8srf2ygv92psjpyci7s9wh3qf"},
 {"v":"2.1.4","e":"^1.96.0","h":"05g7b19zmbfbwzxgrbraxygd8pvn481qdg2y3z2q0xy8s0cnp2jg"},
@@ -9089,6 +9102,7 @@
 {"v":"1.0.0","e":"^1.74.0","h":"1jh9k03iclnf00yryxzw0i9wn5hxggkkk8r2f6llcsp3l6kbbm2p"}
 ],
 "uwe-at-sdv.waterloo-docstrings":[
+{"v":"0.3.4","e":"^1.115.0","h":"0my6vbdwcg7zm6fh9hykfdrws18vlcijpzacjdah3g5p0wlpsa8m"},
 {"v":"0.3.3","e":"^1.115.0","h":"0d0a40p98llg84nr8jhq5qr38jkkssrw9922jx5br2d554iw7dp4"},
 {"v":"0.3.2","e":"^1.115.0","h":"0fkmni7lcj9mxrh9s8109jwv15aifp6hahajkn0pxgbhi2mrywkn"},
 {"v":"0.3.1","e":"^1.115.0","h":"1z69yncivd7lqlv3h5wakjjjrzr02x7ax2zkdlxvsjz65y7iapb2"},
