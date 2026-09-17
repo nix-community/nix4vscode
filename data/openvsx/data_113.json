@@ -186,6 +186,10 @@
 {"v":"0.0.3","e":"^1.85.0","h":"0v5s2z5ch7iqfgnkb15v7iy2n81lwnglmvh5iqpi1mr2fvvx4lq6"}
 ],
 "bluerock.bluerock-connector":[
+{"v":"0.2.4","e":"^1.85.0","p":"darwin-arm64","h":"1yfhljd0zc12zb5bhpabnnlc8c9k7q5zqmiqpyzyy3vxn589p266"},
+{"v":"0.2.4","e":"^1.85.0","p":"darwin-x64","h":"1cmag8ciy49l5d64pazlvmi89waf6nfk5abi5j9wkb1g0kbwp4i1"},
+{"v":"0.2.4","e":"^1.85.0","p":"linux-arm64","h":"1nz215r42wvv1ghn8c8aqlr1i43y4500w99nsf9jk8warhn956jx"},
+{"v":"0.2.4","e":"^1.85.0","p":"linux-x64","h":"0ld0wikii9qkxghi84bymkxzs3y2nac4z62abrkqvzxifzjj5jsk"},
 {"v":"0.2.3","e":"^1.85.0","p":"darwin-arm64","h":"12zcsrvk0i3jfs7pfggb6i2bx4mawli84bqqmlnkzi1yavd7kmy0"},
 {"v":"0.2.3","e":"^1.85.0","p":"darwin-x64","h":"0c3wf3mkwlx7jq98p783za9siix8ya9jp490ywm8b7wb3d4xl5x1"},
 {"v":"0.2.3","e":"^1.85.0","p":"linux-arm64","h":"0q1is0my92hqjz86p5g96ipxj79pvmc0grb9q73j3xm79fmqmbi4"},
@@ -897,6 +901,11 @@
 "godwinjoseph.gloc-vscode":[
 {"v":"0.1.0","e":"^1.85.0","h":"14n34n67qh74j2m01v1wfdcrc1wv67gmgwjcg6wyf4i2y0lj93ja"}
 ],
+"grapetools.grape-ai":[
+{"v":"0.3.0","e":"^1.100.0","h":"1y17kikcqdshmymxpmsd7jypwpski24d78cdi2pcf8dsd0pnlbz9"},
+{"v":"0.2.1","e":"^1.100.0","h":"1yhq7vib3s45vk9sd9h8388zdq6py2ji9g38mvdagri6s484p42i"},
+{"v":"0.2.0","e":"^1.100.0","h":"19a7a05s683g58svcmwsr2va8wvz941a3pzii4y9kbqn24j7hq5j"}
+],
 "grroov.l13-diff":[
 {"v":"1.3.11","e":"^1.56.0","h":"0kzr26y6kxyxb3pr0m8wfxg5943vaf0yx9wpd1wf1xycxjy29mqg"}
 ],
@@ -1372,6 +1381,10 @@
 {"v":"1.0.1","e":"^1.80.0","p":"darwin-x64","h":"0k67bdq06p9s9sd1dsfmc6hxyjn0fkriqfynpcpli71fmklqk4s3"},
 {"v":"1.0.1","e":"^1.80.0","p":"linux-x64","h":"0iv5ccy3v644bv10h6xshma8rm6gwcap0db3z9v76v2j6rn2aqbk"},
 {"v":"1.0.0","e":"^1.80.0","p":"darwin-arm64","h":"0pka4rlpr9csh8p9czdhikgbik9pq8gy1qvblawg4g4m9hd4va9b"}
+],
+"readystack.auditor-ibs-cbs-nfe":[
+{"v":"0.1.1","e":"^1.75.0","h":"1p03i4904ll4sfyz2pgqg1kbl03zayld53n79x4yc03i9x32l2pz"},
+{"v":"0.1.0","e":"^1.75.0","h":"0jg3jzwk69gwa4vg2xm7ycjx7qy4l7i15ivccjzbmndxywqsj8r6"}
 ],
 "recon-fuzz.recon":[
 {"v":"0.0.32","e":"^1.88.0","h":"1j7qq94zphi669dwm0d5w9i346z8a22a7i1bz5wlnn8kfil9ndfg"},
