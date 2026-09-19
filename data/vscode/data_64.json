@@ -4014,6 +4014,8 @@
 {"v":"1.0.0","e":"^1.105.1","h":"1z3ajzq4h0rdrklcrap7vv8pj28nilwj4l2yqw3yafz2iz45qwlb"}
 ],
 "icedq.mcp-server":[
+{"v":"2.0.3","e":"^1.101.0","h":"06lrb4s6ajf93l2vlclbb1vcxdnh6hv6wsj8ci16h4fjpx0w78qi"},
+{"v":"2.0.2","e":"^1.101.0","h":"1yjx7ihisgi455737w2g6bbdg92x4cl022jpd9xaymffs7mzznmy"},
 {"v":"2.0.1","e":"^1.101.0","h":"07ak5hi1dw84x1pvicnlabh3ra89q19n9hfb5vqfsa5pkrnnik0n"},
 {"v":"2.0.0","e":"^1.101.0","h":"1h6ldaril8nmd5n9sgi8dicw473668wdixn7jz3dc7gqa56l4mwg"}
 ],
@@ -4930,6 +4932,7 @@
 {"v":"1.0.0","e":"^1.39.0","h":"0nij34bsl0pvb8f1ix79kbf6bhz9ryk14xyln2vjzmkdyak18b6s"}
 ],
 "liascript.liascript-preview":[
+{"v":"1.1.11","e":"^1.66.0","h":"0rcvkxpnsb7xibi123mmkbz2150hb7mhkyvm4kms9l5yf0b0n246"},
 {"v":"1.1.10","e":"^1.66.0","h":"1c65xar368pyi0glghv7izz7drlpw3dvw65y082b3bmrpa2826h9"},
 {"v":"1.1.9","e":"^1.66.0","h":"1p4qyi8v4l52vwx94h8vbf7j41lgfk53i7pszg7sz7gdxc993dwn"},
 {"v":"1.1.8","e":"^1.66.0","h":"16ngpwxlrfrqf2vqwjhyyms850ldds7pq8a32ivziy7m51yqlf6s"},
@@ -5175,6 +5178,9 @@
 {"v":"0.1.2","e":"^1.61.0","h":"0pdfkv9m1i8y8zf59lgif444h1lppd8qnrimhzylcs4v552w78rc"},
 {"v":"0.1.1","e":"^1.61.0","h":"0d3fvaxah7sn9yvq7gqf2zyr4kks3vqsfhqwc3j6irkdb4van17h"},
 {"v":"0.1.0","e":"^1.61.0","h":"1j3hcfizzz15ymnxkik1x34qyx317kn8d5ypxn6gv6qbcy0jmlfw"}
+],
+"lorin-speybrouck.wireviz-yaml-injection":[
+{"v":"0.0.1","e":"^1.8.0","h":"061n74g5rk4ww6lqz6831is3midg1k4z7c15snlhgppja7g8vpi1"}
 ],
 "loukas-kotas.breakpoints-manager":[
 {"v":"0.1.4","e":"^1.92.0","h":"1hjbwvpmvmmgifw5wmsd24ywq5przcyl3k7432la05lip0wf4fpr"},
@@ -7267,6 +7273,9 @@
 {"v":"1.0.31","e":"^1.63.0","p":"linux-x64","h":"0dqjvdgfi0kq0kpjkd66n5wb4abwjm0ipciv4a8c2j5ms06g1qc1","r":true},
 {"v":"1.0.31","e":"^1.63.0","p":"darwin-x64","h":"1nlh2izy93gkbmbc9vqbk2fvk7d9kzwlqdhcpd6n2snv7nscp85s","r":true}
 ],
+"orbit-os.orbit-studio":[
+{"v":"1.9.7","e":"^1.85.0","h":"1dyn20k6llz17zhz9bqjb711la3vvziwwhpl9bimw226sxp6jizk"}
+],
 "osam023.pwgenerator":[
 {"v":"0.0.1","e":"^1.19.0","h":"1ma02gwrklryghvfm5170b2xg1mwpnk0m1z5fsj1ivc894fx0v21"}
 ],
@@ -8395,6 +8404,7 @@
 {"v":"0.0.1","e":"^1.80.0","p":"darwin-x64","h":"08chfik9xbzvfwmsh2z082p8rsdzk2wkwahzmmrhnsk6dq954l4n"}
 ],
 "scientificai.zeolite":[
+{"v":"0.6.4","e":"^1.85.0","h":"181bn196rh6vk05l5mx86fcwfy8zw959y6ymxjhicwdr6qjgs5wm"},
 {"v":"0.6.3","e":"^1.85.0","h":"03aalzvkfxr16iyq8kxhvr6sfm6c9fppvfjjhdnm2b57xg6v61kj"},
 {"v":"0.6.2","e":"^1.85.0","h":"013pv90b189xc56cqvgqx0bjmc2d2rh2iihxykny2j4ix8qc3rvv"},
 {"v":"0.6.1","e":"^1.85.0","h":"1snh37nfzlw1mdza0dlkszybadzcs9xy2ac7w5iwmh0r8ybb4y0x"},
@@ -9578,6 +9588,10 @@
 {"v":"0.0.1","e":"^1.85.0","h":"122q17ry7ir408m020fwq62ix0xryjs9nd482pvsqn8kr8xhx7k4"}
 ],
 "visualjj.visualjj":[
+{"v":"0.35.2","e":"^1.86.0","p":"darwin-arm64","h":"0dd877akwmnpz1w3mbfsqkhajd54363w15fyn0vpvkpspgmnkg4i"},
+{"v":"0.35.2","e":"^1.86.0","p":"darwin-x64","h":"1s4z3plr53agbd246sy28sam2w4v3lvh5z6890zmgmrixmmv139y"},
+{"v":"0.35.2","e":"^1.86.0","p":"linux-arm64","h":"0kyvwh4z1vm4v3k11www8g9h869kw4vxlvj543sqq3l6bvn3q9k4"},
+{"v":"0.35.2","e":"^1.86.0","p":"linux-x64","h":"1phhkbfpamjlm0wmy4k0w5mivq6r6l5pnry2izc2qnc0hb3isb6w"},
 {"v":"0.35.1","e":"^1.86.0","p":"darwin-arm64","h":"1n94lzjx6wrdabca0clw4n5p3zz89xsgkv560s9c8xdlg3gfnyl4"},
 {"v":"0.35.1","e":"^1.86.0","p":"darwin-x64","h":"087svrx37wvk23gb2aysp15haqjiibl8bdjimy0f72pm8aa0zasl"},
 {"v":"0.35.1","e":"^1.86.0","p":"linux-arm64","h":"10l5ghbrb8jxrhgr3s425j3kh1y63nci3l5fgiran68ijvdrbjw6"},
@@ -9909,6 +9923,7 @@
 {"v":"2.0.1","e":"^1.45.1","h":"10z7zvdbqnz8a8yva5cpwqzp1pydaj7sgnx60mp93rv4v8hggm70"}
 ],
 "vscsync.vscsync-ftp":[
+{"v":"1.0.35","e":"^1.80.0","h":"0967qwpncp0zvlj9lnkaikcsv6l7vxf8wx3ci5na1893l2npvw4s"},
 {"v":"1.0.34","e":"^1.80.0","h":"08bhk2zvzjpgwn6fmd8lxvrnq9p670zb6kb6ccay3vpjkzbdjbv0"},
 {"v":"1.0.33","e":"^1.80.0","h":"15rawlbxng02fpw5gmqy6mf535dijxlv52q3axgvk3l9mxar88ra"},
 {"v":"1.0.32","e":"^1.80.0","h":"12sfkg5sgvw0ammjsbhk42nqawgpd4vgjinnii04aakybacbwnlv"},
@@ -11207,6 +11222,10 @@
 "wondacorp.yaml-code-injection-highlight":[
 {"v":"1.0.1","e":"^1.75.0","h":"0rmsi0znwh6mybvz9cj394qjdwvnn74w1rqwkq4sfxshqf1wlvii"},
 {"v":"1.0.0","e":"^1.75.0","h":"07msrvas5qii6rn7784afa8a6kphasr8k12fiizxaga5029x0ik2"}
+],
+"workjerry.it-tooools":[
+{"v":"0.1.2","e":"^1.90.0","h":"1h4x8cdbswsvp2c0qirzv6w4bmh3lf3827aq7q4v57wwlz4h4cfk"},
+{"v":"0.1.1","e":"^1.90.0","h":"0ajspz20b7by8pkpk82h14xkfafl1bjwqs153q6ab8hc7z2621wc"}
 ],
 "worksome.worksome-vscode-extension-pack":[
 {"v":"0.2.3","e":"^1.55.0","h":"13nvizj7s652s8b9cm878nmznk1rg06cicavr4z98y9smzd0p57k"},

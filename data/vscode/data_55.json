@@ -398,6 +398,8 @@
 {"v":"0.0.1","e":"^1.0.0","h":"19ppmz77bkh4jzjdhcz85j2l10gblwccivq1na80fzmcnz7yynrb"}
 ],
 "altium.developer":[
+{"v":"0.4.52","e":"^1.85.0","h":"0h1p889qznr7fmxsw4j7lcc6zf3gc8x5529f6zhhgk920y5jph11","r":true},
+{"v":"0.4.49","e":"^1.85.0","h":"0a5gaqd2l210w1f9ypwifmwb8siv954ly8r4jcl17lj1qkcm94kw","r":true},
 {"v":"0.4.46","e":"^1.85.0","h":"0pflbsv5fz63nylnlx6n5k2x971xdgpbdsdaqvpy8djbkbr8pmys","r":true},
 {"v":"0.4.32","e":"^1.85.0","h":"0h69fjc4a00xa60ayp1q0hla40y26i8db581xzhi5fxh3mxh197p","r":true},
 {"v":"0.4.30","e":"^1.85.0","h":"1yh8phwmnly5l5r2l2l0gpjy2cjqmvrrmkhwaql45756jvyrhx8g","r":true},
@@ -2627,6 +2629,7 @@
 {"v":"1.0.0","e":"^1.64.0","h":"1i8vrhbf1hs2rfas5xzjq4kmp5aswf40v1p2iv7m4355vj20hkmg"}
 ],
 "eamodio.gitlens":[
+{"v":"2026.9.180514","e":"^1.101.0","h":"1af7kjif3vkj888452x7ajj2acf7fhzjafny4s05cwglnih6jsl6","r":true},
 {"v":"2026.9.170516","e":"^1.101.0","h":"01ykmzgjr6ihj84pfs8gpr0q5lajnlbrpwsgll8xgaq5clqf4jdm","r":true},
 {"v":"2026.9.161208","e":"^1.101.0","h":"14zbihwjg4l6kqnlhidx72vjdlqfcyinvs531q064v383g5ihvh9","r":true},
 {"v":"2026.9.151317","e":"^1.101.0","h":"1nk5bcm2j3x922ampn12hpygg0yk1z7h5ryr7qp0al5w1ikmm8mw","r":true},
@@ -4189,6 +4192,9 @@
 {"v":"0.0.2","e":"^1.90.0","h":"0wkymqk5z2g5q631z828ymn16rpzvw7smjmbc3iq6a6vs7ry9kg8"},
 {"v":"0.0.1","e":"^1.90.0","h":"00j9iw19966ic4mqvril4yrhalzpl0b92644fy6kgvmc68vzs7x8"}
 ],
+"ebola-chan-bot.copilot-chat-injection":[
+{"v":"1.0.0","e":"^1.102.0","h":"1xbdfxfa19657gimds5663ixf2ngslfakj33b4d2z97xzh6xbh9r"}
+],
 "ecosphere.eco-lang":[
 {"v":"0.2.6","e":"^1.74.0","h":"0zmk8vhnn3klm068vsqsffr68mvhqdx7d9i9b7c5zi0jyzyhgf5h"},
 {"v":"0.1.6","e":"^1.74.0","h":"0gshz5cj4j96p8k3g9z9wjrdjjl7lz47di5fqmm9qsjmm4xjk5r0"},
@@ -5314,10 +5320,19 @@
 "hengkx.vscode-react-create":[
 {"v":"0.0.1","e":"^1.18.0","h":"1gcik6ixji61b56h0mgna907birnaq7cbfh4hxs9sf1xb1bjgkdh"}
 ],
+"herdrplus.herdrplus":[
+{"v":"0.1.3","e":"^1.100.0","h":"1m7my3bq0wp3r4c3h2k1ld4684y13xjq5mnwlljvl8gkd8075l98"},
+{"v":"0.1.1","e":"^1.100.0","h":"1nslg9i1czz6g8dzvvx24qqd4jafrlskphkab1njhm8ibaqbzlhy"},
+{"v":"0.1.0","e":"^1.100.0","h":"1wdwr3fbyn5kvih75f2l4z79xb3i8smcnwm400icq1hdwjs27jmv"}
+],
 "herisit.cleanup-merged-branches":[
 {"v":"1.0.0","e":"^1.109.0","h":"1m3qfib1jm4npxs5pv6xjsxhi4j06yqx8sg56xb71ckwzig4pgg2"}
 ],
 "hiiiid.mar-code":[
+{"v":"0.0.29","e":"^1.125.0","p":"darwin-arm64","h":"1003fp2gqjhdzp1ynspns1r53xi92da5w3fyzm56ywy5f6j65q9y"},
+{"v":"0.0.29","e":"^1.125.0","p":"darwin-x64","h":"0knsinnf030p8c5pwrndz8ndinc7wxc98ii55wx8v2flk4qi1vpb"},
+{"v":"0.0.29","e":"^1.125.0","p":"linux-arm64","h":"0mmmsf8d3810crdsw0nivrw2hsi9rvxb1an0l2zy4y150n8nlv6v"},
+{"v":"0.0.29","e":"^1.125.0","p":"linux-x64","h":"0np5sb3fpf70pm587l3p6nh7rqixbri8xq00dlswi3kpm2ivphbl"},
 {"v":"0.0.28","e":"^1.125.0","p":"darwin-arm64","h":"19d0ss589d83ab6nv370mix21qaw061w7w351wjfjxgkr67qqa36"},
 {"v":"0.0.28","e":"^1.125.0","p":"darwin-x64","h":"0s55p90b1m0sz43mw6ih2rf2i3b59y8f5mznziwacr3ayzv7bwp5"},
 {"v":"0.0.28","e":"^1.125.0","p":"linux-arm64","h":"0bvbvixfs1xlsbnhh0r4vgj2s4rixwdwrqc0rksivgf40bf6hswn"},
@@ -7483,6 +7498,9 @@
 "mattrybincom.mattrybincom-theme":[
 {"v":"1.2.0","e":"^1.73.0","h":"036lwfxcp8w2czb0fzba5lhs97rqc96mik16vabm38q43fhg3xmx"}
 ],
+"mauricioabreu.voxlang-tools":[
+{"v":"1.0.0","e":"^1.85.0","h":"0rmnqyzd63ymyf5pm00ay6knn04zbbxnq3by7wg7qr9caxznz4mj"}
+],
 "maxcutlyp.dotenv-autocomplete":[
 {"v":"1.5.1","e":"^1.65.0","h":"0d67q6awwfznpjky0cf5glff58sj8y95s0dps27ky79rc09f58pk"},
 {"v":"1.5.0","e":"^1.65.0","h":"08mq3944idvgvdfb8apwhyxhag23w7d81hrrr88i30kb5j62pjw8"}
@@ -9131,6 +9149,7 @@
 {"v":"1.1.1","e":"^1.75.0","h":"02rmnp5igrpj3vcl6541k2l64rpg88p6zhv69s4zwa06zyzzdmyf"}
 ],
 "readystack.vsix-publish-lint":[
+{"v":"1.0.3","e":"^1.75.0","h":"1cw4d8b3cq31z73c0wyh2fsdlf9mkm2sj2fpzd15kz4mzxgxjifk"},
 {"v":"1.0.2","e":"^1.75.0","h":"0kn3bria0bpx2l25sz47bj4vfli7jm4fyamw15a56pgz96ahl95r"},
 {"v":"1.0.1","e":"^1.75.0","h":"1laf6vyp4yz1qnjllkypg126d1d6xam3ahk10g8388v1x5mcangq"},
 {"v":"1.0.0","e":"^1.75.0","h":"1wjda8pvdwjm085vnhpm07p9kfqrwx077cjikj217x3gi37prkk1"}
@@ -11947,6 +11966,7 @@
 {"v":"0.0.1","e":"^1.74.0","h":"0pf6wz9xlw98hxp7p13a057x54i21ycasjkfdx088jmz8q72yqyq"}
 ],
 "ziemniakoss.ziemniakoss-salesforce-extension":[
+{"v":"0.0.40","e":"^1.81.0","h":"1mk2h8q9z1c9v0rlgpqaf8nnynfk3c0s7hmp9xwm1hgjhg5r4dhg"},
 {"v":"0.0.39","e":"^1.81.0","h":"0p7i0cnh8biqhm1r0g178nnh37w7z5brbknjvi862hx6vd33qnck"},
 {"v":"0.0.38","e":"^1.81.0","h":"093mpbqacwfc81zxfhfgxlhxhmn28jl065azs65z25qhazhpb747"},
 {"v":"0.0.37","e":"^1.81.0","h":"1xd50i81s5c8p4f08bxiyqyyc38w2w63ap4357pr3yn2gcf4fh1x"},
