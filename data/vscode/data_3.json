@@ -36,6 +36,8 @@
 {"v":"0.0.1","e":"^1.85.0","h":"01y0lwsz68vsagiqgwm5z0mw98qjzi1fxbbp6zgyljvzywwzkw1z"}
 ],
 "8bitscript.8bitscript-lang":[
+{"v":"0.20.0","e":"^1.91.0","h":"11hmnalkv1k4ghh3qjqxhgc7lxnfqxlk93a5dkhbvw40xyz998cj"},
+{"v":"0.19.1","e":"^1.91.0","h":"05qgqgsvb4f24kd6mvhm7y97yn05skppc2sjrqyly7jlw43pr5xj"},
 {"v":"0.18.0","e":"^1.91.0","h":"0h222njasfyhaczd6b2shsrcv7h87ykh5vjzm7izgf193shb1bp1"},
 {"v":"0.17.0","e":"^1.91.0","h":"1zlz2312b53qci760k2kzl0a1hqs8b4lxdi1vpav97fbs1s0ny8d"},
 {"v":"0.16.0","e":"^1.91.0","h":"0hyxkmqdkwkn431a9gdd3hh1l4zng47g0hd1fyyqzkxncmcmjg59"},
@@ -2430,6 +2432,16 @@
 {"v":"0.0.2","e":"^1.44.0","h":"01l244iirpfwxyn299c68anb9fhwpcrs50qxvdfb8a83xd95kdf1"},
 {"v":"0.0.1","e":"^1.44.0","h":"1v37ggyd9qcj39p48rnajxadyhmfmkrja35hy920pmizbahnvyia"}
 ],
+"donaldmurillo.sysonescript-vscode":[
+{"v":"0.2.0","e":"^1.85.0","p":"darwin-arm64","h":"02ci0cfq70kx7228jrgyxc4hn2fvsbd6jqyfsvl1fl44ykypxwjj"},
+{"v":"0.2.0","e":"^1.85.0","p":"darwin-x64","h":"1z5j5hva8qbv0m2zh8sx433jyyrdcl8g9a8aimwilyc10ahdjpcc"},
+{"v":"0.2.0","e":"^1.85.0","p":"linux-arm64","h":"0b4m6c200jrfadkv79zfj0kzm6dmmq26v3vshr174w2zqq8vzm91"},
+{"v":"0.2.0","e":"^1.85.0","p":"linux-x64","h":"0la1110z41g0yg9slav3z727ab1sbi84gnh6vmqvvpf74k07014w"},
+{"v":"0.1.0","e":"^1.85.0","p":"darwin-arm64","h":"16yb2l4ciz3v04wcyra2jnvdjg88l5yfklhal2adn7kvav866zm7"},
+{"v":"0.1.0","e":"^1.85.0","p":"darwin-x64","h":"19s0ly3zj32sl98i2w0zfscvpifgbr5jsp32m99s8qlycmlr1q8z"},
+{"v":"0.1.0","e":"^1.85.0","p":"linux-arm64","h":"0rrgk3valladzziy8z4ifmkf21galxgbvxn37b6c2rvw85b6xicr"},
+{"v":"0.1.0","e":"^1.85.0","p":"linux-x64","h":"169g1vw3sjv80ia5j9r7rxvv4j9zm5c5q5rhhjkj0npf5nc7c61n"}
+],
 "dougjoseph.cline-cubed":[
 {"v":"4.1.24","e":"^1.106.0","h":"1imk6v9pnjy31rlb9gkq5fp764kwgwv1jjnjwhkbb786aj113q5p"},
 {"v":"4.1.23","e":"^1.106.0","h":"1jqfj0k32c3n5bllgjy7rrfjzbgh3yk33qhzgxjywp6mrkhf3aki"},
@@ -2708,6 +2720,7 @@
 {"v":"0.3.0","e":"^1.85.0","h":"1lj8ybbmkxbr9pdjqg81lfky93wzvmb6yqqklh0574807mkiwv5g","r":true}
 ],
 "egenn.rtemis-dark":[
+{"v":"0.1.1","e":"^1.51.0","h":"0s4iswkim2nkl0mac77hm00pzgisd2wxbcld3fc1q279ipg8qqxr"},
 {"v":"0.1.0","e":"^1.51.0","h":"1kdvrz973bf2mrs3dg6p7ip6q5x6fwnqx5j3lzhljq5sby8zkz5h"},
 {"v":"0.0.51","e":"^1.51.0","h":"021x90rgn79n5lb0w02n8h2zqzbzqk18wggyagbjlxrsnrdx7x92"},
 {"v":"0.0.5","e":"^1.51.0","h":"15gp97h8cvvyx0nrll95cb20jryz23x0hy91yxd3xzpcsh7awm1c"},
@@ -2749,6 +2762,8 @@
 {"v":"0.0.1","e":"^1.46.0","h":"0ivnyziglxgnzxsfqwxf60p4nmzxpa4qqjs2j4jv93j524ha880n"}
 ],
 "electropol-fr.coloredtheme":[
+{"v":"2026.9.1","e":"^1.42.0","h":"11n9cihzp2rx262xsvnngpkzy3l80figz8x5069z6z9r6r74i5g5"},
+{"v":"2026.9.0","e":"^1.42.0","h":"0n4phlrzhahbmp712xczbs0s6amf8wsngjg1azzr6dhda4mqz8i1"},
 {"v":"2026.8.2","e":"^1.42.0","h":"1jk2vyczw0y9xj8g08llwjgn4jyjifcsy9wkncm6gbrliidg8hki"},
 {"v":"2026.8.1","e":"^1.42.0","h":"1cldngkkss8ccv4g0jkkm01hq2yr3xzbkkqd4p6jw1sln6l9lm52"},
 {"v":"2026.8.0","e":"^1.42.0","h":"02c7vah9al357ykvjnmp1jpxz7rp8c3zp9m7ixg9npl1p7dcrrij"},
@@ -4273,6 +4288,9 @@
 {"v":"0.0.4","e":"^1.92.0","h":"07n3fsvzz3fqy06p8jjklcqfh600d3xw04iwzbazy2gym0q1vz1y"},
 {"v":"0.0.2","e":"^1.92.0","h":"0frq0r0rqzl85vd8x1v93b3dq9lblsk54bgnhj3wwp83bv9qykvf"},
 {"v":"0.0.1","e":"^1.92.0","h":"047f0vlr1m6h8405pafpbc9jpiwji3inrgyslmj8qmcpa426nilx"}
+],
+"kimura.mzml-chromatogram-viewer":[
+{"v":"0.1.0","e":"^1.85.0","h":"00jircx7pdk2d1shq2z47ryxkvz8kqxj632rgi1ksyp3crzv3whx"}
 ],
 "kiranojhanp.kiranord":[
 {"v":"0.0.3","e":"^1.94.0","h":"02bn49ap6ld1mlf1i5rbgbpm3662zx92c434w44jbm3b0r4kwq5q"},
@@ -5920,6 +5938,9 @@
 {"v":"0.1.1","e":"^1.90.0","h":"0m25cl8d41pl0q4s3bs3vk5q2j7620kjqabp4yw80l5xfwm3vga9"},
 {"v":"0.1.0","e":"^1.90.0","h":"0cbbxvlj55f29v68vs7gn0py5wp119fsxp08v9nzhjws4jsgvnxr"}
 ],
+"noritaka1166.appium-inspector-bridge":[
+{"v":"0.1.0","e":"^1.96.0","h":"0490fk4i6m8dw6xh2jnz0h3rvikhk72k8rbdmsnfkylrdfivxppj"}
+],
 "nthnn.rhea-lang-vsce":[
 {"v":"0.0.4","e":"^1.91.0","h":"0gyfs10y6w3907svfycs53s1aydpm9cad8x7rfr94jl2d33hhm1n"}
 ],
@@ -6435,6 +6456,7 @@
 {"v":"0.0.1","e":"^1.100.0","h":"0i92mbg8gr57nj6g8xivdswhx2npa8hr57ln5ai4cdg4frhqlpqa"}
 ],
 "platymuus.dm-langclient":[
+{"v":"0.2.7","e":"^1.43.0","h":"1c54myw3xb4lgi2bx4a9rp273z3rmrw85jb6zpzwplqbs9vfk24y"},
 {"v":"0.2.6","e":"^1.30.0","h":"1n6146fmjpml1i1jbn11ascnw43kzyd8z4zivkaxfm3xxnbrmddx"},
 {"v":"0.2.5","e":"^1.30.0","h":"0kpz1fix7ksx4z1bmcv5l9brzkklhmhi69h209faz2846mbr5zqg"},
 {"v":"0.2.4","e":"^1.30.0","h":"169zfh885ial1fir5i033daxsmbr3c9vizlxx4w0zvgqan3dyxlv"},
