@@ -518,6 +518,20 @@
 "danwag06.send-secret":[
 {"v":"0.1.1","e":"^1.80.0","h":"0wbkv8jr159fvz26ngbcyg44kckiv1j5wfk1kkg96cccph0sg6dw"}
 ],
+"dawsine.daws-folio-markdown":[
+{"v":"0.1.30","e":"^1.90.0","h":"0z28nngz40hh528cj11z4rv3p446z9knk02gbmi7g6l8f3xjipz0"},
+{"v":"0.1.29","e":"^1.90.0","h":"0j1c03xgp9lww3ff06n8c48g3gaw409vs4gf4j9mhlwpp75kzin1"},
+{"v":"0.1.15","e":"^1.90.0","h":"0dpilbmk8wqdckcq63qq4rnjampna8ms2ym9jys193wfhjpz3k0j"},
+{"v":"0.1.12","e":"^1.90.0","h":"1mn8chx0mjs9v9ds1wjb05ai0a0aj1m204n4dv1w1nx0mpf41vx1"},
+{"v":"0.1.11","e":"^1.90.0","h":"08mzj13fiihvvzljahicghg5sxqwgqr64biqr2xr39q34y0hrxib"},
+{"v":"0.1.10","e":"^1.90.0","h":"0a1bh55vaii7psd29h9yl2h2d1967dbqgwrxr25mn8sww04j9mr0"},
+{"v":"0.1.9","e":"^1.90.0","h":"15a60sy5d3gfmznld0jwr2y1dslidpv66019947xkh2rz4h0jb80"},
+{"v":"0.1.7","e":"^1.90.0","h":"1857d1r12464wbd97am64w8wyvcncnq14p7xq4ykj12a8lqjivxm"},
+{"v":"0.1.5","e":"^1.90.0","h":"0p0b5b684rfyw5s2m8pkj5g13z7f0b4ainb3x993gqxi9xgb326c"},
+{"v":"0.1.2","e":"^1.90.0","h":"0pb2i5712b381c8x02xmacc3yls39fmdr6vz8ibflmm40bxrwffg"},
+{"v":"0.1.1","e":"^1.90.0","h":"10nns1mqcpq4zavs2gxd8dvmm7cdib6bzqbmb6x2f6xpvgsg0ib8"},
+{"v":"0.1.0","e":"^1.90.0","h":"07jqy3vlr0pb7xhxgj9n3mal4cd3qpq0x194vc7qq654r4zwr1pz"}
+],
 "dc-commits.aws-lens-event-driven":[
 {"v":"0.6.0","e":"^1.85.0","h":"1rvf66f99cv7shfr5nz07wf025l4mx4isazh0r9nhg4gmb2z7j21"},
 {"v":"0.5.4","e":"^1.85.0","h":"1584xb69pjxv384sh23ryqbpc9y8gzy5gzli8wnylx7179638ryh"},
@@ -998,6 +1012,9 @@
 "jorismorger.claude-terminals":[
 {"v":"0.1.0","e":"^1.95.0","h":"05pcz2r7699rx9fbhaahwsg9v02k76xfdbbwyvivi74xb3xciyaq"}
 ],
+"juancarloscondori.capibara-pet":[
+{"v":"0.8.0","e":"^1.74.0","h":"0b5mqm42jpnaxwywzh8zig1vn5z89cgglyxmn68404y3jpq1dzm8"}
+],
 "justinlee-tcc.axon-dev":[
 {"v":"0.8.0","e":"^1.74.0","h":"1gawmrx0ncbfjg4vraggwym8yd0lafb56d8rzbxn328r56pbvgji"},
 {"v":"0.7.41","e":"^1.74.0","h":"1p5w0pdarc2cda44hzsnxiy2j57vxirb3x364in48w5pcx4bw4ny"},
@@ -1017,6 +1034,8 @@
 {"v":"0.1.2","e":"^1.85.0","h":"0j6j328xv5x865vhpf00l9qikjj0w9r6pxihqs6gvbvmq8ff4dmn"}
 ],
 "konveyor.konveyor-go":[
+{"v":"0.7.6","e":"^1.93.0","h":"1mn92vrv7r0x8zabrbmmx6xkgb0k0bjnahabnw137k3w9ahcgh83","r":true},
+{"v":"0.7.5","e":"^1.93.0","h":"0pcbk9gp67l6ssknl5hxasnclbzibyjcr49qaabm7fa4dq9ijqd5","r":true},
 {"v":"0.7.4","e":"^1.93.0","h":"05by8jwdclwdwpm5w32b4hh5hgj197xs0xakqkl06376bwnnxsa7","r":true},
 {"v":"0.7.3","e":"^1.93.0","h":"1dd2mi73v2dbnwhgvhd4i2rpyh4kcpvswmmd9r2cn3sfiq9g7y4b","r":true},
 {"v":"0.7.2","e":"^1.93.0","h":"1v277qawbrk1fz2ff6gqd0js3fbsx68a85qjwkks59mch6x80xfk","r":true},
@@ -1134,6 +1153,7 @@
 {"v":"1.0.0","e":"^1.75.0","h":"1yjn0sj0pdbgl80bg43b56mlc6gdb8mrbc3ly0f56hh6hdam40v4"}
 ],
 "lmscloud.mdlcode":[
+{"v":"1.6.5","e":"^1.101.0","h":"0603kg4rbpp5jfdcn2fdxw5f06bzav9qdylwnbnypffkmydkbyy7"},
 {"v":"1.6.4","e":"^1.101.0","h":"04cmf59hq68apd6afx2nmd802jmx8lyi711926dx8qj26mra8n3d"},
 {"v":"1.6.3","e":"^1.101.0","h":"1h56b6ba84c01m8qhpifmpwk9xc65l91s2hdh9ia64lp0n6vq407"},
 {"v":"1.6.2","e":"^1.101.0","h":"07aq7jgh0vj2g5yqynjlxhag7yi7lfbzm5sarqqk5l2w7pwwgrpg"},

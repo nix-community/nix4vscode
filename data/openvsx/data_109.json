@@ -115,6 +115,7 @@
 {"v":"0.2.1","e":"^1.76.0","h":"0h1jqxv59hsiykddsbrrcvwnhw0l0sk1xa54d4kbsmp790zknbh0"}
 ],
 "cluesmith.codev-vscode":[
+{"v":"3.3.4","e":"^1.105.0","h":"1yfanqalwcqnc5z6swvkdd0wq4zff4040bpvfxzkrxsifygw9hiq"},
 {"v":"3.3.3","e":"^1.105.0","h":"10rp3ifsm1f6i1wm8mhib61y8lasb1fhi3x3ch2dqc2bknlr25fr"},
 {"v":"3.3.2","e":"^1.105.0","h":"0zlgmngk1yf3madijsjxxs7fmz32ipcyvvk1pchb3r7k8q3xq2g8"},
 {"v":"3.3.1","e":"^1.105.0","h":"076m1aq265fcr0dw9wl4g433kp3lzlzn60b5fabxj12y5wqwb9yf"},
@@ -702,6 +703,7 @@
 {"v":"0.1.1","e":"^1.90.0","h":"0p3mcp026vqg9hbijswv8zfww3c8jxsychm74z6y5872f2ds4fjy"}
 ],
 "markcomment.markcomment":[
+{"v":"0.4.1","e":"^1.85.0","h":"1h6r6wn72asvijjys5jz5ija06ffw46ldbbmh9yi0rgr101gbq0i"},
 {"v":"0.4.0","e":"^1.85.0","h":"0vbba126krbcv7jcrisf374a0b1z8l1nn7in1asyx7kkdjkfyk8n"},
 {"v":"0.3.2","e":"^1.85.0","h":"1mmq56n0abax33if9lyvpvvkdfdrspds8zfmbj06fgg6qshp2g2i"},
 {"v":"0.3.1","e":"^1.85.0","h":"1p0sfdr88ifbp7250mi8wz2bw1zhvf2r81jih97lbg492mg1x3hs"},
@@ -1430,6 +1432,10 @@
 {"v":"0.25.1","e":"^1.85.0","h":"0nxs42z7qi5887bbplv03xbimkp342zdd4iliv81ll3mrx1a76zj"}
 ],
 "tokitoki.tokitoki-vscode":[
+{"v":"0.1.9","e":"^1.92.0","p":"darwin-arm64","h":"0fx16zv1mqqyv746x8aiqkkypi1prya0lihsgj027ckkkb1xgjik"},
+{"v":"0.1.9","e":"^1.92.0","p":"darwin-x64","h":"06q442bxjk09vrc5ardnvm82rnsaz17015ncxy0bg4avqslaxfc7"},
+{"v":"0.1.9","e":"^1.92.0","p":"linux-arm64","h":"13ffcylx1jk22vqcnn2czkb15xj4ddg6fyzrl0j3lkrq9a8dxman"},
+{"v":"0.1.9","e":"^1.92.0","p":"linux-x64","h":"18wdlabxr3gm7li6s90l9k19x0q92acdq4jwbvykyn9dlnbk6hc1"},
 {"v":"0.1.8","e":"^1.92.0","p":"darwin-arm64","h":"1a5fhsxkk0byj63nlmzml76qqb9ffa01fikrj2l9r8fflm7ccxlq"},
 {"v":"0.1.8","e":"^1.92.0","p":"darwin-x64","h":"1cybcz9yrgi06b0hy78i6jbd6f0ysfgzza43h6i4zdqx8bcqq2af"},
 {"v":"0.1.8","e":"^1.92.0","p":"linux-arm64","h":"15zplkjj0m75jqkihgchiffdks4i6i5a04ppy4vw05qif8i9isx6"},
@@ -1451,6 +1457,14 @@
 {"v":"0.1.25","e":"^1.75.0","h":"1ci446c78rkavsa0mvgalwvx11drsfm8pij074540256wyzhwrp7"},
 {"v":"0.1.24","e":"^1.75.0","h":"0vg47pj06f1b1b492yxv8wkjpdcd71j4qp8bxf4s2wvg7w15fwbh"},
 {"v":"0.1.20","e":"^1.75.0","h":"1x4ma24s0hq1vwrk0vrr214gj6zx7wrkbxyr1c3518qys6x99f4p"}
+],
+"tony-l.scene-breakpoints-vscode":[
+{"v":"1.0.7","e":"^1.85.0","h":"1qggzy65kkcqyrwz20z07xf3smy6h92pk5l5w9mnzk2g0d77v12w"},
+{"v":"1.0.5","e":"^1.85.0","h":"1yh6lbxnv4ff96ki60lk42il3gj4i5yg9asabv7n41nl8gnr6yvb"},
+{"v":"1.0.4","e":"^1.85.0","h":"1gcsjnrfmcj3gl4p9sbspqc9s45ibbg66hgvhi2kfmwqp9hkvsdy"},
+{"v":"1.0.2","e":"^1.85.0","h":"15dvg55539ndqmx60df2n6lzd9n1pr1594qv7307a8lzvx7wwmz8"},
+{"v":"1.0.1","e":"^1.85.0","h":"0r8iyrzz7b066b6xij74qlry2jaiz1ads857f5gjpjdlidnbl90c"},
+{"v":"1.0.0","e":"^1.85.0","h":"0ajpn0q8ca8yv6zkysiq224vr1xxa2brbgcy2f8lr6schak14qfy"}
 ],
 "toragonite.claude-code-orchestrator":[
 {"v":"1.5.3","e":"^1.90.0","h":"0pgkir75jmjfwdn991hvma5dk3cb8hincy0az1n6nn5xmkzj9a17"},
@@ -1658,6 +1672,7 @@
 {"v":"0.1.4","e":"^1.103.0","h":"0bng9m6m6gv44mpd4yf72xrid6j5ms0cb3qkyz6i3nqq361bgj5y"}
 ],
 "yocto-project.yocto-bitbake":[
+{"v":"2.10.0","e":"^1.92.0","h":"13id1kddlxpm2r962cp753hp0dpagxv4nfjzvmya1qqn2kyrqf89"},
 {"v":"2.9.0","e":"^1.92.0","h":"0p2k6frdrf0x4q3i5xwxkrqrpf3h9zvdb7k28bi3k4l4x6kv1ipc"},
 {"v":"2.8.0","e":"^1.92.0","h":"005yydldbhnwmiqzvxql0nizpif9a40z96cyqj9h2ndq47gija0l"},
 {"v":"2.7.0","e":"^1.75.0","h":"0j0mxym1kdmx6bbcm0rffim72clxksbb87diw02p456b1qa0idqb"},
