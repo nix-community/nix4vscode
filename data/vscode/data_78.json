@@ -1861,6 +1861,7 @@
 {"v":"0.1.0","e":"^1.85.0","h":"0rprl21xvi42376kllshag4dlpyd8whzzfvl7bdghw7gx2jcfygj"}
 ],
 "cutler-sg.sensible-claude-code-defaults":[
+{"v":"0.2.3","e":"^1.98.0","h":"1w5ll64a36p195yc678nzczdf2fj1bsa19zlnymczjf7fmqycb0v","r":true},
 {"v":"0.2.2","e":"^1.98.0","h":"1qj2rpc46nin168ab9nd6f8syjldmf09v64zpsk0b3f0c01mkrj3","r":true},
 {"v":"0.2.1","e":"^1.98.0","h":"06c47fng9552wbgpy14d4vsa8mv2daf230dc8dzc412s8v2yhbx8","r":true},
 {"v":"0.2.0","e":"^1.98.0","h":"0nvp4fvmfy5hf2n6r6z6abawipyyfi592zih71pp83gbn1ihrbnk","r":true},
@@ -3075,6 +3076,8 @@
 {"v":"0.0.1","e":"^1.41.0","h":"1l662pwyqkw9p578w2563ajvj0n7drp0m9jy857773ryfjlmblij"}
 ],
 "gaetanotaormina.keyboardshortcut-explorer":[
+{"v":"1.3.2","e":"^1.60.0","h":"0ryk6m6hkrhzq8iqxd4mzjrynpv4m4xyb4n8q662gmjkm4im9qnk"},
+{"v":"1.3.1","e":"^1.60.0","h":"0h94fxa94w2a3qgp165rn0y4vrl59c56ijc0l8dvddv8a3b4hik0"},
 {"v":"1.2.2","e":"^1.60.0","h":"1drbvvwxsnfg2607wx99ycpvdiw683gy8cyikwfjpfw9znq89y6c"},
 {"v":"1.2.1","e":"^1.60.0","h":"1gwyhw0x5i59vhppjbjl47cabdxr0ki90jc49rpbjffrbwc7ql9a"},
 {"v":"1.2.0","e":"^1.60.0","h":"1yc9mic2clv5ndr2wlwm6swqn4zkbn108ww5sajkssswpdrvmszp"},
@@ -3798,6 +3801,9 @@
 ],
 "hyprluna.hyprluna-theme":[
 {"v":"1.0.2","e":"^1.60.0","h":"0hfnryxihm74dnwxibj9dyan7ibpxf1gyk4lhidmahydgnqacdir"}
+],
+"hzwx.hzwx-i18n":[
+{"v":"0.0.1","e":"^1.85.0","h":"05l7gani342l03xbmh16c10r2hln1zz32vmw3l72g6cikiyy8i13"}
 ],
 "i2k21205209.opengl":[
 {"v":"0.0.2","e":"^1.66.0","h":"07xa9am29p9iksgrg4zjm51f7ymz5cxn6bmg65hq8i0fwlyahsn7"},
@@ -5067,8 +5073,12 @@
 {"v":"0.0.4","e":"^1.0.0","h":"0b4y3zlwcxkcaalvdcyj4bm6xgmdbsgrxjgg0bnrh7jjfhig6z2x"}
 ],
 "linusn.lin-lang":[
+{"v":"1.2.0","e":"^1.88.0","p":"darwin-arm64","h":"0scbmpp7hwgyaa7m98fgn3sr3zjw5c4wvh7r3c7jp3gr608x0v5r"},
+{"v":"1.2.0","e":"^1.88.0","p":"linux-x64","h":"0nf536734ah7b8jfvwx0i1vf34hgxp7h7n6slvh9fxc4lh3yrm6m"},
 {"v":"1.1.0","e":"^1.88.0","p":"darwin-arm64","h":"0xd2w336sclkb9ymrxpswmj5c51v6dskjki9xhvf9q04y3pz4qgz"},
 {"v":"1.1.0","e":"^1.88.0","p":"linux-x64","h":"0biq9l89cfkahpbsffy3dl2rdzqlkr69aiyla4amzxaim882lqrh"},
+{"v":"0.3.2128","e":"^1.88.0","p":"darwin-arm64","h":"1ynxyr03sj7rq9blivqhbipr5svjh5mj7h9lr8674ghfhbh3adc4"},
+{"v":"0.3.2128","e":"^1.88.0","p":"linux-x64","h":"1yzmk7n8xnrj2i360dnjp0br4ipiyy41qwrl85hhzgzvr2j7x922"},
 {"v":"0.3.2126","e":"^1.88.0","p":"darwin-arm64","h":"0mnkvlsfzpykg6rabmd420wbc6sf1wly9yiwsnm4wmqpwf526szi"},
 {"v":"0.3.2126","e":"^1.88.0","p":"linux-x64","h":"06926x9kkcbvk72621cdilwjvcfgif5772ilhsywqk9pf8qpzyxb"},
 {"v":"0.3.2122","e":"^1.88.0","p":"darwin-arm64","h":"0wdjy0xa54an4rlgs6mk2407dgqawlpfy4a21x6nl6zq0q65gn1g"},
@@ -5416,6 +5426,11 @@
 "log-filter.log-contents-filter":[
 {"v":"0.0.2","e":"^1.54.0","h":"0vkdx9fmwwvgxl6mcwk62m8mg2jnl9w40rpc55jxdgcknr52gncs"},
 {"v":"0.0.1","e":"^1.54.0","h":"095yb6b4jlsdra4ch9dz0cp078gx1s3zqmyx2xf0ygya1bj55knj"}
+],
+"log2src.log2src":[
+{"v":"0.1.0","e":"^1.97.0","p":"darwin-arm64","h":"1q9fsrlv1b66p2g7z9vdwbv8x6zvv50cdg4hah3w0vfbk6qkbcwf"},
+{"v":"0.1.0","e":"^1.97.0","p":"darwin-x64","h":"098rpwr4gnwsdxr0lydnpl59fp0di45l2kwyzswdk3z9bmzwx1mn"},
+{"v":"0.1.0","e":"^1.97.0","p":"linux-x64","h":"1yyc71cy4bhqyj4yc2h2f7kj12pv54r7grv7q1wn22cdv2s08ra1"}
 ],
 "logi-cmd.specsync":[
 {"v":"0.0.7","e":"^1.74.0","h":"02ljqc11i951wzy5w7ka03qf1i2cj2pk500ih7h1r0qgshq94dl8"},
@@ -7195,6 +7210,10 @@
 {"v":"0.0.2","e":"^1.35.0","h":"0qc5xwpg0154nyzg466bmrz5fxkkmd879yrsgfbzly7kjkm2ll41"},
 {"v":"0.0.1","e":"^1.35.0","h":"060wlkn4nz8wzcczvv7dx7pc3rcdilw0rl9x0732m387fcarpj7j"}
 ],
+"phanbanllc.boardlyup":[
+{"v":"1.0.2","e":"^1.80.0","h":"0pv9lj35pv3g4j1hc3dm1j5zgzbs0y06cbdlbp0ssv9gmygdjymj"},
+{"v":"1.0.0","e":"^1.60.0","h":"17pa8hixxr15fpf0wlcr587knbi4gnd43xyplrzisj3vbcrvlh2p"}
+],
 "phantriviethoang.minimalitch":[
 {"v":"1.0.5","e":"^1.105.0","h":"16jdszvaxg84w5y0pmgpllgv27ljh0s5z2cdx31brlx6ny0rdg8z"},
 {"v":"1.0.4","e":"^1.105.0","h":"1fdlm0ycxyqp1gmxbyy05ji0gyqwyc22rh96snqvj28xm6ccpswn"},
@@ -7306,6 +7325,11 @@
 {"v":"0.0.1","e":"^1.96.0","h":"035zm5p5z4hcc4abfzz8x5n2npkyp35kbjg836han6cxw585dzhp"}
 ],
 "pokey.cursorless":[
+{"v":"1.1.1864","e":"^1.98.0","h":"1kzjz7ds94d448xs57wyl58v3cqnisjc5i744lmzmcsjklj2s1kl"},
+{"v":"1.1.1863","e":"^1.98.0","h":"18j255f0saqrn44iwnn7wn1xzvwh0w2idpjqjfyh31pfqqani5pd"},
+{"v":"1.1.1862","e":"^1.98.0","h":"0q3avx9s4jqf6krbdx5ls1x6h0ccqfkw167rldqrp86whqilimr6"},
+{"v":"1.1.1860","e":"^1.98.0","h":"0k071dbqicf2ypjk4pvyca99pjjy70w4j6xbfgn43mxyp2pj0vyc"},
+{"v":"1.1.1859","e":"^1.98.0","h":"101ilh46fljs54c7f4aw9164iv6qa5xc61gd07f32dndm7kh7bca"},
 {"v":"1.1.1858","e":"^1.98.0","h":"0bz515sxl137pshsdx350dvzi4q88nxpvzb0ca3sirxwacbwwxqi"},
 {"v":"1.1.1857","e":"^1.98.0","h":"185j3hjghjxiz3zffrgcxs5j18hgxygjws3bh1rri2nhzjh4zkh6"},
 {"v":"1.1.1856","e":"^1.98.0","h":"144sikvhhdd4m8vrlqqcd3f4rc0mpzfmmc3hk5b60qxlvx4ipvpk"},
@@ -10584,6 +10608,9 @@
 {"v":"1.0.0","e":"^1.37.0","h":"1731nbpc96dlg0xg2fpqb4ljpn34s2nk2qsgik9rw45716rlm4ym"}
 ],
 "teamresurgent.rxdk-vscode":[
+{"v":"1.2.8","e":"^1.80.0","h":"0nhj91b0gq7alhlg9mfggw1chwjs4vrw83yng0i35aafnlnbg5qs"},
+{"v":"1.2.7","e":"^1.80.0","h":"0dhfkjwkpymwil6516qdvxiwp3zj7nrsn5npbdzigzf4hsfs36i2"},
+{"v":"1.2.6","e":"^1.80.0","h":"0akv08xhkbmgsdks02rbglj1wibb8hks90335893v7j39i39jvkl"},
 {"v":"1.2.3","e":"^1.80.0","h":"1pa2pl704nl10vam0dy26bxgzknh5vyszs0dql6y7yz265j3zdcc"},
 {"v":"1.2.2","e":"^1.80.0","h":"1xhsnfyic1mh2mccpcdasv7b0l20mhj9wypdgm80ddl49k1qp7k6"},
 {"v":"1.2.1","e":"^1.80.0","h":"10p445bdxq4h99swkhgk604cxm7wj83vr4r6v8w2fgha2am06kmr"},
