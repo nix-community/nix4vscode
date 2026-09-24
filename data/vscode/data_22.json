@@ -852,6 +852,9 @@
 {"v":"0.1.0","e":"^1.0.0","h":"1gc04f8ya86bz15ijgiawykd17ckbdipm26xg6ixh18q9jkjbblp"}
 ],
 "arm.cmsis-csolution":[
+{"v":"1.72.0","e":"^1.108.1","p":"darwin-arm64","h":"0q2588w0w7qw8668655wiplp2pq9yqkczhqcbwq7qf3fy7j5572b"},
+{"v":"1.72.0","e":"^1.108.1","p":"linux-arm64","h":"0lh9d6zdsg3anwclbqy8nr5z57mh2rz3zkxybrnjbml78sq35y07"},
+{"v":"1.72.0","e":"^1.108.1","p":"linux-x64","h":"1c3zn1j9jsnfkjzzysid6aqq5y6airvcx28lyryw2vbrbq0yw7jp"},
 {"v":"1.70.0","e":"^1.108.1","p":"darwin-arm64","h":"07l49bwmx7fpx09qjx9llvf0g5gqv1r724jlpi4v578fzf1wdam4"},
 {"v":"1.70.0","e":"^1.108.1","p":"linux-arm64","h":"1gkifh9m88i0anyn6qi15b3hiciwl76z8s1hyfxgpqyrv1b58mg0"},
 {"v":"1.70.0","e":"^1.108.1","p":"linux-x64","h":"05ih0apy8878h9hvnmpl67sfj53g58dg0bknxg05hdf3smvazd06"},
@@ -3485,6 +3488,9 @@
 {"v":"0.1.1","e":"^1.57.0","h":"0yj4s9gpa963q9lg30n5khqimaagl9vmpjfw46cfp2q3afmmk7gn"},
 {"v":"0.1.0","e":"^1.57.0","h":"0fh62vvgb3xggmk6hjz81zsn90hhinf6fs6c19fpmrf1xhkpbnb4"}
 ],
+"ethanwu.frontend-scripts-runner":[
+{"v":"0.0.1","e":"^1.85.0","h":"0drz2hffahzkvbr5kpqpjyxc79al4dmg7ck85l23aaz25n7l8p1d"}
+],
 "eudach.discord4py-snippets":[
 {"v":"0.7.0","e":"^0.10.0","h":"02mdapajawhha6ds7vwkkizzbnwwchf4a44630c37zxppqwxknsy"},
 {"v":"0.6.0","e":"^0.10.0","h":"14pgvbqpskqcn07ijwln39ds7pb99q80plc1f0nljmms7jvgi76i"},
@@ -5456,6 +5462,7 @@
 {"v":"0.61.0","e":"^1.75.0","h":"192zk372i3mlsx3jyhsmc46q5mgzw1n3cg2hb6cz2winkk562mvm"}
 ],
 "konghq.vscode-konnect-dev-portal-toolkit":[
+{"v":"1.11.3","e":">=1.105.1","h":"0dva3i9wnqfydjcd2h8d4p9prwsxscmm13c1g5nwppxvzyrz16m3"},
 {"v":"1.11.2","e":">=1.105.1","h":"1zg08bdf8nzd4nyv2hiv5g6wlbf1icv53qjvwhg4lfbh752s1jdv"},
 {"v":"1.11.1","e":">=1.105.1","h":"1qq5pz7pscsgsx1xv4vzjqgb2gwf70n7v0mizjl70jr5v9z7lq02"},
 {"v":"1.11.0","e":">=1.105.1","h":"07bb3mziv86w5hzin4br6dwnc3wwj6fgnkmgy680c5k5z6rkd23j"},
@@ -6054,6 +6061,7 @@
 {"v":"1.0.0","e":"^1.82.0","h":"1m3q75fdl28mv322srk2rq815qkjcyb49r7x1gh9d5xabs17srfj"}
 ],
 "manojkumar-ibmi.i-sda":[
+{"v":"0.10.199","e":"^1.85.0","h":"1lfybaxa5h6a7gw9lizl26cfjv8m67514ylgxhblfbjwpz7hzcqj"},
 {"v":"0.10.195","e":"^1.85.0","h":"0j57d9p1wadkk93vgwdkl5qy9ncxbcf3cz100qqzxxcq6z2n0rpm"},
 {"v":"0.10.130","e":"^1.85.0","h":"09dhzvricvvp0hgmknccqkdw51cgy06mhx43ryafbn3njf759ras"},
 {"v":"0.10.124","e":"^1.85.0","h":"06aghzhvjsnjfzvq66v6j9888gr4ficycrrb699ddxj5hplh959d"},
@@ -7634,6 +7642,8 @@
 {"v":"0.0.1","e":"^1.116.0","h":"14msab733rbb9bn3vjjd3vqa8imbxqd347yipw3dahrnnvrnakaq"}
 ],
 "readystack.ai-model-license-lint":[
+{"v":"1.0.6","e":"^1.75.0","h":"05ipwy2jklrvifm2hfmcnl9q7zg9fknljj7ff9nl6lpjf4qsxqkf"},
+{"v":"1.0.5","e":"^1.75.0","h":"0sndm8fcp7jf9f3h4dhlzm43gxai95adsa8fb55n3l2iw5360q51"},
 {"v":"1.0.4","e":"^1.75.0","h":"1j652q1m2v63qlazfaqg3vbj932ifc3gnzvs428ng1y1v95fdwk4"},
 {"v":"1.0.3","e":"^1.75.0","h":"0gvm4k2ypyas91bhjhlxd206m5prvyfjsivl8gdgmkki74vh0sxn"},
 {"v":"1.0.2","e":"^1.75.0","h":"071d9x94lc229iypqyv7cdbbzh1b7jxsqnp3mr76nfx2p06wz6jk"},
@@ -7641,6 +7651,7 @@
 {"v":"1.0.0","e":"^1.75.0","h":"03s7idjzq8mnxl6smwss97g5jc49j8dy9v0pr3fv74vpgv2zb8za"}
 ],
 "readystack.epub-a11y-metadata-lint":[
+{"v":"1.0.4","e":"^1.75.0","h":"07ayyak61g9lw4xzz361fq1gglwaigf9r13w1nwbvizlrvbg2mnn"},
 {"v":"1.0.3","e":"^1.75.0","h":"1g9njf88bh8yinar2i0790083si3phxavh9kn4mxy229jdripay9"},
 {"v":"1.0.2","e":"^1.75.0","h":"1my1dkg8nn1h34zjgbzd9lp7sjmmrr6xdj1pbnzka1dicrs6g3pb"},
 {"v":"1.0.1","e":"^1.75.0","h":"1gslcbjl92n797dfd7rsfyd0274vjbqpmxg1ywl2cq7kf74psf9n"},
@@ -10069,6 +10080,8 @@
 {"v":"0.1.0","e":"^1.102.0","h":"0l0vpyk2ybyvlwlr0a54yrhh78wmih50bjqj6b73792fnl1d01mv"}
 ],
 "vertracloud.vertra-cloud":[
+{"v":"0.1.1","e":"^1.85.0","h":"1zr37pyfj8l9cb15wr3w60alpfwdbgpinjc86iav45s6wxkkqjcr"},
+{"v":"0.1.0","e":"^1.85.0","h":"0g157f4mqn05dj5l9y122wvnzdvra38zgkrh59gfrj5vxxga72gr"},
 {"v":"0.0.5","e":"^1.85.0","h":"0ynvip8x2abr7426hclkbfrl69s7l6h69s6xy3g3wgy99j7656hl"},
 {"v":"0.0.4","e":"^1.85.0","h":"0l6s8c4xvy4pn5zfk7vixfgynjfyf355c7l3hlsb13c7wnwgfg4f"},
 {"v":"0.0.3","e":"^1.85.0","h":"1v3ffnhfk9r68dik6f12zxqh39va4agd0n73rqi45sbhwaqkz1p2"},
@@ -11133,6 +11146,8 @@
 {"v":"0.0.1","e":"^1.92.0","h":"022vb52hj0c5rai7kb79c35v68ahzizvh90i4wsra8hhkzd3252m"}
 ],
 "zhou491145.ai-novel-writing-system":[
+{"v":"5.6.11","e":"^1.87.0","h":"1pqhi914xw19v2a24yqmfd8f10gj62b63v74frivmlr0rbsm6c44"},
+{"v":"5.6.10","e":"^1.87.0","h":"1yqak8nsg6kz069h6pkicpahm3gwlynzsr3cc56hshaqcar7z9p6"},
 {"v":"5.6.8","e":"^1.87.0","h":"037d8l2ssyxi1cz0yyj3znbjmcskbgx85px8i782z0lb16bhf1rf"},
 {"v":"5.6.6","e":"^1.87.0","h":"1f914qd3x47yz174nppqj73j86nmxrhrb5j9clckyycdmzz7j34a"},
 {"v":"5.6.5","e":"^1.87.0","h":"0g00s20l94hlv0dz4fa3wlqq727vn7gssjq0yx8d8r7v9saqd9ph"},
