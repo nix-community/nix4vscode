@@ -1427,6 +1427,7 @@
 {"v":"0.1.0","e":"^1.57.0","h":"1ds2x2cappqs8w19qpaf0z5l7a1vnnc875455n03h7239d0s5rhl"}
 ],
 "cade04.orrery":[
+{"v":"0.4.0","e":"^1.85.0","h":"09rh8rjjbg1h9wlz1hwnviax7za4zf9jc4mf1wnn7f0khja9v4g7"},
 {"v":"0.3.9","e":"^1.85.0","h":"0b49q1l0fr3hzy7bsqkg5k3wjr70h4yixv80kwz25mlpm9cb76bk"},
 {"v":"0.3.8","e":"^1.85.0","h":"1wdlsmivvr6axjx1zzc75lkp8sj7h14ahfd43kh67wmhj71zarfc"},
 {"v":"0.3.6","e":"^1.85.0","h":"00wvkq5jz7dh2cw616hf1pfrdw9ymgd66rmc23jzc03mzj2r1vmv"},
@@ -2568,6 +2569,12 @@
 {"v":"0.1.1","e":"^1.90.0","h":"0fdlxlwci9pn2nzb57bqy76sfsjvb76iy3945d1z5g1hgvlv1slk","r":true},
 {"v":"0.1.0","e":"^1.90.0","h":"0mhxrq2lj12fbdgi7j3q0vi8mpjdcqr4igqklq88ifc4n7qbawhw","r":true}
 ],
+"fhs-ct.csharp-flow-visualizer":[
+{"v":"0.0.6","e":"^1.108.1","h":"1ia5z4wpj80qbi30xp2nxhkzxp4smnawwrgsz6xnf90910cnbnp5"}
+],
+"fhsoftdev.flo-code":[
+{"v":"1.0.0","e":"^1.75.0","h":"1lz81ylg28a022zsgwabwr1vbjh9g6vgdssvznh7hb6rwdmpcf8y"}
+],
 "fizzmod.janiscommerce-vscode":[
 {"v":"0.3.0","e":"^1.51.0","h":"0m0gh82gnmiwl4bsa7kyn848sw915djciwqhlzb5py2myh3ir4g9"},
 {"v":"0.2.0","e":"^1.51.0","h":"0akx9azwkj9fg7di0qi2h0ch6jkmpa0rf16v2fvpfcjf7117lny2"},
@@ -3086,6 +3093,7 @@
 {"v":"0.0.1","e":"^1.105.0","h":"1dma45ayialp0baysj10h0c64vk9mwfydzjqfwgqd3b6rxr4kyvs"}
 ],
 "greedykrab.greedykrab":[
+{"v":"0.0.8","e":"^1.82.0","h":"1d3j29g984qlyvx6g1pbb4k8pkpzx7phv34si9nyb7qqrx0zbc0f"},
 {"v":"0.0.2","e":"^1.82.0","h":"15svxzd1h6jmbmah4svj22gkkdnjy3pzcb3vvf5r64nvs0pfddfc"},
 {"v":"0.0.1","e":"^1.82.0","h":"0gv5i8id3mnsyw800b644aaa5h9c4xq6qpc8hvm54m7ln6bxcz9p"}
 ],
@@ -5321,6 +5329,7 @@
 {"v":"0.1.0","e":"^1.37.0","h":"1zs0knfh2bhnvhlwmjrhg425n3vmklvpj3gp4fvi52wjdnl04zgh"}
 ],
 "mrxia.md-extension-pack":[
+{"v":"1.0.2","e":"^1.41.0","h":"1llv1fwcxhxc7gmvw1hw65gc5hqfhjm2f1zm8drdjj3mchypkc0h"},
 {"v":"1.0.1","e":"^1.41.0","h":"17vb9k5jkja7sz8apsadrn3ryyiprl2bvk2plqp54qqn9jjvqg9n"},
 {"v":"1.0.0","e":"^1.41.0","h":"1bgv1gv54nl1v4gr01zjnm6bgvxhw3s1jsykl7a1s2salsxp16df"}
 ],
@@ -10059,6 +10068,10 @@
 {"v":"0.9.1","e":"^1.76.0","h":"1gzqcziy8xlq91qgvqck0yyvwhj4djwl1j7d07qarp6ws3ahkl50"},
 {"v":"0.9.0","e":"^1.76.0","h":"1avashl7ds6j7bz1azfdjybdcf5379y372msya4444bz62s1siis"}
 ],
+"orangeai.vscode-copilot-chat-cleaner":[
+{"v":"2.2.1","e":"^1.85.0","h":"1fjpr67sghardichrpwl8b5wij7afx77rbdls9lxalyg39zbhjjl"},
+{"v":"2.2.0","e":"^1.85.0","h":"0rpkamx36286pl3dwlirq95apl1xx8hh2z3mrm6mz7sa3xsxbg87"}
+],
 "orta.vscode-react-native-storybooks":[
 {"v":"2.7.1","e":"^1.30.0","h":"09bn9107m7c9iz7ghpl83dr4k15wy6g1r2lqcvgci8i3149zx23m"},
 {"v":"2.7.0","e":"^1.13.0","h":"0rvqq3zmqcf8i9hdlfa0l51xw74rdlrgb35xglpsykl3fmhfmxgd"},
@@ -10363,6 +10376,10 @@
 {"v":"0.0.1","e":"^1.83.0","h":"1rmqkk48s216knx65qqrcqgiq8jmciq4caazzhgamymg1s34wjqx"}
 ],
 "qbox.qbx-lua":[
+{"v":"1.0.3","e":"^1.85.0","p":"darwin-arm64","h":"0zdpa3i6133hng7z59yzd524lw198v41cjf8qkr654zc5zxpasay"},
+{"v":"1.0.3","e":"^1.85.0","p":"darwin-x64","h":"17h5917wfp96if7rd2b6vzzgpdkm2aldvyimakq77gq50rmnkzya"},
+{"v":"1.0.3","e":"^1.85.0","p":"linux-arm64","h":"0i1avxvlnz178pfj1nz84b1g7aj98plxm22rf67x61nkkz97ibha"},
+{"v":"1.0.3","e":"^1.85.0","p":"linux-x64","h":"0dbdh0fch9npmkzda1cij8a56mpq8pn1q7i37prymfvfq4xrwwv7"},
 {"v":"1.0.2","e":"^1.85.0","p":"darwin-arm64","h":"0fkbrj5l8gyh4z5riz914lqvx03ap2shlc1by0s9pmwagq7hmi1k"},
 {"v":"1.0.2","e":"^1.85.0","p":"darwin-x64","h":"0zrnxjv9w6wdgd9v0i7k4h57rzg4xq14aw4g49y6f4kixb9mwjzk"},
 {"v":"1.0.2","e":"^1.85.0","p":"linux-arm64","h":"1d7n66rvq2zj9xp1gplm88kahcj63cvblsbvf6hpydwj9vzyl6zc"},
@@ -10562,6 +10579,8 @@
 {"v":"1.0.0","e":"^1.80.0","h":"1mrnmk39s2mbwi4c0gh0p00xapbnjwfrnn7j84q1apl1ximymmzd"}
 ],
 "readystack.ai-act-article-50-lint":[
+{"v":"1.0.9","e":"^1.75.0","h":"0np8k7hy2anajplr5wx2bn8zdfya6iir1g2arvnql4mz63nri3xp"},
+{"v":"1.0.8","e":"^1.75.0","h":"1bf8m9h23szc3j3fc8lhdxbi7wjbyn16jiw3wi7mfrb7aplm3921"},
 {"v":"1.0.7","e":"^1.75.0","h":"1vp53bx27a718h0clmd3z0g8rzrybjg87v0k6pnf31g2q1yymm0x"},
 {"v":"1.0.6","e":"^1.75.0","h":"0dxv3qmvldqvslqy40sh2s3sp2x7x204zgr3rahsrvm93q4hwc1h"},
 {"v":"1.0.5","e":"^1.75.0","h":"10av81q3zbhmj7rb5b1z46c8c57s5zq552krr2p0s1xikf6xf6am"},
@@ -10631,6 +10650,10 @@
 {"v":"1.1.14","e":"^1.90.0","h":"1brr9b1agj23imlc6c892pq9kv123ib4larfm9ncjfc997yww2sz"},
 {"v":"1.1.13","e":"^1.90.0","h":"189f2p05jvijrr3j2q44f0db84grdzh5jw108qcv3mkwkrcg4jfm"}
 ],
+"ribbtdev.breadog-theme":[
+{"v":"0.1.1","e":"^1.70.0","h":"0z3lbrqwigilxqx9fgqypjcv48v7k02cf8q9sbcjcdfh96yy5kj7"},
+{"v":"0.1.0","e":"^1.70.0","h":"1qs7lwgcj4wqil5xlhd1sj9wamx992i2ljqap4xs0yjw8m3qk27r"}
+],
 "richardsprenger.global-project-toc":[
 {"v":"0.0.5","e":"^1.67.0","h":"07yr4d04mp7l0kcj0h4dqkphi47a6m08c76bad8daac7gd560c6p"},
 {"v":"0.0.4","e":"^1.67.0","h":"1gz9w2qk56r89vir2hwgivqcagxv1q20jchqnplbk0krvhv046fv"},
@@ -10652,6 +10675,7 @@
 {"v":"0.1.0","e":"^1.62.0","h":"17kjn4iq1ny0n37jlaprqygkvvfz455rpv1hcqhmign3cydwp419"}
 ],
 "rioriost.agefreighter":[
+{"v":"2.4.0","e":"^1.105.0","h":"1pw3903vyqxhwczn6w8awzkryy7w46v55jrcwgxwdjqb6c7ywj0k"},
 {"v":"2.3.0","e":"^1.100.0","h":"0gy5131p3ywb2jkw65hp5sflyyghkhdh93pcpjkbgmb157csbc74"}
 ],
 "rivermind.rivermind-vscode":[
@@ -12065,6 +12089,11 @@
 {"v":"0.0.3","e":"^1.125.0","h":"0kqsw3rdircwjw8zf41hysn2gl0zy6xmmwi87i543rb7szd758f6"},
 {"v":"0.0.2","e":"^1.125.0","h":"1yg1lzl16v0q8asbqi00pvr45n5g7apa59w5sc5kkfy3dbpk5x26"}
 ],
+"titansystems-de.siebel-escript-debugger":[
+{"v":"0.4.0","e":"^1.95.0","h":"0xi05470xhy9ydhhqc37n91szmxj0dyg6y07xgjd0s3mim79barm"},
+{"v":"0.3.0","e":"^1.95.0","h":"1nnwc74apcqp8cmfk7sam5s4198i2f3f16zd3vqa67kjqs4a4phc"},
+{"v":"0.1.0","e":"^1.95.0","h":"06rdvb772yibhn2dc7l16dgln4z5bhzx4jhas2c2ym75fp4j0l2a"}
+],
 "titian.titian-snippets":[
 {"v":"1.0.1","e":"^1.63.0","h":"0g5i9x4gm2kgjfw3xzxl1jadikrx8a2d3kx91zcmxndxsrljblzv"},
 {"v":"1.0.0","e":"^1.63.0","h":"1crwinl8m3p71ijs84jbacym802has3gm4imrzrs0d7a3ca928ha"},
@@ -12391,6 +12420,9 @@
 {"v":"0.22.0","e":"^1.33.0","h":"07qgh2nnp23vncss6baaajhmqg38acvx16d2fvckic0rghm4ky1r"},
 {"v":"0.2.1103","e":"^1.33.0","h":"0zzxzizhr10cpwvmkljmbrlk191lrq7jbcnv3b1rblsmj7zkl2yd"},
 {"v":"0.2.1102","e":"^1.33.0","h":"07kddws85rqs4n5x13140adkibwjgl4qpwvilm3cc9nnb4w952mf"}
+],
+"vitoroliveirasilva.levria-epub-reader":[
+{"v":"0.0.1","e":"^1.100.0","h":"0r566ih7zvz4b4anz0cgbaa4n9632jawnpwk9wbxhd6y1pb3kwyj"}
 ],
 "vledicfranco.constellation-lang":[
 {"v":"0.9.0","e":"^1.75.0","h":"0bdrrkxmvp6hzw9gbzf76999diwz0jk5sli6x5313blinnb6xqk5"},

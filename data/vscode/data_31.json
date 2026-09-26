@@ -917,6 +917,12 @@
 "balduinlandolt.zio-snippets":[
 {"v":"0.0.1","e":"^1.74.0","h":"0p0kzwknzd9samq5wxcrcdajr8manvf6dg9bv5zm1zfrsxnbwqj3"}
 ],
+"bartosz-warzocha.jira-triage-ledger":[
+{"v":"0.2.2","e":"^1.104.0","h":"1qvaam48h7fpn90s13spiwvx37ypnl2kwqkxawwwqkhr51ldw0z2"},
+{"v":"0.2.1","e":"^1.104.0","h":"1yny99iqd9q29nbp0gab0j1gl3mv2c6j5az5mxgmqlw62gafg3zc"},
+{"v":"0.2.0","e":"^1.104.0","h":"0l17jnpwjvkymfc1c571b0kpdzvpy7rrn79dpz6jf3lpkw3rhfa6"},
+{"v":"0.1.0","e":"^1.104.0","h":"0frb8cgk15z49yqzkxqzblm2kg8b1y8k7idlfdmr47smg8cgpbpl"}
+],
 "bartosz-warzocha.openspec-ledger":[
 {"v":"0.2.1","e":"^1.104.0","h":"0lkbqxgrmxr94f47dj7xjmlyxampbcfyly3mi6p5ppd4rib1lx6m"},
 {"v":"0.2.0","e":"^1.104.0","h":"0gh3f4vhfirmai6xr8np62w8gm4s20s0f9zf8m9f38rcma4rh8gy"},
@@ -2077,6 +2083,14 @@
 {"v":"1.6.1","e":"^1.30.0","h":"0qkqf5pd5x8r20275ahxclgaadagq04mln0lhkmv6w34n5qx6ibw"}
 ],
 "devprod.vulnerability-extension":[
+{"v":"1.2026.925001","e":"^1.100.0","p":"darwin-arm64","h":"18nj00q7bngnw1y0v98vwjg3zzx6swvw75spm2gd7p0swzv5yi21","r":true},
+{"v":"1.2026.925001","e":"^1.100.0","p":"darwin-x64","h":"0pq7lczx6d67sdhmayzvs6qw521ls52f0iwb95js0xpwbsglslvx","r":true},
+{"v":"1.2026.925001","e":"^1.100.0","p":"linux-arm64","h":"1fzlykhnspimaag2fhzvw40g5m1pqapsr7iry4qf9mbm7cc7viqr","r":true},
+{"v":"1.2026.925001","e":"^1.100.0","p":"linux-x64","h":"1a1lx85idj01ymrdq2vs0rn17zkq00164nmvybnbm7g56vfy7df9","r":true},
+{"v":"1.2026.924001","e":"^1.100.0","p":"darwin-arm64","h":"1dga2qwv6f997fv2b0gf056vy25py8crdf00vwbs0nb0891w19cs","r":true},
+{"v":"1.2026.924001","e":"^1.100.0","p":"darwin-x64","h":"1ipdi1d71788i40w4q8szs012lfal351akmwf02g275ygggidsi2","r":true},
+{"v":"1.2026.924001","e":"^1.100.0","p":"linux-arm64","h":"12a76v5s9623alsa0lyafzhi7im577cpms4wd1vxwgk4k454qarp","r":true},
+{"v":"1.2026.924001","e":"^1.100.0","p":"linux-x64","h":"0rixvdbvbf11350dpnvscjrjs4aq78sv7jv4j4bwamp7f85aj9qn","r":true},
 {"v":"1.2026.923004","e":"^1.100.0","p":"darwin-arm64","h":"1js0hb07dxqa04cgnrvnlw6n5g35lhfwnr5b4j1rijfd2igf61nd","r":true},
 {"v":"1.2026.923004","e":"^1.100.0","p":"darwin-x64","h":"0w48fv75370g4f3vmykx6slx74kq2631q6ia12y9dq5ifpkbfc37","r":true},
 {"v":"1.2026.923004","e":"^1.100.0","p":"linux-arm64","h":"1gfpps9dgw0nj5ds5fwfpcd6k5iy5paln0s29z8k8s6rywg73wjh","r":true},
@@ -7195,6 +7209,10 @@
 {"v":"1.0.2","e":"^1.5.0","h":"0697c10xs1pp2ln6hp96f07rmjv987jmfic24kkmdypjq95aarni"},
 {"v":"1.0.1","e":"^1.5.0","h":"09iypmhnd6nvrnxxf1iwy2347jybbpygbpfhkn0bpgcwk1b9xw2i"}
 ],
+"lambda-analytics.ordo-vscode":[
+{"v":"1.7.0","e":"^1.85.0","h":"0q317cz043sfbh3j35mwgnwd54imwch418yw3hwqnhq2xagn4zgg"},
+{"v":"1.6.0","e":"^1.85.0","h":"1fqj6p9lfxywvp1js7ikkw5wiq05nava3zwfms4rsangfmrv2667"}
+],
 "lanux.git-diff-fast":[
 {"v":"0.0.3","e":"^1.95.0","h":"0d0phk3wnxz7jbrr9apyis4xdc7sks1yk1zc1wnqyjx00xq5gm52"},
 {"v":"0.0.2","e":"^1.95.0","h":"0vgply6s2ic15clj8znkl71b8mrdli3a2md8f76567rbglvrrvam"},
@@ -10158,6 +10176,7 @@
 {"v":"0.0.1","e":"^1.88.0","h":"0wn3f2w8ckngrvgxha6q45l06qx506wlyj859dq3z4bf93slgmay"}
 ],
 "tldiagram-com.tldiagram":[
+{"v":"0.3.0","e":"^1.85.0","h":"0hg50vjbwami8zsg4rrbkb84b6xvf7n7qcavcxnlsxhvw4p25qjy"},
 {"v":"0.2.2","e":"^1.85.0","h":"0jkdk21xqsri7hpnlq6png1aaj4mv4vbyb1b3m57ga97np6iawyg"},
 {"v":"0.2.1","e":"^1.85.0","h":"0gcly58d76hvyimc7nc76zma093c66rdjalpv8p2y4d15f3rj6rg"},
 {"v":"0.2.0","e":"^1.85.0","h":"1rxivc0kwbk9532r4czb5i38b0nmb5d7jyv258ikq57zmxmzpzfc"},
@@ -10197,6 +10216,9 @@
 ],
 "tomasm.deploysfdx":[
 {"v":"0.0.1","e":"^1.30.0","h":"08cl63c18vh3bincy47lpky7xanzm7fzgj0x6nryf69n9g18jvpz"}
+],
+"tomet-lang.tomet":[
+{"v":"0.1.0","e":"^1.85.0","h":"09hpfjm8j431ccafx7s06rwcn42qlxp3vp8yiww73c33m6xvv4n0"}
 ],
 "tommy-tang.custom-abyss-theme":[
 {"v":"0.0.1","e":"^1.60.0","h":"1ypvwynygk8nmnkdiycnhj3qgymccnd06c4pyvdq86lzpgm2f9lx"}

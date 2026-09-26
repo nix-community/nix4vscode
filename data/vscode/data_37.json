@@ -402,6 +402,8 @@
 {"v":"0.0.1","e":"^1.74.0","h":"19wpkfqy0sr6bqbyszcf4fcynrbnzh5yy9sfipsnxqq7zxvm4j6k"}
 ],
 "analysis-services.powerbi-modeling-mcp":[
+{"v":"1.0.0","e":"^1.80.0","p":"linux-arm64","h":"1caqq4rniavpfshjmg4mvigahn4k0ijbvrhs1i6hd3gg4j0shhag"},
+{"v":"1.0.0","e":"^1.80.0","p":"linux-x64","h":"0iwlc5bj941gjc3zw559h2lf10mgh7h8szjv2143vda3gz2bpnk1"},
 {"v":"0.5.16","e":"^1.80.0","p":"linux-arm64","h":"1p8xd9yv25k6gx804f4s7147svf7zqrdfsqgb8a8i84f4yyg0q0n"},
 {"v":"0.5.16","e":"^1.80.0","p":"linux-x64","h":"18qhgirxfnvh1pccbwjdnv0rsy9ya660cl1c27k42mlkj5azw1fp"},
 {"v":"0.5.15","e":"^1.80.0","p":"linux-arm64","h":"1g905v81alc6xxbjq9l68adx2qhylv2dv9s7yxs5izy54c0vm1zn"},
@@ -899,6 +901,9 @@
 {"v":"1.1.0","e":"^1.85.0","h":"1mv2n7fn6qjx0lhffj2h6p1c32i0rcb32zllrmdm7ffcr96vh5qx"}
 ],
 "bpcarson.configurable-chat":[
+{"v":"0.3.1","e":"^1.125.0","h":"0sqy1hpgpcg7z91bdy36869as7pxsmagvqp71flamifhqqwl3jc2","r":true},
+{"v":"0.3.0","e":"^1.125.0","h":"10rbwz6g97kar8n7pfh647wq2y8nqqzpzqrzvan3l77vnyg2dhji","r":true},
+{"v":"0.2.0","e":"^1.125.0","h":"0fcgr8ji7pz40v666kk0w4xy2jw5l88hsy18xx0z0w0hj5s90a29"},
 {"v":"0.1.35","e":"^1.125.0","h":"0kzjg977zqcp815qfd3dssmxm5252mazcvlqsrpwdi12jq6l2r9r","r":true},
 {"v":"0.1.34","e":"^1.125.0","h":"00yaxn8mcsgyv4ji1sc828ap3y2cnw3z5df7fi2b5k8llz8l77b0","r":true},
 {"v":"0.1.33","e":"^1.125.0","h":"1nl6j7v12y5jnxkkb7aixbxqs53kv49zwr8gx3asjayprdlvqs69","r":true},
@@ -1073,6 +1078,12 @@
 ],
 "capgemini-blaze.tokencheck":[
 {"v":"0.0.1","e":"^1.106.1","h":"130myybf4jhp6ywd8wiag7hrljr9jzzi4b4jlqwb3nfqzisgi2vd"}
+],
+"carlosvisbal.session-hub":[
+{"v":"0.10.0","e":"^1.90.0","h":"1fzv67xk2df7ly7jcsjm3dydgz37g1c80hrrm5fznr2gb85pjzfx"},
+{"v":"0.9.3","e":"^1.90.0","h":"0j140cibghkcpsk7gaqwvggxcy1zzy2h39aqrwa4bzv4gjb068yz"},
+{"v":"0.9.2","e":"^1.90.0","h":"0z46jyl6d4gildjq44ibzzrr2l4ql1d06n7m1fvslnh93r75qsmx"},
+{"v":"0.9.1","e":"^1.90.0","h":"1cb6zz7qmg3sad9gjz8i96ph691qngljdjmyl8fsqa5z1mh3bzcx"}
 ],
 "carmenesteban.kore-tools":[
 {"v":"1.0.0","e":"^1.85.0","h":"05fx0ry31qvilcbnpgs741386xhcky9py290ya0lds4y2lyx3kks"}
@@ -3312,6 +3323,7 @@
 {"v":"0.0.1","e":"^1.22.0","h":"10qhd9jf0k9vlfmvr4z1vxwc0dac952bl5h6640r6cffjbsq230v"}
 ],
 "guntiss.kubi":[
+{"v":"1.0.5","e":"^1.85.0","h":"05i0cqf1w45gvc78hv29iicyzw9lk218sssa9d1f3rpm43sw2s6f"},
 {"v":"1.0.4","e":"^1.85.0","h":"031zkrcgh6xcwcaxrqa9c19f24pnzk4z71iwfhg8mchqiw5dwv8s"},
 {"v":"1.0.3","e":"^1.85.0","h":"0rwdfjac61jh0yrlg0b7qmirh2in2v11n6wh0vmprrjk1gp4vncn"},
 {"v":"1.0.2","e":"^1.85.0","h":"063h8qiv7914zvi0i7m0062n21v5swxanc5nzb625blysqkf5wpv"},
@@ -4850,6 +4862,10 @@
 "marcosalmeidasantolaria.idea-abap":[
 {"v":"1.0.0","e":"^1.101.0","h":"1pi80sxms8db8z0430hsrx2r8br0hnrg7hnyib27zw7sdc4k5j35"}
 ],
+"marcuspresutti.vscode-spyder":[
+{"v":"0.2.0","e":"^1.85.0","h":"1fr5gwiax7apvhjs519vbnfyis6m5gz58p2ccn79yplfxdh7d3k0"},
+{"v":"0.1.0","e":"^1.85.0","h":"1vc2pkg8940578imjmy41jj6nxwhvqfq7y3ixnvk5332xqzm6k1q"}
+],
 "marhaendev.os-monitor":[
 {"v":"0.0.1","e":"^1.90.0","h":"0qyvjjd6zpw2f83m564gk8dh9lnd1fwm3gil943nl9gp51kvmspf"}
 ],
@@ -4927,6 +4943,7 @@
 {"v":"1.0.0","e":"^1.99.0","h":"1m50hpqka8c96sc6drap1s4k7910ikpjsb5hknqs0yc1yldy5sn2"}
 ],
 "mat-tom-ja.mathlog-vscode-extension":[
+{"v":"0.0.12","e":"^1.136.0","h":"1ka99lfyxw1k4r3qfj8gpzj0g3p9lvlllxkngk3677v6495nha24"},
 {"v":"0.0.11","e":"^1.136.0","h":"01sw3acg8r6zfbnspkjibzhf2np5qca19yxrc8r5z4ad83mk4b1m"},
 {"v":"0.0.10","e":"^1.136.0","h":"18li5f46qw4cml133w0hkmbgnsqg3l8rzvqzk43kvafc7cvx56i4"}
 ],
@@ -8809,6 +8826,8 @@
 {"v":"0.0.11","e":"^1.80.0","h":"1rmfd7qxm69izqn1xkxz9ikjimxm8rf9zjd7qh8n0ghwlgkj302k"}
 ],
 "viberails.vscode-viberails":[
+{"v":"1.10.23","e":"^1.125.0","p":"darwin-arm64","h":"17h04pqiq4passrykvwbspl551nh54699rkv6vrprgmngzsd5yyz"},
+{"v":"1.10.23","e":"^1.125.0","p":"linux-x64","h":"15zhqpzrjrhvx1mzg05j8rh2jagz4d3b72c55fybh3sg7y5kl0pd"},
 {"v":"1.10.22","e":"^1.125.0","p":"darwin-arm64","h":"1p5sin2xznn55zd6sx266jr5rgn8s3yj8bahgdlwkh4x7aa1wwsb"},
 {"v":"1.10.22","e":"^1.125.0","p":"linux-x64","h":"1lnqszsmsrbkbgdv20198izx04fz5f5g116ixwrc37jrrp1gh17s"},
 {"v":"1.10.20","e":"^1.125.0","p":"darwin-arm64","h":"0n0z1hxbqn8hqd65gw0pqmjf507qkbci052yhcd061pdha1vcb2b"},
