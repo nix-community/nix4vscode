@@ -7154,6 +7154,7 @@
 {"v":"0.0.2","e":"^1.33.0","h":"0dk4rx1wk3c85hp8h0difk892850y5haihakpa3sy74sqfl3c3c5"}
 ],
 "readystack.dsa-terms-lint":[
+{"v":"1.0.8","e":"^1.75.0","h":"1zb42rrp9616wk3wqv1l338x5ngfmlyf3dpryh923yhmygva6f59"},
 {"v":"1.0.7","e":"^1.75.0","h":"16mblr8i5mcaz9dxzlvvjzqc98hcp88rqqr30mjwrykzq9i66fa7"},
 {"v":"1.0.6","e":"^1.75.0","h":"1fwzi0axqqajca4wdgkbh4fc6vchwgnnd8vbbwrzjyiznirhgi2r"},
 {"v":"1.0.5","e":"^1.75.0","h":"07qak8cbb5qlc5szzg4jyyvs22lg6116qxff9vdbcbz0yip8aa55"},
@@ -7167,6 +7168,11 @@
 {"v":"1.0.0","e":"^1.75.0","h":"08qi0484qqnmh2i64v8ff0kiqv6qnssi9fc5vh5fqfla5pzn6y89"}
 ],
 "redhat.java":[
+{"v":"1.57.2026092608","e":"^1.77.0","h":"1r0hcp6p257gs0m1wlv51iysa6wrnpv0l5i9za239ld3ki7nllrk","r":true},
+{"v":"1.57.2026092608","e":"^1.77.0","p":"darwin-arm64","h":"1lxhiiv2g81lhnai3pdw5jnxp8zpx8jqyl97wphk1vskw035ls70","r":true},
+{"v":"1.57.2026092608","e":"^1.77.0","p":"darwin-x64","h":"1n1028lan18ihwxq74mbg7z2dj1ghbz10fx2x5mhvvkcfdzigln5","r":true},
+{"v":"1.57.2026092608","e":"^1.77.0","p":"linux-arm64","h":"1xq5iqw3aanyfkw5r8hrwah6nmm1bi633lzlnhay7i52f519vyz6","r":true},
+{"v":"1.57.2026092608","e":"^1.77.0","p":"linux-x64","h":"0b35fi3ixkjlvcl93ilraqb4ydgwimdzxa4g10r0klazqjkhsyly","r":true},
 {"v":"1.57.2026092508","e":"^1.77.0","h":"1r2v7h2d1j5brkdjvdyw4298syyww2varb2zl85npai8skd6y0lf","r":true},
 {"v":"1.57.2026092508","e":"^1.77.0","p":"darwin-arm64","h":"0nkqw0vzm9p81dqx141cnaky58gvdi7knp30gpid91i15hl13jzf","r":true},
 {"v":"1.57.2026092508","e":"^1.77.0","p":"darwin-x64","h":"11hf1kwrcan8sw75ah684nkly0vjd4rxw0vf2gx5icbbyk4h2ibp","r":true},
@@ -12500,6 +12506,11 @@
 {"v":"0.0.10","e":"^1.80.0","h":"13k38qxp5qig22bhaz152wcwq0kpjibf9298ygbaz2rrqciki4fr"},
 {"v":"0.0.9","e":"^1.80.0","h":"1c211yykcqcnbn73p9ap3rwp7hicmfb68095bzadgi448mykgizw"},
 {"v":"0.0.8","e":"^1.80.0","h":"1sfph9n382fdk4gm4pkj655jlwn3m54n144v9af9vln11qc1z9cs"}
+],
+"viralinclive.plantuml-preview-viralinc":[
+{"v":"1.0.2","e":"^1.90.0","h":"11c5767sp1f0q6kixfcqf539160pxngc4111mjjzak058p5l23i2"},
+{"v":"1.0.1","e":"^1.90.0","h":"09v835c47p4c7gqgx6367zb5c8fyv20wa37msx5cibh7cz9n8rdi"},
+{"v":"1.0.0","e":"^1.90.0","h":"19gjhz4005h896iv68a2931311y6c3yf3chncwwpmw4wxvis7mkb"}
 ],
 "virtualgrub39.cowgol-language-support":[
 {"v":"0.0.2","e":"^1.75.0","h":"0c3bx15bby21nbmpgdjhqf17kab6a96bn1r0bfkr06ha8qijhsxv"}

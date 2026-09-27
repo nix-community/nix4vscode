@@ -2083,6 +2083,10 @@
 {"v":"1.6.1","e":"^1.30.0","h":"0qkqf5pd5x8r20275ahxclgaadagq04mln0lhkmv6w34n5qx6ibw"}
 ],
 "devprod.vulnerability-extension":[
+{"v":"1.2026.926001","e":"^1.100.0","p":"darwin-arm64","h":"090n1z0rhgkqgi7kqniz5z91zhvrmy1ipnrcz3d3pabmk5ii8509","r":true},
+{"v":"1.2026.926001","e":"^1.100.0","p":"darwin-x64","h":"0s0rahw7dkpzapcwyrkrwydy64hyvfqqr87b53qfi8vb2x95xbx5","r":true},
+{"v":"1.2026.926001","e":"^1.100.0","p":"linux-arm64","h":"1r8lik0yfydlz0963293g0fxj7qs1ha1j1ivl76635w2hbng5yrr","r":true},
+{"v":"1.2026.926001","e":"^1.100.0","p":"linux-x64","h":"0ff92zdqkb1g9b290is6jqxw7fg3wcq8gmayl6d8n0hbfn0flwhm","r":true},
 {"v":"1.2026.925001","e":"^1.100.0","p":"darwin-arm64","h":"18nj00q7bngnw1y0v98vwjg3zzx6swvw75spm2gd7p0swzv5yi21","r":true},
 {"v":"1.2026.925001","e":"^1.100.0","p":"darwin-x64","h":"0pq7lczx6d67sdhmayzvs6qw521ls52f0iwb95js0xpwbsglslvx","r":true},
 {"v":"1.2026.925001","e":"^1.100.0","p":"linux-arm64","h":"1fzlykhnspimaag2fhzvw40g5m1pqapsr7iry4qf9mbm7cc7viqr","r":true},
@@ -4284,6 +4288,9 @@
 {"v":"1.0.2","e":"^1.96.0","h":"1af7083bdghbncikkrfdjblk6mpmmph5n7zp1ygqyz8n9pq5s0wi"},
 {"v":"1.0.1","e":"^1.96.0","h":"13k0x3mriv4bmvzgwl7wwwdhysk32javw9f7rvysapmqz2bhy8pk"}
 ],
+"dkedar7.langstage-vscode":[
+{"v":"0.6.0","e":"^1.95.0","h":"116qv3lnliw1gm2kk7cjiam008fackk2yskpcnf2sw4hxvh10q2p"}
+],
 "dlandman27.tailwind-themes":[
 {"v":"1.0.2","e":"^1.74.0","h":"1s5khs2523365b94pfiys3vfzgmlmpp3xi1v8a0jkbanl0nf5an9"}
 ],
@@ -6103,6 +6110,9 @@
 {"v":"1.0.1","e":"^1.46.0","h":"0xm726njm393rarhs503amjikvxmbl4krg131jdfhc1ab3d4971p"},
 {"v":"1.0.0","e":"^1.46.0","h":"032nv481101m6pcqq5gwjcdyb3pxvb2b93id156i04s53v1fx20k"}
 ],
+"impleta.vcr":[
+{"v":"0.0.3","e":"^1.96.0","h":"005lyjads8qc6s66zd2i5xcplgzfzw12an3ymxlf5sxvh0fimbm8"}
+],
 "imsachinshah.codekarma":[
 {"v":"0.0.3","e":"^1.93.0","h":"10iwl6jaw11dnqvp5fjzy68lpb49ax1zfd4plawsada6i3q05rg6"},
 {"v":"0.0.2","e":"^1.93.0","h":"0g4nql0svy2d3zffas13zi49bgbkvb0vlnpg6giy5gfg1zkq1rzh"},
@@ -7210,6 +7220,9 @@
 {"v":"1.0.1","e":"^1.5.0","h":"09iypmhnd6nvrnxxf1iwy2347jybbpygbpfhkn0bpgcwk1b9xw2i"}
 ],
 "lambda-analytics.ordo-vscode":[
+{"v":"1.9.0","e":"^1.85.0","h":"145sklb4c7z1wiiq1p46x3q77cw8y7rkrd5zdizlixx80k56nvlp"},
+{"v":"1.8.1","e":"^1.85.0","h":"153bkzp0c6fpx15qcb1pkkf597hg1wp3xn70kpngm07dkysy9f69"},
+{"v":"1.8.0","e":"^1.85.0","h":"0qcwf91rbj511fc12kqijk11jmmx8lvjpikw30grmrrlqzfxlx3m"},
 {"v":"1.7.0","e":"^1.85.0","h":"0q317cz043sfbh3j35mwgnwd54imwch418yw3hwqnhq2xagn4zgg"},
 {"v":"1.6.0","e":"^1.85.0","h":"1fqj6p9lfxywvp1js7ikkw5wiq05nava3zwfms4rsangfmrv2667"}
 ],
@@ -8589,6 +8602,7 @@
 {"v":"1.0.0","e":"^1.73.0","h":"04n3b3simfb9dq0bpy7vqyzbavr0m2fppldh6dibiwxdvna45k45"}
 ],
 "openpeeps.bowdycss":[
+{"v":"0.0.2","e":">=1.106.3","h":"18wwls3z6qdfp5xfaxhpxf3sah25y32saz094n9cajdm90ix6v7m"},
 {"v":"0.0.1","e":">=1.106.3","h":"06jla512xyl2hcxpijlhrj4xxmdc95c8fh5704457hwwraly1klm"}
 ],
 "orellazri.vanta":[
@@ -9820,6 +9834,7 @@
 {"v":"1.0.0","e":"^1.60.0","h":"0489nxj8yd0s8ik2n7z4x06kdkgghl6nqz3qfvx9brkr3fl6c6h3"}
 ],
 "sqowe.sqowe-wingman":[
+{"v":"0.2.4","e":"^1.82.0","h":"0d078nd9d2279axjx44cr97v29rwr1xy078dmac7p9vxfdhd70rs"},
 {"v":"0.2.1","e":"^1.82.0","h":"002khsfln09ryrw0sa97dwibxkh778kw4m3c6kn9i85c0mwh310d"},
 {"v":"0.1.10","e":"^1.82.0","h":"13galac8gwjzlvjm8ivdy8jnsinakw07j8rayv9hsr7ixshcdg7d"},
 {"v":"0.1.9","e":"^1.82.0","h":"11cy8rgky6ayj1z97jbxmq9f9jhq3kn5nz4m7jsv2zif7kb0mvnh"},
@@ -10612,6 +10627,12 @@
 {"v":"0.1.2","e":"^1.31.0","h":"17acvmibzaav5s6r4xs57ar7pmcyaax84v90z2niz9ibknnaq4p2"},
 {"v":"0.1.1","e":"^1.31.0","h":"16wannly1wfxlbncc38jqz1wadrfxzji81w9y6h3bwsmf0bnc3pm"},
 {"v":"0.1.0","e":"^1.31.0","h":"17gl4yiiq3vxskyvy9c6fy3bkb2fn00gcram5c96r9g394yi9lqg"}
+],
+"viralinclive.excel-csv-editor-viralinc":[
+{"v":"1.0.3","e":"^1.90.0","h":"1vfd7b597gxq2qglvpa80kfmbydsa84fsyxfzib1kgawv7cszgfc"},
+{"v":"1.0.2","e":"^1.90.0","h":"1865zpc64xggbjvxpbp07biqpvdbpq1bvvaw7ba306x552sbwwpm"},
+{"v":"1.0.1","e":"^1.90.0","h":"1y8nf33mbdw2vhhzk4g4vlhxr58fjgkzpmaqqg4m725rbcn795x9"},
+{"v":"1.0.0","e":"^1.90.0","h":"05kzyfyqf1l477hhjc1aqynx8byf817hf4ivl65hbz2sbb2b21v4"}
 ],
 "virgilsisoe.hammerspoon-snippets":[
 {"v":"0.0.6","e":"^1.48.0","h":"0ybqddag1nv1gxqxn2wy9sb6p329in8jwg5qfgf668yvxhyhxnlh"},
