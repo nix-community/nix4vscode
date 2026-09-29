@@ -2085,6 +2085,10 @@
 {"v":"1.6.1","e":"^1.30.0","h":"0qkqf5pd5x8r20275ahxclgaadagq04mln0lhkmv6w34n5qx6ibw"}
 ],
 "devprod.vulnerability-extension":[
+{"v":"1.2026.928001","e":"^1.100.0","p":"darwin-arm64","h":"13b1ldclrh1n9z8vxcbis1xlxxik15lhxfk79yghqphrzgrfhv85","r":true},
+{"v":"1.2026.928001","e":"^1.100.0","p":"darwin-x64","h":"0ljhvrl9q47hssvvr1bahg4gdfdd3w2y1w30qf53m5k4xpi3hdpf","r":true},
+{"v":"1.2026.928001","e":"^1.100.0","p":"linux-arm64","h":"0h65058jqn0h4k073hwfbig1ki49s1vng05y71caanc3wpxhvbw4","r":true},
+{"v":"1.2026.928001","e":"^1.100.0","p":"linux-x64","h":"1nifg86mf4whyiaxxawnw1j4rkn69l1gdrvlj4n1vyh1k2p15hsm","r":true},
 {"v":"1.2026.927001","e":"^1.100.0","p":"darwin-arm64","h":"0gna8wxcsdsi5rrigawd9v23x81pab9mx00rgjmp9fdgbrmc1kgp","r":true},
 {"v":"1.2026.927001","e":"^1.100.0","p":"darwin-x64","h":"1vpa8cngrcsgv08p18dijdk51xi3cfbbi3kgka4kbjdbbhikar9f","r":true},
 {"v":"1.2026.927001","e":"^1.100.0","p":"linux-arm64","h":"09va8yxnin20jf9i5qkmswdmacwfvfx04h85342vvk6y3zkkc22y","r":true},
@@ -6460,6 +6464,8 @@
 {"v":"0.1.0","e":"^1.29.0","h":"1rvkach62il7v16zamf8hbvm0fgjpamki8b5fd8pmikcf1366wp1"}
 ],
 "jnpiyush.agentx":[
+{"v":"9.6.2","e":"^1.134.0","h":"0p1wkhxcvnc811hvfcbpam2zdmrikbwdqlkqk84vy75rfb4w08yf"},
+{"v":"9.6.1","e":"^1.134.0","h":"1q6fsiyyqx03i2h621krvcp5rc8k30kj6jyzp7pnn7qmsdrmdcgw"},
 {"v":"9.5.0","e":"^1.134.0","h":"04y4gz9ja8hwd19fw8h9jfg7rl2v0kbzgv41if6849khdji6wb5z"},
 {"v":"9.4.0","e":"^1.134.0","h":"16h9cpdz3dddprlxszsi7dcshh07q834jx0v1vycvzxdahfs7mw2"},
 {"v":"9.3.1","e":"^1.134.0","h":"0bp4ygnwdrl7khhbhxis2dqpki8v6a2phgiz1wzl0jh0g8bph85v"},
@@ -7227,6 +7233,8 @@
 {"v":"1.0.1","e":"^1.5.0","h":"09iypmhnd6nvrnxxf1iwy2347jybbpygbpfhkn0bpgcwk1b9xw2i"}
 ],
 "lambda-analytics.ordo-vscode":[
+{"v":"1.11.0","e":"^1.85.0","h":"0ddx965kqmy5yrfs0x5lw0g363i079dfm5yh542a25jwkychym7a"},
+{"v":"1.10.0","e":"^1.85.0","h":"1c3ninaazvz3dq1d53kzca1d7iwlx2wb2b7v53z6r9xx8xbylihb"},
 {"v":"1.9.0","e":"^1.85.0","h":"145sklb4c7z1wiiq1p46x3q77cw8y7rkrd5zdizlixx80k56nvlp"},
 {"v":"1.8.1","e":"^1.85.0","h":"153bkzp0c6fpx15qcb1pkkf597hg1wp3xn70kpngm07dkysy9f69"},
 {"v":"1.8.0","e":"^1.85.0","h":"0qcwf91rbj511fc12kqijk11jmmx8lvjpikw30grmrrlqzfxlx3m"},
@@ -7301,6 +7309,7 @@
 {"v":"0.0.1","e":"^1.65.0","h":"0v03b3w6gpj4b25x995dfj4k9sjgyjica2jqbqzx4qpjkah43rqd"}
 ],
 "leog.claude-code-config-dir-patcher":[
+{"v":"0.1.14","e":"^1.94.0","h":"1jmbdz7zkaskacggjz2g97cpvh1mmyh70rxqak4phxc15kx3hy4z"},
 {"v":"0.1.13","e":"^1.94.0","h":"07wv31fb3bmlb2ixhafb4q14z998ydmix3hxcvvs2wl896kbvrmx"},
 {"v":"0.1.12","e":"^1.94.0","h":"057cqy31wspnnlw9nv8j899vk54z6d0srl5aq463nw2nd4r7c7dv"},
 {"v":"0.1.11","e":"^1.94.0","h":"1vniam1hqrad5dipwd2qd3v0mpzyrcsamp3qajl00my38jkqlm2s"},
@@ -10087,6 +10096,10 @@
 {"v":"0.0.1","e":"^1.86.0","h":"0vrzs44xmy06hbd6zib0w1kcx1vpl9mj1346chbh041cjlzcgk2f"}
 ],
 "techer.open-in-browser":[
+{"v":"3.1.0","e":"^1.57.0","h":"05zgj1zdw54xpr8pd12hdsgn3p2wj5abgfgklm4s6999g4xa8lbq"},
+{"v":"3.0.0","e":"^1.57.0","h":"0kk4xl9wlqqqfw0926yxbly1155sw9200ycw6pnmhm43shfvd19p"},
+{"v":"2.1.1","e":"^1.15.0","h":"1r4k4b8j81y7ir2hpgbfc4zka70g8n69xkvsrs7dfp0z0zaknqab"},
+{"v":"2.1.0","e":"^1.15.0","h":"07p6vq47kninyvl3rcqm0axa5zf9fw8bhxw5mg7z68m2v692xwpa"},
 {"v":"2.0.0","e":"^1.15.0","h":"1s5mgw0jaasis0ish3da3dl7vqsgkx9cgrp1mmpgh9c4wlr12xnx"},
 {"v":"1.1.0","e":"^1.5.0","h":"0498f71892vg0j79bpipz2q0ns6rr6d7ijiff3kz2dqjy038xij9"},
 {"v":"1.0.0","e":"^1.5.0","h":"0wpi42s41zs7qwiqyh03v7nk24ja1mndy6g35b6lkima6k394m5q"},
@@ -10953,6 +10966,9 @@
 {"v":"0.0.1","e":"^1.99.0","h":"0npb2kb3plhwrxrwpx5ivc3pd503wqzvpjbp9jnm1w7w4lf401lr"}
 ],
 "yardencarmi.ipu-asm":[
+{"v":"0.2.121","e":"^1.75.0","h":"14nslmpyimnfhm5k9jy1fak7z686d3r3rfqzrss8axnpdbazsnn5"},
+{"v":"0.2.12","e":"^1.75.0","h":"1jsx6m261gk8ajlfjb6hdydy0s78zb19lmjp1qcv1xq1ka9r5s8p"},
+{"v":"0.2.5","e":"^1.75.0","h":"0szwvlw9q0a9lb9rx0d6zw7qmrp4rm8f40fny1xc2gckhfgmrrv8"},
 {"v":"0.1.10","e":"^1.75.0","h":"1wjk7nay6a4i7bn9ncc2lhqybcc3q1yqqabvjl4gzi0blvc1dqyh"},
 {"v":"0.1.0","e":"^1.75.0","h":"0jnax2rnqi2hq6lwlvqf33cq8z1cr30bra3rlg007vhfq2b7rnal"}
 ],
@@ -11153,6 +11169,8 @@
 {"v":"0.0.1","e":"^1.37.0","h":"09s9yzl84ic2b5g6yby8blv5gsl5w7rqd0vgywa6c71qv6bg2857"}
 ],
 "zerostudio.cdev-lang":[
+{"v":"2.0.2","e":"^1.75.0","h":"0zz95dv3nqy7749m1z3v77y10lnrywdccfvaz4lzncpg858h9dis"},
+{"v":"2.0.1","e":"^1.75.0","h":"1fxjag0lckwiimnqxmhjsljbjy0fj6y9vfjqwki8y3vl1i4wymhc"},
 {"v":"2.0.0","e":"^1.75.0","h":"1rpf7fk368lrfmvnngz706p32vgjv87jl5c5ldigm6vw7cyhjfmr"}
 ],
 "zetavg.spacegray-input-vscode":[

@@ -3185,6 +3185,14 @@
 {"v":"1.0.0","e":"^1.74.0","h":"0xjs7cllrsvh1cc6xf0kv08jp166qlq6jhh85s0cl212wzvid2yp"}
 ],
 "fqix.tapline":[
+{"v":"0.13.0","e":"^1.95.0","p":"darwin-arm64","h":"11pfwq6pa508pvnizpf3d3wqyrb907lvj5np84bf5hrfbl7z51bd"},
+{"v":"0.13.0","e":"^1.95.0","p":"darwin-x64","h":"1pk0xfkjp18ijr6h0ar0p1h73mbk76vx3zza4pk4lf30z3c7wk0a"},
+{"v":"0.13.0","e":"^1.95.0","p":"linux-arm64","h":"1syhfh3sv492p5sy32nvmj0mpiacid7689jadsll6bx21i79xsq0"},
+{"v":"0.13.0","e":"^1.95.0","p":"linux-x64","h":"1y4f7i04ih3q0xghxfp7ac5jym9b7x1c9as54z4yn9rz75y35s8z"},
+{"v":"0.12.4","e":"^1.95.0","p":"darwin-arm64","h":"19rwz6yvwwi37dyrzwxdfcak2pl7bkdkfp5zzqkkfs03zd1hl3pw"},
+{"v":"0.12.4","e":"^1.95.0","p":"darwin-x64","h":"0shyn5ks9hlrzpyc867mr9j10yk0sh7d65r3pp6yk9dyrg5zsc1y"},
+{"v":"0.12.4","e":"^1.95.0","p":"linux-arm64","h":"03jh54yrpjm15fcihh4r1l8738saa0ablkf3k0fmh6ryr5bvpdlr"},
+{"v":"0.12.4","e":"^1.95.0","p":"linux-x64","h":"0jmdq8hq8js245h7grycrb9drv4hqir1w1zwlb74ikvmscrrh8sz"},
 {"v":"0.12.3","e":"^1.95.0","p":"darwin-arm64","h":"0zkxpaf2vwb2cb0q1zc0prcwy7ihi47865ciig0is81c7m7sm6d8"},
 {"v":"0.12.3","e":"^1.95.0","p":"darwin-x64","h":"1qfw07jx116j06w7hlpf9hxa26gpw3y284wsxp6w3ssa15bvgrs3"},
 {"v":"0.12.3","e":"^1.95.0","p":"linux-arm64","h":"1hlzknfw2rkmxmk6wg6fbqkwflpkfwbgjnqs0ps1nhz56hqnngjl"},
@@ -3699,6 +3707,7 @@
 {"v":"0.0.1","e":"^1.46.0","h":"0pfifkrilqscb2zybvvvdlmijmckkwks7pc9n47axmf3gkgcgkfc"}
 ],
 "huoye-studio.flu-cli-vscode":[
+{"v":"0.4.0","e":"^1.80.0","h":"1ilgvs4js1396gblm8x6ygl5c6ncwwb2x9lxyn0mcka4627yn8gn"},
 {"v":"0.3.0","e":"^1.80.0","h":"0ndj0rpa6ac1q2jns2z56d6zp48jmj0zg683s6baz427dl0whgsa"},
 {"v":"0.2.2","e":"^1.80.0","h":"13jyh0h5i47fijayckhv5gph24lpklmqs7sgmzwhcz1a7na2qx6a"},
 {"v":"0.2.1","e":"^1.80.0","h":"0w5kcsnp2cicmyvdz6s23w3pkjlvfdaka5v0wp3zmk8wq72k6drd"},
@@ -5990,6 +5999,8 @@
 {"v":"0.0.1","e":"^1.78.0","h":"154b9fs53gblf3m3gxq35ndnyhs164k3dww1bmg0invmanbrv8vn"}
 ],
 "loopops.loopops":[
+{"v":"0.3.4","e":"^1.90.0","p":"darwin-arm64","h":"15b54d8bjhp41d0n1klwnkn674dnpqm1bn70s20c88sm2gm4yqjk"},
+{"v":"0.3.4","e":"^1.90.0","p":"darwin-x64","h":"113h1y5vcmfyb5biqajxxnmbp8r9avgm3ircn0zhn7w85r10y53v"},
 {"v":"0.3.2","e":"^1.95.0","h":"0i85z2ray44q6ci1xkl4y0qgr0bzs89vzb8fx5lb8gc7j0mswh1w"},
 {"v":"0.3.1","e":"^1.85.0","h":"1ry96qa94dd6br2i0vz624qyy43pf44z895wgv6rw107zgyf0n02"},
 {"v":"0.3.0","e":"^1.85.0","h":"1qdidmclsd2jbdkc22c03v5r1vd3slxm8fs0s26vcck4fmj315jk"},
@@ -6095,6 +6106,7 @@
 {"v":"0.0.1","e":"^1.78.0","h":"1ccdhpfsbwzkxakx1li3383khmssw3ik713g9c0qj3mzj0xv5bin"}
 ],
 "maerskdesignsystem.mds-vscode-extension":[
+{"v":"2.222.3","e":"^1.80.0","h":"0sxccfjjl8vr4xxf9f1qmjknn6lrrbjdcpf2alapsv8m5yvx9720"},
 {"v":"2.222.2","e":"^1.80.0","h":"1mmg6f9rcx164xbipawqj383sldw25dz9gxi0k8z688j0q8ipa8q"},
 {"v":"2.222.1","e":"^1.80.0","h":"02nhcvy6qhnz0gv0h4df4w2kvabnbdm4sadi0c1klxjkqar5c775"},
 {"v":"2.221.7","e":"^1.80.0","h":"1cajlsnlmvmiyh43vlychshzyqbz0g9zq1dizcd4blw0p8lc153z"},
@@ -7869,6 +7881,7 @@
 {"v":"0.0.1","e":"^1.61.0","h":"0nm78gimrjyhqw340sg1dbhhixqqkpcqyad80iqvvkrp31z5y17i"}
 ],
 "readystack.ada-title-ii-deadline-lint":[
+{"v":"0.1.10","e":"^1.75.0","h":"0w3sbhbczrvy1sq7h8n5sl434ywmsx2ms3axldmvar388vrhs717"},
 {"v":"0.1.9","e":"^1.75.0","h":"0ai3p54s2rcwj8lwv6rshzwc9n9ki9nip0j3l2cs4ihxslibzk7g"},
 {"v":"0.1.8","e":"^1.75.0","h":"03ws6v7q8nb2211m6iihga7r6zlrxl7jlf31vixzkvmvj1yh3jrz"},
 {"v":"0.1.7","e":"^1.75.0","h":"13hjlbkqdsm9ib66h818flbz0r33865nq0gp7k58kq4gibfzir02"},
@@ -8595,6 +8608,7 @@
 {"v":"0.0.0","e":"^1.85.0","h":"0xzj96k305dwfp6vb96hxz3nidxhgsd9vi68h3g6aicy1gmv27fp","r":true}
 ],
 "selvage-protocol.selvage":[
+{"v":"0.6.0","e":"^1.85.0","h":"1jwx2344ha2ks40nmb36psimgw3xcp94lxjpni98wss3q4hz1g2q"},
 {"v":"0.5.2","e":"^1.85.0","h":"1jw04yz4djqycc1m1xzdymlblg7c24qjyq02a1rbdjif3lkjpach"},
 {"v":"0.5.1","e":"^1.85.0","h":"1dz9bf9xwn0c9z6jj24ab9b76qs9d0gf9hmbbn04r2xsfj0cyaym"},
 {"v":"0.4.6","e":"^1.85.0","h":"0fkjn3bh04a383q0a75y5a3sln05c585pfhsvlx2rhchiylm5nsi"},
@@ -9021,6 +9035,8 @@
 {"v":"1.0.11","e":"^1.76.0","h":"05s55xfxl45wfxr6ivd8iaf0ga2jmf8ab89qs5q2cz1nmmlh61hj"}
 ],
 "sufficit.sufficit-vscode-symposium":[
+{"v":"2026.928.2","e":"^1.100.0","h":"19q01k39kzqshwmj4k6i37cmzkmwfm6rzirixhs9g1rwfpyr5gk0"},
+{"v":"2026.928.1","e":"^1.100.0","h":"1kx6qskkbwsrh6ykcf8rhg7crzjxck6kq90m556svymldrmdlcw6"},
 {"v":"2026.927.3","e":"^1.100.0","h":"0n96im1v6smdkc506cb9kmf325sr2i4jdy8vglzjybnr4qv5ax36"},
 {"v":"2026.927.2","e":"^1.100.0","h":"0rcmlga8dbil6s9s885lflfcb7balgx0x5p2mx8lj5b9d1pvzswl"},
 {"v":"2026.927.1","e":"^1.100.0","h":"0x0y56bzsx2pmkwvqs8yabk8d3m313n5wp3v1cjp5i7948qx5b2d"},
