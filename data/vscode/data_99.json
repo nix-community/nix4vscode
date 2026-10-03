@@ -1126,6 +1126,8 @@
 {"v":"1.0.0","e":"^1.64.0","h":"106rs7370j8hx8s2pvj1laxmjl3bmmqf62fc2n0yxsa7ccsq77k0"}
 ],
 "casvugen.copilot-cost-counter":[
+{"v":"0.2.77","e":"^1.85.0","h":"1hglki1688yrwfr083cqnx8v52y092gvhcdjxkyvzlfilp79czw7"},
+{"v":"0.2.76","e":"^1.85.0","h":"167pdks83nyikknhb3cb3yr2z82yhz04a3vm3l43x8qi97wh6wbl"},
 {"v":"0.2.75","e":"^1.85.0","h":"0dadskdi8m5hxm7zhh3l9h1bmfn04zv32laanrmxldh49gmwf8ch"},
 {"v":"0.2.74","e":"^1.85.0","h":"0fn92fc1z55vi0y80s07zfimj8vcjaaj3yj1l7jdkg8yvlj7pyz9"},
 {"v":"0.2.73","e":"^1.85.0","h":"16mknw96gv1mzarn7f5i6sikf6zfbxhyfn99ymdj3lb15qkr5cmr"},
@@ -2742,6 +2744,8 @@
 {"v":"1.0.0","e":"^1.50.0","h":"18fwsqjvkgazljr7k9w57vy2d2bk33rkrajxkd5s81v9j9brlyw6"}
 ],
 "dualsoftdev.ds2":[
+{"v":"2.1.1","e":"^1.95.0","h":"0iw16s6dgj30cs2wc2w19mm7dansyvb3piwkv5bmxhr4fwxax2i7"},
+{"v":"2.1.0","e":"^1.95.0","h":"1jqkl8ar82qa8wx114qrhprk8xhnxv8sjbmhay50145pbin1f1fp"},
 {"v":"2.0.5","e":"^1.95.0","h":"1vh4cjjivdcvsmqwklsnp0101mqi44sjb3y0wxhbnvgf16njyrpi"},
 {"v":"2.0.4","e":"^1.95.0","h":"1k599r97nsdhpy798g217sipvykyj758rg5qpyk0p7rl9j98j971"},
 {"v":"2.0.3","e":"^1.95.0","h":"1hxhbny6jza2a3wff2ddm1lv3zljwmff3jsvgp7zl9lb1zfxijgj"},
@@ -5900,6 +5904,10 @@
 {"v":"1.0.0","e":"^1.105.0","h":"03jw2qg9b9fvh0gb00gxjmy7121a7bz8811ndsgsyzrn5kfil0nb"}
 ],
 "localmask.localmask-key-toggle":[
+{"v":"0.4.3","e":"^1.85.0","h":"0lqvgzx9yvfrc1ybqkzwn4zid2vhx84jc7lnxafm17hy6wgb7f39"},
+{"v":"0.4.2","e":"^1.85.0","h":"149i4xmh9c9zwx0ry0kkzpbigaidq58c46c90cdx5aa027sqjk7z"},
+{"v":"0.4.1","e":"^1.85.0","h":"01lv5ir8xzq89dpfqavg5nir6fk0a039acb8ifxh18syzb7cv44g"},
+{"v":"0.4.0","e":"^1.85.0","h":"0w5ww72m0mb46z47r3an81c38178pirjblxb7ailx7fic9zplngs"},
 {"v":"0.3.25","e":"^1.85.0","h":"1zz1bgvldw0fqmzjnhznc60b3anzczc1pbsy1lpqyx4zyfkdzrhq"},
 {"v":"0.3.24","e":"^1.85.0","h":"0kca7fy42ww3lq0yzi1nwxhhlvp5nxh449mxq5rm37618vbi66s6"},
 {"v":"0.3.23","e":"^1.85.0","h":"1yba25yhvpgwld5pih7fxwarqwrw6f3w5iw0i3apj6b4ap1px5lj"},
@@ -7473,6 +7481,7 @@
 {"v":"0.0.1","e":"^1.62.0","h":"0k50n67pjkzkswnl53dacrhrsx0lrx0d0xjkq18d8rh9cmn6ggzd"}
 ],
 "pipelex.pipelex":[
+{"v":"0.18.2","e":"^1.90.0","h":"13nnsi1f0rgab9w9bwr4ngkl984lv4gi6n3pi4793qzgccmgz96x"},
 {"v":"0.18.1","e":"^1.90.0","h":"1rc7n1gia8znbz79k9ia120j9isfgqggllsgm8pxqvb1znpc42d5"},
 {"v":"0.18.0","e":"^1.90.0","h":"0y4rgmcrs81barziyz0pivxb7wi4azcslc5342gnzq0wlg163z4d"},
 {"v":"0.17.0","e":"^1.90.0","h":"1cklwbhqgrlasjqlvi48h3lgx0fsw13jp6y5kbc14b0sw3cj6j0d"},
@@ -8178,6 +8187,12 @@
 {"v":"0.0.3","e":"^1.58.0","h":"128bp94gn1m2svza8wpnq30mgigx68rix8y1xpclc0brcv3v19mv"}
 ],
 "rust-lang.rust-analyzer":[
+{"v":"0.4.3070","e":"^1.93.0","h":"17npknvbsqcbinmkw152mpw7j1p4p15x6gxmp4fwahprb37rfxr6","r":true},
+{"v":"0.4.3070","e":"^1.93.0","p":"darwin-arm64","h":"1v1y9bxahqs1arjap9812zq4iark2cv5fffp26gmhqkbb7zsl6d0","r":true},
+{"v":"0.4.3070","e":"^1.93.0","p":"darwin-x64","h":"075d3h7ps9i4h206bkmbh59zm0d47yrxrwi4dhcgy2nwc10pnjp2","r":true},
+{"v":"0.4.3070","e":"^1.93.0","p":"linux-arm64","h":"0j9j97lkmld75g2xd7317gvwr9l81r0pfk204jk0c4jn9046nr3y","r":true},
+{"v":"0.4.3070","e":"^1.93.0","p":"linux-armhf","h":"0l90zhcaxyvixiz150fa4x986jvf7nkinlbv41cysf2h7z5bqns6","r":true},
+{"v":"0.4.3070","e":"^1.93.0","p":"linux-x64","h":"1fryz4wjclyj3hmh5gwhq4sq7di4nc0pflqd27gw1i6ls4d6zi69","r":true},
 {"v":"0.4.3069","e":"^1.93.0","h":"1k6y2l1qqk2vgm76619gc98jk23pzxrxk2xp9k6w4gx0rfmmrm7i","r":true},
 {"v":"0.4.3069","e":"^1.93.0","p":"darwin-arm64","h":"1w3wv8hkwkqcd913qj99w2vpiid93rm6flyk8sz0bnbp6sm0cygf","r":true},
 {"v":"0.4.3069","e":"^1.93.0","p":"darwin-x64","h":"0lk2zk2jfn1nnvgx0k8w18yi8vca1rkkmnp3bfymrm1iwdq955yq","r":true},
@@ -17455,6 +17470,11 @@
 {"v":"0.1.0","e":"^1.41.0","h":"0vfvifqs4a7pipgiybxbvmwvcngk03kg5ns628h3vs5f9aaq4ka7"},
 {"v":"0.0.2","e":"^1.41.0","h":"1p6v541qwcivl92yrbkr4vms3qr00h18f0cb06f9432gkbgq5q1a"},
 {"v":"0.0.1","e":"^1.41.0","h":"048j4slmplkg8bfqyxz1qjqy412v4b5ks1k0lj2x50w5nnvqyjja"}
+],
+"rykantas.intellicommit":[
+{"v":"1.1.1","e":"^1.91.0","h":"1cizxz9h3r3k621havjc6mhhl10bkbvz8i8hggwh6bxp000zy8gs"},
+{"v":"1.1.0","e":"^1.91.0","h":"023kaf2yni979aiaw0a98rh27da4gk9dm1xrhswjl5cgydajgws9"},
+{"v":"1.0.0","e":"^1.91.0","h":"1vaipxlx5m7wl3qma76jyg1037khmxzdcjg9khq1dmcwnmikr2s3"}
 ],
 "rytora.rytora-code":[
 {"v":"1.0.5","e":"^1.96.0","h":"1jxhxdjyzf6zbcx0v96vv8im23chw16y2w26gjx9amxgqzq2qjg5"},
