@@ -4350,6 +4350,7 @@
 {"v":"0.1.9","e":"^1.43.0","h":"07fwbd1wsvwnr8acpgrbhs4jdkpgfkzzsc7sgcjskq24pq0006c9"}
 ],
 "jakubkozera.csharp-dev-tools":[
+{"v":"1.13.0","e":"^1.100.0","h":"1kfzcqdjalw6d52npv6g0r6dam9br0l72bkq5spl1f7fyxyfbv0g"},
 {"v":"1.12.14","e":"^1.100.0","h":"14q50irfx8w6iwm0f90z2v6wn4h9x2a08g824dpr7n5j6d9jm0ib"},
 {"v":"1.12.12","e":"^1.100.0","h":"093vlsir25gbn5svlg8309wbdzbp0qdvkpcn5wkmmhwhbgq578v5"},
 {"v":"1.12.11","e":"^1.100.0","h":"1myjhkr2aigbfaj8d5bnwi7hzfqkp01dysmbq62ybqcgq4dxmmhp"},
@@ -11430,6 +11431,7 @@
 {"v":"0.1.0","e":"^1.78.0","h":"0wsymyicw1gvvy86kjizq1z2za2yhxsndsl8g3wnwgvrdvqyqvbw"}
 ],
 "moost.atscript-as":[
+{"v":"0.1.99","e":"^1.80.0","h":"09wkbrakp848wb6zqvsi0g0zbqw2kb4ca2k49h1vbdgphii90hza"},
 {"v":"0.1.95","e":"^1.80.0","h":"0mpfz72fdhn20gsnfh9pld1s5zfnxpqrrq2yq47ga5s8v9lvkmqw"},
 {"v":"0.1.63","e":"^1.80.0","h":"1r9r3nllfys66j6phlmqn55ss9k9qz1491d8hvh8kj1jyhd0y07p"},
 {"v":"0.1.57","e":"^1.80.0","h":"00kdrhvqqr648hhmjy3x04cl1kp64g16h4cchriyj4lzd1kv8kjz"},
@@ -11857,6 +11859,9 @@
 "noir-lang.noir-programming-language-syntax-highlighter":[
 {"v":"0.0.1","e":"^1.60.0","h":"1r99aasaylx1gni9rxbzs40b97hw6km1aicccap74zvsvz1mpz95"}
 ],
+"nolindnaidoo.unicode-le":[
+{"v":"1.0.0","e":"^1.101.0","h":"1mq1d60wic6f6gmqfbhjmcq7lbvx53xn55bgwvsbssb5wn1dlw50"}
+],
 "noname.clang-extern-variable-highlight":[
 {"v":"1.2.1","e":"^1.96.0","h":"0md0y06k9qrghd35d5fsyj18184pxsiwqhjr4ky4bgslii0gff8r"},
 {"v":"1.2.0","e":"^1.96.0","h":"05iciv5m6vj4a9gk4ckpa894ihpdirrd1a0g0b1b17acsbl3s67a"},
@@ -12086,6 +12091,7 @@
 {"v":"0.0.1","e":"^1.85.0","h":"10cbm132w1ap5n67dal55z8nknij6pirjdiy74kbhd2x3k5j16xd"}
 ],
 "openpatch.struktolab-studio":[
+{"v":"0.5.1","e":"^1.80.0","h":"04z91pc7gnv2szakaws065pcmc8psf4kkzaarfxy066112m78x5v"},
 {"v":"0.5.0","e":"^1.80.0","h":"0vps93iw3sg1blr81c0c12ydkmq8czvmc0jjkmxdz71wn1q0adg7"}
 ],
 "openpixel.unreal-engine-4-helper":[
@@ -12385,6 +12391,10 @@
 {"v":"1.0.0","e":"^1.49.0","h":"0j7cmbhhkf03nfiwl0sdn2r8bcbslj8bmanffz0bc15lcb7190fh"}
 ],
 "php-kirigami.kirigami-vscode":[
+{"v":"0.1.12","e":"^1.90.0","p":"darwin-arm64","h":"0wwy90n92yvk9rzvay3zjmw8brp6vji02y221qfbvz065mvxw4nz"},
+{"v":"0.1.12","e":"^1.90.0","p":"darwin-x64","h":"1w6mshr9qvmy4xxgsrl15x923gyg9mdimg5ciil4nad7kf7p0fi3"},
+{"v":"0.1.12","e":"^1.90.0","p":"linux-arm64","h":"00jd4kd6qwyv04kzrgdr3wjk1gq1qhbvj3dzb9zasw2fs4plppn7"},
+{"v":"0.1.12","e":"^1.90.0","p":"linux-x64","h":"144kphvcjxv82kl51120vh07wkim4l39f4i5zpp5fpdwwnz0mwg4"},
 {"v":"0.1.11","e":"^1.90.0","p":"darwin-arm64","h":"0sdcwql1jfxdzqh6ppm620ixd48a06k2sdaawi09qp386ykn8f24"},
 {"v":"0.1.11","e":"^1.90.0","p":"darwin-x64","h":"097zj8c5wfg5c5868fnjcibv85yf1nncslr03fc15xmj24pl53c2"},
 {"v":"0.1.11","e":"^1.90.0","p":"linux-arm64","h":"1ib4c6842lzs5wwv4923n5k975blvkx36708i69rm1drv0agh5dj"},
@@ -13120,6 +13130,15 @@
 {"v":"0.1.1","e":"^1.25.0","h":"1hx9w6f1x0v2k6k4qjz9wbwk3i1zqmxr1v4rrgqz2wf78xl2my0m"},
 {"v":"0.1.0","e":"^1.25.0","h":"0pp42xq35y8r2x4swvrf04gihcgidczrqgm9kmhlcjndpz6z37m0"}
 ],
+"rover-lernumgebung.rover-welt":[
+{"v":"0.1.5","e":"^1.88.0","h":"06gjgmqwkjlrb1z2cd4dg58sf38qkszvaci0wb37v79w0ky1yhby","r":true},
+{"v":"0.1.4","e":"^1.88.0","h":"1fzgh64rpksv3cbmfj06j16jn5dx8yzzarh53zgwrgp806762lwr","r":true},
+{"v":"0.1.3","e":"^1.88.0","h":"0vsd69rlk3kl1c52q2ir06gglbd71chnsyavh469054091ji9hir","r":true},
+{"v":"0.1.2","e":"^1.88.0","h":"05713xplkxyz016859qxxzvi9rknh8sxrqz180mc05fazmx3prnx","r":true},
+{"v":"0.1.1","e":"^1.88.0","h":"0ray6fshdwkiamgg8wf4l3xgrmhzwnhw0q3dq3gxb8cgp9j6vphi","r":true},
+{"v":"0.1.0","e":"^1.88.0","h":"0yjfn91j2lv9bar6xsxqrp0ips6b9w5ns511xx5qj17vpd0584wp","r":true},
+{"v":"0.0.1","e":"^1.88.0","h":"0mpnnn5kmfmai6d01d1jin5mg2n9m9f9ywgmwvxwy9ms82ksh52g","r":true}
+],
 "rovium.rovium-vscode":[
 {"v":"0.2.0","e":"^1.101.0","h":"1mfbgzzac4nxawb6h0hv5jdyfa7dmy0hwrp2ic02a4k9marqm5h4"},
 {"v":"0.1.1","e":"^1.101.0","h":"04dmiwkkrf6f27scqb7ip4mmiihsqf1laiirw6grcjfd791j2xv0"},
@@ -13209,6 +13228,9 @@
 ],
 "ryanbasmajian.oidc-devtools":[
 {"v":"0.1.0","e":"^1.85.0","h":"04xxb9bqlr9krfm6dwi6sxvyqlb444p1y86j5arznicsjmqj5l00"}
+],
+"sa1ntsinner.rung-scl":[
+{"v":"0.2.0","e":"^1.90.0","h":"1154p5pqq8w6s8h0vjjq1x8xbkh7rdb6p0824p5jsc93gqvaj7ng"}
 ],
 "sadhanpal.deeproute":[
 {"v":"1.0.5","e":"^1.80.0","h":"1w5d9dx2lfdniwajh7cmq05pb3dxyk931lvsjh81gs6rqzxs9kx4"},
