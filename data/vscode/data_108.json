@@ -2771,6 +2771,10 @@
 {"v":"0.0.2","e":"^1.86.0","h":"1hf2j9z7nhcj6mz37dw4ml4avs8k4pzx0v8f5zjv79ky7645s7a6"}
 ],
 "erlang-language-platform.erlang-language-platform":[
+{"v":"0.53.0","e":"^1.75.0","p":"darwin-arm64","h":"0fxq872c0nvqk4pivdmryan3jxykimsv8n5kw3dl05s37h9vydkq"},
+{"v":"0.53.0","e":"^1.75.0","p":"darwin-x64","h":"1qpzz9622cn5dk2kaj5y0hysslrrlyxgm50684zqqyakjgqabbig"},
+{"v":"0.53.0","e":"^1.75.0","p":"linux-arm64","h":"10swamkr6mdbgqbynnbraydlgdbncd6gjlvd6xp7xamxvbqkpwk1"},
+{"v":"0.53.0","e":"^1.75.0","p":"linux-x64","h":"0g6v1b77nlqw6jhsqqx9al2qs509rf8mwjvjzv0jm0yh59yhbacv"},
 {"v":"0.52.0","e":"^1.75.0","p":"darwin-arm64","h":"0hfii4divzn5ah561gw808i2xlg1y6rmxbwbprd5i682nzirlfl2"},
 {"v":"0.52.0","e":"^1.75.0","p":"darwin-x64","h":"0fwq35nvk2dwraj8l8w873dx0xbq0plrp726sh9vxrwppk40gk1j"},
 {"v":"0.52.0","e":"^1.75.0","p":"linux-arm64","h":"18259j2bq14xr1xkf4k9lvzmkkqi1vny24j9fypanl9z77gj7ry3"},
@@ -3947,6 +3951,7 @@
 {"v":"0.0.2","e":"^1.109.0","h":"07xibhphgzagplk53fqxf4mbylk8cy6bccsrgamw2r1may3bxcz0"}
 ],
 "imskriaz.codex-manager":[
+{"v":"1.2.14","e":"^1.96.0","h":"003ada8mscplhjs5lrk50lg0ziimmwfh4bbqvrln44pn4ksmbql0"},
 {"v":"1.2.12","e":"^1.96.0","h":"1zs8lnix8bqr3lgv9cgbniim1kzkadl3m4vmc34vq3gda5b6wj9k"},
 {"v":"1.2.11","e":"^1.96.0","h":"00f3awbcx5f5ahc9clg8z5fy3a3jkn8vnrg0hpkn6rzvbdi3xphp"},
 {"v":"1.2.10","e":"^1.96.0","h":"0y6r73vrgwissjdl1wby8h1z9id50vmi7p3b75a1ra08gg61ll36"},
@@ -7250,6 +7255,10 @@
 {"v":"0.0.2","e":"^1.80.0","h":"1ahz9s6lvsjc9acbm1akhx2xqxj2p6m2vaf2dbiq3lah8brcsrgh"},
 {"v":"0.0.1","e":"^1.80.0","h":"1pyrl5vqc770pbysww0ayf37g75kzv4zp0jrh08bdksf6jpkbwnm"}
 ],
+"nifty.nifty-git":[
+{"v":"0.1.1","e":"^1.90.0","h":"03ldb01bdxqah62yqhayqhn9i1g5aywjgrb69cq9c3n8bjlmxfsj"},
+{"v":"0.1.0","e":"^1.90.0","h":"0kavbl2waps7safg8lw00ya7jknk3y8jbxpl90rkm7k7xc7q2y2f"}
+],
 "night-owl-labs.bee-heard":[
 {"v":"1.0.3","e":"^1.45.0","h":"0dx5h8ghq2hzpwn9nfxjv2xvcch6835v8z670k29rp2ak4xcx9pl"},
 {"v":"1.0.2","e":"^1.45.0","h":"1l8pdicvp0s4bp6gj7kdns0m18hs891nxmfzwskdlyx15d5pk3hy"},
@@ -7693,6 +7702,7 @@
 {"v":"0.1.0","e":"^1.69.0","h":"1xy5b4w1ckn6i8dl0v4vxy8ax8nnmm7s9kb2f421qmrh6xc1777s"}
 ],
 "origamilabs.origamicoder":[
+{"v":"0.4.215","e":"^1.106.0","p":"linux-x64","h":"0vghzkc7gkfqli2hw0pa5d9i5mfx7nsvdbzzvy467hs8w9s4gcbd"},
 {"v":"0.4.184","e":"^1.106.0","p":"darwin-arm64","h":"17y7ng713p6qy643n0c98sif7wmj7fynaib048f760jcsgzyqf67"},
 {"v":"0.4.175","e":"^1.106.0","p":"darwin-arm64","h":"02cgra9m9djfcz9zz4pd93gabn7j299gxw2dg01cw00f175m8405"},
 {"v":"0.4.155","e":"^1.106.0","p":"darwin-arm64","h":"0mqkp2byk330wd4x1xqnydw5b7d8z5w5wvl76cf19pp7497m1m64"},
@@ -8240,6 +8250,9 @@
 "pradeepdevananth.md-video-player":[
 {"v":"0.0.1","e":"^1.85.0","h":"0q9bizhg636s2da7rnhlby2wlbqh2zqg9bms1h3kyxnr1dpmg04b"}
 ],
+"prashanthreddymunagala.spark-cell-runner":[
+{"v":"0.6.3","e":"^1.86.0","h":"15fbssy9jfwss1aiqgmcspg92b4kj2p1f3gpf2x973j19limqs0r"}
+],
 "prashantsingh.indexa-code-intelligence":[
 {"v":"0.4.0","e":"^1.85.0","h":"0r6vg71sqrs93mz3dkx83lgjpipxlbv9fmvd480msxnxx2v0jp6k"},
 {"v":"0.3.0","e":"^1.85.0","h":"03zyd3q8aqj1diig829dwm0c8nx42rwapcbivxm2yarwyzyri3yl"},
@@ -8538,6 +8551,17 @@
 ],
 "reactjssn.snippetssn":[
 {"v":"1.0.0","e":"^1.80.0","h":"19c8jrr4pdib0rv6fq5ryn3ag5dhgzw4iw2hgbxrs6f833my4g2y"}
+],
+"readystack.bitnami-image-catalog-gate":[
+{"v":"1.0.4","e":"^1.75.0","h":"0qjq82imga0m8ks6rjra5qn5gj2rgcvvw3icggf9qa5dqg67hin3"}
+],
+"readystack.connection-string-secret-audit":[
+{"v":"0.1.8","e":"^1.75.0","h":"0bdckbgkfv89zn6mwvw6zik38h9sxwzgwniv4pn5200371h7imrq"},
+{"v":"0.1.7","e":"^1.75.0","h":"1kdl36xb7kpbz9sqciiiiak0cgqmjifh2f2gvaaq53lhyvw5an59"}
+],
+"readystack.consent-mode-v2-lint":[
+{"v":"0.1.8","e":"^1.75.0","h":"0q1xisj79jmwyaxkag4y59lh89mfc3vl5s12063b59qjbvg13lby"},
+{"v":"0.1.7","e":"^1.75.0","h":"0nf6brr5n404wwr72jxmqm0cd1sq8qaaqqk6dh3x87z69sbn522d"}
 ],
 "rechenberger.teampilot-ai":[
 {"v":"0.0.3","e":"^1.79.0","h":"0hzvh1bzmb5ql6g5blwnxbinlrbcdbr7pjswhhkvz189k7avrkrl"},
@@ -9918,6 +9942,7 @@
 {"v":"0.0.1","e":"^1.23.0","h":"02rpzq1r8cfk01ypk3vrjn8gnv2jxmv02ys0dbhv7m0j3n99hn26"}
 ],
 "tsrx.tsrx-vscode-plugin":[
+{"v":"2.2.4","e":"^1.97.0","h":"0gbxnqjg4rp2nddrhaq8mfjiys65cpg5d2cbx433k3xh0yahii1x"},
 {"v":"2.2.3","e":"^1.97.0","h":"0jl4qkv7bqnsbvh8616z5xhqxxjqqwsnr27r0sxbbj3fj3x6917c"},
 {"v":"2.2.2","e":"^1.97.0","h":"0bd87jd0laaxjm4rsy0zx54plzx2hwsn23b7vqhx7173c2p4sjsr"},
 {"v":"2.2.1","e":"^1.97.0","h":"18vv3iy5yl3mgfjsfy1cc6ngqsgg1jjwgknjivz393h8naynjybz"},
