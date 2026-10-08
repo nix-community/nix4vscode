@@ -2158,6 +2158,7 @@
 {"v":"1.0.0","e":"^1.43.0","h":"0vfpnpblv9538cvzy5cvw04i3i93xxngzpqhc0l3cp8dhyr309kx"}
 ],
 "dirkbretthauer.hamstersimulator":[
+{"v":"0.5.0","e":"^1.85.0","h":"0d5qb49ydl6kwlvzfsl0vlxx2mxx2f1b6srv90wbnr0xldhbhk64"},
 {"v":"0.4.0","e":"^1.85.0","h":"0fd5qfk1d0q01wj7qpy3md9rpcbm5aj78vvihvyfm01xc9vz13w9"},
 {"v":"0.3.0","e":"^1.85.0","h":"1w7s7bkpwkl8s6l121zi8645g2mvhh8fi6xc5iqsm4acrwp9kk2g"},
 {"v":"0.2.0","e":"^1.85.0","h":"09zk6kjmb3hb58iq5adfykxvcm2w14l6wk8lqygqra8h164hvmb0"},
@@ -2503,6 +2504,7 @@
 {"v":"0.1.0","e":"^1.85.0","p":"linux-x64","h":"0prfhdf9ffk4z6h6hrsjwwsicf5hfxrplibfa6jkgq7jajx6gxkc"}
 ],
 "embeddlimited.embedd":[
+{"v":"1.26.1","e":"^1.75.0","h":"1ysi5lyrdc8hmhq2cdn9b2m5pqf1pwxyfgxc373837wbvzhbyn06"},
 {"v":"0.2.9","e":"^1.92.0","h":"0kb1xijfrici1ahjz3q6vcw0y6arjj3hdm3xmpijglslq4nzyznl"},
 {"v":"0.0.884","e":"^1.92.0","h":"1s4hsf6fjr45xldfjnp4driznxkm9mpyr0sz1fbyxbvgj8f4lg8x"},
 {"v":"0.0.883","e":"^1.92.0","h":"0v46671ykcy67dsjvjzc603zp0ynn34idl9gb7ydjxbirv4br1yk"},
@@ -4476,6 +4478,8 @@
 {"v":"1.0.0","e":"^1.57.0","h":"1ihph9nyf5a5p2lx6grwx32211p0d6k9i92bpgzaf6j016rpqrc0"}
 ],
 "hjulaxel.flock":[
+{"v":"0.18.0","e":"^1.94.0","h":"145kbhpinz96l7gcvccwnws2bmdhb7bcgb4sw8r653fy0rv1l2kp"},
+{"v":"0.16.0","e":"^1.94.0","h":"0gaw9appn0pjirnm470s6j3cp3v3vbnn8b4h5rbzi490ri29s5f8"},
 {"v":"0.14.1","e":"^1.94.0","h":"0ajvs8rrm34v2l24spnji62npnb74a4qalr8skahgl64n5rf3fa1"},
 {"v":"0.14.0","e":"^1.94.0","h":"1z2cbadg7d89sn1hil4b44239q28pv150mfbavsy4rmbpvgl984i"},
 {"v":"0.12.0","e":"^1.94.0","h":"0dlf5ckh52bckp7cakzwir41znbm9ybkmwy7gr0sy57j6bhmpsk9"},
@@ -6889,6 +6893,7 @@
 {"v":"1.0.0","e":"^1.100.0","h":"0djkly8mql18hdjyip9nwq6n78c7lq15dxf2403sz3p7qcxwq2vv"}
 ],
 "mlsomers.lsmsgpack-explorer":[
+{"v":"2026.10.10","e":"^1.90.0","h":"096hwpq7cbwgmznzjqfd1fzwihqvxdcvs3ahr93mk7n25710lc1n"},
 {"v":"2026.10.9","e":"^1.90.0","h":"0xm4fs40a21qa6wc0lfr3m8s3w9m1r9r8fihr5p5j74ynajini4l"},
 {"v":"2026.10.8","e":"^1.90.0","h":"1hwqv2zvd6c0w1bkbb2qs5qwj7fdi8khq2x19mgdqxr19y6m324l"},
 {"v":"2026.10.7","e":"^1.90.0","h":"1h20aiwzlnhv0bmlbyjgs3hg1gwqnaji8pcb50lixyk3vb0nmf5a"},
@@ -7069,6 +7074,10 @@
 {"v":"0.0.1","e":"^1.85.0","h":"0qfdlxm1sibm1xcqh5pjiih638fm50mms5qx041g4ar37als89zs"}
 ],
 "ms-dotnettools.csharp":[
+{"v":"11.2.14","e":"^1.106.0","p":"darwin-arm64","h":"1b2sb7j11lbkmb90wvizx17fi9nxq2qnqbhlg8b8m00dzf9yfcjd","r":true},
+{"v":"11.2.14","e":"^1.106.0","p":"darwin-x64","h":"1kzm2vmrwmylz8xip12fnz8lyq93gx6d97h5wgjfqyawn1g7jwmh","r":true},
+{"v":"11.2.14","e":"^1.106.0","p":"linux-arm64","h":"19s8l8qxaimgl22rpj1v69rmlnximf2ps8dl0mk6xs5nl2jfkxaa","r":true},
+{"v":"11.2.14","e":"^1.106.0","p":"linux-x64","h":"1gvg38dsl461hy9n3fj4w9262jfd8sp45gsrl5zfgix4q440ryv6","r":true},
 {"v":"11.1.32","e":"^1.106.0","p":"darwin-arm64","h":"0dhd52m5g8rx5prbcxm6pml6qq1fx902c702n5p1jshh290nz4fz","r":true},
 {"v":"11.1.32","e":"^1.106.0","p":"darwin-x64","h":"0gz5dwycz1qk2q1r5x0zxam3bxnlm3ys7x8ns9qyci2irxm1lia6","r":true},
 {"v":"11.1.32","e":"^1.106.0","p":"linux-arm64","h":"0msgqbjp6yqgyrm5kl6j9n6f9pispcjq5bbynhc9m11729w3plw3","r":true},
@@ -10703,6 +10712,7 @@
 {"v":"0.0.1","e":"^0.10.1","h":"0xzmq32a3177y3nc5g6954sdgxsdnl6z6j7hx1107mg0fblr7fvl"}
 ],
 "titouanfreville.moonlight-ai":[
+{"v":"0.1.6","e":"^1.85.0","h":"0yl0pw531bh7clwzpv284j518sm30qx805py5lml2gi7gsngqfn8"},
 {"v":"0.1.5","e":"^1.85.0","h":"0g0smhzbkcj5a3i2gkgnzn2rkxzni69dj28pcdzpdbrrrhhf2093"},
 {"v":"0.1.4","e":"^1.85.0","h":"1k1jws8yxkv34m2d0v6anlk0l6jrciql9dmp6kq54x30dfidwb97"},
 {"v":"0.1.3","e":"^1.85.0","h":"025kxf1c0n25vfjz2vfd4lx6vz7gn59vr7y4vhfsvp1x73gwg28x"},
@@ -11644,6 +11654,7 @@
 {"v":"0.0.75","e":"^1.95.0","h":"0z0mfjx6aakwz7v3x92rv8bj6zd6j6zlh5vi8vpl4dc258z8rb58"}
 ],
 "yoshida-kd.octavo":[
+{"v":"0.6.3","e":"^1.85.0","h":"0k4xzh6kb5fgs7agpxqsnkhbamzzrdxfzwxplk9ayk0v7jjbjbiv"},
 {"v":"0.6.2","e":"^1.85.0","h":"1iwvzp1n6ni239bz7gvffz622nsrfynpp9id1ssny6ffr0p173dr"},
 {"v":"0.6.1","e":"^1.85.0","h":"1m5jqz8hp2k9zj0wgji26zav130s234mzgc5p0fwljlyxq9gah4s"},
 {"v":"0.6.0","e":"^1.85.0","h":"1818kjmgv1idr9bxrvrv45dwfg6bfdxn2x8shkng9wx57kha77bj"},

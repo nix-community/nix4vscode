@@ -727,6 +727,7 @@
 {"v":"1.0.0","e":"^1.85.0","h":"1crs43g0bkkgrvjlxzqnkl4kckmd3747ab7vd68w44ykj6p6rh1w"}
 ],
 "backtickjs.backtick-vscode":[
+{"v":"0.1.4","e":"^1.90.0","h":"1n4pvazlhp2s6qyag3bzc68rp8viy00428wzi1zsihqri1wlf39x"},
 {"v":"0.1.0","e":"^1.90.0","h":"1ldx0l5ihl5ap7nxphb13057p9vrdyh38n4apsmnqnjnaj90ggfc"}
 ],
 "baepli.spur":[
@@ -1499,6 +1500,11 @@
 {"v":"1.5.0","e":"^1.104.0","h":"047mdd53y7sl7kclxiw2r88cbziv29pq3f0iia0jhfpgsi8ss7sf"},
 {"v":"1.2.0","e":"^1.104.0","h":"14vcknw5zqh69zan2kh5rmxm1i5p8s665k33bnh52w08jzzlibxj"}
 ],
+"chirayuagg0706.seam-debugger":[
+{"v":"0.1.2","e":"^1.85.0","p":"linux-x64","h":"1phj0nz0vsp6r1d8z6jlnwwg3iqg1jq92cd9523x4385syx09qxz"},
+{"v":"0.1.1","e":"^1.85.0","p":"linux-x64","h":"0636v149s4bczdq1k754n4fbvwm0lpda2x40l05jng8r99v4h6aj"},
+{"v":"0.1.0","e":"^1.85.0","p":"linux-x64","h":"162kl9fbvid3k04v2vjnb69hb3cgsl8fpd8i4z4vmkrsm8x2hfb9"}
+],
 "chrissylemaire.fast-filename-search":[
 {"v":"0.0.3","e":"^1.85.0","h":"0y8w4fhmw4yx81daghnc556rl21i333zfn4402msxjzlv4wcl8ys"},
 {"v":"0.0.2","e":"^1.85.0","h":"0wj7drhas3x8pbb8h7crzv7zx12gj9h12qc64cnfbflfnlalp949"}
@@ -2179,6 +2185,7 @@
 {"v":"0.0.1","e":"^1.12.0","h":"0f92wi8vzwr0b3yxvsf6ypnnfc9xpwjdcnz6caqyzxlry4grs1gj"}
 ],
 "dkormann.bend-2":[
+{"v":"0.1.3","e":"^1.90.0","h":"11ijfx7zzcyn4ypaj8gsch8q0mrx19m568f4jjiaq39ckb88apl9"},
 {"v":"0.1.2","e":"^1.90.0","h":"02m5f0xfz8zimibna7v5jq6nl7dkb40iaw95q923yx5g85rkkls0"},
 {"v":"0.1.1","e":"^1.90.0","h":"1vbfi4a1qv7q2877n7s71r9dd9z8ay0anix3va6vfyhzbd9yjcbv"},
 {"v":"0.1.0","e":"^1.90.0","h":"0pjknnzp8wcx8kqvqbdc1bxvwy26yxq5x5c4x5p3z5q9ah1w1zb6"}
@@ -3358,6 +3365,8 @@
 {"v":"0.0.1","e":"^1.56.0","h":"1z7mw21p81djqkbkk6bhn0bvjmhwzha40i8vcqs17c464fn67w4a"}
 ],
 "husamettinulutas.openrouter-maestro":[
+{"v":"1.2.1","e":"^1.104.0","h":"00qqfv8wi3frrww7rglp58kq596m53ghryq9xkkvq5hjsm9l7ldi"},
+{"v":"1.2.0","e":"^1.104.0","h":"0ygzx9p0x97nkxv6wn3njs1nnrzqfi0k4s05m2hplyki1dp6prl6"},
 {"v":"1.1.1","e":"^1.104.0","h":"08ylwkn5fknai6i8i1i9chk9bn4zafj8yzlg0zmasjcc8kh0h9rb"},
 {"v":"1.1.0","e":"^1.104.0","h":"07c3b8z81kcqd19k4vac4cz0v4kvwd1bwzq8w6chh1pb0kzvd6mp"},
 {"v":"1.0.1","e":"^1.104.0","h":"1x6j2b68xw90rqmdzmmy5rbxaqsrhm0c2qllx8bdwpb72xqw9947"},
@@ -4827,6 +4836,7 @@
 {"v":"1.0.0","e":"^1.73.0","h":"0mjnav3nv0y2w94cnqqfm8b8wjnks8k53q379ll07kp0axdzs55y"}
 ],
 "manuelarguelles.claude-semaphore":[
+{"v":"1.0.0","e":"^1.85.0","h":"1r381n1q2m7sxb6fzab2lg24p7z1mav43rhyzw3fvq3dfwd8ln0h"},
 {"v":"0.3.0","e":"^1.85.0","h":"1inbgwzf7p3l9rvk7k09230gqvyi6y22i56mdx53x14l90ys73in"},
 {"v":"0.2.0","e":"^1.85.0","h":"002g5r985f4q9i1ymg3y1jy2131ahiq2l6hxwycz4gzj7cfjfnj9"}
 ],
@@ -6537,9 +6547,11 @@
 {"v":"1.0.0","e":"^1.75.0","h":"16fsdw6avs8sfawhbcrczwciccipl8vsgxw81sldahl67fnl4f1i"}
 ],
 "readystack.cra-reporting-clock-lint":[
+{"v":"1.0.11","e":"^1.75.0","h":"11zdky7763l6df7h4pdswrgwpg4mkhx0jnp023d49nknqz6960ln"},
 {"v":"1.0.10","e":"^1.75.0","h":"1d8lhq09q6pbgqk2xbz9y5c44xfjwazk75w4iwa3zal1pf07gc46"}
 ],
 "readystack.firmware-release-gate":[
+{"v":"0.1.12","e":"^1.75.0","h":"1nx0xr6ld92w6di1q6j1x0lypmri1wyv1c9cwzxbl608ccva305g"},
 {"v":"0.1.11","e":"^1.75.0","h":"0ynigaasy1lh4cpwgcmg59rpr4c3adpvffda1gyhbhdr87svic4k"},
 {"v":"0.1.10","e":"^1.75.0","h":"00v64vmskl0bpzh4gag6flq18gah6nw6mhqr26ni4l26va8gsx90"},
 {"v":"0.1.9","e":"^1.75.0","h":"01xfx5nlxw086r84jg7bidscf7fzrp595cg59x99a7nag4s50jfm"},
