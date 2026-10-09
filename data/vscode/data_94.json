@@ -51,6 +51,7 @@
 {"v":"0.0.1","e":"^1.8.0","h":"1nl8qxjmqj83xrc6fb9w8p1q18c6xkabg117mqlvcxzh01n9ndx3"}
 ],
 "adamwojcikit.pnp-powershell-extension":[
+{"v":"3.0.80","e":"^1.66.0","h":"1x0s0f9dnjbrfhbl3mjl50jg4kp66avwlblyikda3mp4a2d1ia6m"},
 {"v":"3.0.79","e":"^1.66.0","h":"03zwbf89kmygfyl05cp94fykdlb4n96bnw18x5f3sj4ag480287n"},
 {"v":"3.0.78","e":"^1.66.0","h":"1m59y7zfkh6515swqxdr5l90v5naa1rbfpj6ff4rp9809528fgam"},
 {"v":"3.0.77","e":"^1.66.0","h":"00gkk3l8090pga7ib812mm6grpdcfha6nvig42270a9b03hd8abs"},
@@ -1064,6 +1065,7 @@
 {"v":"0.1.5","e":"^1.59.0-20210722","h":"0dpa5qdxqk14jxpczhlsz4j4pi6dyijfdphbn34c3qgfxkyq33ab"}
 ],
 "avifenesh.agnix":[
+{"v":"0.57.0","e":"^1.85.0","h":"1p1jy7azkcv23pf2n7ykzn4fx1chxiji06ync0xla8w37zmnbccn"},
 {"v":"0.56.6","e":"^1.85.0","h":"0awrnbi0mwx2kbbfbpkn0gfwiilicir2n8wyi343srcrmpgpcgz6"},
 {"v":"0.56.5","e":"^1.85.0","h":"1zm2iwf1qdq6q511gb5z84yxqvqjh93zq9k2k6ldxq3d0yfl9da0"},
 {"v":"0.56.4","e":"^1.85.0","h":"0m78gj5hf7ascq88yqdr1kh3ickvixdvvndwlvrn4sszclxjqp3n"},
@@ -4661,6 +4663,7 @@
 {"v":"1.0.0","e":"^1.63.0","h":"0sd9ajczxh3fk4ificxx60ljrf0f9mbk079i1psakj3wxkhrvis1"}
 ],
 "jakubkozera.azure-application-insights-explorer":[
+{"v":"0.4.0","e":"^1.90.0","h":"0h2nn5ay0s48b7ysx8im3j1b5z8dsqgv8m78j1sg3n8qgd9ldd7n"},
 {"v":"0.3.3","e":"^1.90.0","h":"0qhplcd09pcyywykvxlkwhvxnb1s1d427idfgpl5hj9j0nmwi2n0"},
 {"v":"0.3.2","e":"^1.90.0","h":"00fcqd7gz83la4qmxappywk9hy4vv8k1czq76y8v889is0fjizxb"},
 {"v":"0.3.0","e":"^1.90.0","h":"06rw7yjfh8h678x3bxcii9hrlfvcfl4an3lic4kaniz7vbpr5g21"},
@@ -5790,6 +5793,10 @@
 {"v":"2.0.0","e":"^1.79.0","h":"1zp6q4w6s7mfvacngvzm0qj3z014hrk6ycwki5a68srlpk258qgm"},
 {"v":"1.1.0","e":"^1.79.0","h":"0j1arayrnnyy83h9sm9cyfqjnadlksyakyqfhdz58f3xyk2f7jvj"},
 {"v":"1.0.0","e":"^1.79.0","h":"075cdzbjasgiv5ybwasyjkc9f069flyrfbci879kbxwq7b0kmrvv"}
+],
+"krimsn.hfm-preview":[
+{"v":"0.1.2","e":"^1.90.0","h":"0xnwbzcxizk4za8jmcpbgi1d7lgb5578i95jha7dfynqwlc4kwqn"},
+{"v":"0.1.1","e":"^1.90.0","h":"1zl1y9n438hr9751w6vwr0x8jnahc668xyq4pajvzcpldqpp5mci"}
 ],
 "krishnakanth.cyberdude":[
 {"v":"0.0.1","e":"^1.15.0","h":"1n3knjnjvziz6z321dxc6394rlxwv7l1xjqnigrwrv8rj0awva6n"}
@@ -7720,6 +7727,10 @@
 {"v":"1.4.0","e":"^1.70.0","h":"0srp9w9wyb8sarsfz2b627dsx5d16lbhiiwy2zk84m2ls775kvx5"}
 ],
 "optersoft.kotlin-toolchain":[
+{"v":"0.15.0","e":"^1.105.0","p":"darwin-arm64","h":"0m3cjw3yvrjlwwki4rq2z4a3wma59aaww95rfy7yqpa6xi34d4sz"},
+{"v":"0.15.0","e":"^1.105.0","p":"darwin-x64","h":"1a780jfz0f8k1hmbj8vg21kpkfv1cdwc150vl0s69vm7271wis63"},
+{"v":"0.15.0","e":"^1.105.0","p":"linux-arm64","h":"144yggp90zr2n276iikx395cnmxn2h1flyx00ycbq503432qd9ay"},
+{"v":"0.15.0","e":"^1.105.0","p":"linux-x64","h":"1arx7zfw3i94nbvqxl5k7qpq428jbfyfxb2ikqivkcxagiqil23y"},
 {"v":"0.14.0","e":"^1.105.0","p":"darwin-arm64","h":"10jzapmifd3kyjqfsa7yrhqpsbh7hxl4f01sa0igmyi70rfcdwqd"},
 {"v":"0.14.0","e":"^1.105.0","p":"darwin-x64","h":"1gg42r64q6m5msxwlbpgwgzpnb88sxbsnr1r6f0901x2846h42hr"},
 {"v":"0.14.0","e":"^1.105.0","p":"linux-arm64","h":"0j9y0mg5ixvl7dlvi4w0yyn8y83yz5jh898xdxiqznjj57hza3gc"},
@@ -10093,6 +10104,7 @@
 {"v":"0.1.4","e":"^1.22.0","h":"1hzbh45kggzda3l7dipzbnwr3rf8qc95b17cxnjb2g52wps75jgy"}
 ],
 "timangames.hpl3-language-tools":[
+{"v":"1.2.10","e":"^1.95.0","h":"0j8yscq20ry52iblnldwafxh27zln4kqks3yjx9qny8mbq10h3dv"},
 {"v":"1.2.9","e":"^1.95.0","h":"1zas5r2z4dxs4sw3zgcz3hw83wb4ybr7f709xvjxbnsbv7hbvvd7"},
 {"v":"1.2.8","e":"^1.95.0","h":"1nhz5k1c9hvz15m818dsv4acmmqwxcpkpxnvahr71cc1xvhw7khh"},
 {"v":"1.2.7","e":"^1.95.0","h":"1s0nh6yqs15g9cbys7fchhplh3dqghl5qipiln9jzcz6skdy0kyn"},

@@ -108,6 +108,21 @@
 {"v":"0.0.1","e":"^1.56.0","h":"0jvmnd288wg8ffbl0knjmlnfz4ykhrh0d3535wmfv7kdd7lfh07x"}
 ],
 "abacusai.abacusai-agent":[
+{"v":"1.63.0","e":"^1.75.0","p":"darwin-arm64","h":"16db75bw0vhhcm5kziczx66i130hax44wb6d56s6r497v40hd6zm","r":true},
+{"v":"1.63.0","e":"^1.75.0","p":"darwin-x64","h":"00zvq1rv5x0z67bpd2gfac6xm7n5i2qw7xwxpawmq6432iknf36h","r":true},
+{"v":"1.63.0","e":"^1.75.0","p":"linux-arm64","h":"1s45v4s69a9vcri358civ8nmk5zzlbbl350p5fqarn7rh38kgcpd","r":true},
+{"v":"1.63.0","e":"^1.75.0","p":"linux-armhf","h":"0w60dgzkf7kbiknf554795dyh3qpgzhcmzl81cirsj7431sy8sc4","r":true},
+{"v":"1.63.0","e":"^1.75.0","p":"linux-x64","h":"1g68jmrpb3mbyw2grnfpyibkv6i6s46y593zkx80v8cl4g0nydy1","r":true},
+{"v":"1.62.1","e":"^1.75.0","p":"darwin-arm64","h":"1ml0w95a05j3pb977qrl2khxab75plnmz9v66mx6d4vq75nvsqb5"},
+{"v":"1.62.1","e":"^1.75.0","p":"darwin-x64","h":"03g8y1vnz248769dgq82gkh8q5b3ly2mp8n01ngfm8yac9jjsmyc"},
+{"v":"1.62.1","e":"^1.75.0","p":"linux-arm64","h":"0wsvg4fq2giq4a1mx618qblh4y2cx26ixd23r2v1vpxdcnmxc1d9"},
+{"v":"1.62.1","e":"^1.75.0","p":"linux-armhf","h":"1nj31cksishyldnmjrw6lsb0z1k54fa7wc7kljl8h0ncv2diyqc8"},
+{"v":"1.62.1","e":"^1.75.0","p":"linux-x64","h":"117jc1z6jqnjxvj8xwjniams4cn0s57cmavsq3c22bm0nqmw0dih"},
+{"v":"1.62.0","e":"^1.75.0","p":"darwin-arm64","h":"005ixhn7j6vsz3gslpcjnllnhnmd4q4dh2qxrwbv3pb3g69ghza8"},
+{"v":"1.62.0","e":"^1.75.0","p":"darwin-x64","h":"1j7sz5h5qmclam372xnjmcinv0rdwbny444xhsqpp96ij1q8wymk"},
+{"v":"1.62.0","e":"^1.75.0","p":"linux-arm64","h":"1r6d7m494b6m1pfm59rfr5v1crkjhl64k9nj94viq4ajzwg25p47"},
+{"v":"1.62.0","e":"^1.75.0","p":"linux-armhf","h":"1pjy2qh3iajph1ckwx98haglm5qx16l0mjpnlvxqf473zga51yi6"},
+{"v":"1.62.0","e":"^1.75.0","p":"linux-x64","h":"17jga7x2qlhw727bff48lkdhlmnajxihgx83nmp8k4igramhz98b"},
 {"v":"1.61.1","e":"^1.75.0","p":"darwin-arm64","h":"1fhs3gy66f6b48ma93n2b74nj43pjyhgyw9xm914n98hr46mvlag","r":true},
 {"v":"1.61.1","e":"^1.75.0","p":"darwin-x64","h":"05y17lw7afj4fxipdzzzgbhysq7nqxmwa3ng1vgmr9zfyc8ljyr8","r":true},
 {"v":"1.61.1","e":"^1.75.0","p":"linux-arm64","h":"0nrm8bhqpbhmz6z7iqkslkfwm6imyx0jmyrhhwzpah44z3kh0wxm","r":true},
@@ -2628,6 +2643,7 @@
 {"v":"2.0.0","e":"^1.31.0","h":"0fll80r500wrawscpi841vsfljw782w2j31avh0i491yq8rwh4qz"}
 ],
 "danicaj3w.citypop-theme":[
+{"v":"1.8.3","e":"^1.92.0","h":"0495imqafaxml7bj5mby24glzwdj40vifkwzyiq04zqfv0ba4ldz"},
 {"v":"1.8.2","e":"^1.92.0","h":"0bmac6nwhvi5s37l1xlzqxfaxmls9d3dn5xlk18wm9sgdbrqfpys"},
 {"v":"1.8.1","e":"^1.92.0","h":"1iw8nbam2nmxazmil4h3carbg4j9cryr14sdhz2kv5p9jpszsvfz"},
 {"v":"1.8.0","e":"^1.92.0","h":"0ijv54g9k169lgi2h06qiay3axrdg4557ic9jp3f6mca1fi2x8sc"},
@@ -4395,6 +4411,7 @@
 {"v":"0.1.9","e":"^1.43.0","h":"07fwbd1wsvwnr8acpgrbhs4jdkpgfkzzsc7sgcjskq24pq0006c9"}
 ],
 "jakubkozera.csharp-dev-tools":[
+{"v":"1.14.2","e":"^1.100.0","h":"1298p98apm63rni5pl6apdlmy0x8qcj3cq2dkszdpza658d762ga"},
 {"v":"1.14.0","e":"^1.100.0","h":"09sf23vf75q79cfmhrs3vj37igxwjgy3xfcxx1klivmmz6gf5gf8"},
 {"v":"1.13.0","e":"^1.100.0","h":"1kfzcqdjalw6d52npv6g0r6dam9br0l72bkq5spl1f7fyxyfbv0g"},
 {"v":"1.12.14","e":"^1.100.0","h":"14q50irfx8w6iwm0f90z2v6wn4h9x2a08g824dpr7n5j6d9jm0ib"},
@@ -5426,6 +5443,7 @@
 {"v":"0.0.1","e":"^1.90.0","h":"0q1w21nmihf1rkxpxyn3b0wjvl6j2n07ik9nl1j28jj1g9v4qjvg"}
 ],
 "kyrone.vscode-theme-dragonball":[
+{"v":"2.3.0","e":"^1.60.0","h":"0g7bq6fgy1as0a1nxr0m99rpszl4dmyn2frgqsxca1d32r8klnwn"},
 {"v":"2.2.0","e":"^1.60.0","h":"1zac1gg0p09arin80p2kna98clfq3y6f0h7v10k3i595fcysc7ip"},
 {"v":"1.0.2","e":"^1.60.0","h":"0gfdngksa68s34c9d2qpzpmxplhhi247yy5xljv08a8nfsgyc0ya"},
 {"v":"1.0.1","e":"^1.60.0","h":"069crq2dqnl3iqlirnf76v532jpx78744yfp04898db6kw3x9q9m"},
@@ -5620,6 +5638,7 @@
 {"v":"0.0.1","e":"^1.0.0","h":"14k9mbg4gljsg7mv6x102pad6krgjk2s7b27xz2lj3rl2i3lr948"}
 ],
 "ling22.php-simple":[
+{"v":"4.0.1","e":"^1.0.0","h":"1ffmib6kllcpib9gbjsjr6rmm4w7dfg5vz0qgpp3vl744ikahydp"},
 {"v":"3.0.1","e":"^1.0.0","h":"0yyh2n86jv8q0v69ja9sayf7lpsafjdbwqynpkgaxjy2k951p1jf"},
 {"v":"3.0.0","e":"^1.0.0","h":"0phs68v5qfakvhjzflrfr4dmr2rlycd3ca5iw2xpvd981739bjxr"},
 {"v":"1.0.2","e":"^1.0.0","h":"0ap1z2br118mj0gw5hs2088s7z0wix4i1da49fxiiln6cbkps8zj"},
@@ -11077,6 +11096,7 @@
 {"v":"1.0.0","e":"^1.38.0","h":"0ff66y5vp549d9y7qlpiskn1mrgvmsw3ch74kszxqwjc1nppqfd1"}
 ],
 "markusaugust.streamlord":[
+{"v":"0.7.0","e":"^1.105.0","h":"0xfmdnjc2m5ajp6413hj6n7rlc0n9cfyvvmxr90zkcwbvrp1a7b9"},
 {"v":"0.6.0","e":"^1.105.0","h":"01zh50ig2bbcpfkwmrpk556136wr31wswlk5khnk33g9rxy0g92c"},
 {"v":"0.5.0","e":"^1.105.0","h":"0xnqx1ip2v087ijp9x8flzs5avzd4j5nzm9i6kgb8p5kc8c6dbmm"},
 {"v":"0.4.0","e":"^1.105.0","h":"0y640c273xnxx56nlll2xz8k3mi09hqs3bqy4wnv05kixiljfiyb"},
@@ -12094,6 +12114,8 @@
 {"v":"0.0.1","e":"^1.97.0","h":"0rvwx5nmi79g1j66bm259qv3x690p4iafacbdbfjbmkks8ji40n5"}
 ],
 "onesoftqwq.opencode-go-copilot-provider":[
+{"v":"1.12.2","e":"^1.116.0","h":"0afam1s9aixj0325sy0c1sakbgymyz5ich0ndz225c1lxr7m3il5"},
+{"v":"1.12.1","e":"^1.116.0","h":"06r3mm4hbrsylpr0p8dzhnbzcw84218ibxihirrc06hkd69slcrw"},
 {"v":"1.12.0","e":"^1.116.0","h":"1j1xzl6cxx2v23pvy37mjak6v2ddwgswqyd5p2pwg1px7j66b4lx"},
 {"v":"1.11.1","e":"^1.116.0","h":"086xj1yn4i9da82k70g8j37b3c23p9m59j623n8bng51c58wxhd0"},
 {"v":"1.11.0","e":"^1.116.0","h":"1asbk8ayq8ph1p433ad42q2j7mk4byyw5zlwlcz4n0z04nkfr7xs"},
@@ -12636,6 +12658,7 @@
 {"v":"1.0.0","e":"^1.94.0","h":"0sanhb51xq66bmz6cckksl0mn45ms6vflv3zw6m673q6sr87hpbz"}
 ],
 "r3bl.r3bl-extension-pack":[
+{"v":"1.3.34","e":"^1.60.0","h":"0nfyyv67a0vvqyp1crgj9winfq7kh8zishainn999cczzdbmb2bp"},
 {"v":"1.3.33","e":"^1.60.0","h":"13bxac10d099mxrwnxikjkvwy71h00mzsyf23wzz1xpiljdmcmhp"},
 {"v":"1.3.31","e":"^1.60.0","h":"1j89mmik47ziyycmha035n34a09xg284mk4yb3d05v8nv00b0zqp"},
 {"v":"1.3.30","e":"^1.60.0","h":"11k3a29kpmak2caprry1a3awr1sx5rr72x07mk7srmck92q4bix6"},
@@ -12792,6 +12815,7 @@
 {"v":"1.0.0","e":"^1.75.0","h":"1ck6by5pwx42y5kpwj4csia37v617ncxl2nb0s4l58xwc619gwlz"}
 ],
 "readystack.rf-detr-migration-check":[
+{"v":"1.0.2","e":"^1.75.0","h":"1cgcc1hd2xj19hgwisf66j4y6pd0p3kqbcfbxiwb1figm3qjnkyd"},
 {"v":"1.0.1","e":"^1.75.0","h":"1zcajhcr3apk09dri20gsxrsl0slajkk9y189rbzzx7c7j8hvdkv"}
 ],
 "readystack.sbom-field-check-cra-2026":[
@@ -13684,6 +13708,7 @@
 {"v":"0.0.1","e":"^1.35.0","h":"0b0w6g5n5a0rzgzbp17xhc95w4d89hmb0yvmjwgizcczzk872kb4"}
 ],
 "simonsontechnicalllc.g-code-multi-channel":[
+{"v":"0.1.2","e":"^1.139.0","h":"0bwz7z23ghxdlgdvvk9f98x99m5x5kxj3d02c81gyqnflvbfwa9l"},
 {"v":"0.1.1","e":"^1.139.0","h":"0fmnlzmw9yy7ccdin39w30ck1xyd0b9w99pg7lw8mx7hcy50v41i"},
 {"v":"0.1.0","e":"^1.139.0","h":"1iyjv5a8zfa5lbmb8bfq650hc66napfr8rs49m7bi29f7779yw62"}
 ],
