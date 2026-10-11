@@ -1232,6 +1232,9 @@
 {"v":"2.0.1","e":"^1.22.0","h":"1cjnjldfnvwjakjfddwwgl3pxrxbfg4id4cj1wky5n2l8j8rvyvm"},
 {"v":"2.0.0","e":"^1.22.0","h":"1s1jf42zwizl5b4kzqifqb3kx7ls3mzsgz4chgjplh9r18rbygqg"}
 ],
+"appicmarketing.iconoven":[
+{"v":"1.0.0","e":"^1.95.0","h":"09k5c984bjf7cwljzkn2p3ln210fdfmrmzfmf39zgwjcqayncasb"}
+],
 "arcane-spark.ubel-vscode":[
 {"v":"0.21.1","e":"^1.85.0","h":"1m8np9grpl82lrw75517mccd84b9yrnlispqg3i8cfyi99vw81hb"},
 {"v":"0.21.0","e":"^1.85.0","h":"00qgw94xsmyyavxp4ayv59zmqhm85l6g63p717vcnpvfmz0kwqkg"},
@@ -3006,6 +3009,7 @@
 {"v":"0.0.1","e":"^1.80.0","h":"0x20lm5dbzsmr5f9c5x4x4sbmzq1glfcvgd05h29rw9isgf4nfbi"}
 ],
 "cookabc.python-dependencies-updater":[
+{"v":"1.5.1","e":"^1.85.0","h":"1c8jryp85vqxzr1ljmxl2yx5j2dm4cj8lsz7303ky7m9dm8hjr11"},
 {"v":"1.5.0","e":"^1.85.0","h":"0iqww40f1xjmvgjx97pp5hj0hfzk2jzjv6hkl61z0i11ly2x90v8"},
 {"v":"1.4.0","e":"^1.85.0","h":"11m99pq5s81y5ia0yf3vpi8gfgg2927vwsbr4rx1j31bm0sjgyiv"},
 {"v":"1.3.0","e":"^1.85.0","h":"14s26pb4hsksd5gmbnqf7v2wv4dm2clqlpk9lv8w3bhvxxj6kfy4"},
@@ -3661,6 +3665,7 @@
 {"v":"1.1.1","e":"^1.60.0","h":"1ahx2966b3nf3byyfga6qp7cs0cqgb4yadpmw39gvsy6j82z7gzf"}
 ],
 "donjon-fi.donjon-fi-compagnon":[
+{"v":"3.12.0","e":"^1.71.0","h":"0by6hnzary9rzkrxkg5qysbl17wxiypg8iq08dxsg01k5wf886fd"},
 {"v":"3.11.3","e":"^1.71.0","h":"0sy8d1ls8imgzb085y8nxyisrighmv41dm13vbhm5g7fkk96slbm"},
 {"v":"3.11.2","e":"^1.71.0","h":"1ygmbsz2m55sz5yk9fyl7d0h07cj49i1l01zj52kivpjazyc63s2"},
 {"v":"3.11.1","e":"^1.71.0","h":"0wjg8zh6ll3lwdg2xpjl2h223d0jws9a0g8i5yq104mp41yrb5wq"},
@@ -7299,6 +7304,9 @@
 ],
 "nifelabs.nife-cli-extension":[
 {"v":"0.0.1","e":"^1.102.0","h":"1ghhf4hc2197903pcf734rrkc97fgrqcnfmaxyws722m2mb0jc8f"}
+],
+"nifty.nifty-shaders":[
+{"v":"0.1.0","e":"^1.90.0","h":"0mdhd63p189rqc8zrxyy6q33sqyz9dqigxzxazbdcx7fxq02j8jr"}
 ],
 "nightdustchen.vscode-clangd-fork-nd":[
 {"v":"1.2.34","e":"^1.65.0","h":"1rihyggdd94gpp5jpg7g87hgs7789nisi8adnm8r4zxsvwyhhh4q"}
@@ -13588,6 +13596,8 @@
 {"v":"1.0.0","e":"^1.85.0","h":"1ciw2x0f7nqfmfy37apjlb40jsm6mw5261wsbi1s65skml158fy5"}
 ],
 "remcollier.astra":[
+{"v":"1.2.0","e":"^1.82.0","h":"15rf426awan95gqam1b2zmsxwkzzzh2s125cscd58ldsxsn6hldr"},
+{"v":"1.1.2","e":"^1.82.0","h":"0vna9an1gw73nrw6wsz7d5f4agxsy1xwpd2sv58ha4qd6d75znxq"},
 {"v":"1.1.1","e":"^1.82.0","h":"1wxq6p62w53jammqal9s0ccsv4b2602bwq9mcnhv4h691cmygpd6"},
 {"v":"1.1.0","e":"^1.82.0","h":"1rk4aawbrbkzi29khz6c3qr9rcv5jcwylr5zx9d03qp4ngh5zahj"},
 {"v":"1.0.0","e":"^1.82.0","h":"0xjr9dddsmsfiy59lfp6xjqn8w3wv2l58qz0w8yn4m3hqbn9d1wc"},
@@ -14976,6 +14986,10 @@
 {"v":"0.1.0","e":"^1.12.0","h":"1x1npl377d17bkrw9yxxrqk01h24xc49sm7l6jgjyji4x8zdgmmq"}
 ],
 "tensorviz.tensorviz-vscode":[
+{"v":"0.1.10","e":"^1.106.0","h":"199ar5f6dp48f61jw9agdv3pn91r8gjghdvlxp83cln12g4fbpjk"},
+{"v":"0.1.9","e":"^1.106.0","h":"0z2d87kl15rcl6f0k1r8jyyzjgmfpv6sz092wg9laqsnmbnqk7jd"},
+{"v":"0.1.8","e":"^1.106.0","h":"17wirgvara1fwabvcn5bapim3xnakwm2bjqaw114na8rbxan1aqp"},
+{"v":"0.1.7","e":"^1.106.0","h":"0r82zhkxw1vxwk9sllp00sg7mbkndzs4n1vr12z8pfv05sj16yfx"},
 {"v":"0.1.6","e":"^1.106.0","h":"03q75crramkiydg8f7b74q1vvqb684hnfw9m9qacq1kilb46wdr7"},
 {"v":"0.1.5","e":"^1.106.0","h":"1i3vaaq051nkib7rp2lmlfx4rmakvqhsdslacwrlqmz85jrjj9vr"},
 {"v":"0.1.4","e":"^1.106.0","h":"1cvk61qd1ivrhsxzfmdm7dbk60fklg0i0h8pxymkn3jz4hw2927k"},
