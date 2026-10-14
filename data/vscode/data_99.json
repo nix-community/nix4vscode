@@ -639,6 +639,7 @@
 {"v":"0.0.1","e":"^1.77.0","h":"0q81qc99cm9chrraz0pr7nw5biqiam51ncwrvgy2ak1drypcsm1l"}
 ],
 "aphp.fhir-mapbuilder":[
+{"v":"1.8.2","e":"^1.91.0","h":"1ffxdfbmlycyxv28in4x9z85g0yj2llzy4j27014hgaq9skg4c6m"},
 {"v":"1.8.1","e":"^1.91.0","h":"0rs033w4xw1lyyyllapjl4vnkb3s2vkf261vbv22d1h3wv2imgdj"},
 {"v":"1.8.0","e":"^1.91.0","h":"1a0kayb2nfn7sx9dxy2lr5iz9mxd79jxq1ndij4qw77lpy9a242c"},
 {"v":"1.7.4","e":"^1.91.0","h":"1bmsyikqwc21dl356969b3nydkvifpmwsfs34cyhl61vhq0xyhi3"},
@@ -1834,6 +1835,8 @@
 {"v":"0.0.1","e":"^1.85.0","h":"117s7swmw9gcqjsg0iazp971mm279zw2y1nh1x42da1i1xw1mkj4"}
 ],
 "dehilster.nlp":[
+{"v":"4.3.12","e":"^1.95.0","h":"03nmabm81dhf8j8skih69apivy42c43lqd5m30cj8va2sadhjzxj"},
+{"v":"4.3.11","e":"^1.95.0","h":"014hwj1yc46kamymhp5xy7d1c6nsh2d9yshhpqx1ry78wf3s95mi"},
 {"v":"4.3.4","e":"^1.95.0","h":"0z5w4mvjwa9kfy95y0swr3c54009xg1bc36hz1kqnrqi7mi3ycs1"},
 {"v":"4.3.2","e":"^1.95.0","h":"10f6ic2a2b8crqmgk8hzn4jmaagmxz1vmwgb84m6m2z2lfxvybaf"},
 {"v":"4.3.1","e":"^1.95.0","h":"1a1ibrxqnbl6qd9gm8cjivnkz0fqi0awv1p9i0pfffd82vw98y6c"},
@@ -2759,6 +2762,7 @@
 {"v":"1.0.0","e":"^1.50.0","h":"18fwsqjvkgazljr7k9w57vy2d2bk33rkrajxkd5s81v9j9brlyw6"}
 ],
 "dualsoftdev.ds2":[
+{"v":"2.1.4","e":"^1.95.0","h":"0ffznlqljnvdxv4zlbqrlwm79m93jiga1njwagcaqbv8sa17lmgq"},
 {"v":"2.1.2","e":"^1.95.0","h":"139znd17ifk5mmy4z9hfz4lv5bvs7fishdbvgnsj4i0c76czyaaw"},
 {"v":"2.1.1","e":"^1.95.0","h":"0iw16s6dgj30cs2wc2w19mm7dansyvb3piwkv5bmxhr4fwxax2i7"},
 {"v":"2.1.0","e":"^1.95.0","h":"1jqkl8ar82qa8wx114qrhprk8xhnxv8sjbmhay50145pbin1f1fp"},
@@ -5252,6 +5256,7 @@
 {"v":"0.1.0","e":"^1.85.0","h":"1pxcf7lyvhny3r402p9gdg6v071438qhkfkf2swhgq7k2b1jh5j9"}
 ],
 "kairbros-dev.vc-bomber":[
+{"v":"0.0.2","e":"^1.140.0","h":"1vrbc1fh6px28jwj9qp7ppi4h3v7xng0hffhhkhc99zr2kqv5rfs"},
 {"v":"0.0.1","e":"^1.140.0","h":"0m4d5lxdfwrw2gx91jffsqywcfs45h0ycp4yadm5jlcili9vb0s6"}
 ],
 "kalimahapps.taqwim":[
@@ -8264,6 +8269,12 @@
 {"v":"0.0.3","e":"^1.58.0","h":"128bp94gn1m2svza8wpnq30mgigx68rix8y1xpclc0brcv3v19mv"}
 ],
 "rust-lang.rust-analyzer":[
+{"v":"0.4.3083","e":"^1.93.0","h":"1hdlv7r15y94xggw553scrs942d7wfz90yz2g8w2xb4yr1nfaj45","r":true},
+{"v":"0.4.3083","e":"^1.93.0","p":"darwin-arm64","h":"0nca9yfccfl87x4i7k1axpzsbvkd9c5j16p739899zkz219src2a","r":true},
+{"v":"0.4.3083","e":"^1.93.0","p":"darwin-x64","h":"0kl6zrdv9vnm7pbcgfbyhz2k0q5im22plddlla69670g5y25xqw3","r":true},
+{"v":"0.4.3083","e":"^1.93.0","p":"linux-arm64","h":"19vnw388qc5fk47c0m5lagnx02rw0l2lmxkkcq8z3m5dg6mbhr45","r":true},
+{"v":"0.4.3083","e":"^1.93.0","p":"linux-armhf","h":"0mb7ysi1b0ynd4205l1a4k95q1l7rf0q51zw4r1pn5072xz0gpb3","r":true},
+{"v":"0.4.3083","e":"^1.93.0","p":"linux-x64","h":"00b47ci4rk6vima1dciapmjh9rl2655fak0xld819gv1jv78marl","r":true},
 {"v":"0.4.3082","e":"^1.93.0","h":"0iid1305fvbs0w6bg1jc9lj8gkfhhikwkjvji48bi8gmn4dh2px2","r":true},
 {"v":"0.4.3082","e":"^1.93.0","p":"darwin-arm64","h":"0v8b8k3glgb0mhh4hk9arfzn771i7dylyr7vrqjabwabya75928i","r":true},
 {"v":"0.4.3082","e":"^1.93.0","p":"darwin-x64","h":"1mj487yv68hyidzdqnv6z04j4hgnhzc2fcfshysxwy6hf90pibhr","r":true},
@@ -18427,6 +18438,10 @@
 {"v":"0.1.6","e":"^1.96.0","h":"067is3v7cnznrhv73rv8x1zw93rxws9fx6nigriyj5yffr86jwqz"},
 {"v":"0.1.3","e":"^1.96.0","h":"0851q3d908nrm5g2gb8mg63q93bb7gfhkvww9dvn0c990js0s9wl"}
 ],
+"superentity.agentscope":[
+{"v":"0.7.4","e":"^1.95.0","h":"06r0q4cyprq8cdvac6yx65zc2achd8s7k0p53s4hp8hm94bfygsa"},
+{"v":"0.7.2","e":"^1.95.0","h":"0r7q8anzd105xvacbvs6dc1h5mf51syrjsx5krbs2lz1h1xd7gii"}
+],
 "supposing.css-variable-color-highlight":[
 {"v":"0.0.3","e":"^1.90.0","h":"1818ansanli717imfp4xsb8sg2zxvb7a4gmjhsv24h99g3fay1ja"},
 {"v":"0.0.2","e":"^1.90.0","h":"11fm37f956ik7vnzz9n697z3wkhmgvybmcgvk54wr9lpkhwph2r7"},
@@ -18458,6 +18473,7 @@
 {"v":"0.0.2","e":"^1.18.0","h":"071ypqcgz7p20divyyppmv85ajz6zqnsf2lmalkpp8402mjvxv0f"}
 ],
 "swiftask.swiftask-chat":[
+{"v":"0.1.16","e":"^1.85.0","h":"0i2zyl9x4l6iwp0lv77kzicp4f12pf2f57g8nffb9h06w0d16b5j"},
 {"v":"0.1.15","e":"^1.85.0","h":"1hsr66r64lj692vb50f1086vwbhbvy2167iq210kbkbqjcq9wyai"},
 {"v":"0.1.13","e":"^1.85.0","h":"0y3k9s02phz25imby5i2kywjdj4li9czkxxk447f3axa2gl7lcjs"},
 {"v":"0.1.12","e":"^1.85.0","h":"05wr21hk4jmjh1d5kyzilp1563cdb0jzwwmmjhg7n4qy4lwfagfl"},
