@@ -1366,6 +1366,7 @@
 {"v":"1.0.0","e":"^1.95.0","h":"00zq5vbbmm3vfi9ww3dkb9gzrsmhldpmryqai7rnrlddcnyg260v"}
 ],
 "andreymyssak.git-ui-native":[
+{"v":"0.4.0","e":"^1.111.0","h":"1sghjh8vwrj3qbmjqn8gdrsqphh2vdz00lwfwb1310pw9i7vzfl8"},
 {"v":"0.3.2","e":"^1.111.0","h":"0sfhgzgl1hhz13dc984bh045hsjx31rafk7hki8zjs0r09jrzkj0"},
 {"v":"0.3.1","e":"^1.140.0","h":"155w6ccdnrrb1k3hnlx0dy94za2mwa1h8w6hw7hscj3cfy190a1q"},
 {"v":"0.3.0","e":"^1.140.0","h":"1glgc71xb6hli85y5fxcvciqslkkzns4ha1fph22pnghf4qcs5k8"},
@@ -3999,6 +4000,13 @@
 "flcorp.flcorp-albert":[
 {"v":"0.1.0","e":"^1.85.0","h":"1yvfzvsiba50jsf8nh72lyh4lkm0xwzinvpqb3c5pd7m88dckws2"}
 ],
+"florian-lucas.projects-quick-switch":[
+{"v":"0.4.3","e":"^1.90.0","h":"1vg6x1s42hq41z64dq0lxaq7vg11i8yandvnf3lvr3w7cri8y9rh"},
+{"v":"0.4.2","e":"^1.90.0","h":"174gcx63x8f764lj43syf4jcsfv9vhaci6kgfvvxj8jxd7yjghxh"},
+{"v":"0.4.0","e":"^1.90.0","h":"0kp5y5685af0cf1hawczk4fdirlxld5wvjqsni9iwix6gmkfvgmn"},
+{"v":"0.2.0","e":"^1.90.0","h":"036jc0dgn2vhvpxinwd2xqsrqis7b36mvd5vqymcqnf6xppad8dl"},
+{"v":"0.1.1","e":"^1.90.0","h":"1qxvlpl0jr0vi6gzdzfg858cngb7malxpg4gb37cmjyj0cb10cjx"}
+],
 "florian-noever.xliff-auto-sync":[
 {"v":"1.0.1","e":"^1.105.0","h":"17172zcmirqp1yi2cmy5687mcl75xmcz8dngrrz3lgz1fxshmb36"},
 {"v":"1.0.0","e":"^1.105.0","h":"0krh1p0qhvx8hdlaiyzwc8ql5ghkzrqlji6yyr7m3g3d4003y817"}
@@ -4615,6 +4623,10 @@
 ],
 "hosvile.obformatter":[
 {"v":"0.0.1","e":"^1.85.0","h":"0xkmnm6ibndz65cx11079fhd75kvadjdwj65cy83bffr8iyl0vzg"}
+],
+"hotronghai.kaio-preview":[
+{"v":"0.0.2","e":"^1.85.0","h":"1bkp80gbikq4q0dhb555azpdym8q8ny3haz62qrwid91ygwzdpp9"},
+{"v":"0.0.1","e":"^1.85.0","h":"001x730wblw7incw1069vrs2hddsj83binz24xrcnyr4brjmd1vc"}
 ],
 "housamkak.highlightability":[
 {"v":"0.1.2","e":"^1.80.0","h":"07daarf9qcl2pfwvlpyc8gbqbjl3rjvg28vpnyd9088avfwsbgph"},
@@ -6619,6 +6631,7 @@
 {"v":"1.0.7","e":"^1.51.0","h":"1fx7cadnlg2v5vnqrj5npxd10rch64rlqd6srql0sfrj87jcwc7g"}
 ],
 "methodox.coding-agent-sessions-history":[
+{"v":"0.2.1","e":"^1.85.0","h":"1mzd6d4lvhwrwczy2br6z6vwj35y8gs16axpq029i99k8lqzah6b"},
 {"v":"0.2.0","e":"^1.85.0","h":"199fhmapz764i82spk03x488sxy70dc05s5anq4rwk186j8ajsk1"},
 {"v":"0.1.0","e":"^1.85.0","h":"1srzpigyyfgz2limy177nhnd7asckvjjh0kqi0r55n2znxbwl66j"}
 ],
@@ -7944,6 +7957,7 @@
 {"v":"0.0.0","e":"^1.45.1","h":"1xwmhkfqmn4qh5pm0h1mfkbxwarj5blv2rxwp1zvzyz63szlvvlm"}
 ],
 "q4usdev.qunit":[
+{"v":"1.0.4","e":"^1.85.0","h":"1mrx44amnhww1krg3kfwv7sl5kf9z5f34bgvl2jgcc3iyra8wh63"},
 {"v":"1.0.3","e":"^1.85.0","h":"1nv5da0crsk5dwni478yp7j9kmqksvskxwsij3hwg2vr03kxfqa6"}
 ],
 "qbtaumai.smalisp":[
@@ -8571,6 +8585,7 @@
 {"v":"0.0.1","e":"^1.73.0","h":"19ilmkaw1xgim4yi9wywbxkzrc6rdrwzq9pvf9vfl47svpbqbi2h"}
 ],
 "renyi-lang.renyi":[
+{"v":"0.2.1","e":"^1.85.0","h":"184kl4mvvssia6d3d13mxkgnrk1qy5bkspb4p86b8wrdy9finmfg"},
 {"v":"0.2.0","e":"^1.85.0","h":"1n7q0xxwiiijdqp14shm204nn0xkhj536i19yax6xhx3sq83wf9l"}
 ],
 "reporterplus.pytest-html-plus-vscode":[
@@ -9653,6 +9668,9 @@
 {"v":"0.3.67","e":"^1.96.0","h":"06i15x42i90wcfw8dhpmv3a3f088556a3c0xm74zybxiwhfp9dmw"}
 ],
 "splunk.observability-studio":[
+{"v":"0.1.2","e":"^1.82.0","p":"darwin-arm64","h":"1zfvivmdssfq6vg7s5cywpdpm1dnb6yiq4q6xfkcayd9hfplggi2"},
+{"v":"0.1.2","e":"^1.82.0","p":"darwin-x64","h":"199sdskr2b5sl2fj38p801m0h96r1ydzpiqz8v3bw459g4n7f0s4"},
+{"v":"0.1.2","e":"^1.82.0","p":"linux-x64","h":"1nbmi33b47f7ddy58vv7q03wc76mi110h2plv28sxvlhk15926n3"},
 {"v":"0.1.0","e":"^1.82.0","p":"darwin-arm64","h":"0a8vwkq66aps4j8ijlib2895p5zi8ivy0611aq5abaqrq686lrd3"},
 {"v":"0.1.0","e":"^1.82.0","p":"darwin-x64","h":"0my0q53lvxlyfgwfnljf2lyp39mdh1lz36aj64cd95lcy4m64zs2"},
 {"v":"0.1.0","e":"^1.82.0","p":"linux-x64","h":"0k8h1dv42x3xs199gjhckr2lvrphr2m369x90wd4myi95hslha6p"},
@@ -10983,6 +11001,9 @@
 {"v":"0.0.3","e":"^1.73.0","h":"10313wa74zfcn79f46yap5kh9n9kvi474pzavzwabqva9lia0n6q"},
 {"v":"0.0.2","e":"^1.73.0","h":"0yybr5y64nmbgp4389dz8q85h2pyb6bbkbm4nv71y2ygbxlw0qqz"},
 {"v":"0.0.1","e":"^1.73.0","h":"1wyh3x8px3vihi1h51ncial4gim239jas5d9fmmf3irnj6wkvzj4"}
+],
+"zelvory.offline-coder-payload-q":[
+{"v":"0.1.1","e":"^1.85.0","h":"1nl4p7sh2qjxhjnsyd0l05wk43rdjpms3fs45qkigqwmjkbmrinb"}
 ],
 "zephex.zephex-mcp":[
 {"v":"0.1.3","e":"^1.101.0","h":"0448n0vch270f2v50k876s7a2spa71h707gxhhzlaykwnc7zf4vj"},

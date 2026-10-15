@@ -110,6 +110,11 @@
 {"v":"0.0.1","e":"^1.56.0","h":"0jvmnd288wg8ffbl0knjmlnfz4ykhrh0d3535wmfv7kdd7lfh07x"}
 ],
 "abacusai.abacusai-agent":[
+{"v":"1.65.3","e":"^1.75.0","p":"darwin-arm64","h":"0sysmzw59244hzp27wgm3smm8942mql39hmny7ssz2iw07ni5gn1","r":true},
+{"v":"1.65.3","e":"^1.75.0","p":"darwin-x64","h":"08816804vr3c7qp2xy3np2ippzmn10k0jqxbyf7f22dbym58mqxi","r":true},
+{"v":"1.65.3","e":"^1.75.0","p":"linux-arm64","h":"1ifn9j6xs81n7anwxmxdk358blg86w5l0srmcyn3lylqycv22hrg","r":true},
+{"v":"1.65.3","e":"^1.75.0","p":"linux-armhf","h":"0pgy8izfk966pz93b7npwzb8mkj460mmw929yi7779ygsx5qjs6q","r":true},
+{"v":"1.65.3","e":"^1.75.0","p":"linux-x64","h":"0k9f805s0hlmir5bdk2gq8lcx9b0cc8f5qizi49y2vr5224b2fsb","r":true},
 {"v":"1.65.2","e":"^1.75.0","p":"darwin-arm64","h":"0jbl386i3grkqbpmkbdfcyikf6ms6x5qh94sc4s9vfmrff8sdypc","r":true},
 {"v":"1.65.2","e":"^1.75.0","p":"darwin-x64","h":"05whhvkm1dlal9skm8zbplf123sicci52hs6rdpngvbwgp6pwf7l","r":true},
 {"v":"1.65.2","e":"^1.75.0","p":"linux-arm64","h":"0mzrpvgdhrg1xwa4dvwc8fy811azjbxyh5ls4b0h4y0sh8idmh07","r":true},
@@ -2955,6 +2960,7 @@
 {"v":"1.0.0","e":"^1.44.0","h":"1dbry255hjidf86qshychz104a3cgb9hq584h9rk9xnc8b3abn3r"}
 ],
 "dipeshmajithia.mirror-vs":[
+{"v":"1.0.3","e":"^1.84.0","h":"1vhw4jrdwwg82n40czrjhzpjz6kv2zjn12iznjddi8qn1f95aycq"},
 {"v":"1.0.1","e":"^1.84.0","h":"1jcv6igx31xj4wzhqvc2r7al0r5ynvs0sy9ay575gr8mb39h1bhc"},
 {"v":"1.0.0","e":"^1.84.0","h":"1mfcjz81w1w6m91qphvb2yj1nak7xh9ps4yhwpdk70dzpxsaskfc"},
 {"v":"0.9.10","e":"^1.84.0","h":"0nyg1dpiyinpmsibpfv6sc9krxhfnviqh9xrahvkp91jxwc98vfr"},
@@ -5517,6 +5523,7 @@
 {"v":"0.0.1","e":"^1.90.0","h":"0q1w21nmihf1rkxpxyn3b0wjvl6j2n07ik9nl1j28jj1g9v4qjvg"}
 ],
 "kyrone.vscode-theme-dragonball":[
+{"v":"2.3.1","e":"^1.60.0","h":"1l4impx2i3dccqdqpqcjs1bracnksvqbk6swlxj14sq4mzyzzhnk"},
 {"v":"2.3.0","e":"^1.60.0","h":"0g7bq6fgy1as0a1nxr0m99rpszl4dmyn2frgqsxca1d32r8klnwn"},
 {"v":"2.2.0","e":"^1.60.0","h":"1zac1gg0p09arin80p2kna98clfq3y6f0h7v10k3i595fcysc7ip"},
 {"v":"1.0.2","e":"^1.60.0","h":"0gfdngksa68s34c9d2qpzpmxplhhi247yy5xljv08a8nfsgyc0ya"},
@@ -5922,6 +5929,7 @@
 {"v":"0.0.1","e":"^1.85.0","h":"02k85qidlhq4w49v3p2iyhkafnq2j7qskzqwkhia7z3mfcv3sbxr"}
 ],
 "main-branch.mkdocs-snippet-lens":[
+{"v":"0.2.2","e":"^1.107.0","h":"0kxidicizkwjsjhmfmd1hf1hriq671y4k7ib5s08al721v3kl5i7"},
 {"v":"0.2.1","e":"^1.107.0","h":"1ny1327r86ma6z7qzw5yhzmjzasmhh2jyabg9vljnckr0frna0dw"},
 {"v":"0.2.0","e":"^1.107.0","h":"0r9iddqabfb81np3599cinzpj96xjwy8w6v8q8djsbz5plp79a87"},
 {"v":"0.1.1","e":"^1.107.0","h":"011z6nlccimjiw4jkz0hmzdan6b76s8d9ljcikn07igv6d1vgp9s"},
@@ -12853,6 +12861,7 @@
 {"v":"0.0.1","e":"^1.92.0","h":"0wj059gl9vwq5vlkqs5zkg1fk5ababh8vjp4y21fd2zfp5mfqqyp"}
 ],
 "ramros-team.ramros":[
+{"v":"1.3.2","e":"^1.85.0","h":"0jqkwzc6cxjdnmskllb21xy7b45fbi8n2xg5q07s17q06pfc2xrr"},
 {"v":"1.3.1","e":"^1.85.0","h":"1ghiy61qg9jrbnkrwvpqgmrk6zbb9ns9300wv0vggsnybm9ddy07"}
 ],
 "raphaelvibecoder.replicate-ai":[
@@ -12956,6 +12965,7 @@
 {"v":"0.0.1","e":"^1.71.0","h":"160izk56rnh8zx45zkq6k46y9jlyb5gh5mkxd35yi9facjgw1x1n"}
 ],
 "renesaselectronicscorporation.renesas-smart-manual":[
+{"v":"1.14.0","e":"^1.93.0","h":"06yg36j53v5b8yi0hjnhxyc2p7fspivpsinq13lq3s8vsq6mky83"},
 {"v":"1.12.1","e":"^1.93.0","h":"1pzz14b2vax70palg5fbvk7xkkgqvhjkgdbxb8jv3w6qfvf2kxlv"},
 {"v":"1.9.0","e":"^1.93.0","h":"0smy4pj112kb5f4ri6f6wqd2indbp9w1z881m2z86sawp2wj5dn9"},
 {"v":"1.2.0","e":"^1.93.0","h":"1ykp2ysgcfvvfvz75lcnz2ca6sv92aiqgwy2zp7mr29b0nf1ai2j"},
@@ -13430,6 +13440,7 @@
 {"v":"0.0.1","e":"^1.84.0","h":"118ifw7fg3x62rnw3rrx7crdsj7lrsndn8xrvyflkyanadjf8vyl"}
 ],
 "saeris.markdown-preview-extended-syntax":[
+{"v":"0.1.6","e":"^1.125.0","h":"1glmhrbf5b9p811n48f5rswjmaa66yp8sa17vy5c4y8vwwa4n974"},
 {"v":"0.1.5","e":"^1.125.0","h":"0d437rjhz4zgc2phxc3jb64awjm06w41ilppypihmzdx1h6876r4"},
 {"v":"0.1.4","e":"^1.125.0","h":"1hmf05g679n5aj4hsbpavm873i8brbcvhiywx5yw7dzmc1l7n3yg"},
 {"v":"0.1.3","e":"^1.125.0","h":"1kgd295k7cqvl6bn8s5fws4mkl87l77ac10rd1q7kfqinzhcxvvh"},
@@ -13503,6 +13514,9 @@
 {"v":"1.0.2","e":"^1.50.0","h":"1rby8qljypagdjh5xvwr0qcm6m47g48h8zwc98k4n5abcdmpijqr"},
 {"v":"1.0.1","e":"^1.50.0","h":"13ccqqid0ii8phyhg2278sgsmn5iqwxh9zzh5k7a6r9hyzn2bz3j"},
 {"v":"1.0.0","e":"^1.50.0","h":"12f37w25lapf82miw5d1rkfh574lyhi1bynavivdmqsix38wr0nl"}
+],
+"sascha-oliverprolic.moggi":[
+{"v":"0.1.0","e":"^1.80.0","h":"1blbgw84hvfa548brnas1z02ga341j39wm1dnkvi2qfq0b5l33r6"}
 ],
 "sasidharakurathi.pickle-visual-viewer":[
 {"v":"1.0.1","e":"^1.75.0","h":"1g141y1yfna1n0yni2q91r8bfklw6xhyxa55ncb65zc2qwxxgg3l"},

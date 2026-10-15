@@ -2781,6 +2781,7 @@
 {"v":"0.0.1","e":"^1.30.0","h":"1ibgaqa6yzhahxxswxhf3v5ip1sbvm7kd48s5wqicz2ik772k32j"}
 ],
 "efeblabs.rovot-messenger":[
+{"v":"0.3.14","e":"^1.104.0","h":"0m2yb3g9cvly7z3wr6vhjsxs4nw58psvp6qk0dy38g17dx45vm5f"},
 {"v":"0.3.13","e":"^1.104.0","h":"0f8x7k50gib726qh5ilnx5fwfrhrwfckdg4ywxrbvy2kchsgy7sb"},
 {"v":"0.3.7","e":"^1.104.0","h":"05apgkwazk4zqg3q6npcjkqg2da2gxf9iba47m71n5wkr1h08l5g"},
 {"v":"0.3.6","e":"^1.104.0","h":"1gfg74zzq7saapp0vqr0aarqm641ggj8iaaz9b80m3s6c91rc4n9"},
@@ -2998,6 +2999,7 @@
 {"v":"0.7.0","e":"^1.90.0","h":"0vxspp7jg66csxjcwyabvz10dxsp1zby6n3drxaf07fhm4mq8a15"}
 ],
 "electroleg-tools.agentless-ssh":[
+{"v":"0.3.9","e":"^1.80.0","h":"0bayxffddg132npxixw8i0fdg0nf6a3dh31vwk7n4nwpy1bl6v3i"},
 {"v":"0.2.1","e":"^1.80.0","h":"1hzxnnk679nl6vkwngqv4hv8lv7gj0szqc84046na9r6wyxg8fs2"},
 {"v":"0.2.0","e":"^1.80.0","h":"063yvy1ax1q1vr3zjyrpl0mcf4k94jar8smyj622mbfg1l7jn222"}
 ],
@@ -3020,6 +3022,11 @@
 {"v":"1.0.0","e":"^1.87.0","h":"0h1cqxxp73jykigipifjgzznsfs4bps9qzqiphxrd5jyi89yamns"}
 ],
 "embedder.embedder-vscode":[
+{"v":"0.3.209","e":"^1.85.0","h":"0mmm6a0dd2wz6rhh8z7m51jx5rgxh4lpp674y13czyxhfqmklb3g"},
+{"v":"0.3.209","e":"^1.85.0","p":"darwin-arm64","h":"1243aydpv2pz2yz0paby3qdgqfwqj7bngq6hxyy60xnpkkj43z5s"},
+{"v":"0.3.209","e":"^1.85.0","p":"darwin-x64","h":"1gyswzbmr0ar2b3rwywr3m7n4cvpx590iz83c3mw67m6gvsj619f"},
+{"v":"0.3.209","e":"^1.85.0","p":"linux-arm64","h":"08ihq2na9lg84m2gqm40rahdkb4z2rhq90bw2c2qm6rjlbjlk5ln"},
+{"v":"0.3.209","e":"^1.85.0","p":"linux-x64","h":"0ppzxlh5d6xw2z4wm470sg40p9914777jd81v4pyk561h1q32g6g"},
 {"v":"0.3.208","e":"^1.85.0","h":"0l8dc7jx5fpisfbki969s0s7pwmhlx66pw1wwaaw34vz2k5rdlsf"},
 {"v":"0.3.208","e":"^1.85.0","p":"darwin-arm64","h":"0x5a565a39rfrb20mvh4s65h3ki5g6n846abzybyvmgiqq81xn9x"},
 {"v":"0.3.208","e":"^1.85.0","p":"darwin-x64","h":"050lvp675lzhi2mjckqg9j9dqh0fvm8lda52549n3apxr2r9jwkm"},
@@ -4087,6 +4094,7 @@
 {"v":"0.0.1","e":"^1.73.1","h":"1jr6l3x942l4v2qsxhc05yz8dhg2n891xw0sqvnamiln6rphmzm0"}
 ],
 "felipeembersisc.cupertino-code":[
+{"v":"1.4.4","e":"^1.80.0","h":"1q0dq6bqkh5kw0ha56pkpp6xmcj9ihd0fyj564zyiqc4qjniqn3y"},
 {"v":"1.4.3","e":"^1.80.0","h":"0zipmp2pz4yis0dqbxnm99j5r97whn3sb087sg96wikl148yvwk1"},
 {"v":"1.4.2","e":"^1.80.0","h":"1id91kvdxl11hz5ayh75lw762w79jzkh1a3q6y1vqh1hhny66r03"},
 {"v":"1.4.1","e":"^1.80.0","h":"1y0jzpiy6mpfhwiad5djfnxqz1w3ia1phy8f5083y4ni2750v1mj"},
@@ -4333,6 +4341,9 @@
 {"v":"0.0.3","e":"^1.61.0","h":"1f7a5ia7rb9sg6lx38ldqb35x95r4693nqb2bi83p9vlcnslvb53"},
 {"v":"0.0.2","e":"^1.61.0","h":"1y5q08jaac9ir8vm0c31z06ah61vdx3zk707gmm58rz0qqxd8j8v"},
 {"v":"0.0.1","e":"^1.61.0","h":"0rhl8384y4h70r7h2vapy2h6nnplmqvwanm1g7ad2gm44xbp1i48"}
+],
+"gitwithmasum.masum-galaxy-terminal-x":[
+{"v":"2.0.0","e":"^1.90.0","h":"1j8lv2wa5jpzmqnj3z5185bab5s7l08vpfk5fgsadxqvkmxr6srh"}
 ],
 "glucaci.copilot-chat-restore":[
 {"v":"1.1.0","e":"^1.90.0","h":"07nlyfn99d836p4gilv7h4sqdm3i850smbh4ggxypdw9gvf5mgps"},
@@ -7805,6 +7816,9 @@
 {"v":"1.0.1","e":"^1.75.0","h":"0hm8wcls7w3xyflayj6qj6hcgsapj2n4f3f17z7ifi6y4am8y3r8"},
 {"v":"1.0.0","e":"^1.75.0","h":"17439qkllfvrzdrlj1xhpb71x8ajmn11kqk68frwj80grq8dzvhd"}
 ],
+"nicolasmalone.ollama-quota-tracker":[
+{"v":"0.4.2","e":"^1.80.0","h":"058yq5jw9jj1dzcvli8ryvx59w2fa5zrsj7kdpfx5m2idf2gnxjx"}
+],
 "nicole.vscode-akita-angular-snippets":[
 {"v":"1.0.3","e":"^1.22.0","h":"16yh60xqqvayxph78jfwys80a06hx9whvb773kkv2p0fh2hqhw03"},
 {"v":"1.0.2","e":"^1.22.0","h":"1vmvj2sbp99wm002b02rs59csj1amirybjfdfi7ll8xrghpdgly8"},
@@ -8859,6 +8873,7 @@
 {"v":"0.0.1","e":"^1.90.0","h":"0xkmwhr56cgalc7lh3l66jbc1ijkacywnbh84ycjipfmg214lsfv"}
 ],
 "ridiansyah.git-glance":[
+{"v":"1.3.1","e":"^1.85.0","h":"0fy7d0rggcwcpvb1rq3ckhw0ip0ijd82ksxbch4n7ayng25hyx5v"},
 {"v":"1.2.0","e":"^1.85.0","h":"1671bfkjx17qsg6c55qwcqx6whn8fgj24icy02kqm1kfpl97kxmk"},
 {"v":"1.1.4","e":"^1.85.0","h":"1q3pqa63k6yk5bm6y2vxkhpm3z5kck12in05xc7njkm5ybvqxngr"},
 {"v":"1.1.3","e":"^1.85.0","h":"0ynxbwxsddc7j3dmhl45b0j10qjigr28arh44y2884fkygnpchc3"},
@@ -9573,6 +9588,9 @@
 "sjhleo.vscode-plugin-json2interface":[
 {"v":"0.0.2","e":"^1.38.0","h":"05xxmhn42f87ysv2jpjximbbar43b88p081fncha6lxmk52ywjwf"},
 {"v":"0.0.1","e":"^1.54.0","h":"1fssdyplg8h99q6i6hn4lhmixbqy17y3rwgzmbswvj5ajmrdzkp2"}
+],
+"skillforge.skillforge":[
+{"v":"0.1.1","e":"^1.85.0","h":"0y7brd0v32qf610g3jydrpl74dcz143ks6qiayfhcvn4bh33a0yh"}
 ],
 "skyboost-thy.skyboost":[
 {"v":"0.0.12","e":"^1.74.0","h":"1l1azjbxdapvaza9yy6qjqqi8igyzxbjfinmbnyll7fjqlmwk6rr"},
