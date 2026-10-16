@@ -1841,6 +1841,8 @@
 {"v":"0.0.1","e":"^1.85.0","h":"117s7swmw9gcqjsg0iazp971mm279zw2y1nh1x42da1i1xw1mkj4"}
 ],
 "dehilster.nlp":[
+{"v":"4.3.15","e":"^1.95.0","h":"1bs80ydwj8vyvb9xqw4ypgvb9dvx7w4zqdvfnci75wc1qssan48m"},
+{"v":"4.3.14","e":"^1.95.0","h":"076frq5aq972a7hqfhnd7hm79y7ag4x3zhypxgjnw1nwrfssk3vi"},
 {"v":"4.3.13","e":"^1.95.0","h":"14g99ip4rbpvyp3krd1zmiq0x8jvsr2kyizj499zrws0y33zijkz"},
 {"v":"4.3.12","e":"^1.95.0","h":"03nmabm81dhf8j8skih69apivy42c43lqd5m30cj8va2sadhjzxj"},
 {"v":"4.3.11","e":"^1.95.0","h":"014hwj1yc46kamymhp5xy7d1c6nsh2d9yshhpqx1ry78wf3s95mi"},
@@ -4749,6 +4751,7 @@
 {"v":"1.0.1","e":"^1.54.0","h":"0f46zzkay5nlpdyxm7jrjiqjzmv3mvs78p1dwz5pirsm5awr8h3s"}
 ],
 "intel-corporation.oneapi-samples":[
+{"v":"0.0.67","e":"^1.83.0","h":"0l814wwljcmdidb58mnyprs0k8cs5w1xniygbnwfh8f3gh3d0qsj"},
 {"v":"0.0.66","e":"^1.83.0","h":"1wvvx7y3q5l97j6szm6iyqjawmykzcfwk527pnk26h16d1qaaxlx"},
 {"v":"0.0.65","e":"^1.83.0","h":"131kbj2z8xm2wjkhbcfylqqia7wq784rr2i4452wdbdx3pxal7bh"},
 {"v":"0.0.64","e":"^1.83.0","h":"1v2zjcyl4f3rx8vag9x5jsgpm3biz5cjl8ib1sblqdw9zsq0rgsb"},
@@ -5443,6 +5446,7 @@
 {"v":"1.0.1","e":"^1.50.0","h":"074sxddcyvjwbyw5jfc86kspxf6q2imi4a1gnsmjccb9frgkdhjr"}
 ],
 "kinnethjavier.lumis-kanban":[
+{"v":"1.0.1","e":"^1.140.0","h":"17zrgaak282pmscvyagk71lp8ijn37g2bil6acs1azsq4s294pmx"},
 {"v":"1.0.0","e":"^1.140.0","h":"1ds6yzfag4439jrj3w6zvignpxgfn5dpcmiy2wm10ncwshwrlzwq"}
 ],
 "kishiberohan.microforge":[
@@ -5731,6 +5735,7 @@
 {"v":"0.0.1","e":"^0.10.1","h":"0iiw3plrwsm3rwh3igj7sn8jhdl3bac5fsnfd7hnilk7iwr33phi"}
 ],
 "lccem.topas-lccem":[
+{"v":"1.2.7","e":"^1.80.0","h":"0s7mhism6j7448m609333zmildwwanmxv9sj0rxwc6hra71d1fhq"},
 {"v":"1.2.6","e":"^1.80.0","h":"07qm0gzb71iwmwp9mdiwx0j6hciw9ah5v9gy4yr2av9kyibgrw63"},
 {"v":"1.2.5","e":"^1.80.0","h":"1d2yya35l2z4il2xr0crwdin8hqiqjapa95ljmjvkj57npd156mm"},
 {"v":"1.2.4","e":"^1.80.0","h":"15fjsykgb2giwssd3fgakv47c4srm5rqbw4fw09q86klvm1whn28"},
@@ -8283,6 +8288,12 @@
 {"v":"0.0.3","e":"^1.58.0","h":"128bp94gn1m2svza8wpnq30mgigx68rix8y1xpclc0brcv3v19mv"}
 ],
 "rust-lang.rust-analyzer":[
+{"v":"0.4.3085","e":"^1.93.0","h":"1k8blj4xxrlfzv2wf3l4qf8xfca2h456s8y2n1yn511zrvmdcc06","r":true},
+{"v":"0.4.3085","e":"^1.93.0","p":"darwin-arm64","h":"10m2w07s2h9h2nb8cqggqjvvi2gi7ak950hqp4xh959255yjzy1l","r":true},
+{"v":"0.4.3085","e":"^1.93.0","p":"darwin-x64","h":"09p9yamm0h1ssf5bnav0fzvpsrs5h0bghp0j6zbj4jzl4j701l5a","r":true},
+{"v":"0.4.3085","e":"^1.93.0","p":"linux-arm64","h":"0nzrr5kn0dkqlapdshr09ndmwkcny7zrazab7mgvkyabnwir26bd","r":true},
+{"v":"0.4.3085","e":"^1.93.0","p":"linux-armhf","h":"0j70z4iy7chgvc1zwjhf20lwxv6ddihq69zxsvsny43ypgfk1w77","r":true},
+{"v":"0.4.3085","e":"^1.93.0","p":"linux-x64","h":"0mclickl800ahyfv5hr98fld8p8qprqfd64l4p674996xh60b1vj","r":true},
 {"v":"0.4.3084","e":"^1.93.0","h":"15njbibyg4bsk75jbdl8y4gxa7rsp79q6fp3lhxrw2y2qf4i3yz7","r":true},
 {"v":"0.4.3084","e":"^1.93.0","p":"darwin-arm64","h":"00q4cgr4ncqrx14lspi8gx527rvrqb0krd1c009irc5xzbp686k3","r":true},
 {"v":"0.4.3084","e":"^1.93.0","p":"darwin-x64","h":"0r4858jnzgp78yjrv497x8nx00shnhl9nm3ffs4ja9p3prwdxhqj","r":true},
@@ -18459,6 +18470,12 @@
 {"v":"0.1.3","e":"^1.96.0","h":"0851q3d908nrm5g2gb8mg63q93bb7gfhkvww9dvn0c990js0s9wl"}
 ],
 "superentity.agentscope":[
+{"v":"0.8.3","e":"^1.95.0","h":"1lb7hyg549mzxjp5hspbzbfpgh2vn1b77xwjsjy8nliawrsn1a7q"},
+{"v":"0.8.2","e":"^1.95.0","h":"1jn2hk644ajqi82fka2dmqdkn0y1y9y63w77sf9gqalpdz8p1nj6"},
+{"v":"0.8.1","e":"^1.95.0","h":"0cyn9c15nmxd5xcwnh94p5khlpjbaqz8mfkqjnb23rhlb6681rqq"},
+{"v":"0.8.0","e":"^1.95.0","h":"0n9mhdwvx6b89ssw6bjjwlgmw8dxgxiw45nahcdkxbhw31nd1mib"},
+{"v":"0.7.6","e":"^1.95.0","h":"0xdpgxgylnxkan0q9qi8581q4arja9ap07nqx5ff5x5f674h682q"},
+{"v":"0.7.5","e":"^1.95.0","h":"1d4vp29hnbpk0x5pfch991yk77yj7c079h2xmwydqagkc13jk66s"},
 {"v":"0.7.4","e":"^1.95.0","h":"06r0q4cyprq8cdvac6yx65zc2achd8s7k0p53s4hp8hm94bfygsa"},
 {"v":"0.7.2","e":"^1.95.0","h":"0r7q8anzd105xvacbvs6dc1h5mf51syrjsx5krbs2lz1h1xd7gii"}
 ],
@@ -19919,6 +19936,9 @@
 ],
 "zahraaresen.visual-code-editor":[
 {"v":"0.5.0","e":"^1.90.0","h":"11anm0c0ag5w9grx86r6gbmhyrfbacrp9gw1kf49fqqzcf35ln6n"}
+],
+"zelvory.offline-coder-review":[
+{"v":"0.1.1","e":"^1.85.0","h":"1y9cfj6dn8c8dx7x1n4azwgwh5ya2apv89yfgvkliqrj2rg5ff5s"}
 ],
 "zengfeng.lottie-preview":[
 {"v":"0.0.7","e":"^1.84.0","h":"0z1xan0v3jpv9ayzx88v6nbw70qypw89nmz93nm22n42x8mw8nga"},

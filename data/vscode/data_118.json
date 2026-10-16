@@ -1701,6 +1701,7 @@
 {"v":"0.0.1","e":"^1.110.0","h":"1cv6dwagrknzn3lcl0lqn91sbmlswyjn5fln0xk0syzwff9m01m0"}
 ],
 "datafication.verso-notebook":[
+{"v":"1.2.3","e":"^1.99.0","h":"1nrda28c6avjr1qjcn04kgr8i0xh5xz9f33dgj0vhjypskdjaf58"},
 {"v":"1.2.2","e":"^1.99.0","h":"1svgx3xjwkp5940xfvla7qai9ay9g6ddndbava8pfz1si6fkhqnh"},
 {"v":"1.2.1","e":"^1.99.0","h":"106b2l6i09xbv40r1246z0vm8wqgwrrii5asnnw3kgy87sw412ni"},
 {"v":"1.1.3","e":"^1.99.0","h":"0w2qry9p2xpx80k613kvcifp2cpimagizl43s9hkr4gia8pm24vc"},
@@ -2687,6 +2688,7 @@
 {"v":"0.1.0","e":"^1.45.0","h":"144q79336qi1nsnn2140glj9903wkwzwhy8916kp889h499r19zh"}
 ],
 "gitlab.gitlab-workflow":[
+{"v":"7.2.4","e":"^1.106.0","h":"1ij293z3238wasilnzlf8352mc7zn1rfjd7chdz6mwmixlzgbp26","r":true},
 {"v":"7.2.3","e":"^1.106.0","h":"0zccvv0azdp41q7amd8524jfb8zfz9bg75sndz5rc8dj5vrbq8zz"},
 {"v":"7.2.2","e":"^1.106.0","h":"1pkkc2xi674r7r5drm9czjzbvax0abshbi3pcbhm43yzak8vzsp1","r":true},
 {"v":"7.2.1","e":"^1.106.0","h":"1zpxqk4h1kpry7zzr2vj2lm3hsjpgj6l4iklc5rrz1kmczp9yhlz","r":true},
@@ -4882,6 +4884,7 @@
 {"v":"0.0.5","e":"^1.39.0","h":"03q7vxsclbmlgn1sy2liji4ypa8zprg3g4858kvpf90qr0fnhsnw"}
 ],
 "kondoumh.changelog-support":[
+{"v":"0.3.1","e":"^1.80.0","h":"132hwp1ai6883hpn9l6z471nbhf0p48y8hzzri9ygpd1bywaam9w"},
 {"v":"0.3.0","e":"^1.80.0","h":"1sv6vyj853bkxjpd569alj2zixs1fpqrwwmzpf729mr9mx9v0p01"},
 {"v":"0.2.0","e":"^1.80.0","h":"0bv6x1ykjc9hjx82hncxdim3qakll0qbnrxvknkjlz31wmhsbygy"},
 {"v":"0.1.2","e":"^1.19.0","h":"1gdpnps0psc7fmp3iiliqwqdjzfh8yvl3ipqilvk5731b1n94cz1"},
@@ -5744,6 +5747,15 @@
 "mgahlouz.testextension-mgahlouz":[
 {"v":"0.0.1","e":"^1.100.0","h":"1ajmp3rpmz6pivvszdap9rrq77x935kk2iyw11f50brv32l1djhs"}
 ],
+"mhmtakfseckin.embedded-studio":[
+{"v":"0.4.4","e":"^1.85.0","h":"16579rmcafa4dhcvg6b2bsjcxirilv1d8l3gdd4ran45m6z40jk3"},
+{"v":"0.4.3","e":"^1.85.0","h":"1jj4xni18jgpxxhf9mfxb2bhm9zydzlns0br34rhdpclifkb0g15"},
+{"v":"0.4.2","e":"^1.85.0","h":"1jj7yya597lk217wc1hjr4fp09lrxvhx3qzjswslcxj4wavjsjpg"},
+{"v":"0.4.1","e":"^1.85.0","h":"0fcwkc7ds42j36p9rwyq1var3rir0xi8y2zg7cxz5cqmmw1gd21p"},
+{"v":"0.4.0","e":"^1.85.0","h":"1kndcmiwy6jaiap63qxwxbcg0w53ccc4gbpnn6hdrcxi456vdw78"},
+{"v":"0.3.0","e":"^1.85.0","h":"018pnrhlbh1gyzsscph20pryvpclgmrlgq9ssaxrfn9cahxg0gdc"},
+{"v":"0.2.0","e":"^1.85.0","h":"1mbc9x0z750cdzgnkcyyra9d2qkpifv2yy9ma3fqs9q79xsnp3pm"}
+],
 "michaelassaf.pro-dark-theme":[
 {"v":"0.0.2","e":"^1.72.0","h":"1jblb7cigg0xyzl5gd786kzp1di0nd7v6k1cd9cbmlz4kskcd5ga"},
 {"v":"0.0.1","e":"^1.72.0","h":"0zxsl2gwnyl0wvpccvlyj6gjd2m7khl9knwvh83jrc025m2xhc9j"}
@@ -6116,6 +6128,9 @@
 ],
 "mtvt.azuredashboardpreview":[
 {"v":"0.0.1","e":"^1.98.0","h":"1siiw2ka4ylg1m89b7j30dgah7k89xmmpsk55jikcq9yjm21xzba"}
+],
+"mtwalli.dad-lang":[
+{"v":"0.1.5","e":"^1.75.0","h":"0zafmdbxzypkahjn6bzhwynzrvd19hlsbywqb3aa7lm8dxw8pwan"}
 ],
 "muhammadhanzla.express-builder":[
 {"v":"1.0.3","e":"^1.91.0","h":"0xllrdxfyzkl9slamysy48qv29mvpaj8l077zyy8makd6hjfs08n"},
@@ -6835,6 +6850,9 @@
 ],
 "pombadev.moar-ctx":[
 {"v":"0.0.1","e":"^1.90.0","h":"0nz4ny5f9za4f0jm3d610xcmmxkyj92g6vm09z5i1508qbbdk9xg"}
+],
+"ponganeshp.hebby":[
+{"v":"1.0.0","e":"^1.85.0","h":"1v9fhfla5mlgxblr4ryk0r2pzgjqgn4m2g4q4if3p39430zb38vk"}
 ],
 "ppttfish.xt-git-init":[
 {"v":"0.0.3","e":"^1.60.0","h":"01c1bz97qmw3xjgfcj0yipk3hg69jlr11nwamiff80k7fbrpqwml"},
@@ -8499,6 +8517,7 @@
 {"v":"0.0.1","e":"^1.100.0","h":"11bj1bmmiffxw0sqcjpzhhmgwqkz8qxsznccvwixlx79pzm3i4xa"}
 ],
 "streetsidesoftware.code-spell-checker-austrian-german":[
+{"v":"1.1.5","e":"^1.102.3","h":"1glsvpm7kw0gw9m65irci2kgc8ah80c9v3j0igqh7747h818ji0i"},
 {"v":"1.1.4","e":"^1.67.0","h":"05s4ql4vxnvds4x8hzcsz9vncsxh883fyn0m0zzqm744fj30nfjp"},
 {"v":"1.1.3","e":"^1.67.0","h":"0ip6m12lzhfqcy1rfgyf0va7bfg77zxmmwxkvhkjpbcqxghbcyk0"},
 {"v":"1.1.2","e":"^1.67.0","h":"0150vh5irg7h201mzcrxccga2rjjgmqrlbaik1rhn54m1ihm1n0x"},
@@ -10091,6 +10110,9 @@
 {"v":"0.0.12","e":"^1.67.0","h":"148wb6fc0791k7rigg3bvxfdmmq39lm6332j494i1qkll3jkyli0"},
 {"v":"0.0.11","e":"^1.67.0","h":"0ddlkbskaxgn3rb4vlzvbla7n1apjfya4279hiqfsc07ycqyanln"},
 {"v":"0.0.10","e":"^1.67.0","h":"0kd41r2syibgdxlvl7dvxsizhzajvfx938v025vyq2pb61cwx2kg"}
+],
+"wiktormayska.virga":[
+{"v":"0.1.0","e":"^1.90.0","h":"1jdhxxi58w8kj3yy3mlz9j2gnl2mcphc4x8chxww67bayr3vwwlk"}
 ],
 "will-stone.plastic":[
 {"v":"9.5.0","e":"^1.80.0","h":"0avd1bf28mw87mf2fr6xif9754yrk9d61f5714bcqqwlxj21n9w7"},
