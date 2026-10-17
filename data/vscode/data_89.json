@@ -315,6 +315,9 @@
 {"v":"0.1.2","e":"^1.96.0","h":"1s7c3c0c0ghj7l90j1mgj4y2f98hrk11rw5plidrmbqazah9hmyg"},
 {"v":"0.1.1","e":"^1.96.0","h":"1jqczph3yzyyn3nrj0ip34v3wyjykkh5h99f84rx03byxdcwishs"}
 ],
+"alessandrovoliveira.fileblocks":[
+{"v":"0.1.0","e":"^1.90.0","h":"0qyffq2g9dpr0m24pm35f59hk6dsp7xvisibsll34yjxdsi6y9b7"}
+],
 "alexbarnett.lapis-vscode":[
 {"v":"1.8.3","e":"^1.71.0","h":"1m9zvh7ka7z7mgmz6b9k4jh35rdsm95d9g703486yx09a86kpcsy"},
 {"v":"1.8.2","e":"^1.71.0","h":"06js0a5q3xfvmiawbxgqzbxjqmg71fhfhzyddk0g4994365w0ya2"},
@@ -6189,6 +6192,7 @@
 {"v":"1.0.0","e":"^1.51.0","h":"0xmi2cd26bab6gcx9f634gd132b4p1v49fyi21y9qcksvz53p1mk"}
 ],
 "oneagent.oneagent-vscode":[
+{"v":"0.5.23","e":"^1.105.0","h":"0hbqgzd3m875rd6psn5rnbbw7c29rdcpnzizyyk9z9f4r1k0gbyl","r":true},
 {"v":"0.5.22","e":"^1.105.0","h":"1i6pkvngf36pdgrzf3hv97a0pr6876ki98f19sgiqn1aiadh7kad","r":true},
 {"v":"0.5.21","e":"^1.105.0","h":"0sdg1pz7q0pzwgfpi6gfzc6gxi4hym70kvz9zw5hhrfw1sbilzn7","r":true},
 {"v":"0.5.20","e":"^1.105.0","h":"1i61apnr3dh4nmrnsb3k3iqfqs01j83ck1ixfqy21qq80y89ldhs","r":true},
@@ -8808,6 +8812,12 @@
 {"v":"1.0.7","e":"^1.125.0","h":"1r3jxwwqca9w15ca2m7gdgkwh1pq9v9b4giyp558cwrr9lrln8np"}
 ],
 "wgsl-analyzer.wgsl-analyzer":[
+{"v":"0.12.519","e":"^1.139.1","h":"1jn6b9dp5rkh1g1vj10rgw4zvza94fww30dbxmjz4qaz1ccikix2","r":true},
+{"v":"0.12.519","e":"^1.139.1","p":"darwin-arm64","h":"1wmhdaz149z4nzxmpl5gkc61qn3mg8kkgd98m8zb5bmbjydn5ac4","r":true},
+{"v":"0.12.519","e":"^1.139.1","p":"darwin-x64","h":"1b110yvywrxz667navxxf6qjwigymhk8w4ph6rgn3bi9mhvp4cc3","r":true},
+{"v":"0.12.519","e":"^1.139.1","p":"linux-arm64","h":"1z9fsz67qrrla2a3b46xpy3843fg15l646y8ac6s53wyxazhcyfa","r":true},
+{"v":"0.12.519","e":"^1.139.1","p":"linux-armhf","h":"1v9ksb51ai6ipymn6fsbax7jhnwdapxnyz9g1w8s7bc0zfaym9p6","r":true},
+{"v":"0.12.519","e":"^1.139.1","p":"linux-x64","h":"1c5d8730xjmx1klfwxahhgwq4wvcj0a247wkjspy5dwna4iajx6c","r":true},
 {"v":"0.12.518","e":"^1.139.1","h":"00k5yvhcw7nfgkiikhrrc0l7vbmpk9182q4zjkwx23q9k6fl28qp","r":true},
 {"v":"0.12.518","e":"^1.139.1","p":"darwin-arm64","h":"0rx8vc8v5xb4a2s2cp2k2q55h2x10bfc3rgh0xf2ndr83w2zcsk0","r":true},
 {"v":"0.12.518","e":"^1.139.1","p":"darwin-x64","h":"0gcxcyxamnka120lbgg4x85j3ydd3f1ss373z1icjfmzbkcjvqmd","r":true},

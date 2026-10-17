@@ -143,6 +143,12 @@
 {"v":"0.0.1","e":"^1.87.0","h":"1mzrxsh5cad52w4gswxxpx2i5xvimqxrv3zmc77q1q1p0gdwh79c"}
 ],
 "adronite.adronite-agent":[
+{"v":"1.2.1","e":"^1.101.0","p":"darwin-arm64","h":"1xyrvsq8812shg1gd03s7fkgpwikl5s4gkc93w3n4j74mxibmmnw"},
+{"v":"1.2.1","e":"^1.101.0","p":"linux-arm64","h":"17w31w8hjw9gqfnzqyv11lmbd0yh69jz2pjq4c0iln67yhn7kcm1"},
+{"v":"1.2.1","e":"^1.101.0","p":"linux-x64","h":"0sl9cvphxmf975c46c2ysj033629w042321mwbif3im5s54fq7nm"},
+{"v":"1.2.0","e":"^1.101.0","p":"darwin-arm64","h":"09wkilv06yby1j8p4v75xlpdwzzpdj446zx9k7fy5mlck47bwx13"},
+{"v":"1.2.0","e":"^1.101.0","p":"linux-arm64","h":"0073wn56qyq213zmxi6yh86d3ds92mlqrhmcfkyn7h16nzpnbjgr"},
+{"v":"1.2.0","e":"^1.101.0","p":"linux-x64","h":"0vr3yf5pb8xi2id8bw7yy1siy8jyr9k7j6qbw89lcxzl9cx7fha4"},
 {"v":"1.0.1","e":"^1.93.0","p":"darwin-arm64","h":"1493ik7kzvgqgb22j2kysbjcxxaj1iqwmwdbs5pz2asrn8h9xs42"},
 {"v":"1.0.1","e":"^1.93.0","p":"linux-arm64","h":"1nndfc6n6h4wwd37jfkkspi2cpzsb2026dlcvxhabfrz0lhrr5z0"},
 {"v":"1.0.1","e":"^1.93.0","p":"linux-x64","h":"0sg1kyxcbkix4sbnimpykb6z3f2qsl15ihfzccpvpp2ckzjgrjwr"},
@@ -4416,6 +4422,12 @@
 {"v":"0.1.1","e":"^1.74.0","h":"10c9f95cvvbi2w5khc9iv7g09ljfch4k3cs6rdpyjszivg521c4h"},
 {"v":"0.1.0","e":"^1.74.0","h":"16vmzjrkc586ld5cawn1l1jrds9cmhqkz8f8wa3dkkp943gxbbz9"}
 ],
+"grouter.grouter-code":[
+{"v":"0.3.4","e":"^1.140.0","h":"0bfmffbzqbdm4va5b3n8apivaramxx87zrlyqdbw02w10c3zwqmr"},
+{"v":"0.3.2","e":"^1.140.0","h":"1lwak6vjl4r84lxm7f3995qzf37zzr17lar73bbkqmdaan041829"},
+{"v":"0.3.1","e":"^1.140.0","h":"1xs8xphsqrdd18icznsdb7pqld1qf9sc9a65xdl4dznnjxn2k2qd"},
+{"v":"0.3.0","e":"^1.140.0","h":"1vi3xgmrs19af9jm20cj6zzaz1qg5kqfvxsjxygjd6sww24h0q8d"}
+],
 "grubba.meteor-goto":[
 {"v":"0.3.0","e":"^1.75.0","h":"1rb03djbqv1gnvw4d594dks3hwfqgl2wcmrzq18ywsr8w3lapgjq"},
 {"v":"0.2.0","e":"^1.75.0","h":"0pihvbji11rlgyn8p4rjbn5pwfl1giiffclwdm6hdpnl4vk91r95"},
@@ -5395,6 +5407,12 @@
 {"v":"1.0.0","e":"^1.14.0","h":"1i79pznf1cfph9arycd7hyrz19f25p7g42gfj5clq1z58kvdhc2f"}
 ],
 "kogler7.open-cml-extension":[
+{"v":"1.12.2","e":"^1.82.0","h":"04zxia3pr55w80q4ahwm1nj0in8al5ayzlnh81rspk8p6gqhjh09"},
+{"v":"1.12.0","e":"^1.82.0","h":"0fg9715nz2rn1ii3j0ml79nc8m9mnclcf96f72mk57q5by6c1cgl"},
+{"v":"1.11.0","e":"^1.82.0","h":"1gaq6f6a6ivjn8s4vl23xpmjz3dca5z6l17as131pwarbxq503p5"},
+{"v":"1.10.0","e":"^1.82.0","h":"0zkgdwfai13w1a2cahbfaf8dslgrh0f657k9byawlg56nni4vra3"},
+{"v":"1.9.1","e":"^1.82.0","h":"0xdxwp1ls48vqzxd7bay2zp8f3465r7lv0r13vkxazrrxa7rq9h2"},
+{"v":"1.8.1","e":"^1.82.0","h":"0yv4vlnqrpzf00966jp4mrh1w8mqjdckgqd7pw5c0gxcp1y5xph1"},
 {"v":"1.6.2","e":"^1.82.0","h":"108w99s8glpjaxzb0ayr33i3fi434srp7v6wwv2z2szn58wr2if9"}
 ],
 "kokota.simple-tool":[
@@ -7396,6 +7414,7 @@
 {"v":"2021.9.1","e":"^1.60.0","h":"11rnwh0xymaqj21s8708a1c0pf7hfrigrrnhly54yna9m48afxrr"}
 ],
 "noriabits.force-cockpit":[
+{"v":"1.0.17","e":"^1.120.0","h":"1rdb5k01bjdjgybjgqcafvp2pnnxmz61wyg117pwhg5s0c93xfba"},
 {"v":"1.0.16","e":"^1.120.0","h":"1dvxqdpbnn4jhppfi3pxv88062m08nbvh923d9i69af4i2jd4bbx"},
 {"v":"1.0.13","e":"^1.120.0","h":"1f8sw3rhqvwyymzi8vvnid1ccj8h2q3rwxjy8b1dcj2ps4n25vgp"},
 {"v":"1.0.12","e":"^1.120.0","h":"1zyjsasgyi2sjcavx7wqq5kiyzxs2rmvbrr92m79c3kvjsp0zr7m"},
@@ -8096,6 +8115,7 @@
 {"v":"1.0.0","e":"^1.80.0","h":"1qan98w8hjwvmfpg2q7m37dk3vvf02kxfq6kqjjz74lzi6k9936i"}
 ],
 "propublisher.claude-quick-switch":[
+{"v":"1.2.0","e":"^1.90.0","h":"0lmkh69izphppv8c05g5zy6kg4by33pr9023vvhvsqkj4r4gmqmf"},
 {"v":"1.1.0","e":"^1.90.0","h":"0d9d15dxmbvpd5qydqbd7qyi40cc5i4is4yw7hqjg9l6cyryrpbg"},
 {"v":"1.0.0","e":"^1.90.0","h":"1vc7ypnd2ws7jh1pk9xk56rai9z6h7bw64bjcn0qcprmjdw5jywy"}
 ],
@@ -9394,6 +9414,7 @@
 {"v":"0.0.1","e":"^1.58.0","h":"172yr5mxicyd7hm36yr6ag76890jayc05ini778b6nrdnbif7cb9"}
 ],
 "streetsidesoftware.code-spell-checker-latin":[
+{"v":"2.0.0","e":"^1.125.0","h":"1prsbsa9wp7lwair66lhccym6b792d764zpyx1jh0j28vyl3v9l0"},
 {"v":"1.0.6","e":"^1.102.3","h":"0rmwxgs19kp08xn5j5zyq1zk4228k1sv6zh7qqji1rd26g7w6ifq"},
 {"v":"1.0.5","e":"^1.67.0","h":"0yjbpkh5wgchx0x8nadh2grvx7hzf1qzxks7b3vca2ji34x5d9ld"},
 {"v":"1.0.4","e":"^1.67.0","h":"00y6lvszckaadcxgxwrs09wq1aak7rbhds3lhydidv4sbqdv7p9d"},
@@ -10421,6 +10442,7 @@
 {"v":"0.1.0","e":"^1.106.0","h":"1fiqd91v6dks2ay6d99gg3xsqmzkfl5qvhvvmcgxv1vdpvmmpgig"}
 ],
 "wherobots.wherobotsjobsubmit":[
+{"v":"1.9.425","e":"^1.93.0","h":"0czyndazvdx7rpyzzkidlzdkrdib0hxynbjbw60hg8jqki7y2wwd","r":true},
 {"v":"1.9.417","e":"^1.93.0","h":"1y8wiyqprymilgdg25n8v15dn77nn4fhnlxriswy88njmid4c10b","r":true},
 {"v":"1.9.416","e":"^1.93.0","h":"0g21ghikjj8q1vmzjz3xbdxjbwxsxg8yb63p1zx14li2g1mijrbh","r":true},
 {"v":"1.9.412","e":"^1.93.0","h":"13yff96wfgn9bamp7hb2l502llikj6j9i8d1jh83p8yq21cg7wvp","r":true},
@@ -10726,6 +10748,7 @@
 {"v":"0.2.4","e":"^1.81.0","h":"0066nn5j70hm02vdbsm4naw1jz1hlmkrdmjnd0iw1r98a00h9mnv"}
 ],
 "youngminseo.inhouse-code-agent-fr":[
+{"v":"0.7.20","e":"^1.106.0","h":"0sxz88lhin4j9pqyd7n8l4aw8a54c799gs2myrdc0x3n1clgvhxj"},
 {"v":"0.7.17","e":"^1.106.0","h":"076p0ff18zgzd1xib500i9kybg4nkb0ck8f97zl9qd9hf8wyhaws"},
 {"v":"0.7.16","e":"^1.106.0","h":"0kc0jk3ysrzb8bpb7ahv3pfzn2hk4nflk047diw42ylhlyh9hm77"},
 {"v":"0.7.15","e":"^1.106.0","h":"0503jypi6wm92lvv4glh3mh1q4hkvgxv2cmda9bk4wgcq1yf761z"},
