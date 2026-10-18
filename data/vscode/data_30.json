@@ -48,6 +48,9 @@
 {"v":"1.0.1","e":"^1.80.0","h":"11cs9a0zz4w1qcv1jzx7v5kvwdh2i1hw11jb8f799sx2nrfchjfj"},
 {"v":"1.0.0","e":"^1.80.0","h":"14lg8kfpr5lvjbxmgca1r7l93d4l7absw9hm1fp84xisb58pk6wh"}
 ],
+"aaron43210.distributed-ai-compute":[
+{"v":"1.0.0","e":"^1.90.0","h":"1xqx2flw2w85av8inzzardakb3z9z7lhssdq5glm2w73v6fk5l32"}
+],
 "aayushsah98488.open8todo":[
 {"v":"1.0.3","e":"^1.85.0","h":"0ckzvdjgxjyqfg91llhsg51d13q4maz92l5h6dwz75s2yvfg0553"},
 {"v":"1.0.2","e":"^1.85.0","h":"06j1gw0si60mw04r9l505frvvi78dx988wlj7fl5gcifrq4in0ji"},
@@ -1592,6 +1595,10 @@
 {"v":"0.6.39","e":"^1.85.0","h":"05cvhgpyyfjsda071qi9887gn8yha7cdi8cxp6nhr1yz1nnlh07n"}
 ],
 "clice-io.clice":[
+{"v":"0.1.2026101706","e":"^1.82.0","p":"darwin-arm64","h":"0nwlflm30fz56lcbgrdkdcqnjvz5iwql9bkqjcgld2x9yyyz4ffn","r":true},
+{"v":"0.1.2026101706","e":"^1.82.0","p":"darwin-x64","h":"18yw5vhliyvq6rnfa50pyn7n9143a03i2z29b05m2gvc54w813i4","r":true},
+{"v":"0.1.2026101706","e":"^1.82.0","p":"linux-arm64","h":"16rq6amb6ps0ck84qxd0cc9mgq7835if7w69kvph6b8dnvic4sn2","r":true},
+{"v":"0.1.2026101706","e":"^1.82.0","p":"linux-x64","h":"0lbd4caiilmwag8cz2fnqcgvcbrasw7a8zlqigfhfczz6yg88kb3","r":true},
 {"v":"0.1.2026101607","e":"^1.82.0","p":"darwin-arm64","h":"00nsm43ygdbz3fsl7h06kbgc7l7rc9bcx510l75dyyjh0p4r2a8d","r":true},
 {"v":"0.1.2026101607","e":"^1.82.0","p":"darwin-x64","h":"03lyd92788hmxinmiylayz04c8fx9mg4ds4wy3dn1v4bx08sw1hs","r":true},
 {"v":"0.1.2026101607","e":"^1.82.0","p":"linux-arm64","h":"09g4xi0mdhiijdz0smsl88v6581a9yi2phgx5dcbxvrg02d3m0nm","r":true},
@@ -7550,6 +7557,7 @@
 {"v":"0.1.0","e":"^1.85.0","h":"0k9b1l4y6n8a0a45imdq71kvb8jvwhjc2463y8y2sryfq5byh5hh"}
 ],
 "narumi.narumi-pi":[
+{"v":"0.4.0","e":"^1.106.0","h":"0g4br92wfli7g961hv3b6hp5207xzbyh0fwk5ckskdy0pj8ljbjx"},
 {"v":"0.3.0","e":"^1.106.0","h":"086z4xdr8dqf17ypr3ad4pcizjpv75vg5jr17wap3hp99gwhj5q8"},
 {"v":"0.2.0","e":"^1.106.0","h":"07m42q23mpv8w1vkw7ic5d9r2y39jmnifj3km890zcmpk4rcm6k8"},
 {"v":"0.1.0","e":"^1.106.0","h":"0raq2gri2jk76w6ny5a6imlkx1vs04xlaxpv26s975b8wckwqvjs"},
@@ -8413,6 +8421,7 @@
 {"v":"1.0.0","e":"^1.89.0","h":"1799dmry9lz95kd50cs1l8rhz9llimzmljmr13l6dn49xknyma5s"}
 ],
 "particle.particle-vscode-core":[
+{"v":"1.16.51","e":"^1.34.0","h":"07glmslnbm4ajimjngyhdh44xldm9i85danlvymy4rdjw2pcj83m"},
 {"v":"1.16.50","e":"^1.34.0","h":"0axyxn16fcdw0a9nrqh14nj9hrw2g0maq03jg91nyc3zxjjjdvxs"},
 {"v":"1.16.49","e":"^1.34.0","h":"0w6jvslhjv95j4r7i7hp13n0f455fm7w14ayd3bamfv8l3np4h6d"},
 {"v":"1.16.48","e":"^1.34.0","h":"111s439vl0rq84r4c7382dd4z61w7sn2xi3hi7v8srrm16qbv6dg"},
