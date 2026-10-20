@@ -318,7 +318,12 @@
 "aicodezjm.aicode-zjm":[
 {"v":"1.0.0","e":"^1.84.0","h":"01h2akd35kcjsyjszq95xkv3a78drb74k6k6asfjzakf69lkp2zk"}
 ],
+"ailuxis.draw-ai":[
+{"v":"0.2.1","e":"^1.105.0","h":"09fys80r1jvnb14dinn6m7jxw9z6cgqciyisgx4r61p7bnv0082w"},
+{"v":"0.2.0","e":"^1.105.0","h":"1anavz0g9r8ibf5s6j16jm1w786nig19sc41rxih97hj52ry9zgf"}
+],
 "airpulsgmbh.airpuls-ric-sdk":[
+{"v":"0.1.8","e":"^1.85.0","h":"0pcld3w92xg1llb138f3xw1b4ig4ywa97w99073x1sgakdxkwn7w"},
 {"v":"0.1.6","e":"^1.85.0","h":"1f9shflfvlj2f0jf91dc87pz28k94r3zl6bbrvdp6f9b214nnrlf"},
 {"v":"0.1.5","e":"^1.85.0","h":"0zkjfx1a985z8x9nah7w8l1hdi84jqmhfvpwzn0caffhh3h3v9kv"},
 {"v":"0.1.4","e":"^1.85.0","h":"0zcr3z4ins94kdbc1jfr5qlyynqy4sffx9lx4hf5x5ycq10awdfc"},
@@ -903,6 +908,13 @@
 "atulhritik.archmap-live":[
 {"v":"0.1.1","e":"^1.85.0","h":"1d4ch7g2mbsmfbbs2i8rr3gvlq424r1jc3435zl1bmby6g8shk5i"}
 ],
+"aura-lab-siue.r-companion":[
+{"v":"0.5.2","e":"^1.95.0","h":"1x6i5vbgpz5f6kyal2qd8gxryviysi0j6cf6jxskk6h4xisjvcma"},
+{"v":"0.5.1","e":"^1.95.0","h":"11q9fslfcq1d1falvmzg60ryn8mi9xsamssy79zfxbpyvam1rmf3"},
+{"v":"0.4.1","e":"^1.95.0","h":"0qm5yrk3i7rqpjfmny6babn9zw928x097839q1zag9lnf3d2hf1g"},
+{"v":"0.4.0","e":"^1.95.0","h":"011raxy4p535i92hjzliv3k120l9kcq271whslxich81lavdxivz"},
+{"v":"0.1.3","e":"^1.90.0","h":"084v3fk5vz6m841p1ixw9567fjsbdhisg6djh56s7ncggixxyyya"}
+],
 "austinakerley.ai-hr":[
 {"v":"0.0.2","e":"^1.90.0","h":"0wpvd17zm0r4zhwn02qcsh8w2bqrbvsxnrb4cgjkb4cm6vvgkg5y"},
 {"v":"0.0.1","e":"^1.90.0","h":"1n4a4vrdhl81709hhhh56bmhj68jlldz1ivqrlx70hb4wwpaa1xr"}
@@ -974,6 +986,8 @@
 {"v":"0.0.9","e":"^1.84.0","h":"0zz02dg0qnr6ljiq677kwhylpi5v7f80pi34p152cbzlcic57789"}
 ],
 "band-ai.band":[
+{"v":"1.11.0","e":"^1.106.0","h":"0liqqnkm19fb13036l2709sxqjlma71pbxv8zw8b04q617cyd550"},
+{"v":"1.10.0","e":"^1.106.0","h":"0rgysbdhqxs80q515j7gdmx609w8vw3d5h5ny2wsnx9p6f8pa37q"},
 {"v":"1.9.0","e":"^1.106.0","h":"0zb7aaqbz5x5qazm1f1y9zv19d50gdyg4v2x1psri4xiyw3mpivy"},
 {"v":"1.8.3","e":"^1.106.0","h":"1xznr5dpxfiyrb4b4041gsmmrdzdf8fn8dm13gi9pmgj684isc6s"},
 {"v":"1.8.2","e":"^1.106.0","h":"12dvq3yiyj67ri2q6narxv3hh96sq2x14bd13qihbphy5k43ffi6"},
@@ -4037,6 +4051,10 @@
 {"v":"0.0.1","e":"^1.34.0","h":"1xhq7g12czhs2gmgqh9sq3wk0a8fshcmd0mg4m92s4yq0xrfib27"}
 ],
 "h2loop.hydron":[
+{"v":"1.7.2","e":"^1.105.1","p":"darwin-arm64","h":"0hg9yzs2j594gcsfa1g2msa87pja13mmkwj9h0d6bnr5sw55np7s"},
+{"v":"1.7.2","e":"^1.105.1","p":"darwin-x64","h":"1zr455yay8llj0z0dbc8rprymnqm65id3rb22l4cyyxggam32flf"},
+{"v":"1.7.2","e":"^1.105.1","p":"linux-arm64","h":"1vibygk84r9d88dmbchyyn4d9qcqh2fmg3f2q4jiszz2mxclr918"},
+{"v":"1.7.2","e":"^1.105.1","p":"linux-x64","h":"052crx7k6qivmnhm8h58hcha9r9vzanavzzx276027x7fmwkgds6"},
 {"v":"1.7.1","e":"^1.105.1","p":"darwin-arm64","h":"1n9lki5sg87d44j7w6agpam6kf42bjcpyvyb8xhw4xyn9ibjs30h"},
 {"v":"1.7.1","e":"^1.105.1","p":"darwin-x64","h":"0sfqb17i0jipkinpjnh7qmlbrzkp34aip7sn8cz5aq9wc2simk6m"},
 {"v":"1.7.1","e":"^1.105.1","p":"linux-arm64","h":"01v4r22ni70fxza74699bpkqv4f67mhzjxs43hs9snx9bxxr1v4r"},
@@ -4828,6 +4846,7 @@
 {"v":"1.0.0","e":"^1.99.0","h":"1839s7csmg0ja7xp8mcpl7bvhr6hpj5fc631c7jj2jgqfm4lg9jw"}
 ],
 "janishpancholi.allessentials":[
+{"v":"1.2.0","e":"^1.100.0","h":"1mc8icynsf33132pxx7pdjl24szwxshacj3xzppcwp2nkqv4jw5a"},
 {"v":"1.1.2","e":"^1.96.0","h":"124ywq1679djlqx0kklgy6gbix2qq7iin7z466fh4fh06rrgri8g"},
 {"v":"1.1.1","e":"^1.96.0","h":"0v226r13ngradwj6a5963yymsdr9hww28d9f61fszavpai3pzn0m"},
 {"v":"1.1.0","e":"^1.96.0","h":"07ibkfrk384rcidiv3ixcpkg0rwcxg9rndl8aqp2hab333sz6527"},
@@ -5486,6 +5505,7 @@
 {"v":"0.0.1","e":"^1.70.0","h":"1haxz746fyvrrwx5pnz5jvsjkgf4v2scx6jp8z31ijxzcs8bcqkj"}
 ],
 "koudenpa.src-vscode":[
+{"v":"0.5.4","e":"^1.91.0","h":"16b0gngs1r9anikm8bls560bzakc7vha276g70v80w25y3wlr2b0"},
 {"v":"0.5.3","e":"^1.91.0","h":"008br1varb6gqckjqcn3ilnmdlc6msdi3zzklnz4wvv6p729d87p"},
 {"v":"0.5.1","e":"^1.91.0","h":"0nm8yzn4hzji62994h96a87q4nmibskshkm33zsjzdcfjqwlq0si"},
 {"v":"0.5.0","e":"^1.91.0","h":"0nwzd91vx4sz3j5qxnd1l1a1pnmf508pczxgw578b333jx5jwbqa","r":true},
@@ -8054,6 +8074,10 @@
 {"v":"1.0.2","e":"^1.75.0","h":"00w3i1q95y7qnwcyj73qdzjl6bzadlxlxh46gra92vvyarkspjbh"},
 {"v":"1.0.1","e":"^1.75.0","h":"1k5iph7f5m5i0d37kna7fmpmyx8awfkn92vs313fbzn9dzrd0msx"}
 ],
+"readystack.microprofile-nine-stack-toolkit":[
+{"v":"0.1.7","e":"^1.75.0","h":"0163h6x99zr72213k5fcwmddc01qa6jdpm4p8jxr6599w2dk4ks8"},
+{"v":"0.1.6","e":"^1.75.0","h":"1ydyn1mp7ncsnjcg3ypb1w3ry6idjh818k8js802xjl4hkqrbsws"}
+],
 "realpython.author-tools":[
 {"v":"2018.12.0","e":"^1.28.0","h":"0drhxlw8l62dn52pjdlvy3xxs0dy4zf2b63r461gvbr130xksd57"},
 {"v":"2018.10.0","e":"^1.28.0","h":"1yk7fsvjpga7bkkp6mcdwrp7gwlpncqq2yw30hasmyl8nhcaml4d"}
@@ -10339,6 +10363,7 @@
 {"v":"0.0.1","e":"^1.69.0","h":"1zkrsj4sqjx27jsdhdrzz7w5jrwmla03kd1fvb1pf5r8wm3g2f1s"}
 ],
 "vijayjanakiraman.nim-code":[
+{"v":"2.2.4","e":"^1.101.0","h":"0mkaiiq093ln973fv4n3rsa7dnwg72kmrlbv6fm86qh4m3yymxd9"},
 {"v":"2.2.3","e":"^1.101.0","h":"1m6kgbrb4d92j3jncraghf742799na7c7v80anbkpfkxm5nl139s"},
 {"v":"2.2.2","e":"^1.101.0","h":"0p3xgsdk8pndd884dgzyjpmgiaf0v6f8d8a3d67cdaw8g12p96y4"},
 {"v":"2.2.1","e":"^1.101.0","h":"0249y2z5ch51n1ymdwh4q9w7nrm75h9wjjg2dsr9mf61jlq4h86z"},
@@ -10629,6 +10654,7 @@
 {"v":"0.0.1","e":"^1.40.0","h":"02is14i8gjf2hpvma0lvi6ky99jn73rm9h2y32jjifbcvramsqn1"}
 ],
 "xbghc.nvim-marks":[
+{"v":"0.1.5","e":"^1.85.0","h":"08irfvc9f1fmlhaymhk1bn5y0m289p6iahcl4lx9zwrh7ywn3j28","r":true},
 {"v":"0.1.4","e":"^1.85.0","h":"0ys70bsvk2mpb5sbns2zb77wh1gjdpcgqhap79qwzy8i4bqw76d6","r":true},
 {"v":"0.1.3","e":"^1.85.0","h":"10hvp6y8160k04lcy2i3kv256hymmgf31hbjwrr82vnyalw1yd3v","r":true},
 {"v":"0.1.2","e":"^1.85.0","h":"1883j5rmn88jjwgd07jba7lps1idsj94blnvrlqlywrvzviym9jc","r":true},
@@ -10696,6 +10722,9 @@
 {"v":"0.0.4","e":"^1.63.0","h":"02hj7j1lzgf9crb2xkw9w8ak8npvv8wqq71pmfany8fq0pyz2qgm"},
 {"v":"0.0.3","e":"^1.63.0","h":"174mfyfm911gnbn5r1ndv5zx5d569581lbzdgpg1c1fr70nk3qkd"},
 {"v":"0.0.1","e":"^1.63.0","h":"1l4a940ff80jp1mrmrsxrld3y498kr18559i0hb6y34fiqnlwql2"}
+],
+"xpree.status-ai-for-claude":[
+{"v":"0.4.1","e":"^1.90.0","h":"0f9x3651ixhzc4cw7g3my81jhd832j9hhwrb1qfjpngdviaabab1"}
 ],
 "xuvvfc.myx-extension-pack":[
 {"v":"1.0.1","e":"^1.62.0","h":"0kln3ikcbjz0v8acqclcfj9bhmb26c9m7nkidyckaa3wacqba20q"},
