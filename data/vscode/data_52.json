@@ -184,6 +184,9 @@
 {"v":"0.0.2","e":"^1.67.0","h":"104dzw2czif0x251mgxw76i9z3yzxsanax8836nalvrkis3v96rz"},
 {"v":"0.0.1","e":"^1.67.0","h":"1jgc73f2hd4d5k992pmz14b0qahffv8k18jf75hibs37npallkbv"}
 ],
+"ai-gatewey.ai-gatewey":[
+{"v":"0.1.0","e":"^1.106.0","h":"0wwxv620adrak2fp240jgbpxvjwni4jc5df3gxpnvwzpk8n1jskx"}
+],
 "ai-provenance.ai-provenance-protocol":[
 {"v":"0.0.2","e":"^1.104.0","h":"17s4i0w8i48qxx7blidhiib8n21iqr7qnhy06yyiywkl9nw5qkwz","r":true},
 {"v":"0.0.1","e":"^1.104.0","h":"0znpgkcsanvvxmah8zm6i9c14aky9k6kniziapkk2d2f4y6wmscd"}
@@ -280,6 +283,7 @@
 {"v":"0.1.0","e":"^1.90.0","h":"16xlw5p7p9f97004nwv4givjv9r6qyvklkvrxavq7dxh6m12rhpd"}
 ],
 "anerlang.aner-language":[
+{"v":"0.1.46","e":"^1.85.0","h":"06h79w5aq2487hw1dsf6f6xwizkz5ldh5lq0w53c3my0gwvhmdzk"},
 {"v":"0.1.45","e":"^1.85.0","h":"0ydw67yjyh683alqrkrfwv9krb34m3h1cisabv6zlc916ljzi4wv"},
 {"v":"0.1.44","e":"^1.85.0","h":"0i5vzvr9cgff7plssvwrppkamivb799zsnwga0j88jlvikx1j680"},
 {"v":"0.1.43","e":"^1.85.0","h":"1zfz98lhmpxlwsvg8dyjwaacqszvpnik56wzrgz1dygh0s3y8igg"}
@@ -2795,6 +2799,7 @@
 {"v":"1.0.0","e":"^1.74.0","h":"0hk24hmqs14rzjciwg6fkds8nfj74z9y4gsgy56wnzjsdg13ag32"}
 ],
 "financialforce.lana":[
+{"v":"1.23.20261020","e":"^1.102.0","h":"1g6h2jhs6zh62h71nhisw3hi22bqc8ssvjr5gfj1fzy431dbf3mq","r":true},
 {"v":"1.23.20261013","e":"^1.102.0","h":"1q0rbqb1bawsg40ghihz60bzsby51d6df7qp4fj55rmz2r04fad3","r":true},
 {"v":"1.23.20261006","e":"^1.102.0","h":"0m27jhi3iwvqff462j7i9z0wy2n6xi6chj4y9lf2rc498klfjpkn","r":true},
 {"v":"1.23.20260929","e":"^1.102.0","h":"0shf67syyc5ydd1jc4vqiihjyvfg7x5h96mqacrgrdbqyrzbpvz9","r":true},
@@ -3680,6 +3685,10 @@
 {"v":"0.1.0","e":"^1.85.0","h":"1hd03mixgj937hc3vlhhh6gkxsccg8nx96ks188i77b78q06fcmy"}
 ],
 "hotic.acpira":[
+{"v":"1.10.7","e":"^1.106.0","p":"darwin-arm64","h":"1qdvhgid1i8yn2plhasg593b72wdv1f4mb1y6wxv16vshi95viy1"},
+{"v":"1.10.7","e":"^1.106.0","p":"darwin-x64","h":"0207jgzbcb8ypsy11kigs1x3mcnaczj6lfyljckh8p3xf9bq0mns"},
+{"v":"1.10.7","e":"^1.106.0","p":"linux-arm64","h":"0ilhxsk029pyhbhzbkxfd0rr12c131w55c86lbxqbkan5ab780vk"},
+{"v":"1.10.7","e":"^1.106.0","p":"linux-x64","h":"1zs1jxncjjhaqy6dj9081a13kdx6g5fs41bwdfaarzhdbd968r9s"},
 {"v":"1.10.6","e":"^1.106.0","p":"darwin-arm64","h":"02ib46gmnscxk0ji7l1zf9cidlbn7fk05qh2r6fv2s0g6bkpjdmq"},
 {"v":"1.10.6","e":"^1.106.0","p":"darwin-x64","h":"0p3h89byl6savi25804ch695vzdglzyjxfnyz2p7gyx418y3w7vy"},
 {"v":"1.10.6","e":"^1.106.0","p":"linux-arm64","h":"0r6wr0r545kvi5j9sjrapq4yk95zf6vilx9pvg5pahzg90b636fq"},
@@ -3944,6 +3953,7 @@
 {"v":"0.0.1","e":"^1.45.0","h":"1lsryn1zvvqy8db1cdvw7kkc5k3cpa7ljik3a9g4b102fc8glddg"}
 ],
 "interapp.mikedown-editor":[
+{"v":"2.14.2","e":"^1.109.0","h":"15n1dairvb4myxkbvhmadq8w5mq5df3d2xp3i9gxx32b7ag4zp6b"},
 {"v":"2.14.1","e":"^1.109.0","h":"01dm5h4sjl65mjclwagciwimm0420zszjn4c9xmzxyk5cawa3lb0"},
 {"v":"2.14.0","e":"^1.109.0","h":"0rbhwn4rqcscamsyxdvww5xwclx22fjjs8n1dscfwsck1spgq5zp"},
 {"v":"2.13.0","e":"^1.109.0","h":"1zw3xn4mlkwc0ml5vh67kjxnmw12ll7gpa45p20fz0vaw1mlkybj"},
@@ -6556,6 +6566,9 @@
 "minessential.mine-dart-chinese-extractor":[
 {"v":"0.0.3","e":"^1.107.0","h":"0jp0qvzvnrd77dds4xp9kxwh5q396imxhsks28xjn71c7r27rihd"}
 ],
+"minimindslab.minimindslab-unique-selected-lines":[
+{"v":"0.1.1","e":"^1.95.0","h":"163q839c2p7z68h7hwfb6viv6v0mjc5q5vj0ckx5wsh6j5jjfj1v"}
+],
 "mishannn.vuex-suggest":[
 {"v":"1.1.1","e":"^1.36.0","h":"003hi8bl3v6ng4qsllwvnvzj46mpa7h61azm4f2ayhaxzkdclw2x"},
 {"v":"1.1.0","e":"^1.36.0","h":"07si6xliaw3xjf6d0bhrr9hcq4w15cm9aghddy7hh7zxhlqxipaz"},
@@ -8355,6 +8368,7 @@
 {"v":"0.1.1","e":"0.10.x","h":"1c7yzwkwxfm2brckdl5yg8c0m8rs3ndkzrf4y93w0s3llp6mhbn0"}
 ],
 "saropa.claude-chat-explorer":[
+{"v":"0.35.0","e":"^1.90.0","h":"0wh8vxlj9h1dwks4xyw29c87l50g0c367wpwndn17mcqy0hp9y3a"},
 {"v":"0.34.0","e":"^1.90.0","h":"003hlwz7zb3llkn0w06i6mh8wfy1g0660f0jg6sd2yjvdfa87k9y"},
 {"v":"0.32.0","e":"^1.90.0","h":"0pxxwmvfnl1vpvlkdzqwc3y0p7z2qza3whik1vyja28zq79z5lpa"},
 {"v":"0.31.0","e":"^1.90.0","h":"1jiaap6kjd4vq0c2nyhy62k0g0fwl2dd1dvsyslnw4i6byh4yby4"},
@@ -10821,6 +10835,12 @@
 ],
 "workboardtest.vscode-webview-extension-with-react":[
 {"v":"0.0.2","e":"^1.64.0","h":"0nz51zdi0vd80k2zkv0nk28vq76n02iaa29v4w8h20kq19w4ya3r"}
+],
+"workglance.workglance":[
+{"v":"0.10.1","e":"^1.90.0","h":"0q6ysx421igsqn5y7xbw6518q0g62b1n7y5vv908zby585z1pvl3"},
+{"v":"0.10.0","e":"^1.90.0","h":"128l8ln0qnm6gs6w6rgx17hc2sgazknxmbm21i3s5anx5w08yjhj"},
+{"v":"0.9.0","e":"^1.90.0","h":"17614isyaxicfzni2y787aj0gf79jbqn3ay2q90yrjyry5jk6f1x"},
+{"v":"0.8.1","e":"^1.90.0","h":"03jxg47rcc1bvdhq4vw10c99sspjf2lkasnnmxgnfv57qdjdx4zs"}
 ],
 "wscats.uni-app":[
 {"v":"0.0.3","e":"^1.52.0","h":"0s57ic7vwfjgg3rqbqb5s7587n0jvggss3jlfkynkmgv2n06hax7"},

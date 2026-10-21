@@ -2137,6 +2137,10 @@
 {"v":"1.6.1","e":"^1.30.0","h":"0qkqf5pd5x8r20275ahxclgaadagq04mln0lhkmv6w34n5qx6ibw"}
 ],
 "devprod.vulnerability-extension":[
+{"v":"1.2026.1020001","e":"^1.100.0","p":"darwin-arm64","h":"1z450chs64dnxl37lagsnszk7vh63vi0zm9b2ysky6bclgvik6ri","r":true},
+{"v":"1.2026.1020001","e":"^1.100.0","p":"darwin-x64","h":"1bmkpqrhssw6vqcj3mhs0xgxryvmxf58y9bljndlqwnb5qbjdpi4","r":true},
+{"v":"1.2026.1020001","e":"^1.100.0","p":"linux-arm64","h":"04k24k4vxp80f5wc0jmgbv6h2qnzs7qahznh0kn8qaknxmp3vryh","r":true},
+{"v":"1.2026.1020001","e":"^1.100.0","p":"linux-x64","h":"0b04acb8d8inqhswns87pfsnj7i8axkpjm37ak863x315x1mvcyw","r":true},
 {"v":"1.2026.1019001","e":"^1.100.0","p":"darwin-arm64","h":"1v4g97a6mj3l5s0d5c8yxvlvkbi3frqhxw1inx4l8ccrvnqi9paj","r":true},
 {"v":"1.2026.1019001","e":"^1.100.0","p":"darwin-x64","h":"1501v4gqpjqci0qjnc0fkvwlw7lnzn690jhhsg51xcgq9jyljp7c","r":true},
 {"v":"1.2026.1019001","e":"^1.100.0","p":"linux-arm64","h":"00hfxy1p8lihw7qj69hyb163ca89bnj5zhbwni02hn7saq0gnchq","r":true},
@@ -4727,6 +4731,9 @@
 {"v":"0.0.2","e":"^1.51.0","h":"0yvfi33dl9zw0636ff289qalc7r8rfvhm8v42dd7d9rjm7jzq9sw"},
 {"v":"0.0.1","e":"^1.51.0","h":"0lznhps221hxxk81iy3l483clbs6k6dwxbnbwhp1mal5brfy5qlr"}
 ],
+"easygerber.easygerber":[
+{"v":"0.3.4","e":"^1.109.3","h":"1w41vprjrdw9yr89hd5pqcr9g5kzacs19f40r7zs0yjqzxnaqgbn"}
+],
 "ebrardev.kara-sevda":[
 {"v":"0.0.1","e":"^1.79.0","h":"1rnghv5mfjd7d2i2kpzfi0cl8ml8d73jx07y1n0h8q2fggrg920v"}
 ],
@@ -6638,6 +6645,7 @@
 {"v":"0.1.0","e":"^1.29.0","h":"1rvkach62il7v16zamf8hbvm0fgjpamki8b5fd8pmikcf1366wp1"}
 ],
 "jnpiyush.agentx":[
+{"v":"9.9.0","e":"^1.134.0","h":"0y8xpwgmhlg7ixri8wk6idbs4kg472816wg7sa3d6xlxcb2p8dw3"},
 {"v":"9.8.0","e":"^1.134.0","h":"17sppybpalg4gfhzdxw1y056k2znqg7965vkhymn84mpvwlvvhqj"},
 {"v":"9.6.2","e":"^1.134.0","h":"0p1wkhxcvnc811hvfcbpam2zdmrikbwdqlkqk84vy75rfb4w08yf"},
 {"v":"9.6.1","e":"^1.134.0","h":"1q6fsiyyqx03i2h621krvcp5rc8k30kj6jyzp7pnn7qmsdrmdcgw"},
@@ -10135,6 +10143,9 @@
 {"v":"0.0.3","e":"^1.88.0","h":"15wljbsnwgvmn2c6p14yyyjpzk380nnslgz3952r3k2b50lgnih0"},
 {"v":"0.0.2","e":"^1.88.0","h":"0zrhsd51k0gib9adpygp2g170v1q6lr2z9iy55q4gd3kaqp9dfa9"},
 {"v":"0.0.1","e":"^1.88.0","h":"0j74v60sz1pa4ks78jx8aa3xl79q0f6h25lfhhmb7mhc7a406rnf"}
+],
+"spharshid.translation-key-sync":[
+{"v":"0.0.2","e":"^1.90.0","h":"0s45a74qxp7993k05lvjssf113qkmx3sxbd3v6anjga5bw91n178"}
 ],
 "spjaksoftware.iptoint":[
 {"v":"1.0.2","e":"^1.63.0","h":"1i4fkl0bi8a7big0h2xcwknfax2lk348iqv35a4zclaxffq8nq7w"},

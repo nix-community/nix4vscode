@@ -115,6 +115,8 @@
 {"v":"1.2.2","e":"^1.60.0","h":"0968nr7cshsq9bkj9cw8ki07ag4j7ac57rg6syv4rwr221rkc3rv"}
 ],
 "acturify.acturify-vscode":[
+{"v":"0.4.7","e":"^1.85.0","h":"067npwb0j7m7whv5r9vrplb6y8mgs3wly27gkm9wp6mhlf12g0wh"},
+{"v":"0.4.6","e":"^1.85.0","h":"048wjay70s432w8qz2r41jv3dcawgb9qilx6hcsq47la1csk6lb4"},
 {"v":"0.4.5","e":"^1.85.0","h":"0s15y9y06yngd6gxjzjhl6q30dpvgx4fx793zjr212ylnllfghd1"},
 {"v":"0.4.0","e":"^1.85.0","h":"10v69bgw29dqh5ixlfd70q1svg764ycym75id9mql972pnz2dw8p"},
 {"v":"0.3.0","e":"^1.85.0","h":"0ggmdi4aq9msjqnch32wp7yydi4xph9wyxzn1h1m87k2spdxh7p3"},
@@ -714,6 +716,9 @@
 {"v":"1.0.0","e":"^1.85.0","p":"linux-x64","h":"13jp9zfl2xdsgwmrdabq7nd4spvs61jfm8w5a5mia06zx5fxrjac"},
 {"v":"0.1.1","e":"^1.85.0","h":"1crfcany06y1xfndg8c914n8k3j5ics1sjk0gqfiqpckwg7m288h"},
 {"v":"0.1.0","e":"^1.85.0","h":"1njf0ch95bp0rapjihbw3xgvxk3pxq8r3zi2hp14ny70hx0iv1jm"}
+],
+"arup-digital-products.oasys-lsdyna-api":[
+{"v":"23.1.10","e":"^1.116.0","h":"1lgjd7p271ffigk0szww615mf3sw4qah2jypd9fbbqcnk1741bcc","r":true}
 ],
 "ashabb.ashabb-react-three-fiber":[
 {"v":"1.0.2","e":"^1.93.0","h":"17zmxjyab7zcfr4kdb321k0an4nsxklhjlna81cp4fmhcqhmm9qz"},
@@ -2726,6 +2731,7 @@
 {"v":"0.0.1","e":"^1.76.0","h":"17qs260j454jjsi9vjxz2ng3divflyqz61qrzlnwmz00c29i6yp3"}
 ],
 "ft-integration.ft-nunjucks-ds-fractal-snippets":[
+{"v":"0.45.0","e":"^1.80.0","h":"1lpp1806s0sgchly1qscnq827221jxb527vb8rq5cnc8sc750z18"},
 {"v":"0.44.0","e":"^1.80.0","h":"08j9c7bwzi0cv1b4z05435cazlsnyxf0k3ps6k3axgaj940ablcp"},
 {"v":"0.43.0","e":"^1.80.0","h":"060v3fb1gvrlvq3m1bdwjmg7qmpr8sixmi4f7gl22iy7z7kb24pm"},
 {"v":"0.42.0","e":"^1.80.0","h":"0rgx0gsipk3nfyyma3ij3frbvyb3adfijzszlkrjij46sryn8py5"},
@@ -3493,6 +3499,7 @@
 {"v":"0.2.24","e":"^1.18.0","h":"0pziscq6f6yrsnhh53pv5nq7c1xa97a71g9kgylh6pqbz22881df"}
 ],
 "hastycapybara.tasks-for-markdown":[
+{"v":"1.1.5","e":"^1.90.0","h":"01jc1b2vgvi95y52mcr9ca4ncn5n8f8jgjl948kzld0yis96qs9z"},
 {"v":"1.1.4","e":"^1.90.0","h":"0ic9vkrglkyiimwxcfglz1g38893jamwvczdkm2zqkkx01s693gb"},
 {"v":"1.1.3","e":"^1.90.0","h":"0pbk294jf6r1y5ncgvrh3pf6b9gvpizjq4m95kfsa3wgzb2h16wc"},
 {"v":"1.1.2","e":"^1.90.0","h":"1ba3qan79bcb4vdrf10vxjq41il29b8qq1qmay823wnzsq4ivxdy"},
@@ -3639,6 +3646,8 @@
 {"v":"0.1.0","e":"^1.97.0","h":"1rjsyix903mmlqpq25g7ip5grzkhx5ng1c9d8vw65wcl85k9x5gb"}
 ],
 "huakwan.openvscode":[
+{"v":"2.0.11","e":"^1.92.0","h":"17c0k60140a26fyxxprn5v9b517dcgyh4p7w6xnq8wl3b3bq8s0l"},
+{"v":"2.0.10","e":"^1.92.0","h":"1yasjkng2c07lmxjgskwqhnskga1bkbwx24rrdq5zv46298nhk9c"},
 {"v":"2.0.9","e":"^1.92.0","h":"1vbsddgwif0y1f2hw102hiyxz3fxm9ci9fb3v5vpx8zlm8xszk3m"},
 {"v":"2.0.8","e":"^1.92.0","h":"15m8d5wil94gyhlsbmbvpqyr0pbvkcq9azppibafgmjv6bl22a8p"},
 {"v":"2.0.7","e":"^1.92.0","h":"0q7431fgj83zvqlw9m063c98g0j9fslhp8g2g7sxa2i71jly44is"},
@@ -5221,6 +5230,9 @@
 "loopj.vscode-gersemi":[
 {"v":"0.10.0","e":"^1.86.0","h":"1j47qfcr07wipm7v1nfhzsa4027nwz9209vl0yyjm5n9qzs53i4r"},
 {"v":"0.9.0","e":"^1.86.0","h":"0lj3ns2lamngjiwhcrix3026arw1lrai6xdl7km6lw5rjndv7j0s"}
+],
+"lordsayur.wsb-vscode":[
+{"v":"0.3.2","e":"^1.96.0","h":"1jxqrz0mbc1z900xskzd9xyqmkg37gxhnq565i3qc42cbpbn0j71"}
 ],
 "lsugajski.l7-theme":[
 {"v":"0.0.1","e":"^1.67.0","h":"0i03wbdlfdvvy1b3rp3854v2pc71wwc6v2ra9hykpcvz49y3q16r"}
@@ -9059,6 +9071,8 @@
 {"v":"0.0.1","e":"^1.83.0","h":"19cnhcsr71b223459lhrcj49wrr61ig4nzavzv101bkapgprmcvj"}
 ],
 "speakingpromptly.audio-for-codex":[
+{"v":"1.0.4","e":"^1.100.0","h":"0kcjrz0sbx4ani2i3wi1vc2n7gjhnqs66ylshfkq7cy3sl8mclji"},
+{"v":"1.0.3","e":"^1.100.0","h":"0dfqfhivvd42c4rl6l1f2r49c3ysnkjd1mri88jpm9bwwv19yvgh"},
 {"v":"1.0.1","e":"^1.100.0","h":"0ypazbnf65r8ch8qagcx5gr8mqlzmlcqb9njjxr1c8s5v7dg67yr"},
 {"v":"1.0.0","e":"^1.100.0","h":"0ni9vvxjmmjjp0im9aiakxgcjx02w0pjlrf9f2kjqlpz29i8qsbl"}
 ],
@@ -9804,6 +9818,7 @@
 {"v":"1.0.0","e":"^1.12.0","h":"0p5bxm7fkvx04gnw0zwi9qpb0c6b92il541zpsrn0lmk1pg2dx4s"}
 ],
 "tumerit.tethered":[
+{"v":"0.2.5","e":"^1.102.0","h":"0pxr7qabjcpcqgnbsvwynhwckmq4sl8k97lylwjqw9vdrj2vdl7b"},
 {"v":"0.2.3","e":"^1.102.0","h":"0ysck8k6789j5kzgixn6qrq0c9h4idxq0za1bjl91zw5wviiys7y"}
 ],
 "tunedtech.disodium-helide":[
