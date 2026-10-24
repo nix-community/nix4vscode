@@ -2249,6 +2249,8 @@
 {"v":"0.3.0","e":"^1.0.0","h":"0ig0jm4pfgxps7jf2xjzwh5klb9qj9176fvw1xgaw68c456bsfzn"}
 ],
 "duyiliu.api2apifox":[
+{"v":"0.2.32","e":"^1.85.0","h":"090mibcb38cvy7xngbmyisf37gqkc031bb6gdd1ks9dla479p95r"},
+{"v":"0.2.31","e":"^1.85.0","h":"0ainv5j9rshx2ikwy7lz22zyqlmfhpf62k34d9np4mpcvpy3qa96"},
 {"v":"0.2.30","e":"^1.85.0","h":"0m75kzjgyhyl6kbmk671w00xd2cjkpzd2x657vjccp6w8g19lb34"},
 {"v":"0.2.29","e":"^1.85.0","h":"1ym957d2p3vkwqk3gl2hy79j9iprkk585wlr1w1ayw6dzp9jr5v7"},
 {"v":"0.2.28","e":"^1.85.0","h":"09kz5jqm5y8lwx8vrz22v81sripg51r9mqhq65javmikn20am9hg"},
@@ -4171,6 +4173,10 @@
 ],
 "kakajun.zentao-show":[
 {"v":"0.1.0","e":"^1.90.0","h":"1gq721zn65f19wp9zpl78whck6gw1h3f5d6vi64x328yggkzr8yb"}
+],
+"kalixcx.instance-switcher":[
+{"v":"0.2.1","e":"^1.85.0","h":"1mg1j437p7rlfkmmd26vh8qnnl3hl7zgnyxb04qvqj174xz6cgmd"},
+{"v":"0.2.0","e":"^1.85.0","h":"0k8z02yrxhl4ngbr3ci010vhqyy72lrg3vbzwzrchk7f07hmbqlv"}
 ],
 "kalmemarq.uni-lang-support":[
 {"v":"0.0.1","e":"^1.61.0","h":"1vdlbwi8qkwxr42vdkk425nq5h9l7ac7yplnbf1m8xj9257y6n99"}
@@ -6361,6 +6367,7 @@
 {"v":"0.0.1","e":"^1.68.0","h":"1iczrhk8a14zm1fc082dz35gv4wgs6wqmgbqrcb8h87njhcwv54c"}
 ],
 "nonahisa.novel-ai-assistant":[
+{"v":"0.111.1","e":"^1.90.0","h":"0c95hxw78mlhzrlyhxn6gsm1y00fr73ia5a00wl9zf9b5sz51hd3"},
 {"v":"0.110.0","e":"^1.90.0","h":"1zza2vv2rbslsnrrg0lxmfijy523gzl8fn30viifaidf0jrg6x4y"},
 {"v":"0.109.0","e":"^1.90.0","h":"1m9m01709hb6sm502l5hnxvc63hvr13vpmaw682dan40xj68hxhz"},
 {"v":"0.108.0","e":"^1.90.0","h":"1z5wvrlw1zdjqqb4vl3w6bgiyv1a0yr1q1j4zhhg34vcl8yxivyk"},
@@ -7327,6 +7334,7 @@
 {"v":"0.1.0","e":"^1.5.0","h":"03aj8j7m6w60bnh29lca2x0f8rzif293wkhxk4wvcdi8a7ijbyby"}
 ],
 "ringo3apples.gmsh-preview":[
+{"v":"0.2.1","e":"^1.80.0","h":"09sp2n0199f39wrv6xby8nb7ww6bhz0n4q0m5g1813rqxwpcp0zc"},
 {"v":"0.2.0","e":"^1.80.0","h":"08b8vlgzrlpzsg0hq2qnhy9h1pgvyyggqswnb7z9ni952d6lm6bd"}
 ],
 "rishabraj.snip-it":[
@@ -9437,6 +9445,7 @@
 {"v":"1.0.4","e":"^1.73.0","h":"1srwban3671785xsc3yws7039npd4vq8aj281b9s8pl41syc35b8"}
 ],
 "waterplane-dev.waterplane":[
+{"v":"0.6.0","e":"^1.90.0","h":"16478hvlv5hizkh3lb7w1q9rs2bdwzjndp367jjqp088gqf9bmlc"},
 {"v":"0.5.0","e":"^1.90.0","h":"04zx41rrpdsybvz0vggpn3lca76h2s1phxzc1xxb37pwrybjd3qy"},
 {"v":"0.4.1","e":"^1.90.0","h":"1j9nbrrxc9lxhak961dysfibc40p54zjp23wb3hmn8i2xj7cqsjx"},
 {"v":"0.4.0","e":"^1.90.0","h":"0lywx0gbdzmy19zkajgb76wf0fx7rvrxrgw0qs7bv52vbd2zxdz0"},
@@ -9503,6 +9512,12 @@
 {"v":"0.0.1","e":"^1.107.0","h":"0iy0jkmwjackqq6qkgvip9fzccpg1giqrj16pdflkbhm2ry0kk4g"}
 ],
 "weoptimize.wmark":[
+{"v":"4.19.6","e":"^1.80.0","p":"darwin-arm64","h":"04v1isybqq3gjc4vas3y64dzy6q0lmbi2g5zwvrfkl450rymmlh4"},
+{"v":"4.19.6","e":"^1.80.0","p":"linux-x64","h":"084ji1mmn6d5c8allk9f0gqpgj342zvwp1cjryzaqjkwnniklaij"},
+{"v":"4.19.5","e":"^1.80.0","p":"darwin-arm64","h":"13anfv2mn86aqi4p2bdbrrhsqd9z6f30n97k27yhqjzvn6kia2vk"},
+{"v":"4.19.5","e":"^1.80.0","p":"linux-x64","h":"1d5vyjh5jbi700fq51p7dgacnwqk4pwg5w1cs3dgjjgkr0j431m4"},
+{"v":"4.19.4","e":"^1.80.0","p":"darwin-arm64","h":"1kygvzhzdx2djfv57hhpklsjhrpcilfm89lpzn74cixzgy7ma7bq"},
+{"v":"4.19.4","e":"^1.80.0","p":"linux-x64","h":"05q21nkssmajlq51v1linzk8i5d3ax2566d1jnx85j8h29sxd3gs"},
 {"v":"4.19.3","e":"^1.80.0","p":"darwin-arm64","h":"1fm09i057gbhk0v9m4dxi46rndkyz8aa5kbzhhw2p529phwb6a3z"},
 {"v":"4.19.3","e":"^1.80.0","p":"linux-x64","h":"076aw08a8zrdvc7h86j8ny2qxms2xw3p7bq5a7acxrk0cw92phgi"},
 {"v":"4.19.2","e":"^1.80.0","p":"darwin-arm64","h":"0p7lb9zwdplwf8184fmyc0zbknizr2cd8s3xfwkrn9g92j2ps50c"},
@@ -10425,6 +10440,10 @@
 {"v":"1.1.0","e":"^1.53.1","h":"0kbbazlkwqc2pkrgq0siqvxyywkdk3d6rcqlhdiqx74j9zaas1sl"},
 {"v":"1.0.0","e":"^1.53.1","h":"10xbz3haa75gbjrmkdzi2p3lzymcysqdhx70z0d75zvdrz0zhrgz"},
 {"v":"0.3.1","e":"^1.53.1","h":"13h6gqglkfnszhpi190d9333qc24058k7yjcva2gngk6fvxg1ax8"}
+],
+"ztessema.monorepo-tools":[
+{"v":"1.0.0","e":"^1.134.0","h":"0jdxjsa0ddvnaz8qa7zjn2zydd3qhdf6ivzdkzqbhncp9ws9ria0"},
+{"v":"0.0.1","e":"^1.134.0","h":"0i464ibz3i1gil5ng3ylss4bb3jg7h96ylrcjmf7jmg1jyhj94qr"}
 ],
 "zubair.shah-rukh-khan-error":[
 {"v":"1.1.0","e":"^1.93.0","h":"0f7g1jgc0d3glg1ji807vdn9klvpkcdsg667cw7di4g130px6gci"},

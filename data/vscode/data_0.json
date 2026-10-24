@@ -2174,6 +2174,7 @@
 {"v":"0.1.3","e":"^1.85.0","h":"1j08zy6pm69qmqcrlqagsxzxvdy2xy7g4zsxmrzciyrc4gvrfww2"}
 ],
 "corgi.corgi":[
+{"v":"2.30.0","e":"^1.95.0","h":"192ck4y9zw0k9dvha2qwacss1vlmw4k4c8453ai5r1l4czaa70lk"},
 {"v":"2.29.0","e":"^1.95.0","h":"1n0p5vq8qsdr5iiqcwdkch0xkqr4ngc4n2rfnsd1w302rcksmhfw"},
 {"v":"2.28.0","e":"^1.95.0","h":"1c49b1d5322c5cv2m3rb2apgqcsncm4hp26dsn0mmscd10a75694"},
 {"v":"2.27.2","e":"^1.95.0","h":"1zm7sq8xh5xjkicdn61rd6z0igqjp4c045dfc3ii4llyq904qrzx"},
@@ -3486,6 +3487,8 @@
 {"v":"0.1.0","e":"^1.85.0","h":"06bl8bmmm8qbmfgh7ljckmykgbi21gf3qr5qp2khxa00qzsnsgrk"}
 ],
 "globalpaws.simple-image-crop":[
+{"v":"1.6.1","e":"^1.75.0","h":"0ih15xmcpp132ivli7zrrakrmqnpnwrb8h9nn99z2pw5gb76cqv7"},
+{"v":"1.6.0","e":"^1.75.0","h":"11spxmhp7qsaa9c1z0mmss30s215ijrgi2qb793zm2wdslsx9i1v"},
 {"v":"1.5.1","e":"^1.70.0","h":"1x61dbf66n89nrzrwwmn2dgsd2l8xgr9qkj9cq7w9pb6fq7qws1p"},
 {"v":"1.4.2","e":"^1.70.0","h":"138qz01qz0hgr5hyz7kskidgrsy27xqjs71z6v6nsfa7m3hf6rjy"}
 ],
@@ -7127,6 +7130,9 @@
 "paparazzi-uav.paparazzi-uav":[
 {"v":"0.0.1","e":"^1.54.0","h":"1mmda7di5xd5fklw4m8j80lr0d1idsgyladyifkxax84x5y8ziaj"}
 ],
+"paperkite.sidestory":[
+{"v":"0.1.0","e":"^1.95.0","h":"0lff1fbgnr84y6fq42pfnbbajr2vn3s96i988l3jwqbwmakx80rk"}
+],
 "papersflow.papersflow":[
 {"v":"0.1.3","e":"^1.99.0","h":"0k1yzk499fqkks4axsnhfr4c4ws94qj2j65ips0szi6mxcfv87bm"},
 {"v":"0.1.2","e":"^1.99.0","h":"03w4m02y4dx6mhdhy17cnkwwg1cjzip988b56qx6wzbzcn3fkafc"}
@@ -7575,6 +7581,10 @@
 "prebenrasmussen.tttpr-al-helper-extension":[
 {"v":"0.0.1","e":"^1.20.0","h":"0raw1y8qfc4h3hdiinrhfxlz7mxb2hfdna31ncb478d2njhvm1y4"}
 ],
+"proddvtm279test.platformio-ppem281dvttestweek2":[
+{"v":"3.3.8","e":"^1.65.0","p":"darwin-x64","h":"1vq3rg73rzyqib8ayj2j1syd7czrjvir70ygs6phmi134aj7hils"},
+{"v":"3.3.8","e":"^1.65.0","p":"linux-x64","h":"0a7cwr0mv1xhfqd3hliwgn1qj09l2zc23pwnbj6smcnfl5nd4y3f"}
+],
 "protocomplete.boomsheets":[
 {"v":"1.1.1","e":"^1.74.0","h":"161kfacbwbxq11s3b8yzsdfsfafy4hw89wbq0j29911wjp107kb7"},
 {"v":"1.1.0","e":"^1.74.0","h":"1x23d2m864dxckfh45gaw7cmkx0g803jm0h2f8fnv6xs2c8499rm"}
@@ -7826,6 +7836,9 @@
 {"v":"0.1.2","e":"^1.75.0","h":"10jrfrb6laj93cadmbgsdaq9j9z6jh7lcgmqgn7vmxqm0qm0bqvb"},
 {"v":"0.1.1","e":"^1.75.0","h":"0jmza0dyzrp80vmfsg93lx1794cjiglvd3bi540inn0lw19hx50x"},
 {"v":"0.1.0","e":"^1.75.0","h":"0kcxixxal1zs44mgwyrwh4g1v5y65kzs9wxwg34ypad71hf4w7y4"}
+],
+"realtek.ameba-aiot":[
+{"v":"2.0.1","e":"^1.84.0","h":"0mcnfb00w2zmaaj6c61i6s89xb896r96x3a0zqhqqcriwpchn3nz"}
 ],
 "redcmd.tmlanguage-syntax-highlighter":[
 {"v":"2.8.6","e":"^1.87.0","h":"1h0iygs2d7d9fql2i16lphgxgiq5nghbkw4rfrh4wi7ykjca2pgz","r":true},
@@ -8379,7 +8392,9 @@
 {"v":"0.1.0","e":"^1.109.0","h":"1c4j6qyjwnfvxkk1n34xkrinlyg0kbl0xfkijrvc7hj8gxn10h5j"}
 ],
 "salesforce.salesforcedx-vscode-lightning":[
+{"v":"68.5.6","e":"^1.90.0","h":"0k0jmpqwvf1dlygjc2fs0gnlh1f91k0r61qy64fxawsjnh9cm1hq","r":true},
 {"v":"68.5.5","e":"^1.90.0","h":"1645xyhcn8g85yb6mvzk480vigyxfz666vxjymi377kx8zmfhswl","r":true},
+{"v":"68.4.1","e":"^1.90.0","h":"0ab5bfjykwijyfvws0f17cl85m7njc1f3n3v1ip7lz0qa2xb4w1h"},
 {"v":"68.4.0","e":"^1.90.0","h":"1h0pmw66q9jybcfmzi4vm21v46zp6i6qjzyz2s1hkjjsb628wkkh"},
 {"v":"68.3.1","e":"^1.90.0","h":"1vfii3bq1ms8i46wrx26a4znls1527qlasrvzxr4k3dd2x9iirm4","r":true},
 {"v":"68.2.0","e":"^1.90.0","h":"0jxwa72mkx2qhbkp86gyhcqg45wfgipb4ghk0fg9cbh5jw8g43hl"},
@@ -9236,6 +9251,10 @@
 {"v":"0.0.1","e":"^1.100.0","h":"0k1f1fb615df6nbwyfa2vbxcp3rgq4a6gmvwmjz3n05iq7hbjxna"}
 ],
 "sonarsource.sonarlint-vscode":[
+{"v":"6.2.0","e":"^1.100.0","h":"0l1qh8bvpdy0x48hgny2yg2yw5nrvmi2yj2g87ifilmn6z5kxhdh"},
+{"v":"6.2.0","e":"^1.100.0","p":"darwin-arm64","h":"0ik4qpxwflfg3b0fxp0v0sf7fnw3z0yzv6fbgfdzpvfr3q8d2ncd"},
+{"v":"6.2.0","e":"^1.100.0","p":"darwin-x64","h":"0qv9caczpv4y2jvjix4jmr5ackkgwhms5yxpn7krfrfdzpq72jnn"},
+{"v":"6.2.0","e":"^1.100.0","p":"linux-x64","h":"1b3c45lmvd7bpi2sw4gcdmz83axp3l3hw7qawasjr7kqjnck0kq5"},
 {"v":"6.1.1","e":"^1.100.0","h":"12907r3qw4zx3fyhz0lfhgl4sd4g53dmfxmddjxg0dx9ypjp0nwv"},
 {"v":"6.1.1","e":"^1.100.0","p":"darwin-arm64","h":"16jmkrza83pd7pvrjmq40hycllf0wkib90vmxwyg5nzczv520fg0"},
 {"v":"6.1.1","e":"^1.100.0","p":"darwin-x64","h":"0vxwixfylfsw4qqf0pzyzvib26rn2h57f8sg2j8lxh9c9j3kia0x"},
@@ -10951,6 +10970,7 @@
 {"v":"0.0.1","e":"^1.52.0","h":"0a0sgryaj57npmxclglc33k6lsqq036cn37lj66wkd1wn85df657"}
 ],
 "vmware.vscode-manifest-yaml":[
+{"v":"2.0.2026102400","e":"^1.75.0","h":"0ipix9v56fnzx8q9gzbvvilfi0raf14vmbzv1x52hlhq02xlchdq","r":true},
 {"v":"2.0.2026102201","e":"^1.75.0","h":"04n75jz26ck9sb3fmb1g1xsdm1pw62qiyb3q8ahbigbjsxhs83qn","r":true},
 {"v":"2.0.2026102000","e":"^1.75.0","h":"14jvf7jjggxvsyihjh6hyn5h7p7bfia9f4qnf36pczd6f3870bfk","r":true},
 {"v":"2.0.2026101500","e":"^1.75.0","h":"0vcs49arnahslpslib570sdiv2b9q82w6x02chz9fm5gjszp35gs","r":true},

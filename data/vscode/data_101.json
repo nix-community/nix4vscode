@@ -1040,6 +1040,9 @@
 {"v":"0.0.2","e":"^1.97.0","h":"14jvnalfsc5f69qpwgcrhnvv0688h7wamkkfgvsj6rnyxha9mar8"},
 {"v":"0.0.1","e":"^1.91.0","h":"1znsnjsr0bik50yjcq4xcrw271s1g0iyy5jnq958cwgzl6j7h9ab"}
 ],
+"byrizki.git-extended":[
+{"v":"13.3.2","e":"^1.72.0","h":"0jzkvdcbl9k706y7gmamxaz7jxw7q84ipbvyqcr3mdhkhx0dmxbs"}
+],
 "byted-ferry.helloworld":[
 {"v":"0.0.1","e":"^1.28.0","h":"052kl8zabd29v681hxr3il4mm5s9d0p1rdj1ah6dgnqfxfwy5jx6"}
 ],
@@ -2732,6 +2735,7 @@
 {"v":"1.0.0","e":"^1.75.0","h":"0ikbhsrd35hy588274vhl3r7fmvbyd6zhxsvcragnz5zywkqkp0q"}
 ],
 "elliat.xquery-lsp-vscode":[
+{"v":"0.9.11","e":"^1.86.0","h":"18kf8km8lnakzbyf2aczmr1vl6dhn1w9q1d2xiblb2llf6g3fcvy","r":true},
 {"v":"0.9.10","e":"^1.86.0","h":"1xz26vf4qkagkm30vfdglqhir5dhqbq7hjgm15aa2vcxzn2s0yg5","r":true},
 {"v":"0.9.9","e":"^1.86.0","h":"1hjgvw8lsa9396rgb6933qgwvapqyc462017iy4194w9s2sxsp6r","r":true},
 {"v":"0.9.8","e":"^1.86.0","h":"1xp658kzjp31p7dnz24ybzr1mlhray241x52zxldsm7ja59qchyx","r":true},
@@ -4910,6 +4914,8 @@
 {"v":"0.0.1","e":"^1.8.0","h":"126av17m8irr76yz9ii9qyi2pg0ajvk81gf2hbv70jnark412nnp"}
 ],
 "lolpaon.umltocode":[
+{"v":"0.0.7","e":"^1.108.1","h":"1wxlnaa8c24wy0zbapc0cx4vwjp448zfia2rscgs1b411438dhyy"},
+{"v":"0.0.6","e":"^1.108.1","h":"090ri01wlx8fs4s0jcl9sk6lw20mc5r1pzwaaq0v8ag67vmyw8q2"},
 {"v":"0.0.5","e":"^1.108.1","h":"019asgr652ywvrzrkmhn30x2502mwjhkx7zzq2ggg6mhqyncdmki"},
 {"v":"0.0.4","e":"^1.108.1","h":"1vmi0kxfdsjdjp19w4ypmw95bb3zs60zvbamsjlxqihl09g8rphv"},
 {"v":"0.0.3","e":"^1.108.1","h":"1rf2j2lvwy7mf6cbc8i9y1gp9k3bnki522s5v52b35k2x0yihy4k"},
@@ -5707,11 +5713,15 @@
 {"v":"0.0.1","e":"^1.80.0","h":"0hyn50s6bm4983l6mbd0n263v1prk2s4inzzdq434paklzpbmjv3"}
 ],
 "mrperfecth.semantic-model-viewer":[
+{"v":"0.5.185","e":"^1.85.0","h":"149rs6ikaz0wgnvpsx0k7vlpq1mzpg9r6nzk5zc5x8zcgiic8zjp","r":true},
 {"v":"0.5.184","e":"^1.85.0","h":"1ak2j2dbl39m338m2dqdavwg7j7wbaw3max7h95kcg8m8brh9wf0","r":true},
 {"v":"0.5.182","e":"^1.85.0","h":"0ivpav6mq7hffzy7zb70kmi5vwxwsqc86y6w9sia3cvvcjca07jy","r":true},
 {"v":"0.5.180","e":"^1.85.0","h":"14wcps69xb536chrkp2kjmslz8d7wk6bygwic6sqxrxdd956fk4v","r":true},
 {"v":"0.5.177","e":"^1.85.0","h":"15vvmrf295vfkn6v0mcrwzal6d41c7sjd6rraz1km5rndkngivmg","r":true},
 {"v":"0.5.173","e":"^1.85.0","h":"15p8np73k9g7qhbk22ls4j0imhi0bc6kgipjgk5hcyq1m2f12anx","r":true},
+{"v":"0.4.2","e":"^1.85.0","h":"0h2awv8kbyqirnj8szm7y18m74fxij9a6c8vlmk0sj0nzwlvgm69"},
+{"v":"0.4.1","e":"^1.85.0","h":"161lb2qp29l7xgsk91wbdr7jilfw2rxf46vyd6y7vny46f05k42j"},
+{"v":"0.4.0","e":"^1.85.0","h":"1nr8pn9i7m7xkpl0vfskq4c2576n2pi2mzwpzxzr1m3iq201s1hs"},
 {"v":"0.3.9","e":"^1.85.0","h":"104zn0zg2k242ngsi7qipyr9zycf0pvsgafydf1gghf8xk4z0ahs"},
 {"v":"0.3.8","e":"^1.85.0","h":"0n64wqnvsnzw6p7rsdikxzd3q2xn5b0s7mkbkmhbkqaz6xqbijdq"},
 {"v":"0.3.7","e":"^1.85.0","h":"1jnqa2wlh5amj2b2rx6s9q9a6pcz9ywjpg51hvdjxmc5i21bp3a3"},
@@ -5840,6 +5850,7 @@
 {"v":"0.0.1","e":"^1.33.0","h":"156pqaxk85c0ygz0pij0xnspgwm4q818jnjvxxz2sswd95142gxh"}
 ],
 "ms-vscode.js-debug-nightly":[
+{"v":"2026.10.2317","e":"^1.80.0","h":"0k2fygshmicbrphc4gwr7z5bh3mlg14hwnw3mr5avfyxp37zl8si"},
 {"v":"2026.10.1908","e":"^1.80.0","h":"0x44hdsc71p0x4zp6sppx02syd6j4b91l11k4g4amv73s0y1g41b"},
 {"v":"2026.10.1417","e":"^1.80.0","h":"0l4gvwxn6f8l3awcmandvmwqq0hl13cnwfs7x96z7cg49fkgb99n"},
 {"v":"2026.10.1317","e":"^1.80.0","h":"0il0jqm0mjz68ll4fhspl3w4gkm2lpxqi4lh73hwbxsdqhx4713n"},
@@ -7120,6 +7131,7 @@
 {"v":"0.1.0","e":"^1.25.0","h":"0l978mvdz7a9lqnfjbv10iqj5852rj78d83cji4ip0y1ibvw0iz7"}
 ],
 "p0l0us.ai-usage-vscode-plugin":[
+{"v":"1.9.0","e":"^1.137.0","h":"0gzrfk43i058b3fp8f8fp2bw9x7yhfigsyc907dshsn0rjpkwdhk"},
 {"v":"1.8.0","e":"^1.137.0","h":"048lscx6zrl2disbylww4r2pn6b2ja9qvjb63ghhli3c5wpzyjq3"},
 {"v":"1.7.0","e":"^1.137.0","h":"15xdd34iaqij1d1sddh2vm6r3d0cyz1fjvzxdap51wv95k2bdq6x"},
 {"v":"1.6.2","e":"^1.137.0","h":"1l5rrkfbvhmsx7n3cy9wprkzykd8v48zwllbppcm00nd29djq2yy"},
@@ -7234,6 +7246,7 @@
 {"v":"0.0.1","e":"^1.88.0","h":"1pb4jrhg9n7ahm8b9chhkrpl6awbkxlbcckl5df42q2biyna2y5q"}
 ],
 "peggco.pegg-vscode":[
+{"v":"0.2.1","e":"^1.90.0","h":"120ki4wli18k84yz5p6ywa92hgx012k6v4026xs3kpa2044jqbxz"},
 {"v":"0.2.0","e":"^1.90.0","h":"1pvirkngz846q9jpk3jw2xrhbdqxc863d5hhz1rzhp2ynbkcqr57"}
 ],
 "peggyjs.peggy-language":[
