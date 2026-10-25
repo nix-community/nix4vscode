@@ -2557,6 +2557,8 @@
 {"v":"0.0.1","e":"^1.75.0","h":"08mzgah09hig6z035z28gfijqknzh5wlcdxx1n5ynh7lmjvv37c6"}
 ],
 "edward-assaf.irisscript-language-support":[
+{"v":"1.1.2","e":"^1.80.0","h":"0wgx617jgs5bqwpk65g91vcifqnb6k6v3alcp34d6r3mjpgr3gsf"},
+{"v":"1.1.1","e":"^1.80.0","h":"1m4iynirz5jafzrrjqc5snabpjc22fc0dp6p90z150r5ms4v50yl"},
 {"v":"1.1.0","e":"^1.80.0","h":"1k2x1qm1qmm79a9p6spdh8nk6lk7zqhjnb3qgsf3cpmxv7v68ikz"},
 {"v":"1.0.2","e":"^1.80.0","h":"0r2b1czh322i9qs0jsiqhw9dwr829y9ph26cqq0sh2xn8l3r3hx8"},
 {"v":"1.0.1","e":"^1.80.0","h":"0dx7abhgizar72f0k1y32zkr6iwbi0xllvzsk7akkrgqdrcaqzq4"},
@@ -7500,6 +7502,11 @@
 {"v":"1.0.0","e":"^1.75.0","h":"08qi0484qqnmh2i64v8ff0kiqv6qnssi9fc5vh5fqfla5pzn6y89"}
 ],
 "redhat.java":[
+{"v":"1.59.2026102408","e":"^1.77.0","h":"1gd6gvbf8ash39xlq3pi4n14sk0lqcq0vykd83ycg188f602cyvq","r":true},
+{"v":"1.59.2026102408","e":"^1.77.0","p":"darwin-arm64","h":"1sr2spilcmqy7k3a0k4afni2mrz5ak5b6l8h8kn6b4daxm0m3339","r":true},
+{"v":"1.59.2026102408","e":"^1.77.0","p":"darwin-x64","h":"0ds3k7wcl2bycpbjzinxiapgi9gqjfw2wyr3k7yir2brcvi3sgvi","r":true},
+{"v":"1.59.2026102408","e":"^1.77.0","p":"linux-arm64","h":"0j698yk1p64fm2fyiyqhmnfhx415in2pccn3vxk97hy97jv7f64j","r":true},
+{"v":"1.59.2026102408","e":"^1.77.0","p":"linux-x64","h":"1vvqniniis05zmxxb9zxam7509x8n62xi9xl2687ji9i2m9cwb1j","r":true},
 {"v":"1.59.2026102308","e":"^1.77.0","h":"0sif726pllv7sikiilck5q9axms62270x7nwi54gc8arn02s58dz","r":true},
 {"v":"1.59.2026102308","e":"^1.77.0","p":"darwin-arm64","h":"1kz3xqmbsrrhb59g3wjllvff3if71dk7dhyw4apyk4h3m324qqsi","r":true},
 {"v":"1.59.2026102308","e":"^1.77.0","p":"darwin-x64","h":"0zm0fxf71q7qrq5hr5vn1jm2nf0srbrgp3psrak4wmc3p1b17ii7","r":true},
@@ -13674,6 +13681,10 @@
 {"v":"0.2.0","e":"^1.35.0","h":"1c33m10zd8qkhr7jrf7aj25qny1nw5iyr66jvgigwdsjci68cnax"},
 {"v":"0.1.0","e":"^1.35.0","h":"1g0pq31x2rj30mzz5vwamni2avajs1szdvdf4vdimxcjfwfxps5r"},
 {"v":"0.0.1","e":"^1.35.0","h":"1md1k2dmh8p4vdzzwwgxw08vy178n2vdnrp9sm41nwgg7w6hrnhp"}
+],
+"zeqtech.zeqs-database-client":[
+{"v":"0.5.0","e":"^1.85.0","h":"1capf8fj3j902z7brpygr1k1r09va6yvc2z6bkyanvcdpfr7gz6s"},
+{"v":"0.4.0","e":"^1.85.0","h":"0z9s9q24qd9vjfyq8cgwknrrnfsdf7c2qslqs2l2jd41kzx4898x"}
 ],
 "zerabba.plsql-debug":[
 {"v":"1.0.8","e":"^1.43.0","h":"1b4g5xz5khxcj70gz7167brcll1fwv1zvhvbz0apmdwhv9599m81"},
