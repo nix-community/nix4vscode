@@ -7,6 +7,7 @@
 {"v":"1.2.0","e":"^1.60.0","h":"047nq41wzwsvjwqsdqd5fi7iqkz6k0kjggfxhsrij0fm797fpnr8"}
 ],
 "20jasper.jjpwrgem-vscode":[
+{"v":"0.0.5","e":"^1.82.0","h":"1lv1q7spwnl437kyj0001y9hvymx40swl2jda0y6vpig40z2dw34"},
 {"v":"0.0.4","e":"^1.82.0","h":"1bh20jg9q7s92fsz02lv5w5z6nnz3avqzrp7908qmwr7cgsc06gy"},
 {"v":"0.0.3","e":"^1.82.0","h":"096jyp3raivdr1c67fa6yj6r152xsxi3bklbs4rac5j3h3xj51yq"},
 {"v":"0.0.2","e":"^1.82.0","h":"1np1w4wn98wwilgb422dn1n09avk7n5rz55sz2ik6v0fanh8h8il"},
@@ -430,6 +431,7 @@
 {"v":"3.0.0","e":"^1.85.0","h":"1r3kn422f2pxjbi2yrcm5ipq0c668pajlv7x6px154vsqz6wnlsk"}
 ],
 "applitools.mcp-vscode-extension":[
+{"v":"0.3.5","e":"^1.82.0","h":"0zdyrysg8xzwlbw75q254jykymwhg9m94dqq2h6c99gr9bx65rm2"},
 {"v":"0.3.4","e":"^1.82.0","h":"0x58dzybaxlpkhr90hr597x525r6j13b8nslmw7g2z6nhx31pi08"},
 {"v":"0.3.3","e":"^1.82.0","h":"0blry9wmxkmhr6rba1h0rnmw5jfzvaj5j0i9a3r8jsrw4czq48ah"},
 {"v":"0.3.0","e":"^1.82.0","h":"1wdyi825zil86y6x6mzhx5fzzkyqipwj7apff6k1v5ar1dbcz6s4"},
@@ -2966,11 +2968,15 @@
 {"v":"0.1.1","e":"^1.46.0","h":"157agqgfy0mig7p6qfhi9h3c7ia838lpy3d47x014g685gxagkdg"},
 {"v":"0.1.0","e":"^1.46.0","h":"1gsjzx59nkzd7df13gdd5bx63gxnvmyb513caijig4nyiqh40ka7"}
 ],
+"galeikan.galeikan-language":[
+{"v":"0.1.0","e":"^1.80.0","h":"1k5famqmijfb051nbgnlxh3cfj6bgrxbkcp0jb4a7wm2a1927pq8"}
+],
 "gaphunterlabs.oauth2-oidc-flow-companion":[
 {"v":"0.1.1","e":"^1.85.0","h":"08i65s1n7m6q7k2njqg87bhivsdk0s454xqcskjbzzvb1iw67dg5"},
 {"v":"0.1.0","e":"^1.85.0","h":"0m3ab0l597bq6ax4y10rb8sa8274djsqf17p6j0krmfpbn699jqk"}
 ],
 "gawk-dev.mcpgawk":[
+{"v":"0.1.81","e":"^1.85.0","h":"0qh8bjs0a42qzx2870vmk33l2minfvjx0kql1ahwr2yh61p0fm9c"},
 {"v":"0.1.80","e":"^1.85.0","h":"03fpilb73vqdbnwgwjgbv1farv9ddii4pz3ip3bh02fkrq6sc070"},
 {"v":"0.1.79","e":"^1.85.0","h":"1wln342lz3v4x45jcrhqki7nd7m7ii7hjqm7zryr77gsi11n72b5"},
 {"v":"0.1.78","e":"^1.85.0","h":"1f4nqh75nnpcrrcm5l4rdwv9sw062wib1fb4lizsdx8id50w95vy"},
@@ -5951,6 +5957,7 @@
 {"v":"1.0.0","e":"^1.107.0","h":"1kikpvlnzjkd69ixp7w4cb4xach90gqc8ngcwkarpnh81l3bjcv3"}
 ],
 "naxeris.archyne":[
+{"v":"1.3.0","e":"^1.90.0","h":"05haz5xijbiicd89md9lm2lln9f7psd34zi47nrn3wkb5p1ahg1x","r":true},
 {"v":"1.2.0","e":"^1.90.0","h":"0rmjq47sx3yjixx7vmgizr8kdpycnpr2hf4wrgw3hmsx5fdq2gy0","r":true},
 {"v":"1.1.1","e":"^1.90.0","h":"0lhjndhxqc5wcakpgjmr469dqw1lc2vlzb7mphxzp8344fyjwng3","r":true},
 {"v":"1.1.0","e":"^1.90.0","h":"0n7cnqlm9119lcmih54ibmflvy0vvsrdkjx6abi7m92vgzirsj7x","r":true},
@@ -6921,6 +6928,12 @@
 {"v":"0.2.0","e":"^1.50.0","h":"08bxmvy7j36xlja5pyc6qk2j5qjar67ba5jk1ns3fi9hbfyv4zkl"},
 {"v":"0.1.0","e":"^1.50.0","h":"138vljm4gy2dlwg38iwgai47qdin4fabyi0v2sx36vyzwj21sxbf"}
 ],
+"raditted.mommy-error-asmr":[
+{"v":"0.1.3","e":"^1.93.0","h":"1khikxxrh9ang7pqnfmhprpn2c35wkd5qh5wyayvzwx3z5q6kv1d"},
+{"v":"0.1.2","e":"^1.93.0","h":"0ba7q8ka1h3ryfx09vbg14scl28jk9q6kf5ync0piirs51271v8j"},
+{"v":"0.1.1","e":"^1.93.0","h":"0p10xkpwl4gxv96bjl2qv2k2a0wf8r2vhw7bbs77yp4prsdhfwjr"},
+{"v":"0.1.0","e":"^1.93.0","h":"172psk2vjca1f1iskyc421ca1f9610dkdhvzvnfs87d89y2i07i3"}
+],
 "radium-v.better-less":[
 {"v":"0.7.0","e":"^1.12.0","h":"1vi7pa2xs69qkia8r0g26r63qrjby748qzj89113l86ns2qdxy9a"},
 {"v":"0.6.1","e":"^1.12.0","h":"0nw7nps40y3jkcsad51m7vfckngm3x42cisghqgjjg0ba9cwb5aq"},
@@ -7654,6 +7667,7 @@
 {"v":"0.1.0","e":"^1.80.0","h":"1sr09wjcbali9m20ch94np3ssvxlvzkb03sw4mqv897dwdqavhk7"}
 ],
 "shengsuan-cloud.cline-shengsuan":[
+{"v":"4.5.7","e":"^1.93.0","h":"0nrrjbpi6v1ghiq0v12lg2r8c2d42clcvf9in0d9bfaaw8qpjkv4"},
 {"v":"4.5.6","e":"^1.93.0","h":"1jrynmr36880ja9cp4wnpnr6v0minr45g93adcnkniflkh3rwgvh"},
 {"v":"4.5.5","e":"^1.93.0","h":"1s1d0dar6jrpmm350lcqq9ibc9fv98gfgysw5fca7yy821fvkk69"},
 {"v":"4.5.4","e":"^1.93.0","h":"0cv3m1v5iigbn2fhnm0fmnrm54gn5hzxz7gvgdf6srsifpidlfnr"},
@@ -8869,6 +8883,9 @@
 {"v":"2.1.3","e":"^1.60.0","h":"07p24wg03r28di2rgj58vf131f56ylv4yp17dhg9qa2wv1wb2j5b"},
 {"v":"2.1.2","e":"^1.60.0","h":"0r4gxj84db3mjx3vv7q67jr0z5xkb3p79q0xyjn03phn5rdpsgff"},
 {"v":"2.0.0","e":"^1.60.0","h":"1v3xiqsswk92bzipxqqavx7xvd27dc0iv724pm7bs80w5mr8qc4w"}
+],
+"warnain.warnain-color-picker":[
+{"v":"1.0.0","e":"^1.85.0","h":"1883c4fn2w4zhrm6sjd29krj2x71mxl8w7mxlcrf4cpbd9ma0a3v"}
 ],
 "waterb.coin":[
 {"v":"4.0.5","e":"^1.68.0","h":"10l6gz6ra5lbz8rgcspyn2q905rqix86dbkgggkxfs3crkmzysh4"},
