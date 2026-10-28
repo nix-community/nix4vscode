@@ -641,6 +641,7 @@
 {"v":"0.0.1","e":"^1.77.0","h":"0q81qc99cm9chrraz0pr7nw5biqiam51ncwrvgy2ak1drypcsm1l"}
 ],
 "aphp.fhir-mapbuilder":[
+{"v":"1.8.5","e":"^1.91.0","h":"1pnwpk0in5309s66gpr32k7wgwimn6hln8ysssiyydqcqfg8dym7"},
 {"v":"1.8.4","e":"^1.91.0","h":"0nrmizikrm3yp723qnrbbd2wb9ndqa7v0gmy256vg2x1rc3qjs8v"},
 {"v":"1.8.3","e":"^1.91.0","h":"1iymr0zmkpqcmj2miqcvdqf5a7iyq1dfixkq7a8cdqx559b5h5h5"},
 {"v":"1.8.2","e":"^1.91.0","h":"1ffxdfbmlycyxv28in4x9z85g0yj2llzy4j27014hgaq9skg4c6m"},
@@ -8362,6 +8363,12 @@
 {"v":"0.1.0","e":"^1.85.0","h":"01y34mb6nxa8b9h5lm8gf63lkxqq2yj9a3rl559jgzlp6ghc0hra"}
 ],
 "rust-lang.rust-analyzer":[
+{"v":"0.4.3099","e":"^1.93.0","h":"192jf1zm441m9sg2hfa55qij3jhsyn17akq9sn6sxf1s3sw3f4k4","r":true},
+{"v":"0.4.3099","e":"^1.93.0","p":"darwin-arm64","h":"1gmcymxvq5xd2cgzryi0db5xmmvgsymvdggvqhqmsy2s8v8wpm22","r":true},
+{"v":"0.4.3099","e":"^1.93.0","p":"darwin-x64","h":"1libw424945fr4pwq2n5jw2i5pvjna3vpbcqsfg1375rhq13z7kq","r":true},
+{"v":"0.4.3099","e":"^1.93.0","p":"linux-arm64","h":"0nbqaqk9pb4ydia7lx778g9y1zhqnzhlwlp145bf7sfxlllrp09n","r":true},
+{"v":"0.4.3099","e":"^1.93.0","p":"linux-armhf","h":"1lq9w155vc0l3alzsvrhpha0a96c2208ihxxkxrrljzmbsdk1zyn","r":true},
+{"v":"0.4.3099","e":"^1.93.0","p":"linux-x64","h":"17didxrxnd7vlgwxnw9fnsc53fj5wdlc4ljpy51nkfija7hk7mqy","r":true},
 {"v":"0.4.3098","e":"^1.93.0","h":"17b32snvp8rvz1wzsgdpwnnhgpnsi84rj07mp48i9qccr1q2nh63","r":true},
 {"v":"0.4.3098","e":"^1.93.0","p":"darwin-arm64","h":"0fg0blq3nihlmarxgqx0kii4fcwnc9rw1dwzjplq6jv7awxmk8r2","r":true},
 {"v":"0.4.3098","e":"^1.93.0","p":"darwin-x64","h":"0gljpdk60ci46kbzl6l14im3z71haqcj4x14bddspm3hwil68qxd","r":true},
@@ -18573,6 +18580,12 @@
 {"v":"0.0.1","e":"^1.65.0","h":"17347k604jn1m7drbcc2w18v6r5ahvc8g736n88s4md2gz8syfha"}
 ],
 "studiostoll.brand-intent-lang":[
+{"v":"0.23.0","e":"^1.70.0","h":"0qym7pg5vq9415v93r4j74q0mgjbxbx3qa1ns7vwig2ywxsm6a7v"},
+{"v":"0.22.0","e":"^1.70.0","h":"1s0x2i8zblvfg7d8hglq1vf14xlssq8cqi53cm5z103ib45zky3p"},
+{"v":"0.21.0","e":"^1.70.0","h":"10z23gy8rnmwnv1fwj3kjawawscyd77jm7gwia5d1ycw43v9myhb"},
+{"v":"0.20.2","e":"^1.70.0","h":"1sxxgysfkkksydn02c2bdgl7mflyzigv5vja8fgaygbm7kd32kbm"},
+{"v":"0.20.1","e":"^1.70.0","h":"011096h83svqj8xy03fci8qsfvw9f8i7dy72gyacypzz90kwnzmh"},
+{"v":"0.20.0","e":"^1.70.0","h":"07acn2ixjkbblbm78ggn1aczl7lg7kbg3bpjvdx6v7kjggycg2mx"},
 {"v":"0.17.0","e":"^1.70.0","h":"0s0mh00d3yyaliryhds130rff5mihz67rxcfripkzqmsjfc6bwkz"},
 {"v":"0.16.0","e":"^1.70.0","h":"0myhn1v8sslv1swi9zj4fn8r7pvfyrr64yxpsn4fbilhsgm7v7yd"},
 {"v":"0.15.0","e":"^1.70.0","h":"13x091y7fcv43x3rizj79ssc7vz5kpvg3sfyw5077ri6hsglzz0y"},
@@ -19329,6 +19342,8 @@
 {"v":"0.0.1","e":"^1.20.0","h":"07wahl5jy1r51hgpa86aqhg7yw1fxciknz9dh8bq7flk0irczgkj"}
 ],
 "vithrive.deepseek-harness-vscode":[
+{"v":"1.1.0","e":"^1.75.0","h":"0j2x6wmgsy7xh3y56a7bslrzws4fx2d14d6jqyz31wnbkvpsh31k"},
+{"v":"1.0.2","e":"^1.75.0","h":"0dd7z2wgjqfdxcpar0m7wn9xva11pghlb0c53nsjargwvvg6i4dm"},
 {"v":"1.0.0","e":"^1.75.0","h":"0w5kpdrgilkzqvkznpgia0bvlj2hna1lbm1gy5qgis4y9pjjglj9"},
 {"v":"0.8.45","e":"^1.75.0","h":"1fis1q1ij5cz9igfy9yy9v5wh4gp9f83kf7a364xh44mj73frc82"},
 {"v":"0.8.44","e":"^1.75.0","h":"0gjdz02f1jdhvb7bs5xl974449klijz00lrbszdfag8mf5if11jl"},
