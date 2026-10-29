@@ -2153,6 +2153,10 @@
 {"v":"1.6.1","e":"^1.30.0","h":"0qkqf5pd5x8r20275ahxclgaadagq04mln0lhkmv6w34n5qx6ibw"}
 ],
 "devprod.vulnerability-extension":[
+{"v":"1.2026.1028001","e":"^1.100.0","p":"darwin-arm64","h":"1n5l87bvkifl5vlx2bbwz3paqn85vb23sl0r8mpbag1ikyxyf7fi","r":true},
+{"v":"1.2026.1028001","e":"^1.100.0","p":"darwin-x64","h":"0ysmjrgwnpvyzn85h4x2gksz5l14bjx5v54bbbcjrj4zwqv5d5bk","r":true},
+{"v":"1.2026.1028001","e":"^1.100.0","p":"linux-arm64","h":"05iqdvzyb2bqin740hrir8qffpbxvv2c8pfkcskbyx7mkkhdygv7","r":true},
+{"v":"1.2026.1028001","e":"^1.100.0","p":"linux-x64","h":"0n61rvazqf3mgfpxncj7146y2a3mrbjzl7b89mx8zwy92adps6hi","r":true},
 {"v":"1.2026.1027001","e":"^1.100.0","p":"darwin-arm64","h":"0in1jiasj6rh986qn3bmlfiw13cgk274yvz5ca22nz0nn0g8vcyh","r":true},
 {"v":"1.2026.1027001","e":"^1.100.0","p":"darwin-x64","h":"1vacllg002dbg72m04yjk7x2rjgzc542927lr9yxlj96h30qbvxz","r":true},
 {"v":"1.2026.1027001","e":"^1.100.0","p":"linux-arm64","h":"05w2yhbi420wg3x6nb9xqzkjkpqbqi0mgv2bm6jqxlv0fc5hr2s4","r":true},
@@ -5896,6 +5900,7 @@
 {"v":"0.0.4","e":"^1.83.0","h":"0bxznhny25kp79prj62gzlv12w84dg4az19mdbs9kn3ic0rzh3q5"}
 ],
 "grinev.boardown":[
+{"v":"0.12.0","e":"^1.90.0","h":"1n24cr4fmabp3rf272ln2lwbshyh6lhwhxbhgjhnamr8f5rvijix"},
 {"v":"0.11.0","e":"^1.90.0","h":"1x7cq3664fm7p5rrj1620ddfmfxq5d17ylx8cr5vw5vpr2zb93yp"},
 {"v":"0.10.0","e":"^1.90.0","h":"0gs5n714sz9q23zh0d6jd4xj8vbza7zqy1cs15vyaif4xj5q900m"},
 {"v":"0.9.0","e":"^1.90.0","h":"0zxcky7bjjmkdjhk3pxfd4y3wcd59qfczfpdwyjs3xbxg28q45mz"},
@@ -6342,6 +6347,8 @@
 {"v":"1.0.0","e":"^1.46.0","h":"032nv481101m6pcqq5gwjcdyb3pxvb2b93id156i04s53v1fx20k"}
 ],
 "impleta.vcr":[
+{"v":"0.0.5","e":"^1.96.0","h":"0szzspvly03ipihzblymayi7qghs24lvx3dzvd0gis6cpnzxrlwi"},
+{"v":"0.0.4","e":"^1.96.0","h":"1dwnslhfr4jvjycvfhyi447wdqbp3x2cx2vm2nmv5fcr9rhkfd5m"},
 {"v":"0.0.3","e":"^1.96.0","h":"005lyjads8qc6s66zd2i5xcplgzfzw12an3ymxlf5sxvh0fimbm8"}
 ],
 "imsachinshah.codekarma":[
@@ -9113,6 +9120,9 @@
 {"v":"0.0.2","e":"^1.98.0","h":"0sxp5llm6mipkm4am75d3yq9r2k1m33p34r1d57lfqw76g8yv10q"},
 {"v":"0.0.1","e":"^1.98.0","h":"1sldvvixdsygxk7jbgamziz9zqfx8ry1wifflzwhbw9lp1nd5pzj"}
 ],
+"pradipsodha.tabs-emoji":[
+{"v":"1.0.0","e":"^1.85.0","h":"0ldh043fv5v75jxy7lxsrwi2292qdbcpiay3ivhcyw2r1p3n63lh"}
+],
 "prasertkana.sqlite-sidekick":[
 {"v":"1.2.32","e":"^1.129.0","h":"1n8mlfajh1sv0nhrv4insbkc0jmhp7wyi0r96ivxhqrvnqwszzqd"},
 {"v":"1.2.31","e":"^1.129.0","h":"1n7ihmck11j733kxh5xxhi8pfc1yb4wr5h6k98wkklim74pn84iz"},
@@ -10898,6 +10908,9 @@
 ],
 "utilitypro.css-utility-autocomplete":[
 {"v":"0.0.1","e":"^1.95.0","h":"1rcbpcbp0xj0d61fam82kz0wvarzlqc3f0acnbdf538jdwm0qdff"}
+],
+"vahidcode.vahid-code-notes":[
+{"v":"0.4.0","e":"^1.80.0","h":"046w15v03c4dw0d31zgx7ijp772k7rls7hmnqd2af8xr7v4dlxka"}
 ],
 "valentin-l.vscode-weathr":[
 {"v":"1.0.2","e":"^1.109.0","h":"1kfay0d986y2wiiiiw13aspdhwm2wz29hbb7qhbbvbyz2h7rn6y3"},

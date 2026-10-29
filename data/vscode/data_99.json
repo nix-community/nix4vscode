@@ -499,6 +499,11 @@
 {"v":"0.0.3","e":"^1.98.0","h":"1crdb67dm6782cy5a4442zp01zygmw3xnw112ggvw7afd97sff7g"},
 {"v":"0.0.2","e":"^1.98.0","h":"0xbnikp4wiyzhgr4jw8j5zcvf90a4isf9xsj3bqxk9ak8miq76r2"}
 ],
+"amr-metwally.git-desk-controller":[
+{"v":"0.1.2","e":"^1.96.0","h":"050vx8k6jb1zhlw20nfqbzy216hcrd0b8r7k8ws5m32jkyvkh3ql"},
+{"v":"0.1.1","e":"^1.96.0","h":"1zin9flq9sq5ly1g8f6ksm49dffaq61yia4iqinmmhi0zbiv7p99"},
+{"v":"0.1.0","e":"^1.96.0","h":"0li4bhf0yg831ajwwgdx0s96xajj41anrzagy085n5mzl3yr31sd"}
+],
 "analogdevices.cfs-ide":[
 {"v":"2.3.0","e":"^1.101.0","h":"0izlrhdi1w94ivwbz84f6rn2sq5fycnvbxgfhcd10ks5nl3q6acj"},
 {"v":"2.2.1","e":"^1.96.0","h":"0y065dhywb2rgm72w2cpk2sn6dprn68jvkja6n36gdw0220znjwr"},
@@ -1852,6 +1857,7 @@
 {"v":"0.0.1","e":"^1.85.0","h":"117s7swmw9gcqjsg0iazp971mm279zw2y1nh1x42da1i1xw1mkj4"}
 ],
 "dehilster.nlp":[
+{"v":"4.3.19","e":"^1.95.0","h":"136ws0449y2zwjgcvb1waspza8fm50yl7bagxkyilj7cwmqam8sp"},
 {"v":"4.3.18","e":"^1.95.0","h":"1hisdglgbhkqd07kwy60vkwb5zksllyw1535582p8fn53yq5iy06"},
 {"v":"4.3.17","e":"^1.95.0","h":"1bh2vdiwsp3vy08kkhnrjjdhirnx5hand15dfg6f5d1409pyk037"},
 {"v":"4.3.16","e":"^1.95.0","h":"10rw70rwac2fzbfd9rcksaqivm2dmpqk9c6bggzb81b1llyw7mdz"},
@@ -6828,6 +6834,7 @@
 {"v":"1.3.38","e":"^1.70.0","h":"1c4d9fc6rcav0kfclkzj97sy73pinn1q780zam94ds6r8zwdbcvc"}
 ],
 "muri-muri-socratico.tutor-socratico-c":[
+{"v":"0.7.0","e":"^1.100.0","h":"14kgbv3pfy6mcpix7vwgvjh64lfxzwpd4yrv7l4afsr9fqiry789"},
 {"v":"0.5.0","e":"^1.100.0","h":"1k43mn1wq4lgx3lxzr8ifmznbld52f5xbk1050cs6d8vmxlxgsfq"}
 ],
 "mushfiqurrahman.intentdoc":[
@@ -8352,6 +8359,7 @@
 {"v":"1.0.0","e":"^1.72.0","h":"1pw9nqjy33li39p0wdddgpadmc4iv84y609vdzwlc49b712ks6gy"}
 ],
 "rsdevtools.codeguard-ai-scanning":[
+{"v":"1.1.0","e":"^1.85.0","h":"0wrasmab8hm19syv0q92kqs4wcfi9awgbp3qakcxwhsk92b8m4in"},
 {"v":"1.0.1","e":"^1.85.0","h":"0x1qwsk7ps9js54xyp3kj5458jbmhmqkhbb6al9darzcc8dkvy4a"},
 {"v":"1.0.0","e":"^1.85.0","h":"1x2cmw8npyb6cg12bc9v299vdcnhx0hwyglrb38rymrdqffpjpbj"}
 ],
@@ -8363,6 +8371,12 @@
 {"v":"0.1.0","e":"^1.85.0","h":"01y34mb6nxa8b9h5lm8gf63lkxqq2yj9a3rl559jgzlp6ghc0hra"}
 ],
 "rust-lang.rust-analyzer":[
+{"v":"0.4.3100","e":"^1.93.0","h":"16c9y0r50jbbxf0lzgdksp2gq09zd7n6j1r77l5s2zh2vlgpankw","r":true},
+{"v":"0.4.3100","e":"^1.93.0","p":"darwin-arm64","h":"0gl2bmp5c7s15zyfkrzzhzppvngx7nrnfgydcw6ds65fxikkxm95","r":true},
+{"v":"0.4.3100","e":"^1.93.0","p":"darwin-x64","h":"1h7dplsxrcy84xpzxwvcs17apxc4ldb5z4qypd4l14vmc1hxhfsa","r":true},
+{"v":"0.4.3100","e":"^1.93.0","p":"linux-arm64","h":"1la8fw2nqp3mgxjfi41akj14njwm7w1pi4yg3xbgx49c5bfag4p0","r":true},
+{"v":"0.4.3100","e":"^1.93.0","p":"linux-armhf","h":"0184kfv26lvw8qxbvcljsqw28l3g54v8hzsqls1gamj3ayx2yd5z","r":true},
+{"v":"0.4.3100","e":"^1.93.0","p":"linux-x64","h":"0340gd9lg4bxbmr024yq6bjldhr0mz9kdhjh7xl6lkwslznc1x80","r":true},
 {"v":"0.4.3099","e":"^1.93.0","h":"192jf1zm441m9sg2hfa55qij3jhsyn17akq9sn6sxf1s3sw3f4k4","r":true},
 {"v":"0.4.3099","e":"^1.93.0","p":"darwin-arm64","h":"1gmcymxvq5xd2cgzryi0db5xmmvgsymvdggvqhqmsy2s8v8wpm22","r":true},
 {"v":"0.4.3099","e":"^1.93.0","p":"darwin-x64","h":"1libw424945fr4pwq2n5jw2i5pvjna3vpbcqsfg1375rhq13z7kq","r":true},
