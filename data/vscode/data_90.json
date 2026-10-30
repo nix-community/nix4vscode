@@ -4222,6 +4222,7 @@
 {"v":"1.2.1","e":"^1.98.0","h":"08grq13czwm744hdzyghvvddcfn0xnhmhb8627kb56biijrmv8c3"}
 ],
 "jiiyung.jsql-extension":[
+{"v":"0.4.0","e":"^1.140.1","h":"0dp4lzpg0rl1vd5r3qdyv11g4wxy5mlpzgdwv8ln59046337fd7n"},
 {"v":"0.3.7","e":"^1.140.1","h":"00i622yi4lagibr35rcnb1jmnlilzw7c1092q6ab7b1rq66cq5k4"},
 {"v":"0.3.6","e":"^1.140.1","h":"094vh4b52988j7hg84vc33mg1ym3jfx6mdqfxvn7wnmq2f9c75hm"},
 {"v":"0.3.5","e":"^1.140.1","h":"02g7chjsy55qw6grlwab1czzrw39659bi6rh44g8wry2gi283qwm"},
@@ -5693,6 +5694,7 @@
 {"v":"0.0.7","e":"^1.120.0","h":"0sl2r8a0ab76hlc7pp7ybbdq49znp714b407wh6aj4lla606smsh"}
 ],
 "mcpp-community.mcpp-vscode":[
+{"v":"1.0.1","e":"^1.91.0","h":"0hfppw9vdbpw494nzjwfwksqac8yq4cg8y8imhif8806mvs6y14j"},
 {"v":"1.0.0","e":"^1.91.0","h":"0vnk5l2ayc4nlgafavd9yqfm9zz5ciaj000m5sw18pia7asnrn67"},
 {"v":"0.9.0","e":"^1.91.0","h":"1bjcvsdln246h6rbl17xk8qvh60jwgzryyklgf4pfi9jq72h8a4k"},
 {"v":"0.8.0","e":"^1.91.0","h":"0mncnqv3x15ml0av78888r3qx4hvjyd16gnsdy83njxzc4fcd5qw"},
@@ -6133,6 +6135,10 @@
 {"v":"0.0.1","e":"^1.19.0","h":"06bng0fy8csn0harf2s44w02mp4hgsqh46gnzyxz0nasjj0ai137"}
 ],
 "ms-azuretools.vscode-azure-mcp-server":[
+{"v":"4.0.4","e":"^1.101.0","p":"darwin-arm64","h":"13sdx77njwsljf9wc08w7119sddcs4xm48yff04bibfww93bqwll","r":true},
+{"v":"4.0.4","e":"^1.101.0","p":"darwin-x64","h":"1r5kvn2bcbv4jvy2vs46yg50k4xr9b90m33klbyal6w38mc5v5vj","r":true},
+{"v":"4.0.4","e":"^1.101.0","p":"linux-arm64","h":"1a5rzshfjclvbygvl634267f11q7s1jqwcdy6p9qjix8525pdr8p","r":true},
+{"v":"4.0.4","e":"^1.101.0","p":"linux-x64","h":"0f6p9blmvj36dldzsad9xqkwdyixp1hgyg7m1jjbmqfgfbli0jxg","r":true},
 {"v":"4.0.3","e":"^1.101.0","p":"darwin-arm64","h":"1vsxvzj9bv2vlliam2kkrh90y5vsbmhgcbl36yrm4xaxwjhxy2kb","r":true},
 {"v":"4.0.3","e":"^1.101.0","p":"darwin-x64","h":"0p6iv14qk4im73rh0p2ifm3m4pqn5g4rqjdqgai59953m6xky7vp","r":true},
 {"v":"4.0.3","e":"^1.101.0","p":"linux-arm64","h":"1jzswvxqxdq3zp8hwncklz7y4jgx18ik2b303rrcl0k7k4kn80rg","r":true},
@@ -11550,6 +11556,7 @@
 {"v":"0.0.1","e":"^1.66.0","h":"1zidfpzdsda289lj1aj74bcl46d8b70w62khnv9lqvn43vq5rk25"}
 ],
 "wandelbots.wandelbots-nova":[
+{"v":"4.3.0","e":"^1.99.0","h":"1w0zjs6v8n8d4c5mfpj7h6xrfb7ijfjs1kw21isddiy0z762imfj"},
 {"v":"4.2.0","e":"^1.99.0","h":"077qhmlfh86229r6383msxilm76azf0qr2c24f19dwbrmbdkr12a"},
 {"v":"4.1.0","e":"^1.99.0","h":"0qziwbj7mvjhmmjyfxmp3lfpz3p9si9b3s8iy4ybiz2yz6q0an2j"},
 {"v":"4.0.0","e":"^1.99.0","h":"0mhjm6dwr6cqq4a59qbzcfrhhz4j66dn73jm0yjjiskn7ky7h1yb"},
@@ -12107,6 +12114,7 @@
 {"v":"0.1.0","e":"^1.96.0","h":"05g6ph9sjsb3bxykx7jy5bkdmmkry621al90m11f7rzyhqhlgsda"}
 ],
 "zglass.sidereal":[
+{"v":"1.5.0","e":"^1.74.0","h":"06gjn399hsnp5jslq4ydxs86knybx0chr1y0p6nybnk9iy2a0ngq"},
 {"v":"1.4.0","e":"^1.74.0","h":"0g8shh04saf8dd3vx5j5jc6d5fandy51vp0ik1ihy6ckn3h9xnyi"},
 {"v":"1.3.0","e":"^1.74.0","h":"1lj5jp9maf1422x95wrkqq88qc3gbzjsy1sjfby9dmchy64bpaib"},
 {"v":"1.2.0","e":"^1.74.0","h":"10wk9yq6h1mm8zw7v8xqcmd4qfxfi54ckrkp5rwk93zhk41n7495"},
@@ -12157,6 +12165,13 @@
 {"v":"0.3.6","e":"^1.104.0","h":"1p1jg4a8dxmq91sp79c4r97b40ba9rsz3nw1a2r12n817pgwc5gc"}
 ],
 "zoocodeorganization.zoo-code":[
+{"v":"3.93.100695","e":"^1.100.0","h":"0l86j258fwk5k0m41d1adlgz36i46iv7rv5i9rgms3xl1q34wf04","r":true},
+{"v":"3.93.100694","e":"^1.100.0","h":"0ii24nm20dnklvqmhhd3g4kafmdfcyrpf5z4aqiaj48qsgppj4ri","r":true},
+{"v":"3.93.100693","e":"^1.100.0","h":"1ak45vbzm71aj4dg3k354yw3pdmrzypy2lwf5vykim0kc6xcd94q","r":true},
+{"v":"3.93.100692","e":"^1.100.0","h":"04z4c59fn91ba25dg456mgnjg433divi090m4csgxl0l26c9zjml","r":true},
+{"v":"3.93.100691","e":"^1.100.0","h":"1ynglrs32jz0qyfbfmaf1hckg558194a364xr4l00fma3bdsyizr","r":true},
+{"v":"3.93.100690","e":"^1.100.0","h":"0xrmd01hyryzxqz3xwccxz1gn4l0m8wv14whw7xzbkmd4j68ghax","r":true},
+{"v":"3.93.100689","e":"^1.100.0","h":"0qflw3nnfn5p4jj3510n7iwvjdrxy12wvh4cr8577rnvzs2fcpkz","r":true},
 {"v":"3.93.100688","e":"^1.100.0","h":"038zrhvjwplbra0ad4fags32n492z4fdprjq488a1bxj4q0dgyxn","r":true},
 {"v":"3.93.100687","e":"^1.100.0","h":"1hcvvqkswlvp7gi4h7bpv4sw315wfgcl41mkbkia31x0b6nhhrrf","r":true},
 {"v":"3.93.100686","e":"^1.100.0","h":"0gias471j7klhwxi2xdqkqs22w8hg4clv3sdabhp5rk0pri6p1jn","r":true},
