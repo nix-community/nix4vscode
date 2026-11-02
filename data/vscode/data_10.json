@@ -574,6 +574,8 @@
 {"v":"0.0.1","e":"^1.91.0","h":"0fg86fmg2d9fg5hlj06ps6ll7vq46a1lh87r3bb6vk5d1bafnir9"}
 ],
 "asagi-dyce.staccarta":[
+{"v":"0.0.51","e":"^1.90.0","p":"darwin-arm64","h":"1f25n8q99axcvyx3l2x52b1w0215ybdyvxwjsjxfmssv8492bqyf"},
+{"v":"0.0.51","e":"^1.90.0","p":"darwin-x64","h":"1lq09zna9h88hxylym1dxsvzgp0cyl3ga6lk81g50s6aziyadwfv"},
 {"v":"0.0.42","e":"^1.90.0","p":"darwin-arm64","h":"0sh4z4nqg9dcrnggall5sxan2mq13ffg2dfa12d9bp4811q1bf1q"},
 {"v":"0.0.42","e":"^1.90.0","p":"darwin-x64","h":"1l4w49lc7qpkfvbff3k5gw3jaa5kw873v99gfypvwhk6ad0007wz"},
 {"v":"0.0.39","e":"^1.90.0","p":"darwin-arm64","h":"1rjhynl99hpcw1whmj2fcanhy0jbpw310vxcdk4f5nq15ks4n6h9"},
@@ -1104,6 +1106,7 @@
 {"v":"0.0.1","e":"^1.65.0","h":"0in8kh135kr3ngzf2c9b5a5fbrx4nr07rbiwyjbak7f0hf3a95kh"}
 ],
 "blackscythe123.claude-coding-mascot":[
+{"v":"0.1.6","e":"^1.85.0","h":"1wkf7vl7q4r5manwiwms2z757ps2a563gh6zrzcm4w1jfjwx5hxv"},
 {"v":"0.1.5","e":"^1.85.0","h":"00njbrvs9x578rsvnjd82h8ahwn125brxhfnyn1nnrfaln9mgf5d"},
 {"v":"0.1.4","e":"^1.85.0","h":"0q7z20j1sh0qvinfwbs6ksmpwnvpa0yxsyk1pmzssqm8k1qxwxpw"},
 {"v":"0.1.3","e":"^1.85.0","h":"05yqwqcb2gbxr51348ywh38q8amnpdkfwsxag1pbgz3d160dp1r3"},
@@ -2335,6 +2338,8 @@
 {"v":"1.3.12","e":"^1.107.0","h":"152va2f12ax7d84bxnx9im5w042ink23x7cb729jg5742sixvka4"}
 ],
 "dmsql.dmsql":[
+{"v":"0.9.1","e":"^1.85.0","h":"1qm0f10bcbx1i1afpnvwj9ajdvqsvx3dnq45js7vhgbj3mrvfp67"},
+{"v":"0.9.0","e":"^1.85.0","h":"1lxmjh00g0icw7d9daqsdrvc572c9dnzc58nwpcxx1pc0gc6527y"},
 {"v":"0.8.45","e":"^1.85.0","h":"1kcyfw3vrmx7pna4ssjccfir6bs15wcb32gjn210j4c8xwgnpvj8"},
 {"v":"0.8.44","e":"^1.85.0","h":"1z4nhw8gamvn7xpis1iyk7hxq604wr6vfs6vpx0g6gaj9qyp9bnc"},
 {"v":"0.8.43","e":"^1.85.0","h":"029p9c2gvsbxl4rsz02a1b7lf1iss8l9skcv1s6n690xcz56y4b8"},
@@ -2940,6 +2945,7 @@
 {"v":"1.0.0","e":"^1.95.0","h":"02c2b9365n6isqpj984b4lbdvnhdj6djc2ki342s9q6x8ryqyaih"}
 ],
 "fintechstory.codo-agent":[
+{"v":"0.84.0","e":"^1.90.0","h":"0cfa1af346ij364dm6ck5d6b490w3f08n9l26w47dziv1bgd91cb"},
 {"v":"0.83.1","e":"^1.90.0","h":"04z2l0m4v055znwn1w7dzs0dd7srs6qk0f27rp0ag4c03a2432r8"},
 {"v":"0.83.0","e":"^1.90.0","h":"0j0hla1842z7sbhc0cpmvl210pwgrkq358yh6clicyljl9ijcs6i"},
 {"v":"0.82.0","e":"^1.90.0","h":"1h4jkm0am7vcr1880xmmlw6rqrzwl2xmcnbxgharihnzfj39wf7a"},
@@ -3497,6 +3503,7 @@
 {"v":"0.0.1","e":"^1.64.0","h":"0aqnfjp5l793vvyxm4l2zfb3kxh03dzvkidzfl5q5k50xbcdsl0v"}
 ],
 "greyloopcodingllc.orgloom-vscode":[
+{"v":"0.9.45","e":"^1.100.0","h":"1d9pzyxaff1560h71pskzyhgkjhvsfhvlqg2scbdjxirj49ssg1g"},
 {"v":"0.9.44","e":"^1.100.0","h":"1ba98sx460kfksbk8j1yfkpbxkvnyvwmr4lsj66rzl5ysra57xhw"},
 {"v":"0.9.43","e":"^1.100.0","h":"08ywlmrcrgbnrdsj8zhfhvvkf941jwr9iig1jabsvaal6rr8n36n"},
 {"v":"0.9.39","e":"^1.100.0","h":"0c7d4arzii4kvhay2gs0wff0rkmgk7v5w8rnr1kyf4gygk7f91bq","r":true}
@@ -4425,6 +4432,14 @@
 {"v":"0.0.1","e":"^1.12.0","h":"0cczp16j9s2d56xwyik4vv94npmypsznsydzn5z5bxqxd9g1dhyh"}
 ],
 "jbearak.raven-r":[
+{"v":"0.23.2","e":"^1.82.0","p":"darwin-arm64","h":"1dmpj7ywdjy2f0knjz7alh56b2dry5l75jvcl74lw829f6m1fdmc","r":true},
+{"v":"0.23.2","e":"^1.82.0","p":"darwin-x64","h":"09q4fzn7kr7x7yk8gfxzy7djhh2k9x4imw9wb97vz7xmkvj101qq","r":true},
+{"v":"0.23.2","e":"^1.82.0","p":"linux-arm64","h":"01yldmqdh0mdm9nk8v81rpzxw93ixwhpfcwm74paa7gbvm90svr3","r":true},
+{"v":"0.23.2","e":"^1.82.0","p":"linux-x64","h":"13s6zr47qjirfna05a0vnfb7khjl7ihxdpzscpjzqbnwha5y8fky","r":true},
+{"v":"0.23.1","e":"^1.82.0","p":"darwin-arm64","h":"1a0dh1fqhlq7354xfywnmjiqh8ah7ghrqfcwzqn5lvmdka02h8im","r":true},
+{"v":"0.23.1","e":"^1.82.0","p":"darwin-x64","h":"0vy64ryyahx115phpcz6xj235cq8fg436njhzcxix5jqpdp3phnr","r":true},
+{"v":"0.23.1","e":"^1.82.0","p":"linux-arm64","h":"19s7gvi3nb2yp5nrmlm72sd90qyf8b9c902gni82birwdslc7nfm","r":true},
+{"v":"0.23.1","e":"^1.82.0","p":"linux-x64","h":"0282n8195jdnwclxcgw9g57c49rd1qa2idw360cc6rhk5gliiaa6","r":true},
 {"v":"0.21.1","e":"^1.82.0","p":"darwin-arm64","h":"0z0n14xxzwb33n3rw5i7h7zqygyxzslbz1ahypcmys2pgxm4z1z4"},
 {"v":"0.21.1","e":"^1.82.0","p":"darwin-x64","h":"1zx73cmabwlyfs618i4wv7gjzf8fqf31s8a0akpq66vz90mwy97a"},
 {"v":"0.21.1","e":"^1.82.0","p":"linux-arm64","h":"1whhgh8a6yln1hh1rfb8zs16l4n0fgammdp0b5zbf4ln0c3acvaf"},
