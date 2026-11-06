@@ -486,6 +486,7 @@
 {"v":"0.0.7","e":"^1.15.0","h":"0bbqqknb68i8plmxm3qf6h6ipxjzgdmllf48y7djdg48xpdhpv8q"}
 ],
 "hbenl.vscode-mocha-test-adapter":[
+{"v":"2.14.5","e":"^1.56.0","h":"0bb8cilc98zradrr3834kxj0cr9vmzrzrjx2lsxmyf6c9pn9d1dv"},
 {"v":"2.14.4","e":"^1.56.0","h":"1bvczkrp41nbj7i7c8ffsg04nmr0fl1f7p4zyzwjlzz4p623ygv2"},
 {"v":"2.14.2","e":"^1.56.0","h":"0062svza2i6g8b2s2vbn9ip9r89clxrv2ad610mbyy9xl6hbr6sq"},
 {"v":"2.14.1","e":"^1.47.0","h":"0alx1i0crvab2apvcxzy39b8gvcb5b61nry1k44hjyqqbkhx9z58"},
@@ -514,6 +515,9 @@
 "hcss.hello-ai-work":[
 {"v":"0.0.2","e":"^1.95.0","h":"1kvrqa8bf3ahiql4s3x29yn6hkqkjncdrs8zks06z4ryrkwids2q"},
 {"v":"0.0.1","e":"^1.95.0","h":"1szpknxix7x7bc9anwa486wa6i4xiv2ylx5svlcnc75zv14fbhwa"}
+],
+"heyliam.terraform-plan-viewer":[
+{"v":"0.1.0","e":"^1.90.0","h":"1k5qzfvnbg8669cn4ydxfwjahdhad02c5lrxpviy5aa2vx8z057x"}
 ],
 "hirosco.git-amida":[
 {"v":"0.0.6","e":"^1.100.0","h":"0vwhkgdh7wwir9zifbj4f4yhqmvpjxk0ilq78hfgxw372vi16w6n"},
@@ -856,6 +860,7 @@
 {"v":"0.5.0","e":"^1.75.0","h":"0fmxj17kkf1qr54lr9x223fqjiwwpkwhbwzx4qyl9brdwwgf48q3"}
 ],
 "mariuszczyrnek.step7-import":[
+{"v":"3.5.0","e":"^1.95.0","h":"105rn7qv98k4dskyhdwnvvy7vb24gk6r6jlck51n0fyiynypl8yz"},
 {"v":"3.4.0","e":"^1.95.0","h":"0dzyn1l2v405qjkdyy0kpkrnskm6f5zafzwahyd8qnp403s8n8gn"},
 {"v":"3.2.0","e":"^1.95.0","h":"0zsr9xdjim6ksx0aqfvfymsldk72z3yw402q9rcwcrrala80r8k8"},
 {"v":"3.1.0","e":"^1.95.0","h":"0z6c7dxfa0pplc1rpmsjj62nci1niq96nfb2ixyl2kkzyi9ln5s0"},
@@ -1088,6 +1093,9 @@
 {"v":"0.0.2","e":"^1.98.0","h":"0611mb9m0sfmjwg52w68yky73amvsb1mbwfr400ggma4c97yqgf6"}
 ],
 "open-southeners.tusk-php":[
+{"v":"0.11.1","e":"^1.88.0","h":"0in1zc3nzmssc6iafq4rqmslskrdm5539cv156djn5barqgl0kzl"},
+{"v":"0.11.0","e":"^1.88.0","h":"0lhd4ad4n7fvis05pa48wwavd0848kjc8dw06wjq6zwpfv1ly7wd"},
+{"v":"0.10.0","e":"^1.88.0","h":"1g3pavn5zyygsxg0f1imj8b16pf5wrlw3bb2bfx3kn7wfx4ckr3p"},
 {"v":"0.8.0","e":"^1.85.0","h":"16fi683fc8blgx6m9mn0w1dingw2c5j7wyir53ibpazbz6pbqk7v"},
 {"v":"0.7.0","e":"^1.85.0","h":"09b6c39xp5107vgm7j1hci2dmxnf4qp38pslvykn2a0j2iy7hvay"},
 {"v":"0.6.0","e":"^1.85.0","h":"13yni0xclpj95razhvyjbm5jlpqmw4wi36vjclhhmlxg2iazq9xm"},
@@ -1464,6 +1472,7 @@
 {"v":"0.1.0","e":"^1.85.0","h":"1fd2nzbfw8mxihygv50nvi5vxmy5cr6y1b0lvgr85wip0zpw0dpl"}
 ],
 "shortarrow.line-number-deco":[
+{"v":"0.0.14","e":"^1.76.0","h":"13md5mw3c19r9y2k6ybzj3ywmmkspcpb0cj0aa2mslsjb19zkqaw"},
 {"v":"0.0.13","e":"^1.76.0","h":"0sl4j438jax7gx46m59f195h21kjmvk71dnn0js7k8pw7nqrxkqh"},
 {"v":"0.0.12","e":"^1.76.0","h":"1i0dpsmdpqfyknx5i9wag2mkf39xhafikix83a58qqbaz68d02bb"},
 {"v":"0.0.11","e":"^1.76.0","h":"14jv5v75zvfffg993xciiv5rmv4rg88p578np6pfz8b18cn5qd4r"},
@@ -1567,6 +1576,11 @@
 {"v":"0.0.1","e":"^1.65.0","h":"1v3mbjzqw1klmc22ws3z26qiwjaapg0vgp0cmmldcrciw9lmhngy"}
 ],
 "tarolling.stone-lang":[
+{"v":"0.4.1","e":"^1.82.0","h":"11158njs30k4kpwygjkfq4a2b49pgjqs491x6chkbi2s69ncsp2j"},
+{"v":"0.4.1","e":"^1.82.0","p":"darwin-arm64","h":"0zhmk54pyv458jrivi5w1s63iwxarf4jj0xd0ix328dm31fybhd5"},
+{"v":"0.4.1","e":"^1.82.0","p":"darwin-x64","h":"0z3xphfh6inhv0maqi4gnljwri03rsm3xc41aws21gallqidvaj7"},
+{"v":"0.4.1","e":"^1.82.0","p":"linux-arm64","h":"0qvnd4ixwbi4av1g75iq2g2hja55ddjc2hi5a38wcfbh2h7w7n68"},
+{"v":"0.4.1","e":"^1.82.0","p":"linux-x64","h":"0vf75sdwqibdmf4dwisijd2hjaj1kvd1dgsjsj3593j5213qg85n"},
 {"v":"0.4.0","e":"^1.82.0","h":"19ayv8gl1rnz5hsi8p3khmcvlmdx8lx1pcbgyys9yx2ndh2pwh6d"},
 {"v":"0.4.0","e":"^1.82.0","p":"darwin-arm64","h":"0dh6qvndqr07hz3015caqgxyrq6h1rwfl459bpm2cyl535x2y91r"},
 {"v":"0.4.0","e":"^1.82.0","p":"darwin-x64","h":"0lczd0xrha2f9d3ndn1s2nd4637p7vqpjk13jgnlkykl7k415r8r"},
@@ -1926,6 +1940,10 @@
 {"v":"2.6.50","e":"^1.95.0","p":"linux-x64","h":"1rihv7960b97ggpm7mk83a5hfbgq6xkrcdq9rfsbc0qb53s01z4x"},
 {"v":"2.6.49","e":"^1.95.0","p":"darwin-arm64","h":"13j6x84z7zzk46y5rfcggll96wlqf43k1bj5ysjr1kz9gqaf5k9z"},
 {"v":"2.6.49","e":"^1.95.0","p":"darwin-x64","h":"00yfxvf9wninrzj6cpz2zkgnw6h6h1qi485nfg0ncbqkmrhwc8b8"}
+],
+"wolfpackfront.klarwolf":[
+{"v":"0.1.1","e":"^1.101.0","h":"1374mswpk5fw0zvxzm0mayys5gg3fldf070v3435gsdxvarj14lf"},
+{"v":"0.1.0","e":"^1.101.0","h":"0aslym61jrzlin75zyinv08qqdk44fw7116r971f6i643d7gvs2x"}
 ],
 "wttr.rails-go-to-spec-2":[
 {"v":"1.2.0","e":"^1.74.0","h":"1wxrx0yyw1ag39k9qgfhyyr3lxvh73wm5wrghdvymycr70lpmbs7"}

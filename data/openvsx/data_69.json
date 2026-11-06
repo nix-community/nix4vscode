@@ -285,6 +285,9 @@
 {"v":"1.1.8","e":"^1.80.0","h":"116y7kyhna1r9bw6nb3yjycx307ya1wd62yca7lhjzglqad71m6a"},
 {"v":"1.1.3","e":"^1.80.0","h":"0xzya6g3slyfc0j8m4z1czm2s0rwy7wvgvcvvsw69wa2cm6ixr77"}
 ],
+"autodesk.fusion-automation-api":[
+{"v":"0.3.7","e":"^1.96.0","h":"16irabp0ibyrxi8clrqgi152v6q80fa1q54hjvd1cmdfzmc5mmri"}
+],
 "azmolla.laravel-log-watcher":[
 {"v":"0.0.4","e":"^1.85.0","h":"1n64xkmk39y7pf0z2bv94ghwww1g1p24dyyifcdy55kpkj61m7d7"}
 ],
@@ -305,6 +308,10 @@
 "ballwictb.open-local-links-in-browser":[
 {"v":"1.6.16","e":"^1.85.0","h":"0wv6qj3vilpqw2bkb2nyjdgadbnf4dq4z72wqyir8fxhgdklim2h"},
 {"v":"1.6.6","e":"^1.85.0","h":"1hdpq2f6i7lcx6vf88q35p7ivajnmcp00998pi43rvbf1i77kdvs"}
+],
+"barbara.barbara":[
+{"v":"2.0.1","e":"^1.86.0","h":"0rws16djf21920nac3cpn4i0zga29223bvni3mxlqg310wagm5vk"},
+{"v":"2.0.0","e":"^1.86.0","h":"06vd90wxav85xlp6aichfj8lgq50n9c30waymw23y675a4xbg9gm"}
 ],
 "bcharleson.cursor-browser-cli":[
 {"v":"1.3.5","e":"^1.90.0","h":"07jffvdjlcd8m51i57bq2n5q84iqdaidl5bcn19yidi2vbbskllw"},
@@ -844,6 +851,8 @@
 {"v":"0.0.17","e":"^1.96.0","h":"05i1cjsw1v7j0rk0w45pi02ws8by0zwn2a45xlf8yd14zymivwgy"}
 ],
 "ibm.vscode-clle":[
+{"v":"1.2.8","e":"^1.50.0","h":"0pkrnhgl2l8fd6khx0x8b9kxr32vhzhqibckvqy0bnwi6v9ygsxb"},
+{"v":"1.2.7","e":"^1.50.0","h":"0vgqv0w5wh5k6wv1fcfg7jfr1c82gjv2v1a2a5avbqkfq4z6aajr"},
 {"v":"1.2.6","e":"^1.50.0","h":"0h7qdwm8mnz5jbarcqa6gm2gq1r9pvml0qzq8k45fgv2jsvqgd3x"},
 {"v":"1.2.5","e":"^1.50.0","h":"16nw66scj476xa3lq3gj53964rv7sz9fgfcjx6wydxni0ms7av0c"},
 {"v":"1.2.4","e":"^1.50.0","h":"0imciwz4531gyyj0l9yz8s85yc06i6vr0nb54akzcmxsyncl9nn1"},
@@ -998,6 +1007,7 @@
 {"v":"0.0.2","e":"^1.85.0","h":"0v4kf4zi5w58bzmbkqsa1gb2ri28iv3s9h4pm7qkzzh59lfqzahd"}
 ],
 "krzysztof-d.justybaselite-db2":[
+{"v":"3.19.9","e":"^1.103.2","h":"09vz62lirjcvfc6c5x7l2bzar8lfwkgfvwfk01cpa4y84gba713l"},
 {"v":"3.19.8","e":"^1.103.2","h":"00vmynmm12smipvizhr0ji9nzmdrny7pv8r1hqgcg40vbz2z1npi"},
 {"v":"3.19.6","e":"^1.103.2","h":"05a73bibndp5n5vhvczhi2lnc4yax47n8hap4yws25ad7rgbw932"},
 {"v":"3.19.3","e":"^1.103.2","h":"0nm8w0r4mvacrc2yiyzqypl2bi4jw1xqcwg4immmf8rfjc77kw53"},
@@ -1094,6 +1104,9 @@
 {"v":"0.0.19","e":"^1.94.0","h":"1iyxcxb5l4q89f24bs1gmrlwqgssgfikqrig1zcgsckska7vvb90"},
 {"v":"0.0.18","e":"^1.94.0","h":"0n8nhh61qw5pl8j2vi94zx6nizkn528rx49lbqmj9is05mbn7n86"}
 ],
+"magnusr9.sql-formatter-beautifier":[
+{"v":"1.0.1","e":"^1.60.0","h":"1vsm6irlqwwhbs61y3w0c74hfqlblx5yhcwdgsnnnl4h1qmv4zvw"}
+],
 "marcus-tm.ruby-intelligence-toolkit":[
 {"v":"0.10.3","e":"^1.91.0","h":"0808368pgzkkd12wd7yflcf0jbp8c6x6szhnv6w47dwwsv7qw4b8"},
 {"v":"0.10.2","e":"^1.91.0","h":"1kwvkdaf33bqm2r500hvxv373gv6aha4c9bn8bj61wcbcxqs9nqw"},
@@ -1146,6 +1159,9 @@
 ],
 "nguyenxuantai.context-watch":[
 {"v":"1.0.1","e":"^1.75.0","h":"1jv8b9ihk344zpg0xpz0lfr4plam3yms2srg6bmbn4rgp8d7ld81"}
+],
+"noorashuvo.skill-hub":[
+{"v":"0.3.0","e":"^1.90.0","h":"171nwmjl0c2k91v2r4ghfk87g4ipx8prwghgdmmzk1gas1wlkjkz"}
 ],
 "nwolverson.ide-purescript":[
 {"v":"0.26.6","e":"^1.63.0","h":"0kxrk3fl8s6rc170iicamiwwsh03959jdk9x8a68nzigz1qc10nd"},
@@ -2152,6 +2168,7 @@
 {"v":"0.1.0","e":"^1.101.0","h":"0s2h1n56mbyr3wl2bk2i7jwjqxkxsli1mb9mcqsr15c88xbjws7p"}
 ],
 "yusifaliyevpro.vscicons":[
+{"v":"1.2.13","e":"^1.60.0","h":"093cnp8wbh8b2l31pxxpyighx520gb7wa5n5mbisxzmr73587qfa"},
 {"v":"1.2.12","e":"^1.60.0","h":"067505rziyfksw0dyr0f39580sn3s4rz2qbiay5dh65mcmxz4fsy"},
 {"v":"1.2.10","e":"^1.60.0","h":"1yzd4vkhqbdiwwr1h61437j3gwwl0bxykwgk925l6bvqmw5643f2"},
 {"v":"1.2.9","e":"^1.60.0","h":"06kg63fhibnwra740cnjhgir682z428mhwzv2i1clrddsd397715"},

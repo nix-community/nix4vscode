@@ -82,6 +82,7 @@
 {"v":"0.7.0","e":"^1.90.0","h":"0n4fmgr4ili1k0mpxyiq22awynv41kzqn6291whk2zhvbmc8qdsx"}
 ],
 "aviatesk.jetls-client":[
+{"v":"2026.11.4","e":"^1.96.0","h":"04jd8njv778vibl9x55gpmgm90cadi4lcvvycxnh33vpxgryk762"},
 {"v":"2026.10.26","e":"^1.96.0","h":"1hfqj8yga6qphhma2qz8dm2ykyvxxbjj933744xsc9wyyk4ar2ab"},
 {"v":"2026.10.21","e":"^1.96.0","h":"1asgwvgc9hkdich23gq79rid6mb9qmm96250a7zppd04xa8z2cha"},
 {"v":"2026.10.18","e":"^1.96.0","h":"1gnvm0gnxiq65mwqkfbgmcbzjcrkj7dwim9pyf9x57w2rxc3b6c5"},
@@ -439,6 +440,11 @@
 {"v":"1.3.0","e":"^1.74.0","h":"0lsk1gl2iq5h9jvkzpfnfgp7yv4fianrhxljh1xj6n0k04yavdvv"},
 {"v":"1.2.0","e":"^1.74.0","h":"1yk3wjv0lhdz2w7xpzh86wacpb4dkr3x8x7z85ag2hb0md5gfb9l"}
 ],
+"db-explorer-dev.db-kit":[
+{"v":"0.13.0","e":"^1.85.0","h":"1j3swks0xhgg351s72blvx66zpcjxhdv0gcabrx2nxbz7d5rhwhd"},
+{"v":"0.12.0","e":"^1.85.0","h":"14spjzy39zhx3shd56fr9svryd65xvjhg68007krw0ph5qk71m08"},
+{"v":"0.11.1","e":"^1.85.0","h":"0f5d4qyyfmw7jf7mrpspv8737bn6wb0xfpadismls28gp3kmms26"}
+],
 "dbconvert.dbconvert-parquet-viewer":[
 {"v":"1.3.0","e":"^1.85.0","h":"1119akj9b3px9r5cmsw1af2zvmhf12vhsbkpq7147mcrjyyahxn1"},
 {"v":"1.2.1","e":"^1.85.0","h":"17yd3mg74wgx0mivzjpq7bzgnxzmbm2nqn3barcwjnc1hgy57m04"},
@@ -597,6 +603,13 @@
 ],
 "gonzalezdev.vsix-updater":[
 {"v":"1.0.0","e":"^1.85.0","h":"0k2slblmdfcs6xd16g5hqkywpf4wb7i527bh8s678zm27ymb77yg"}
+],
+"goranerhartic.cursor-usage":[
+{"v":"0.6.0","e":"^1.85.0","h":"0lr37snh89znbjfiqr9ara7nbxyjxys9nz34kc2y0jgxg394m1w2"},
+{"v":"0.5.0","e":"^1.85.0","h":"0lab7iiwiady326a17a9ifyyz9d9q309zbn24iccrddwfvbzpil5"},
+{"v":"0.4.1","e":"^1.85.0","h":"0yg68cv3bb20f06pciirrd09fhqwlcx9xjk2x6s3lm4cgbqzy28l"},
+{"v":"0.4.0","e":"^1.85.0","h":"0ka0wjl2ynra64pkwffdvspwk3kz3hnvy49ws87s4cj9rrk6bk0y"},
+{"v":"0.1.0","e":"^1.85.0","h":"0brwkm5mcbc14rairns6sgivyyp04yl4wl86r18q7hkjfd6gxgr9"}
 ],
 "haidigital.claude-hebrew":[
 {"v":"1.1.0","e":"^1.85.0","h":"0wgagfkw2068bkwp4qmapg36h0b8m2aa169vlcybpxvrd07gr9vz"}
@@ -1040,6 +1053,9 @@
 "nitishsingh.git-info":[
 {"v":"1.0.0","e":"^1.74.0","h":"10rqqj1zl7vp4ad9nb2ba08q4qqzlnljc9wryp6dc50zqmxjzh8i"}
 ],
+"nokker.nokker-vscode":[
+{"v":"0.2.0","e":"^1.95.0","h":"0shvdnf8sphizg98kr47l6r0rd1fv33r2rr13spbp5aw4g1w9bp6"}
+],
 "nordic-semiconductor.nrf-kconfig":[
 {"v":"2026.10.365","e":"^1.101.0","h":"1mxrxfs6m7m4k9y3m0jyfwwc28qrv8lqd3hx3w96qzn53nm9j4dk"},
 {"v":"2026.9.358","e":"^1.101.0","h":"09vxbyz1a0b28400radx7ldz05x1i7ssvha6fn2clhrnv4fazn37"},
@@ -1125,6 +1141,11 @@
 "pathomkung.cursor-usage-bar":[
 {"v":"0.1.6","e":"^1.105.0","h":"0jby8fib6zs0nsxdijjrp5lj1kr044c5alsbjgl23dgywcwbkaqm"},
 {"v":"0.1.5","e":"^1.105.0","h":"09yg6yinz9n2ajd48ipjcl8pqr09467r9ljaaq5sm3d0ir6mm4s8"}
+],
+"peggco.pegg-vscode":[
+{"v":"0.2.2","e":"^1.90.0","h":"0nj7hbx28jkd8cxybi5gfp6frk8afq154q8hc85jw77qidj50gsr"},
+{"v":"0.2.1","e":"^1.90.0","h":"120ki4wli18k84yz5p6ywa92hgx012k6v4026xs3kpa2044jqbxz"},
+{"v":"0.2.0","e":"^1.90.0","h":"1pvirkngz846q9jpk3jw2xrhbdqxc863d5hhz1rzhp2ynbkcqr57"}
 ],
 "peggyjs.peggy-language":[
 {"v":"2.2.0","e":"^1.60.0","h":"0ljxwghgf6qkcdlxvxnd4y7dd3d6lk3mcdfs4g4jgnyz0bqyzhcq"}
