@@ -753,6 +753,11 @@
 {"v":"1.0.1","e":"^1.22.0","h":"1zjcr7mg2f939lynzj4635z2jy95bixjw7g5c4vk4s93m0gdn749"},
 {"v":"1.0.0","e":"^1.22.0","h":"1dh90lpjkflyw13yjl6xh2bj36riy80xzb3iyylk52pvf8f03b16"}
 ],
+"andreasb95.bille-salesforce-devtools":[
+{"v":"0.1.11","e":"^1.85.0","h":"1hc6qhkaahij9667gyjcigipysbhw5yqkh8p82pmjljf5dgjzhkr"},
+{"v":"0.1.10","e":"^1.85.0","h":"1k6zgvc4wqc7irql7bx6cfr60jnly7kjmcshhymcmzaw13zlhfvn"},
+{"v":"0.1.9","e":"^1.85.0","h":"1qzss1z0xc5k5hc1311a3pwkc3f1d3acg5mfg2db3dj513mwj2qg"}
+],
 "androidgradletools.android-ide-extension":[
 {"v":"1.3.0","e":"^1.85.0","h":"1bzs0niqvg0wdb1196q1dzf0ml6g8r6sq781za7w32f40bal6wpi"},
 {"v":"1.2.0","e":"^1.85.0","h":"1bl643ba3laa7w0q80q9qzba8brnp27zqnmsq1i9rdjys6fwm9j1"},
@@ -4161,6 +4166,11 @@
 "haydarkadioglu.quick-tunnel":[
 {"v":"0.0.2","e":"^1.90.0","h":"125n5hvkjvilj050vkg79gp51d7hrcn5qal0paspnifi6n322hdz"},
 {"v":"0.0.1","e":"^1.90.0","h":"0wngxd2mzwhnm1vh8ady49gh1b4cj1i5zcji94jyymsxf1qdhdhq"}
+],
+"hdl-tools.hdl-log-lens":[
+{"v":"0.0.3","e":"^1.90.0","h":"0yikzs573wa1bksjsiky7638bicdi8i874ni98572fg8kri50k3j"},
+{"v":"0.0.2","e":"^1.90.0","h":"0xhzkjjndz2nwk7ga360qmh0jy6p6gwsc8jlb6r1iv0jvaj80mnx"},
+{"v":"0.0.1","e":"^1.90.0","h":"13anpszi6n8b7kg0qpaizb4gywqvk7ld43c6frrz6kkqch9xjcsi"}
 ],
 "heejunnet.java-dark-theme":[
 {"v":"1.0.8","e":"^1.70.0","h":"1srbdb6z07agdjbxd6h4sjgar37qikhlpqdp5vd48g24m8dp8wn7"},
@@ -11542,6 +11552,12 @@
 {"v":"1.0.0","e":"^1.95.0","h":"1wxm9m3napixvvw1w5gqqqiichlbnp2i09mkdzbigfq7hhwssxma"}
 ],
 "shmr.clippings":[
+{"v":"0.1.1","e":"^1.91.0","h":"1z5gfb8iccsjycnqcl7xhng5m34wp8z0zs23brrfkssda8cvcpap","r":true},
+{"v":"0.1.1","e":"^1.91.0","p":"darwin-arm64","h":"12i9hq0fm7vyl865hja0gshs33qyvw2n0awxp1pcs9fjg25qig9g","r":true},
+{"v":"0.1.1","e":"^1.91.0","p":"darwin-x64","h":"0j6md5xppdgvlzx2agn6ah3v92bqddi6l7pzijgvcp0kb8y1cfaz","r":true},
+{"v":"0.1.1","e":"^1.91.0","p":"linux-arm64","h":"1vn0cb46qnf61gjq7vjijsc15yzhvq85bzcf5w6a65nqh34nfsfk","r":true},
+{"v":"0.1.1","e":"^1.91.0","p":"linux-armhf","h":"09b6wb7az6c2c8c3va91zq1r15s8n881sfcsmbkf5wdv5w0rhiqw","r":true},
+{"v":"0.1.1","e":"^1.91.0","p":"linux-x64","h":"1pgmf3qr9baygva7c13vqxd0plz310aaib1j37iaz2vk3rqvfqb6","r":true},
 {"v":"0.1.0","e":"^1.91.0","h":"1vfw7i5wvw47nkcbz9sfb49cmqdrn9l6liknazr9cv83ibdyjcds","r":true},
 {"v":"0.1.0","e":"^1.91.0","p":"darwin-arm64","h":"0bc7brplrzgg9dmsj8xk2lkyq9204p8ds19jv86dga2qn2jg6c2w","r":true},
 {"v":"0.1.0","e":"^1.91.0","p":"darwin-x64","h":"07j0mx08ansrw57bvslyqx2xbh26kpa9lq2w21sqsgsgrgzrf35r","r":true},
@@ -11721,6 +11737,7 @@
 {"v":"1.0.0","e":"^1.6.0","h":"0y0a590yxz1j652d23agpf7355v15hkw6m5bkc63jx2dd0hvx8li"}
 ],
 "streetsidesoftware.code-spell-checker-greek":[
+{"v":"2.0.2","e":"^1.125.0","h":"0dh0fzi4y3n9pvwc103bgajks5h7wf8hkqizclw9d0njnkzdn12q"},
 {"v":"2.0.1","e":"^1.125.0","h":"00mawjjiwg2xlpd1bs7f474dkf243ydrj8ln78js3sb94y203b0y"},
 {"v":"2.0.0","e":"^1.125.0","h":"0y7g4a968savr1c3w21h1k9zy6h10wr3ysjsz8w4v4g15nqdli1j"},
 {"v":"1.2.6","e":"^1.102.3","h":"14j8a7smazk7dlc4j4qzkfglldwk1f72gjv11b1fhk5aik26clyg"},

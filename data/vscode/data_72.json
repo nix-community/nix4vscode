@@ -1312,6 +1312,7 @@
 {"v":"0.0.3","e":"^1.59.0","h":"04y3ziqqxmh9ynmgifwb3hxkgi9ag5l465w000ii36bs2crxs9h3"}
 ],
 "castle-bird.for-websquare5":[
+{"v":"1.17.0","e":"^1.125.0","h":"00gp2spzcqi3jz8wbwg82qh2mkih0nsg2zvs2xm0l5kjyj5l5iq7"},
 {"v":"1.16.1","e":"^1.125.0","h":"161ngvqikkjnbagc9z8jvcq8a2yfxcsdp23mmiaggcnwd62sksrn"},
 {"v":"1.16.0","e":"^1.125.0","h":"1mqx99dx8fvmagy6yjfmcfhsp8ma3cpm15gsbq2g3a31qc55xaaq"},
 {"v":"1.15.0","e":"^1.125.0","h":"1s54q9zdzx5z1ls741rhyd9fs9ymwqd8hbh8yiyjdg7ggcxahhr4"},
@@ -5319,6 +5320,7 @@
 {"v":"0.1.0","e":"^1.92.0","h":"15bmmj3jvmzvg1qkkgkxhzqsrq23hs9jjbcxp480agah6aw6sskb"}
 ],
 "jannchie.ruff-ignore-explainer":[
+{"v":"1.7.2","e":"^1.98.0","h":"1117jg102bcx6sh00y1k70hglzwq4932x5xk2z31ripl2kpl6k51"},
 {"v":"1.7.1","e":"^1.98.0","h":"09v3wxfckpxv1kzkhnmdxysix6zjigrx1vw1z6a4ipcqrdcmlcb8"},
 {"v":"1.7.0","e":"^1.98.0","h":"1ycwmba1rg30n2amzaf4v6zqh2x5bwx3fzd7hbwzdvv0vf1ygacq"},
 {"v":"1.6.15","e":"^1.98.0","h":"02z6f3h1m50a9ss4g7wlk4c63n9f1y9hq5932d1hbwfw5a356wwi"},
@@ -5351,6 +5353,8 @@
 {"v":"0.1.0","e":"^1.98.0","h":"017z8xl30ksiixb1gdqgbccq7kb0mgi9nn11067k88fsyc97xjc2"}
 ],
 "jaroslavbereza.uxpdebugger":[
+{"v":"2.3.0","e":"^1.99.0","p":"darwin-arm64","h":"1aw4f54zwbxcxif2fmhahs6q9ya21z84rn45kpv6k73lpb0kahsz"},
+{"v":"2.3.0","e":"^1.99.0","p":"darwin-x64","h":"14fc0ndnfqkmscpik10s2bq07bzb2kmllf2y235vswk02pi1li53"},
 {"v":"2.2.0","e":"^1.99.0","p":"darwin-arm64","h":"0amfciwrkn3s9wi6hlg9mnhgcd00fskmp8zf2msl6f8mrnnh62j1"},
 {"v":"2.2.0","e":"^1.99.0","p":"darwin-x64","h":"1n6ix4idr1lq633fhxsj76bq3c3d6ih3pwx9mbavhyng9wzrjmvl"},
 {"v":"2.0.2","e":"^1.99.0","p":"darwin-arm64","h":"13kg8hida4322cq2d22smsa5ip69dwssy80g5df1fagl13m1pk6l"},
@@ -8594,6 +8598,12 @@
 {"v":"0.0.1","e":"^1.22.0","h":"0xs4f627zcq5aj8niknapknk1mp79phrfd1dzw552q2bry93a12q"}
 ],
 "menihillel.deepagent":[
+{"v":"0.1.504","e":"^1.104.0","h":"0vcsd4q92xc8ndx2bv84mr5kyl3qfv749a9nfi9k5dy2sqqczzkq"},
+{"v":"0.1.503","e":"^1.104.0","h":"1czxlysk1k9cn30z4x3f3m6j4gl5vlm317lb6ly1cqxwa0620dzw"},
+{"v":"0.1.502","e":"^1.104.0","h":"0s3w7yk8j7f33xl3d0jpq8bkjfdr0qqlhs8yqmj3s2gxqh50fiqs"},
+{"v":"0.1.501","e":"^1.104.0","h":"07ahv3dzj94vg5x5dyg6i1wanf6kz6fss573zrm1qhvm09iczlzc"},
+{"v":"0.1.500","e":"^1.104.0","h":"0qrf3sr6c7nq1w5j9n76h5vls68rnh9ai7sdsn2j0q6zc6haw49c"},
+{"v":"0.1.499","e":"^1.104.0","h":"0s2bd7q72gk2j99x3bciqzyp0shq8sbqk2ddzsxgjpnvl3lac4y8"},
 {"v":"0.1.498","e":"^1.104.0","h":"1zxgxncy55sbix3hmzwlwprd2gkbpcw6x9xyj9b6xvrrp2f578xc"},
 {"v":"0.1.497","e":"^1.104.0","h":"0pm37l5mrqvc9rmh1ry01xggir8pxxig09gbfafanrzvsf9pmpvf"},
 {"v":"0.1.496","e":"^1.104.0","h":"1y37kw0dcnrw2xcfb5ffpk3acms89h7dbqxr3ibw2myx76zcp2wz"},
@@ -13931,6 +13941,12 @@
 "zoo-team.zcy-smart-coder":[
 {"v":"1.0.1","e":"^1.84.0","h":"1m8laghgnbgxw692ycrncnp14bkhd7bswsa5d7wh7b4x49nifa6s"},
 {"v":"1.0.0","e":"^1.84.0","h":"0aqfwpdv6rirs1r64hwlkh6c91gh8y0h1ykz0h14q28hnhh14xzw"}
+],
+"zovo.zovo-geo-map-viewer":[
+{"v":"0.1.0","e":"^1.90.0","h":"1gwbmv42ij4dyb5kbrayb9q4a3vdj9g8572rmx34vp3bjnww7hlq"}
+],
+"zovo.zovo-pcap-viewer":[
+{"v":"0.1.0","e":"^1.90.0","h":"0ga71bxxvhhil23c6aawgz2d1lvwdg12sqwp77wjcji8np7q0h7s"}
 ],
 "zqchen.data-viewer":[
 {"v":"0.0.6","e":"^1.99.3","h":"0snk6slwgfrhfb5gb8fsy55444h2xy130c0cgvfl7dbkmwk0y9vy"},
