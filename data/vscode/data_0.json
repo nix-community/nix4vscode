@@ -2199,6 +2199,8 @@
 {"v":"0.1.3","e":"^1.85.0","h":"1j08zy6pm69qmqcrlqagsxzxvdy2xy7g4zsxmrzciyrc4gvrfww2"}
 ],
 "corgi.corgi":[
+{"v":"2.34.1","e":"^1.95.0","h":"0ci45372asngs6i1yphvrgsmclbl279a4y4wwdf1ihy3zads7s84"},
+{"v":"2.34.0","e":"^1.95.0","h":"0jnfz18mfqvkba9yxpg28irgv1ig1rb88cxmwj9nziif3mdaxnfp"},
 {"v":"2.33.4","e":"^1.95.0","h":"01vp2d37i0a82yih32070d98yg5ys16mbmnigycsp28zsqvyl47b"},
 {"v":"2.33.3","e":"^1.95.0","h":"1xjbjh4g267yagpmdg389j74ckla7lp6b0ym7cbh113bpqnnyapw"},
 {"v":"2.33.2","e":"^1.95.0","h":"1lrym53nxarpc6klafg2d2yxhjss60bscrzjyw2xiqc84cbh7r5g"},
@@ -6099,6 +6101,10 @@
 {"v":"1.2.1","e":"^1.17.0","h":"1h3cjp746yrxc6wa24jmi845z9fxyn3g3gsrhqnp8jbhcjb66g2g"}
 ],
 "ms-ossdata.vscode-pgsql":[
+{"v":"1.33.2","e":"^1.95.2","p":"darwin-arm64","h":"0pdklg0qfdrjx52c1ad1chc9j9qnjxl84k5xmqkr06hm15824brf","r":true},
+{"v":"1.33.2","e":"^1.95.2","p":"darwin-x64","h":"19p16f8ba0l49aakm7h6ybwbrjndgjxih6hxgyzcp9n13fcpig9v","r":true},
+{"v":"1.33.2","e":"^1.95.2","p":"linux-arm64","h":"19skw8an085gpyd72bhz42d6qm6n4c9f7zfkpmli3dcqbb1g75ba","r":true},
+{"v":"1.33.2","e":"^1.95.2","p":"linux-x64","h":"10lrbm39sa40r1flggbgrdls5j406s5qp0da571q06jwimjajh9y","r":true},
 {"v":"1.33.1","e":"^1.95.2","p":"darwin-arm64","h":"168nzigrm5i2fwyxy6li2ifl2mxzc7xl8n57hljs6bc9cfsy3v5f","r":true},
 {"v":"1.33.1","e":"^1.95.2","p":"darwin-x64","h":"028hg924phjfdn7qg1kxr5lpchp62csk0k7m0gshn8k70p1i2nrp","r":true},
 {"v":"1.33.1","e":"^1.95.2","p":"linux-arm64","h":"19m4jcchi0s1ppvbmfg9ap57kfn9mmm0i6zr743gr7kqjl3imsri","r":true},
@@ -8545,6 +8551,7 @@
 {"v":"0.1.0","e":"^1.109.0","h":"1c4j6qyjwnfvxkk1n34xkrinlyg0kbl0xfkijrvc7hj8gxn10h5j"}
 ],
 "salesforce.salesforcedx-vscode-lightning":[
+{"v":"68.11.5","e":"^1.129.0","h":"0hmipkx8n7cs9g3nm09vv5fqcghhdirra495rqglviqrmr2jlxjc","r":true},
 {"v":"68.9.6","e":"^1.129.0","h":"0fgss7m197jpjl56ydn30v35r1lifzhw5bw7alfhmj7xjs0vn6za","r":true},
 {"v":"68.8.0","e":"^1.129.0","h":"164kdsb3fjcmf0g4i0xb5ksl2wjziv6c46r91i8ily5sg9v3pv9r"},
 {"v":"68.7.3","e":"^1.129.0","h":"15g5a4rycqkvb0xc421572fzdn3j52vajh43nwiz0pah689hpy7s","r":true},
@@ -9250,6 +9257,7 @@
 {"v":"0.0.2","e":"^1.77.0","h":"1a2dfslbx4d54ng9s78mkhbqljh5p5l9ihvn587l07x772fx6ckd"}
 ],
 "simplysm.simplysm-go-to-file-or-folder":[
+{"v":"15.1.7","e":"^1.127.0","h":"057kd8waviag7dd4awmfajpi9dryr88sf6ivhfja5vd7xcxf6zrf"},
 {"v":"15.1.6","e":"^1.127.0","h":"1z7yqax75pj2hvr59s6sn5zcvxgi6ng806ywd7c23b376i1ywvap"},
 {"v":"15.1.5","e":"^1.127.0","h":"1ik3n7fjfkw0zj3n7y2y0wrnhknxfpfsbksfxrcs3xk0d04aqnxp"},
 {"v":"15.1.4","e":"^1.127.0","h":"1mnk1nlkn3h417hbj7r333vgmfrpdp4ysjj49ck713w6ragcw2pf"},
@@ -9432,6 +9440,10 @@
 {"v":"0.0.1","e":"^1.100.0","h":"0k1f1fb615df6nbwyfa2vbxcp3rgq4a6gmvwmjz3n05iq7hbjxna"}
 ],
 "sonarsource.sonarlint-vscode":[
+{"v":"6.3.0","e":"^1.100.0","h":"1z7427s7s046ljbv7brxai7i8bqsrrhyh19y63ja1ds26knmvfxz"},
+{"v":"6.3.0","e":"^1.100.0","p":"darwin-arm64","h":"12v6jzp2k8lcwxi3kxjqdi0x7mwi2m4h1vbj8lq83rf7bsianyxa"},
+{"v":"6.3.0","e":"^1.100.0","p":"darwin-x64","h":"0jlf3j2r3ib1jwd6bwp9qbl72r1m49icnz0kbchw2h3j2z63xs2b"},
+{"v":"6.3.0","e":"^1.100.0","p":"linux-x64","h":"0447ah7957lakczhw401v2gqd4760i8r41j3yw89460mg5jdbbnm"},
 {"v":"6.2.0","e":"^1.100.0","h":"0l1qh8bvpdy0x48hgny2yg2yw5nrvmi2yj2g87ifilmn6z5kxhdh"},
 {"v":"6.2.0","e":"^1.100.0","p":"darwin-arm64","h":"0ik4qpxwflfg3b0fxp0v0sf7fnw3z0yzv6fbgfdzpvfr3q8d2ncd"},
 {"v":"6.2.0","e":"^1.100.0","p":"darwin-x64","h":"0qv9caczpv4y2jvjix4jmr5ackkgwhms5yxpn7krfrfdzpq72jnn"},
@@ -10988,6 +11000,7 @@
 {"v":"0.0.1","e":"^1.58.0","h":"0y045miyzv0vjm2glc28kxbcpc19wkcsjpc0015dqsxh6gd555vq"}
 ],
 "vignaeshrama.airport":[
+{"v":"0.1.6","e":"^1.93.0","h":"17lbvlr2340hri997zadvprj3jvbqnjbxjrh56bym4cwmi42ixbl"},
 {"v":"0.1.5","e":"^1.93.0","h":"1xllssc09y1jpyrlln4nxg97pymk4h0s92dvpm9183lzyygfnvak"},
 {"v":"0.1.3","e":"^1.93.0","h":"0jgjd576d4l1afbq63v4dsqjdlmwxfjqk0d7ggsya2636xjx2jgm"},
 {"v":"0.1.2","e":"^1.93.0","h":"1b41j9vs97dkh3z53914z5vqw23900g89qbnp92wdfcxfz4mdpp0"},
@@ -11178,6 +11191,7 @@
 {"v":"0.0.1","e":"^1.52.0","h":"0a0sgryaj57npmxclglc33k6lsqq036cn37lj66wkd1wn85df657"}
 ],
 "vmware.vscode-manifest-yaml":[
+{"v":"2.0.2026111000","e":"^1.75.0","h":"1wa43q2bhzyvvaihzz84yibn4vmhvc00wjpncx0sw7cr3z9hn0gr","r":true},
 {"v":"2.0.2026110700","e":"^1.75.0","h":"1if2mx574qm7a8j4wani21hmh6z9qcbg8gm5xi9k82vkz3fixhvk","r":true},
 {"v":"2.0.2026110614","e":"^1.75.0","h":"0v22vml6y96zp1hk2g00sbidg6qqzyjybb25qf5035r936r2z8r1","r":true},
 {"v":"2.0.2026110500","e":"^1.75.0","h":"1hsg59ixxbj16nscpgy56ff96zb8b0larn3ndp8i81pr45kw4dk4","r":true},
