@@ -1,4 +1,5 @@
 {"ac6.devicetree-manager-for-zephyr":[
+{"v":"1.4.0","e":"^1.88.0","h":"0xkcikblifzccghm73nipphff3ffnl1y4spjpm8q2vqm3pjpixyq"},
 {"v":"1.3.3","e":"^1.88.0","h":"0rz3glrygr2zyyczs9l9rfmm2ihcn496gf8bw9x4b1ggfbdiyz4n","r":true},
 {"v":"1.3.2","e":"^1.88.0","h":"0jh1z21cj4by5cl94nlp3yzwm9h5rbrcdrdrpdxyvcs43lv9vi2d","r":true},
 {"v":"1.3.1","e":"^1.88.0","h":"0amym2bq2605scskq75sw207dyp721rg53222rm64sssa1rhizv7","r":true},
@@ -409,6 +410,7 @@
 {"v":"0.0.1","e":"^1.125.0","h":"0qyzs10yl4d2dbrz0riq0cv7wyb1wzpk0gwj6d9g0nf4ychg1w06"}
 ],
 "evsyukov.hledger":[
+{"v":"0.5.60","e":"^1.110.0","h":"1mz9d317bv97yf0acng1s5cvmy12ffp0bdbj649z997j5hiczwxj"},
 {"v":"0.5.59","e":"^1.110.0","h":"070rx4nmh6sism50jdwc4lag4ikqmb4xv68azam1kx3a44cy9l3q"},
 {"v":"0.5.58","e":"^1.110.0","h":"1wrb3a09z4cpvbjrg535qmfjnra91fzdpypr9nzpd95fwd7xp2rj"},
 {"v":"0.5.57","e":"^1.110.0","h":"1ama50px5qhva04kbm7vhfagvm33chiyqylf2rd85vc4cjwdcpqw"},
@@ -796,7 +798,12 @@
 {"v":"0.1.1","e":"^1.85.0","h":"0idwq4jjbz4a66wzwrxxpi4w3cbpb6xqdy14wyprrrwsvs453mwl"},
 {"v":"0.1.0","e":"^1.85.0","h":"1f3rwvgvwbh17afv4k5bkqn1hf22b87rb8bqvz7xwfkcs26kp7bh"}
 ],
+"kindspellslabs.project-colours":[
+{"v":"0.1.1","e":"^1.100.0","h":"0fv2ahpnsn2qcbgngx8p4148wrxm34sc89l2fm9x1mp93mqdhvxc"},
+{"v":"0.1.0","e":"^1.100.0","h":"19j0hgw03ykrcddlm6zz30481af23i64swimz9c2ls5hnznxgnsd"}
+],
 "kollinmurphy.vscode-simple-image-gallery":[
+{"v":"0.0.13","e":"^1.140.0","h":"0zhlhlb7y7b6hcxp3wkcagxpv0afkiq2f1r1j314piar67z117j4"},
 {"v":"0.0.8","e":"^1.140.0","h":"0xklzsdd0m5flv40788c9lnnnpzqycm9v369sz55gjaa8fdych11"}
 ],
 "kruton.vscode-lambdamoo":[
@@ -1398,6 +1405,11 @@
 {"v":"0.1.0","e":"^1.97.0","p":"linux-x64","h":"131nw28mccsw44a7pyhzkch9vlqis101p4dmihqyq0n7ghiaky0h"}
 ],
 "rumbledb.jsoniq-vscode":[
+{"v":"1.15.3","e":"^1.120.0","h":"0y7plmhg0x4s5f0yxdsbq91939m5dax5fymqdym4brqxv4ks0hld"},
+{"v":"1.15.2","e":"^1.120.0","h":"1bbm1badr11glkg4yvl795f4cdda8gr54v7ppk70h83j7xqmjzr5"},
+{"v":"1.15.1","e":"^1.120.0","h":"06dnb5aqm1ff2hgwky4qg95xc6anrzw3iqlqk5k8x9ldldzj0i2a"},
+{"v":"1.15.0","e":"^1.120.0","h":"0vxyl4a6yzcqzasb1g3xxnvr2vrsax28z36csx9l4r8y3ay7w8dl"},
+{"v":"1.14.0","e":"^1.120.0","h":"08ra0bqkz25ysr4cjq87qn518zhiq57d539k3k4a9a3bxcvb3shi"},
 {"v":"1.13.0","e":"^1.120.0","h":"0zlbspbvp6fmzlbl8vzqz6ldwxspb885hcw5rbsj8nzfa1izl0kd"},
 {"v":"1.12.1","e":"^1.120.0","h":"079s8sjf1swv28gdb12qfpscplm2kbh4c4gy5y7qkk2054hr2f3j"},
 {"v":"1.12.0","e":"^1.120.0","h":"05ni4vcdm8143c67lr98cll14wi8c0ykgp1ssh1r946n7hdya39j"},
@@ -1498,6 +1510,7 @@
 {"v":"0.3.5","e":"^1.85.0","h":"0phls1rl8ckwx0lccvn38ifc0y0a12wqbbc37iw2rrrnxrcq9kmm"}
 ],
 "tafanee.vzoro":[
+{"v":"2.2.0","e":"^1.85.0","h":"10smqiscwmiqw6x80ixj6cvwqq97jdhvxbxdrhffkr3irqnhqiyj"},
 {"v":"1.4.26","e":"^1.85.0","h":"1qsmp8pbycvdgpfdizncpaz0v9sh6cpg02n5hlj0qm552yx4iw96"},
 {"v":"1.4.5","e":"^1.85.0","h":"12sl2nd10vjmmqslfg0mqzwqbcvg2gzvnhzhxglfvsnllk7jjcnn"},
 {"v":"1.3.15","e":"^1.85.0","h":"091xg0sdxwhrp03brkqnvb0mrfhyd0z3k785z8z23c46qaqsm9q9"},
@@ -1641,6 +1654,16 @@
 {"v":"1.0.0","e":"^1.49.0","h":"0s0d4q006wsv0slsd3pyivgjclymhfyxg8v30rdhjgpmnwa34n0r"},
 {"v":"0.3.1","e":"^1.49.0","h":"1an7g2anqq9gmnrbxqbz2551qhl4rr0pw8i7rmirz9zrbg75z2m3"},
 {"v":"0.3.0","e":"^1.49.0","h":"1xyzi1xi9n7xka0jyzazkcfyb6smxnpf7v1wsirb7vlpjl761hf5"}
+],
+"zovo.hdf5-netcdf-explorer":[
+{"v":"0.6.4","e":"^1.90.0","h":"18bqd8mhh82g0awpavijlc1xpf4sr36zkj3mgwgzn3dvi2b1534p"},
+{"v":"0.6.3","e":"^1.90.0","h":"0rhl5cxhyk3hp8g371mx18f49z6qjr7f2vdwacgwk87b8hwlwfgl"},
+{"v":"0.6.2","e":"^1.90.0","h":"15swd492jla16b6aw36p2vm8999hwhw68swnlkvn3mn966sjp0pg"},
+{"v":"0.6.1","e":"^1.90.0","h":"07fvh1w9sjazkflwdam67mdry0s67mr009rwz8gwnpp5bn3d6m3r"},
+{"v":"0.6.0","e":"^1.90.0","h":"1rayn2f0p0qdqx83fa8hkkl1srbsxk2n3gmq09rl0akd6k0rl6rp"},
+{"v":"0.4.0","e":"^1.90.0","h":"1h0f6dhjph42fkrxrzxv91b25v0aaaa284fjgd61nybhaga817xs"},
+{"v":"0.3.0","e":"^1.90.0","h":"1q84g1307abnx4akal8fv2blyxdpcfc2zfy99h81vcmzlvk7jfsp"},
+{"v":"0.2.2","e":"^1.90.0","h":"1cc94fh88cxqrj5wiivn3sk0vxsmh71cqvn9bp7rsamch8ngldsg"}
 ],
 "zzzsz.zhuwenjie01":[
 {"v":"1.0.0","e":"^1.0.0","h":"176knbis0scih2mmda1n6l71j41bw27c21g5mj5sqf5v32mk0534"}

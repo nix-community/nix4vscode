@@ -869,6 +869,10 @@
 "mehyaa.workspace-storage-cleanup":[
 {"v":"1.11.5","e":"^1.75.0","h":"1gafzdkz1aqbi8indwri93d7r07qlihr4axn4acz5s0462mf8mxv"}
 ],
+"meta-taro.md-business-vscode":[
+{"v":"0.4.0","e":"^1.101.0","h":"0gj5n73975zs7r7z0nqfinhd2bw222dddw3yc103xl2s2f6zwxc8"},
+{"v":"0.1.1","e":"^1.101.0","h":"0bpcixiy4qa0gsj7mmgzdpbwbma55bcdw891r71vcq6cd49srrk6"}
+],
 "michaellydeamore.code-comment-viewer":[
 {"v":"0.1.3","e":"^1.80.0","h":"1kylldbq3hmadlrkv3q5h8xf7ar6bj8y6vn70dyvbswbmwm9nbl7"},
 {"v":"0.1.2","e":"^1.80.0","h":"0kyddgfihay5vg8076gx2adnw9kj0cpfd0dpmd65wjj7j5qc0f1f"},
@@ -982,6 +986,15 @@
 {"v":"0.4.0","e":">=1.85.0","h":"0q78nvngip2hm8vgjdys004836lpamprkjvkpc4h7v7xir0b3nk3"}
 ],
 "nicolasvuillamy.vscode-sfdx-hardis":[
+{"v":"8.19.0","e":"^1.95.0","h":"097i9rzn8qsvbffhinr9akaz873g98cxw68665bq2v8f8id7by4a"},
+{"v":"8.18.0","e":"^1.95.0","h":"0h64a9zxm5nhjakzragcqmfmz83yp8llcdyjgf4mqr4avjsy8qj4"},
+{"v":"8.17.1","e":"^1.95.0","h":"0xg7aqy4c6xyy1kixy74397d73qrbxvklwh10y88pwag544rjbgr"},
+{"v":"8.17.0","e":"^1.95.0","h":"0j7yr8wq2d3fhf7ml4jxn9wvj52qsxyl7rwpyxl6qfgf24vczdcr"},
+{"v":"8.16.1","e":"^1.95.0","h":"0rhc07xay6q8fnfbfqrqrj0x3bdngn3bxn011c1ps4iil2r1qfya"},
+{"v":"8.16.0","e":"^1.95.0","h":"0glxsxz2mjlqx42qjmxdzri61bsq8dmalikhxyszdj29j528dkq9"},
+{"v":"8.15.0","e":"^1.95.0","h":"1d85zcirvn47kymywp3pmc60l3dp9szqzavlac5bd5v05r74z2ff"},
+{"v":"8.14.1","e":"^1.95.0","h":"0d7d7cym7q82cs94ccxr9gklhrx8fdzihij3y63aacl9z5ga9nrn"},
+{"v":"8.14.0","e":"^1.95.0","h":"05i9bsd9aa8hd8j41jd636sxghpkc3p1rmzddypxxzn48lc3h6l6"},
 {"v":"8.13.0","e":"^1.95.0","h":"0lkyaqxvj0r00w8zm8j0zchxlhm75vh39w1vf9n06ak2p5bciad0"},
 {"v":"8.12.1","e":"^1.95.0","h":"1gcj8m78p01hmwp9f3xlcn81cgydx1ixb2z9x8c0z3s67zicnd30"},
 {"v":"8.12.0","e":"^1.95.0","h":"0ks35nkzmyy9khxfla6vd0hrih7lx2bq498hhg39qd57nwnwh23g"},
@@ -1373,7 +1386,10 @@
 {"v":"0.1.0","e":"^1.90.0","p":"linux-x64","h":"1n1zrxzdv02b3n35vfx82rbhxiw53kwypm5v9cqf4kbbnd4jq36d"}
 ],
 "salesforce.salesforcedx-vscode-apex-log":[
+{"v":"68.11.7","e":"^1.129.0","h":"1hvgqsf1x8b939i17bfrhnnjdsizb7q8m5a1plsihdxbsrhd5hll","r":true},
+{"v":"68.10.0","e":"^1.129.0","h":"0qjhiy5lyrpc0g3kb846v1avfvfxrpr12zdwdqx9w5rw5cw9732c"},
 {"v":"68.9.6","e":"^1.129.0","h":"0dwh9lz9zhq1q0jn90bdy05dw0kw0rm3hfr3pklj7b27fm0a7k21","r":true},
+{"v":"68.8.0","e":"^1.129.0","h":"14y0j2d816i193kihm9krhay65wjm4q1f013nvs3pwg44nkzvpf3"},
 {"v":"68.7.3","e":"^1.129.0","h":"1mpg019gz2k52cb9rmjp4s56ymy8yrgj4pam0msjrlpri44c2gl2","r":true},
 {"v":"68.6.1","e":"^1.90.0","h":"0mg9xrrwb5yxr8bf650vh1wgz3fvlghsq58xrnfcbr4x4a3bcwy3"},
 {"v":"68.5.6","e":"^1.90.0","h":"12h5wc6jn92ik7fiw6bnhl63gwx8qpxc720k8k0pahc2x3imipnr","r":true},
@@ -1803,6 +1819,7 @@
 {"v":"1.6.62","e":"^1.70.0","h":"14cb0lqx4ynp2mb7xfvrng6w00v64r7gl28s8cxj0c2zr7dgn97p"}
 ],
 "zovo.zovo-cosmos-db-client":[
+{"v":"0.1.2","e":"^1.90.0","h":"0kpyi2zmqzyqw16xqbndfmf1i671zbbpkfsfc040idrksg2njrmf"},
 {"v":"0.1.1","e":"^1.90.0","h":"0rs9sh6s7bkrii3mdanfmak1d6g5w32121gv1l8zlszsykp3zmad"},
 {"v":"0.1.0","e":"^1.90.0","h":"16wjkljm7xyj9vssbngk6lyackvhgc5hxd2jq772hijk2bl0d8kh"}
 ]
