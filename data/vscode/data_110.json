@@ -81,6 +81,7 @@
 {"v":"1.0.0","e":"^1.103.0","h":"0d9vfifm54rj9lncbvib6hlcvds3zfl2g3ykbd6qr1r4d7l6ycwk"}
 ],
 "ac6.devicetree-manager-for-zephyr":[
+{"v":"1.4.1","e":"^1.88.0","h":"1yv3w45h0z8dr7hfxcyhv5ghx042k49fxl63sl35hfnsgh0rdf1y"},
 {"v":"1.4.0","e":"^1.88.0","h":"0xkcikblifzccghm73nipphff3ffnl1y4spjpm8q2vqm3pjpixyq"},
 {"v":"1.3.3","e":"^1.88.0","h":"0rz3glrygr2zyyczs9l9rfmm2ihcn496gf8bw9x4b1ggfbdiyz4n","r":true},
 {"v":"1.3.2","e":"^1.88.0","h":"0jh1z21cj4by5cl94nlp3yzwm9h5rbrcdrdrpdxyvcs43lv9vi2d","r":true},
@@ -495,6 +496,11 @@
 {"v":"0.1.5","e":"^1.90.0","h":"0xzv25bsnmvgx148lr3fls9csigijfgcnqysnwgd2kibl8n5whza"},
 {"v":"0.1.3","e":"^1.90.0","h":"0kvb6s3z4xij4g4xm6nf8y8y75sgyccwd13206a313hcryrvzlkb"},
 {"v":"0.1.2","e":"^1.90.0","h":"1jgmhvym5b4agiljcd4ahgnrm2qhwzc9fxwg03nxmlihpzhasl8q"}
+],
+"armotusitio.armotusitio-icons":[
+{"v":"0.1.2","e":"^1.90.0","h":"02g6plrwcz3d23ycf362jyq0wxcyrqfg1wn8p9di2xdgbmx9krni"},
+{"v":"0.1.1","e":"^1.90.0","h":"0v1h24830185cm2c29kcp07n9kap4m5mm985d53hmgkk56890652"},
+{"v":"0.1.0","e":"^1.90.0","h":"1rj0a81chkci0dg5391b59hmq158chdbiz07m3j1kp5vfcrhjwna"}
 ],
 "aromatibus.kindfeeling":[
 {"v":"0.3.19","e":"^1.42.0","h":"0d1vd2mksxskgmjdzqxs6ss8ncniknf2d744pps4b1hkk5wv2s2y"},
@@ -2845,6 +2851,7 @@
 {"v":"0.9.0","e":"^1.106.0","h":"11d80px7gw58m3w8yx6flacrcp7smsrihg214qzxk335wvr5q97m","r":true}
 ],
 "gambuzinai.gambuzin":[
+{"v":"0.1.4","e":"^1.90.0","h":"0ycnk3k499k4g33glflnmffyq93342dadr1md05wd1l2by9idb91","r":true},
 {"v":"0.1.3","e":"^1.90.0","h":"0zd2m68n5ng80i4rgb40zqfqh0nxx9y4wxfs5c2ihb56dxik6pnh","r":true},
 {"v":"0.1.2","e":"^1.90.0","h":"09brkxv3wbjyjg9vkl8075fmy4pxvn0xlj21ppp7kzk6a1imf401","r":true},
 {"v":"0.1.1","e":"^1.90.0","h":"0raxr4m8apdzm4p7gjmjh7bhkxyg14916pba3y08bcdx7rir9xba","r":true},
@@ -4881,6 +4888,7 @@
 {"v":"1.1.5","e":"^1.85.0","h":"094nm0n5zq83lh5balqxgw4jr12nyxf486vm7s65073jv8jz0hf2"}
 ],
 "luigigiuffrida98.x-heep-ide-alpha":[
+{"v":"0.13.0","e":"^1.92.0","h":"1zhg3dnjmcrmyncnrm2nwmsllwba11jcg02zdpa5ymy3klviqin7"},
 {"v":"0.12.0","e":"^1.92.0","h":"1zq6l5jkygn0y4z62pz5l0cvxfhp3ksmjb31bjb6589x9g7isydx"},
 {"v":"0.11.0","e":"^1.92.0","h":"1j34lpdr7y63ijxl9cf70qzz6mavjp8fwzqdsfxywf8f5k7vwznp"},
 {"v":"0.10.0","e":"^1.92.0","h":"06vw3b955k5a3jyyk95dknz18h0hdvhv009hnrv64pvmi5l2b0jk"},
@@ -5004,6 +5012,7 @@
 {"v":"0.0.1","e":"^1.20.0","h":"1ymlhlkilasw1xbwsw9nhx52bm435xi3j65kmlm6lwzawxg10y93"}
 ],
 "masahirocom.sbom-vulnerability-scanner":[
+{"v":"9.10.0","e":"^1.90.0","h":"0bz090s28kgzd7xcfcd79l5ab91f88fb0bwvpbnrn7cwv5iiz9ni"},
 {"v":"9.9.0","e":"^1.90.0","h":"0sixkp1831k6wrlgv3p0a6accpviw5l18nkcmsfl8pv4rlv4m8hh"},
 {"v":"9.8.0","e":"^1.90.0","h":"1sda7qm1y2h1gqzq35mz1i6fplgqyv2fwmgrj5rlzphajrc87xfc"},
 {"v":"9.7.0","e":"^1.90.0","h":"0aci0ah65s3ggk2k2ns7qpacjsix0wqwwb8i4hcj5q02fp7nr1jc"},
@@ -8439,6 +8448,9 @@
 "teeceepee.efe":[
 {"v":"0.0.1","e":"^1.100.0","h":"0vbdrprcwnfm36pyl8bbpcawscc7szbhqbfh66fh1qkmsgivara2"}
 ],
+"tenscapes.usage-lens":[
+{"v":"0.1.0","e":"^1.85.0","h":"0pqnlxmdzljr2x0wl15ihj8zlgdxpzcqfxw8ss14xrgdb0iiys1c"}
+],
 "tepkaii.quick-markers":[
 {"v":"1.0.2","e":"^1.102.0","h":"0wy0flq9g66i2paihf31xh1gn37vidp69km7wd7by8lxxf82nywj"},
 {"v":"1.0.1","e":"^1.102.0","h":"10a71paml6ici1i56f4z036fkl49r6kzy8qq02dc9pz2by7yvzh9"},
@@ -9177,6 +9189,7 @@
 {"v":"0.0.1","e":"^1.104.0","h":"1zr2khpmi8lzrylsjp9sd8q4sqxb9i0vq0mslcarfncp256h4mym"}
 ],
 "vijaypjavvadi.usagecontract":[
+{"v":"2.0.0","e":"^1.75.0","h":"17w18pwgdacsphdfddfaiglwq0c5khpfj2827dsxwmvx4lspj1jb"},
 {"v":"0.1.0","e":"^1.75.0","h":"0f89m5853la80h0y5v8w0bmzsswn4ax4sqlpni1fc77v8mqzzmnf"}
 ],
 "vinitkme.lanciabones":[
@@ -9999,6 +10012,7 @@
 {"v":"0.1.0","e":"^1.33.1","h":"1jpzpavml3h24jb7liz70fjb323shcb9razgdd34qm6xglrf4pq7"}
 ],
 "zovo.hdf5-netcdf-explorer":[
+{"v":"0.6.5","e":"^1.90.0","h":"0ffzs58ji9jdkraqcb3m224fvbrr9lny6iscgq71shw24h5y887w"},
 {"v":"0.6.4","e":"^1.90.0","h":"18bqd8mhh82g0awpavijlc1xpf4sr36zkj3mgwgzn3dvi2b1534p"},
 {"v":"0.6.3","e":"^1.90.0","h":"0rhl5cxhyk3hp8g371mx18f49z6qjr7f2vdwacgwk87b8hwlwfgl"},
 {"v":"0.6.2","e":"^1.90.0","h":"15swd492jla16b6aw36p2vm8999hwhw68swnlkvn3mn966sjp0pg"},
