@@ -777,6 +777,9 @@
 "austin-spagnolo.simple-html-viewer":[
 {"v":"0.1.0","e":"^1.98.0","h":"1fhyqkpsycc7ydvxxf9szbxz0a1sdkgsjddicl4jd4bp15pjkxi0"}
 ],
+"autx.autx-hindi-support":[
+{"v":"1.0.0","e":"^1.96.0","h":"1dgjalxs1b5brgjm40r31dxaz2xxlnsgnma4g26lqgp9wqqxy5lb"}
+],
 "bholten.vscode-lcl":[
 {"v":"0.1.0","e":"^1.75.0","h":"1b67brh1m7ljsi4cyv5df1hql84l83x9qfn31vsfdcdzw5ib25zm"}
 ],
@@ -784,6 +787,15 @@
 {"v":"0.0.1","e":"^1.99.0","h":"182z58dz2rllpdcnywm9922knavmavhcm9jl4dhjp8xdzjpn3n4w"}
 ],
 "cadastre.cadastre":[
+{"v":"0.5.0","e":"^1.90.0","p":"darwin-arm64","h":"0ppya6kxap960k8kh8gp573knx558xwjj382a5bn8xf2rzcg9cig"},
+{"v":"0.5.0","e":"^1.90.0","p":"darwin-x64","h":"1qqb13id78x4cwwk2azbwg7m8si05f7k8manc0ybi5dv7zd7w6f1"},
+{"v":"0.5.0","e":"^1.90.0","p":"linux-x64","h":"1vw3qg2f5aazx7n1qx63j9crhld8z8v5q2q9akfxaishhxnmfd8v"},
+{"v":"0.4.0","e":"^1.90.0","p":"darwin-arm64","h":"17wzylfvlihw106vyjy6j8k2slcqivpnv3pwklf3jfr77qvblkgz"},
+{"v":"0.4.0","e":"^1.90.0","p":"darwin-x64","h":"07amgmf29i4m0pfs93514fsiqh26a7gyf15gnadbvncqzzdbn91g"},
+{"v":"0.4.0","e":"^1.90.0","p":"linux-x64","h":"04gkmjbzg6mws4vwqzz76gw5s35v87yyhk8h12m4glxkj43s8zis"},
+{"v":"0.3.0","e":"^1.90.0","p":"darwin-arm64","h":"1bazw6fwgfkhn0rnyk91956fhrc0rarhjpa9jzdn19c7zmf76xic"},
+{"v":"0.3.0","e":"^1.90.0","p":"darwin-x64","h":"07xd1431li76n06j5f10mgwizyzsh84f7rxvwyk7ijgsa4bbv9hl"},
+{"v":"0.3.0","e":"^1.90.0","p":"linux-x64","h":"09f6gdjq01zfay15wxxr7pkcvf9p2dwbv3si18kraf8maybqysxh"},
 {"v":"0.1.1","e":"^1.90.0","p":"darwin-arm64","h":"1rmamlp8zfpf81xg12hsk893qiyyli9nji1098ri9g24v2jrd4np"},
 {"v":"0.1.1","e":"^1.90.0","p":"darwin-x64","h":"0cvbikxlvlq4wpnxfsalswgic5zl5ghi59919n9qyb15k4nf3769"},
 {"v":"0.1.1","e":"^1.90.0","p":"linux-x64","h":"08hfq3cba2g37n1dnqc0wda27nnc1hx11wg5xm8g3fs9x4x0ni4r"}
@@ -904,6 +916,7 @@
 {"v":"0.10.2","e":"^1.85.0","h":"05d6afwn6003wddcmnh1y56q8qpfz7f321dxv8gvh4db5ic8kylx"}
 ],
 "dragoscv.codai-vscode":[
+{"v":"0.15.0","e":"^1.95.0","h":"0wssgmgrh1jcz9h2p3y8la9fn7j7xq4jnnmhc65f4gi9ww1ilsan"},
 {"v":"0.14.0","e":"^1.95.0","h":"07q0vb5dajc1il0avb6w430fn5w04hlr5mgj362sv24js7l2g1rm"},
 {"v":"0.13.0","e":"^1.95.0","h":"15bnca2fm8d26hfhjgxczs75yx4wky1i3afvci0h8rdya9kc4j5c"},
 {"v":"0.12.0","e":"^1.95.0","h":"067ri89gqqzjp1c35300lql8g8p7yhba8yc19yrkksfyrs0xnfsd"},
@@ -1058,6 +1071,7 @@
 {"v":"0.0.1","e":"^1.63.0","h":"1bnqnf3j61k7mz82b2r3raq8i9zanfldc4467yhhyjqdm0aa9dbw"}
 ],
 "fluxflow-cli.fluxflow-cli-companion":[
+{"v":"1.9.3","e":"^1.90.0","h":"0xypk0kgx80v9r40ci6n1ncjm099nh19mc5w4d3k7n6yjscbyvih"},
 {"v":"1.9.2","e":"^1.90.0","h":"1d0m0rx2wzykj4ap1bxbh27psw3q9gqcshq0sk55ljabysqdi73i"},
 {"v":"1.9.1","e":"^1.90.0","h":"1gbgxgkkf2jsg5x8lqcdr6v8jmfxymb1dn1ckapd605yd6ifqf63"}
 ],
@@ -1530,6 +1544,9 @@
 {"v":"0.1.5","e":"^1.85.0","h":"0nvsi5lwsxxnn8ypdgjlqjs0191qfj35xkmdyf2id7wmg1pr51m0"}
 ],
 "r3bl.r3bl-theme":[
+{"v":"1.1.2","e":"^1.60.0","h":"0l070gj898964qvhizgvrvwwfzf5zpxx5x9fj298j1ky3whiq2rb"},
+{"v":"1.1.1","e":"^1.60.0","h":"13gdqmasygikwlsj6gqpvfnayzix50ci2j4j9shr0wj6q40cssf9"},
+{"v":"1.1.0","e":"^1.60.0","h":"1cl0191l6gpagfgqr1axw6zdzssmwcbrzk87j733wlvcbsffl9mm"},
 {"v":"1.0.43","e":"^1.60.0","h":"1hn95kx8bjckh3r7m71r9syqy1xbj1z3hv2s6fn6yxixal6ilsnw"},
 {"v":"1.0.39","e":"^1.60.0","h":"0vfcdf219bznr3gnqp39677byi7rb0skh7gm2zkabrkbwbzj7vmw"},
 {"v":"1.0.38","e":"^1.60.0","h":"0i243f94w6jchvmhdspds76qmxdvz9hcg1rayh7bv2l5ai4vg6nm"},
@@ -2217,6 +2234,14 @@
 {"v":"5.1.8","e":"^1.85.0","h":"1ip2b3wi624imf76r7ipcqnjz77ly1ix8p6kf5hnlkj9m9n94bvx"},
 {"v":"5.1.5","e":"^1.85.0","h":"0zym56f3405kz9sfvrx19jmdby1sf3rr3rbyql1shhkf91yz70dg"},
 {"v":"5.1.4","e":"^1.85.0","h":"13lz3r4l3b83fc4851d318kbsni1i5y7gcxgy5l9ly0114pcn04k"}
+],
+"zovo.dicom-nifti-viewer":[
+{"v":"0.2.2","e":"^1.90.0","h":"12xzm4xx5h1xvs6sk9nc2b8v24wjljnv057n6isk5gsfrw2x6jaf"},
+{"v":"0.2.1","e":"^1.90.0","h":"0bivazpfs0vc0z6z6m7hmr5b7sxrhg7ba22h07dzdyksaiwnrcf3"},
+{"v":"0.2.0","e":"^1.90.0","h":"1yibqzc59ljn1vsms3rk4dk0wmz52jggjyzw95n3mnrmakzvsrim"},
+{"v":"0.1.5","e":"^1.90.0","h":"15wndc1lzczhw5byvra4a7896z17i167mdrq5ldhyrxschz19wp8"},
+{"v":"0.1.4","e":"^1.90.0","h":"192gmvpa2062azfc6vmhs2zfiqazf6kvnaflkcfc1hj8ws6br0ff"},
+{"v":"0.1.3","e":"^1.90.0","h":"02kzzr5haq8pnvhjyn1s0dq1l7s6gph2x9bfqba3xbdhpxryryfa"}
 ],
 "zulinx86.zulinx86-code-trail":[
 {"v":"0.3.1","e":"^1.105.0","h":"1gbci91v6vbgf1l1xzxn9b5lr6z3w5zn7z6305k2sfsv08pv6h5q"},
