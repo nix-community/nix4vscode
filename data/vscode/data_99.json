@@ -6250,6 +6250,7 @@
 {"v":"0.0.1","e":"^1.55.0","h":"0crrdjqkwgjdjv2dldbs57mjvpinmzhysngc8j8q1mvy77z50iwm"}
 ],
 "lukaschneider.crumbs":[
+{"v":"1.1.0","e":"^1.108.1","h":"1s8r6jfxhi6ybhjxx8gw7w8yrkmy80vpm4hi4wrvmkd8c5y5ln83","r":true},
 {"v":"0.1.7","e":"^1.56.0","h":"0nay0sn0n9i8vzq0dvqzs38rib8gr177l9wxacr8lik2isdas2mi"},
 {"v":"0.1.6","e":"^1.56.0","h":"0lfgzda2l9jvvkr3k5zjxv0y0h9wdlk0w00f921ryj6v9mdrj875"},
 {"v":"0.1.5","e":"^1.56.0","h":"09b028n56ixd1ifi5dsg8i7dx6b2inh328ikiq8yrfc31235xlhb"},
@@ -7738,6 +7739,10 @@
 {"v":"1.0.1","e":"^1.87.0","h":"0qvvn865cl28wi09yav0x4ni4v9dvbrkp8m6d43dv0clmqkpkqzd"},
 {"v":"0.0.1","e":"^1.87.0","h":"1hzx3k350w6lkzcpyy096hcnmbf3wq2ycam27q9479wbdx8mil9b"}
 ],
+"phpwarden.phpwarden":[
+{"v":"0.1.1","e":"^1.85.0","h":"1js8sd4w36g13jsrggpjapbd2qpjvwpp6l48gs05f7b1vv8qvx3k"},
+{"v":"0.1.0","e":"^1.85.0","h":"0zkgl9aw2ah7pa3rjc34cdbkmjzqhjj27bbarbijpc98hlnl8wqq"}
+],
 "pierre-marchand.vscode-freefem":[
 {"v":"2.2.3","e":"^1.87.0","h":"0l67l88wjin9sd2xz9kjw26ab1vlwclj9jck899ng1ffmp58r1rk"},
 {"v":"2.2.2","e":"^1.87.0","h":"12vkv5q9xyzfz7yimlyxlv1sz2r8fd90fi797v1j1nc16sllp2c7"},
@@ -8512,6 +8517,12 @@
 {"v":"0.1.0","e":"^1.85.0","h":"01y34mb6nxa8b9h5lm8gf63lkxqq2yj9a3rl559jgzlp6ghc0hra"}
 ],
 "rust-lang.rust-analyzer":[
+{"v":"0.4.3119","e":"^1.144.0","h":"0zxqspcbmy4g35x0vr5di4wlfimcfildam65bzyi9n4wvwl08nn5","r":true},
+{"v":"0.4.3119","e":"^1.144.0","p":"darwin-arm64","h":"0c5ssl7cl8vlzykv6gvvq14ind0pb70fwdcfc9h9g7hnjmflkjp5","r":true},
+{"v":"0.4.3119","e":"^1.144.0","p":"darwin-x64","h":"0vbijwbylb50ggiz2vd0wxyqsjiyi89rjckmrnnkl2kbynxmmg3v","r":true},
+{"v":"0.4.3119","e":"^1.144.0","p":"linux-arm64","h":"09rg3i13l3zyqrbysyrlg0v1pk0927qjqgnfk97qxgcgblpkpy0n","r":true},
+{"v":"0.4.3119","e":"^1.144.0","p":"linux-armhf","h":"1n7aav9ryp6zkcz8k3id4vcil85jaz3a17wqcl9ngxz1mb8pws32","r":true},
+{"v":"0.4.3119","e":"^1.144.0","p":"linux-x64","h":"1vqnxpgx7b43k066x4nfbbi7zx18jzhfry5pqplmah1dmd5x37z8","r":true},
 {"v":"0.4.3118","e":"^1.144.0","h":"1b8ia2hyyhbkz0w930z6mlmmr8wg28ria3cgwr9929c882nsqnkf","r":true},
 {"v":"0.4.3118","e":"^1.144.0","p":"darwin-arm64","h":"10b5mj1jibhsx062vylf0day54k1cidmam826v1ar1jq0liwr2ma","r":true},
 {"v":"0.4.3118","e":"^1.144.0","p":"darwin-x64","h":"12jmr45syww7xzsb477px8dni70a52cms00ff6kx52djqmws7873","r":true},

@@ -1033,6 +1033,8 @@
 {"v":"1.0.0","e":"^1.80.0","h":"1mjd5cgz2i1ykim7cf3hifdfb6ld9lpwbg5785ljj7gdb2qyryhr"}
 ],
 "awalsh128.regex-explain":[
+{"v":"1.2.0","e":"^1.100.0","h":"04zvnkhf1c7cj643v4l695ijp3kg5qbx0rfjb902knpdqbl0z9d5"},
+{"v":"1.1.0","e":"^1.100.0","h":"159mzizyky9bg3nb8p3sphc448fl6sh0v8zjf1icwd4jl47cvy94","r":true},
 {"v":"1.0.1","e":"^1.100.0","h":"1yv2v731qpfx23nhp90n1gc914hvvbpmdwsl9z64027m2dp795w0"}
 ],
 "ayanrocks.duskgrove":[
@@ -5873,6 +5875,7 @@
 {"v":"0.7.1","e":"^1.85.0","h":"198wjplgzs1pxilndp1qgx0zrixgwl24mwfdspzklaaypgqg5nbp"}
 ],
 "julyan.safs-serverless-agent-forwarding":[
+{"v":"2.1.7","e":"^1.93.0","h":"1ycir8mdmcn1jcpiq4l05dd271jmp2z7yn348zhg6blrxm0qrg7v"},
 {"v":"2.1.6","e":"^1.93.0","h":"1zn1280n1hb61m90jr4dpf5d5l5f4pb0p7va75d13zww6vvfiq97"},
 {"v":"2.1.5","e":"^1.93.0","h":"0pvpvrzpdq5lc3slyygdspajlmi81ab174lczc4xdvyx8rznjzf3"},
 {"v":"2.1.4","e":"^1.93.0","h":"0gbhmdxzaa5kbgrbnvxa733syml4ff51k55qblksdkp8yn7vl782"},
@@ -7411,6 +7414,7 @@
 {"v":"2024.7.6","e":"^1.14.0","h":"1xdbbv19zyvs3qdy5mrdkbwr8dbr2l83rkc63dqnl7fd9bj3mymr"}
 ],
 "masahirocom.llm-security-scan":[
+{"v":"2.1.0","e":"^1.85.0","h":"1swbwzxbhkb7vyslc5yzkccdjydmhcw781cdnmj800cb579vcc6c"},
 {"v":"2.0.0","e":"^1.85.0","h":"0c461al2ja1lfjpwx17gnhszmbsnrkqvahbb94h6yg7xf4gxlklr"},
 {"v":"1.6.0","e":"^1.85.0","h":"17g87j3qgik3xdzss0f167k9mfvd36kakrwzh0hlbfai10r150aq"},
 {"v":"1.5.0","e":"^1.85.0","h":"1bf614y9bm56cv67cf5ylwvzg3fq45w26n38dcf0mxa9fmamq3cf"},
@@ -9299,6 +9303,7 @@
 {"v":"0.0.1","e":"^1.00.0","h":"0j1msrbrkpvcgiywdl7k905gnal95356158mw6b4fdxisv6ks4g9"}
 ],
 "qub-it.tumble-code":[
+{"v":"1.3.0","e":"^1.102.0","h":"1m1189w6h45gzw7f79rhgsvc8b48xbmkhvwfv3pdixidplnfpzbs"},
 {"v":"1.2.0","e":"^1.102.0","h":"00jzf92knwh41m9q6dll7alakvx48dv1sjc042imgql0m3w7rwgb"},
 {"v":"1.1.2","e":"^1.102.0","h":"1hsg76d6bqkzcpbayip87x29d61b2v9m4hpkc8iayvjcr6129wrh"},
 {"v":"1.1.1","e":"^1.102.0","h":"0zz7s8421jdrd2cxj6aq1jkljfpib9db8091zb73yqzfnmq5j6pv"},
@@ -13157,6 +13162,12 @@
 {"v":"0.0.2","e":"^1.63.0","h":"0ihk4fikqqdbq09ghr1lr4jfryc6zxj5zr111kr7gzm131pkbmjl"},
 {"v":"0.0.1","e":"^1.63.0","h":"07c9my0wbwzwsp1g299mlf7r6aph1nm3n9i1d8igcyk5h65j25dy"}
 ],
+"wusrouter.wusrouter-agent":[
+{"v":"1.0.3","e":"^1.70.0","h":"0pq0h3p25sp9nlkhs10w7pcwb1chlrrm6dhbcps7znib8hnn22aq"},
+{"v":"1.0.2","e":"^1.70.0","h":"138yqvlxjcjbz7wfcn0xg0kq48kqfilhhwr3hxfrnqd7d6vwj02k"},
+{"v":"1.0.1","e":"^1.70.0","h":"0hizk84q7fmaizrabd1icr9mv8mxaj079hwk1mhqvryfrflk88dm"},
+{"v":"1.0.0","e":"^1.70.0","p":"darwin-arm64","h":"0xmqplv34hc0h9cmqxhcr457gp0b1jqywixskrzp5xq8p8bjs6lc"}
+],
 "wuxin.informat-ins":[
 {"v":"0.0.4","e":"^1.50.0","h":"02jrcy4pprnhy0139gzh4gb3fzkqzg1x0dg5428srgg0iq96svp1"},
 {"v":"0.0.3","e":"^1.50.0","h":"0psa1rsj3lcghli48hrbw0bnk5g2wpchyricg6ikbl40lzgxi5yi"},
@@ -13394,6 +13405,7 @@
 {"v":"1.0.0","e":"^1.85.0","h":"0ivq81p9gx77cxi4m25ifyr5k6j7d9w08npr1l4mkrck3llj1lq6"}
 ],
 "zekaizer.strata-git-graph":[
+{"v":"0.3.60","e":"^1.90.0","h":"061lqx9bg0fqq9xy9i0y0xpijmmdqygi13ma7qm38ijd50js8z70","r":true},
 {"v":"0.1.0","e":"^1.90.0","h":"0mkc6w20bqib33j2s9k5bq22iw921iygj9858sv6zf4r619wn2dd"}
 ],
 "zells-zone.type-practice":[
