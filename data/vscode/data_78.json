@@ -1850,6 +1850,10 @@
 {"v":"0.0.2","e":"^1.85.0","h":"05qig5s711fi2fg6iimq9icpq2k9bx8zfyw6pza1kjlfv51y4idq"},
 {"v":"0.0.1","e":"^1.85.0","h":"0z6qr1p23wr2g4fwqw4dqfds84615x7pxl4dy64lh53i6b36czk1"}
 ],
+"codex-sidekick.codex-sidekick":[
+{"v":"1.7.3","e":"^1.96.2","h":"15wxvam8zijkdcnv5pijj2accv11gcq4zhhh717ikywlrq7gywqx"},
+{"v":"1.7.2","e":"^1.96.2","h":"0zsjgk0rg0ffnr2cr9lcyvwgcbj5s9xmbdqxq08dkw7x78n845y5"}
+],
 "codigo-aurora.circuit-board":[
 {"v":"0.0.1","e":"^1.93.0","h":"16dapxwwvdpayhf5vcfmw1qwmpx6lcagnkm9yi1hp5qq4wyr28p8"}
 ],
@@ -4484,6 +4488,7 @@
 {"v":"1.1.0","e":"^1.41.0","h":"1fh4dlb2cna6z5c27sh101w3ax920rs0k9cx7hik4l840ijwjvrq"}
 ],
 "jfrog.jfrog-sast-extension":[
+{"v":"0.0.5","e":"^1.84.0","h":"0idzy4gr3ll7vdj7hwd4hiailgvv15ynf3mpnpm6kcf04savcq1v"},
 {"v":"0.0.4","e":"^1.84.0","h":"0vizbsf5j497w1r4xgi62g2knvhdhq1i733bpafdlx074bfs98n1"},
 {"v":"0.0.3","e":"^1.84.0","h":"12jyydzm9irxrx95panm43aw72kw96kwi4bn0vy1p308h1sdh3x9"},
 {"v":"0.0.2","e":"^1.84.0","h":"178p9vr1sh002gqzvkkyl77fyb36bsrlf884qcpzj8xqgph9r1p5"},
@@ -5155,6 +5160,7 @@
 {"v":"0.1.0","e":"^1.105.0","h":"1nklngjmd85csxf6cjjbrd8vrh8xbg0vq6iff3rnh640wzhjw978"}
 ],
 "lauterbach.practice":[
+{"v":"0.8.16","e":"^1.46.0","h":"1305bma7rbfv6qdv4fgik6ccn38fq7z9c34zisq7xzgfhy91lbpr"},
 {"v":"0.8.15","e":"^1.46.0","h":"0a2c85yypayndvpb0b75wsl00r43ma8j1lh25gwzs3c7rlhala59"},
 {"v":"0.8.12","e":"^1.46.0","h":"0fflslj971nabnwafvaslhkp9mx7arby75aiwal2q519js72r8ls"},
 {"v":"0.8.11","e":"^1.46.0","h":"1x8w14kj40flhxi65g9ky5zvm633wz0ykz8lq3jjxnyj238lcysa"},
@@ -6173,6 +6179,12 @@
 {"v":"1.0.0","e":"^1.74.0","h":"0h7l346bl29k8mgn98b90p8k0cycjm76px8sw4c0r0x834c28bns"}
 ],
 "meridianide.meridian-docs":[
+{"v":"4.11.1","e":"^1.85.0","h":"08rhlp41xib82wfasvl8ljarsahf41xcrkn5lnmjcxpbgj6g3y3y"},
+{"v":"4.11.1","e":"^1.85.0","p":"darwin-arm64","h":"1d48pa2qag1nb08gl4n88s9gr0bs99nsirpindb8bw6b3xf3pq17"},
+{"v":"4.11.1","e":"^1.85.0","p":"darwin-x64","h":"0q58x18ldpiig0sm6b2izsh5q2wian840i8ayk9y7ijrsgf1gs4w"},
+{"v":"4.11.0","e":"^1.85.0","h":"0l31khqvcir28k72qgx36a4nm5armsyix07v2mr69k5ml9bxrznx"},
+{"v":"4.11.0","e":"^1.85.0","p":"darwin-arm64","h":"0g3f43fvmvw8blclczdlaaid815w0xc9vswp20zylvm7lsky19aw"},
+{"v":"4.11.0","e":"^1.85.0","p":"darwin-x64","h":"1za8jm81qq2b6lj10ixlij4s591qnam65fprz0n6kqrch5ifivy1"},
 {"v":"4.10.2","e":"^1.85.0","h":"0a7f3vfkrk1hlxxmvhdaiz3zkkx8s2033hbhjlvv1qyvc03sgcwb"},
 {"v":"4.10.2","e":"^1.85.0","p":"darwin-arm64","h":"1zpm2z14y6c0b6ppbzi9w96d1k3jn7fr1x8zhb054qf9cfk74lh0"},
 {"v":"4.10.2","e":"^1.85.0","p":"darwin-x64","h":"1lfy9avia7nyvybaig7j86ss2r67i35czbwqw5cnrfcrl8icyrnj"},
@@ -6282,6 +6294,7 @@
 {"v":"1.0.0","e":"^1.55.0","h":"07nmzzc4qfg1ag3nj5b9ril16xbj70i89i4qv4gbd0rxyy13ryrj"}
 ],
 "milkeclair.z-ls":[
+{"v":"3.2.0","e":"^1.146.0","h":"0lnyzxw351yfyhi7y6av5bwi2r8d4z4wkl196ij1i3990z65z5jq"},
 {"v":"3.1.0","e":"^1.146.0","h":"10pwcrbvmbgxy0063h1x1965d9nygkl1gn6xk103ncjygnl64mwg"},
 {"v":"3.0.0","e":"^1.146.0","h":"1vy6kcdw5s9rbawkhzl9m90qq1a3ncm6p4bhfj7j9j3cfiz4wvl0"},
 {"v":"2.3.0","e":"^1.125.0","h":"1hw0xxfk6qikvggzi815q90nrz3r4pn0sylir8madk8704x412rv"},
@@ -7671,6 +7684,7 @@
 {"v":"0.0.1","e":"^1.35.0","h":"060wlkn4nz8wzcczvv7dx7pc3rcdilw0rl9x0732m387fcarpj7j"}
 ],
 "peteryang.gitdash":[
+{"v":"1.0.10","e":"^1.90.0","h":"0na6dg8f95vlsij111s60s8hl26ccxras7g9apk13kb78j6wlar4"},
 {"v":"1.0.9","e":"^1.90.0","h":"18v7y2khayiwddcyvvizays9w6vgwnz0l6fahds7hq7gsancszpj"},
 {"v":"1.0.8","e":"^1.90.0","h":"0p727kqfsq0cb8gbfvl56yf9gjxwji3aj56b9a82q0rvvp4viw83"},
 {"v":"1.0.7","e":"^1.90.0","h":"139kmm9wzs5mfw5wfk6chmk4ipq9548jyq1cyq762r0qjs36cmjp"},
@@ -7797,6 +7811,7 @@
 {"v":"0.0.1","e":"^1.96.0","h":"035zm5p5z4hcc4abfzz8x5n2npkyp35kbjg836han6cxw585dzhp"}
 ],
 "pokey.cursorless":[
+{"v":"1.1.1878","e":"^1.107.0","h":"1y0bi2vm5ni4lpr9zjmfp6acqb4h9ikclr2gxxq6h1b5dq6ksxm1"},
 {"v":"1.1.1877","e":"^1.107.0","h":"07j3c22hpmvq6wflm7n3pzfyi7dyxz27z6mhzd3g3wss1z13xnhs"},
 {"v":"1.1.1876","e":"^1.107.0","h":"06slmrjzzdj1xxqw7lfqm38qrbw6n76iddghhxzl1dfbqnwm1q26"},
 {"v":"1.1.1875","e":"^1.107.0","h":"003790zixg1y0h8hv8p9vnxzsz5nglj3yg530n8njqm8zv949s30"},
