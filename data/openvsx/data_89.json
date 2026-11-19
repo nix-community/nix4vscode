@@ -193,6 +193,7 @@
 {"v":"1.0.0","e":"^1.76.0","h":"11ay8az74f7s5hpya2lx0zigid7c0id09n3rj6clp4p2yspix9b1"}
 ],
 "autx.autx-arabic-support":[
+{"v":"1.0.1","e":"^1.96.0","h":"1l9nn74abv1a61b9kx4j1iaaf7dr010aw2gsif9f59j96jsby4jb"},
 {"v":"1.0.0","e":"^1.96.0","h":"0afh6l0gwprvgl537j76z5a5yp9qz1zqpz68qfwjn2q4znargh04"}
 ],
 "autx.autx-video-ffmpeg":[
@@ -446,6 +447,9 @@
 {"v":"1.0.2","e":"^1.80.0","h":"0xdw1rsn870j9azyn4q71iqqppm6q0cc1rljk92vhl3x0z388j7n"},
 {"v":"1.0.1","e":"^1.80.0","h":"15y7mf4dvc6a1iyvdkfsiwkcxq3c2rmm2p5myhckyv3a9888x2s2"},
 {"v":"1.0.0","e":"^1.80.0","h":"1skvcq2ykkz63xddbc5vnn6yc4imi3pvj9qpxazw21nwvlshiwa2"}
+],
+"custom-graphics-ref.custom-motorcycle-helmet-styles":[
+{"v":"1.0.0","e":"^1.75.0","h":"1j7434v4rcd13i19bhqx6hkayak32y0ascfjppaizm9qybsgc110"}
 ],
 "da3n0n.ultraview":[
 {"v":"0.2.471","e":"^1.85.0","h":"0zw4gjllkhwynmb06qvbk2gdj4v5aqs86ap9b2vjr5aanpvwfjjr"},
@@ -1491,6 +1495,7 @@
 {"v":"1.0.26","e":"^1.61.0","p":"linux-x64","h":"1ay0vcg6b0lmh4716d3fg8sghapnk21z3pmyrmf444bhcw0b6byq"}
 ],
 "nex.nnpl":[
+{"v":"1.1.3","e":"^1.90.0","h":"0xan6jhws2sqx2xcv3yjvzxm469xizm7q3yk966w496x4iqzcm04"},
 {"v":"1.1.2","e":"^1.90.0","h":"12z2zav849ahwag2pazipnjf61y23pfkjlgc1w4l3sr3jq7vb1lx"},
 {"v":"1.1.1","e":"^1.90.0","h":"1ghrvkli9ydp46g3kyxysr4npy41djrr4ry8z2x07ydf2s71xvcx"},
 {"v":"1.1.0","e":"^1.90.0","h":"0629rk06vgrkvfcyhlw8xm0k9884prx21vnn1zgxcm07348bkvpb"},
@@ -1506,6 +1511,7 @@
 {"v":"0.0.2","e":"^1.85.0","h":"14093pndi9ndn66rpznxa43b9sn07kbak7dypx92hxi9akgbjf04"}
 ],
 "nokxs.iobroker-javascript":[
+{"v":"1.16.0","e":"^1.95.0","h":"1j24ksa8dmby0hm2219fsrqxczn8jacwc7bgmpmid2ajhdjf6mx0"},
 {"v":"1.15.2","e":"^1.95.0","h":"19xpjjd74jd1pa83d2bjv663ip8d193s056a5y8qq8ba8hjqayvi"},
 {"v":"1.15.1","e":"^1.95.0","h":"1fpjfbr9ljyhwx0ibf1q47p4bdmaaz079sipnmwkcp7cpzy8rrqi"},
 {"v":"1.15.0","e":"^1.95.0","h":"1cpwbidk6hdf6xpykn8fnml6bhs5nfzlm1kyic5va3m0a95ngikb"},
@@ -1587,10 +1593,13 @@
 {"v":"0.1.1","e":"^1.85.0","h":"17izp1dpwb0mqnx6vs57jh09ccj4lqq3f5m876yinxbbi8xigjia"}
 ],
 "pico-xr.pico-unity-assistant":[
+{"v":"1.0.6","e":"^1.80.0","h":"1nv7q8y043rrnvp9jrhw58v2yawaml0xp5c9jgjj9f15ng1xg6bp"},
+{"v":"1.0.5","e":"^1.80.0","h":"0wbm262ii26ka6m9cnrhdydrxgavm0ky1ckh2pc2b6j623y0k8pl"},
 {"v":"1.0.4","e":"^1.80.0","h":"1j6scadf2ackvllgjd424psggv2xa25497ldl3490jcyxzjmsng8"},
 {"v":"1.0.3","e":"^1.80.0","h":"1h4v6d5p9i3ka8anbvch4akcqfmi8qrn7dxm3p0pd6jbizqkyvgh"},
 {"v":"1.0.2","e":"^1.80.0","h":"1ry1dljjmpmkkh9lp2d5gsd30rc3ykyq2lrqr4knbwmi0m6xvjcy"},
 {"v":"1.0.1","e":"^1.80.0","h":"1874cp0gr7hrcxahkc6xzqjwj24sr8m3c2cvxdnpszbxxh4xy8d3"},
+{"v":"1.0.5-alpha.12","e":"^1.80.0","h":"1xwjglvaj1ac0rhnfkxnagddkslp0bdr6z3pbkv0nd5l9z1cf84i"},
 {"v":"1.0.0-alpha.7","e":"^1.80.0","h":"1mfsy1z6jy8vrg3c89sihrnp6s10bzq2r5pvji4i64zvkpnmhmqk"},
 {"v":"1.0.3-alpha.5","e":"^1.80.0","h":"1hxjdpbly01ckkpaachvh8n34xh8fnq8bny22snr8bj3i9d698nr"},
 {"v":"1.0.0","e":"^1.80.0","h":"0bvsangczh8ssm0ba4m5mjxh9d9k77616gkv9nr02j97gbm704bf"}
@@ -1959,6 +1968,7 @@
 {"v":"1.0.0","e":"^1.90.0","h":"1dzn8hxy4a4i7wj1lipdvg4qbixmgqaysn625aj6wk718h0g657p"}
 ],
 "weichuandong.weread-vscode":[
+{"v":"3.3.0","e":"^1.80.0","h":"100aqhjia9g0487xanlnvyqqxiv7iazxlianz9hawa53x8mgzxm6"},
 {"v":"3.2.1","e":"^1.80.0","h":"1309f9vkxbw865934x60aq2yw1hdg7454v7g3ln30b1mi7hg6f65"},
 {"v":"3.2.0","e":"^1.80.0","h":"0hwbk7j8a54x8v86plf4gnyj8ccav1arjxchsbnl8wcc79a9j2rp"},
 {"v":"3.1.1","e":"^1.80.0","h":"0n58kw2f8ak0lpnkcyvqgfa6r0xw4bfa5m7xk6fqp3lr1rh1rw8a"},
@@ -4383,6 +4393,7 @@
 {"v":"0.0.1","e":"^1.67.0","h":"0ni4d8cmazpg9mjv8yd5yx1x92a91cwl1bl6ywzchlahdk5569pp"}
 ],
 "xilleet.senpy-vscode":[
+{"v":"0.9.0","e":"^1.85.0","h":"0zibd4ihwbbmqlphjvmwcjxms0101j0j2m0ykbm9c4rn5ddm8py7"},
 {"v":"0.7.7","e":"^1.85.0","h":"0k765g2zq1jra6qx5dp92v55vznxnksdp6fcc0405gbcnkrff5ra","r":true}
 ],
 "ylw.codex-pulse":[
@@ -4438,7 +4449,13 @@
 {"v":"0.1.1","e":"^1.90.0","h":"1rcfggpr5xvnsihfz12w7nvm3abl4ddmm5s5avhz146sclrrzdk7"},
 {"v":"0.1.0","e":"^1.90.0","h":"1v1i3m4vnq0y7dwc7w63qlw8nfp2ipcszhnbki93971bl5g9h429"}
 ],
+"zovo.zovo-d2-viewer":[
+{"v":"0.1.0","e":"^1.75.0","h":"03kgiadpf7var8baxq0xlcnwgjlwncmjzx0cl37lcrhi5dm5dg3c"}
+],
 "zovo.zovo-excel-to-markdown":[
 {"v":"0.1.2","e":"^1.90.0","h":"1b12ng6q0a0m925yzkkkdxcnsz3m4rjflg6ahwf4h40rzi88jp1d"}
+],
+"zovo.zovo-vsdx-viewer":[
+{"v":"0.1.1","e":"^1.75.0","h":"1zcd61r5dd94p78adrf3qa523cz9x79nhq0023hnbqp45q4l8r39"}
 ]
 }
