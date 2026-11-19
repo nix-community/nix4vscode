@@ -483,6 +483,7 @@
 {"v":"0.0.1","e":"^1.63.0","h":"0f85zhhasdzx92h596nccwx5smra24c68bf5z76xszrfzqksdlfq"}
 ],
 "amazonwebservices.amazon-cloudwatch-omni":[
+{"v":"1.1.7","e":"^1.85.0","h":"0r8m6ywvcmgr6mdg9an64145g9p86zr33qnhwvij2wshrkhxs7g7"},
 {"v":"1.1.6","e":"^1.85.0","h":"00gh71ig52q7pahqvwd6r8ngp8xlyaic4nhazcsdis9hwxl5xfzk"},
 {"v":"1.1.5","e":"^1.85.0","h":"0h8mwx8kv8s080vzv53cvyfs3vnd9p5j5qvl9nkkz1pnlzagfz14"},
 {"v":"1.1.4","e":"^1.85.0","h":"1xl72yv2hzz1ks7g2dsw40xdpj9n667dqr14dklchnnba77ria6g"},
@@ -1340,6 +1341,7 @@
 {"v":"0.1.0","e":"^1.85.0","h":"08ki012dn1140bpx4ds6nghwjy3yl1rxp3i4knz0m5ybald789sq"}
 ],
 "carrick-tools.carrick":[
+{"v":"0.3.163","e":"^1.90.0","h":"0ms2zb4w95nps246dr68fyszway6wcf8q1zacgmxnz96zvcs3csi"},
 {"v":"0.3.162","e":"^1.90.0","h":"06d8jxyfraf31pc81237sygpcqalflvvw9945jq606fbfpkslv5b"},
 {"v":"0.3.161","e":"^1.90.0","h":"14qq86azmz0nid3nacqd5yg959iravw10ja4j7jhab48mbrhaa86"},
 {"v":"0.3.160","e":"^1.90.0","h":"06sb2xj7cpsh029q3zfcligg8qs5lq4imi8sl4ni3j9ydcjjqb34"},
@@ -2557,6 +2559,7 @@
 {"v":"0.0.1","e":"^1.51.0","h":"11b5p0gaxfygnxkpc4gcm05j6ljfq4413hv9bvhh637shvqpncy2"}
 ],
 "danmoisan.drm-copilot":[
+{"v":"1.2.4","e":"^1.138.0","h":"0p1nmha6bkdxqdpv3cdpg2492dl624r85rl7n5v2n3rxfjgpr08m"},
 {"v":"1.2.3","e":"^1.138.0","h":"0sg0k9acjyqwgy3m63bjr0aifds0z4vazbbb2k70wq7m4668r61p"},
 {"v":"1.2.2","e":"^1.138.0","h":"03d0s7hii59cl6i3sbbg0p4lh6mf0jvfn98x1rrawj4f47hkg56a"},
 {"v":"1.2.1","e":"^1.138.0","h":"08i1g1rhqh1azbm19315ilkqlrllix9949246higs32y1s05vgir"},
@@ -4588,6 +4591,10 @@
 {"v":"0.2.0","e":"^1.12.0","h":"118ax1gm37i1nby75w4syjcvn1c2aqxfgi0vmmfz9w3pjhflhqkf"},
 {"v":"0.1.0","e":"^1.12.0","h":"1wwprsg7icz5a2w625c2jb10qyp0n943afa77nq0ziy1chdk64j4"},
 {"v":"0.0.1","e":"^1.12.0","h":"1axada36rfm5y3bzn8q7kp96kwf6gnlp1npz68gjgmr4hmsx064i"}
+],
+"humanorigin.humanorigin-vscode":[
+{"v":"0.1.4","e":"^1.80.0","h":"1yikqkn75wg89835f7r95ds51vx9nlmi28qhn2gjycl9hb9ra3sk","r":true},
+{"v":"0.1.3","e":"^1.80.0","h":"07w6sczq90nwpnvin79aj3wbhh2in19zqiis9iml4chdh0wbsxjy","r":true}
 ],
 "hyrious.import-cost":[
 {"v":"0.0.12","e":"^1.99.0","h":"07szcplss66yw3p29gc2hsli1bf9kh2fkwgchfgxdcznfgsshbsx"},
@@ -10224,6 +10231,9 @@
 {"v":"3.8.2","e":"^1.76.1","p":"darwin-arm64","h":"0w10h94yv9f8cmr809nz6psh7ril5fzhha3aznychv9bp1jg5am0","r":true}
 ],
 "salesforce.salesforcedx-vscode-visualforce":[
+{"v":"68.13.8","e":"^1.129.0","h":"01gbq872nzbhl3smc54cb9qv41kgqrscflm1i31rc1mz3cxsfb80","r":true},
+{"v":"68.13.7","e":"^1.129.0","h":"0ca5dxc2dh8kp24yv3lc2g11jps145larpk38ffyz98y39r89n05","r":true},
+{"v":"68.12.0","e":"^1.129.0","h":"163nhn3iy4m5jkq0kd1vlkw8c4vgx63m2gy4gxbm257dj9wcpkmh"},
 {"v":"68.11.7","e":"^1.129.0","h":"1cx07bbzbddsga32wkzvwb763916f93ynxd391zg9ldc138px7gv","r":true},
 {"v":"68.11.5","e":"^1.129.0","h":"08ddqys4nfi4kmc3d2y578k67y9bc41c1yynrwv853g32snjrfzg","r":true},
 {"v":"68.10.0","e":"^1.129.0","h":"10sbs4q659g9vn3qxbwfdi6y9s2k1d0jpv6sr8aygr50ci1jgkqh"},
@@ -10232,6 +10242,7 @@
 {"v":"68.8.0","e":"^1.129.0","h":"1ma4jpd4z544j8x0w6ynh76g2q01iw4f97p2cjrr1zsvabigsmny"},
 {"v":"68.7.3","e":"^1.129.0","h":"14vl0w1q4s9cvr1p790fvjid6hdjina504vk7xsqhrcpi1689ldy","r":true},
 {"v":"68.6.1","e":"^1.90.0","h":"1xwj74mmjc8fi8rcmpl7jkh1as3b4273q268k67g003vhaq4cmv3"},
+{"v":"68.5.14","e":"^1.90.0","h":"0syvwz5b42qkla147kjhnns73rqrcx8q2fxpmr18z2j1s4k004ig","r":true},
 {"v":"68.5.7","e":"^1.90.0","h":"062w07n17rc6yw2nkyn62apkbg1fhp7kkybar9qbz04ja8abcq1y","r":true},
 {"v":"68.5.6","e":"^1.90.0","h":"04vpgm8j44qgq53jl3wrh7j8q82rm4m41y57b6g9h1nm72l5bd3g","r":true},
 {"v":"68.5.5","e":"^1.90.0","h":"10yc9i2a1rqxq9rmrgk015gmdclzzpcnz5irz63lc3lj6fq9vshf","r":true},
@@ -10771,6 +10782,7 @@
 {"v":"0.0.1","e":"^1.79.0","h":"0ql77azyjza6whjd6mm1zkib992migw4pvvywql31hc0qqrja8wq"}
 ],
 "sbdl.sbdl":[
+{"v":"1.11.5","e":"^1.96.0","h":"0dkbhhj636im3pczxbag69612zdi6ndw8w2yl9gmwb8cw72fqpkh"},
 {"v":"1.11.4","e":"^1.96.0","h":"1i7szz6yyhl80w293pi0msh0znhhaqgzzb3yq77jyflmhlhgnfh1"},
 {"v":"1.11.3","e":"^1.96.0","h":"0dsk9vb4izh7s5yzcsbb48a1xl88synir0c0894v3z5m6fp5c9jz"},
 {"v":"1.11.1","e":"^1.96.0","h":"0kb49fgqdzhhvdk320q77mfgyxswqac7d0x069nisa8j44fmr9lm"},

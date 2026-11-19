@@ -516,6 +516,10 @@
 {"v":"0.1.0","e":"^1.65.0","h":"0wbyx93lqcbih0ws1a8pqpfd81gx20yzlm0d20zihlxqwvb9rw4g"}
 ],
 "anthropic.claude-code":[
+{"v":"2.1.328","e":"^1.94.0","p":"darwin-arm64","h":"1xgjiqcl6zfxd32aarbk2lafmg1sn594q7kz94qsnf4ssw2a8xjr"},
+{"v":"2.1.328","e":"^1.94.0","p":"darwin-x64","h":"0xwv1xrpws2xi7v00b3k6s92rwghqwk0849fsba7qcj13pcmcg9q"},
+{"v":"2.1.328","e":"^1.94.0","p":"linux-arm64","h":"1m3d45l9ikhj1m4f5l8zf3bczyrab3rxg8ismw7bb7xg75179g9y"},
+{"v":"2.1.328","e":"^1.94.0","p":"linux-x64","h":"060s90c4704w3cyiwan6wp0kjjg4zwfw64jrsxa6j47vndvfwrwa"},
 {"v":"2.1.327","e":"^1.94.0","p":"darwin-arm64","h":"1r95zi90r0m5q0d1xchmjprsrckyr5ycn7s4as9q8q8lx4994sa0"},
 {"v":"2.1.327","e":"^1.94.0","p":"darwin-x64","h":"1kfk7wljnqgsbkd9qnrby7rddv6nrpi5s30y5ppbs1siiyqph924"},
 {"v":"2.1.327","e":"^1.94.0","p":"linux-arm64","h":"19hccxc1wdl2793paq54wabk5qmq8dmydck2pjcmqx2m6arwd0jp"},
@@ -10924,6 +10928,10 @@
 "lpvic.extensionpack-python":[
 {"v":"0.0.1","e":"^1.97.0","h":"08z1wx50x66s64ap399ryh99kas0zf7xlrxnz9byc4yj6mh3y8b8"}
 ],
+"lsiq-software.sd-restmate":[
+{"v":"1.0.1","e":"^1.85.0","h":"0h39m8hxnz3z54ndl98y99bns1v0xk3hxnfiq8mybx8vik5b43cl"},
+{"v":"1.0.0","e":"^1.85.0","h":"0wnfn3lyzd0jnkw6f69rwn0xb824i2cb0jqih0yayshqjbjc7975"}
+],
 "lucas-marcao.tpp-lang":[
 {"v":"0.0.6","e":"^1.104.1","h":"1xl4wxzclzx42nwj5rb08a2jfwbvknwwfx53mvbixif22m68f55w"},
 {"v":"0.0.5","e":"^1.104.1","h":"0nq1s5g7r750l9izwcdlvfbfvzns1yls5crg1clbqgsm774vwgg8"}
@@ -12737,6 +12745,9 @@
 {"v":"0.0.2","e":"^1.74.0","h":"0xp142dvj4x44n766nrmx0zqcz04sq64l04wrrcdkzfzzr3fpfrs"},
 {"v":"0.0.1","e":"^1.74.0","h":"00kv73am5brr2a4441757zlswm105rjsyqkppgjvdvvhcr81c2n9"}
 ],
+"rajithdev.route-explorer":[
+{"v":"0.1.0","e":"^1.90.0","h":"10hb0j6fz5c3qgy47dvaz68vn3vq5xd3yhvh53vws9g3frfh5943"}
+],
 "raju-file-downloader.quick-pickdown":[
 {"v":"0.1.6","e":"^1.85.0","h":"15c3lbm9cg8x80n7511c2qksspjkiapklwsr2a3hds7z58k7k4qr"},
 {"v":"0.1.2","e":"^1.85.0","h":"039cmb86nkl7765hidk3hd2w2xyq63b3gr4m2kwsz3vrkad1xl2k"},
@@ -14144,6 +14155,7 @@
 {"v":"0.1.0","e":"^1.85.0","h":"16g7in24ii0f5whvsazdgdfswyp2in0bggwbhiragfgzi23nnab8"}
 ],
 "team581.spot-camera-preview":[
+{"v":"1.2.0","e":"1.147.0","h":"0qbvpc3d8rxqn19mhnwh20fmpx86l7vknb42dm97gz80cfn9kr0c"},
 {"v":"1.1.0","e":"1.145.0","h":"0k0ay5mw356s5hsmvrhqb5ydw9lqdik7jmdl05y64dgk8ch0sv7w"},
 {"v":"1.0.1","e":"1.145.0","h":"15jgasicqpdmrx83zqzxj0jk6n84qn7xhm7505gppjddp6lzym6h"},
 {"v":"0.3.2","e":"1.145.0","h":"0sgyr0i44m2y8wvmg916ny2irfybriwih4lamz4xqnpzsx6v1g75"},
