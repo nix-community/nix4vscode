@@ -1146,6 +1146,7 @@
 {"v":"0.0.1","e":"^1.46.0","h":"0zw13xk6zdn4pvzm12p9xx9mv4107jhs9rhmsh4x4bvwi9dqzcbq"}
 ],
 "bolu-atx.ghit-vscode":[
+{"v":"0.13.0","e":"^1.85.0","h":"0jr7xxj4y667irc0wd6p3335jwzifv1k4cky63h4f88n4gail32w"},
 {"v":"0.12.0","e":"^1.85.0","h":"00nzwh3g2pzgmhpam8xmwbxmdz2a25d20pi8wn3pi1hbb5r7s3gr"},
 {"v":"0.11.0","e":"^1.85.0","h":"14rwapss3796wds0fx5yp624kac6kgrb85dgda81incmdlfm87rs"},
 {"v":"0.1.0","e":"^1.85.0","h":"1mpyfahlgcn4cnlbhwdf8db7mcrpa2pkwxhdpnk9n3rpc2vp4ldx"}
@@ -2234,6 +2235,8 @@
 {"v":"0.0.1","e":"^1.50.0","h":"1j80cs3rc95ghqkjcicphxrj97zpf1545xqsy8z578rrg86pkk5l"}
 ],
 "delta-solutions.sftp-remote-editor":[
+{"v":"0.2.1","e":"^1.80.0","h":"0hm6sn7zhk48sbhnxl36zfqh0lqabydsrx8kfzsjhlxip9gfvg6d"},
+{"v":"0.2.0","e":"^1.80.0","h":"01zlz6dwms9hkrvg6nvf7lqg6a4rqjjy2l0wai6dz80mfpw3vzxj"},
 {"v":"0.1.1","e":"^1.80.0","h":"1arzk17vh8cjn66637j0lfl1yrpdghggsldrdhj51x8lx08k1hxr"},
 {"v":"0.1.0","e":"^1.80.0","h":"07mq12mgj3mb0kxmnr48v0m717sz9qyab3l86648lf36r59b8vy7"}
 ],
@@ -3051,6 +3054,8 @@
 {"v":"0.0.3","e":"^1.54.0","h":"01506iyvppj60hp3pgpqfklxnvj4h2nl9iznh5yqyvdxa8903ksy"}
 ],
 "g-corelabssa.fastedge":[
+{"v":"0.5.0","e":"^1.106.0","p":"darwin-arm64","h":"1698ky1jm308v5srm523i2nhykqd75a89zaxcnmp0k0jdkwf6bb4"},
+{"v":"0.5.0","e":"^1.106.0","p":"linux-x64","h":"1iz7w6i381rpfigaf8x1sva9209s7b9w25hs4pivdfgqxm1rh456"},
 {"v":"0.4.0","e":"^1.106.0","p":"darwin-arm64","h":"03d74ha89147mjh5ysfz6x9b2r3c837r0gw8vqv5br7a43z4x5c4"},
 {"v":"0.4.0","e":"^1.106.0","p":"linux-x64","h":"1a05lfv8myar0lq8dg2cz4cbhfbakrxa7r9hhr96a9i1aw2lxca4"},
 {"v":"0.3.1","e":"^1.106.0","p":"darwin-arm64","h":"0y7yavgpavsx9nc98yws50csrq2vch14m6gjfvs4y0ibbibvy31d"},
@@ -4783,6 +4788,7 @@
 {"v":"0.0.2","e":"^1.83.0","h":"0nj91gh7zga9mk58hr0lzvw89m3is05nhfnzw27sw4c2prylsawj"}
 ],
 "konveyor.konveyor":[
+{"v":"0.9.5","e":"^1.93.0","h":"1v5wncpc9lm3i24fg8np793nwv4g2kaihpf2gb5v0j07s8z0gn1h","r":true},
 {"v":"0.9.4","e":"^1.93.0","h":"1wyqkk0pgb2n8iw8bhmndx7rp0xsyd2n0ifbisg4zx87rgc1lffj","r":true},
 {"v":"0.9.3","e":"^1.93.0","h":"020winl7875dryrfysw8kcr90axa52l6fqksp2jmmhqj5w1imlb6","r":true},
 {"v":"0.9.2","e":"^1.93.0","h":"1hmm7k5cyvnv002ih2cgqdwqn6npcmvjjgyxxjl3hdzf8hi0krnw","r":true},
@@ -9392,6 +9398,7 @@
 {"v":"0.0.9","e":"^1.85.0","h":"1njq6mimq2f4miz3a1b4dssi51m9ch911xlwwj9ba20pmz1g855n"}
 ],
 "spufidoo.vscode-3270":[
+{"v":"1.1.1","e":"^1.85.0","h":"01fg40a6q4vbj74g47pyc87zafahlv0c1f0mkyqy2vqrqf7smr6i"},
 {"v":"1.1.0","e":"^1.85.0","h":"18y3iii7rqpc70k201flycawq6fmaf1vap449g7qg3is5rgbfccq"},
 {"v":"1.0.1","e":"^1.85.0","h":"1nf5c29rap2p95d5ddmg2mp4xaqy9vw072cy8yzmq68bs0w9kr84"},
 {"v":"1.0.0","e":"^1.85.0","h":"1d9smkhd8529y20qrydbv8c959zr4kxb0w7b63c9gvi0ygrkxlhf"}
@@ -10085,6 +10092,11 @@
 {"v":"1.0.1","e":"*","h":"0h5h1nf7yvfpwvzc9b3hcpy6mx9vgf7c52wywgb4854hhd3s3c0k"},
 {"v":"1.0.0","e":"*","h":"0wgi9bayb003m62bwxvyc0drq0fy83gwjrgm3dbsc3n7r87ipnyk"}
 ],
+"toximiner.jetbrains-finder-linux":[
+{"v":"0.4.1","e":"^1.85.0","p":"linux-x64","h":"16vy129k1sn4g8kfwcchcxhi49b1fsx6h6das342jj7kz73gls86"},
+{"v":"0.4.0","e":"^1.85.0","p":"linux-x64","h":"0xdc724m31j25wvqz7kv1v5hv9imaa6hvxfxxly3j7kzna3wisbz"},
+{"v":"0.3.66","e":"^1.85.0","p":"linux-x64","h":"0h61ixx2j68xrbwjkvwc4d6ms3v1av9zi48apsjkazjxi93m3dlq"}
+],
 "tps.variable-mapper":[
 {"v":"0.0.3","e":"^1.85.0","h":"1plda248165ygm74c1lyw0ahickgcgvfqyp1pcb7xg56kq799q0i"},
 {"v":"0.0.2","e":"^1.85.0","h":"06zhh9z8ljsyvywp2h3vqs3jq7ay93vp8yj7fmc3y87lzv4243sv"}
@@ -10418,6 +10430,9 @@
 {"v":"0.1.0","e":"^1.10.0","h":"0s290vyp59wgf0a68n19qzp47gy3xhm2ax3wny5vywdmahnrvkng"}
 ],
 "vrxt.ssh-config-manager":[
+{"v":"0.8.2","e":"^1.85.0","h":"1p5vpa82hhxcc7swf1zn5bwmvwnnfvq7jyhdmw3ihsrg4hmrnq0p"},
+{"v":"0.8.1","e":"^1.85.0","h":"1dp92k0j9fba1gqlbchcmhw11palgzff6651l6jz4v1bx70wrw9w"},
+{"v":"0.8.0","e":"^1.85.0","h":"0rh1kfb87fmw1aba2ng3w4b3dlgfzgbzhxnrwfl9p5fpqk879nh0"},
 {"v":"0.7.1","e":"^1.85.0","h":"1jfgrrfns6vmjbqpsw475k0xqxr165kdgnch9w82ng2rzjmiwf98"},
 {"v":"0.7.0","e":"^1.85.0","h":"1nwh6wa02vzic6v89shg18brj76wf2wxzcg08gq99c51ndd92z8k"},
 {"v":"0.6.2","e":"^1.85.0","h":"0l3scnw32mlb94daxb7y02m49mzdbmraxxa0hmz0jsm1z9ilij5w"},
