@@ -760,6 +760,7 @@
 {"v":"0.0.1","e":"^1.40.0","h":"1rp2mdjdzdrcdis74hpgijxwjs3gn8izjyjj14w5ghaqw1z4m9c3"}
 ],
 "atomicconcepts.atomicviz":[
+{"v":"4.2.2","e":"^1.95.0","h":"0ssk2njagxc4j78cl85im5b13if93pw42llz7l3fjal8n8x7wi0a"},
 {"v":"4.2.1","e":"^1.95.0","h":"14a777zynvycpzy9qrndw58bgcqcfawmvr6vlvmkld84zjqwcvw9"},
 {"v":"4.2.0","e":"^1.95.0","h":"0507kz727c3fmxriqylr0rckjzixxxp21x92qzyh82b9z538sl0f"},
 {"v":"4.1.0","e":"^1.95.0","h":"15h95c3f2zs5ki28vsvayzvjf2qy1lkkljrsirb4flm43lqdn2yv"},
@@ -1589,6 +1590,7 @@
 {"v":"0.1.0","e":"^1.85.0","h":"0532jv8x04q2frawbzdm9hgjr7ar6y9ghyy942wszwpvmahvyqzh"}
 ],
 "chaselen.v2ex-playground":[
+{"v":"1.32.0","e":"^1.86.0","h":"1m34qqahfl7n7fg2csziphdfc9pwkxwqq97w1i454z88whly9pp1"},
 {"v":"1.31.0","e":"^1.86.0","h":"1f2sp91ml2jpm2y7bi6hp37ffw2f55svi581y1xgfphj2n8nzsmp"},
 {"v":"1.30.0","e":"^1.86.0","h":"18r53w25g5lbyhwshvm237a1n2sa33c31451nxvcjvk4bxqc6nqb"},
 {"v":"1.29.1","e":"^1.86.0","h":"1v16a2dlfydcphwl8n6hc0kaxk74pgcalkrfxv10f5rgv363vnpp"},
@@ -1780,6 +1782,7 @@
 {"v":"1.0.0","e":"^1.84.0","h":"14i6syjydxfc4pzd7v0a76vkx3wbqmjavvkhhj8rc2f9iv9igy15"}
 ],
 "codenameryuu.laravel-blade-all-in-one":[
+{"v":"1.1.6","e":"^1.75.0","h":"0crhad8nbkmhiwzqg8qni9z327fsdvdr98iycm72gl14q5r1wf0c"},
 {"v":"1.1.5","e":"^1.75.0","h":"0cpizdnfjgd54mhxw1s2afvrfvqlq66nrlaayfkzxg8zd1f24myd"},
 {"v":"1.1.4","e":"^1.75.0","h":"19nzmbb33d15v471j7g8rfslyl6vvdxkgkkqb7xvr70mcs7609jy"},
 {"v":"1.1.3","e":"^1.75.0","h":"06d650bd88f7vj38lhypalawi6j5idynkhis5nwnhm566f3ibd9k"},
@@ -5126,6 +5129,8 @@
 {"v":"0.1.67","e":"^1.85.0","p":"darwin-x64","h":"0fn089xv6rffa2xb7q60vsshali5sg9a48g7qfs00yrmfzrzvpzb"}
 ],
 "lusia.lusia-vscode":[
+{"v":"0.1.6","e":"^1.80.0","h":"115imlqrjd3jkm93h9mgicqlvxkr91yvkzalhsl9aj39qs9rwqjn"},
+{"v":"0.1.5","e":"^1.80.0","h":"18p0pnfwkrc1pxighaw5vwaazgip2116ivfmjq9j9qk7ds5d7vhq"},
 {"v":"0.1.4","e":"^1.80.0","h":"1p2g2m43zhadp7fpl4ryqzgipfzwshhcmspqn9f4pbzlm6rd50ax"},
 {"v":"0.1.3","e":"^1.80.0","h":"16jgk1026d5mb60flc396x7qhfk7706hhjccdsm1k2g1yac73k1z"},
 {"v":"0.1.1","e":"^1.80.0","h":"0iqsv3j6j7ljbjh96wzkfgvsf8rk1m4jp8h3dnsr7yy2ca0ilqwd"}
@@ -7759,6 +7764,11 @@
 {"v":"0.1.0","e":"^1.75.0","h":"0zqgq5vi6fpkqah15vsi8rj2h6sixamkaq98yic06b6618f60b0i"}
 ],
 "redhat.vscode-xml":[
+{"v":"0.29.2026112408","e":"^1.67.0","h":"0slpvk4pn0mvhndhmyh5fxa50hjlahqv6c358kqb72mshw8l0lm0","r":true},
+{"v":"0.29.2026112408","e":"^1.67.0","p":"darwin-arm64","h":"0y75jdfnc4y4jlvnyp8xmj7xcl7xdh6fmfk9hpcxa947jlv2vsyk","r":true},
+{"v":"0.29.2026112408","e":"^1.67.0","p":"darwin-x64","h":"02aknm34rfqrqw250n64r292dcbb5s14vlbl77m2fa12rb5awxdc","r":true},
+{"v":"0.29.2026112408","e":"^1.67.0","p":"linux-arm64","h":"0sh6qhwijbihv07rc431dzbqvy7sqwskwdfkcam76ma7kwkfm3vg","r":true},
+{"v":"0.29.2026112408","e":"^1.67.0","p":"linux-x64","h":"0d0qdwd1a5mgbvzpdsw7k1v09cxlrkg4148f5gvqb4b16i612avg","r":true},
 {"v":"0.29.2026112008","e":"^1.67.0","h":"0dz1myra3bjkd2r6d6wph3ydbcl2w3qmwpk2h53lgf1vz755d65k","r":true},
 {"v":"0.29.2026112008","e":"^1.67.0","p":"darwin-arm64","h":"0rfm3ymcmknpsjbx36lww8vjcym1vg7zkjgy2ld289s7r97wcnvr","r":true},
 {"v":"0.29.2026112008","e":"^1.67.0","p":"darwin-x64","h":"0g9pmfq9aww1pl959srs43fbw58qbv4y4nm2vzim0l20dvdh39yq","r":true},
@@ -11157,6 +11167,7 @@
 {"v":"0.0.1","e":"^1.116.0","h":"1xk8m8z1kfg253ws3j5bflqlvn8f4xfajiwmxn372mmjfq2kz2in"}
 ],
 "vimninja.vimninja":[
+{"v":"1.1.0","e":"^1.90.0","h":"0pfrgfxnzv33d1vqddn6h0dqsghqafzfg1msz69xqhar9qa4sw8z"},
 {"v":"1.0.0","e":"^1.90.0","h":"1gwlkqr7fh5zzqcdzrslb0klrjn9prjqzz4lv6vxyvf4a8h8dnnr"}
 ],
 "vincentm.doom-vscode":[
@@ -12539,6 +12550,12 @@
 ],
 "zsf.hisong":[
 {"v":"0.0.1","e":"^1.55.0","h":"19ka3l30xbnh1irif1qlb8cm1pq4cmfris2w1kv011vrs798k73v"}
+],
+"zutsiy.pcs":[
+{"v":"1.40.0","e":"^1.144.0","h":"0q5hagggl06m2rwazp310s3s9wi9j1qs71n8ih0g49y9q3ifw8xw"},
+{"v":"1.39.2","e":"^1.144.0","h":"063mrnjmr0kjxsm07l8d9cnl6c47jzy4nmk1ngmwh6av63amav8c"},
+{"v":"1.39.1","e":"^1.144.0","h":"1q1vrnd7yhr8qi185h1qgiiwq4wzrlg3287xfnjaiwj4bcfwxddq"},
+{"v":"1.39.0","e":"^1.144.0","h":"0rikq9z9gcidxfpbqjpk7mwhzlbhs2365cmq4axcxf75yca27g9m"}
 ],
 "zvelte.zvelte":[
 {"v":"0.1.32","e":"^1.90.0","h":"0hnrlwdrp682mlnagh6hb1vdwzbmpwhlfxx561ffkyxnm3vrjbcl"},

@@ -277,6 +277,8 @@
 {"v":"0.0.1","e":"^1.50.0","h":"1nv0dmnkpb19xd8x89bhkvqpq4ndvhw6wfi5gmpmalqwzsz5x57s"}
 ],
 "acn-gw.gw-agent-manager-macos":[
+{"v":"0.8.5","e":"^1.98.0","p":"darwin-arm64","h":"1y435j0lssl9va114wf361ki8rlk98z6xd4qr22lrmp1jwp078w9"},
+{"v":"0.8.4","e":"^1.98.0","p":"darwin-arm64","h":"07s53kbdvsmnk4mln8p3lf2gxk9wxc9qdr29pgqxg7pksxgxvsld"},
 {"v":"0.8.2","e":"^1.85.0","p":"darwin-arm64","h":"0mnnyvc0q2qwnrx7cw5k5xjxwpa14a2wcyqgc0ca1lbb9gbiq62v"},
 {"v":"0.8.1","e":"^1.85.0","p":"darwin-arm64","h":"1l9rfm10p78p2qlf9m1jkyganqk60k25vys7ykvgghsz7xaaax0s"},
 {"v":"0.7.5","e":"^1.85.0","p":"darwin-arm64","h":"1ski00kbkfw72z6kpxljpi128by0l7q7bzbzjg5185ckd1j08nq8"},
@@ -1630,6 +1632,7 @@
 {"v":"1.0.0","e":"^1.60.0","h":"17idx6774m1qf2n0f445k46c9440c9b394pnk4zpcwvgdahdap5i"}
 ],
 "artin.browser-panel":[
+{"v":"0.5.2","e":"^1.96.0","h":"1mg7mgm5kscpc4zkyf1md28hqs4ha6jjv8ngs36sxvnlnlv9fcff"},
 {"v":"0.5.1","e":"^1.96.0","h":"0h6k7rbdf84c8ar3lypvys89b7c9w7h3k4wss4j3c17i8pa1qpyp"},
 {"v":"0.5.0","e":"^1.96.0","h":"1b2mplwkpnn385jabbil632jv166r56hz7d8kq3jw1zlfq1qzim5"},
 {"v":"0.4.5","e":"^1.96.0","h":"1swiigrvswjgn5p88lrzh3iyv2w3rrhkpsngjd2n5zskzi4bdzbx"},
@@ -4992,6 +4995,7 @@
 {"v":"0.0.1","e":"^0.10.1","h":"1h65n4lyjnbgnm83ccd9784qryl22fnncs4rrml09w45hrlsyb2j"}
 ],
 "kendryte747.canmv-vscode":[
+{"v":"0.9.11","e":"^1.90.0","h":"00xssi0ir17q5lnxzvvvfvp80nm3iqgqqqdxc1nr6sbjlgwpr0n8"},
 {"v":"0.9.10","e":"^1.90.0","h":"1563a218y74gc8b33jwclxqmpbh9zq7m0s2bndc89cz3y84qdv2f"},
 {"v":"0.9.9","e":"^1.90.0","h":"1w5gcfnr5g5cpw87ahgr70l5w93l4nw5hlg8b50j20b9p4hkigd3"},
 {"v":"0.9.8","e":"^1.90.0","h":"1lb3vqrfc7wzacwwjpqawjag5r5mvkxq6rq7pm0zmgwv19b0cxwl"},
@@ -8292,6 +8296,11 @@
 {"v":"0.1.1","e":"^1.85.0","h":"1rrd0zdgp27yvj2r7m7m5100yvlvlmn9haprcwhmfc8y5198nlqx","r":true}
 ],
 "seanahn.perch":[
+{"v":"0.7.44","e":"^1.90.0","h":"0iiwjlq3rdjbw7bn30kkpwbcyk3i4ay5yyqwwrz87qmckc1sgqrw"},
+{"v":"0.7.40","e":"^1.90.0","h":"1fd4wn9m500lzr58g34cy01g1i104q2x4snp8241qxmkqmwdn58m"},
+{"v":"0.7.39","e":"^1.90.0","h":"0m54yw375h58h9pl7xa75zxbci52qj870x2iqiwninmvqg2z99am"},
+{"v":"0.7.38","e":"^1.90.0","h":"0bblxfqkaabmd6f24g9n3kgvn76g2iz8gm00xfz6vz8dxmyw0sfa"},
+{"v":"0.7.37","e":"^1.90.0","h":"14zs4g72041l8p35jnjmmxhgfsc9rsbid1z0n9w7ff1baxxw3xvv"},
 {"v":"0.7.36","e":"^1.90.0","h":"1xxdhcxfaprzbp0h45f9411i298p2rlshd19icm7jdbrys31284z"},
 {"v":"0.7.35","e":"^1.90.0","h":"05zjrxs5c8kn48ibnlb99cxh8lzx04jcq5jrgxalr56yzvlvm1id"},
 {"v":"0.7.34","e":"^1.90.0","h":"03vq46k8xjcnwnysmfapcv2px24s32an9l7dsdqv7lp0ndh7dpz2"},
@@ -9293,6 +9302,9 @@
 {"v":"1.2.0","e":">=1.90.0","h":"012nj3d05cabk6avaf7cad4wsc88pfkv3r9s8jqyzq7s9kzzy3yc"},
 {"v":"1.1.0","e":">=1.90.0","h":"0g02vmahxz50dqfyvncih59ccsr2j5vpz6pj0i2nl6j9aai8n2qr"},
 {"v":"1.0.0","e":">=1.90.0","h":"0zpn547xxnjx1bj467071ynjadcbz9zkwq68sryg8w3br37h7vdq"}
+],
+"tinderbox.adb-wifi-wireless":[
+{"v":"0.1.0","e":"^1.100.0","h":"0cfivr7glhjhglzscknqcykl4ljn4didk75rkfgljss5fxy7d56p"}
 ],
 "tineaine.onetalk":[
 {"v":"0.1.0","e":"^1.63.0","h":"08adkfapkzdmvfrl2s4fn3w7jmj9sk2i9qzl4lwlv4js1yk2mq7m"},
