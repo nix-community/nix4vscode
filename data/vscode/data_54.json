@@ -1771,6 +1771,7 @@
 {"v":"1.0.0","e":"^1.74.0","h":"1699hlzvasrhfq5wrwvd63ikgma3rqd0z7p5mpivvqz34q2bvmdv"}
 ],
 "aprameyakannan.custom-code":[
+{"v":"0.4.0","e":"^1.107.0","h":"0ifdkl52cfsam45ca2nw2paa6crqzcynjg1i1zn9jpday42qq8gb"},
 {"v":"0.3.0","e":"^1.74.0","h":"0jsz6yk1q8j5vrksdiyy0s7gv2skxbjwv3k853ql8zcp1hbn5svw"},
 {"v":"0.2.0","e":"^1.107.0","h":"030fll7kfhj0mdpmn1dmr0xrsi6sg2igjlqx7cs2wp55dn2gvh66"},
 {"v":"0.1.0","e":"^1.107.0","h":"0ws1pjy8ni7b1ybkhk3k6j7aj9vwf4bxv3q62hppn93j94mwyykr"},
@@ -2421,6 +2422,7 @@
 {"v":"1.0.0","e":"^1.85.0","h":"1zjc6gw6lg0nc12kg2xnxbrdvj39wnka54zhvlxi959hpccwhqm7"}
 ],
 "brokspace.brokspace":[
+{"v":"0.1.2","e":"^1.90.0","h":"1ag5d0hdvn2gbddknb9gdnk4ab0apcf24zlnjhsps1n48prsdgzj"},
 {"v":"0.1.1","e":"^1.90.0","h":"0ib8nlwiai2mp8ymxvhh05pxi1fsl3vvp3wa3a2x8a9y7pd5p7hp"},
 {"v":"0.1.0","e":"^1.90.0","h":"12wpbk70x5b3brcsjrcak7pnq118ywvhgwz9bdva3a8yrkxvxvbm"}
 ],
@@ -3831,6 +3833,9 @@
 "emanuelemeazzo.sql-server-diagnostic-book":[
 {"v":"0.0.1","e":"^1.39.0","h":"11ax59fllj0z59fmxnmci2k3kzjm89m1w3l8j47ajfdcsinpvgwf"}
 ],
+"emperorandfool.tommys-hermes-acp":[
+{"v":"2.6.1","e":"^1.85.0","h":"1wds9ff2dxm7p87zqldkpd3806w3603n8llpzp1b4pxcrk0hccbj"}
+],
 "employsure.employsure-integrations":[
 {"v":"0.0.1","e":"^1.80.0","h":"05lkayvgn2iwah3552aqiq6w19pplfjj4kfk3fqq834451mmnibv"}
 ],
@@ -4081,6 +4086,9 @@
 "fluma.envx-agent":[
 {"v":"0.1.0","e":"^1.84.0","p":"darwin-arm64","h":"1r2vpqmjr9hca7srdysqrzkk75i5qjk3dxnmv3j9fbw7fi21lr8d"}
 ],
+"flutterqei.flutter-cqa":[
+{"v":"0.0.10","e":"^1.85.0","h":"0a7yy17vd7z0szy963nnpsyrrh3q59xqg57rinpakf21gxpx2cb2"}
+],
 "fogio.jetbrains-color-theme":[
 {"v":"1.0.3","e":"^1.75.0","h":"0pyqdzx1qxhp1mylz331p3bz5dff0334hvr51a5f0mwi1bzh6fvw"},
 {"v":"1.0.2","e":"^1.75.0","h":"06iwd1gb8nh8wm32db6dzj05lmz25nv82br7siknazjx3vlcfr45"},
@@ -4177,6 +4185,7 @@
 {"v":"0.0.1","e":"^1.76.0","h":"0361yzn31xhmxg3ws0k7p9hi5vjqv6b2194k9ab4aazc9mqaaydw"}
 ],
 "frflo.lugo-vscode-fivem-enhanced":[
+{"v":"1.7.2","e":"^1.140.0","h":"063m9yxhln4drij0lmqd7vay8i56qf53xxbpkr0bjdgg1v1jwgyj"},
 {"v":"1.7.1","e":"^1.140.0","h":"1mkmf0aa3zfx66wjqgn3bn6dz8qfv3yq053xc1xnv78icfpknzfk"},
 {"v":"1.7.0","e":"^1.140.0","h":"1ixq3y39nmn99vwzagx8b14qjmf4fsrnbsv2ckfrbxzx1jqg6xnd"},
 {"v":"1.6.1","e":"^1.140.0","h":"08zh7p4ixv81mpdycwv4z64fsh6hprpw5lw1llz98dw10k6yx8is"},
@@ -5052,7 +5061,10 @@
 {"v":"0.0.1","e":"^1.72.0","h":"0797z5g5krmask1llzggj2sd1hnhcmiyi9q79x2idb9dvq909fm3"}
 ],
 "jetbrains.goland-server":[
-{"v":"0.0.153","e":"^1.105.1","p":"linux-arm64","h":"0qbyki8iwgk6419fgpal9gjblhvzk3fcna3vwflxygw0b2nvq9dz"}
+{"v":"0.0.153","e":"^1.105.1","p":"linux-arm64","h":"0qbyki8iwgk6419fgpal9gjblhvzk3fcna3vwflxygw0b2nvq9dz"},
+{"v":"0.0.153","e":"^1.105.1","p":"darwin-arm64","h":"0y0b3dkh0rhig3nnc1hqf97jrrnivxw0sg6cpfynpw9z00450xq3"},
+{"v":"0.0.153","e":"^1.105.1","p":"darwin-x64","h":"08cinc4z14l2zpmfyllja1l8cryg6mxhiy5ybwyknhlr7cqkccam"},
+{"v":"0.0.153","e":"^1.105.1","p":"linux-x64","h":"03mn6k97d4fmwzxzswn9fr7zh3q894axq8546pxcm75gavs01841"}
 ],
 "jgodi.vscode-jgodi-react-generator":[
 {"v":"0.0.2","e":"^1.29.0","h":"1abpg0yxyyx1bkk64yggr1kirc3p9z9ywp5j32lg394rivzj92kq"},
@@ -5296,6 +5308,7 @@
 {"v":"0.0.1","e":"^1.58.0","h":"18cc5m5brcvln9mx2ak877w0licd1xx22i9k05dqcgv6nh7z2l74"}
 ],
 "juddersoft.git-repo-and-branch-explorer":[
+{"v":"1.6.0","e":"^1.95.0","h":"1yzcwhaa99vvcwwlxqyhl8ilv0w3czf7l7c845y0rwwnpdzlqyxl"},
 {"v":"1.5.0","e":"^1.95.0","h":"1qdff56rxjyqrbdnvif0dnjxmk656lzq3iwa3y7ycsv440rlzxqr"},
 {"v":"1.4.4","e":"^1.95.0","h":"020bblgbjdcn7xrcjfgfx102w6zncicb3fz91j69hzfxpab1xwsw"},
 {"v":"1.4.3","e":"^1.95.0","h":"0hn4fpbfqbbg71kvz9jsshljsxf1zf6rgl19rgjcf0hvzfkgp7j0"}
@@ -9305,6 +9318,7 @@
 {"v":"0.0.5","e":"^1.56.0","h":"1y0njxirsk20k7nwjv8fc52sw8bg72xgn60dg90fba7y5dqawv8b"}
 ],
 "shashwatmishra.smaran-ai-codex":[
+{"v":"2.32.2","e":"^1.90.0","h":"1pak65f7gdqsd476c98293znf8yjgcjjwdhhwd3rvk75bwknm8pk"},
 {"v":"2.32.1","e":"^1.90.0","h":"1k1iavv92l1y063dx81905d0ii6dkf81ngad4y744l93nvkgq7hb"},
 {"v":"2.32.0","e":"^1.90.0","h":"1pggdx6fj9rihc1h7vrcr7d37h5iv5i1x0g63ql3mf1yv3jcmc8g"},
 {"v":"2.31.0","e":"^1.90.0","h":"11ddf0k19sn6rg3z52w3zz78qxi2pl54s53b578fwyd6bc6b6hpq"},
@@ -10138,6 +10152,7 @@
 {"v":"0.0.1","e":"^1.53.0","h":"02llgymja9g16n8xkqw2989p5bdxj1v4lji0pw24yyf87pxwxllz"}
 ],
 "ti-development-tools.ccstudio-starthub":[
+{"v":"1.2.3","e":"^1.85.0","h":"0a1nvzk0x2gh135z1288cdal40cf2drkv0ipp8f7h5mlc1gglan3"},
 {"v":"1.1.0","e":"^1.85.0","h":"1wsvj8gd8qi14yc3d2g4vzq3cv3nqx08afjbhrm6l56cigqsya17"}
 ],
 "tiagodprovenzano.react-keeva-vs":[
@@ -10869,6 +10884,7 @@
 {"v":"0.2.1","e":"^1.85.0","h":"13w6v4bm0nfs2h9v2f1nxl8h5n82csd5ikx9zpj6h4jki24kiygb"}
 ],
 "wealthguide.investpro":[
+{"v":"0.1.7","e":"^1.85.0","h":"1px5q1iqhj50h1ch9ir3jjwqlgfhb17ahx1zfnd3p3c1q5ckl9nq"},
 {"v":"0.1.6","e":"^1.85.0","h":"06cxzjnswyk818vzra2rya9gd7j4wcj4kian0sbkaxpj3kwpasb9"},
 {"v":"0.1.5","e":"^1.85.0","h":"1kwi5s6f7lr8k20wl9brk2vivadyrfzqqn90rzwrb8vn0a9i4sm0"},
 {"v":"0.1.4","e":"^1.85.0","h":"0kmaa9ll5z44k088rrz79174ppxlm0m4r4pn3fqsys030l31gxzf"},

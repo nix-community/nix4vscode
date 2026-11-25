@@ -1040,6 +1040,7 @@
 {"v":"0.0.1","e":"^1.20.0","h":"1zizga4v5a86irlar9084cfrzpfmdnr9jzgp6d6wflhsns097wdp"}
 ],
 "appland.appmap":[
+{"v":"0.147.2","e":"^1.90.0","h":"05jz1y0wg6ynqmwxi77psm14j7b8ss0z51b32d6lnjqxsiqqdn6y"},
 {"v":"0.147.1","e":"^1.90.0","h":"1qkpq6sg541w453h58jqcx54izaafkgvf1syf5kam8lpi1zd5vqr"},
 {"v":"0.147.0","e":"^1.90.0","h":"11v551r3rybqaqbzgxcpqzqqyb8w15p9n9yfirwn2gbgnsjjwmj4"},
 {"v":"0.146.0","e":"^1.90.0","h":"0gbv0w3pr29brxikbn294p9dvrg587anqxynhwcvawv1gv94xnis"},
@@ -4568,6 +4569,10 @@
 {"v":"0.0.1","e":"^1.76.0","h":"0rzm224vyncyydfd8h2f2dp0n8fiznm8pw1hikw343km5h93i5kq"}
 ],
 "hypermarkdown.hmd":[
+{"v":"0.6.0","e":"^1.90.0","p":"darwin-arm64","h":"1vpwp7wza20w2f6ic7k0dxg3xh47rydjl3ca0dbm2bgm6ic8xklf"},
+{"v":"0.6.0","e":"^1.90.0","p":"darwin-x64","h":"0gnj21xy97gmbnssrrr83k5dva96l9wry7q6qs9sr0f51w1g1n6y"},
+{"v":"0.6.0","e":"^1.90.0","p":"linux-arm64","h":"1zqv3c0d54qyqlisjwlvviswngxqc0rs0yrs7iryfcjqrhbzx8df"},
+{"v":"0.6.0","e":"^1.90.0","p":"linux-x64","h":"03r4fsxk38w7vmyw3l95z411ajb4xbv759r6kpsnwxmxkr0s4c6x"},
 {"v":"0.5.2","e":"^1.90.0","p":"darwin-arm64","h":"05qs8mxnmiqhqhnnv73lksgazwblppaa0k6dnf8kzi0n654xxg7d"},
 {"v":"0.5.2","e":"^1.90.0","p":"darwin-x64","h":"1ygkcnb779ipax61g4xsfx5ddwlzi2jsr35bv7nffdrg98xadp89"},
 {"v":"0.5.2","e":"^1.90.0","p":"linux-arm64","h":"0dx5c7d0lmm2b4wvmfq1bn1mfc3vhcnz2qfqnhz2nnrgspsgbr9h"},
@@ -4757,6 +4762,10 @@
 ],
 "ipid.asm-comment-aligner":[
 {"v":"0.0.1","e":"^1.19.0","h":"1fa888d4d2rzx1prfn8c8dv7rg45qq209d1j0sgzcz6p7x8qf1d2"}
+],
+"irfanyasin.smart-git-commit":[
+{"v":"0.2.1","e":"^1.90.0","h":"048rvlxb02svi93asbjr678y4qqg61avz1wpj17slw2brsj8nf4m"},
+{"v":"0.2.0","e":"^1.90.0","h":"1zxvn8cw7kngnr8sn368s6cjcjm3l6z8xsb8a9xnp4bkrizay8hq"}
 ],
 "ironm00n.magic-racket-student":[
 {"v":"0.6.7","e":"^1.59.0","h":"1iq6g21il8y78n4m41h8r2ljvpianjmrd13asdnk0bxp21c5z0wz"}
@@ -7811,6 +7820,7 @@
 {"v":"26.11.1","e":"^1.80.0","h":"0ma83m0j1j2ck1bcvylw16vhbvxq1l6agxifw2ripffbv0x3jz9b"}
 ],
 "paireto.paireto":[
+{"v":"1.5.62","e":"^1.140.0","h":"0fzn8llcfy7h9mm01g6jvsxcdgd38ckpkjmlb7fqx8c0dy9b7v78","r":true},
 {"v":"1.5.61","e":"^1.140.0","h":"0xxgfpi2q47s0i6g4cqjk5zdjnb73bcngqwhdfdkjyrpkqky026j","r":true},
 {"v":"1.5.60","e":"^1.140.0","h":"07rlcbd7l8fgrfh1665134r73s9bnvclwvnvpgn9qrxlsgmf80qr","r":true},
 {"v":"1.5.59","e":"^1.140.0","h":"0r7mnvgaqx4xkpj2gmp1jz90mrkbfqn0ny3551mkdsrxq1c24zrr","r":true},
@@ -8267,6 +8277,7 @@
 {"v":"1.5.0","e":"^1.84.0","h":"1vj0zd73a584ppaw5gnldh2p9al561mbv3n4z20bynjqlj9i46qv"}
 ],
 "redocly.openapi-vs-code":[
+{"v":"0.17.3","e":"^1.82.0","h":"11993w73dqg26lyvimxgiw59nxwphj59gwpfsyrw68zjgnbr7nmj"},
 {"v":"0.17.2","e":"^1.82.0","h":"16zh78sk4m73yhxb5kfacrlcv0m9wlp5g4akv99h9lp0qsrx0253"},
 {"v":"0.17.1","e":"^1.82.0","h":"0fv8d0z84iikxx56x3zhyd55kwh3zfiqhjssm7j62k3d0r4hr8kg"},
 {"v":"0.17.0","e":"^1.82.0","h":"1s7fcf7gyk6749d6wqmfgs0dn6pj85yvknp7k4i6jqck5nq6g6r2"},
@@ -11325,6 +11336,7 @@
 {"v":"0.0.1","e":"^1.46.0","h":"13c8dldglwqfsim8dck80lh5a7apfx9d140z310aq3d0jd3xjzxf"}
 ],
 "zim.vscode-deepseek-obsidian":[
+{"v":"0.0.50","e":"^1.85.0","h":"1dpbbldy5zfykgx9mz49032sxbiphyi4zacvh2f07yrrwhsjn447"},
 {"v":"0.0.49","e":"^1.85.0","h":"1hdi1cqhfbqkmldk6m0h4ymbjx8z2rhx5rsxj1pn4lmsl3v99vnb"},
 {"v":"0.0.44","e":"^1.85.0","h":"1ynb9dj4b86g56mk8hw5kyprhd8wwg9pqja4hgbkfi9667abvyfq"},
 {"v":"0.0.43","e":"^1.85.0","h":"083wk2gc9dnp0m56h0lpq00qp3w66r4p2z65ap05792rfgxxndfm"}
@@ -11346,6 +11358,10 @@
 {"v":"1.0.2","e":"^1.90.0","h":"17wix1lfh6ci0qwjxx5hkkam4x58x6sgwwkmmb1n2m70mkfd0z9a"},
 {"v":"1.0.1","e":"^1.90.0","h":"1zdabsfnag6b1rhlsqhvrqjnq55wl9vlvxfbzkla8ydhf6j51vkw"},
 {"v":"1.0.0","e":"^1.100.0","h":"0343ci6p7dmccjc0sk959dlhmz1fyca0rphgngivypvwmkxlkadl"}
+],
+"zohmcontrolgmbh.ultrazohm-extension":[
+{"v":"0.1.22","e":"^1.93.0","p":"linux-x64","h":"03qd4zlwf3rwkr46j3hlsflq1dqw02ilml6r66x69wrqay4p9vx3","r":true},
+{"v":"0.1.12","e":"^1.93.0","p":"linux-x64","h":"0hx1vzcxjaa8liyfdwnf3q86qlqx5n8c8i75d2gs7l4dv02zv1nl","r":true}
 ],
 "zovo.zovo-nbt-viewer":[
 {"v":"0.1.1","e":"^1.75.0","h":"01fi1zs393yaxb6j0jg5vbsb6wgbvdq49dcif91zyvxwdh4sgklm"},
