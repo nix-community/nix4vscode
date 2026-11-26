@@ -1633,6 +1633,7 @@
 {"v":"0.1.0","e":"^1.85.0","h":"0jqi0qxbkdxgvrhcbi15zf7vwsvf98bzn7i63d8s6jkz98w7d0y1"}
 ],
 "conn2flow.conn2flow-tools":[
+{"v":"1.2.4","e":"^1.85.0","h":"01pxaa23r44a4qj26z30gqrnlaya6f1bijhv4qb1z8nydaqw6s6g"},
 {"v":"1.2.2","e":"^1.85.0","h":"1vik7gynsgzw7wxas9h17az03ja9bl9l5326y3xw5d6wr9ayzj9b"},
 {"v":"1.1.7","e":"^1.85.0","h":"1ylai3k3pzyvdnh4xsd0kyqsgq7yrbrnladl9z1ca9kp7gwqh41d"},
 {"v":"1.1.1","e":"^1.85.0","h":"1kgymhp03r7fianawj78nr4dl65j1l7pmiq4kl8ran7m57gm9l46"}
@@ -1791,6 +1792,10 @@
 {"v":"0.1.6","e":"^1.85.0","h":"0vm09fjp1fdri3i184qq5014ik8vm977kgxqcjkw3wccks5a0x55"},
 {"v":"0.1.5","e":"^1.85.0","h":"04sqy65s5w10zjzxkf4hcd1imi3crd9r0w33qx5miry8rlrz7cc0"}
 ],
+"cytwyatt.orca-helper-vscode":[
+{"v":"0.2.0","e":"^1.85.0","h":"11mvbcvglil7d8ynbyly6j3c0p0z909b7iwlrmklkvpvq1g8h6sz"},
+{"v":"0.1.0","e":"^1.85.0","h":"1234c4f3p2yg1m452fbjwlqkrp5j13lc74kh3jwgadhp8by9x20w"}
+],
 "d3cruz.llm-gateway-connector":[
 {"v":"0.1.3","e":"^1.85.0","h":"0yz72zdsdw0mhr1dm59ik42xqs278xi78biwjciziyqqcv119vw9"},
 {"v":"0.1.1","e":"^1.85.0","h":"02d9ihpwhyccsf7nwqfrvyl0wscf98mks53jgwn2a93k3h65x160"},
@@ -1852,6 +1857,9 @@
 ],
 "danicc097.htmx-v2-tags":[
 {"v":"0.0.8","e":"^1.63.0","h":"1p7jdcp8xvnwnyv2rafbh958gpawhwxbynqdfkxbvfsvp5cg5qbc"}
+],
+"daniellucario.panoptikon":[
+{"v":"0.3.1","e":"^1.106.0","h":"15wn09vinrfmcqqkr1ghjpbd6vx9xf8bzsfs9h0pas3rwnmq9a5r"}
 ],
 "danilovasojevic.jira-ticket-linker-for-test":[
 {"v":"0.0.8","e":"^1.85.0","h":"1zigjw2jx8zgc10iky7bhwifi1xr740k9vg5rndh9nr54mkbpjrz"},
@@ -2016,6 +2024,7 @@
 {"v":"0.4.0","e":"^1.85.0","h":"0h4zgc2sa052icg4isbb5l3r8msdxz2qgnxsani194zm6fawnvvc"}
 ],
 "davidanson.vscode-markdownlint":[
+{"v":"0.63.1","e":"^1.97.0","h":"0zbrc9118x6c59fhk7421pwq30j584zcc8kln78md68645dfdmsm"},
 {"v":"0.63.0","e":"^1.97.0","h":"0qz1gl5ivx7afrlh0pxr8q5039h4ig9sy308adz41ggvcbwjs1b1"},
 {"v":"0.62.1","e":"^1.97.0","h":"065miyw6x6mdpx1c5i8rcrrwz945wpdy7ms701g3qkankid2j7fd"},
 {"v":"0.62.0","e":"^1.97.0","h":"16v7rkr2xhk5rc404y22knbcbi2krvpjj1ripmhsqk3k6ysmgskj"},
@@ -2126,6 +2135,10 @@
 {"v":"0.0.1","e":"^1.89.0","h":"1gbxp7a8wd36h9ksyc8m8g76kmh31gqqpqv4r3zwl51c1lf4b1sd"}
 ],
 "dbxlite.dbxlite":[
+{"v":"0.3.0","e":"^1.85.0","p":"darwin-arm64","h":"07fqzhhn606gqg7n1w8aackirdxlfzx36xk6dbibcxrnn64lwvqb"},
+{"v":"0.3.0","e":"^1.85.0","p":"darwin-x64","h":"1garcn596vd19fpb0zahaw7hkx6p8jdrpgcai4mh6i123m92fzry"},
+{"v":"0.3.0","e":"^1.85.0","p":"linux-arm64","h":"1qjsaddfjazpq9w07jl5s4lyp9kfips4z6sb0w48rswjr2gbm34c"},
+{"v":"0.3.0","e":"^1.85.0","p":"linux-x64","h":"0znn4kzjb2iy793lcy1l08bj539c9bn762c1qww9g06anwilj76k"},
 {"v":"0.2.1","e":"^1.85.0","p":"darwin-arm64","h":"0j1y37sdq0hsph26z7cixc0w87fd4jq55blgdv1k4jfysm6xbi7w"},
 {"v":"0.2.1","e":"^1.85.0","p":"darwin-x64","h":"0sqa7a3qv7n5dka1pfc510j1nfwdkfz5wlza0dagwa7sck0zwdmp"},
 {"v":"0.2.1","e":"^1.85.0","p":"linux-arm64","h":"1r9nprn4gsx8q2vf1h048gznksq6wwzrqvaii0vyx19a9vxbicmc"},
@@ -5434,6 +5447,9 @@
 ],
 "lucascodes.alex-html":[
 {"v":"1.1.1","e":"^1.71.0","h":"19k91a49dpqa505281fxa62vga9smjnk06jhdinxslpwnj8kkasc"}
+],
+"lucasgfabris.vscode-scm-changed-filter":[
+{"v":"0.1.0","e":"^1.146.0","h":"0wflhwi9z8xq3gy1v6a8g3b254a8dyjhf7qxz3yrqvfkchj16282"}
 ],
 "lucien-martijn.parquet-visualizer":[
 {"v":"0.31.1","e":"^1.74.0","h":"1xd2y93z7xl4zg7m94x6hm4d7v7c88m36c7caz49bg9w337gc8id"},
@@ -9861,6 +9877,8 @@
 {"v":"0.0.1","e":"^1.60.0","h":"0fz8d29rm4llv2gh8lfnvmsbfwc9i1ywvz7gfw2hpp0hhrim32gr"}
 ],
 "teevee98.synapse-hub-vscode":[
+{"v":"4.9.0","e":"^1.80.0","h":"0n3qnj74d9adlcixlq5ii5l6f0a96mazjgzq0d70zjkcv9fl95v5"},
+{"v":"4.8.5","e":"^1.80.0","h":"0gm39lw0y62rcs367jbpcwpzk4h3xinnlh8sf7nlaiz6xm2j55kb"},
 {"v":"4.8.4","e":"^1.80.0","h":"0rdb0r7jpw8dpbw4xywn9x5qllbjvxkf62clbq3bc07frp182pc1"},
 {"v":"4.8.3","e":"^1.80.0","h":"1kd7d9vpzcyhk1h6vsk056h8n9hpb361zlcmfiahixpnzv89b4hi"},
 {"v":"4.8.2","e":"^1.80.0","h":"16c9cvghb0isn0q1zvccckq26byd8wwsyrdr0yyyjvp3sqjx32vj"},
@@ -10973,6 +10991,10 @@
 {"v":"1.1.3","e":"^1.80.0","h":"07wj8nyy7037dnry8aczsnaybx6qkg61krmbzwz8zkb7ns31szzz"},
 {"v":"1.1.2","e":"^1.80.0","h":"1p59ay7cmhnh79xkr8s4k84xlxamv8yjglmfs9d3igxs0jd6nby9"},
 {"v":"1.1.1","e":"^1.80.0","h":"06rv6bax3bfy6c28i70dax4l4gr4n1zw2v2wbl99f174wawhhc52"}
+],
+"wayfarer6.vamp-agent-console":[
+{"v":"0.1.6","e":"^1.103.0","h":"007b5zhxjh25fz6g633cjghqcancm64ax80zslp5d6gxfapppa68","r":true},
+{"v":"0.1.4","e":"^1.103.0","h":"0iyr6q1gj4iqm8q0baihxacl49ccxgm1p7rlrqvapa0g1113v54p"}
 ],
 "wenxiduan.folder-relay":[
 {"v":"0.2.4","e":"^1.96.0","h":"10znvx9zv3im0z8a6fjh9nyii3zzdnhjlazm284p0lv39cwwa448"}
