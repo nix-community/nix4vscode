@@ -294,6 +294,9 @@
 {"v":"4.1.0","e":"^1.85.0","h":"00pkl89a3n4cyz4zhnp2dxq2dld8ihwypjxb627p0rw8dy9i2llq"}
 ],
 "agentlink.agentlink":[
+{"v":"1.111.2","e":"^1.140.0","p":"darwin-arm64","h":"1886zxp9z7wrbrmrpyql354vhc7wy7r3yw0078brb3r1ms6wqkxr"},
+{"v":"1.111.2","e":"^1.140.0","p":"linux-arm64","h":"0y9i9qbazqqyzg557kyrrmly8aqs4jpm3qfahvlgk70c3abx4vi8"},
+{"v":"1.111.2","e":"^1.140.0","p":"linux-x64","h":"1v5vvgfji3na9wrimyvvlp63l117xd6v0wbpzwhmsip7lpwxpv4a"},
 {"v":"1.111.1","e":"^1.140.0","p":"darwin-arm64","h":"1ixj1277an7zysspv04ci39255kr8afflg1cayj96qv6ch6hl7bi"},
 {"v":"1.111.1","e":"^1.140.0","p":"linux-arm64","h":"0nbwz6xzj87ywhzni1gyh56gdaqma2imaljvqkccy2yk69plxxvk"},
 {"v":"1.111.1","e":"^1.140.0","p":"linux-x64","h":"1fsbfvi94qglzq8lymlxfym861yzslp33k46icycsig8w0r8haqn"},
@@ -1256,6 +1259,7 @@
 {"v":"0.0.1","e":"^1.73.0","h":"00pgn2m7xfr46jqhl39v16g44cj284kcd5hayb2n6sz7817hb92p"}
 ],
 "autodesk.fusion-automation-api":[
+{"v":"0.3.12","e":"^1.96.0","h":"093pahxaxqfa3my96nw0n2r5afx5ldpmp7z2fp9sm5h1wv08x42l"},
 {"v":"0.3.7","e":"^1.96.0","h":"16irabp0ibyrxi8clrqgi152v6q80fa1q54hjvd1cmdfzmc5mmri"},
 {"v":"0.2.2","e":"^1.96.0","h":"0xhwq7qh0d793k07s76l9wmd3ggh3rv8hr5dnmswcx88x8bvqghw"},
 {"v":"0.0.171","e":"^1.96.0","h":"07g41h7aap5da725iln23a3zk9cfrz1blry23qgfjmday5sm11f0"},
@@ -3554,6 +3558,8 @@
 {"v":"0.0.2","e":"^1.43.0","h":"09v5gfv5dqc4kpcybrki5sqyna1swi8i5l7582vz42gk8iblbd29"}
 ],
 "erkos.pluvian-vscode":[
+{"v":"2.4.3","e":"^1.85.0","h":"0am01gsx9xkgjbhhvarsydknq4qq9rxpk5gljlvl28d84f6yhc38"},
+{"v":"2.4.2","e":"^1.85.0","h":"0av5kmsx138x0sbffpa4ppms4gszs48vipwbx7xkf7sgmmxliyfl"},
 {"v":"2.4.1","e":"^1.85.0","h":"0a0ygshxglk2mi82a4alfc7qcsldfrkvxfdi19313d3fb6iq14g7"},
 {"v":"2.4.0","e":"^1.85.0","h":"1wgs63n19yz05901nbapapi26cd3238cxz9ann0qs1pcmkznxhrn"},
 {"v":"2.3.0","e":"^1.85.0","h":"1bvk1czrprjkg8ir71d7xv1w16ildcw2c76l0kwvk6kxib4gizg2"},
@@ -6462,6 +6468,10 @@
 {"v":"1.0.1","e":"^1.36.0","h":"0zgq1zbdphird1jmgd06sf1xng4ip2df9r9n3br2h4wrvxj1dky8"},
 {"v":"1.0.0","e":"^1.36.0","h":"1q4p9ikpahh69mgihsvnhg02sx5drzk8b0ypk9s5dk2x3i4myj5s"}
 ],
+"kyawsuthway-dev.db-deck":[
+{"v":"0.1.1","e":"^1.90.0","h":"06bxr00viw2ynwdhjq48sgspaq0ksvahwxhbyimzh8k94qfjp6yd"},
+{"v":"0.1.0","e":"^1.90.0","h":"1h5bdmdvjbvj22xxmjl74s68mi58ggqx4ih7bilq2gwpwag0y11b"}
+],
 "labelo.vs-code-server":[
 {"v":"2.2.1","e":"^1.59.0","h":"1i64x4pjys8cmi1ia6s0z2zkx877fcizv4wmwhv4waan8wdfpgbz"},
 {"v":"2.2.0","e":"^1.59.0","h":"0m7fkckzg8mj7lbwakj7rcly1kgmvq92czmw7l4kynw0j2hf0r6v"},
@@ -7335,6 +7345,9 @@
 "martimgomes.gomes-notebook":[
 {"v":"0.1.0","e":"^1.85.0","h":"1wsbkaf19r5zxkgx5blvdchb24sdsivk95601x433h5ya0fsj1q3"}
 ],
+"martinalejandrooviedo.glossy-icons":[
+{"v":"1.0.0","e":"^1.74.0","h":"0yfny5xyw1916qqwp54ks2iiksmi23z5hwmcq2iqqdpvawwx81kf"}
+],
 "marvinnahmias.databricks-sync":[
 {"v":"0.0.61","e":"^1.80.0","h":"1acm09pjhai0jqpxm38hnmjm927zgphkv22xvwsldz79wlk6dnai"},
 {"v":"0.0.6","e":"^1.80.0","h":"16na0i3l0i7gxr5z0f1vggrqz1wasy0zjimm9hf2gq74nyvwliih"},
@@ -8101,6 +8114,10 @@
 {"v":"1.0.0","e":"^1.46.0","h":"1f002585129f3x2bwg6yhbzvp2v30m4hfpwh059aixhr60nsm7nz"}
 ],
 "ola-coding.ortho":[
+{"v":"0.6.0","e":"^1.90.0","p":"darwin-arm64","h":"1dcwckryjq0yr8wlfh62sqpf5mglhh39kf4rr6li26a2wgp05ms0"},
+{"v":"0.6.0","e":"^1.90.0","p":"darwin-x64","h":"1pcd4249n1zpdrb1x0489myip0dd2hrmmbybibam4lwnhsxdqbg7"},
+{"v":"0.6.0","e":"^1.90.0","p":"linux-arm64","h":"10xfswliaz0w0rh82biwx988ygy5d589d3yvyj85dsqh8z61x244"},
+{"v":"0.6.0","e":"^1.90.0","p":"linux-x64","h":"12zp7i2201nzgfnl0ani390narmnjnjpmxqribc6d3m1ymc73kfz"},
 {"v":"0.5.0","e":"^1.90.0","p":"darwin-arm64","h":"0vxnqa2aa1yb0lf42irvz64mky51s1cyn2z37h98y0ckn1fgx5g5"},
 {"v":"0.5.0","e":"^1.90.0","p":"darwin-x64","h":"10fvh5jbks3cdww26xkb02r8vy5xcxjcvr0qrm3afr5w5wzbnlmq"},
 {"v":"0.5.0","e":"^1.90.0","p":"linux-arm64","h":"09da9s4s21vdhll7i6mfkk0v56b7mk4cddw3smzyqlvvw7sclx8z"},
@@ -10139,6 +10156,10 @@
 {"v":"1.0.13","e":"^1.76.0","h":"160x92vm3cdvfv9f85la05xxk63ghsrixaq3jkrlq7y4ynyxsq0c"},
 {"v":"1.0.12","e":"^1.76.0","h":"1ds32qafgwn48d2w63bcygjwpf1mwzcx1zfs5hxcsfq68dnrnanf"},
 {"v":"1.0.11","e":"^1.76.0","h":"05s55xfxl45wfxr6ivd8iaf0ga2jmf8ab89qs5q2cz1nmmlh61hj"}
+],
+"sublinear.bromine":[
+{"v":"0.0.3","e":"^1.82.0","h":"0ssg44mc7cgl9c4wqadqh6fd83y8nmh1si8d3ipbpz78kn6qzl5a"},
+{"v":"0.0.2","e":"^1.82.0","h":"03rf3q4p64qw910g1archy50arfsgpgkkiyixvv1hnsfxa8n8im0"}
 ],
 "sufficit.sufficit-vscode-symposium":[
 {"v":"2026.1122.1","e":"^1.100.0","h":"14iai895014jgywy43k274713xwhy0jcnb2rnq79dvi50h83cvz7"},

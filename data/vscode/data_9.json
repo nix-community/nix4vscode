@@ -1323,6 +1323,7 @@
 {"v":"2025.5.0","e":"^1.68.0","h":"03f3c049mmbb8hidk4v1fm2lfa1r54bpb8assjqji89h2359fc6q"}
 ],
 "blockceptionltd.blockceptionvscodeminecraftbedrockdevelopmentextension":[
+{"v":"9.1.24","e":"^1.120.0","h":"0b8j8va7bdf1n9xsnwpwdkp8xfkwvyfkalf128f3qffn75x426b0"},
 {"v":"9.1.23","e":"^1.120.0","h":"1idva21a87nll6piqzjmddvc8bsb6cj44pzqmsw239xh709zf6dj"},
 {"v":"9.1.21","e":"^1.120.0","h":"1zwwzbiryfxhsmyqad2l25zn0jyw4xl02948czjwzz2n17rj3rw0"},
 {"v":"9.1.20","e":"^1.120.0","h":"1asgnnxw49dd8kv9s5n66b6lx3xr3fgaadr6zzg25f4y2dnbymxq"},
@@ -3462,6 +3463,7 @@
 {"v":"0.5.2","e":"^1.101.0","h":"0myqa8slniyg34glqhf802hjbcy45zkhz0fr9qh1lgfi13nrqy73"}
 ],
 "enthali.jarvis-core":[
+{"v":"0.36.0","e":"^1.144.0","h":"1p9wpy0hnhxgy0jdngwfhd84ia2dnnrdxahbajg16pfvyplicxds"},
 {"v":"0.35.1","e":"^1.144.0","h":"161szmcjn1622zp001hr2zy7z8gkhjidbq2myly8q6v1n7rb5z45","r":true},
 {"v":"0.35.0","e":"^1.144.0","h":"09qmnyid5z429c724rjzbmx9c0s09p5z9kln3sldz8aixzgfm5sz"},
 {"v":"0.34.0","e":"^1.144.0","h":"1zwl3vmrpnj5m9saz39jm2zr17gybvhg051lpgy9gprmhlbdm5dd"},
@@ -3502,6 +3504,7 @@
 {"v":"0.11.2","e":"^1.95.0","h":"0jar2zqhyxj3r4dfm100w0g9m2whhahch657bmz3mncjqpzwkch6"}
 ],
 "enthali.jarvis-recorder":[
+{"v":"0.36.0","e":"^1.144.0","h":"1i268p1jyl8kg5iazv467w74dwhf8jmfiw93srwh2qix0z9lqs5b"},
 {"v":"0.35.1","e":"^1.144.0","h":"1yaf17dq1hzp61id62clc24lk9zskrwf3cxr4y90q063mrccc3hq","r":true},
 {"v":"0.35.0","e":"^1.144.0","h":"0p16383xnf5lbm26wkll0dilvpjp6bkg42hz6z8f3fml4slh9gwg"},
 {"v":"0.34.0","e":"^1.144.0","h":"0z513jpmn4h16yi5dx57nfxgsymjkbi6jv64sv4f8r7xplapmhcv"},
@@ -3779,6 +3782,9 @@
 {"v":"1.0.2","e":"^1.36.0","h":"0vg5pbrj7b65df39fs98jbw3d6jmrjg3zqrs4kaa9lzjxxiaf378"},
 {"v":"1.0.1","e":"^1.36.0","h":"1avrkwsjpd200m82wrp391pc0rlsxgm0bf0r8yav1g6cjn0nki1n"},
 {"v":"1.0.0","e":"^1.36.0","h":"1sdlq4ilylvnaqvl7vm0kwxisv7dmjjrbhdilz0q6abhxjy4pvyh"}
+],
+"fordimalanda.phive-server":[
+{"v":"1.3.0","e":"^1.80.0","h":"0jg4yjccw2vvw0fadig41sqg09l7fk170zw8pvawd3j6dfla8ni8"}
 ],
 "fractally.psibase":[
 {"v":"0.1.2","e":"^1.85.0","h":"172wjzjm637i283z3xvwn05s861yfp56bacmpksjzadwf49hm397"}
@@ -4212,6 +4218,7 @@
 {"v":"6.2.0","e":"^1.27.0","h":"11rdjds12mijffjy8b81alcsp2sxc7yd59m14f96lc5xqg4si9kl"}
 ],
 "futureblitz.futureblitz":[
+{"v":"1.5.0","e":"^1.91.0","h":"1ypy24w3f6j2gbclk88nwl0w425grr53l387x3ljkrhgdigggn6a"},
 {"v":"1.4.0","e":"^1.91.0","h":"1bjaygybbhgd5w7304ir3p04cdpszsik5x8v29i8p81pdf6w3vwa"},
 {"v":"1.3.5","e":"^1.91.0","h":"03lk72w7hvmj9l36hb5248rl03xkb4qzs0d3d9dvi3a1whpp7q2f"},
 {"v":"1.3.4","e":"^1.91.0","h":"0234had2z19jwlcsqrdf45am7vdm6kj1b3p5wyfr82b7y0i61klz"},
@@ -4368,6 +4375,10 @@
 {"v":"0.0.1","e":"^1.73.0","h":"1sqai66gh4gd7g5grs8zgkwb22ggq5w1033rmnkkxv3bin0g6zh6"}
 ],
 "grafemalabs.rofl":[
+{"v":"1.8.1","e":"^1.101.0","p":"darwin-arm64","h":"1d5gl3wpb1rm3bqjn5lbqcpndlx5z8pdsmkd637fr5hr36a8n6jy"},
+{"v":"1.8.1","e":"^1.101.0","p":"darwin-x64","h":"18y8r12ph7y5rbf5pi124jkkxvb7afda4d06pnsrl8r90pylwsj3"},
+{"v":"1.8.1","e":"^1.101.0","p":"linux-arm64","h":"0i13i0qpl78idvrnjv7lbpnp1kccl4jj54lfzq8vsr8n06gyih19"},
+{"v":"1.8.1","e":"^1.101.0","p":"linux-x64","h":"0ms2dcz4m957c02sny9il8gcx6i2s1l7wqjwfk7hx2xhiyr1ky0d"},
 {"v":"1.8.0","e":"^1.101.0","p":"darwin-arm64","h":"025gv45hbgfid2n5p4hyh8a9n4zqiw9423qzrz1iz8llzl5yaqqw"},
 {"v":"1.8.0","e":"^1.101.0","p":"darwin-x64","h":"0qq9a6qbqjc0j8qpibna7d8jnw9s3172wspgqjsysk09bi5zkr56"},
 {"v":"1.8.0","e":"^1.101.0","p":"linux-arm64","h":"0r3ygzyf43ykakrllynrm4i3419kmqbmc1xc37a3zi4lxrw7jz3g"},
@@ -7511,6 +7522,7 @@
 {"v":"0.1.2","e":"^1.60.0","h":"0mpapmvdqpi4rsvs21cbsz332691mpgb1bcvyydyg5id8w4rzqjc"}
 ],
 "pioarduino.pioarduino-ide":[
+{"v":"1.4.9","e":"^1.95.0","h":"021vmz4ln27x2zx1h6sx9y7d6v500q7xy6s5ph532lkbk8waafin"},
 {"v":"1.4.8","e":"^1.95.0","h":"1snscfhr2m7hgif6vijd7xsp7k98g933libhfp0s9dfsbsms7df8"},
 {"v":"1.4.7","e":"^1.95.0","h":"1c4arcpyg9836b776ihbzg8xrg4zji3sn4hdqrxvphryjdk16gij"},
 {"v":"1.4.6","e":"^1.95.0","h":"1gyalna55gyc51mxvydhsn5q2adjrbb9bh46cvwamcibsv8ny4hj"},
@@ -8793,6 +8805,9 @@
 {"v":"1.0.0","e":"^1.93.0","h":"036b3n521psb0g46090r8g7rijz9s37sllsids4bbm941dbh49iq"}
 ],
 "shunsukef.makaseru-mcp":[
+{"v":"0.2.3","e":"^1.105.0","h":"126389hhxqjfw1p57yqp3cy1sxy5abpyvjzq2hy326gxx7kdjg9r"},
+{"v":"0.2.2","e":"^1.105.0","h":"06i5y1cfliqqazv4gj8pjyd3lglhgakxbmc4hkm2nf60r9yn4a9d"},
+{"v":"0.2.1","e":"^1.105.0","h":"02y5hlhr0yp7ffi4rlfqhnlfnr9r4pvjrxibvq7bhxkwiak5g7j9"},
 {"v":"0.2.0","e":"^1.105.0","h":"0p92lwdflqzyhjv7givi74zspym73cpc3jj2wjr4r4b2iqfszwab"},
 {"v":"0.1.0","e":"^1.105.0","h":"17516h9485zyzyj7s3f358xxck7w2ahiv7kvivm3fbqcbxvq6czg"}
 ],
@@ -9446,6 +9461,7 @@
 {"v":"1.0.0","e":"^1.101.0","h":"1rdf73y2ir7n2914l5vz37zn6n0rd05df61m63r152bqyb9qv7g1"}
 ],
 "soulfriends.atom-file-icon-with-jetbrains":[
+{"v":"1.1.1","e":"^1.21.0","h":"06m5h7rw9qj9dmax941c8jfz50a8bra5gykfd0j6fah8gdsjj6d7"},
 {"v":"1.0.29","e":"^1.21.0","h":"1i495absps0f0jz1q6nlv4mnvxfjjwzgy2g76k5a77j0h9znzzm8"},
 {"v":"1.0.28","e":"^1.21.0","h":"1waq0fz01b441vfrr6z3h778f25fw37r91xhrhx8400rzcqk4n5b"},
 {"v":"1.0.27","e":"^1.21.0","h":"1rbgnb144k7zh2dmm76w0v71pmx7gg23gi8bmqqfw1v3s1gh6r7b"},
@@ -10612,6 +10628,7 @@
 {"v":"0.0.1","e":"^1.70.0","h":"032f4ndadfg5cb6147hi6d16vrgx8qkisdnnwlv3fanqisv92a6c"}
 ],
 "vibedgc.dgc":[
+{"v":"0.36.0","e":"^1.84.0","h":"1whapyp3w7cdvs8fpm5gbmn5szhlck8jc96mw22h41rxv2w00y6s"},
 {"v":"0.35.0","e":"^1.84.0","h":"07wg7n9s88rcr5x0hkxv2cid73a7rgnfm2a3s3z4s1p1fb32jycq"},
 {"v":"0.34.3","e":"^1.84.0","h":"1rbkgr1g2ai1pfz3psznmwb4licj2c0717x7amraaypk950km3il"},
 {"v":"0.34.2","e":"^1.84.0","h":"0aqyrhc787gj1gwphdqhava9xpsx84h3d68h3564zkx36c7h35q2"},
@@ -11416,6 +11433,8 @@
 {"v":"0.1.0","e":"^1.45.0","h":"0clnyl11pl4bkxdlvcy7r52l6mfbqj25vg85i1pmgba31vbydlf9"}
 ],
 "xnervwang.codex-plus":[
+{"v":"1.9.0","e":"^1.96.0","h":"08fw5izsjlrg4v1zdpy3siycrxp0bk7q9w1p7fr02kxk7qj63ny5"},
+{"v":"1.8.1","e":"^1.96.0","h":"1zfh66c030r76ysjmysayiwl6mmavpzpjj6fdphjhpivb54lyqas"},
 {"v":"1.8.0","e":"^1.96.0","h":"0abpanxqcsaqvji013lgx0m1whbvppw0xxk9kzm21p32vqg1j8sc"},
 {"v":"1.7.0","e":"^1.96.0","h":"13vhh77addsarf2klz8bkk44s7hawkpzbf2f6kakkv78j8qimx2x"},
 {"v":"1.6.0","e":"^1.96.0","h":"0msnyrn4blbhrpj6699jjjgsjbbb6gmk8ia5blc0325nsd4nnvvh"},
